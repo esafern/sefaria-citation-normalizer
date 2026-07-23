@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+mine_cache/
+verify_cache.json
+.venv/
