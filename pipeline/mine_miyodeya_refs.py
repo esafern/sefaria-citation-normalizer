@@ -8,9 +8,14 @@ miyodeya_failures.json (short citation strings find-refs detected but couldn't
 resolve) — the only artifact committed, matching hp_failures.json.
 """
 import json, os, re, time
+import mine_wide
 from mine_wide import find_refs  # paced, cached, deterministic keys
 
 HERE = os.path.dirname(__file__)
+# Use a SEPARATE find-refs cache so Mi Yodeya detections never mix into the
+# Halachipedia cache that build_mostwanted.py aggregates for work_frequency.json.
+mine_wide.CACHE = os.path.join(HERE, "my_cache")
+os.makedirs(mine_wide.CACHE, exist_ok=True)
 ascii_h = re.compile(r"[A-Za-z]")
 
 

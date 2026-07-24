@@ -93,6 +93,31 @@ Cross-cutting complications inside Mode B that also bit the *presence* test:
 - **Mode B (coverage)** → acquisition, not normalization. The most-wanted list is
   the deliverable: public-domain tier to digitize, modern tier to license.
 
+## A third corpus: Mi Yodeya (free-prose Q&A) — a dataset source, not a coverage one
+
+Sampled 800 answers from the Mi Yodeya (Judaism Stack Exchange) dump and ran them
+through find-refs: 1,966 detections, 1,168 distinct unresolved. Unlike the two
+structured corpora, this is free prose, and it behaves like a **third mode**:
+
+- **Noisy.** ~40% of "detections" aren't citations at all — page numbers,
+  addresses (`8 West 70th Street`), percentages, English phrases, academic
+  references (`Antiquities of the Jews`, `Anchor Bible`). Free prose defeats a
+  citation detector tuned for footnotes.
+- **No new coverage.** Its real citations are overwhelmingly to works Sefaria
+  *already has* — almost nothing genuinely absent surfaced that the Halachipedia
+  list didn't already have. As a most-wanted source it's a dead end.
+- **But a dialect goldmine.** The real citations show the widest transliteration
+  variety of any corpus — exactly the Mode-A knowledge the rules overfit to. One
+  work, `Avot DeRabbi Natan`, appears as `Avos DeRabbi Nasan`, `Avot D'Rabbi
+  Natan`, and `Avot De-Rabbi Natan`; `-os/-as` Ashkenazi endings are everywhere
+  (`Toras HaShabbos`, `Kesubos`, `Hilchos De'os`, `Asarah B'Teves`).
+
+So Mi Yodeya confirms the genre thesis from the other direction: it's useless for
+**coverage** (Mode B) but ideal raw material for the **normalization dataset**
+(Mode A) — the tier-2 train/eval set that teaches the spelling/alternate-name
+variety no rule captures. Its derived citation strings are in
+`pipeline/miyodeya_failures.json` (CC-BY-SA, from the public dump).
+
 ## The strategic takeaway
 
 Normalization has a hard ceiling — ~43% deterministic, ~62% with a knowledge

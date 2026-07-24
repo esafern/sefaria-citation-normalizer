@@ -5,6 +5,7 @@ __pycache__/
 # regenerable caches (re-mineable from the public APIs; kept out of git)
 hp_cache/
 mine_cache/
+my_cache/
 *_cache.json
 
 # run logs
