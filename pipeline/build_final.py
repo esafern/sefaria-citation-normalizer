@@ -61,7 +61,11 @@ KNOWN_PRESENT = {
 NON_TEXT = {"stark", "shabboskitchen", "childreninhalacha",
             "bishulyisroel", "bishulyisroelpages"}
 
-# Extraction noise: a holiday or parsha name find-refs mis-detected as a work.
+# Section markers severed from a parent work by the extractor, not works
+# themselves: "Vezot Habracha" is a parsha section of Ben Ish Chai / Maharam Shik
+# / etc.; "Purim" is the Purim volume of Chazon Ovadia. (Confirmed in the raw
+# Halachipedia citations.) The parent-attributed variants are folded elsewhere;
+# these bare fragments can't be attributed, so they're dropped.
 NOISE = {"purim", "vezothabracha", "vezothabrachap"}
 
 # Spelling twins / abbreviations the fuzzy collapse missed -> canonical display.
@@ -165,6 +169,9 @@ ERA = {
     "agurbohalecha": ("modern", "MOD"),
     "yaskilavdi": ("Ovadia Hedaya (d.1969)", "MOD"),
     "maharshag": ("Shmuel Engel (d.1935)", "PD"),
+    # Disambiguated from the raw Halachipedia citation context:
+    "mekorchaim": ("Chavot Yair / Yair Bacharach (d.1702)", "PD"),  # cited by OC siman
+    "halichotolam": ("Yitzchak Yosef, modern", "MOD"),  # parsha-ordered, multi-volume
 }
 
 
@@ -269,11 +276,12 @@ md.append("| Citations | Work | Author |\n|---:|---|---|")
 for nm, n in mod:
     md.append(f"| {n} | {clean(nm)} | {era(nm)[0]} |")
 
-md.append("\n## Tier 3 — Absent, era not yet classified\n")
-md.append("_Detected as absent; author/copyright status not hand-checked. Longer tail._\n")
-md.append("| Citations | Work |\n|---:|---|")
-for nm, n in unk:
-    md.append(f"| {n} | {clean(nm)} |")
+if unk:
+    md.append("\n## Tier 3 — Absent, era not yet classified\n")
+    md.append("_Detected as absent; author/copyright status not hand-checked. Longer tail._\n")
+    md.append("| Citations | Work |\n|---:|---|")
+    for nm, n in unk:
+        md.append(f"| {n} | {clean(nm)} |")
 
 md.append("\n## Excluded: present under a variant spelling\n")
 md.append("_Flagged absent by exact match but found on Sefaria after normalization — NOT wanted._\n")
@@ -284,8 +292,8 @@ for nm, n, match in sorted(present_variant, key=lambda x: -x[1])[:40]:
 md.append("\n---\n_Caveats: 250-page sample (not all of Halachipedia); work-name extraction "
           "is heuristic; frequency reflects Halachipedia's Anglo-Orthodox canon, not Sefaria's "
           "whole user base. Counts are lower bounds — a work also present under one spelling and "
-          "absent under another is undercounted here. Tier-1/2 era is classified by author death "
-          "year; a handful of genuinely ambiguous titles remain in Tier 3._\n")
+          "absent under another is undercounted here. Era is classified by author death year "
+          "(work-level, from the citation context where the title alone is ambiguous)._\n")
 open(os.path.join(HERE, "..", "data", "SEFARIA-MOST-WANTED.md"), "w").write("\n".join(md))
 
 print(f"{len(absent)} genuinely-absent works, {sum(n for _,n in absent)} citations")

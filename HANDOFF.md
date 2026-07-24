@@ -40,8 +40,16 @@ deterministically with no model at link time.
   generalization finding).
 - **Most-wanted list** — `pipeline/build_final.py` (+ `presence.py`, `build_mostwanted.py`,
   `classify_mostwanted.py`) → `data/SEFARIA-MOST-WANTED.md` + `sefaria_most_wanted.json`:
-  103 absent works / ~2,900 citations, tiered public-domain vs modern, with 33 false-absents
-  (present under a variant spelling) filtered out via the normalizer's own candidates.
+  **72 absent works / 2,750 citations**, tiered public-domain (22) vs modern (50), fully
+  era-classified, with 40 false-absents (present under a variant spelling) filtered out.
+- **Most-wanted pressure-test (done 2026-07)** — re-verified every candidate live against
+  `/api/name`: removed 8 false-absents present under a title the prefix-trie couldn't reach
+  (Sma, Rabbenu Yonah, Rambam/Mishneh-Torah wrappers, …), merged spelling twins and folded
+  section-volumes into parents (Yalkut Yosef → 428, Chazon Ovadyah → 260), hand-classified the
+  whole Tier-3 tail (0 left unclassified), and dropped non-texts / mis-split section markers.
+  Fixed a real `presence.py` bug: the fuzzy matcher collapsed equal-length one-letter names
+  (Maharshag/Maharsham/Maharshal) — now rejects same-length substitutions for single tokens and
+  strips `Teshuvot`/`Responsa` title prefixes before matching.
 
 ## Key architecture notes
 
@@ -66,8 +74,9 @@ blog repo but document Sefaria issues — candidates to move here.
 1. **Grow tier 2.** The 137-pair dataset + the ~8,800 unresolved Halachipedia citations are
    raw material for an LLM/SLM that surfaces citations and generalizes transform rules. The
    dataset is the training/eval seed.
-2. **Finish and pressure-test the most-wanted list** before sharing: widen beyond 250 pages,
-   hand-classify the Tier-3 tail's era, spot-check the ambiguous abbreviations (Sma, Radvaz).
+2. **Most-wanted list — pressure-test done** (see above; Tier-3 fully classified, false-absents
+   and ambiguous abbreviations resolved). Remaining: widen beyond the 250-page sample to firm up
+   the frequency ranking, and re-check the acharonim tier's copyright dates before outreach.
 3. **Contribute to Sefaria — when it's "truly real."** The strongest form isn't a repo link
    but a PR / data contribution into Sefaria's own repos: the dataset (as linker eval cases),
    the dialect map, and the most-wanted list (for their library/licensing team). Hold outreach

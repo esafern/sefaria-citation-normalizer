@@ -17,6 +17,7 @@ _Author died >70 years ago; Sefaria can add these without licensing._
 | 28 | Chavot Daat | Y. Lorberbaum (d.1832) |
 | 24 | Eliya Rabba | Eliyahu Shapira (d.1712) |
 | 16 | Radvaz | David ibn Zimra (d.1573); responsa absent, MT commentary present |
+| 14 | Mekor Chaim | Chavot Yair / Yair Bacharach (d.1702) |
 | 12 | Hagahot Maimoniyot | Meir HaKohen (13c) |
 | 11 | Bet Efraim | E.Z. Margolis (d.1828) |
 | 11 | Knesset Hagedola | Chaim Benveniste (d.1673) |
@@ -80,6 +81,7 @@ _Recent authorities; would require a licensing arrangement. Ranked by demand._
 | 11 | Ateret Paz | Pinchas Zvichi, modern |
 | 10 | Ishei Yisrael | A.Y. Pfoifer, modern |
 | 9 | Shevet Hakehati | Shammai Gross, modern |
+| 9 | Halichot Olam | Yitzchak Yosef, modern |
 | 9 | Milveh Hashem | modern |
 | 9 | Tiltulei Shabbat | modern |
 | 8 | Nishmat Avraham | A.S. Abraham (d.2010) |
@@ -89,15 +91,6 @@ _Recent authorities; would require a licensing arrangement. Ranked by demand._
 | 7 | Az Nidbaru | Binyamin Zilber (d.2008) |
 | 7 | Agur Bohalecha | modern |
 | 7 | Yaskil Avdi | Ovadia Hedaya (d.1969) |
-
-## Tier 3 — Absent, era not yet classified
-
-_Detected as absent; author/copyright status not hand-checked. Longer tail._
-
-| Citations | Work |
-|---:|---|
-| 14 | Mekor Chaim |
-| 9 | Halichot Olam |
 
 ## Excluded: present under a variant spelling
 
@@ -147,4 +140,4 @@ _Flagged absent by exact match but found on Sefaria after normalization — NOT 
 | Rambam Sefer HaMitzvot | Sefer HaMitzvot |
 
 ---
-_Caveats: 250-page sample (not all of Halachipedia); work-name extraction is heuristic; frequency reflects Halachipedia's Anglo-Orthodox canon, not Sefaria's whole user base. Counts are lower bounds — a work also present under one spelling and absent under another is undercounted here. Tier-1/2 era is classified by author death year; a handful of genuinely ambiguous titles remain in Tier 3._
+_Caveats: 250-page sample (not all of Halachipedia); work-name extraction is heuristic; frequency reflects Halachipedia's Anglo-Orthodox canon, not Sefaria's whole user base. Counts are lower bounds — a work also present under one spelling and absent under another is undercounted here. Era is classified by author death year (work-level, from the citation context where the title alone is ambiguous)._
