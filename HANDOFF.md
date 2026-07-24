@@ -39,9 +39,14 @@ deterministically with no model at link time.
   `hp_resolve.py` auto-resolved 200 via rules (a 2% hit rate — the honest cross-genre
   generalization finding).
 - **Most-wanted list** — `pipeline/build_final.py` (+ `presence.py`, `build_mostwanted.py`,
-  `classify_mostwanted.py`) → `data/SEFARIA-MOST-WANTED.md` + `sefaria_most_wanted.json`:
-  **72 absent works / 2,750 citations**, tiered public-domain (22) vs modern (50), fully
-  era-classified, with 40 false-absents (present under a variant spelling) filtered out.
+  `classify_mostwanted.py`) → `data/SEFARIA-MOST-WANTED.md` + `sefaria_most_wanted.json`.
+  Now built from the **full 640-page Halachipedia corpus** (38,195 detections): **73 absent
+  works / 6,883 citations**, tiered public-domain (23) vs modern (50), fully era-classified,
+  34 false-absents filtered out. See `CORPUS-COMPARISON.md` for the full-vs-250-page diff.
+- **Full-corpus widening (done 2026-07)** — `mine_wide.py` mined pages 250–640 gently/serially;
+  `merge_frequency.py` summed the new cache with the committed 0–250 reduction (disjoint ranges,
+  no re-mining). Finding: the corpus grew 2.6× but the work count held (72→73) — the extra data
+  reinforced the R. Ovadia Yosef concentration (~2,300 of 6,883 cites) rather than broadening.
 - **Most-wanted pressure-test (done 2026-07)** — re-verified every candidate live against
   `/api/name`: removed 8 false-absents present under a title the prefix-trie couldn't reach
   (Sma, Rabbenu Yonah, Rambam/Mishneh-Torah wrappers, …), merged spelling twins and folded

@@ -54,6 +54,7 @@ KNOWN_PRESENT = {
     "rambamhilchosmachalasasuros": "Mishneh Torah, Forbidden Foods",
     "rambammishnehtorahhilchottefillahubirkatcohanimchapter":
         "Mishneh Torah, Prayer and the Priestly Blessing",
+    "meiripesachim": "Meiri on Pesachim",  # cited "Meiri Pesachim ... s.v.", present
 }
 
 # Not Hebrew seforim Sefaria would license — English practical guides or a
@@ -67,7 +68,10 @@ NON_TEXT = {"stark", "shabboskitchen", "childreninhalacha",
 # Halachipedia citations.) The parent-attributed variants are folded elsewhere;
 # these bare fragments can't be attributed, so they're dropped. ("Purim" is the
 # one exception — always Chazon Ovadia Purim — so it's re-attributed via ALIAS.)
-NOISE = {"vezothabracha", "vezothabrachap"}
+NOISE = {"vezothabracha", "vezothabrachap",
+         # halachic concepts / a person / a shiur, mis-detected as works
+         "dvarcharif", "dvarcharifp", "lashonhara", "klishmelachtoleissur",
+         "niddahshiur", "ravschachter"}
 
 # Spelling twins / abbreviations the fuzzy collapse missed -> canonical display.
 ALIAS = {
@@ -79,6 +83,9 @@ ALIAS = {
     # Parent stripped by the extractor, but every raw occurrence is "Chazon Ovadia
     # Purim" -> re-attribute the demand to the parent rather than drop it.
     "purim": "Chazon Ovadyah",
+    # Spelling/shu"t twins surfaced by the 640-page corpus:
+    "shtyabiaomer": "Yabia Omer", "igrosmosheoc": "Igrot Moshe",
+    "shtyechavedaat": "Yechave Daat", "rivevotephraim": "Rivevot Efraim",
 }
 # Section-volumes that fold into their parent work (one work to license/digitize).
 # Prefix-keyed so every spelling variant of the parent collapses too.
@@ -176,6 +183,20 @@ ERA = {
     # Disambiguated from the raw Halachipedia citation context:
     "mekorchaim": ("Chavot Yair / Yair Bacharach (d.1702)", "PD"),  # cited by OC siman
     "halichotolam": ("Yitzchak Yosef, modern", "MOD"),  # parsha-ordered, multi-volume
+    # ---- new works surfaced by the full 640-page corpus (era by author death) ----
+    "yadmalachi": ("Malachi HaKohen (d.1785)", "PD"),
+    "sdeichemed": ("C.C. Medini (d.1904)", "PD"),
+    "maharamchalavahpesachim": ("Maharam Chalava (14c)", "PD"),
+    "rokeach": ("Eleazar of Worms (d.1230)", "PD"),
+    "yafehlelev": ("Yitzchak Palache (d.1907)", "PD"),
+    "machzikbracha": ("Chida (d.1806)", "PD"),
+    "pitcheichoshen": ("Yaakov Blau (d.2013)", "MOD"),
+    "otzarhaposkim": ("modern rabbinical institute", "MOD"),
+    "nefeshharav": ("H. Schachter on R. Soloveitchik, modern", "MOD"),
+    "mishpiteiaretz": ("modern (Torah VeHaaretz)", "MOD"),
+    "amotshelhalacha": ("modern", "MOD"),
+    "yismachlevv": ("modern", "MOD"),   # cited by vol./page/note -> contemporary
+    "matnatyadofn": ("modern", "MOD"),  # cited by footnote number -> contemporary
 }
 
 
@@ -248,8 +269,8 @@ out = {"absent_ranked": [{"work": nm, "citations": n,
 json.dump(out, open(os.path.join(HERE, "..", "data", "sefaria_most_wanted.json"), "w"),
           ensure_ascii=False, indent=1)
 
-def clean(nm):  # strip extraction noise: trailing lone letters / volume markers
-    return re.sub(r"\s+[a-zA-Z]$", "", nm).strip()
+def clean(nm):  # strip extraction noise: trailing lone letters / volume / fn markers
+    return re.sub(r"\s+(?:[a-zA-Z]|fn|fnt|no)$", "", nm).strip()
 
 
 # ---- markdown brief ----
