@@ -12,3 +12,6 @@ mine_cache/
 
 # in-progress mining output (force-added when the run completes)
 pipeline/hp_failures_wide.json
+
+# raw CC-BY-SA answer text (intermediate); only derived citation strings are committed
+pipeline/miyodeya_bodies.json
