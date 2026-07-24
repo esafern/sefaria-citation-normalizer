@@ -9,3 +9,6 @@ mine_cache/
 
 # run logs
 *.log
+
+# in-progress mining output (force-added when the run completes)
+pipeline/hp_failures_wide.json
