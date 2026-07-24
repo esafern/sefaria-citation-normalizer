@@ -76,10 +76,19 @@ blog repo but document Sefaria issues — candidates to move here.
    raw material for an LLM/SLM that surfaces citations and generalizes transform rules. The
    dataset is the training/eval seed.
 2. **Finish and pressure-test the most-wanted list** before sharing. Tier-3 era classification
-   is now done (see above). Remaining, both needing Sefaria/Halachipedia egress: (a) run the
-   live presence spot-check over the 18 `pending_presence_verification` works — anything Sefaria
-   actually has is dropped, the rest move into a tier; (b) widen beyond the 250-page sample.
-   With network up, run `python3 pipeline/build_final.py` (no `--offline`) to re-verify live.
+   is now done (see above). Remaining work both needs Sefaria/Halachipedia egress (policy-blocked
+   in the web sandbox — start a session whose network policy allows `www.sefaria.org`):
+   - **Run the presence spot-check (ready, one command):** `python3 pipeline/verify_pending.py`
+     probes the 18 `pending_presence_verification` works live (hand-supplied Sefaria spellings +
+     normalizer candidates), writes verdicts to `pipeline/pending_resolved.json`, and prints a
+     PRESENT/ABSENT report. Then `python3 pipeline/build_final.py --offline` regenerates the list:
+     confirmed-present works move to the variant-spelling exclusion; confirmed-absent ones drop
+     out of pending and tier automatically (era pre-seeded in `build_final.py`'s `VERIFY_ERA`, so
+     rishonim land in Tier 1). Commit `pending_resolved.json` — it's the verification record.
+   - **Widen beyond the 250-page sample** — the larger, gentler re-mine (see `mine_v2.py`,
+     `trawl_big.py`); keep it paced.
+   With network up you can also run `python3 pipeline/build_final.py` (no `--offline`) to
+   re-verify the whole absent-set live rather than reuse the committed one.
 3. **Contribute to Sefaria — when it's "truly real."** The strongest form isn't a repo link
    but a PR / data contribution into Sefaria's own repos: the dataset (as linker eval cases),
    the dialect map, and the most-wanted list (for their library/licensing team). Hold outreach
@@ -94,7 +103,9 @@ author-specific, by design, to avoid one-author overfitting.
 ## Quick orientation
 
 ```bash
-python3 benchmark.py                       # rule coverage vs the verified dataset
-python3 pipeline/build_final.py            # rebuild the most-wanted list (uses work_frequency.json)
+python3 benchmark.py                       # rule coverage vs the verified dataset (online)
+python3 pipeline/build_final.py            # rebuild most-wanted, live /api/name (needs Sefaria egress)
+python3 pipeline/build_final.py --offline  # rebuild from the committed absent-set, no network
+python3 pipeline/verify_pending.py         # spot-check the 18 pending works (needs Sefaria egress)
 python3 -c "import json;print(len(json.load(open('data/citation_dataset.json'))))"  # 137
 ```

@@ -171,6 +171,30 @@ VERIFY_PRESENCE = {
         "Rambam, Hilchot Tefillah (definitely on Sefaria)",
 }
 
+# Era for the verify works, applied only IF a live check (verify_pending.py)
+# confirms one is genuinely absent and it drops into the tiers. Exact-match only
+# (kept out of ERA so these short keys don't fuzzy-collide with tiered works).
+VERIFY_ERA = {
+    "sma": ("Yehoshua Falk (d.1614)", "PD"),
+    "sama": ("Yehoshua Falk (d.1614)", "PD"),
+    "radvaz": ("David ibn Zimra (d.1573)", "PD"),
+    "hagahotmaimoniyot": ("Meir HaKohen (13th c.)", "PD"),
+    "rabbenuyonah": ("Yonah Gerondi (d.1263)", "PD"),
+    "rashbaresponsa": ("Shlomo ibn Aderet (d.1310)", "PD"),
+    "ravyah": ("Eliezer b. Yoel HaLevi (d.1225)", "PD"),
+    "hagahotashri": ("Israel of Krems (14th c.)", "PD"),
+    "rabbenuyerucham": ("Yerucham b. Meshullam (d.1350)", "PD"),
+    "eliyarabba": ("Eliyahu Shapira (d.1712)", "PD"),
+    "tureievenroshhashana": ("Aryeh Leib Ginzburg (d.1785)", "PD"),
+    "ravpealim": ("Yosef Chaim of Baghdad (d.1909)", "PD"),
+    "maamarmordechai": ("Mordechai Karmi (d.1825)", "PD"),
+    "knessethagedola": ("Chaim Benveniste (d.1673)", "PD"),
+    "hatrumah": ("Baruch b. Isaac (13th c.)", "PD"),
+    "rambamseferhamitzvot": ("Rambam (d.1204)", "PD"),
+    "rambamhilchosmachalasasuros": ("Rambam (d.1204)", "PD"),
+    "rambammishnehtorahhilchottefillahubirkatcohanimchapter": ("Rambam (d.1204)", "PD"),
+}
+
 # Not Sefaria source texts at all: kashrus orgs, English handbooks, and topic /
 # section headings the extractor mistook for work titles. Excluded from tiers.
 NONSOURCE = {
@@ -189,7 +213,11 @@ if OFFLINE:
     if not os.path.exists(MW_PATH):
         sys.exit("--offline needs a prior data/sefaria_most_wanted.json to reuse; none found.")
     prev = json.load(open(MW_PATH))
-    absent = [(d["work"], d["citations"]) for d in prev.get("absent_ranked", [])]
+    # Reconstitute the FULL absent set from every bucket a prior run split it into
+    # (tiered + pending + non-source), so re-partitioning here is idempotent.
+    absent = [(d["work"], d["citations"])
+              for key in ("absent_ranked", "pending_presence_verification", "non_source_excluded")
+              for d in prev.get(key, [])]
     present_variant = [tuple(x) for x in prev.get("present_under_variant_spelling", [])]
     absent.sort(key=lambda x: -x[1])
     print(f"[offline] reusing {len(absent)} absent works from committed dataset "
@@ -238,6 +266,8 @@ def era(nm):  # exact, then fuzzy, ERA lookup so spelling variants inherit the t
     k = normkey(nm)
     if k in ERA:
         return ERA[k]
+    if k in VERIFY_ERA:            # a verified-absent verify work inherits its seeded era
+        return VERIFY_ERA[k]
     for ek, val in ERA.items():
         if difflib.SequenceMatcher(None, k, ek).ratio() >= 0.9:
             return val
@@ -250,10 +280,27 @@ def bucketed(nm, table):
     return table.get(normkey(nm))
 
 
-verify = [(nm, n, VERIFY_PRESENCE[normkey(nm)]) for nm, n in absent if bucketed(nm, VERIFY_PRESENCE)]
+# Live verdicts from verify_pending.py, if that spot-check has been run. Each
+# entry resolves a pending work to 'present' (-> exclude as a variant) or
+# 'absent' (-> drop out of pending and tier it). Unresolved works stay pending.
+resolved_path = os.path.join(HERE, "pending_resolved.json")
+resolved = json.load(open(resolved_path)) if os.path.exists(resolved_path) else {}
+
+verify, tiered = [], []
+for nm, n in absent:
+    if bucketed(nm, NONSOURCE):
+        continue                       # collected separately below
+    if bucketed(nm, VERIFY_PRESENCE):
+        res = resolved.get(normkey(nm))
+        if res is None:
+            verify.append((nm, n, VERIFY_PRESENCE[normkey(nm)]))
+            continue
+        if res.get("verdict") == "present":
+            present_variant.append((nm, n, res.get("match") or "(verified present)"))
+            continue
+        # verdict 'absent' -> fall through and tier it (era seeded in VERIFY_ERA)
+    tiered.append((nm, n))
 nonsrc = [(nm, n, NONSOURCE[normkey(nm)]) for nm, n in absent if bucketed(nm, NONSOURCE)]
-tiered = [(nm, n) for nm, n in absent
-          if not bucketed(nm, VERIFY_PRESENCE) and not bucketed(nm, NONSOURCE)]
 
 pd = [(nm, n) for nm, n in tiered if era(nm)[1] == "PD"]
 mod = [(nm, n) for nm, n in tiered if era(nm)[1] == "MOD"]
