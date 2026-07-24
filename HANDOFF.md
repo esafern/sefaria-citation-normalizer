@@ -42,6 +42,15 @@ deterministically with no model at link time.
   `classify_mostwanted.py`) → `data/SEFARIA-MOST-WANTED.md` + `sefaria_most_wanted.json`:
   103 absent works / ~2,900 citations, tiered public-domain vs modern, with 33 false-absents
   (present under a variant spelling) filtered out via the normalizer's own candidates.
+- **Tier-3 era pass (2026-07)** — the ~75-work "era not classified" tail was hand-classified
+  from author death dates (life+70): now 11 PD / 66 MOD / 3 genuinely-uncertain. 18 suspected
+  false-absents (classic rishonim/acharonim + Rambam sections + the flagged abbreviations Sma,
+  Radvaz) were pulled into a new `pending_presence_verification` bucket — **not** asserted as
+  gaps, queued for the live `/api/name` spot-check. 5 non-source items (Star-K, English
+  handbooks, topic headings) excluded. `build_final.py` gained an `--offline` mode that reuses
+  the committed absent-set so the tiering can be regenerated with no network (Sefaria egress is
+  policy-blocked in the web sandbox). This was done offline; the presence spot-check still needs
+  a session with Sefaria access.
 
 ## Key architecture notes
 
@@ -66,8 +75,11 @@ blog repo but document Sefaria issues — candidates to move here.
 1. **Grow tier 2.** The 137-pair dataset + the ~8,800 unresolved Halachipedia citations are
    raw material for an LLM/SLM that surfaces citations and generalizes transform rules. The
    dataset is the training/eval seed.
-2. **Finish and pressure-test the most-wanted list** before sharing: widen beyond 250 pages,
-   hand-classify the Tier-3 tail's era, spot-check the ambiguous abbreviations (Sma, Radvaz).
+2. **Finish and pressure-test the most-wanted list** before sharing. Tier-3 era classification
+   is now done (see above). Remaining, both needing Sefaria/Halachipedia egress: (a) run the
+   live presence spot-check over the 18 `pending_presence_verification` works — anything Sefaria
+   actually has is dropped, the rest move into a tier; (b) widen beyond the 250-page sample.
+   With network up, run `python3 pipeline/build_final.py` (no `--offline`) to re-verify live.
 3. **Contribute to Sefaria — when it's "truly real."** The strongest form isn't a repo link
    but a PR / data contribution into Sefaria's own repos: the dataset (as linker eval cases),
    the dialect map, and the most-wanted list (for their library/licensing team). Hold outreach
