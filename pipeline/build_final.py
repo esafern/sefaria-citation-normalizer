@@ -65,8 +65,9 @@ NON_TEXT = {"stark", "shabboskitchen", "childreninhalacha",
 # themselves: "Vezot Habracha" is a parsha section of Ben Ish Chai / Maharam Shik
 # / etc.; "Purim" is the Purim volume of Chazon Ovadia. (Confirmed in the raw
 # Halachipedia citations.) The parent-attributed variants are folded elsewhere;
-# these bare fragments can't be attributed, so they're dropped.
-NOISE = {"purim", "vezothabracha", "vezothabrachap"}
+# these bare fragments can't be attributed, so they're dropped. ("Purim" is the
+# one exception — always Chazon Ovadia Purim — so it's re-attributed via ALIAS.)
+NOISE = {"vezothabracha", "vezothabrachap"}
 
 # Spelling twins / abbreviations the fuzzy collapse missed -> canonical display.
 ALIAS = {
@@ -75,6 +76,9 @@ ALIAS = {
     "rivivotephraim": "Rivevot Efraim",
     "vehanhagot": "Teshuvot VeHanhagot", "vihanhagot": "Teshuvot VeHanhagot",
     "teshuvosvhanhagos": "Teshuvot VeHanhagot",
+    # Parent stripped by the extractor, but every raw occurrence is "Chazon Ovadia
+    # Purim" -> re-attribute the demand to the parent rather than drop it.
+    "purim": "Chazon Ovadyah",
 }
 # Section-volumes that fold into their parent work (one work to license/digitize).
 # Prefix-keyed so every spelling variant of the parent collapses too.

@@ -8,7 +8,7 @@
   },
   {
    "work": "Chazon Ovadyah",
-   "citations": 260,
+   "citations": 268,
    "author": "Ovadia Yosef (d.2013)",
    "tier": "MOD"
   },
@@ -635,6 +635,6 @@
    "Sefer HaMitzvot"
   ]
  ],
- "total_absent_citations": 2750,
+ "total_absent_citations": 2758,
  "note": "Ranked by citation frequency across a 250-page Halachipedia sample."
 }

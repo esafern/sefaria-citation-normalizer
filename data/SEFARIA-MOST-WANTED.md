@@ -4,7 +4,7 @@ _A candidate priority list for Sefaria's library team._
 
 **Method.** From a 250-page sample of Halachipedia, we extracted the footnote citations, ran each through Sefaria's own `find-refs` linker, and kept what it detected as a citation but couldn't resolve to a text. We reduced each to its base work, counted how often it's cited, and confirmed absence via `/api/name` (a work is 'present' if any real ref title matches, allowing for transliteration and for titles stored under a `Teshuvot`/`Responsa` prefix). Every candidate was re-verified live against `/api/name` (2026-07): works present under a variant or abbreviated spelling were excluded (see the tail), spelling twins and section-volumes were merged into one work, and mis-detected non-texts were dropped.
 
-**Result.** 72 works, 2750 citations. Split by why they're missing:
+**Result.** 72 works, 2758 citations. Split by why they're missing:
 
 ## Tier 1 — Public domain, not yet digitized
 
@@ -42,7 +42,7 @@ _Recent authorities; would require a licensing arrangement. Ranked by demand._
 | Citations | Work | Author |
 |---:|---|---|
 | 428 | Yalkut Yosef | Yitzchak Yosef |
-| 260 | Chazon Ovadyah | Ovadia Yosef (d.2013) |
+| 268 | Chazon Ovadyah | Ovadia Yosef (d.2013) |
 | 174 | Igrot Moshe | Moshe Feinstein (d.1986) |
 | 161 | Shemirat Shabbat KeHilchata | Y.Y. Neuwirth (d.2013) |
 | 104 | Halacha Brurah | David Yosef |
