@@ -30,7 +30,7 @@ resolve("ArtScroll Berachos 57b, note 38", cache=Cache("cache.json"))
 
 Built from a corpus mined off Sefaria source sheets: `find-refs` over 289 sheets
 surfaced ~1,100 distinct English citations it *detected but could not resolve*;
-after LLM labeling and Sefaria verification, **107 verified `raw → ref` pairs**
+after LLM labeling and Sefaria verification, **137 verified `raw → ref` pairs**
 (`data/citation_dataset.json`).
 
 The deterministic general rules resolve **~43%** of that corpus. The families:
@@ -50,6 +50,26 @@ Sefaria's find-refs (at large scale).
 
 So this repo is deliberately **tier 1** — the deterministic ceiling — and the
 dataset is what feeds tier 2.
+
+## A denser corpus: Halachipedia, and a gift for Sefaria
+
+Source sheets saturated (~85% noise). The pipeline was re-pointed at
+[Halachipedia](https://www.halachipedia.com), whose footnotes are dense, nearly
+pure halachic citations. A 250-page sample yielded **14,511 citation detections
+→ 3,520 distinct works**. Two findings:
+
+1. The deterministic rules generalize **poorly** across genre — ~2% hit on this
+   acharonim/responsa corpus vs ~43% on the sheet Talmud/Tanakh. Honest evidence
+   that citation normalization overfits not just to dialect but to *canon*.
+2. The reason most don't resolve is that **Sefaria doesn't have the work** — not
+   a normalization failure. Ranking the genuinely-absent works by how often
+   Halachipedia cites them produces a **licensing-priority list for Sefaria**:
+   [`data/SEFARIA-MOST-WANTED.md`](data/SEFARIA-MOST-WANTED.md) — 103 works,
+   ~2,900 citations, tiered into public-domain (digitize) vs modern (license).
+   R. Ovadia Yosef's corpus (Yabia Omer, Yechave Daat, Chazon Ovadyah, Yalkut
+   Yosef) is the single biggest gap. Built with the same propose→verify
+   discipline: each "absent" work is re-checked through the normalizer's own
+   candidate spellings so present-but-transliterated works aren't falsely listed.
 
 ## Layout
 

@@ -1,5 +1,11 @@
 __pycache__/
 *.pyc
-mine_cache/
-verify_cache.json
 .venv/
+
+# regenerable caches (re-mineable from the public APIs; kept out of git)
+hp_cache/
+mine_cache/
+*_cache.json
+
+# run logs
+*.log
