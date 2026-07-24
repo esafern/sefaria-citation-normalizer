@@ -2,9 +2,9 @@
 
 _A candidate priority list for Sefaria's library team._
 
-**Method.** From a 250-page sample of Halachipedia, we extracted the footnote citations, ran each through Sefaria's own `find-refs` linker, and kept what it detected as a citation but couldn't resolve to a text. We reduced each to its base work, counted how often it's cited, and confirmed absence via `/api/name` (a work is 'present' if any real ref title matches, allowing for transliteration). Works present under a variant spelling were excluded — see the tail.
+**Method.** From a 250-page sample of Halachipedia, we extracted the footnote citations, ran each through Sefaria's own `find-refs` linker, and kept what it detected as a citation but couldn't resolve to a text. We reduced each to its base work, counted how often it's cited, and confirmed absence via `/api/name` (a work is 'present' if any real ref title matches, allowing for transliteration and for titles stored under a `Teshuvot`/`Responsa` prefix). Every candidate was re-verified live against `/api/name` (2026-07): works present under a variant or abbreviated spelling were excluded (see the tail), spelling twins and section-volumes were merged into one work, and mis-detected non-texts were dropped.
 
-**Result.** 103 works, 2902 citations. Split by why they're missing:
+**Result.** 72 works, 2750 citations. Split by why they're missing:
 
 ## Tier 1 — Public domain, not yet digitized
 
@@ -15,6 +15,24 @@ _Author died >70 years ago; Sefaria can add these without licensing._
 | 45 | Birkei Yosef | Chida (d.1806) |
 | 34 | Pri Chadash | H. da Silva (d.1698) |
 | 28 | Chavot Daat | Y. Lorberbaum (d.1832) |
+| 24 | Eliya Rabba | Eliyahu Shapira (d.1712) |
+| 16 | Radvaz | David ibn Zimra (d.1573); responsa absent, MT commentary present |
+| 12 | Hagahot Maimoniyot | Meir HaKohen (13c) |
+| 11 | Bet Efraim | E.Z. Margolis (d.1828) |
+| 11 | Knesset Hagedola | Chaim Benveniste (d.1673) |
+| 10 | Maamar Mordechai | Mordechai Carmi (d.1825) |
+| 10 | Darkei Teshuva | Tzvi Hirsch Shapira (d.1913) |
+| 10 | Gesher Hachaim | Y.M. Tucazinsky (d.1955) |
+| 9 | Ravyah | Eliezer b. Yoel HaLevi (d.1225) |
+| 9 | Hagahot Ashri | Israel of Krems (14c) |
+| 8 | Daat Torah | Maharsham / S. Schwadron (d.1911) |
+| 8 | Maharshag | Shmuel Engel (d.1935) |
+| 8 | Avnei Nezer | Avraham Bornsztain (d.1910) |
+| 8 | Sidrei Tahara | Elchanan Ashkenazi (d.1780) |
+| 7 | Turei Even Rosh Hashana | Aryeh Leib Ginzburg (d.1785) |
+| 7 | Rabbenu Yerucham | Yerucham b. Meshullam (14c) |
+| 7 | Mishkenot Yakov | Yaakov of Karlin (d.1844) |
+| 7 | Maharam Shik | Moshe Schick (d.1879) |
 
 ## Tier 2 — Modern / in-copyright
 
@@ -22,31 +40,55 @@ _Recent authorities; would require a licensing arrangement. Ranked by demand._
 
 | Citations | Work | Author |
 |---:|---|---|
-| 328 | Yalkut Yosef | Yitzchak Yosef |
-| 212 | Chazon Ovadyah | Ovadia Yosef (d.2013) |
-| 164 | Igrot Moshe | Moshe Feinstein (d.1986) |
+| 428 | Yalkut Yosef | Yitzchak Yosef |
+| 260 | Chazon Ovadyah | Ovadia Yosef (d.2013) |
+| 174 | Igrot Moshe | Moshe Feinstein (d.1986) |
 | 161 | Shemirat Shabbat KeHilchata | Y.Y. Neuwirth (d.2013) |
 | 104 | Halacha Brurah | David Yosef |
 | 102 | Yabia Omer | Ovadia Yosef (d.2013) |
+| 88 | Yechave Daat | Ovadia Yosef (d.2013) |
+| 85 | Chelkat Binyamin | on Hilchot Basar b'Chalav, modern |
 | 77 | Or Letzion | Ben Zion Abba Shaul (d.1998) |
-| 75 | Chelkat Binyamin | on Hilchot Basar b'Chalav, modern |
-| 71 | Yechave Daat | Ovadia Yosef (d.2013) |
 | 69 | Piskei Teshuvot | Simcha Rabinowitz, modern |
 | 68 | Chazon Ish | A.Y. Karelitz (d.1953) |
-| 58 | Shevet Halevi | S.H. Wosner (d.2015) |
+| 66 | Shevet Halevi | S.H. Wosner (d.2015) |
 | 54 | Tzitz Eliezer | E. Waldenberg (d.2006) |
 | 49 | Taharat Habayit | Ovadia Yosef (d.2013) |
 | 47 | Badei Hashulchan | modern, on Yoreh De'ah |
 | 40 | Minchat Yitzchak | Y.Y. Weiss (d.1989) |
 | 39 | Halichot Shlomo | S.Z. Auerbach (d.1995) |
 | 39 | Ginzei Hakodesh | modern |
+| 39 | Teshuvot VeHanhagot | Moshe Sternbuch, modern |
 | 34 | Minchat Shlomo | S.Z. Auerbach (d.1995) |
-| 32 | Yalkut Yosef Moadim | Yitzchak Yosef |
 | 30 | Nitei Gavriel | Gavriel Zinner, modern |
+| 28 | Rivevot Efraim | Efraim Greenblatt (d.2014) |
+| 26 | Beer Moshe | Moshe Stern (d.1997) |
 | 25 | Torat Ribbit | modern |
+| 25 | Orchot Shabbat | modern |
 | 23 | Menuchat Ahava | modern |
 | 23 | Brit Yehuda | Y. Blau (d.2013) |
 | 20 | Torat HaMoadim | modern |
+| 20 | Minchat Asher | Asher Weiss, modern |
+| 14 | Mishneh Halachot | Menashe Klein (d.2011) |
+| 12 | Birkat Hashem | modern |
+| 12 | Ashrei Ha'ish | rulings of R. Elyashiv, modern |
+| 12 | Chut Shani | Nissim Karelitz (d.2019) |
+| 12 | Shalmei Yehuda | modern (R. Elyashiv) |
+| 12 | Har Tzvi | Tzvi Pesach Frank (d.1960) |
+| 11 | Chelkat Yakov | Mordechai Y. Breisch (d.1976) |
+| 11 | Horah Brurah | modern |
+| 11 | Ateret Paz | Pinchas Zvichi, modern |
+| 10 | Ishei Yisrael | A.Y. Pfoifer, modern |
+| 9 | Shevet Hakehati | Shammai Gross, modern |
+| 9 | Milveh Hashem | modern |
+| 9 | Tiltulei Shabbat | modern |
+| 8 | Nishmat Avraham | A.S. Abraham (d.2010) |
+| 8 | Shulchan Shlomo | S.Z. Auerbach (d.1995) |
+| 7 | Divrei Yatziv | Y.Y. Halberstam (d.1994) |
+| 7 | Dor Hamelaktim | modern |
+| 7 | Az Nidbaru | Binyamin Zilber (d.2008) |
+| 7 | Agur Bohalecha | modern |
+| 7 | Yaskil Avdi | Ovadia Hedaya (d.1969) |
 
 ## Tier 3 — Absent, era not yet classified
 
@@ -54,81 +96,8 @@ _Detected as absent; author/copyright status not hand-checked. Longer tail._
 
 | Citations | Work |
 |---:|---|
-| 29 | Vehanhagot |
-| 26 | Beer Moshe |
-| 25 | Orchot Shabbat |
-| 24 | Eliya Rabba |
-| 20 | Yalkut Yosef Milah |
-| 20 | Minchat Asher |
-| 17 | Rivevot Efraim |
-| 17 | Yachava Daat |
-| 16 | Sma |
-| 16 | Yalkut Yosef Kitzur Shulchan Aruch |
-| 16 | Radvaz |
-| 15 | Chazon Ovadia Yamim Noraim |
-| 15 | Vezot Habracha |
-| 15 | Sama |
-| 14 | Mishneh Halachot |
-| 14 | Shabbos Kitchen |
 | 14 | Mekor Chaim |
-| 12 | Birkat Hashem |
-| 12 | Ashrei Ha'ish |
-| 12 | Hagahot Maimoniyot |
-| 12 | Chut Shani |
-| 12 | Shalmei Yehuda |
-| 12 | Yalkut Yosef Shabbat |
-| 12 | Rabbenu Yonah |
-| 12 | Har Tzvi |
-| 11 | Rivivot Ephraim |
-| 11 | Bet Efraim |
-| 11 | Chelkat Yakov |
-| 11 | Yalkut Yosef, Tefillah |
-| 11 | Horah Brurah |
-| 11 | Knesset Hagedola |
-| 11 | Ateret Paz |
-| 11 | Rambam Hilchos Machalas Asuros |
-| 10 | Maamar Mordechai |
-| 10 | Sh”t Igrot Moshe |
-| 10 | Chazon Ovadia Sukkot |
-| 10 | Darkei Teshuva |
-| 10 | Hatrumah |
-| 10 | Ishei Yisrael |
-| 10 | Rambam, Mishneh Torah: Hilchot Tefillah U'Birkat Cohanim, Chapter |
-| 10 | Gesher Hachaim |
-| 10 | Teshuvos V'Hanhagos |
-| 10 | Chelkes Binyomin |
-| 9 | Shevet Hakehati |
-| 9 | Yalkut Yosef Sova Semachot |
-| 9 | Ravyah |
-| 9 | Hagahot Ashri |
 | 9 | Halichot Olam |
-| 9 | Milveh Hashem |
-| 9 | Star-K |
-| 9 | Rav Pealim |
-| 9 | Tiltulei Shabbat |
-| 8 | Daat Torah |
-| 8 | Rashba responsa |
-| 8 | Chazon Ovadia Pesach |
-| 8 | Chazon Ovadia Purim |
-| 8 | Children in Halacha |
-| 8 | Sh”t Shevet HaLevi |
-| 8 | Nishmat Avraham |
-| 8 | Avnei Nezer |
-| 8 | Shulchan Shlomo |
-| 8 | Sidrei Tahara |
-| 8 | Bishul Yisroel |
-| 8 | Bishul Yisroel pages |
-| 7 | Rambam Sefer HaMitzvot |
-| 7 | Turei Even Rosh Hashana |
-| 7 | Divrei Yatziv |
-| 7 | Rabbenu Yerucham |
-| 7 | Dor Hamelaktim |
-| 7 | Az Nidbaru |
-| 7 | Agur Bohalecha |
-| 7 | Mishkenot Yakov |
-| 7 | Chazon Ovadia Shabbat |
-| 7 | Yaskil Avdi |
-| 7 | Maharam Shik |
 
 ## Excluded: present under a variant spelling
 
@@ -150,25 +119,32 @@ _Flagged absent by exact match but found on Sefaria after normalization — NOT 
 | Tashbetz | Tashbetz Katan |
 | Shem HaGedolim | Shem HaGedolim, Maarekhet Sefarim |
 | Orchot Chaim | Orchot Chaim L'HaRosh |
+| Sma | Me'irat Einayim on Shulchan Arukh, Choshen Mishpat |
 | Pri Megadim M"Z | (via normalization) |
 | Smag | SeMaG |
 | Pri Megadim E"A | (via normalization) |
-| Maharil | Mahari Weil |
+| Sama | Me'irat Einayim on Shulchan Arukh, Choshen Mishpat |
+| Maharil | Teshuvot Maharil |
+| Rabbenu Yonah | Rabbeinu Yonah on Berakhot; Sha'arei Teshuvah |
 | Magen Avot | Magen Avot on Avot |
 | Halachot Ketanot | Halachot Ketanot LaRif |
 | Smak | Semak |
-| Maharsham | Maharshal on Sotah |
+| Maharsham | Teshuvot Maharsham Volume I |
+| Rambam Hilchos Machalas Asuros | Mishneh Torah, Forbidden Foods |
 | Aruch | Aruch Hashulchan |
 | torah | Torah Ohr |
 | Mishna Halachot | (via normalization) |
+| Hatrumah | Sefer HaTerumah |
+| Rambam, Mishneh Torah: Hilchot Tefillah U'Birkat Cohanim, Chapter | Mishneh Torah, Prayer and the Priestly Blessing |
+| Rav Pealim | Responsa Rav Pealim |
 | Rambam Malveh Vloveh | Rambam, Malveh veLoveh |
 | Issur V’heter | Issur V'Heter L'Rabbeinu Yerucham |
 | Bedek Habayit | Bedek HaBayit on Torat HaBayit HaArokh |
 | Shibolei Haleket | Shibolei HaLeket on Pesach Haggadah |
-| Maharshag | Maharshal on Sotah |
-| Purim | Pri Tzadik, Purim |
+| Rashba responsa | Teshuvot haRashba (parts I-VII) |
 | Rambam Machalot Assurot | Rambam, Ma'achalot Assurot |
 | Chochmas Adom | Chochmat Adam |
+| Rambam Sefer HaMitzvot | Sefer HaMitzvot |
 
 ---
-_Caveats: 250-page sample (not all of Halachipedia); work-name extraction is heuristic; frequency reflects Halachipedia's Anglo-Orthodox canon, not Sefaria's whole user base. Counts are lower bounds — a work also present under one spelling and absent under another is undercounted here._
+_Caveats: 250-page sample (not all of Halachipedia); work-name extraction is heuristic; frequency reflects Halachipedia's Anglo-Orthodox canon, not Sefaria's whole user base. Counts are lower bounds — a work also present under one spelling and absent under another is undercounted here. Tier-1/2 era is classified by author death year; a handful of genuinely ambiguous titles remain in Tier 3._
