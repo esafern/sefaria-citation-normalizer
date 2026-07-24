@@ -15,3 +15,6 @@ pipeline/hp_failures_wide.json
 
 # raw CC-BY-SA answer text (intermediate); only derived citation strings are committed
 pipeline/miyodeya_bodies.json
+
+# in-progress find-refs output (force-added when the run completes)
+pipeline/miyodeya_failures.json
