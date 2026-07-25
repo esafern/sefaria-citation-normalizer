@@ -2,7 +2,7 @@
 
 _A candidate priority list for Sefaria's library team._
 
-**Method.** From a 250-page sample of Halachipedia, we extracted the footnote citations, ran each through Sefaria's own `find-refs` linker, and kept what it detected as a citation but couldn't resolve to a text. We reduced each to its base work, counted how often it's cited, and confirmed absence via `/api/name` (a work is 'present' if any real ref title matches, allowing for transliteration and for titles stored under a `Teshuvot`/`Responsa` prefix). Every candidate was re-verified live against `/api/name` (2026-07): works present under a variant or abbreviated spelling were excluded (see the tail), spelling twins and section-volumes were merged into one work, and mis-detected non-texts were dropped.
+**Method.** From the full 640-page Halachipedia corpus (every substantial content page), we extracted the footnote citations, ran each through Sefaria's own `find-refs` linker, and kept what it detected as a citation but couldn't resolve to a text. We reduced each to its base work, counted how often it's cited, and confirmed absence via `/api/name` (a work is 'present' if any real ref title matches, allowing for transliteration and for titles stored under a `Teshuvot`/`Responsa` prefix). Every candidate was re-verified live against `/api/name` (2026-07): works present under a variant or abbreviated spelling were excluded (see the tail), spelling twins and section-volumes were merged into one work, and mis-detected non-texts were dropped.
 
 **Result.** 73 works, 6883 citations. Split by why they're missing:
 
@@ -135,4 +135,4 @@ _Flagged absent by exact match but found on Sefaria after normalization — NOT 
 | Or Zaruah | Ohr Zarua |
 
 ---
-_Caveats: 250-page sample (not all of Halachipedia); work-name extraction is heuristic; frequency reflects Halachipedia's Anglo-Orthodox canon, not Sefaria's whole user base. Counts are lower bounds — a work also present under one spelling and absent under another is undercounted here. Era is classified by author death year (work-level, from the citation context where the title alone is ambiguous)._
+_Caveats: covers the 640 substantial Halachipedia pages (stub/short pages excluded); work-name extraction is heuristic; frequency reflects Halachipedia's Anglo-Orthodox canon, not Sefaria's whole user base. Only the top works by frequency are verified against Sefaria, so the least-cited tail may be incomplete. Counts are lower bounds — a work also present under one spelling and absent under another is undercounted here. Era is classified by author death year (work-level, from the citation context where the title alone is ambiguous)._

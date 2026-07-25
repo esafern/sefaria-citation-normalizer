@@ -33,7 +33,8 @@ ranked = json.load(open(os.path.join(HERE, "work_frequency.json")))["ranked"]
 cache_path = os.path.join(HERE, "presence_cache.json")
 cache = json.load(open(cache_path)) if os.path.exists(cache_path) else {}
 
-TOP = 250
+TOP = 250      # verify the top-N works by citation frequency (a rank cutoff)
+PAGES = 640    # size of the mined corpus (the whole mineable Halachipedia)
 ENGLISH = re.compile(r"\bHalachos of\b|\bLaws of\b|Handbook|by Rabbi|\bThe \b|Melachos|Guide", re.I)
 
 # Verified present by hand (trie can't reach them by prefix): abbreviations and
@@ -265,7 +266,7 @@ out = {"absent_ranked": [{"work": nm, "citations": n,
         for nm, n in absent],
        "present_under_variant_spelling": present_variant,
        "total_absent_citations": sum(n for _, n in absent),
-       "note": "Ranked by citation frequency across a 250-page Halachipedia sample."}
+       "note": f"Ranked by citation frequency across the full {PAGES}-page Halachipedia corpus."}
 json.dump(out, open(os.path.join(HERE, "..", "data", "sefaria_most_wanted.json"), "w"),
           ensure_ascii=False, indent=1)
 
@@ -277,7 +278,8 @@ def clean(nm):  # strip extraction noise: trailing lone letters / volume / fn ma
 md = []
 md.append("# Halachipedia's most-cited works that Sefaria doesn't have\n")
 md.append("_A candidate priority list for Sefaria's library team._\n")
-md.append(f"**Method.** From a {TOP}-page sample of Halachipedia, we extracted the "
+md.append(f"**Method.** From the full {PAGES}-page Halachipedia corpus (every substantial "
+          f"content page), we extracted the "
           f"footnote citations, ran each through Sefaria's own `find-refs` linker, and kept "
           f"what it detected as a citation but couldn't resolve to a text. We reduced each to "
           f"its base work, counted how often it's cited, and confirmed absence via `/api/name` "
@@ -314,9 +316,12 @@ md.append("| Cited-as | Actually on Sefaria as |\n|---|---|")
 for nm, n, match in sorted(present_variant, key=lambda x: -x[1])[:40]:
     md.append(f"| {nm} | {match} |")
 
-md.append("\n---\n_Caveats: 250-page sample (not all of Halachipedia); work-name extraction "
+md.append(f"\n---\n_Caveats: covers the {PAGES} substantial Halachipedia pages (stub/short pages "
+          "excluded); work-name extraction "
           "is heuristic; frequency reflects Halachipedia's Anglo-Orthodox canon, not Sefaria's "
-          "whole user base. Counts are lower bounds — a work also present under one spelling and "
+          "whole user base. Only the top works by frequency are verified against Sefaria, so the "
+          "least-cited tail may be incomplete. Counts are lower bounds — a work also present under "
+          "one spelling and "
           "absent under another is undercounted here. Era is classified by author death year "
           "(work-level, from the citation context where the title alone is ambiguous)._\n")
 open(os.path.join(HERE, "..", "data", "SEFARIA-MOST-WANTED.md"), "w").write("\n".join(md))
