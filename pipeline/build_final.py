@@ -328,6 +328,11 @@ def clean(nm):  # strip extraction noise: trailing lone letters / volume markers
 md = []
 md.append("# Halachipedia's most-cited works that Sefaria doesn't have\n")
 md.append("_A candidate priority list for Sefaria's library team._\n")
+_doubtful = ("were pulled into a separate 'pending verification' list rather than asserted as "
+             "gaps." if verify else
+             "were spot-checked live against `/api/name` and their raw completions read by hand; "
+             "those genuinely present were moved to the variant-spelling exclusion, the rest "
+             "confirmed as gaps.")
 md.append(f"**Method.** From a {TOP}-page sample of Halachipedia, we extracted the "
           f"footnote citations, ran each through Sefaria's own `find-refs` linker, and kept "
           f"what it detected as a citation but couldn't resolve to a text. We reduced each to "
@@ -335,12 +340,15 @@ md.append(f"**Method.** From a {TOP}-page sample of Halachipedia, we extracted t
           f"(a work is 'present' if any real ref title matches, allowing for transliteration). "
           f"Works present under a variant spelling were excluded — see the tail. The Tier-3 "
           f"tail was then hand-classified by author era; entries whose absence looked doubtful "
-          f"(classic rishonim/acharonim, Rambam sections) were pulled into a separate "
-          f"'pending verification' list rather than asserted as gaps.\n")
-md.append(f"**Result.** {len(tiered)} works confidently absent ({sum(n for _,n in tiered)} "
-          f"citations), split by why they're missing. A further {len(verify)} works "
-          f"({sum(n for _,n,_ in verify)} citations) await a live presence check, and "
-          f"{len(nonsrc)} non-source pages are excluded.\n")
+          f"(classic rishonim/acharonim, Rambam sections) {_doubtful}\n")
+_result = (f"**Result.** {len(tiered)} works confidently absent "
+           f"({sum(n for _,n in tiered)} citations), split by why they're missing.")
+if verify:
+    _result += (f" A further {len(verify)} works ({sum(n for _,n,_ in verify)} citations) await "
+                f"a live presence check.")
+if nonsrc:
+    _result += f" {len(nonsrc)} non-source pages are excluded."
+md.append(_result + "\n")
 
 md.append("## Tier 1 — Public domain, not yet digitized\n")
 md.append("_Author died >70 years ago; Sefaria can add these without licensing._\n")
@@ -354,27 +362,30 @@ md.append("| Citations | Work | Author |\n|---:|---|---|")
 for nm, n in mod:
     md.append(f"| {n} | {clean(nm)} | {era(nm)[0]} |")
 
-md.append("\n## Tier 3 — Absent, era still uncertain\n")
-md.append("_Detected as absent but author/edition ambiguous; needs a hand-check._\n")
-md.append("| Citations | Work |\n|---:|---|")
-for nm, n in unk:
-    md.append(f"| {n} | {clean(nm)} |")
+if unk:
+    md.append("\n## Tier 3 — Absent, era still uncertain\n")
+    md.append("_Detected as absent but author/edition ambiguous; needs a hand-check._\n")
+    md.append("| Citations | Work |\n|---:|---|")
+    for nm, n in unk:
+        md.append(f"| {n} | {clean(nm)} |")
 
-md.append("\n## Pending presence verification — likely already on Sefaria\n")
-md.append("_Flagged absent by the miner, but these are classic works (or Rambam sections) "
-          "Sefaria very probably already has under an embedded or abbreviated form. Queued for "
-          "a live `/api/name` spot-check before any are counted as gaps — NOT asserted as "
-          "wanted._\n")
-md.append("| Citations | Cited-as | Likely the present work |\n|---:|---|---|")
-for nm, n, why in sorted(verify, key=lambda x: -x[1]):
-    md.append(f"| {n} | {clean(nm)} | {why} |")
+if verify:
+    md.append("\n## Pending presence verification — likely already on Sefaria\n")
+    md.append("_Flagged absent by the miner, but these are classic works (or Rambam sections) "
+              "Sefaria very probably already has under an embedded or abbreviated form. Queued "
+              "for a live `/api/name` spot-check before any are counted as gaps — NOT asserted "
+              "as wanted. Run `pipeline/verify_pending.py` to resolve these._\n")
+    md.append("| Citations | Cited-as | Likely the present work |\n|---:|---|---|")
+    for nm, n, why in sorted(verify, key=lambda x: -x[1]):
+        md.append(f"| {n} | {clean(nm)} | {why} |")
 
-md.append("\n## Excluded: not a Sefaria source text\n")
-md.append("_Kashrus organizations, English handbooks, and topic headings the extractor "
-          "mistook for work titles._\n")
-md.append("| Citations | Item | What it is |\n|---:|---|---|")
-for nm, n, why in sorted(nonsrc, key=lambda x: -x[1]):
-    md.append(f"| {n} | {clean(nm)} | {why} |")
+if nonsrc:
+    md.append("\n## Excluded: not a Sefaria source text\n")
+    md.append("_Kashrus organizations, English handbooks, and topic headings the extractor "
+              "mistook for work titles._\n")
+    md.append("| Citations | Item | What it is |\n|---:|---|---|")
+    for nm, n, why in sorted(nonsrc, key=lambda x: -x[1]):
+        md.append(f"| {n} | {clean(nm)} | {why} |")
 
 md.append("\n## Excluded: present under a variant spelling\n")
 md.append("_Flagged absent by exact match but found on Sefaria after normalization — NOT wanted._\n")

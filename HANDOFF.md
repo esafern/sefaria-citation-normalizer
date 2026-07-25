@@ -47,14 +47,19 @@ deterministically with no model at link time.
   103 absent works / ~2,900 citations, tiered public-domain vs modern, with 33 false-absents
   (present under a variant spelling) filtered out via the normalizer's own candidates.
 - **Tier-3 era pass (2026-07)** — the ~75-work "era not classified" tail was hand-classified
-  from author death dates (life+70): now 11 PD / 66 MOD / 3 genuinely-uncertain. 18 suspected
-  false-absents (classic rishonim/acharonim + Rambam sections + the flagged abbreviations Sma,
-  Radvaz) were pulled into a new `pending_presence_verification` bucket — **not** asserted as
-  gaps, queued for the live `/api/name` spot-check. 5 non-source items (Star-K, English
-  handbooks, topic headings) excluded. `build_final.py` gained an `--offline` mode that reuses
-  the committed absent-set so the tiering can be regenerated with no network (Sefaria egress is
-  policy-blocked in the web sandbox). This was done offline; the presence spot-check still needs
-  a session with Sefaria access.
+  from author death dates (life+70). 5 non-source items (Star-K, English handbooks, topic
+  headings) excluded. `build_final.py` gained an `--offline` mode that reuses the committed
+  absent-set so the tiering can be regenerated with no network.
+- **Pending-18 spot-check DONE (2026-07)** — `pipeline/verify_pending.py` ran live against
+  `/api/name` and every verdict was hand-verified against the raw completions (the fuzzy matcher
+  false-positived on Turei Even/Hagahot Asheri and false-negatived on Rav Pealim — see the note
+  in that script). Result: **11 present** (moved to the variant-spelling exclusion — Sma =
+  Me'irat Einayim, Radvaz = Teshuvot HaRadbaz, Eliya Rabba, Rabbeinu Yonah, Rav Pealim, the
+  Rashba responsa, Hatrumah, and 3 Rambam sections) and **7 verified-absent PD rishonim** now in
+  Tier 1 (Hagahot Maimoniyot, Knesset HaGedolah, Maamar Mordechai, Ravyah, Rabbeinu Yerucham,
+  Turei Even, Hagahot Ashri). Verdicts are committed in `pipeline/pending_resolved.json`.
+- **Current list state:** 87 confidently-absent works / 2717 citations — **Tier 1 (PD) 18**,
+  Tier 2 (modern) 66, Tier 3 (era-uncertain) 3; 44 present-under-variant excluded; 5 non-source.
 
 ## Key architecture notes
 
@@ -98,18 +103,13 @@ blog repo but document Sefaria issues — candidates to move here.
    `curl -sS "$HTTPS_PROXY/__agentproxy/status"` — a `connect_rejected` 403 for `www.sefaria.org`
    in `recentRelayFailures` means it's still blocked.
 
-   With egress open, two tasks remain:
-   - **Run the presence spot-check (ready, one command):** `python3 pipeline/verify_pending.py`
-     probes the 18 `pending_presence_verification` works live (hand-supplied Sefaria spellings +
-     normalizer candidates), writes verdicts to `pipeline/pending_resolved.json`, and prints a
-     PRESENT/ABSENT report. Then `python3 pipeline/build_final.py --offline` regenerates the list:
-     confirmed-present works move to the variant-spelling exclusion; confirmed-absent ones drop
-     out of pending and tier automatically (era pre-seeded in `build_final.py`'s `VERIFY_ERA`, so
-     rishonim land in Tier 1). Commit `pending_resolved.json` — it's the verification record.
+   The presence spot-check is **done** (see Progress). What remains with egress open:
    - **Widen beyond the 250-page sample** — the larger, gentler re-mine (see `mine_v2.py`,
-     `trawl_big.py`); keep it paced.
-   With network up you can also run `python3 pipeline/build_final.py` (no `--offline`) to
-   re-verify the whole absent-set live rather than reuse the committed one.
+     `trawl_big.py`); keep it paced. After widening, re-run `verify_pending.py` on any new
+     suspected-absents and **eyeball its verdicts** (the fuzzy matcher mis-calls short/compound
+     names — the script header documents this).
+   - Optional: `python3 pipeline/build_final.py` (no `--offline`) re-verifies the whole
+     absent-set live rather than reusing the committed one.
 3. **Contribute to Sefaria — when it's "truly real."** The strongest form isn't a repo link
    but a PR / data contribution into Sefaria's own repos: the dataset (as linker eval cases),
    the dialect map, and the most-wanted list (for their library/licensing team). Hold outreach

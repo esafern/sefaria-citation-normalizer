@@ -277,6 +277,12 @@
    "tier": "MOD"
   },
   {
+   "work": "Hagahot Maimoniyot",
+   "citations": 12,
+   "author": "Meir HaKohen (13th c.)",
+   "tier": "PD"
+  },
+  {
    "work": "Rivivot Ephraim",
    "citations": 11,
    "author": "Ephraim Greenblatt (d.2014)",
@@ -311,6 +317,12 @@
    "citations": 11,
    "author": "Pinchas Zvichi, contemp.",
    "tier": "MOD"
+  },
+  {
+   "work": "Knesset Hagedola",
+   "citations": 11,
+   "author": "Chaim Benveniste (d.1673)",
+   "tier": "PD"
   },
   {
    "work": "Sh”t Igrot Moshe",
@@ -355,6 +367,12 @@
    "tier": "MOD"
   },
   {
+   "work": "Maamar Mordechai",
+   "citations": 10,
+   "author": "Mordechai Karmi (d.1825)",
+   "tier": "PD"
+  },
+  {
    "work": "Shevet Hakehati",
    "citations": 9,
    "author": "Shammai Gross (d.2020)",
@@ -383,6 +401,18 @@
    "citations": 9,
    "author": "modern",
    "tier": "MOD"
+  },
+  {
+   "work": "Ravyah",
+   "citations": 9,
+   "author": "Eliezer b. Yoel HaLevi (d.1225)",
+   "tier": "PD"
+  },
+  {
+   "work": "Hagahot Ashri",
+   "citations": 9,
+   "author": "Israel of Krems (14th c.)",
+   "tier": "PD"
   },
   {
    "work": "Daat Torah",
@@ -479,100 +509,21 @@
    "citations": 7,
    "author": "Moshe Schick (d.1879)",
    "tier": "PD"
-  }
- ],
- "pending_presence_verification": [
-  {
-   "work": "Eliya Rabba",
-   "citations": 24,
-   "likely": "Eliyah Rabbah (on Orach Chaim)"
-  },
-  {
-   "work": "Sma",
-   "citations": 16,
-   "likely": "Sma (Sefer Meirat Einayim, on Choshen Mishpat)"
-  },
-  {
-   "work": "Radvaz",
-   "citations": 16,
-   "likely": "Radbaz responsa / on Rambam"
-  },
-  {
-   "work": "Sama",
-   "citations": 15,
-   "likely": "Sama (= Sma, Sefer Meirat Einayim)"
-  },
-  {
-   "work": "Hagahot Maimoniyot",
-   "citations": 12,
-   "likely": "Hagahot Maimoniyot (glosses on Mishneh Torah)"
-  },
-  {
-   "work": "Rabbenu Yonah",
-   "citations": 12,
-   "likely": "Rabbeinu Yonah (Shaarei Teshuvah / on Avot, Berakhot)"
-  },
-  {
-   "work": "Knesset Hagedola",
-   "citations": 11,
-   "likely": "Knesset HaGedolah"
-  },
-  {
-   "work": "Rambam Hilchos Machalas Asuros",
-   "citations": 11,
-   "likely": "Rambam, Ma'achalot Assurot (definitely on Sefaria)"
-  },
-  {
-   "work": "Maamar Mordechai",
-   "citations": 10,
-   "likely": "Maamar Mordechai (on Orach Chaim)"
-  },
-  {
-   "work": "Hatrumah",
-   "citations": 10,
-   "likely": "Sefer HaTerumah"
-  },
-  {
-   "work": "Rambam, Mishneh Torah: Hilchot Tefillah U'Birkat Cohanim, Chapter",
-   "citations": 10,
-   "likely": "Rambam, Hilchot Tefillah (definitely on Sefaria)"
-  },
-  {
-   "work": "Ravyah",
-   "citations": 9,
-   "likely": "Ra'avyah"
-  },
-  {
-   "work": "Hagahot Ashri",
-   "citations": 9,
-   "likely": "Hagahot Asheri"
-  },
-  {
-   "work": "Rav Pealim",
-   "citations": 9,
-   "likely": "Rav Pe'alim (Ben Ish Chai responsa)"
-  },
-  {
-   "work": "Rashba responsa",
-   "citations": 8,
-   "likely": "Teshuvot HaRashba"
-  },
-  {
-   "work": "Rambam Sefer HaMitzvot",
-   "citations": 7,
-   "likely": "Rambam, Sefer HaMitzvot (definitely on Sefaria)"
   },
   {
    "work": "Turei Even Rosh Hashana",
    "citations": 7,
-   "likely": "Turei Even (on Rosh Hashanah)"
+   "author": "Aryeh Leib Ginzburg (d.1785)",
+   "tier": "PD"
   },
   {
    "work": "Rabbenu Yerucham",
    "citations": 7,
-   "likely": "Rabbeinu Yerucham (Toldot Adam v'Chavah)"
+   "author": "Yerucham b. Meshullam (d.1350)",
+   "tier": "PD"
   }
  ],
+ "pending_presence_verification": [],
  "non_source_excluded": [
   {
    "work": "Shabbos Kitchen",
@@ -765,8 +716,63 @@
    "Chochmas Adom",
    8,
    "Chochmat Adam"
+  ],
+  [
+   "Eliya Rabba",
+   24,
+   "Eliyah Rabbah on Shulchan Arukh, Orach Chayim"
+  ],
+  [
+   "Sma",
+   16,
+   "Me'irat Einayim on Shulchan Arukh, Choshen Mishpat"
+  ],
+  [
+   "Radvaz",
+   16,
+   "Teshuvot HaRadbaz Volume 1"
+  ],
+  [
+   "Sama",
+   15,
+   "Me'irat Einayim on Shulchan Arukh, Choshen Mishpat"
+  ],
+  [
+   "Rabbenu Yonah",
+   12,
+   "Rabbeinu Yonah on Berakhot"
+  ],
+  [
+   "Rambam Hilchos Machalas Asuros",
+   11,
+   "Mishneh Torah, Forbidden Foods"
+  ],
+  [
+   "Hatrumah",
+   10,
+   "Sefer HaTerumah"
+  ],
+  [
+   "Rambam, Mishneh Torah: Hilchot Tefillah U'Birkat Cohanim, Chapter",
+   10,
+   "Mishneh Torah, Prayer and the Priestly Blessing"
+  ],
+  [
+   "Rav Pealim",
+   9,
+   "Responsa Rav Pealim"
+  ],
+  [
+   "Rashba responsa",
+   8,
+   "Teshuvot haRashba part I"
+  ],
+  [
+   "Rambam Sefer HaMitzvot",
+   7,
+   "Sefer HaMitzvot"
   ]
  ],
- "total_absent_citations": 2652,
+ "total_absent_citations": 2717,
  "note": "Ranked by citation frequency across a 250-page Halachipedia sample. Tier-3 tail hand-classified by author era; suspected false-absents moved to pending_presence_verification."
 }

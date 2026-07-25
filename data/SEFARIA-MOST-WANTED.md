@@ -2,9 +2,9 @@
 
 _A candidate priority list for Sefaria's library team._
 
-**Method.** From a 250-page sample of Halachipedia, we extracted the footnote citations, ran each through Sefaria's own `find-refs` linker, and kept what it detected as a citation but couldn't resolve to a text. We reduced each to its base work, counted how often it's cited, and confirmed absence via `/api/name` (a work is 'present' if any real ref title matches, allowing for transliteration). Works present under a variant spelling were excluded — see the tail. The Tier-3 tail was then hand-classified by author era; entries whose absence looked doubtful (classic rishonim/acharonim, Rambam sections) were pulled into a separate 'pending verification' list rather than asserted as gaps.
+**Method.** From a 250-page sample of Halachipedia, we extracted the footnote citations, ran each through Sefaria's own `find-refs` linker, and kept what it detected as a citation but couldn't resolve to a text. We reduced each to its base work, counted how often it's cited, and confirmed absence via `/api/name` (a work is 'present' if any real ref title matches, allowing for transliteration). Works present under a variant spelling were excluded — see the tail. The Tier-3 tail was then hand-classified by author era; entries whose absence looked doubtful (classic rishonim/acharonim, Rambam sections) were spot-checked live against `/api/name` and their raw completions read by hand; those genuinely present were moved to the variant-spelling exclusion, the rest confirmed as gaps.
 
-**Result.** 80 works confidently absent (2652 citations), split by why they're missing. A further 18 works (203 citations) await a live presence check, and 5 non-source pages are excluded.
+**Result.** 87 works confidently absent (2717 citations), split by why they're missing. 5 non-source pages are excluded.
 
 ## Tier 1 — Public domain, not yet digitized
 
@@ -15,14 +15,21 @@ _Author died >70 years ago; Sefaria can add these without licensing._
 | 45 | Birkei Yosef | Chida (d.1806) |
 | 34 | Pri Chadash | H. da Silva (d.1698) |
 | 28 | Chavot Daat | Y. Lorberbaum (d.1832) |
+| 12 | Hagahot Maimoniyot | Meir HaKohen (13th c.) |
 | 11 | Bet Efraim | E.Z. Margolis (d.1828) |
+| 11 | Knesset Hagedola | Chaim Benveniste (d.1673) |
 | 10 | Darkei Teshuva | Tzvi Hirsch Shapira (d.1913) |
 | 10 | Gesher Hachaim | Y.M. Tucazinsky (d.1955, borderline) |
+| 10 | Maamar Mordechai | Mordechai Karmi (d.1825) |
+| 9 | Ravyah | Eliezer b. Yoel HaLevi (d.1225) |
+| 9 | Hagahot Ashri | Israel of Krems (14th c.) |
 | 8 | Daat Torah | Maharsham, S.M. Schwadron (d.1911) |
 | 8 | Avnei Nezer | A. Bornsztain (d.1910) |
 | 8 | Sidrei Tahara | Elchanan Ashkenazi (d.1780) |
 | 7 | Mishkenot Yakov | Yaakov of Karlin (d.1844) |
 | 7 | Maharam Shik | Moshe Schick (d.1879) |
+| 7 | Turei Even Rosh Hashana | Aryeh Leib Ginzburg (d.1785) |
+| 7 | Rabbenu Yerucham | Yerucham b. Meshullam (d.1350) |
 
 ## Tier 2 — Modern / in-copyright
 
@@ -107,31 +114,6 @@ _Detected as absent but author/edition ambiguous; needs a hand-check._
 | 14 | Mekor Chaim |
 | 7 | Agur Bohalecha |
 
-## Pending presence verification — likely already on Sefaria
-
-_Flagged absent by the miner, but these are classic works (or Rambam sections) Sefaria very probably already has under an embedded or abbreviated form. Queued for a live `/api/name` spot-check before any are counted as gaps — NOT asserted as wanted._
-
-| Citations | Cited-as | Likely the present work |
-|---:|---|---|
-| 24 | Eliya Rabba | Eliyah Rabbah (on Orach Chaim) |
-| 16 | Sma | Sma (Sefer Meirat Einayim, on Choshen Mishpat) |
-| 16 | Radvaz | Radbaz responsa / on Rambam |
-| 15 | Sama | Sama (= Sma, Sefer Meirat Einayim) |
-| 12 | Hagahot Maimoniyot | Hagahot Maimoniyot (glosses on Mishneh Torah) |
-| 12 | Rabbenu Yonah | Rabbeinu Yonah (Shaarei Teshuvah / on Avot, Berakhot) |
-| 11 | Knesset Hagedola | Knesset HaGedolah |
-| 11 | Rambam Hilchos Machalas Asuros | Rambam, Ma'achalot Assurot (definitely on Sefaria) |
-| 10 | Maamar Mordechai | Maamar Mordechai (on Orach Chaim) |
-| 10 | Hatrumah | Sefer HaTerumah |
-| 10 | Rambam, Mishneh Torah: Hilchot Tefillah U'Birkat Cohanim, Chapter | Rambam, Hilchot Tefillah (definitely on Sefaria) |
-| 9 | Ravyah | Ra'avyah |
-| 9 | Hagahot Ashri | Hagahot Asheri |
-| 9 | Rav Pealim | Rav Pe'alim (Ben Ish Chai responsa) |
-| 8 | Rashba responsa | Teshuvot HaRashba |
-| 7 | Rambam Sefer HaMitzvot | Rambam, Sefer HaMitzvot (definitely on Sefaria) |
-| 7 | Turei Even Rosh Hashana | Turei Even (on Rosh Hashanah) |
-| 7 | Rabbenu Yerucham | Rabbeinu Yerucham (Toldot Adam v'Chavah) |
-
 ## Excluded: not a Sefaria source text
 
 _Kashrus organizations, English handbooks, and topic headings the extractor mistook for work titles._
@@ -157,6 +139,7 @@ _Flagged absent by exact match but found on Sefaria after normalization — NOT 
 | Mishna Brura | Mishna Brurah |
 | Levush | Levush HaOrah |
 | Chaye Adam | Chayei Adam |
+| Eliya Rabba | Eliyah Rabbah on Shulchan Arukh, Orach Chayim |
 | Meiri | Meiri on Yoma |
 | Gemara Bava Metsia | (via normalization) |
 | Trumat Hadeshen | Terumat HaDeshen |
@@ -165,24 +148,30 @@ _Flagged absent by exact match but found on Sefaria after normalization — NOT 
 | Shem HaGedolim | Shem HaGedolim, Maarekhet Sefarim |
 | Orchot Chaim | Orchot Chaim L'HaRosh |
 | Pri Megadim M"Z | (via normalization) |
+| Sma | Me'irat Einayim on Shulchan Arukh, Choshen Mishpat |
+| Radvaz | Teshuvot HaRadbaz Volume 1 |
 | Smag | SeMaG |
 | Pri Megadim E"A | (via normalization) |
+| Sama | Me'irat Einayim on Shulchan Arukh, Choshen Mishpat |
 | Maharil | Mahari Weil |
 | Magen Avot | Magen Avot on Avot |
+| Rabbenu Yonah | Rabbeinu Yonah on Berakhot |
 | Halachot Ketanot | Halachot Ketanot LaRif |
 | Smak | Semak |
 | Maharsham | Maharshal on Sotah |
+| Rambam Hilchos Machalas Asuros | Mishneh Torah, Forbidden Foods |
 | Aruch | Aruch Hashulchan |
 | torah | Torah Ohr |
 | Mishna Halachot | (via normalization) |
+| Hatrumah | Sefer HaTerumah |
+| Rambam, Mishneh Torah: Hilchot Tefillah U'Birkat Cohanim, Chapter | Mishneh Torah, Prayer and the Priestly Blessing |
 | Rambam Malveh Vloveh | Rambam, Malveh veLoveh |
 | Issur V’heter | Issur V'Heter L'Rabbeinu Yerucham |
+| Rav Pealim | Responsa Rav Pealim |
 | Bedek Habayit | Bedek HaBayit on Torat HaBayit HaArokh |
 | Shibolei Haleket | Shibolei HaLeket on Pesach Haggadah |
 | Maharshag | Maharshal on Sotah |
 | Purim | Pri Tzadik, Purim |
-| Rambam Machalot Assurot | Rambam, Ma'achalot Assurot |
-| Chochmas Adom | Chochmat Adam |
 
 ---
 _Caveats: 250-page sample (not all of Halachipedia); work-name extraction is heuristic; frequency reflects Halachipedia's Anglo-Orthodox canon, not Sefaria's whole user base. Counts are lower bounds — a work also present under one spelling and absent under another is undercounted here. Era classification of the tail is by hand from author death dates (life+70, as of 2026); entries marked 'unverified' or in the pending-verification list still need a live check._

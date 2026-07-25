@@ -1,0 +1,128 @@
+{
+ "eliyarabba": {
+  "verdict": "present",
+  "match": "Eliyah Rabbah on Shulchan Arukh, Orach Chayim",
+  "via": "hand-verified",
+  "work": "Eliya Rabba",
+  "citations": 24
+ },
+ "sma": {
+  "verdict": "present",
+  "match": "Me'irat Einayim on Shulchan Arukh, Choshen Mishpat",
+  "via": "hand-verified",
+  "work": "Sma",
+  "citations": 16
+ },
+ "radvaz": {
+  "verdict": "present",
+  "match": "Teshuvot HaRadbaz Volume 1",
+  "via": "hand-verified",
+  "work": "Radvaz",
+  "citations": 16
+ },
+ "sama": {
+  "verdict": "present",
+  "match": "Me'irat Einayim on Shulchan Arukh, Choshen Mishpat",
+  "via": "hand-verified",
+  "work": "Sama",
+  "citations": 15
+ },
+ "hagahotmaimoniyot": {
+  "verdict": "absent",
+  "match": null,
+  "via": "hand-verified",
+  "work": "Hagahot Maimoniyot",
+  "citations": 12
+ },
+ "rabbenuyonah": {
+  "verdict": "present",
+  "match": "Rabbeinu Yonah on Berakhot",
+  "via": "hand-verified",
+  "work": "Rabbenu Yonah",
+  "citations": 12
+ },
+ "knessethagedola": {
+  "verdict": "absent",
+  "match": null,
+  "via": "hand-verified",
+  "work": "Knesset Hagedola",
+  "citations": 11
+ },
+ "rambamhilchosmachalasasuros": {
+  "verdict": "present",
+  "match": "Mishneh Torah, Forbidden Foods",
+  "via": "hand-verified",
+  "work": "Rambam Hilchos Machalas Asuros",
+  "citations": 11
+ },
+ "maamarmordechai": {
+  "verdict": "absent",
+  "match": null,
+  "via": "hand-verified",
+  "work": "Maamar Mordechai",
+  "citations": 10
+ },
+ "hatrumah": {
+  "verdict": "present",
+  "match": "Sefer HaTerumah",
+  "via": "hand-verified",
+  "work": "Hatrumah",
+  "citations": 10
+ },
+ "rambammishnehtorahhilchottefillahubirkatcohanimchapter": {
+  "verdict": "present",
+  "match": "Mishneh Torah, Prayer and the Priestly Blessing",
+  "via": "hand-verified",
+  "work": "Rambam, Mishneh Torah: Hilchot Tefillah U'Birkat Cohanim, Chapter",
+  "citations": 10
+ },
+ "ravyah": {
+  "verdict": "absent",
+  "match": null,
+  "via": "hand-verified",
+  "work": "Ravyah",
+  "citations": 9
+ },
+ "hagahotashri": {
+  "verdict": "absent",
+  "match": null,
+  "via": "hand-verified",
+  "work": "Hagahot Ashri",
+  "citations": 9
+ },
+ "ravpealim": {
+  "verdict": "present",
+  "match": "Responsa Rav Pealim",
+  "via": "hand-verified",
+  "work": "Rav Pealim",
+  "citations": 9
+ },
+ "rashbaresponsa": {
+  "verdict": "present",
+  "match": "Teshuvot haRashba part I",
+  "via": "hand-verified",
+  "work": "Rashba responsa",
+  "citations": 8
+ },
+ "rambamseferhamitzvot": {
+  "verdict": "present",
+  "match": "Sefer HaMitzvot",
+  "via": "hand-verified",
+  "work": "Rambam Sefer HaMitzvot",
+  "citations": 7
+ },
+ "tureievenroshhashana": {
+  "verdict": "absent",
+  "match": null,
+  "via": "hand-verified",
+  "work": "Turei Even Rosh Hashana",
+  "citations": 7
+ },
+ "rabbenuyerucham": {
+  "verdict": "absent",
+  "match": null,
+  "via": "hand-verified",
+  "work": "Rabbenu Yerucham",
+  "citations": 7
+ }
+}

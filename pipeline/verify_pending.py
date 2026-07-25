@@ -17,6 +17,16 @@ Needs Sefaria egress (blocked in the web sandbox — a 403 from the proxy means
 this must run from a session whose network policy allows www.sefaria.org).
 Gentle: single-threaded, cached, delayed.
 
+IMPORTANT — verdicts are heuristic, EYEBALL THEM. presence.check does per-word
+fuzzy prefix matching, which on short/compound names both false-positives
+(Turei Even -> "Tur, Even HaEzer"; Hagahot Asheri -> "Hagahot Sheerit Tzion")
+and false-negatives (Rav Pealim is present as "Responsa Rav Pealim" but the
+title starts with "Responsa", so the prefix test misses it). Before trusting a
+verdict, pull the raw completions:
+  /api/name/<work> -> completion_objects[].title (only type ref/book counts).
+The committed pending_resolved.json was hand-verified this way (2026-07):
+11 present, 7 absent (all 7 PD rishonim/acharonim).
+
     python3 pipeline/verify_pending.py        # probe live, write verdicts
     python3 pipeline/build_final.py --offline  # regenerate the list from them
 """
