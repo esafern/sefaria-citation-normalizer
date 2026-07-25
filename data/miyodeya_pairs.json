@@ -1,0 +1,54 @@
+{
+ "source": "Mi Yodeya (Judaism Stack Exchange), CC-BY-SA dump",
+ "method": "propose->verify (rule) + LLM-labeled, Sefaria-verified (labeled)",
+ "pairs": [
+  {
+   "raw": "Avot De-Rabbi Natan 2:5",
+   "my_canonical": "Avot DeRabbi Natan.2.5",
+   "sefaria_ref": "Avot DeRabbi Natan.2.5",
+   "via": "rule"
+  },
+  {
+   "raw": "Berakhos 23b",
+   "my_canonical": "Berakhot.23b",
+   "sefaria_ref": "Berakhot.23b",
+   "via": "rule"
+  },
+  {
+   "raw": "Brachos 27b",
+   "my_canonical": "Berakhot.27b",
+   "sefaria_ref": "Berakhot.27b",
+   "via": "rule"
+  },
+  {
+   "raw": "Gemara Ketubos 68a",
+   "my_canonical": "Ketubot.68a",
+   "sefaria_ref": "Ketubot.68a",
+   "via": "rule"
+  },
+  {
+   "raw": "Avos DeRabbi Nasan ( 7:3 )",
+   "my_canonical": "Avot DeRabbi Natan 7:3",
+   "sefaria_ref": "Avot DeRabbi Natan 7:3",
+   "via": "labeled"
+  },
+  {
+   "raw": "B'rachos 60b",
+   "my_canonical": "Berakhot 60b",
+   "sefaria_ref": "Berakhot 60b",
+   "via": "labeled"
+  },
+  {
+   "raw": "Akeidas Yitzchak Lev no. 23",
+   "my_canonical": "Akeidat Yitzchak",
+   "sefaria_ref": "Akeidat Yitzchak",
+   "via": "labeled"
+  },
+  {
+   "raw": "Admur 27:20",
+   "my_canonical": "Shulchan Arukh HaRav, Orach Chayim 27:20",
+   "sefaria_ref": "Shulchan Arukh HaRav, Orach Chayim 27:20",
+   "via": "labeled"
+  }
+ ]
+}

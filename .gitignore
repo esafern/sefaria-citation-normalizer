@@ -19,3 +19,6 @@ pipeline/miyodeya_bodies.json
 
 # in-progress find-refs output (force-added when the run completes)
 pipeline/miyodeya_failures.json
+
+# intermediate batch output (deliverable is data/miyodeya_pairs.json)
+pipeline/miyodeya_dataset_batch.json
