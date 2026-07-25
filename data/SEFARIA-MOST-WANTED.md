@@ -4,7 +4,7 @@ _A candidate priority list for Sefaria's library team._
 
 **Method.** From the full 640-page Halachipedia corpus (every substantial content page), we extracted the footnote citations, ran each through Sefaria's own `find-refs` linker, and kept what it detected as a citation but couldn't resolve to a text. We reduced each to its base work, counted how often it's cited, and confirmed absence via `/api/name` (a work is 'present' if any real ref title matches, allowing for transliteration and for titles stored under a `Teshuvot`/`Responsa` prefix). Every candidate was re-verified live against `/api/name` (2026-07): works present under a variant or abbreviated spelling were excluded (see the tail), spelling twins and section-volumes were merged into one work, and mis-detected non-texts were dropped.
 
-**Result.** 73 works, 6883 citations. Split by why they're missing:
+**Result.** 71 works, 6771 citations. Split by why they're missing:
 
 ## Tier 1 — Public domain, not yet digitized
 
@@ -15,9 +15,7 @@ _Author died >70 years ago; Sefaria can add these without licensing._
 | 243 | Yad Malachi | Malachi HaKohen (d.1785) |
 | 129 | Birkei Yosef | Chida (d.1806) |
 | 114 | Pri Chadash | H. da Silva (d.1698) |
-| 71 | Eliya Rabba | Eliyahu Shapira (d.1712) |
 | 54 | Chavot Daat | Y. Lorberbaum (d.1832) |
-| 41 | Radvaz | David ibn Zimra (d.1573); responsa absent, MT commentary present |
 | 32 | Avnei Nezer | Avraham Bornsztain (d.1910) |
 | 32 | Sdei Chemed | C.C. Medini (d.1904) |
 | 31 | Darkei Teshuva | Tzvi Hirsch Shapira (d.1913) |
@@ -104,6 +102,7 @@ _Flagged absent by exact match but found on Sefaria after normalization — NOT 
 | Chaye Adam | Chayei Adam |
 | Beiur Halacha | Beur Halacha |
 | Levush | Levush HaOrah |
+| Eliya Rabba | Eliyah Rabbah on Shulchan Arukh, Orach Chayim |
 | Chatom Sofer | Chatam Sofer on Torah |
 | Dirshu | Dirshuni I |
 | Trumat Hadeshen | Terumat HaDeshen |
@@ -112,6 +111,7 @@ _Flagged absent by exact match but found on Sefaria after normalization — NOT 
 | Meiri | Meiri on Yoma |
 | Orchot Chaim | Orchot Chaim L'HaRosh |
 | Pri Megadim M"Z | (via normalization) |
+| Radvaz | Teshuvot HaRadbaz Volume 1 |
 | Gemara Bava Metsia | (via normalization) |
 | Tashbetz | Tashbetz Katan |
 | Rabbenu Yonah | Rabbeinu Yonah on Berakhot; Sha'arei Teshuvah |

@@ -65,8 +65,8 @@ pure halachic citations. Mining the **full site (640 substantial pages)** yielde
    a normalization failure (only ~40% of detections link). Ranking the
    genuinely-absent works by how often Halachipedia cites them produces a
    **licensing-priority list for Sefaria**:
-   [`data/SEFARIA-MOST-WANTED.md`](data/SEFARIA-MOST-WANTED.md) — 73 works,
-   6,883 citations, tiered into public-domain (digitize) vs modern (license).
+   [`data/SEFARIA-MOST-WANTED.md`](data/SEFARIA-MOST-WANTED.md) — 71 works,
+   6,771 citations, tiered into public-domain (digitize) vs modern (license).
    R. Ovadia Yosef's corpus (Yalkut Yosef, Chazon Ovadyah, Yabia Omer, Yechave
    Daat, Halacha Brurah) is the single biggest gap (~⅓ of all demand). Built with
    the same propose→verify discipline: each "absent" work is re-checked through

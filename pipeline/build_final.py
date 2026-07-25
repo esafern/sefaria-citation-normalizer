@@ -56,6 +56,8 @@ KNOWN_PRESENT = {
     "rambammishnehtorahhilchottefillahubirkatcohanimchapter":
         "Mishneh Torah, Prayer and the Priestly Blessing",
     "meiripesachim": "Meiri on Pesachim",  # cited "Meiri Pesachim ... s.v.", present
+    "radvaz": "Teshuvot HaRadbaz Volume 1",  # responsa present (queried spelling missed it)
+    "radbaz": "Teshuvot HaRadbaz Volume 1",
 }
 
 # Not Hebrew seforim Sefaria would license — English practical guides or a
@@ -136,8 +138,6 @@ ERA = {
     "chavotdaat": ("Y. Lorberbaum (d.1832)", "PD"),
     # ---- Tier-3 tail hand-classified 2026-07 (era by author death year) ----
     # Public domain (author d. >70y ago):
-    "eliyarabba": ("Eliyahu Shapira (d.1712)", "PD"),
-    "radvaz": ("David ibn Zimra (d.1573); responsa absent, MT commentary present", "PD"),
     "hagahotmaimoniyot": ("Meir HaKohen (13c)", "PD"),
     "betefraim": ("E.Z. Margolis (d.1828)", "PD"),
     "knessethagedola": ("Chaim Benveniste (d.1673)", "PD"),
@@ -247,6 +247,26 @@ for name, n in absent:
     else:
         clusters.append([name, n, ck])
 absent = sorted(((c[0], c[1]) for c in clusters), key=lambda x: -x[1])
+
+# Cross-check absent clusters against the present-under-variant list: a spelling
+# the /api/name trie missed can leave siblings of a resolving work stranded in
+# "absent" (e.g. "Eliya Rabba" while "Eliyah Rabba" resolved to Eliyah Rabbah on
+# Shulchan Arukh). If an absent cluster canon-matches a present entry, it's really
+# present -> move it to excluded so the work isn't double-listed.
+# only cross-check against entries with a concrete matched title; "(via
+# normalization)" is itself a fuzzy resolution and too weak to reclassify on.
+_present_canon = {canon(normkey(c)): m for c, n, m in present_variant
+                  if m and m != "(via normalization)"}
+_kept = []
+for name, n in absent:
+    ck = canon(normkey(name))
+    hit = next((m for pk, m in _present_canon.items()
+                if ck == pk or difflib.SequenceMatcher(None, ck, pk).ratio() >= 0.9), None)
+    if hit:
+        present_variant.append((name, n, hit))
+    else:
+        _kept.append((name, n))
+absent = _kept
 
 def era(nm):  # exact, then fuzzy, ERA lookup so spelling variants inherit the tier
     k = normkey(nm)

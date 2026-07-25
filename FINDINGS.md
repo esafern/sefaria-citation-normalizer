@@ -61,7 +61,7 @@ The deterministic rules that recover 43% of the source-sheet corpus recover only
 
 Ranking the genuinely-absent works by citation frequency is therefore not a
 linker problem but a **library-acquisition** signal — the output is
-`data/SEFARIA-MOST-WANTED.md` (73 works, 6,883 citations). The demand is
+`data/SEFARIA-MOST-WANTED.md` (71 works, 6,771 citations). The demand is
 concentrated: R. Ovadia Yosef's Sephardi psak ecosystem (Yalkut Yosef 945,
 Chazon Ovadyah 573, Yabia Omer, Yechave Daat, Halacha Brurah, …) is the single
 biggest gap, followed by modern Ashkenazi responsa (Igrot Moshe, Shemirat
