@@ -27,6 +27,102 @@
    "via": "rule"
   },
   {
+   "raw": "Gittin 88a D\"H Vedilma",
+   "my_canonical": "Gittin.88a",
+   "sefaria_ref": "Gittin.88a",
+   "via": "rule"
+  },
+  {
+   "raw": "Horayos 13b",
+   "my_canonical": "Horayot.13b",
+   "sefaria_ref": "Horayot.13b",
+   "via": "rule"
+  },
+  {
+   "raw": "Kaf HaChaim (583:3)",
+   "my_canonical": "Kaf HaChayim on Shulchan Arukh, Orach Chayim.583.3",
+   "sefaria_ref": "Kaf HaChayim on Shulchan Arukh, Orach Chayim.583.3",
+   "via": "rule"
+  },
+  {
+   "raw": "Kesubos 66A",
+   "my_canonical": "Ketubot.66a",
+   "sefaria_ref": "Ketubot.66a",
+   "via": "rule"
+  },
+  {
+   "raw": "Kesubos 6a",
+   "my_canonical": "Ketubot.6a",
+   "sefaria_ref": "Ketubot.6a",
+   "via": "rule"
+  },
+  {
+   "raw": "Kitzur Shulchan Aruch סימן כג - קצת דיני קריאת",
+   "my_canonical": "Kitzur Shulchan Arukh",
+   "sefaria_ref": "Kitzur Shulchan Arukh",
+   "via": "rule"
+  },
+  {
+   "raw": "Melachim Aleph 7. Bayis Sheini",
+   "my_canonical": "I Kings.7",
+   "sefaria_ref": "I Kings.7",
+   "via": "rule"
+  },
+  {
+   "raw": "Menachos 99b",
+   "my_canonical": "Menachot.99b",
+   "sefaria_ref": "Menachot.99b",
+   "via": "rule"
+  },
+  {
+   "raw": "Orchos Tzadikkim",
+   "my_canonical": "Orchot Tzadikim",
+   "sefaria_ref": "Orchot Tzadikim",
+   "via": "rule"
+  },
+  {
+   "raw": "Pirkei d'Rabbi Eliezer (34)",
+   "my_canonical": "Pirkei DeRabbi Eliezer.34",
+   "sefaria_ref": "Pirkei DeRabbi Eliezer.34",
+   "via": "rule"
+  },
+  {
+   "raw": "Radbaz to Hilchos Melachim 10:6",
+   "my_canonical": "Mishneh Torah, Kings and Wars.10.6",
+   "sefaria_ref": "Mishneh Torah, Kings and Wars.10.6",
+   "via": "rule"
+  },
+  {
+   "raw": "Rambam in Hil. Mamrim 2:3",
+   "my_canonical": "Mishneh Torah, Rebels.2.3",
+   "sefaria_ref": "Mishneh Torah, Rebels.2.3",
+   "via": "rule"
+  },
+  {
+   "raw": "Rosh Hashana 4a s.v. Beshvil",
+   "my_canonical": "Rosh Hashanah.4a",
+   "sefaria_ref": "Rosh Hashanah.4a",
+   "via": "rule"
+  },
+  {
+   "raw": "Sefer Orchos Tzaddikim",
+   "my_canonical": "Orchot Tzadikim",
+   "sefaria_ref": "Orchot Tzadikim",
+   "via": "rule"
+  },
+  {
+   "raw": "Shemot 6:2-3: וַיְדַבֵּ֥ר",
+   "my_canonical": "Exodus.6.2-3",
+   "sefaria_ref": "Exodus.6.2-3",
+   "via": "rule"
+  },
+  {
+   "raw": "tractate Kiddushin 15a דברים טו, יח",
+   "my_canonical": "Kiddushin.15a",
+   "sefaria_ref": "Kiddushin.15a",
+   "via": "rule"
+  },
+  {
    "raw": "Avos DeRabbi Nasan ( 7:3 )",
    "my_canonical": "Avot DeRabbi Natan 7:3",
    "sefaria_ref": "Avot DeRabbi Natan 7:3",
