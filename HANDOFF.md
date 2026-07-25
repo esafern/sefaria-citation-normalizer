@@ -79,9 +79,10 @@ blog repo but document Sefaria issues — candidates to move here.
 1. **Grow tier 2.** The 137-pair dataset + the ~8,800 unresolved Halachipedia citations are
    raw material for an LLM/SLM that surfaces citations and generalizes transform rules. The
    dataset is the training/eval seed.
-2. **Most-wanted list — pressure-test done** (see above; Tier-3 fully classified, false-absents
-   and ambiguous abbreviations resolved). Remaining: widen beyond the 250-page sample to firm up
-   the frequency ranking, and re-check the acharonim tier's copyright dates before outreach.
+2. **Most-wanted list — pressure-test + full-corpus rebuild done** (see above; whole 640-page
+   site mined, Tier-3 fully classified, false-absents and ambiguous abbreviations resolved).
+   Remaining before outreach: re-check the acharonim tier's copyright dates (a Wikidata
+   author-death-date pass can automate this — access is enabled, query design pending).
 3. **Contribute to Sefaria — when it's "truly real."** The strongest form isn't a repo link
    but a PR / data contribution into Sefaria's own repos: the dataset (as linker eval cases),
    the dialect map, and the most-wanted list (for their library/licensing team). Hold outreach

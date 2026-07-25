@@ -1,8 +1,8 @@
 # Findings — why citation linking fails, and what to do about it
 
 _Distilled from two mined corpora: `find-refs` failures over 289 Sefaria source
-sheets (137 hand-verified `raw → ref` pairs) and a 250-page Halachipedia sample
-(14,268 citation detections → 3,520 distinct works). Numbers below are from
+sheets (137 hand-verified `raw → ref` pairs) and the full 640-page Halachipedia
+corpus (38,195 citation detections → 7,878 distinct works). Numbers below are from
 those datasets; see `data/citation_dataset.json` and `pipeline/work_frequency.json`._
 
 ## The central finding: two failure modes, split by genre
@@ -53,17 +53,17 @@ knowledge-bound (English titles, alternate names, Hebrew) — a model's job.
 
 ## Mode B — coverage failures (Halachipedia corpus)
 
-Halachipedia footnotes are dense, near-pure halachic citations. Of **14,268
-detections**, `find-refs` links only **39%** (5,668); the other **60%** go
+Halachipedia footnotes are dense, near-pure halachic citations. Of **38,195
+detections** (the whole site), `find-refs` links only **40%**; the other **59%** go
 unlinked — and the dominant reason is that **Sefaria doesn't have the work.**
 The deterministic rules that recover 43% of the source-sheet corpus recover only
 **~2%** here: normalization overfits not just to dialect but to *canon*.
 
 Ranking the genuinely-absent works by citation frequency is therefore not a
 linker problem but a **library-acquisition** signal — the output is
-`data/SEFARIA-MOST-WANTED.md` (72 works, 2,758 citations). The demand is
-concentrated: R. Ovadia Yosef's Sephardi psak ecosystem (Yalkut Yosef 428,
-Chazon Ovadyah 268, Yabia Omer, Yechave Daat, Halacha Brurah, …) is the single
+`data/SEFARIA-MOST-WANTED.md` (73 works, 6,883 citations). The demand is
+concentrated: R. Ovadia Yosef's Sephardi psak ecosystem (Yalkut Yosef 945,
+Chazon Ovadyah 573, Yabia Omer, Yechave Daat, Halacha Brurah, …) is the single
 biggest gap, followed by modern Ashkenazi responsa (Igrot Moshe, Shemirat
 Shabbat KeHilchata, Tzitz Eliezer). A 22-work public-domain tier (Chida's Birkei
 Yosef, Pri Chadash, Chavot Daat, …) is the cheapest win — no rights to clear.
@@ -126,7 +126,7 @@ tier — because the majority of real-world halachic citation failures are
 the licensing-priority list, not the linker itself.
 
 ---
-_Method caveats: the 250-page Halachipedia sample is not the whole site;
+_Method caveats: the corpus is the whole mineable site (640 substantial pages; stubs excluded);
 work-name extraction is heuristic; frequency reflects Halachipedia's
 Anglo-Orthodox canon, not Sefaria's whole user base. All data is public (Sefaria
 API, public Halachipedia via its MediaWiki API); access is paced and cached._
