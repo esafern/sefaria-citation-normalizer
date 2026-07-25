@@ -22,3 +22,6 @@ pipeline/miyodeya_failures.json
 
 # intermediate batch output (deliverable is data/miyodeya_pairs.json)
 pipeline/miyodeya_dataset_batch.json
+
+# triage queue (intermediate; deliverable is data/miyodeya_pairs.json)
+pipeline/miyodeya_labelable.json
