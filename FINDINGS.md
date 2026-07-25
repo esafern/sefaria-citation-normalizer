@@ -115,7 +115,17 @@ structured corpora, this is free prose, and it behaves like a **third mode**:
 So Mi Yodeya confirms the genre thesis from the other direction: it's useless for
 **coverage** (Mode B) but ideal raw material for the **normalization dataset**
 (Mode A) — the tier-2 train/eval set that teaches the spelling/alternate-name
-variety no rule captures. Its derived citation strings are in
+variety no rule captures.
+
+**Dataset built** (`data/miyodeya_pairs.json`, 121 verified `raw → ref` pairs):
+the 1,168 failures were filtered to 957 plausible citations, auto-resolved (only
+~3% — rules don't generalize), then the unresolved set was triaged (142 labelable
+present-on-Sefaria works vs 664 coverage gaps) and the labelable ones hand-labeled
+and `/api/name`-verified. It captures exactly the knowledge rules can't compute —
+`Chovot Halevavot → Duties of the Heart`, `Moreh Nevuchim → Guide for the
+Perplexed`, `Semag → Sefer Mitzvot Gadol`, Rambam section maps, and pervasive
+`-os/-as` dialect. Kept as separate provenance from the 137 source-sheet pairs in
+`citation_dataset.json`; together they seed the tier-2 model. Raw strings:
 `pipeline/miyodeya_failures.json` (CC-BY-SA, from the public dump).
 
 ## The strategic takeaway
