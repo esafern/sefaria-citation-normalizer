@@ -2,159 +2,297 @@
  "absent_ranked": [
   {
    "work": "Yalkut Yosef",
-   "citations": 328,
+   "citations": 945,
    "author": "Yitzchak Yosef",
    "tier": "MOD"
   },
   {
    "work": "Chazon Ovadyah",
-   "citations": 212,
+   "citations": 573,
    "author": "Ovadia Yosef (d.2013)",
    "tier": "MOD"
   },
   {
    "work": "Igrot Moshe",
-   "citations": 164,
+   "citations": 485,
    "author": "Moshe Feinstein (d.1986)",
    "tier": "MOD"
   },
   {
    "work": "Shemirat Shabbat KeHilchata",
-   "citations": 161,
+   "citations": 409,
    "author": "Y.Y. Neuwirth (d.2013)",
    "tier": "MOD"
   },
   {
+   "work": "Yabia Omer",
+   "citations": 320,
+   "author": "Ovadia Yosef (d.2013)",
+   "tier": "MOD"
+  },
+  {
+   "work": "Yad Malachi",
+   "citations": 243,
+   "author": "Malachi HaKohen (d.1785)",
+   "tier": "PD"
+  },
+  {
    "work": "Halacha Brurah",
-   "citations": 104,
+   "citations": 240,
    "author": "David Yosef",
    "tier": "MOD"
   },
   {
-   "work": "Yabia Omer",
-   "citations": 102,
-   "author": "Ovadia Yosef (d.2013)",
-   "tier": "MOD"
-  },
-  {
    "work": "Or Letzion",
-   "citations": 77,
+   "citations": 209,
    "author": "Ben Zion Abba Shaul (d.1998)",
    "tier": "MOD"
   },
   {
-   "work": "Chelkat Binyamin",
-   "citations": 75,
-   "author": "on Hilchot Basar b'Chalav, modern",
-   "tier": "MOD"
-  },
-  {
-   "work": "Yechave Daat",
-   "citations": 71,
-   "author": "Ovadia Yosef (d.2013)",
-   "tier": "MOD"
-  },
-  {
    "work": "Piskei Teshuvot",
-   "citations": 69,
+   "citations": 189,
    "author": "Simcha Rabinowitz, modern",
    "tier": "MOD"
   },
   {
-   "work": "Chazon Ish",
-   "citations": 68,
-   "author": "A.Y. Karelitz (d.1953)",
-   "tier": "MOD"
-  },
-  {
-   "work": "Shevet Halevi",
-   "citations": 58,
-   "author": "S.H. Wosner (d.2015)",
-   "tier": "MOD"
-  },
-  {
-   "work": "Tzitz Eliezer",
-   "citations": 54,
-   "author": "E. Waldenberg (d.2006)",
-   "tier": "MOD"
-  },
-  {
-   "work": "Taharat Habayit v",
-   "citations": 49,
-   "author": "Ovadia Yosef (d.2013)",
-   "tier": "MOD"
-  },
-  {
    "work": "Badei Hashulchan",
-   "citations": 47,
+   "citations": 186,
    "author": "modern, on Yoreh De'ah",
    "tier": "MOD"
   },
   {
+   "work": "Yechave Daat",
+   "citations": 170,
+   "author": "Ovadia Yosef (d.2013)",
+   "tier": "MOD"
+  },
+  {
+   "work": "Shevet Halevi",
+   "citations": 166,
+   "author": "S.H. Wosner (d.2015)",
+   "tier": "MOD"
+  },
+  {
+   "work": "Chazon Ish",
+   "citations": 160,
+   "author": "A.Y. Karelitz (d.1953)",
+   "tier": "MOD"
+  },
+  {
+   "work": "Tzitz Eliezer",
+   "citations": 141,
+   "author": "E. Waldenberg (d.2006)",
+   "tier": "MOD"
+  },
+  {
    "work": "Birkei Yosef",
-   "citations": 45,
+   "citations": 129,
    "author": "Chida (d.1806)",
    "tier": "PD"
   },
   {
-   "work": "Minchat Yitzchak",
-   "citations": 40,
-   "author": "Y.Y. Weiss (d.1989)",
-   "tier": "MOD"
-  },
-  {
-   "work": "Halichot Shlomo",
-   "citations": 39,
-   "author": "S.Z. Auerbach (d.1995)",
-   "tier": "MOD"
-  },
-  {
-   "work": "Ginzei Hakodesh",
-   "citations": 39,
-   "author": "modern",
-   "tier": "MOD"
-  },
-  {
-   "work": "Pri Chadash",
-   "citations": 34,
-   "author": "H. da Silva (d.1698)",
-   "tier": "PD"
-  },
-  {
-   "work": "Minchat Shlomo",
-   "citations": 34,
-   "author": "S.Z. Auerbach (d.1995)",
-   "tier": "MOD"
-  },
-  {
-   "work": "Yalkut Yosef Moadim",
-   "citations": 32,
-   "author": "Yitzchak Yosef",
-   "tier": "MOD"
-  },
-  {
    "work": "Nitei Gavriel",
-   "citations": 30,
+   "citations": 117,
    "author": "Gavriel Zinner, modern",
    "tier": "MOD"
   },
   {
-   "work": "Vehanhagot",
-   "citations": 29,
-   "author": "",
-   "tier": "?"
+   "work": "Pri Chadash",
+   "citations": 114,
+   "author": "H. da Silva (d.1698)",
+   "tier": "PD"
+  },
+  {
+   "work": "Chelkat Binyamin",
+   "citations": 109,
+   "author": "on Hilchot Basar b'Chalav, modern",
+   "tier": "MOD"
+  },
+  {
+   "work": "Taharat Habayit v",
+   "citations": 108,
+   "author": "Ovadia Yosef (d.2013)",
+   "tier": "MOD"
+  },
+  {
+   "work": "Halichot Shlomo",
+   "citations": 102,
+   "author": "S.Z. Auerbach (d.1995)",
+   "tier": "MOD"
+  },
+  {
+   "work": "Minchat Yitzchak",
+   "citations": 98,
+   "author": "Y.Y. Weiss (d.1989)",
+   "tier": "MOD"
+  },
+  {
+   "work": "Rivevot Efraim",
+   "citations": 88,
+   "author": "Efraim Greenblatt (d.2014)",
+   "tier": "MOD"
+  },
+  {
+   "work": "Eliya Rabba",
+   "citations": 71,
+   "author": "Eliyahu Shapira (d.1712)",
+   "tier": "PD"
+  },
+  {
+   "work": "Teshuvot VeHanhagot",
+   "citations": 68,
+   "author": "Moshe Sternbuch, modern",
+   "tier": "MOD"
+  },
+  {
+   "work": "Tiltulei Shabbat",
+   "citations": 64,
+   "author": "modern",
+   "tier": "MOD"
+  },
+  {
+   "work": "Minchat Shlomo",
+   "citations": 60,
+   "author": "S.Z. Auerbach (d.1995)",
+   "tier": "MOD"
+  },
+  {
+   "work": "Menuchat Ahava",
+   "citations": 56,
+   "author": "modern",
+   "tier": "MOD"
   },
   {
    "work": "Chavot Daat",
-   "citations": 28,
+   "citations": 54,
    "author": "Y. Lorberbaum (d.1832)",
    "tier": "PD"
   },
   {
+   "work": "Orchot Shabbat",
+   "citations": 52,
+   "author": "modern",
+   "tier": "MOD"
+  },
+  {
+   "work": "Torat HaMoadim",
+   "citations": 45,
+   "author": "modern",
+   "tier": "MOD"
+  },
+  {
+   "work": "Halichot Olam",
+   "citations": 43,
+   "author": "Yitzchak Yosef, modern",
+   "tier": "MOD"
+  },
+  {
+   "work": "Ginzei Hakodesh",
+   "citations": 42,
+   "author": "modern",
+   "tier": "MOD"
+  },
+  {
+   "work": "Radvaz",
+   "citations": 41,
+   "author": "David ibn Zimra (d.1573); responsa absent, MT commentary present",
+   "tier": "PD"
+  },
+  {
+   "work": "Shalmei Yehuda",
+   "citations": 41,
+   "author": "modern (R. Elyashiv)",
+   "tier": "MOD"
+  },
+  {
+   "work": "Mishpitei Aretz",
+   "citations": 36,
+   "author": "modern (Torah VeHaaretz)",
+   "tier": "MOD"
+  },
+  {
    "work": "Beer Moshe",
-   "citations": 26,
-   "author": "",
-   "tier": "?"
+   "citations": 35,
+   "author": "Moshe Stern (d.1997)",
+   "tier": "MOD"
+  },
+  {
+   "work": "Mishneh Halachot",
+   "citations": 33,
+   "author": "Menashe Klein (d.2011)",
+   "tier": "MOD"
+  },
+  {
+   "work": "Ishei Yisrael",
+   "citations": 32,
+   "author": "A.Y. Pfoifer, modern",
+   "tier": "MOD"
+  },
+  {
+   "work": "Avnei Nezer",
+   "citations": 32,
+   "author": "Avraham Bornsztain (d.1910)",
+   "tier": "PD"
+  },
+  {
+   "work": "Sdei Chemed",
+   "citations": 32,
+   "author": "C.C. Medini (d.1904)",
+   "tier": "PD"
+  },
+  {
+   "work": "Darkei Teshuva",
+   "citations": 31,
+   "author": "Tzvi Hirsch Shapira (d.1913)",
+   "tier": "PD"
+  },
+  {
+   "work": "Sidrei Tahara",
+   "citations": 30,
+   "author": "Elchanan Ashkenazi (d.1780)",
+   "tier": "PD"
+  },
+  {
+   "work": "Hagahot Maimoniyot",
+   "citations": 29,
+   "author": "Meir HaKohen (13c)",
+   "tier": "PD"
+  },
+  {
+   "work": "Agur Bohalecha",
+   "citations": 29,
+   "author": "modern",
+   "tier": "MOD"
+  },
+  {
+   "work": "Brit Yehuda",
+   "citations": 28,
+   "author": "Y. Blau (d.2013)",
+   "tier": "MOD"
+  },
+  {
+   "work": "Chut Shani",
+   "citations": 28,
+   "author": "Nissim Karelitz (d.2019)",
+   "tier": "MOD"
+  },
+  {
+   "work": "Rabbenu Yerucham",
+   "citations": 28,
+   "author": "Yerucham b. Meshullam (14c)",
+   "tier": "PD"
+  },
+  {
+   "work": "Pitchei Choshen",
+   "citations": 28,
+   "author": "Yaakov Blau (d.2013)",
+   "tier": "MOD"
+  },
+  {
+   "work": "Yismach Lev v",
+   "citations": 27,
+   "author": "modern",
+   "tier": "MOD"
   },
   {
    "work": "Torat Ribbit",
@@ -163,629 +301,316 @@
    "tier": "MOD"
   },
   {
-   "work": "Orchot Shabbat v",
-   "citations": 25,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Eliya Rabba",
-   "citations": 24,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Menuchat Ahava",
-   "citations": 23,
-   "author": "modern",
-   "tier": "MOD"
-  },
-  {
-   "work": "Brit Yehuda",
-   "citations": 23,
-   "author": "Y. Blau (d.2013)",
-   "tier": "MOD"
-  },
-  {
-   "work": "Torat HaMoadim",
-   "citations": 20,
-   "author": "modern",
-   "tier": "MOD"
-  },
-  {
-   "work": "Yalkut Yosef Milah",
-   "citations": 20,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Minchat Asher",
-   "citations": 20,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Rivevot Efraim",
-   "citations": 17,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Yachava Daat",
-   "citations": 17,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Sma",
-   "citations": 16,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Yalkut Yosef Kitzur Shulchan Aruch",
-   "citations": 16,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Radvaz",
-   "citations": 16,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Chazon Ovadia Yamim Noraim",
-   "citations": 15,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Vezot Habracha p",
-   "citations": 15,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Sama",
-   "citations": 15,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Mishneh Halachot",
-   "citations": 14,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Shabbos Kitchen",
-   "citations": 14,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Mekor Chaim",
-   "citations": 14,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Birkat Hashem",
-   "citations": 12,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Ashrei Ha'ish",
-   "citations": 12,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Hagahot Maimoniyot",
-   "citations": 12,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Chut Shani",
-   "citations": 12,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Shalmei Yehuda",
-   "citations": 12,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Yalkut Yosef Shabbat",
-   "citations": 12,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Rabbenu Yonah",
-   "citations": 12,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Har Tzvi",
-   "citations": 12,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Rivivot Ephraim",
-   "citations": 11,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Bet Efraim",
-   "citations": 11,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Chelkat Yakov",
-   "citations": 11,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Yalkut Yosef, Tefillah",
-   "citations": 11,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Horah Brurah",
-   "citations": 11,
-   "author": "",
-   "tier": "?"
-  },
-  {
    "work": "Knesset Hagedola",
-   "citations": 11,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Ateret Paz",
-   "citations": 11,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Rambam Hilchos Machalas Asuros",
-   "citations": 11,
-   "author": "",
-   "tier": "?"
+   "citations": 25,
+   "author": "Chaim Benveniste (d.1673)",
+   "tier": "PD"
   },
   {
    "work": "Maamar Mordechai",
-   "citations": 10,
-   "author": "",
-   "tier": "?"
+   "citations": 24,
+   "author": "Mordechai Carmi (d.1825)",
+   "tier": "PD"
   },
   {
-   "work": "Sh”t Igrot Moshe",
-   "citations": 10,
-   "author": "",
-   "tier": "?"
+   "work": "Otzar Haposkim",
+   "citations": 24,
+   "author": "modern rabbinical institute",
+   "tier": "MOD"
   },
   {
-   "work": "Chazon Ovadia Sukkot",
-   "citations": 10,
-   "author": "",
-   "tier": "?"
+   "work": "Chelkat Yakov",
+   "citations": 23,
+   "author": "Mordechai Y. Breisch (d.1976)",
+   "tier": "MOD"
   },
   {
-   "work": "Darkei Teshuva",
-   "citations": 10,
-   "author": "",
-   "tier": "?"
+   "work": "Mekor Chaim",
+   "citations": 22,
+   "author": "Chavot Yair / Yair Bacharach (d.1702)",
+   "tier": "PD"
   },
   {
-   "work": "Hatrumah",
-   "citations": 10,
-   "author": "",
-   "tier": "?"
+   "work": "Ashrei Ha'ish",
+   "citations": 22,
+   "author": "rulings of R. Elyashiv, modern",
+   "tier": "MOD"
   },
   {
-   "work": "Ishei Yisrael",
-   "citations": 10,
-   "author": "",
-   "tier": "?"
+   "work": "Horah Brurah",
+   "citations": 22,
+   "author": "modern",
+   "tier": "MOD"
   },
   {
-   "work": "Rambam, Mishneh Torah: Hilchot Tefillah U'Birkat Cohanim, Chapter",
-   "citations": 10,
-   "author": "",
-   "tier": "?"
+   "work": "Minchat Asher",
+   "citations": 21,
+   "author": "Asher Weiss, modern",
+   "tier": "MOD"
+  },
+  {
+   "work": "Har Tzvi",
+   "citations": 21,
+   "author": "Tzvi Pesach Frank (d.1960)",
+   "tier": "MOD"
   },
   {
    "work": "Gesher Hachaim",
-   "citations": 10,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Teshuvos V'Hanhagos",
-   "citations": 10,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Chelkes Binyomin",
-   "citations": 10,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Shevet Hakehati",
-   "citations": 9,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Yalkut Yosef Sova Semachot",
-   "citations": 9,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Ravyah",
-   "citations": 9,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Hagahot Ashri",
-   "citations": 9,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Halichot Olam",
-   "citations": 9,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Milveh Hashem",
-   "citations": 9,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Star-K",
-   "citations": 9,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Rav Pealim",
-   "citations": 9,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Tiltulei Shabbat",
-   "citations": 9,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Daat Torah",
-   "citations": 8,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Rashba responsa",
-   "citations": 8,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Chazon Ovadia Pesach",
-   "citations": 8,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Chazon Ovadia Purim",
-   "citations": 8,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Children in Halacha",
-   "citations": 8,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Sh”t Shevet HaLevi",
-   "citations": 8,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Nishmat Avraham",
-   "citations": 8,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Avnei Nezer",
-   "citations": 8,
-   "author": "",
-   "tier": "?"
+   "citations": 21,
+   "author": "Y.M. Tucazinsky (d.1955)",
+   "tier": "PD"
   },
   {
    "work": "Shulchan Shlomo",
-   "citations": 8,
-   "author": "",
-   "tier": "?"
+   "citations": 20,
+   "author": "S.Z. Auerbach (d.1995)",
+   "tier": "MOD"
   },
   {
-   "work": "Sidrei Tahara",
-   "citations": 8,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Bishul Yisroel",
-   "citations": 8,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Bishul Yisroel pages",
-   "citations": 8,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Rambam Sefer HaMitzvot",
-   "citations": 7,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Turei Even Rosh Hashana",
-   "citations": 7,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Divrei Yatziv",
-   "citations": 7,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Rabbenu Yerucham",
-   "citations": 7,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Dor Hamelaktim v",
-   "citations": 7,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Az Nidbaru",
-   "citations": 7,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Agur Bohalecha",
-   "citations": 7,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Mishkenot Yakov",
-   "citations": 7,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Chazon Ovadia Shabbat",
-   "citations": 7,
-   "author": "",
-   "tier": "?"
-  },
-  {
-   "work": "Yaskil Avdi",
-   "citations": 7,
-   "author": "",
-   "tier": "?"
+   "work": "Amot Shel Halacha",
+   "citations": 20,
+   "author": "modern",
+   "tier": "MOD"
   },
   {
    "work": "Maharam Shik",
-   "citations": 7,
-   "author": "",
-   "tier": "?"
+   "citations": 19,
+   "author": "Moshe Schick (d.1879)",
+   "tier": "PD"
+  },
+  {
+   "work": "Matnat Yado fn",
+   "citations": 19,
+   "author": "modern",
+   "tier": "MOD"
+  },
+  {
+   "work": "Daat Torah",
+   "citations": 18,
+   "author": "Maharsham / S. Schwadron (d.1911)",
+   "tier": "PD"
+  },
+  {
+   "work": "Nishmat Avraham",
+   "citations": 18,
+   "author": "A.S. Abraham (d.2010)",
+   "tier": "MOD"
+  },
+  {
+   "work": "Yafeh Lelev",
+   "citations": 18,
+   "author": "Yitzchak Palache (d.1907)",
+   "tier": "PD"
+  },
+  {
+   "work": "Maharam Chalavah Pesachim",
+   "citations": 18,
+   "author": "Maharam Chalava (14c)",
+   "tier": "PD"
+  },
+  {
+   "work": "Nefesh Harav",
+   "citations": 18,
+   "author": "H. Schachter on R. Soloveitchik, modern",
+   "tier": "MOD"
+  },
+  {
+   "work": "Rokeach",
+   "citations": 18,
+   "author": "Eleazar of Worms (d.1230)",
+   "tier": "PD"
+  },
+  {
+   "work": "Ravyah",
+   "citations": 17,
+   "author": "Eliezer b. Yoel HaLevi (d.1225)",
+   "tier": "PD"
+  },
+  {
+   "work": "Yaskil Avdi",
+   "citations": 17,
+   "author": "Ovadia Hedaya (d.1969)",
+   "tier": "MOD"
+  },
+  {
+   "work": "Machzik Bracha",
+   "citations": 17,
+   "author": "Chida (d.1806)",
+   "tier": "PD"
   }
  ],
  "present_under_variant_spelling": [
   [
-   "Shulchan Aruch Harav",
-   49,
-   "Shulchan Arukh HaRav"
-  ],
-  [
-   "Chatom Sofer",
-   32,
-   "Chatam Sofer on Torah"
-  ],
-  [
-   "Beiur Halacha",
-   30,
-   "Beur Halacha"
-  ],
-  [
-   "Pri Megadim",
-   29,
-   "Pri Megadim on Yoreh De'ah"
-  ],
-  [
-   "Mishna Brura",
-   27,
-   "Mishna Brurah"
-  ],
-  [
-   "Levush",
-   26,
-   "Levush HaOrah"
-  ],
-  [
-   "Chaye Adam",
-   25,
-   "Chayei Adam"
-  ],
-  [
-   "Meiri",
-   22,
-   "Meiri on Yoma"
-  ],
-  [
-   "Gemara Bava Metsia",
-   21,
-   "(via normalization)"
-  ],
-  [
-   "Trumat Hadeshen",
-   20,
-   "Terumat HaDeshen"
-  ],
-  [
-   "Dirshu",
-   19,
-   "Dirshuni I"
-  ],
-  [
-   "Tashbetz",
-   18,
-   "Tashbetz Katan"
+   "Simla Chadasha",
+   146,
+   "Simlah Chadashah"
   ],
   [
    "Shem HaGedolim",
-   18,
+   121,
    "Shem HaGedolim, Maarekhet Sefarim"
   ],
   [
+   "Chaye Adam",
+   80,
+   "Chayei Adam"
+  ],
+  [
+   "Beiur Halacha",
+   76,
+   "Beur Halacha"
+  ],
+  [
+   "Levush",
+   76,
+   "Levush HaOrah"
+  ],
+  [
+   "Chatom Sofer",
+   70,
+   "Chatam Sofer on Torah"
+  ],
+  [
+   "Dirshu",
+   65,
+   "Dirshuni I"
+  ],
+  [
+   "Trumat Hadeshen",
+   60,
+   "Terumat HaDeshen"
+  ],
+  [
+   "Mishna Brura",
+   53,
+   "Mishna Brurah"
+  ],
+  [
+   "Pri Megadim",
+   50,
+   "Pri Megadim on Yoreh De'ah"
+  ],
+  [
+   "Meiri",
+   48,
+   "Meiri on Yoma"
+  ],
+  [
    "Orchot Chaim",
-   17,
+   48,
    "Orchot Chaim L'HaRosh"
   ],
   [
    "Pri Megadim M\"Z",
-   16,
+   48,
    "(via normalization)"
   ],
   [
+   "Gemara Bava Metsia",
+   37,
+   "(via normalization)"
+  ],
+  [
+   "Tashbetz",
+   34,
+   "Tashbetz Katan"
+  ],
+  [
+   "Rabbenu Yonah",
+   34,
+   "Rabbeinu Yonah on Berakhot; Sha'arei Teshuvah"
+  ],
+  [
+   "Maharsham",
+   33,
+   "Teshuvot Maharsham Volume I"
+  ],
+  [
+   "Sma",
+   32,
+   "Me'irat Einayim on Shulchan Arukh, Choshen Mishpat"
+  ],
+  [
    "Smag",
-   15,
+   30,
    "SeMaG"
   ],
   [
    "Pri Megadim E\"A",
-   15,
+   30,
    "(via normalization)"
   ],
   [
-   "Maharil",
-   14,
-   "Mahari Weil"
+   "Sama",
+   28,
+   "Me'irat Einayim on Shulchan Arukh, Choshen Mishpat"
+  ],
+  [
+   "Eliyah Rabba",
+   28,
+   "Eliyah Rabbah on Shulchan Arukh, Orach Chayim"
   ],
   [
    "Magen Avot",
-   12,
+   26,
    "Magen Avot on Avot"
   ],
   [
-   "Halachot Ketanot",
-   11,
-   "Halachot Ketanot LaRif"
+   "Tiferet",
+   26,
+   "Tiferet Yosef"
   ],
   [
    "Smak",
-   11,
+   24,
    "Semak"
   ],
   [
-   "Maharsham",
-   11,
-   "Maharshal on Sotah"
-  ],
-  [
-   "Aruch",
-   10,
-   "Aruch Hashulchan"
-  ],
-  [
-   "torah",
-   10,
-   "Torah Ohr"
-  ],
-  [
    "Mishna Halachot",
-   10,
+   24,
    "(via normalization)"
   ],
   [
-   "Rambam Malveh Vloveh",
-   9,
-   "Rambam, Malveh veLoveh"
+   "Hatrumah",
+   22,
+   "Sefer HaTerumah"
   ],
   [
-   "Issur V’heter",
-   9,
-   "Issur V'Heter L'Rabbeinu Yerucham"
-  ],
-  [
-   "Bedek Habayit",
-   8,
-   "Bedek HaBayit on Torat HaBayit HaArokh"
+   "Korban Netanel",
+   22,
+   "Korban Netanel on Yoma"
   ],
   [
    "Shibolei Haleket",
-   8,
+   21,
    "Shibolei HaLeket on Pesach Haggadah"
   ],
   [
-   "Maharshag",
-   8,
-   "Maharshal on Sotah"
+   "Meiri Pesachim",
+   19,
+   "Meiri on Pesachim"
   ],
   [
-   "Purim",
-   8,
-   "Pri Tzadik, Purim"
+   "Bet Shmuel",
+   19,
+   "Bet Shmu'el, Even ha-Ezer"
   ],
   [
-   "Rambam Machalot Assurot",
-   8,
-   "Rambam, Ma'achalot Assurot"
+   "Trumot",
+   19,
+   "T’rumoth"
   ],
   [
-   "Chochmas Adom",
-   8,
-   "Chochmat Adam"
+   "Rav Pealim",
+   17,
+   "Responsa Rav Pealim"
+  ],
+  [
+   "Or Zaruah",
+   17,
+   "Ohr Zarua"
   ]
  ],
- "total_absent_citations": 2902,
- "note": "Ranked by citation frequency across a 250-page Halachipedia sample."
+ "total_absent_citations": 6883,
+ "note": "Ranked by citation frequency across the full 640-page Halachipedia corpus."
 }

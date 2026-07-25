@@ -55,21 +55,23 @@ dataset is what feeds tier 2.
 
 Source sheets saturated (~85% noise). The pipeline was re-pointed at
 [Halachipedia](https://www.halachipedia.com), whose footnotes are dense, nearly
-pure halachic citations. A 250-page sample yielded **14,511 citation detections
-→ 3,520 distinct works**. Two findings:
+pure halachic citations. Mining the **full site (640 substantial pages)** yielded
+**38,195 citation detections → 7,878 distinct works**. Two findings:
 
 1. The deterministic rules generalize **poorly** across genre — ~2% hit on this
    acharonim/responsa corpus vs ~43% on the sheet Talmud/Tanakh. Honest evidence
    that citation normalization overfits not just to dialect but to *canon*.
 2. The reason most don't resolve is that **Sefaria doesn't have the work** — not
-   a normalization failure. Ranking the genuinely-absent works by how often
-   Halachipedia cites them produces a **licensing-priority list for Sefaria**:
-   [`data/SEFARIA-MOST-WANTED.md`](data/SEFARIA-MOST-WANTED.md) — 103 works,
-   ~2,900 citations, tiered into public-domain (digitize) vs modern (license).
-   R. Ovadia Yosef's corpus (Yabia Omer, Yechave Daat, Chazon Ovadyah, Yalkut
-   Yosef) is the single biggest gap. Built with the same propose→verify
-   discipline: each "absent" work is re-checked through the normalizer's own
-   candidate spellings so present-but-transliterated works aren't falsely listed.
+   a normalization failure (only ~40% of detections link). Ranking the
+   genuinely-absent works by how often Halachipedia cites them produces a
+   **licensing-priority list for Sefaria**:
+   [`data/SEFARIA-MOST-WANTED.md`](data/SEFARIA-MOST-WANTED.md) — 73 works,
+   6,883 citations, tiered into public-domain (digitize) vs modern (license).
+   R. Ovadia Yosef's corpus (Yalkut Yosef, Chazon Ovadyah, Yabia Omer, Yechave
+   Daat, Halacha Brurah) is the single biggest gap (~⅓ of all demand). Built with
+   the same propose→verify discipline: each "absent" work is re-checked through
+   the normalizer's own candidate spellings so present-but-transliterated works
+   aren't falsely listed. See `CORPUS-COMPARISON.md` for the full-vs-250-page diff.
 
 ## Layout
 

@@ -33,13 +33,77 @@ ranked = json.load(open(os.path.join(HERE, "work_frequency.json")))["ranked"]
 cache_path = os.path.join(HERE, "presence_cache.json")
 cache = json.load(open(cache_path)) if os.path.exists(cache_path) else {}
 
-TOP = 250
+TOP = 250      # verify the top-N works by citation frequency (a rank cutoff)
+PAGES = 640    # size of the mined corpus (the whole mineable Halachipedia)
 ENGLISH = re.compile(r"\bHalachos of\b|\bLaws of\b|Handbook|by Rabbi|\bThe \b|Melachos|Guide", re.I)
 
 # Verified present by hand (trie can't reach them by prefix): abbreviations and
 # layers embedded in a parent work. Checked live against /api/name.
 VERIFIED_PRESENT = {"benishchai", "gra", "shaarhatziyun", "shaarhatzion",
                     "nodehbeyehuda", "nodabeyehuda", "maggidmishna", "chokyaakov"}
+
+# Re-verified live against /api/name (2026-07): present on Sefaria under a title
+# the presence trie can't reach by prefix (an abbreviation, a reordered/embedded
+# form, or a "Responsa/Teshuvot..." prefix). Routed to the present-under-variant
+# section, never listed as absent. Value = the authoritative Sefaria title.
+KNOWN_PRESENT = {
+    "sma": "Me'irat Einayim on Shulchan Arukh, Choshen Mishpat",
+    "sama": "Me'irat Einayim on Shulchan Arukh, Choshen Mishpat",
+    "rabbenuyonah": "Rabbeinu Yonah on Berakhot; Sha'arei Teshuvah",
+    "rashbaresponsa": "Teshuvot haRashba (parts I-VII)",
+    "rambamseferhamitzvot": "Sefer HaMitzvot",
+    "rambamhilchosmachalasasuros": "Mishneh Torah, Forbidden Foods",
+    "rambammishnehtorahhilchottefillahubirkatcohanimchapter":
+        "Mishneh Torah, Prayer and the Priestly Blessing",
+    "meiripesachim": "Meiri on Pesachim",  # cited "Meiri Pesachim ... s.v.", present
+}
+
+# Not Hebrew seforim Sefaria would license — English practical guides or a
+# kashrut agency, not a text. Dropped from the list entirely.
+NON_TEXT = {"stark", "shabboskitchen", "childreninhalacha",
+            "bishulyisroel", "bishulyisroelpages"}
+
+# Section markers severed from a parent work by the extractor, not works
+# themselves: "Vezot Habracha" is a parsha section of Ben Ish Chai / Maharam Shik
+# / etc.; "Purim" is the Purim volume of Chazon Ovadia. (Confirmed in the raw
+# Halachipedia citations.) The parent-attributed variants are folded elsewhere;
+# these bare fragments can't be attributed, so they're dropped. ("Purim" is the
+# one exception — always Chazon Ovadia Purim — so it's re-attributed via ALIAS.)
+NOISE = {"vezothabracha", "vezothabrachap",
+         # halachic concepts / a person / a shiur, mis-detected as works
+         "dvarcharif", "dvarcharifp", "lashonhara", "klishmelachtoleissur",
+         "niddahshiur", "ravschachter"}
+
+# Spelling twins / abbreviations the fuzzy collapse missed -> canonical display.
+ALIAS = {
+    "yachavadaat": "Yechave Daat", "chelkesbinyomin": "Chelkat Binyamin",
+    "shtigrotmoshe": "Igrot Moshe", "shtshevethalevi": "Shevet Halevi",
+    "rivivotephraim": "Rivevot Efraim",
+    "vehanhagot": "Teshuvot VeHanhagot", "vihanhagot": "Teshuvot VeHanhagot",
+    "teshuvosvhanhagos": "Teshuvot VeHanhagot",
+    # Parent stripped by the extractor, but every raw occurrence is "Chazon Ovadia
+    # Purim" -> re-attribute the demand to the parent rather than drop it.
+    "purim": "Chazon Ovadyah",
+    # Spelling/shu"t twins surfaced by the 640-page corpus:
+    "shtyabiaomer": "Yabia Omer", "igrosmosheoc": "Igrot Moshe",
+    "shtyechavedaat": "Yechave Daat", "rivevotephraim": "Rivevot Efraim",
+}
+# Section-volumes that fold into their parent work (one work to license/digitize).
+# Prefix-keyed so every spelling variant of the parent collapses too.
+FOLD = {"yalkutyosef": "Yalkut Yosef", "chazonovad": "Chazon Ovadyah",
+        "hazonovad": "Chazon Ovadyah"}
+
+
+def remap(name):
+    """Collapse spelling twins and section-volumes to one canonical work name
+    before clustering, so the count and citation totals aren't fragmented."""
+    k = normkey(name)
+    if k in ALIAS:
+        return ALIAS[k]
+    for pk, disp in FOLD.items():
+        if k.startswith(pk):
+            return disp
+    return name
 
 # Author era for the top works -> tier. PD = public domain (digitize); MOD =
 # modern/in-copyright (license). Keyed by normalized work name.
@@ -70,6 +134,70 @@ ERA = {
     "birkeiyosef": ("Chida (d.1806)", "PD"),
     "prichadash": ("H. da Silva (d.1698)", "PD"),
     "chavotdaat": ("Y. Lorberbaum (d.1832)", "PD"),
+    # ---- Tier-3 tail hand-classified 2026-07 (era by author death year) ----
+    # Public domain (author d. >70y ago):
+    "eliyarabba": ("Eliyahu Shapira (d.1712)", "PD"),
+    "radvaz": ("David ibn Zimra (d.1573); responsa absent, MT commentary present", "PD"),
+    "hagahotmaimoniyot": ("Meir HaKohen (13c)", "PD"),
+    "betefraim": ("E.Z. Margolis (d.1828)", "PD"),
+    "knessethagedola": ("Chaim Benveniste (d.1673)", "PD"),
+    "maamarmordechai": ("Mordechai Carmi (d.1825)", "PD"),
+    "darkeiteshuva": ("Tzvi Hirsch Shapira (d.1913)", "PD"),
+    "ravyah": ("Eliezer b. Yoel HaLevi (d.1225)", "PD"),
+    "hagahotashri": ("Israel of Krems (14c)", "PD"),
+    "avneinezer": ("Avraham Bornsztain (d.1910)", "PD"),
+    "sidreitahara": ("Elchanan Ashkenazi (d.1780)", "PD"),
+    "tureievenroshhashana": ("Aryeh Leib Ginzburg (d.1785)", "PD"),
+    "rabbenuyerucham": ("Yerucham b. Meshullam (14c)", "PD"),
+    "maharamshik": ("Moshe Schick (d.1879)", "PD"),
+    "mishkenotyakov": ("Yaakov of Karlin (d.1844)", "PD"),
+    "gesherhachaim": ("Y.M. Tucazinsky (d.1955)", "PD"),
+    "hatrumah": ("Baruch b. Isaac of Worms (13c)", "PD"),
+    "daattorah": ("Maharsham / S. Schwadron (d.1911)", "PD"),
+    # Modern / in-copyright:
+    "rivevotefraim": ("Efraim Greenblatt (d.2014)", "MOD"),
+    "beermoshe": ("Moshe Stern (d.1997)", "MOD"),
+    "orchotshabbatv": ("modern", "MOD"),
+    "minchatasher": ("Asher Weiss, modern", "MOD"),
+    "teshuvotvehanhagot": ("Moshe Sternbuch, modern", "MOD"),
+    "mishnehhalachot": ("Menashe Klein (d.2011)", "MOD"),
+    "birkathashem": ("modern", "MOD"),
+    "ashreihaish": ("rulings of R. Elyashiv, modern", "MOD"),
+    "chutshani": ("Nissim Karelitz (d.2019)", "MOD"),
+    "shalmeiyehuda": ("modern (R. Elyashiv)", "MOD"),
+    "hartzvi": ("Tzvi Pesach Frank (d.1960)", "MOD"),
+    "chelkatyakov": ("Mordechai Y. Breisch (d.1976)", "MOD"),
+    "horahbrurah": ("modern", "MOD"),
+    "ateretpaz": ("Pinchas Zvichi, modern", "MOD"),
+    "isheiyisrael": ("A.Y. Pfoifer, modern", "MOD"),
+    "shevethakehati": ("Shammai Gross, modern", "MOD"),
+    "milvehhashem": ("modern", "MOD"),
+    "tiltuleishabbat": ("modern", "MOD"),
+    "nishmatavraham": ("A.S. Abraham (d.2010)", "MOD"),
+    "shulchanshlomo": ("S.Z. Auerbach (d.1995)", "MOD"),
+    "divreiyatziv": ("Y.Y. Halberstam (d.1994)", "MOD"),
+    "dorhamelaktimv": ("modern", "MOD"),
+    "aznidbaru": ("Binyamin Zilber (d.2008)", "MOD"),
+    "agurbohalecha": ("modern", "MOD"),
+    "yaskilavdi": ("Ovadia Hedaya (d.1969)", "MOD"),
+    "maharshag": ("Shmuel Engel (d.1935)", "PD"),
+    # Disambiguated from the raw Halachipedia citation context:
+    "mekorchaim": ("Chavot Yair / Yair Bacharach (d.1702)", "PD"),  # cited by OC siman
+    "halichotolam": ("Yitzchak Yosef, modern", "MOD"),  # parsha-ordered, multi-volume
+    # ---- new works surfaced by the full 640-page corpus (era by author death) ----
+    "yadmalachi": ("Malachi HaKohen (d.1785)", "PD"),
+    "sdeichemed": ("C.C. Medini (d.1904)", "PD"),
+    "maharamchalavahpesachim": ("Maharam Chalava (14c)", "PD"),
+    "rokeach": ("Eleazar of Worms (d.1230)", "PD"),
+    "yafehlelev": ("Yitzchak Palache (d.1907)", "PD"),
+    "machzikbracha": ("Chida (d.1806)", "PD"),
+    "pitcheichoshen": ("Yaakov Blau (d.2013)", "MOD"),
+    "otzarhaposkim": ("modern rabbinical institute", "MOD"),
+    "nefeshharav": ("H. Schachter on R. Soloveitchik, modern", "MOD"),
+    "mishpiteiaretz": ("modern (Torah VeHaaretz)", "MOD"),
+    "amotshelhalacha": ("modern", "MOD"),
+    "yismachlevv": ("modern", "MOD"),   # cited by vol./page/note -> contemporary
+    "matnatyadofn": ("modern", "MOD"),  # cited by footnote number -> contemporary
 }
 
 
@@ -83,6 +211,11 @@ for name, n, linked in ranked[:TOP]:
     k = normkey(name)
     if linked or k in VERIFIED_PRESENT:
         continue
+    if k in NON_TEXT or k in NOISE:
+        continue  # English guide / non-text source, or mis-detected holiday/parsha
+    if k in KNOWN_PRESENT:                  # re-verified live: present under a variant title
+        present_variant.append((name, n, KNOWN_PRESENT[k]))
+        continue
     if ENGLISH.search(name):
         continue  # english handbooks tracked separately
     r = presence.check(name, cache=cache)
@@ -92,7 +225,7 @@ for name, n, linked in ranked[:TOP]:
         if is_present(name, cache):        # second-chance normalized/stripped forms
             present_variant.append((name, n, "(via normalization)"))
         else:
-            absent.append((name, n))
+            absent.append((remap(name), n))  # fold twins/section-volumes before clustering
 json.dump(cache, open(cache_path, "w"), ensure_ascii=False)
 
 # merge spelling-variant duplicates, incl. fuzzy (Chazon Ovadyah / Chazon Ovadia)
@@ -133,24 +266,28 @@ out = {"absent_ranked": [{"work": nm, "citations": n,
         for nm, n in absent],
        "present_under_variant_spelling": present_variant,
        "total_absent_citations": sum(n for _, n in absent),
-       "note": "Ranked by citation frequency across a 250-page Halachipedia sample."}
+       "note": f"Ranked by citation frequency across the full {PAGES}-page Halachipedia corpus."}
 json.dump(out, open(os.path.join(HERE, "..", "data", "sefaria_most_wanted.json"), "w"),
           ensure_ascii=False, indent=1)
 
-def clean(nm):  # strip extraction noise: trailing lone letters / volume markers
-    return re.sub(r"\s+[a-zA-Z]$", "", nm).strip()
+def clean(nm):  # strip extraction noise: trailing lone letters / volume / fn markers
+    return re.sub(r"\s+(?:[a-zA-Z]|fn|fnt|no)$", "", nm).strip()
 
 
 # ---- markdown brief ----
 md = []
 md.append("# Halachipedia's most-cited works that Sefaria doesn't have\n")
 md.append("_A candidate priority list for Sefaria's library team._\n")
-md.append(f"**Method.** From a {TOP}-page sample of Halachipedia, we extracted the "
+md.append(f"**Method.** From the full {PAGES}-page Halachipedia corpus (every substantial "
+          f"content page), we extracted the "
           f"footnote citations, ran each through Sefaria's own `find-refs` linker, and kept "
           f"what it detected as a citation but couldn't resolve to a text. We reduced each to "
           f"its base work, counted how often it's cited, and confirmed absence via `/api/name` "
-          f"(a work is 'present' if any real ref title matches, allowing for transliteration). "
-          f"Works present under a variant spelling were excluded — see the tail.\n")
+          f"(a work is 'present' if any real ref title matches, allowing for transliteration and "
+          f"for titles stored under a `Teshuvot`/`Responsa` prefix). Every candidate was "
+          f"re-verified live against `/api/name` (2026-07): works present under a variant or "
+          f"abbreviated spelling were excluded (see the tail), spelling twins and section-volumes "
+          f"were merged into one work, and mis-detected non-texts were dropped.\n")
 md.append(f"**Result.** {len(absent)} works, {sum(n for _,n in absent)} citations. Split by why "
           f"they're missing:\n")
 
@@ -166,11 +303,12 @@ md.append("| Citations | Work | Author |\n|---:|---|---|")
 for nm, n in mod:
     md.append(f"| {n} | {clean(nm)} | {era(nm)[0]} |")
 
-md.append("\n## Tier 3 — Absent, era not yet classified\n")
-md.append("_Detected as absent; author/copyright status not hand-checked. Longer tail._\n")
-md.append("| Citations | Work |\n|---:|---|")
-for nm, n in unk:
-    md.append(f"| {n} | {clean(nm)} |")
+if unk:
+    md.append("\n## Tier 3 — Absent, era not yet classified\n")
+    md.append("_Detected as absent; author/copyright status not hand-checked. Longer tail._\n")
+    md.append("| Citations | Work |\n|---:|---|")
+    for nm, n in unk:
+        md.append(f"| {n} | {clean(nm)} |")
 
 md.append("\n## Excluded: present under a variant spelling\n")
 md.append("_Flagged absent by exact match but found on Sefaria after normalization — NOT wanted._\n")
@@ -178,10 +316,14 @@ md.append("| Cited-as | Actually on Sefaria as |\n|---|---|")
 for nm, n, match in sorted(present_variant, key=lambda x: -x[1])[:40]:
     md.append(f"| {nm} | {match} |")
 
-md.append("\n---\n_Caveats: 250-page sample (not all of Halachipedia); work-name extraction "
+md.append(f"\n---\n_Caveats: covers the {PAGES} substantial Halachipedia pages (stub/short pages "
+          "excluded); work-name extraction "
           "is heuristic; frequency reflects Halachipedia's Anglo-Orthodox canon, not Sefaria's "
-          "whole user base. Counts are lower bounds — a work also present under one spelling and "
-          "absent under another is undercounted here._\n")
+          "whole user base. Only the top works by frequency are verified against Sefaria, so the "
+          "least-cited tail may be incomplete. Counts are lower bounds — a work also present under "
+          "one spelling and "
+          "absent under another is undercounted here. Era is classified by author death year "
+          "(work-level, from the citation context where the title alone is ambiguous)._\n")
 open(os.path.join(HERE, "..", "data", "SEFARIA-MOST-WANTED.md"), "w").write("\n".join(md))
 
 print(f"{len(absent)} genuinely-absent works, {sum(n for _,n in absent)} citations")

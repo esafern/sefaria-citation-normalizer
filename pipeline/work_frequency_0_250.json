@@ -1,0 +1,17604 @@
+{
+ "ranked": [
+  [
+   "Shulchan Aruch",
+   877,
+   true
+  ],
+  [
+   "Mishna Brurah",
+   719,
+   true
+  ],
+  [
+   "Yalkut Yosef",
+   328,
+   false
+  ],
+  [
+   "Laws of Brachos",
+   310,
+   false
+  ],
+  [
+   "Rama",
+   266,
+   true
+  ],
+  [
+   "Magen Avraham",
+   172,
+   true
+  ],
+  [
+   "Shulchan Aruch O.C",
+   167,
+   true
+  ],
+  [
+   "Kitzur Shulchan Aruch",
+   161,
+   true
+  ],
+  [
+   "Kaf Hachaim",
+   157,
+   true
+  ],
+  [
+   "Aruch Hashulchan",
+   155,
+   true
+  ],
+  [
+   "Shach",
+   152,
+   true
+  ],
+  [
+   "Shemirat Shabbat KeHilchata",
+   150,
+   false
+  ],
+  [
+   "Rambam",
+   146,
+   true
+  ],
+  [
+   "Igrot Moshe",
+   144,
+   false
+  ],
+  [
+   "Shulchan Aruch Y.D",
+   136,
+   true
+  ],
+  [
+   "Taz",
+   111,
+   true
+  ],
+  [
+   "Bet Yosef",
+   110,
+   true
+  ],
+  [
+   "Halachos of Brochos by Rabbi Bodner",
+   108,
+   false
+  ],
+  [
+   "Halacha Brurah",
+   104,
+   false
+  ],
+  [
+   "Yabia Omer",
+   102,
+   false
+  ],
+  [
+   "Chazon Ovadyah",
+   84,
+   false
+  ],
+  [
+   "Halachos of Brachos Handbook p",
+   84,
+   false
+  ],
+  [
+   "Tur",
+   82,
+   true
+  ],
+  [
+   "Chazon Ovadia",
+   77,
+   false
+  ],
+  [
+   "Chelkat Binyamin",
+   75,
+   false
+  ],
+  [
+   "Vezot HaBracha",
+   71,
+   true
+  ],
+  [
+   "Rosh",
+   70,
+   true
+  ],
+  [
+   "Piskei Teshuvot",
+   69,
+   false
+  ],
+  [
+   "Chazon Ish",
+   68,
+   false
+  ],
+  [
+   "Rashba",
+   67,
+   true
+  ],
+  [
+   "Or Letzion",
+   66,
+   false
+  ],
+  [
+   "Tosfot",
+   66,
+   true
+  ],
+  [
+   "Yechave Daat",
+   61,
+   false
+  ],
+  [
+   "Pitchei Teshuva",
+   59,
+   true
+  ],
+  [
+   "Shevet Halevi",
+   58,
+   false
+  ],
+  [
+   "39 Melachos",
+   58,
+   false
+  ],
+  [
+   "Biur Halacha",
+   56,
+   true
+  ],
+  [
+   "Halachos of Other People's Money",
+   56,
+   false
+  ],
+  [
+   "Ben Ish Chai",
+   53,
+   false
+  ],
+  [
+   "Shulchan Aruch Harav",
+   49,
+   false
+  ],
+  [
+   "Bach",
+   49,
+   true
+  ],
+  [
+   "Badei Hashulchan",
+   47,
+   false
+  ],
+  [
+   "Gemara Brachot",
+   45,
+   true
+  ],
+  [
+   "Birkei Yosef",
+   45,
+   false
+  ],
+  [
+   "Rashi",
+   45,
+   true
+  ],
+  [
+   "Kaf Hachayim",
+   44,
+   true
+  ],
+  [
+   "Tzitz Eliezer",
+   43,
+   false
+  ],
+  [
+   "Ritva",
+   42,
+   true
+  ],
+  [
+   "Gemara Shabbat",
+   40,
+   true
+  ],
+  [
+   "Minchat Yitzchak",
+   40,
+   false
+  ],
+  [
+   "Halichot Shlomo",
+   39,
+   false
+  ],
+  [
+   "Gemara",
+   39,
+   true
+  ],
+  [
+   "Ginzei Hakodesh",
+   39,
+   false
+  ],
+  [
+   "Ran",
+   38,
+   true
+  ],
+  [
+   "Gra",
+   38,
+   false
+  ],
+  [
+   "Pri Chadash",
+   34,
+   false
+  ],
+  [
+   "Ramban",
+   34,
+   true
+  ],
+  [
+   "Minchat Shlomo",
+   34,
+   false
+  ],
+  [
+   "Halachos of Brachos",
+   34,
+   false
+  ],
+  [
+   "Chatom Sofer",
+   32,
+   false
+  ],
+  [
+   "Yalkut Yosef Moadim",
+   32,
+   false
+  ],
+  [
+   "Beiur Halacha",
+   30,
+   false
+  ],
+  [
+   "Nitei Gavriel",
+   30,
+   false
+  ],
+  [
+   "Pri Megadim",
+   29,
+   false
+  ],
+  [
+   "Rif",
+   28,
+   true
+  ],
+  [
+   "Chavot Daat",
+   28,
+   false
+  ],
+  [
+   "Darkei Moshe",
+   27,
+   true
+  ],
+  [
+   "Mishna Brura",
+   27,
+   false
+  ],
+  [
+   "Taharat Habayit v",
+   27,
+   false
+  ],
+  [
+   "Levush",
+   26,
+   false
+  ],
+  [
+   "Chaye Adam",
+   25,
+   false
+  ],
+  [
+   "Rama Y.D",
+   25,
+   true
+  ],
+  [
+   "Pesachim",
+   25,
+   true
+  ],
+  [
+   "Tosfot Brachot",
+   25,
+   true
+  ],
+  [
+   "Torat Ribbit",
+   25,
+   false
+  ],
+  [
+   "Devarim",
+   23,
+   true
+  ],
+  [
+   "Brachot",
+   23,
+   true
+  ],
+  [
+   "Shabbat",
+   23,
+   true
+  ],
+  [
+   "Menuchat Ahava",
+   23,
+   false
+  ],
+  [
+   "Brit Yehuda",
+   23,
+   false
+  ],
+  [
+   "Vayikra",
+   22,
+   true
+  ],
+  [
+   "Meiri",
+   22,
+   false
+  ],
+  [
+   "Taharat Habayit",
+   22,
+   false
+  ],
+  [
+   "Shaar Hatziyun",
+   21,
+   false
+  ],
+  [
+   "Gemara Bava Metsia",
+   21,
+   false
+  ],
+  [
+   "Mishna",
+   21,
+   true
+  ],
+  [
+   "Torat HaMoadim",
+   20,
+   false
+  ],
+  [
+   "Trumat Hadeshen",
+   20,
+   false
+  ],
+  [
+   "Iggerot Moshe",
+   20,
+   false
+  ],
+  [
+   "Rambam Shabbat",
+   20,
+   true
+  ],
+  [
+   "Yalkut Yosef Milah",
+   20,
+   false
+  ],
+  [
+   "Hachinuch",
+   19,
+   true
+  ],
+  [
+   "Vehanhagot",
+   19,
+   false
+  ],
+  [
+   "Dirshu",
+   19,
+   false
+  ],
+  [
+   "Beer Moshe",
+   19,
+   false
+  ],
+  [
+   "Gemara Pesachim",
+   19,
+   true
+  ],
+  [
+   "Beit Yosef",
+   18,
+   true
+  ],
+  [
+   "Mordechai",
+   18,
+   true
+  ],
+  [
+   "Tashbetz",
+   18,
+   false
+  ],
+  [
+   "Shem HaGedolim",
+   18,
+   false
+  ],
+  [
+   "Tosfot Pesachim",
+   18,
+   true
+  ],
+  [
+   "Mishnah Berurah",
+   17,
+   true
+  ],
+  [
+   "Rivevot Efraim",
+   17,
+   false
+  ],
+  [
+   "Yachava Daat",
+   17,
+   false
+  ],
+  [
+   "Orchot Chaim",
+   17,
+   false
+  ],
+  [
+   "Sma",
+   16,
+   false
+  ],
+  [
+   "Shulchan Aruch C.M",
+   16,
+   true
+  ],
+  [
+   "Chayei Adam",
+   16,
+   true
+  ],
+  [
+   "Yalkut Yosef Kitzur Shulchan Aruch",
+   16,
+   false
+  ],
+  [
+   "Radvaz",
+   16,
+   false
+  ],
+  [
+   "Halachos of Brachos p",
+   16,
+   false
+  ],
+  [
+   "Pri Megadim M\"Z",
+   16,
+   false
+  ],
+  [
+   "Chazon Ovadiah",
+   16,
+   false
+  ],
+  [
+   "Nodeh Beyehuda",
+   15,
+   false
+  ],
+  [
+   "Chazon Ovadia Yamim Noraim",
+   15,
+   false
+  ],
+  [
+   "Orchot Shabbat v",
+   15,
+   false
+  ],
+  [
+   "Yevamot",
+   15,
+   true
+  ],
+  [
+   "Smag",
+   15,
+   false
+  ],
+  [
+   "Vezot Habracha p",
+   15,
+   false
+  ],
+  [
+   "Pri Megadim E\"A",
+   15,
+   false
+  ],
+  [
+   "Sama",
+   15,
+   false
+  ],
+  [
+   "Shaarei Teshuva",
+   15,
+   true
+  ],
+  [
+   "Eliya Rabba",
+   15,
+   false
+  ],
+  [
+   "Maharil",
+   14,
+   false
+  ],
+  [
+   "Rama O.C",
+   14,
+   true
+  ],
+  [
+   "Mishneh Halachot",
+   14,
+   false
+  ],
+  [
+   "Maggid Mishna",
+   14,
+   false
+  ],
+  [
+   "Shabbos Kitchen",
+   14,
+   false
+  ],
+  [
+   "Mekor Chaim",
+   14,
+   false
+  ],
+  [
+   "Mishna Berura",
+   14,
+   true
+  ],
+  [
+   "Beitzah",
+   13,
+   true
+  ],
+  [
+   "Moed Katan",
+   13,
+   true
+  ],
+  [
+   "Birkat Hashem",
+   12,
+   false
+  ],
+  [
+   "Ashrei Ha'ish",
+   12,
+   false
+  ],
+  [
+   "Chazon Ovadia v",
+   12,
+   false
+  ],
+  [
+   "Hazon Ovadia",
+   12,
+   false
+  ],
+  [
+   "Gemara Niddah",
+   12,
+   true
+  ],
+  [
+   "Eruvin",
+   12,
+   true
+  ],
+  [
+   "Sanhedrin",
+   12,
+   true
+  ],
+  [
+   "Hagahot Maimoniyot",
+   12,
+   false
+  ],
+  [
+   "Chut Shani",
+   12,
+   false
+  ],
+  [
+   "Shalmei Yehuda",
+   12,
+   false
+  ],
+  [
+   "Yalkut Yosef Shabbat",
+   12,
+   false
+  ],
+  [
+   "Minchat Asher",
+   12,
+   false
+  ],
+  [
+   "Rabbenu Yonah",
+   12,
+   false
+  ],
+  [
+   "Har Tzvi",
+   12,
+   false
+  ],
+  [
+   "Gemara Sukkah",
+   12,
+   true
+  ],
+  [
+   "Magen Avot",
+   12,
+   false
+  ],
+  [
+   "Rosh Pesachim",
+   12,
+   true
+  ],
+  [
+   "Chachmat Adam",
+   12,
+   true
+  ],
+  [
+   "Halachos of Brachos Handbook",
+   12,
+   false
+  ],
+  [
+   "Halachot Ketanot",
+   11,
+   false
+  ],
+  [
+   "Smak",
+   11,
+   false
+  ],
+  [
+   "Rivivot Ephraim",
+   11,
+   false
+  ],
+  [
+   "Shulchan Arukh",
+   11,
+   true
+  ],
+  [
+   "Bet Efraim",
+   11,
+   false
+  ],
+  [
+   "Maharsham",
+   11,
+   false
+  ],
+  [
+   "Chelkat Yakov",
+   11,
+   false
+  ],
+  [
+   "Kaf HaChayim on Shulchan Arukh",
+   11,
+   true
+  ],
+  [
+   "Shemirat Shabbat Kehilchata ch",
+   11,
+   false
+  ],
+  [
+   "Kol Bo",
+   11,
+   true
+  ],
+  [
+   "Yalkut Yosef, Tefillah",
+   11,
+   false
+  ],
+  [
+   "Horah Brurah",
+   11,
+   false
+  ],
+  [
+   "Ohr Letzion",
+   11,
+   false
+  ],
+  [
+   "Knesset Hagedola",
+   11,
+   false
+  ],
+  [
+   "Chazon Ovadia p",
+   11,
+   false
+  ],
+  [
+   "Ateret Paz",
+   11,
+   false
+  ],
+  [
+   "Titz Eliezer",
+   11,
+   false
+  ],
+  [
+   "Rambam Hilchos Machalas Asuros",
+   11,
+   false
+  ],
+  [
+   "Aruch",
+   10,
+   false
+  ],
+  [
+   "Tosfot Eruvin",
+   10,
+   true
+  ],
+  [
+   "torah",
+   10,
+   false
+  ],
+  [
+   "Vihanhagot",
+   10,
+   false
+  ],
+  [
+   "Maamar Mordechai",
+   10,
+   false
+  ],
+  [
+   "Sh”t Igrot Moshe",
+   10,
+   false
+  ],
+  [
+   "Mishna Halachot",
+   10,
+   false
+  ],
+  [
+   "Chazon Ovadia Sukkot",
+   10,
+   false
+  ],
+  [
+   "Shemot",
+   10,
+   true
+  ],
+  [
+   "Shabbos",
+   10,
+   true
+  ],
+  [
+   "Ketubot",
+   10,
+   true
+  ],
+  [
+   "Orchot Shabbat",
+   10,
+   false
+  ],
+  [
+   "Darkei Teshuva",
+   10,
+   false
+  ],
+  [
+   "Yechava Daat",
+   10,
+   false
+  ],
+  [
+   "Hatrumah",
+   10,
+   false
+  ],
+  [
+   "Ishei Yisrael",
+   10,
+   false
+  ],
+  [
+   "Rambam, Mishneh Torah: Hilchot Tefillah U'Birkat Cohanim, Chapter",
+   10,
+   false
+  ],
+  [
+   "Gesher Hachaim",
+   10,
+   false
+  ],
+  [
+   "Teshuvos V'Hanhagos",
+   10,
+   false
+  ],
+  [
+   "Chelkes Binyomin",
+   10,
+   false
+  ],
+  [
+   "Eliyah Raba",
+   9,
+   false
+  ],
+  [
+   "Shevet Hakehati",
+   9,
+   false
+  ],
+  [
+   "Yalkut Yosef Sova Semachot",
+   9,
+   false
+  ],
+  [
+   "Shulchan Aruch Yoreh De'ah",
+   9,
+   true
+  ],
+  [
+   "Ravyah",
+   9,
+   false
+  ],
+  [
+   "Rivash",
+   9,
+   true
+  ],
+  [
+   "Hagahot Ashri",
+   9,
+   false
+  ],
+  [
+   "Kesef Mishna",
+   9,
+   true
+  ],
+  [
+   "Shulchan Aruch E.H",
+   9,
+   true
+  ],
+  [
+   "Halichot Olam",
+   9,
+   false
+  ],
+  [
+   "Milveh Hashem",
+   9,
+   false
+  ],
+  [
+   "Tosfot Shabbat",
+   9,
+   true
+  ],
+  [
+   "Rashi Shabbat",
+   9,
+   true
+  ],
+  [
+   "Star-K",
+   9,
+   false
+  ],
+  [
+   "Rav Pealim",
+   9,
+   false
+  ],
+  [
+   "Rambam Malveh Vloveh",
+   9,
+   false
+  ],
+  [
+   "Tiltulei Shabbat",
+   9,
+   false
+  ],
+  [
+   "Issur V’heter",
+   9,
+   false
+  ],
+  [
+   "Daat Torah",
+   8,
+   false
+  ],
+  [
+   "Rambam Brachot",
+   8,
+   true
+  ],
+  [
+   "Rosh Chullin",
+   8,
+   true
+  ],
+  [
+   "Minchas Asher",
+   8,
+   false
+  ],
+  [
+   "Bedek Habayit",
+   8,
+   false
+  ],
+  [
+   "Rosh Brachot",
+   8,
+   true
+  ],
+  [
+   "Shibolei Haleket",
+   8,
+   false
+  ],
+  [
+   "Maharshag",
+   8,
+   false
+  ],
+  [
+   "Rashba responsa",
+   8,
+   false
+  ],
+  [
+   "Chazon Ovadia Pesach",
+   8,
+   false
+  ],
+  [
+   "Yerushalmi",
+   8,
+   true
+  ],
+  [
+   "Purim",
+   8,
+   false
+  ],
+  [
+   "Chazon Ovadia Purim",
+   8,
+   false
+  ],
+  [
+   "Children in Halacha",
+   8,
+   false
+  ],
+  [
+   "Sh”t Shevet HaLevi",
+   8,
+   false
+  ],
+  [
+   "Nishmat Avraham",
+   8,
+   false
+  ],
+  [
+   "Avnei Nezer",
+   8,
+   false
+  ],
+  [
+   "Gemara Yevamot",
+   8,
+   true
+  ],
+  [
+   "The Laws of Niddah v",
+   8,
+   false
+  ],
+  [
+   "Shulchan Shlomo",
+   8,
+   false
+  ],
+  [
+   "Sidrei Tahara",
+   8,
+   false
+  ],
+  [
+   "Rambam Machalot Assurot",
+   8,
+   false
+  ],
+  [
+   "Chochmas Adom",
+   8,
+   false
+  ],
+  [
+   "Bishul Yisroel",
+   8,
+   false
+  ],
+  [
+   "Bishul Yisroel pages",
+   8,
+   false
+  ],
+  [
+   "Rambam Sefer HaMitzvot",
+   7,
+   false
+  ],
+  [
+   "Turei Even Rosh Hashana",
+   7,
+   false
+  ],
+  [
+   "Minchat Chinuch",
+   7,
+   true
+  ],
+  [
+   "Divrei Yatziv",
+   7,
+   false
+  ],
+  [
+   "Bear Moshe",
+   7,
+   false
+  ],
+  [
+   "Rabbenu Yerucham",
+   7,
+   false
+  ],
+  [
+   "Dor Hamelaktim v",
+   7,
+   false
+  ],
+  [
+   "Az Nidbaru",
+   7,
+   false
+  ],
+  [
+   "Agur Bohalecha",
+   7,
+   false
+  ],
+  [
+   "Berachot",
+   7,
+   true
+  ],
+  [
+   "Mishkenot Yakov",
+   7,
+   false
+  ],
+  [
+   "Gemara Rosh Hashana",
+   7,
+   true
+  ],
+  [
+   "Rama C.M",
+   7,
+   true
+  ],
+  [
+   "Chazon Ovadia Shabbat",
+   7,
+   false
+  ],
+  [
+   "Raavad",
+   7,
+   true
+  ],
+  [
+   "Yaskil Avdi",
+   7,
+   false
+  ],
+  [
+   "Maharam Shik",
+   7,
+   false
+  ],
+  [
+   "Avoda Zara",
+   7,
+   true
+  ],
+  [
+   "What's Doing, Greater Connecticut",
+   7,
+   false
+  ],
+  [
+   "Tosafot",
+   7,
+   true
+  ],
+  [
+   "Rabbi Akiva Eiger",
+   7,
+   true
+  ],
+  [
+   "Piskei Shemuot",
+   7,
+   false
+  ],
+  [
+   "Yerushalmi Brachot",
+   7,
+   true
+  ],
+  [
+   "Derech HaChaim",
+   7,
+   false
+  ],
+  [
+   "Psukei Dizimra",
+   7,
+   false
+  ],
+  [
+   "Tehillim",
+   7,
+   true
+  ],
+  [
+   "Gittin",
+   7,
+   true
+  ],
+  [
+   "Sh”t Yabia Omer",
+   7,
+   false
+  ],
+  [
+   "Sheva Brachos",
+   7,
+   false
+  ],
+  [
+   "Yafeh Lelev",
+   7,
+   false
+  ],
+  [
+   "Netivot Shabbat",
+   7,
+   false
+  ],
+  [
+   "Nitai Gavriel",
+   7,
+   false
+  ],
+  [
+   "Rambam Isurei Biyah",
+   7,
+   true
+  ],
+  [
+   "Otzar Haposkim",
+   7,
+   false
+  ],
+  [
+   "Kovetz Teshuvot",
+   6,
+   false
+  ],
+  [
+   "Shoneh Halachot",
+   6,
+   false
+  ],
+  [
+   "Tosfot Rid",
+   6,
+   false
+  ],
+  [
+   "Riaz",
+   6,
+   false
+  ],
+  [
+   "Hagahot Mordechai",
+   6,
+   false
+  ],
+  [
+   "Ritva Eruvin",
+   6,
+   true
+  ],
+  [
+   "Machasit Hashekel",
+   6,
+   false
+  ],
+  [
+   "Gemara Megillah",
+   6,
+   true
+  ],
+  [
+   "Gemara Berachot",
+   6,
+   true
+  ],
+  [
+   "Bear Hetiev",
+   6,
+   false
+  ],
+  [
+   "Imrei Yosher",
+   6,
+   false
+  ],
+  [
+   "Laws of Ribbis p",
+   6,
+   false
+  ],
+  [
+   "note",
+   6,
+   false
+  ],
+  [
+   "Yad Malachi",
+   6,
+   false
+  ],
+  [
+   "Keter Yitnu Lecha p",
+   6,
+   false
+  ],
+  [
+   "Machzik Bracha",
+   6,
+   false
+  ],
+  [
+   "Igros Moshe O.C",
+   6,
+   false
+  ],
+  [
+   "Rambam Chametz Umatza",
+   6,
+   false
+  ],
+  [
+   "Gemara Gittin",
+   6,
+   true
+  ],
+  [
+   "Sh”t Yechave Daat",
+   6,
+   false
+  ],
+  [
+   "Kitzur Shulchan Aruch of Rav Rephael Baruch Toledano",
+   6,
+   false
+  ],
+  [
+   "Ialkut Iosef",
+   6,
+   false
+  ],
+  [
+   "Maharam Chalavah Pesachim",
+   6,
+   false
+  ],
+  [
+   "Bava Metsia",
+   6,
+   true
+  ],
+  [
+   "Mishnat Ribbit",
+   6,
+   false
+  ],
+  [
+   "Brit Yehuda ch",
+   6,
+   false
+  ],
+  [
+   "Chasidim",
+   6,
+   true
+  ],
+  [
+   "Shiurei Shevet Halevi",
+   6,
+   false
+  ],
+  [
+   "Maharam Chalavah",
+   6,
+   false
+  ],
+  [
+   "Chazon Ovadia Pesach p",
+   6,
+   false
+  ],
+  [
+   "Or Zaruah",
+   6,
+   false
+  ],
+  [
+   "Gemara Eruvin",
+   6,
+   true
+  ],
+  [
+   "Yalkut Yosef v",
+   6,
+   false
+  ],
+  [
+   "Zivchei Tzedek",
+   6,
+   false
+  ],
+  [
+   "Meiri Pesachim",
+   6,
+   false
+  ],
+  [
+   "Rivevot V’yovlot",
+   6,
+   false
+  ],
+  [
+   "Machazeh Eliyahu",
+   6,
+   false
+  ],
+  [
+   "Yalkut Yosef Pesach",
+   6,
+   false
+  ],
+  [
+   "Betzel Hachachma",
+   6,
+   false
+  ],
+  [
+   "Niddah Shiur",
+   6,
+   false
+  ],
+  [
+   "Tosfot b\"m",
+   6,
+   false
+  ],
+  [
+   "Natai Gavriel",
+   6,
+   false
+  ],
+  [
+   "Shoshanat Ha'amakim",
+   6,
+   false
+  ],
+  [
+   "Betzel Chachma",
+   6,
+   false
+  ],
+  [
+   "Darchei Teshuva",
+   6,
+   false
+  ],
+  [
+   "Yalkut Yosef, Hilchot Berachot",
+   6,
+   false
+  ],
+  [
+   "Chatam Sofer",
+   5,
+   true
+  ],
+  [
+   "Nekudat Hakesef",
+   5,
+   false
+  ],
+  [
+   "Chassidim",
+   5,
+   true
+  ],
+  [
+   "Halachically Speaking",
+   5,
+   false
+  ],
+  [
+   "Tosfot Chullin",
+   5,
+   true
+  ],
+  [
+   "Smag Asin",
+   5,
+   false
+  ],
+  [
+   "Chazon Ovadia Sukkot p",
+   5,
+   false
+  ],
+  [
+   "Zevachim",
+   5,
+   true
+  ],
+  [
+   "Rashba Brachot",
+   5,
+   true
+  ],
+  [
+   "Ran Nedarim",
+   5,
+   true
+  ],
+  [
+   "Rambam Hilchos Melachim",
+   5,
+   true
+  ],
+  [
+   "Biur Hagra",
+   5,
+   false
+  ],
+  [
+   "Hilchot Chol Hamoed Zichron Shlomo",
+   5,
+   false
+  ],
+  [
+   "Shvut Yitzchak v",
+   5,
+   false
+  ],
+  [
+   "Igros Moshe",
+   5,
+   false
+  ],
+  [
+   "Tosfot Beitzah",
+   5,
+   false
+  ],
+  [
+   "Ritva Pesachim",
+   5,
+   true
+  ],
+  [
+   "Asicha Shabbos",
+   5,
+   false
+  ],
+  [
+   "Chelkat Mechokek",
+   5,
+   true
+  ],
+  [
+   "Agur",
+   5,
+   false
+  ],
+  [
+   "Shulchan Halevi",
+   5,
+   false
+  ],
+  [
+   "Achiezer",
+   5,
+   false
+  ],
+  [
+   "Peninei Halacha",
+   5,
+   false
+  ],
+  [
+   "Talmidei Rabbenu Yonah",
+   5,
+   false
+  ],
+  [
+   "Rambam Hilchos Shabbos",
+   5,
+   true
+  ],
+  [
+   "Rashi Pesachim",
+   5,
+   true
+  ],
+  [
+   "Rashba Shabbat",
+   5,
+   true
+  ],
+  [
+   "Shulchan Aruch and Rama",
+   5,
+   true
+  ],
+  [
+   "Chinuch",
+   5,
+   false
+  ],
+  [
+   "Bamidbar",
+   5,
+   true
+  ],
+  [
+   "Nefesh Harav",
+   5,
+   false
+  ],
+  [
+   "Taanit",
+   5,
+   true
+  ],
+  [
+   "Mishnah Brurah",
+   5,
+   true
+  ],
+  [
+   "Masah Melech",
+   5,
+   false
+  ],
+  [
+   "Gemara Yoma",
+   5,
+   true
+  ],
+  [
+   "Yalkut Yosef Hilchot Birkot Hashachar, Birkot Hatorah",
+   5,
+   false
+  ],
+  [
+   "Gemara Megilla",
+   5,
+   true
+  ],
+  [
+   "Iggros Moshe",
+   5,
+   false
+  ],
+  [
+   "Chazon Ovadia part",
+   5,
+   false
+  ],
+  [
+   "Divrei Malkiel",
+   5,
+   false
+  ],
+  [
+   "Maaseh Rav",
+   5,
+   true
+  ],
+  [
+   "Chok Yakov",
+   5,
+   false
+  ],
+  [
+   "The Laws of Niddah",
+   5,
+   false
+  ],
+  [
+   "Chazon Ovadia Shabbat v",
+   5,
+   false
+  ],
+  [
+   "Ritva Megillah",
+   5,
+   true
+  ],
+  [
+   "footnote",
+   5,
+   false
+  ],
+  [
+   "Pesukei DeZimrah",
+   5,
+   false
+  ],
+  [
+   "Tosefet Shabbat",
+   5,
+   false
+  ],
+  [
+   "Niddah",
+   5,
+   true
+  ],
+  [
+   "Nitey Gavriel",
+   5,
+   false
+  ],
+  [
+   "Maharik",
+   5,
+   true
+  ],
+  [
+   "Mesoret Moshe v",
+   5,
+   false
+  ],
+  [
+   "Parshat Zachor",
+   5,
+   false
+  ],
+  [
+   "Turei Even",
+   5,
+   false
+  ],
+  [
+   "The Laws of Kashrus",
+   5,
+   false
+  ],
+  [
+   "Pri Megadim SD",
+   5,
+   false
+  ],
+  [
+   "Beresheet",
+   5,
+   true
+  ],
+  [
+   "Rav Poalim",
+   5,
+   false
+  ],
+  [
+   "Rivevot Ephraim",
+   5,
+   false
+  ],
+  [
+   "Mikraei Kodesh",
+   5,
+   false
+  ],
+  [
+   "Amot Shel Halacha",
+   5,
+   false
+  ],
+  [
+   "Darchei Moshe",
+   5,
+   true
+  ],
+  [
+   "Chavot Yair",
+   5,
+   true
+  ],
+  [
+   "Rambam Shabbos",
+   5,
+   true
+  ],
+  [
+   "Pitchei Choshen Geniva ch",
+   5,
+   false
+  ],
+  [
+   "Eiruvei Chatzeiros,\" min",
+   5,
+   false
+  ],
+  [
+   "Piskei Moshe",
+   4,
+   false
+  ],
+  [
+   "Or Zaruh",
+   4,
+   false
+  ],
+  [
+   "Eshkol",
+   4,
+   false
+  ],
+  [
+   "Pri Megadim A”A",
+   4,
+   false
+  ],
+  [
+   "Kitzur Dinei Ribbit",
+   4,
+   false
+  ],
+  [
+   "Netivot",
+   4,
+   false
+  ],
+  [
+   "Sfat Emet",
+   4,
+   false
+  ],
+  [
+   "Petach Dvir",
+   4,
+   false
+  ],
+  [
+   "Mishna Sukkah",
+   4,
+   true
+  ],
+  [
+   "Ritva Sukkah",
+   4,
+   true
+  ],
+  [
+   "Gemara Chullin",
+   4,
+   true
+  ],
+  [
+   "Gemara Beitzah",
+   4,
+   true
+  ],
+  [
+   "Chazon Ovadia Brachot p",
+   4,
+   false
+  ],
+  [
+   "Rosh Hashana",
+   4,
+   true
+  ],
+  [
+   "Chayey Adam",
+   4,
+   false
+  ],
+  [
+   "Shalmei Tzibbur",
+   4,
+   false
+  ],
+  [
+   "Chesed LeAlafim",
+   4,
+   false
+  ],
+  [
+   "Hagahot Maimon",
+   4,
+   false
+  ],
+  [
+   "Hagahot Smak",
+   4,
+   false
+  ],
+  [
+   "Halachos of Other People's Money p",
+   4,
+   false
+  ],
+  [
+   "Chida",
+   4,
+   false
+  ],
+  [
+   "Ester",
+   4,
+   true
+  ],
+  [
+   "Rav Schachter",
+   4,
+   false
+  ],
+  [
+   "Tradition",
+   4,
+   false
+  ],
+  [
+   "Kesot HaShulchan",
+   4,
+   false
+  ],
+  [
+   "Roke'ach",
+   4,
+   false
+  ],
+  [
+   "K'ayal Tarog Shidduchin p",
+   4,
+   false
+  ],
+  [
+   "Sh”t Or Letzion",
+   4,
+   false
+  ],
+  [
+   "Ran Pesachim",
+   4,
+   true
+  ],
+  [
+   "Shaar HaTzion",
+   4,
+   false
+  ],
+  [
+   "Meor Ha Shabbat",
+   4,
+   false
+  ],
+  [
+   "Malveh Hashem",
+   4,
+   false
+  ],
+  [
+   "Teshurat Shay",
+   4,
+   false
+  ],
+  [
+   "Bet Shmuel",
+   4,
+   false
+  ],
+  [
+   "Chut Shani p",
+   4,
+   false
+  ],
+  [
+   "Teshuvot veHanhagot",
+   4,
+   false
+  ],
+  [
+   "Minchas Yitzchok",
+   4,
+   false
+  ],
+  [
+   "Ritva b\"m",
+   4,
+   false
+  ],
+  [
+   "Baer Heitev",
+   4,
+   false
+  ],
+  [
+   "Orchot Shabbat p",
+   4,
+   false
+  ],
+  [
+   "Tosfot Yeshanim",
+   4,
+   false
+  ],
+  [
+   "Halichot Olam v",
+   4,
+   false
+  ],
+  [
+   "Yereyim",
+   4,
+   false
+  ],
+  [
+   "Dvar Avraham",
+   4,
+   false
+  ],
+  [
+   "Shiurei Bracha",
+   4,
+   false
+  ],
+  [
+   "Tosfot Bava Metsia",
+   4,
+   false
+  ],
+  [
+   "Shitah Mikubeset",
+   4,
+   false
+  ],
+  [
+   "Tiltulei Shabbat p",
+   4,
+   false
+  ],
+  [
+   "Gemara Bava Metziah",
+   4,
+   false
+  ],
+  [
+   "Chikrei Lev",
+   4,
+   false
+  ],
+  [
+   "Chelkat Yaakov",
+   4,
+   false
+  ],
+  [
+   "Chok Yaakov",
+   4,
+   true
+  ],
+  [
+   "B’orach Tzedaka",
+   4,
+   false
+  ],
+  [
+   "The",
+   4,
+   false
+  ],
+  [
+   "Yabea Omer",
+   4,
+   false
+  ],
+  [
+   "Ran Chullin",
+   4,
+   true
+  ],
+  [
+   "Orot Hatahara p",
+   4,
+   false
+  ],
+  [
+   "Rif Pesachim",
+   4,
+   true
+  ],
+  [
+   "Ha'elef Lecha Shlomo",
+   4,
+   false
+  ],
+  [
+   "Tosfot Yeshanim Yoma",
+   4,
+   false
+  ],
+  [
+   "Ritva Rosh Hashana",
+   4,
+   true
+  ],
+  [
+   "Taharat Yosef",
+   4,
+   false
+  ],
+  [
+   "Rabbenu Chananel",
+   4,
+   false
+  ],
+  [
+   "Motzei Shabbat Vayakel Pekudei",
+   4,
+   false
+  ],
+  [
+   "Sukkah",
+   4,
+   true
+  ],
+  [
+   "Lhorot Natan",
+   4,
+   false
+  ],
+  [
+   "Netivot Shalom",
+   4,
+   false
+  ],
+  [
+   "Rosh responsa",
+   4,
+   false
+  ],
+  [
+   "Aguda",
+   4,
+   false
+  ],
+  [
+   "Chut Shani Shabbat v",
+   4,
+   false
+  ],
+  [
+   "Tosfot Avoda Zara",
+   4,
+   true
+  ],
+  [
+   "Rashi Eruvin",
+   4,
+   true
+  ],
+  [
+   "Gemara Bava Kama",
+   4,
+   true
+  ],
+  [
+   "Tosfot Niddah",
+   4,
+   false
+  ],
+  [
+   "Lev Chaim",
+   4,
+   false
+  ],
+  [
+   "Avnei Yishfeh",
+   4,
+   false
+  ],
+  [
+   "Mishmeret Hatahara v",
+   4,
+   false
+  ],
+  [
+   "Mordechai b\"m",
+   4,
+   false
+  ],
+  [
+   "Siddur Bet Ovad",
+   4,
+   false
+  ],
+  [
+   "Beiur HaGra",
+   4,
+   false
+  ],
+  [
+   "Maamer Mordechai",
+   4,
+   false
+  ],
+  [
+   "Kitzur S”A",
+   4,
+   false
+  ],
+  [
+   "Shulchan",
+   4,
+   false
+  ],
+  [
+   "Rambam Aveilut",
+   4,
+   true
+  ],
+  [
+   "HaChinuch Mitzvah",
+   4,
+   true
+  ],
+  [
+   "Taz Y.D",
+   4,
+   false
+  ],
+  [
+   "Me’ayn Shalosh",
+   4,
+   false
+  ],
+  [
+   "Torat HaMoadim Chanukah",
+   4,
+   false
+  ],
+  [
+   "Mishnah",
+   4,
+   true
+  ],
+  [
+   "Biur Chametz",
+   4,
+   false
+  ],
+  [
+   "Tosfot Rabbenu Peretz Pesachim",
+   4,
+   false
+  ],
+  [
+   "Rosh b\"m",
+   4,
+   false
+  ],
+  [
+   "Lechem Chamudot",
+   4,
+   false
+  ],
+  [
+   "Rosh Sukkah",
+   4,
+   true
+  ],
+  [
+   "Mamer Mordechai",
+   4,
+   false
+  ],
+  [
+   "Gedolot Elisha",
+   4,
+   false
+  ],
+  [
+   "Sukkot.\" A Parent's Guide to Teaching Children Mizvot. Hoboken: Ketav House",
+   4,
+   false
+  ],
+  [
+   "Tosfas Meseches Avodah Zarah",
+   4,
+   false
+  ],
+  [
+   "Prisha",
+   4,
+   false
+  ],
+  [
+   "Meiri Meseches Avodah Zarah",
+   4,
+   false
+  ],
+  [
+   "Pischei Halacha",
+   4,
+   false
+  ],
+  [
+   "Eruvei Chatzerot",
+   4,
+   false
+  ],
+  [
+   "Laws of Interest p",
+   4,
+   false
+  ],
+  [
+   "Nishmat",
+   4,
+   false
+  ],
+  [
+   "Bava Kama",
+   3,
+   true
+  ],
+  [
+   "Tosfot Bava Kama",
+   3,
+   true
+  ],
+  [
+   "Rema",
+   3,
+   false
+  ],
+  [
+   "Brachos",
+   3,
+   false
+  ],
+  [
+   "Gemarah",
+   3,
+   false
+  ],
+  [
+   "Tosafos",
+   3,
+   false
+  ],
+  [
+   "Shlah",
+   3,
+   false
+  ],
+  [
+   "Shvut Yakov",
+   3,
+   false
+  ],
+  [
+   "chapter",
+   3,
+   false
+  ],
+  [
+   "Nedarim",
+   3,
+   true
+  ],
+  [
+   "Gemara Kiddushin",
+   3,
+   true
+  ],
+  [
+   "Bear Heitiv",
+   3,
+   false
+  ],
+  [
+   "Sifrei Devarim",
+   3,
+   true
+  ],
+  [
+   "Rashba Rosh Hashana",
+   3,
+   true
+  ],
+  [
+   "Rashba Teshuva",
+   3,
+   false
+  ],
+  [
+   "Minchat Aharon",
+   3,
+   false
+  ],
+  [
+   "Kaf Hachaim Sofer",
+   3,
+   false
+  ],
+  [
+   "Naveh Shalom",
+   3,
+   false
+  ],
+  [
+   "Tehilat Ledavid",
+   3,
+   false
+  ],
+  [
+   "BI\"H, VaEtchanan",
+   3,
+   false
+  ],
+  [
+   "Mishpat Shalom",
+   3,
+   false
+  ],
+  [
+   "Bear Hagolah",
+   3,
+   false
+  ],
+  [
+   "Baal Hatrumot",
+   3,
+   false
+  ],
+  [
+   "Tzlach Brachot",
+   3,
+   false
+  ],
+  [
+   "Maharsha",
+   3,
+   false
+  ],
+  [
+   "Yalkut Yosef Shabbat v",
+   3,
+   false
+  ],
+  [
+   "Byitzchak Yikareh on m\"b",
+   3,
+   false
+  ],
+  [
+   "Shaarei Muktzeh p",
+   3,
+   false
+  ],
+  [
+   "Birkat Hashem v",
+   3,
+   false
+  ],
+  [
+   "Meiri Eruvin",
+   3,
+   false
+  ],
+  [
+   "Hilchot Shabbat",
+   3,
+   true
+  ],
+  [
+   "39 Melachos v",
+   3,
+   false
+  ],
+  [
+   "Sotah",
+   3,
+   true
+  ],
+  [
+   "Igrot Moshe E.H",
+   3,
+   false
+  ],
+  [
+   "Rama E.H",
+   3,
+   true
+  ],
+  [
+   "Dirshu Mishna Brura",
+   3,
+   false
+  ],
+  [
+   "Byitzchak Yikareh",
+   3,
+   false
+  ],
+  [
+   "Rambam Sanhedrin",
+   3,
+   true
+  ],
+  [
+   "Gemara Nedarim",
+   3,
+   true
+  ],
+  [
+   "The Laws of Brachos",
+   3,
+   false
+  ],
+  [
+   "Vezot Habracha ch",
+   3,
+   false
+  ],
+  [
+   "Mishnat Ribbit p",
+   3,
+   false
+  ],
+  [
+   "Yeshurun v",
+   3,
+   false
+  ],
+  [
+   "Cheshev Haefod",
+   3,
+   false
+  ],
+  [
+   "Nishmat Adam",
+   3,
+   true
+  ],
+  [
+   "Tosfot Sanhedrin",
+   3,
+   false
+  ],
+  [
+   "Hilchot Chag Bchag",
+   3,
+   false
+  ],
+  [
+   "Moadim UZmanim",
+   3,
+   false
+  ],
+  [
+   "Rambam Berachot",
+   3,
+   true
+  ],
+  [
+   "Bahag",
+   3,
+   false
+  ],
+  [
+   "Shiltei Giborim",
+   3,
+   false
+  ],
+  [
+   "Avudraham",
+   3,
+   false
+  ],
+  [
+   "Shomea Koneh",
+   3,
+   false
+  ],
+  [
+   "Bikkurei Yakov",
+   3,
+   false
+  ],
+  [
+   "Halichot Shlomo Moadim",
+   3,
+   false
+  ],
+  [
+   "Shoel V’nishal",
+   3,
+   false
+  ],
+  [
+   "Graz",
+   3,
+   false
+  ],
+  [
+   "Baal Hameor",
+   3,
+   false
+  ],
+  [
+   "Tehilah Ldovid",
+   3,
+   false
+  ],
+  [
+   "Tiferet Shmuel",
+   3,
+   false
+  ],
+  [
+   "Tosefta",
+   3,
+   true
+  ],
+  [
+   "Bnei Tzion",
+   3,
+   false
+  ],
+  [
+   "Mabit",
+   3,
+   false
+  ],
+  [
+   "Yosef Ometz",
+   3,
+   false
+  ],
+  [
+   "Divrei Shalom",
+   3,
+   false
+  ],
+  [
+   "Yesodei Yeshurun",
+   3,
+   false
+  ],
+  [
+   "V’hanhagot",
+   3,
+   false
+  ],
+  [
+   "6 . Nefesh Harav p",
+   3,
+   false
+  ],
+  [
+   "Dirshu Mishna Brurah",
+   3,
+   false
+  ],
+  [
+   "Kli Sheni",
+   3,
+   false
+  ],
+  [
+   "The Laws of Cooking and Warming Food on Shabbat p",
+   3,
+   false
+  ],
+  [
+   "Shagat Aryeh",
+   3,
+   false
+  ],
+  [
+   "Laws of Praying Beyachid p",
+   3,
+   false
+  ],
+  [
+   "Kaf Hachaim Palagi",
+   3,
+   false
+  ],
+  [
+   "Shemesh uMagen",
+   3,
+   false
+  ],
+  [
+   "Menachot",
+   3,
+   true
+  ],
+  [
+   "Chesed La'alafim",
+   3,
+   false
+  ],
+  [
+   "Talmid Rashba",
+   3,
+   false
+  ],
+  [
+   "Aruch Hashulchan O.C",
+   3,
+   true
+  ],
+  [
+   "Shach Y.D",
+   3,
+   true
+  ],
+  [
+   "Ketav Sofer",
+   3,
+   false
+  ],
+  [
+   "Web",
+   3,
+   false
+  ],
+  [
+   "Bava Metzia",
+   3,
+   true
+  ],
+  [
+   "Yam Shel Shlomo",
+   3,
+   false
+  ],
+  [
+   "Mishlei",
+   3,
+   true
+  ],
+  [
+   "Kinyan Torah",
+   3,
+   false
+  ],
+  [
+   "Hachinuch Mitzva",
+   3,
+   false
+  ],
+  [
+   "Bechorot",
+   3,
+   true
+  ],
+  [
+   "Birth Control In Jewish Law",
+   3,
+   false
+  ],
+  [
+   "Shabbat Shabbaton p",
+   3,
+   false
+  ],
+  [
+   "Laws of Tzedakah and Maaser p",
+   3,
+   false
+  ],
+  [
+   "HaRashba",
+   3,
+   false
+  ],
+  [
+   "Halichot Shlomo p",
+   3,
+   false
+  ],
+  [
+   "Eshel Avraham",
+   3,
+   false
+  ],
+  [
+   "Makor Chaim",
+   3,
+   false
+  ],
+  [
+   "Mezuzah Vhilchoteha",
+   3,
+   false
+  ],
+  [
+   "Chelkat Yoav",
+   3,
+   false
+  ],
+  [
+   "Shaare Teshuva",
+   3,
+   false
+  ],
+  [
+   "Rif Chullin",
+   3,
+   true
+  ],
+  [
+   "Ritva Yoma",
+   3,
+   true
+  ],
+  [
+   "Ramban Shabbat",
+   3,
+   true
+  ],
+  [
+   "Kabbalah",
+   3,
+   false
+  ],
+  [
+   "Kaf Hachaim Palacci",
+   3,
+   false
+  ],
+  [
+   "Igrot Moshe O”C",
+   3,
+   false
+  ],
+  [
+   "Chazon Ovadia Berachot",
+   3,
+   false
+  ],
+  [
+   "Kli Sh’Melachto LeIssur",
+   3,
+   false
+  ],
+  [
+   "Tefillah KeHilchata",
+   3,
+   false
+  ],
+  [
+   "Moed likol chai",
+   3,
+   false
+  ],
+  [
+   "previous footnote",
+   3,
+   false
+  ],
+  [
+   "Mishna Bava Metsia",
+   3,
+   false
+  ],
+  [
+   "Safek Brachot",
+   3,
+   false
+  ],
+  [
+   "Talmedei Rabbenu Yonah",
+   3,
+   false
+  ],
+  [
+   "Baba Kama",
+   3,
+   true
+  ],
+  [
+   "Tisha B'Av",
+   3,
+   false
+  ],
+  [
+   "Torat HaYoledet",
+   3,
+   false
+  ],
+  [
+   "Masat Binyamin",
+   3,
+   false
+  ],
+  [
+   "Knesset Hagedolah",
+   3,
+   false
+  ],
+  [
+   "Erech HaShulchan",
+   3,
+   false
+  ],
+  [
+   "Tosfot Kiddushin",
+   3,
+   false
+  ],
+  [
+   "Shu”t Yechave Daat",
+   3,
+   false
+  ],
+  [
+   "Halacha Berura",
+   3,
+   false
+  ],
+  [
+   "Machzor Vitri",
+   3,
+   false
+  ],
+  [
+   "Maggid Mishnah",
+   3,
+   false
+  ],
+  [
+   "Am Mordechai p",
+   3,
+   false
+  ],
+  [
+   "Mishna Niddah",
+   3,
+   true
+  ],
+  [
+   "Tiferet Lmoshe",
+   3,
+   false
+  ],
+  [
+   "Gemara Macot",
+   3,
+   false
+  ],
+  [
+   "Yad Aharon",
+   3,
+   false
+  ],
+  [
+   "Hayashar",
+   3,
+   true
+  ],
+  [
+   "Aseh Lecha Rav",
+   3,
+   false
+  ],
+  [
+   "Elya Rabba",
+   3,
+   false
+  ],
+  [
+   "Chazon Ovadia Chanuka p",
+   3,
+   false
+  ],
+  [
+   "Or Tzadikim",
+   3,
+   false
+  ],
+  [
+   "Steipler",
+   3,
+   false
+  ],
+  [
+   "Bet Halevi",
+   3,
+   false
+  ],
+  [
+   "Gemora Bava Metziah",
+   3,
+   false
+  ],
+  [
+   "Machaneh Efraim",
+   3,
+   false
+  ],
+  [
+   "Talmid Harashba",
+   3,
+   false
+  ],
+  [
+   "Biurim",
+   3,
+   false
+  ],
+  [
+   "Tosfot Sukkah",
+   3,
+   true
+  ],
+  [
+   "Rambam Machalot Asurot",
+   3,
+   true
+  ],
+  [
+   "Mishna Chullin",
+   3,
+   true
+  ],
+  [
+   "Ben Ish Chai Toldot n",
+   3,
+   false
+  ],
+  [
+   "Eliyah Rabba",
+   3,
+   false
+  ],
+  [
+   "Gemara Moed Katan",
+   3,
+   true
+  ],
+  [
+   "Rosh Moed Katan",
+   3,
+   true
+  ],
+  [
+   "Michas Asher",
+   3,
+   false
+  ],
+  [
+   "Shemirat Shabbat Khilchata",
+   3,
+   false
+  ],
+  [
+   "Minchat Shabbat",
+   3,
+   false
+  ],
+  [
+   "Shraga Hameir",
+   3,
+   false
+  ],
+  [
+   "Nemukei Yosef",
+   3,
+   false
+  ],
+  [
+   "Machsit HaShekel",
+   3,
+   false
+  ],
+  [
+   "Beis Yosef C.M",
+   3,
+   false
+  ],
+  [
+   "Yechaveh Daas",
+   3,
+   false
+  ],
+  [
+   "Ramban Pesachim",
+   3,
+   true
+  ],
+  [
+   "Panim Meirot",
+   3,
+   false
+  ],
+  [
+   "Ginizei HaKodesh",
+   3,
+   false
+  ],
+  [
+   "Avnei Derech",
+   3,
+   false
+  ],
+  [
+   "Tikkun Eruvin",
+   3,
+   false
+  ],
+  [
+   "Ketzos ha-Shulchan",
+   3,
+   false
+  ],
+  [
+   "Maggid Mishneh",
+   3,
+   true
+  ],
+  [
+   "Chabad.org",
+   3,
+   false
+  ],
+  [
+   "Gemara Sanhedrin",
+   3,
+   true
+  ],
+  [
+   "Talmud Torah",
+   3,
+   false
+  ],
+  [
+   "Ritva Shabbat",
+   3,
+   false
+  ],
+  [
+   "Maharam Brisk",
+   3,
+   false
+  ],
+  [
+   "Binat Adam",
+   3,
+   false
+  ],
+  [
+   "Chinuch Yisrael",
+   3,
+   false
+  ],
+  [
+   "Yerushalmi Shabbos",
+   3,
+   true
+  ],
+  [
+   "Yalkut Yosef, Berachot II",
+   3,
+   false
+  ],
+  [
+   "A Guide to Practical Halacha",
+   3,
+   false
+  ],
+  [
+   "Peleti",
+   3,
+   false
+  ],
+  [
+   "The Laws and Concepts of Niddah",
+   3,
+   false
+  ],
+  [
+   "Pirkei Drabbi Eliezer ch",
+   3,
+   false
+  ],
+  [
+   "Chochmat Adam",
+   3,
+   true
+  ],
+  [
+   "Mishna Brachot",
+   3,
+   true
+  ],
+  [
+   "Shitah Mikubeset Beitzah",
+   3,
+   false
+  ],
+  [
+   "Meseches Avodah Zarah",
+   3,
+   false
+  ],
+  [
+   "Ran Meseches Avodah Zarah",
+   3,
+   false
+  ],
+  [
+   "Ramban Meseches Avodah Zarah",
+   3,
+   false
+  ],
+  [
+   "Pri Tohar",
+   3,
+   false
+  ],
+  [
+   "Rashba Meseches Avodah Zarah",
+   3,
+   false
+  ],
+  [
+   "Toras Chatos",
+   3,
+   false
+  ],
+  [
+   "OU document A-110",
+   3,
+   false
+  ],
+  [
+   "Zohar",
+   3,
+   true
+  ],
+  [
+   "Sh”t Teshuvot VeHanhagot",
+   3,
+   false
+  ],
+  [
+   "Tuv Taam Vdaat",
+   3,
+   false
+  ],
+  [
+   "Rambam Maachalot Asurot",
+   3,
+   true
+  ],
+  [
+   "Rashba Toras Habayis",
+   3,
+   false
+  ],
+  [
+   "Ben Ish Chai Chukas",
+   3,
+   false
+  ],
+  [
+   "Ritvah Meseches Avodah Zarah",
+   3,
+   false
+  ],
+  [
+   "Chidushim Ubiurim",
+   3,
+   false
+  ],
+  [
+   "HalachaYomit.co.il",
+   3,
+   false
+  ],
+  [
+   "Shomea Tefillah",
+   3,
+   false
+  ],
+  [
+   "David Feldman",
+   3,
+   false
+  ],
+  [
+   "Piskei Corona #14",
+   3,
+   false
+  ],
+  [
+   "Chazon Ovadia Arba Taaniyot",
+   3,
+   false
+  ],
+  [
+   "Yamim Noraim, Selichot",
+   3,
+   false
+  ],
+  [
+   "Ben Ish Chai Parashat Ki Tisa Halacha",
+   3,
+   false
+  ],
+  [
+   "HaItur",
+   3,
+   false
+  ],
+  [
+   "Rashi Shabbos",
+   3,
+   true
+  ],
+  [
+   "Mishneh Torah Kings and Wars",
+   2,
+   true
+  ],
+  [
+   "Turei Zahav",
+   2,
+   false
+  ],
+  [
+   "Mateh Moshe",
+   2,
+   false
+  ],
+  [
+   "Bet Yehuda",
+   2,
+   false
+  ],
+  [
+   "Nachalat Shiva ch",
+   2,
+   false
+  ],
+  [
+   "Elya Rabbah",
+   2,
+   false
+  ],
+  [
+   "Ramban Shemot",
+   2,
+   true
+  ],
+  [
+   "Tosfot Menachot",
+   2,
+   false
+  ],
+  [
+   "Tosfot Zevachim",
+   2,
+   false
+  ],
+  [
+   "Rabbenu Yonah Brachot",
+   2,
+   false
+  ],
+  [
+   "Tiferet Adam",
+   2,
+   false
+  ],
+  [
+   "Sherit Yosef",
+   2,
+   false
+  ],
+  [
+   "Daily Halacha",
+   2,
+   false
+  ],
+  [
+   "Shalmei Moed",
+   2,
+   false
+  ],
+  [
+   "She’arim Metzuyanim b’Halachah",
+   2,
+   false
+  ],
+  [
+   "Veten Bracha",
+   2,
+   false
+  ],
+  [
+   "Sheilat Shlomo",
+   2,
+   false
+  ],
+  [
+   "Vayikra Rabba",
+   2,
+   true
+  ],
+  [
+   "Shaari Mechila",
+   2,
+   false
+  ],
+  [
+   "Shulchan Aruch Kitzur",
+   2,
+   true
+  ],
+  [
+   "Chaim Shaal",
+   2,
+   false
+  ],
+  [
+   "Kesot",
+   2,
+   false
+  ],
+  [
+   "Megillah",
+   2,
+   true
+  ],
+  [
+   "Ramban Dvarim",
+   2,
+   true
+  ],
+  [
+   "Rashi Rosh Hashana",
+   2,
+   true
+  ],
+  [
+   "Tosfot Rosh Hashana",
+   2,
+   true
+  ],
+  [
+   "Tosfot Harosh Rosh Hashana",
+   2,
+   false
+  ],
+  [
+   "Olot Tamid",
+   2,
+   false
+  ],
+  [
+   "Bet Yitzchak",
+   2,
+   false
+  ],
+  [
+   "Kesher Gudal",
+   2,
+   true
+  ],
+  [
+   "Shalmei Tzibur",
+   2,
+   false
+  ],
+  [
+   "Sh”t Igrot Moshe O”C",
+   2,
+   false
+  ],
+  [
+   "Sh”t Yacheve Daat",
+   2,
+   false
+  ],
+  [
+   "Ashel Avraham",
+   2,
+   false
+  ],
+  [
+   "Siddur Rav Amram Goan",
+   2,
+   false
+  ],
+  [
+   "Luach Brachot",
+   2,
+   false
+  ],
+  [
+   "Emek Hamishpat",
+   2,
+   false
+  ],
+  [
+   "Chasam Sofer C.M",
+   2,
+   false
+  ],
+  [
+   "Parashas Chukas, B’inyan Dina D’malchusa Dina",
+   2,
+   false
+  ],
+  [
+   "Rambam Hilchot Gezela",
+   2,
+   true
+  ],
+  [
+   "Maharashdam",
+   2,
+   false
+  ],
+  [
+   "Bear Yakov",
+   2,
+   false
+  ],
+  [
+   "Tosfot Ketubot",
+   2,
+   true
+  ],
+  [
+   "Mordechai beitzah ch",
+   2,
+   false
+  ],
+  [
+   "Isur Vheter",
+   2,
+   false
+  ],
+  [
+   "Megilla",
+   2,
+   true
+  ],
+  [
+   "Piskei Chol Hamoed s.v. Kishut Haguf . m\"k",
+   2,
+   false
+  ],
+  [
+   "Shemirat Shabbat Kihilchita",
+   2,
+   false
+  ],
+  [
+   "Meor Hashabbat v",
+   2,
+   false
+  ],
+  [
+   "S”A HaRav",
+   2,
+   false
+  ],
+  [
+   "Mishna Brurah there",
+   2,
+   false
+  ],
+  [
+   "Chullin",
+   2,
+   true
+  ],
+  [
+   "Ran Shabbat",
+   2,
+   true
+  ],
+  [
+   "Kashrus kurrents",
+   2,
+   false
+  ],
+  [
+   "Kenesset HaGedolah",
+   2,
+   false
+  ],
+  [
+   "Shiurei Beracha",
+   2,
+   false
+  ],
+  [
+   "Ben Ish Chai Vayetze: Halacha",
+   2,
+   false
+  ],
+  [
+   "Kuntres Mafli Lasot p",
+   2,
+   false
+  ],
+  [
+   "Yosef Chai",
+   2,
+   false
+  ],
+  [
+   "Raavan",
+   2,
+   false
+  ],
+  [
+   "Mishkenaot Yakov",
+   2,
+   false
+  ],
+  [
+   "Piskei Riaz",
+   2,
+   false
+  ],
+  [
+   "Pirush Mishnayot",
+   2,
+   false
+  ],
+  [
+   "Hagahot Maimoni",
+   2,
+   false
+  ],
+  [
+   "Mishna Eruvin",
+   2,
+   true
+  ],
+  [
+   "Meiri Sotah",
+   2,
+   false
+  ],
+  [
+   "Shevut Yitzchak",
+   2,
+   false
+  ],
+  [
+   "Orchos Shabbos",
+   2,
+   false
+  ],
+  [
+   "Chovat Hadar p",
+   2,
+   false
+  ],
+  [
+   "Lifnei Iver",
+   2,
+   false
+  ],
+  [
+   "Amirah LeYisrael",
+   2,
+   false
+  ],
+  [
+   "Laws of Interest",
+   2,
+   false
+  ],
+  [
+   "Chazon Ish Nashim",
+   2,
+   false
+  ],
+  [
+   "Agudah",
+   2,
+   false
+  ],
+  [
+   "Solet Belulah",
+   2,
+   false
+  ],
+  [
+   "Derech Chaim",
+   2,
+   false
+  ],
+  [
+   "She'erit Yosef",
+   2,
+   false
+  ],
+  [
+   "Dinei Chinuch Katan",
+   2,
+   false
+  ],
+  [
+   "Maharit",
+   2,
+   false
+  ],
+  [
+   "Bet Avi",
+   2,
+   false
+  ],
+  [
+   "Chayei Halevi",
+   2,
+   false
+  ],
+  [
+   "Chazon Ovadya",
+   2,
+   false
+  ],
+  [
+   "Birkat Eliyahu",
+   2,
+   false
+  ],
+  [
+   "Sukkot",
+   2,
+   false
+  ],
+  [
+   "Halacha Berurah",
+   2,
+   false
+  ],
+  [
+   "BI\"H, Ekev",
+   2,
+   false
+  ],
+  [
+   "first Mishna in",
+   2,
+   false
+  ],
+  [
+   "Tos",
+   2,
+   false
+  ],
+  [
+   "HaRashbash",
+   2,
+   true
+  ],
+  [
+   "Radzav",
+   2,
+   false
+  ],
+  [
+   "Salmat Chaim",
+   2,
+   false
+  ],
+  [
+   "Teleconference March",
+   2,
+   false
+  ],
+  [
+   "Halichot Shlomo Tefillah",
+   2,
+   false
+  ],
+  [
+   "Tisha BeAv",
+   2,
+   false
+  ],
+  [
+   "Or litzion",
+   2,
+   false
+  ],
+  [
+   "Yalkut Yosef Dinei Chinuch Katan",
+   2,
+   false
+  ],
+  [
+   "gemara taanit",
+   2,
+   true
+  ],
+  [
+   "Chida in Shiurei Bracha",
+   2,
+   false
+  ],
+  [
+   "Tosafot Pesachim",
+   2,
+   true
+  ],
+  [
+   "gemara in Pesachim",
+   2,
+   true
+  ],
+  [
+   "Orchot Chaim Chametz U' Matza",
+   2,
+   false
+  ],
+  [
+   "Nimukei Yosef Pesachim",
+   2,
+   false
+  ],
+  [
+   "Ran on Rif",
+   2,
+   false
+  ],
+  [
+   "Ketzot HaShulchan",
+   2,
+   false
+  ],
+  [
+   "Bavli",
+   2,
+   false
+  ],
+  [
+   "Kol Torah",
+   2,
+   false
+  ],
+  [
+   "Brit Olam",
+   2,
+   false
+  ],
+  [
+   "Maharshach",
+   2,
+   false
+  ],
+  [
+   "Mishpatei Uziel",
+   2,
+   false
+  ],
+  [
+   "Heichal Yitzchak",
+   2,
+   false
+  ],
+  [
+   "Yereim",
+   2,
+   false
+  ],
+  [
+   "Tosafot Temura",
+   2,
+   false
+  ],
+  [
+   "Sh”t Maharam",
+   2,
+   false
+  ],
+  [
+   "Nach",
+   2,
+   false
+  ],
+  [
+   "Pitchei Teshuvot",
+   2,
+   false
+  ],
+  [
+   "Shulchan Hatahor",
+   2,
+   false
+  ],
+  [
+   "Mayan Omer v",
+   2,
+   false
+  ],
+  [
+   "Kalkelet Shabbat",
+   2,
+   false
+  ],
+  [
+   "Hilchot Choresh, Halacha",
+   2,
+   false
+  ],
+  [
+   "Emet Lyakov",
+   2,
+   false
+  ],
+  [
+   "Mishkenot Yaakov",
+   2,
+   false
+  ],
+  [
+   "Charedim",
+   2,
+   false
+  ],
+  [
+   "Rambam Hilchot Shabbat",
+   2,
+   true
+  ],
+  [
+   "Ohel Moshe",
+   2,
+   false
+  ],
+  [
+   "SHU”T Chatam Sofer",
+   2,
+   false
+  ],
+  [
+   "Moed Kol Chai",
+   2,
+   false
+  ],
+  [
+   "SHu”t Maharil",
+   2,
+   false
+  ],
+  [
+   "Adar",
+   2,
+   false
+  ],
+  [
+   "Kitzur Shulchan Arukh Hilkhot Chodesh Adar",
+   2,
+   false
+  ],
+  [
+   "Chazon Ovadiah Purim",
+   2,
+   false
+  ],
+  [
+   "Mishnah Shabbat",
+   2,
+   true
+  ],
+  [
+   "Hagahot Rabbi Akiva Eiger",
+   2,
+   false
+  ],
+  [
+   "Tosfot Harosh Brachot",
+   2,
+   false
+  ],
+  [
+   "Maharik Shoresh",
+   2,
+   false
+  ],
+  [
+   "Mishpatei Shmuel",
+   2,
+   false
+  ],
+  [
+   "Maseh Melech",
+   2,
+   false
+  ],
+  [
+   "Shaarei Knesset Hagedola",
+   2,
+   false
+  ],
+  [
+   "Rabbi Nacson in",
+   2,
+   false
+  ],
+  [
+   "Chazon Ovadia Purim p",
+   2,
+   false
+  ],
+  [
+   "OU Policy",
+   2,
+   false
+  ],
+  [
+   "Piskei Corona Iyar",
+   2,
+   false
+  ],
+  [
+   "Maharam Galanti",
+   2,
+   false
+  ],
+  [
+   "Maggid Mishna Shabbat",
+   2,
+   false
+  ],
+  [
+   "Ben Ish Hai, Vayeshev, Halacha",
+   2,
+   false
+  ],
+  [
+   "Yechaveh Daat",
+   2,
+   false
+  ],
+  [
+   "Laws of Ribbit p",
+   2,
+   false
+  ],
+  [
+   "Halacha Yomit",
+   2,
+   false
+  ],
+  [
+   "Menuchat Ahavah",
+   2,
+   false
+  ],
+  [
+   "Tosafot Shabbat",
+   2,
+   false
+  ],
+  [
+   "Mordechai Shabbat",
+   2,
+   false
+  ],
+  [
+   "Eishel Avraham",
+   2,
+   false
+  ],
+  [
+   "Chavos Yair",
+   2,
+   false
+  ],
+  [
+   "Pe’as Hashulchan",
+   2,
+   false
+  ],
+  [
+   "Mishneh Halachos",
+   2,
+   false
+  ],
+  [
+   "Eliyah Rabbah",
+   2,
+   false
+  ],
+  [
+   "Orot Hahalacha",
+   2,
+   false
+  ],
+  [
+   "CHINUCH AGE.\" Ahavsalom",
+   2,
+   false
+  ],
+  [
+   "Netilat Yadayim",
+   2,
+   false
+  ],
+  [
+   "Gemara Ketubot",
+   2,
+   true
+  ],
+  [
+   "Yishayahu",
+   2,
+   true
+  ],
+  [
+   "Tosfot Bava Batra",
+   2,
+   false
+  ],
+  [
+   "Kohelet",
+   2,
+   true
+  ],
+  [
+   "Orchot Rabbeinu",
+   2,
+   false
+  ],
+  [
+   "Ben Ish Hai, Halachot",
+   2,
+   true
+  ],
+  [
+   "Rosh Tanit",
+   2,
+   false
+  ],
+  [
+   "Mishnat Hamishpat p",
+   2,
+   false
+  ],
+  [
+   "Sh”t Az Nidabru",
+   2,
+   false
+  ],
+  [
+   "Rambam Taaniyot",
+   2,
+   true
+  ],
+  [
+   "Sdei Chemed",
+   2,
+   false
+  ],
+  [
+   "Sulamot Sh\"t Asar Btevet Shchal BShabbat",
+   2,
+   false
+  ],
+  [
+   "Beis Yosef",
+   2,
+   false
+  ],
+  [
+   "Divrei Yatziv O.C. #8",
+   2,
+   false
+  ],
+  [
+   "Kitzur Shulchan Aruch of Rav Mordechai Eliyahu",
+   2,
+   true
+  ],
+  [
+   "Halichos Shlomo",
+   2,
+   false
+  ],
+  [
+   "Moreh Bietzbah",
+   2,
+   false
+  ],
+  [
+   "Baal Hatanya",
+   2,
+   false
+  ],
+  [
+   "Meir Oz",
+   2,
+   false
+  ],
+  [
+   "Yerushalmi Sotah",
+   2,
+   true
+  ],
+  [
+   "Kiddushin",
+   2,
+   true
+  ],
+  [
+   "Rogachover",
+   2,
+   false
+  ],
+  [
+   "Otzrot Yosef",
+   2,
+   false
+  ],
+  [
+   "Shibbolei Haleket",
+   2,
+   false
+  ],
+  [
+   "Taamei Haminhagim",
+   2,
+   false
+  ],
+  [
+   "Shel Yad",
+   2,
+   false
+  ],
+  [
+   "Reshimot Shiurim Brachot",
+   2,
+   false
+  ],
+  [
+   "Divrei Yirmiyahu Tefillin",
+   2,
+   true
+  ],
+  [
+   "Rif Rosh Hashana",
+   2,
+   true
+  ],
+  [
+   "Ramban Chullin",
+   2,
+   false
+  ],
+  [
+   "Rashba in Torat Habayit",
+   2,
+   false
+  ],
+  [
+   "Hamezuzah Vehiloteha",
+   2,
+   false
+  ],
+  [
+   "Halichos Shlomo Tefilla",
+   2,
+   false
+  ],
+  [
+   "Mamaar Mordechai",
+   2,
+   false
+  ],
+  [
+   "Laws of Niddah v",
+   2,
+   false
+  ],
+  [
+   "Zichron Yosef",
+   2,
+   false
+  ],
+  [
+   "Chatzitza Shiur",
+   2,
+   false
+  ],
+  [
+   "Magen Haelef",
+   2,
+   false
+  ],
+  [
+   "Rabbenu Dovid",
+   2,
+   false
+  ],
+  [
+   "Rambam Hilchot Avel",
+   2,
+   true
+  ],
+  [
+   "Yismach Lev",
+   2,
+   false
+  ],
+  [
+   "Minchas Yitzchak",
+   2,
+   false
+  ],
+  [
+   "Orchot Chaim Sapinka",
+   2,
+   false
+  ],
+  [
+   "Taharat Hakodesh Zevachim",
+   2,
+   false
+  ],
+  [
+   "Shalmat Yosef",
+   2,
+   false
+  ],
+  [
+   "Kuntres Bal Tosif",
+   2,
+   false
+  ],
+  [
+   "Baalei Hanefesh p",
+   2,
+   false
+  ],
+  [
+   "Darchei Tahara",
+   2,
+   false
+  ],
+  [
+   "Mishmeret Hatahara",
+   2,
+   false
+  ],
+  [
+   "Keter Shem Tov",
+   2,
+   false
+  ],
+  [
+   "Ben Ish Chai Chukat",
+   2,
+   false
+  ],
+  [
+   "Ra'avyah",
+   2,
+   false
+  ],
+  [
+   "Daf Al Hadaf Brachot",
+   2,
+   false
+  ],
+  [
+   "Hagahot Ashri Shabbat",
+   2,
+   false
+  ],
+  [
+   "Kol Sinai p",
+   2,
+   false
+  ],
+  [
+   "Tiferet",
+   2,
+   false
+  ],
+  [
+   "Bikkurei Yacov",
+   2,
+   false
+  ],
+  [
+   "Teshuva",
+   2,
+   false
+  ],
+  [
+   "Otzar Habrit",
+   2,
+   false
+  ],
+  [
+   "Shaar Deah",
+   2,
+   false
+  ],
+  [
+   "Chelkat Binyamin biurim on",
+   2,
+   false
+  ],
+  [
+   "Beit Yitzchak",
+   2,
+   false
+  ],
+  [
+   "Rambam Hilchot Gezeila",
+   2,
+   false
+  ],
+  [
+   "Gemara Bava Metzia",
+   2,
+   true
+  ],
+  [
+   "Rambam Hilchot Geneva",
+   2,
+   false
+  ],
+  [
+   "Sh”t Radvaz",
+   2,
+   false
+  ],
+  [
+   "Chida in Machzik Bracha",
+   2,
+   false
+  ],
+  [
+   "Safek Brachot Lehakel",
+   2,
+   false
+  ],
+  [
+   "Teshuva M'ahava",
+   2,
+   false
+  ],
+  [
+   "Chut Shani ch",
+   2,
+   false
+  ],
+  [
+   "Shitah Lner",
+   2,
+   false
+  ],
+  [
+   "Shalmei Yehuda p",
+   2,
+   false
+  ],
+  [
+   "Orchot Shabbat v. p",
+   2,
+   false
+  ],
+  [
+   "Masechet Sofrim",
+   2,
+   true
+  ],
+  [
+   "Hilchos Chag Bechag",
+   2,
+   false
+  ],
+  [
+   "Rambam Hilchot Brachot",
+   2,
+   true
+  ],
+  [
+   "Yad L'Yoledes",
+   2,
+   false
+  ],
+  [
+   "Shiur",
+   2,
+   false
+  ],
+  [
+   "Orchos Rabbenu",
+   2,
+   false
+  ],
+  [
+   "Minchas Shlomo:1",
+   2,
+   false
+  ],
+  [
+   "Laws of Niddah",
+   2,
+   false
+  ],
+  [
+   "Emek Bracha",
+   2,
+   false
+  ],
+  [
+   "Shulchan Gavoha",
+   2,
+   false
+  ],
+  [
+   "Mishnat Rav Aharon v",
+   2,
+   false
+  ],
+  [
+   "Tosfot s.v. mishpat",
+   2,
+   false
+  ],
+  [
+   "Gemara Keritut",
+   2,
+   true
+  ],
+  [
+   "Tosfot Yevamot",
+   2,
+   false
+  ],
+  [
+   "Hagahot Maimon Tefilah",
+   2,
+   false
+  ],
+  [
+   "Sh”t Tiferet Tzvi",
+   2,
+   false
+  ],
+  [
+   "Netivot in Tikkun Eruvin p",
+   2,
+   false
+  ],
+  [
+   "Netivot Shabbat ch",
+   2,
+   false
+  ],
+  [
+   "Rambam Sukkah",
+   2,
+   true
+  ],
+  [
+   "Rif shabbat",
+   2,
+   false
+  ],
+  [
+   "Mishna Mikvaot",
+   2,
+   true
+  ],
+  [
+   "Tosfos, Shabbos",
+   2,
+   false
+  ],
+  [
+   "Highlights of Melachos Shabbat Part",
+   2,
+   false
+  ],
+  [
+   "Tosefet Maaseh Rav n",
+   2,
+   false
+  ],
+  [
+   "Livush",
+   2,
+   false
+  ],
+  [
+   "Rosh Niddah",
+   2,
+   false
+  ],
+  [
+   "Rava",
+   2,
+   false
+  ],
+  [
+   "Shiltot",
+   2,
+   false
+  ],
+  [
+   "Macot",
+   2,
+   false
+  ],
+  [
+   "Sh”t Yabia Omer O”C",
+   2,
+   false
+  ],
+  [
+   "Shevut Yaakov",
+   2,
+   false
+  ],
+  [
+   "The Laws of the Daled Minim",
+   2,
+   false
+  ],
+  [
+   "Sh”t Trumat HaDeshen",
+   2,
+   false
+  ],
+  [
+   "Ben Ish Chai Vayeshev",
+   2,
+   false
+  ],
+  [
+   "Ahavat Chesed",
+   2,
+   false
+  ],
+  [
+   "Mishpatei Ribbit",
+   2,
+   false
+  ],
+  [
+   "Gemara Zevachim",
+   2,
+   true
+  ],
+  [
+   "Ahavas Chesed",
+   2,
+   false
+  ],
+  [
+   "Igros Moshe Y.D",
+   2,
+   false
+  ],
+  [
+   "Ramban b”m",
+   2,
+   false
+  ],
+  [
+   "Avodah Zarah",
+   2,
+   true
+  ],
+  [
+   "Zera Emet",
+   2,
+   false
+  ],
+  [
+   "Tosfot A\"z",
+   2,
+   false
+  ],
+  [
+   "Yerushalmi Pesachim",
+   2,
+   true
+  ],
+  [
+   "Aruch Lener Sukkah",
+   2,
+   false
+  ],
+  [
+   "Haozer",
+   2,
+   false
+  ],
+  [
+   "Gemara Avoda Zara",
+   2,
+   true
+  ],
+  [
+   "Laws of Kashrus",
+   2,
+   false
+  ],
+  [
+   "Shema Shlomo",
+   2,
+   false
+  ],
+  [
+   "Biur Halacha s.v",
+   2,
+   false
+  ],
+  [
+   "Mor Ukesiah",
+   2,
+   false
+  ],
+  [
+   "Maaseh Avraham",
+   2,
+   false
+  ],
+  [
+   "Chovot HaLevavot",
+   2,
+   false
+  ],
+  [
+   "ibid",
+   2,
+   false
+  ],
+  [
+   "Bahag Hilchot Avel",
+   2,
+   false
+  ],
+  [
+   "Rif Moed Katan",
+   2,
+   true
+  ],
+  [
+   "Minchat Elazar",
+   2,
+   false
+  ],
+  [
+   "there note",
+   2,
+   false
+  ],
+  [
+   "Shemirat Shabbat Kehilchato",
+   2,
+   false
+  ],
+  [
+   "Chol Hamoed Kehilchato",
+   2,
+   false
+  ],
+  [
+   "Nitei Gavriel Rosh Hashana",
+   2,
+   false
+  ],
+  [
+   "Halichot Shlomo Tefilla",
+   2,
+   false
+  ],
+  [
+   "Lechem Mishna",
+   2,
+   false
+  ],
+  [
+   "Maharash",
+   2,
+   false
+  ],
+  [
+   "Tosfos Avoda Zara",
+   2,
+   false
+  ],
+  [
+   "Sma C.M",
+   2,
+   false
+  ],
+  [
+   "Meiri Avoda Zara",
+   2,
+   false
+  ],
+  [
+   "Torah Temimah in Devarim",
+   2,
+   false
+  ],
+  [
+   "Avoda Berura Avoda Zara",
+   2,
+   false
+  ],
+  [
+   "Magen Avraham O.C",
+   2,
+   true
+  ],
+  [
+   "Yabia Omer Y.D",
+   2,
+   false
+  ],
+  [
+   "Nishmas Kol Chai",
+   2,
+   false
+  ],
+  [
+   "Siddur Amudei Shamayim, daf",
+   2,
+   false
+  ],
+  [
+   "Halichot Shlomo ch",
+   2,
+   false
+  ],
+  [
+   "Shaar Hakavanot",
+   2,
+   false
+  ],
+  [
+   "Nitai Gavriel Sukkot",
+   2,
+   false
+  ],
+  [
+   "at the end of Veten Bracha to",
+   2,
+   false
+  ],
+  [
+   "Kaf Hachaim on",
+   2,
+   false
+  ],
+  [
+   "Rashba Eruvin",
+   2,
+   true
+  ],
+  [
+   "Ritva r\"h",
+   2,
+   false
+  ],
+  [
+   "Beiur Halacha s.v. Al Pat",
+   2,
+   false
+  ],
+  [
+   "Badatz Yerushalayim",
+   2,
+   false
+  ],
+  [
+   "hna Brurah",
+   2,
+   false
+  ],
+  [
+   "Mayan Omer",
+   2,
+   false
+  ],
+  [
+   "Rambam Sefer Hamitzvot Aseh",
+   2,
+   false
+  ],
+  [
+   "Rambam Teshuva",
+   2,
+   true
+  ],
+  [
+   "Tehilim",
+   2,
+   true
+  ],
+  [
+   "Shevuot",
+   2,
+   true
+  ],
+  [
+   "Tosfot HaRosh",
+   2,
+   false
+  ],
+  [
+   "Sh”t Sadeh HaAretz O”C",
+   2,
+   false
+  ],
+  [
+   "Ikrei HaDaat",
+   2,
+   false
+  ],
+  [
+   "Sh”t Pri HaAretz",
+   2,
+   false
+  ],
+  [
+   "Artscroll Siddur",
+   2,
+   false
+  ],
+  [
+   "Nachlat Shimon",
+   2,
+   false
+  ],
+  [
+   "Shaarei Tzion",
+   2,
+   false
+  ],
+  [
+   "Tevuot Shor",
+   2,
+   false
+  ],
+  [
+   "Hashem Nisi",
+   2,
+   false
+  ],
+  [
+   "Atret Paz Birchat Ilanot p",
+   2,
+   false
+  ],
+  [
+   "Or Zarua",
+   2,
+   false
+  ],
+  [
+   "Rambam Hilchot Tefilla",
+   2,
+   true
+  ],
+  [
+   "Ohr HaMizrach",
+   2,
+   false
+  ],
+  [
+   "Michtam Pesachim",
+   2,
+   false
+  ],
+  [
+   "Machatzit Hashekel",
+   2,
+   false
+  ],
+  [
+   "Tzemach Tzedek",
+   2,
+   false
+  ],
+  [
+   "amei ha'aretz",
+   2,
+   false
+  ],
+  [
+   "Young Israel of Woodmere Guide",
+   2,
+   false
+  ],
+  [
+   "Gra . Mishna Brurah",
+   2,
+   false
+  ],
+  [
+   "Am Mordechai Moadim p",
+   2,
+   false
+  ],
+  [
+   "Handbook",
+   2,
+   false
+  ],
+  [
+   "Tosefta Sanhedrin",
+   2,
+   true
+  ],
+  [
+   "Ohel Moed",
+   2,
+   false
+  ],
+  [
+   "Minchat Cohen",
+   2,
+   false
+  ],
+  [
+   "Introduction to the Modern Eruv",
+   2,
+   false
+  ],
+  [
+   "Shaarei Tevilah",
+   2,
+   false
+  ],
+  [
+   "Chelket Binyamin",
+   2,
+   false
+  ],
+  [
+   "Chinuch Yisroel",
+   2,
+   false
+  ],
+  [
+   "Pirkei Avot",
+   2,
+   true
+  ],
+  [
+   "Yalkut Yosef Dinei Chinuch Katan ViDinei Bar Mitzva",
+   2,
+   false
+  ],
+  [
+   "Mahari Bruna",
+   2,
+   false
+  ],
+  [
+   "Rashis",
+   2,
+   false
+  ],
+  [
+   "Pnei Yehoshua Shabbos",
+   2,
+   false
+  ],
+  [
+   "Tosafos Shabbos",
+   2,
+   true
+  ],
+  [
+   "Pitchei Choshen",
+   2,
+   false
+  ],
+  [
+   "Shulchan Aruch Harav Hilchot She'ela Seif",
+   2,
+   false
+  ],
+  [
+   "Chavot Daat. Igrot Moshe",
+   2,
+   false
+  ],
+  [
+   "Edut LeYisrael p",
+   2,
+   false
+  ],
+  [
+   "Rambam, Hilchot Deot",
+   2,
+   true
+  ],
+  [
+   "Mikrei Kodesh",
+   2,
+   false
+  ],
+  [
+   "Baal Hameor Pesachim",
+   2,
+   false
+  ],
+  [
+   "Eruv KeHilchato",
+   2,
+   false
+  ],
+  [
+   "Chemed Moshe",
+   2,
+   false
+  ],
+  [
+   "Sheeilat Shlomo",
+   2,
+   false
+  ],
+  [
+   "Be'ikvei HaTzon p",
+   2,
+   false
+  ],
+  [
+   "Masa Ovadia p",
+   2,
+   false
+  ],
+  [
+   "Rambam Bet Habechira",
+   2,
+   false
+  ],
+  [
+   "Tiferet Yisrael",
+   2,
+   false
+  ],
+  [
+   "Hilchot Chol Hamoed Zichron Shlomo p",
+   2,
+   false
+  ],
+  [
+   "Sh”t Torah Lishma",
+   2,
+   false
+  ],
+  [
+   "Chovot Yair",
+   2,
+   false
+  ],
+  [
+   "Shulchan Arukh HaRav",
+   2,
+   false
+  ],
+  [
+   "Halikhot Shlomo",
+   2,
+   false
+  ],
+  [
+   "Kli Sh’Melachto LeHeter",
+   2,
+   false
+  ],
+  [
+   "Rambam Talmud Torah",
+   2,
+   true
+  ],
+  [
+   "Chinuch Habanim Lmitzvot p",
+   2,
+   false
+  ],
+  [
+   "Dvar Halacha",
+   2,
+   false
+  ],
+  [
+   "Migdal Oz",
+   2,
+   false
+  ],
+  [
+   "Ramban Sefer Hamitzvot shoresh",
+   2,
+   false
+  ],
+  [
+   "A Parent's Guide to Teaching Children Mitzvot: A Halachic Guide",
+   2,
+   false
+  ],
+  [
+   "Chinuch Habanim Kehilchato",
+   2,
+   false
+  ],
+  [
+   "Masechet Soferim",
+   2,
+   true
+  ],
+  [
+   "Netsiv",
+   2,
+   false
+  ],
+  [
+   "Kovetz Teshuvos",
+   2,
+   false
+  ],
+  [
+   "Tur Y.D",
+   2,
+   true
+  ],
+  [
+   "Shevet Hakehasi",
+   2,
+   false
+  ],
+  [
+   "Rav Poalim Y.D",
+   2,
+   false
+  ],
+  [
+   "Shulchan Melachim pages",
+   2,
+   false
+  ],
+  [
+   "Ha’go’es Ashri Meseches Avodah Zarah",
+   2,
+   false
+  ],
+  [
+   "Ohr Zeruah Meseches Avodah Zarah",
+   2,
+   false
+  ],
+  [
+   "Bais Yosef",
+   2,
+   false
+  ],
+  [
+   "Halichos Shlomo Moadim",
+   2,
+   false
+  ],
+  [
+   "Mesora",
+   2,
+   false
+  ],
+  [
+   "Noam Halacha",
+   2,
+   false
+  ],
+  [
+   "Rosh Meseches Avodah Zarah",
+   2,
+   false
+  ],
+  [
+   "Toras Habayis",
+   2,
+   false
+  ],
+  [
+   "Rashi Meseches Beitzah",
+   2,
+   false
+  ],
+  [
+   "Emes Liyaakov",
+   2,
+   false
+  ],
+  [
+   "Chaim Byad",
+   2,
+   false
+  ],
+  [
+   "Ran Avoda Zara",
+   2,
+   true
+  ],
+  [
+   "Dagul Mirvavah",
+   2,
+   false
+  ],
+  [
+   "section",
+   2,
+   false
+  ],
+  [
+   "Yalkut Yosef Birkot Hashachar, Birkot Hatorah",
+   2,
+   false
+  ],
+  [
+   "Lehorot Natan",
+   2,
+   false
+  ],
+  [
+   "Dovev Meisharim",
+   2,
+   false
+  ],
+  [
+   "Toraland.org",
+   2,
+   false
+  ],
+  [
+   "Sdei Chemed Brachot",
+   2,
+   false
+  ],
+  [
+   "Ben Ish Chai Parashat Reeh Halacha",
+   2,
+   false
+  ],
+  [
+   "Lev Chayim",
+   2,
+   false
+  ],
+  [
+   "Motzei Shabbat Vayhakel Pekudei",
+   2,
+   false
+  ],
+  [
+   "Text of Brachot#Birchat Ilanot",
+   2,
+   false
+  ],
+  [
+   "Sedei Chemed Berachot",
+   2,
+   false
+  ],
+  [
+   "RJJ v",
+   2,
+   false
+  ],
+  [
+   "Mesorah v",
+   2,
+   false
+  ],
+  [
+   "Bet Hillel",
+   2,
+   false
+  ],
+  [
+   "Yalkut Yosef Isur Vheter v",
+   2,
+   false
+  ],
+  [
+   "Shulchan Melachim",
+   2,
+   false
+  ],
+  [
+   "Halichos Olom",
+   2,
+   false
+  ],
+  [
+   "Minchas Yaakov",
+   2,
+   false
+  ],
+  [
+   "Rishumei Aharon",
+   2,
+   false
+  ],
+  [
+   "Menuchat Ahava v",
+   2,
+   false
+  ],
+  [
+   "Kitzur Dinei Ribbit of Rav Shternbuch",
+   2,
+   false
+  ],
+  [
+   "Kuntres Poalim BShabbat by Chicago Kollel p",
+   2,
+   false
+  ],
+  [
+   "Rif Brachot",
+   2,
+   true
+  ],
+  [
+   "Sh”t Bear Moshe",
+   2,
+   false
+  ],
+  [
+   "Mekor Neeman",
+   2,
+   false
+  ],
+  [
+   "Bet Hillel v",
+   2,
+   false
+  ],
+  [
+   "Mishna Berurah",
+   2,
+   true
+  ],
+  [
+   "Yavetz",
+   2,
+   false
+  ],
+  [
+   "Kereti",
+   2,
+   false
+  ],
+  [
+   "Ritva Beitzah",
+   2,
+   false
+  ],
+  [
+   "5.29lbs",
+   2,
+   false
+  ],
+  [
+   "Rambam Bikkurim",
+   2,
+   true
+  ],
+  [
+   "Yerushalmi Challah",
+   2,
+   true
+  ],
+  [
+   "Rambam Avel",
+   2,
+   true
+  ],
+  [
+   "Meiri b\"k",
+   2,
+   false
+  ],
+  [
+   "yehuda",
+   2,
+   false
+  ],
+  [
+   "Tzlach",
+   2,
+   false
+  ],
+  [
+   "Orchot Rabbenu v",
+   2,
+   false
+  ],
+  [
+   "Yom Tov Sheni Khilchato",
+   2,
+   false
+  ],
+  [
+   "Orchot Rabbenu",
+   2,
+   false
+  ],
+  [
+   "Daat Noteh",
+   2,
+   false
+  ],
+  [
+   "Shabbat Shiur #50, min",
+   2,
+   false
+  ],
+  [
+   "Gemara Eiruvin",
+   2,
+   true
+  ],
+  [
+   "Darkei Tahara",
+   2,
+   false
+  ],
+  [
+   "Or Yitzchak",
+   2,
+   false
+  ],
+  [
+   "Bet Yakov",
+   2,
+   false
+  ],
+  [
+   "Rabbi Simcha Cohen",
+   2,
+   false
+  ],
+  [
+   "Noam VI",
+   2,
+   false
+  ],
+  [
+   "Divrei Yoel",
+   2,
+   false
+  ],
+  [
+   "Toldot",
+   2,
+   true
+  ],
+  [
+   "Nitei Gavriel Chanuka",
+   2,
+   false
+  ],
+  [
+   "Gemara Erchin",
+   2,
+   true
+  ],
+  [
+   "Avodat Hagershuni",
+   2,
+   false
+  ],
+  [
+   "Perishah",
+   2,
+   false
+  ],
+  [
+   "Rambam Rotze'ach",
+   2,
+   true
+  ],
+  [
+   "Yeraim",
+   2,
+   false
+  ],
+  [
+   "Halachos of Chanukah p",
+   2,
+   false
+  ],
+  [
+   "Ran Sanhedrin",
+   2,
+   false
+  ],
+  [
+   "Rambam Kelayim",
+   2,
+   true
+  ],
+  [
+   "Mahari Mintz Teshuva",
+   2,
+   false
+  ],
+  [
+   "Beiur Halachah",
+   2,
+   false
+  ],
+  [
+   "Emek Beracha",
+   2,
+   false
+  ],
+  [
+   "Birkat HaGomel",
+   2,
+   false
+  ],
+  [
+   "minutes",
+   2,
+   false
+  ],
+  [
+   "Yesod Hatahara p",
+   2,
+   false
+  ],
+  [
+   "Mishna Shabbat",
+   2,
+   true
+  ],
+  [
+   "Hamesivta",
+   2,
+   false
+  ],
+  [
+   "Mishneh Torah",
+   1,
+   true
+  ],
+  [
+   "דאורייתא are",
+   1,
+   false
+  ],
+  [
+   "Radvaz ibid",
+   1,
+   false
+  ],
+  [
+   "Noda Biyehuda",
+   1,
+   false
+  ],
+  [
+   "Wars",
+   1,
+   false
+  ],
+  [
+   "Tosfot there",
+   1,
+   false
+  ],
+  [
+   "Torah Lishmah ibid. Har Tzvi",
+   1,
+   false
+  ],
+  [
+   "Marahi Vil",
+   1,
+   false
+  ],
+  [
+   "Pri Medagim A”A",
+   1,
+   false
+  ],
+  [
+   "Mahari MeBruna",
+   1,
+   false
+  ],
+  [
+   "Sharei Knesset Hagedolah",
+   1,
+   false
+  ],
+  [
+   "Hagahot Bet Yosef",
+   1,
+   false
+  ],
+  [
+   "Avnei Yashphe",
+   1,
+   false
+  ],
+  [
+   "Mishneh Brurah",
+   1,
+   true
+  ],
+  [
+   "Tammuz",
+   1,
+   false
+  ],
+  [
+   "Shu”t Panim Meiros",
+   1,
+   false
+  ],
+  [
+   "Gemrah Berachos daf",
+   1,
+   false
+  ],
+  [
+   "Rosh Berachos",
+   1,
+   false
+  ],
+  [
+   "Tosafos- Berachos - daf",
+   1,
+   false
+  ],
+  [
+   "Shaalos U’Teshuvos HaRosh Klal",
+   1,
+   false
+  ],
+  [
+   "Rosh’s Halachos in Masechta Berachos on Daf",
+   1,
+   false
+  ],
+  [
+   "Sefer- Perech Mateh Aharon",
+   1,
+   false
+  ],
+  [
+   "Hilchot Shavuot",
+   1,
+   false
+  ],
+  [
+   "June",
+   1,
+   false
+  ],
+  [
+   "BeYitzchak Yikra",
+   1,
+   false
+  ],
+  [
+   "Avnei Darech",
+   1,
+   false
+  ],
+  [
+   "BeYitzchak Yikarei",
+   1,
+   false
+  ],
+  [
+   "Chashukei Chemed to Berachot",
+   1,
+   false
+  ],
+  [
+   "Brit Kehunah Ma'arechet Kuf, Ot Gimmel",
+   1,
+   false
+  ],
+  [
+   "Peninei Halacha Berachot",
+   1,
+   false
+  ],
+  [
+   "Inyonei Yom Kippur",
+   1,
+   false
+  ],
+  [
+   "M'bet Levi",
+   1,
+   false
+  ],
+  [
+   "Halachos of K'Zayis",
+   1,
+   false
+  ],
+  [
+   "Maharal Shabbat",
+   1,
+   false
+  ],
+  [
+   "Meiri. . Orchot Shabbat v",
+   1,
+   false
+  ],
+  [
+   "Sitrei Umaginei Yashar Vchadash p",
+   1,
+   false
+  ],
+  [
+   "Torat Chesed",
+   1,
+   false
+  ],
+  [
+   "Chidushei Batra Yevamot",
+   1,
+   false
+  ],
+  [
+   "Kehilat Yakov Yevamot",
+   1,
+   false
+  ],
+  [
+   "Tosfot Rabbi Akiva Eiger on Mishnayot Pesachim",
+   1,
+   false
+  ],
+  [
+   "Shiltei Giborim Brachot",
+   1,
+   false
+  ],
+  [
+   "Binyan Av",
+   1,
+   false
+  ],
+  [
+   "Tshuvot Vihanhagot",
+   1,
+   false
+  ],
+  [
+   "Rashi Sukkah",
+   1,
+   false
+  ],
+  [
+   "Mikraei Kodesh p",
+   1,
+   false
+  ],
+  [
+   "Nefesh Chayah",
+   1,
+   false
+  ],
+  [
+   "Piskei Shemuot p",
+   1,
+   false
+  ],
+  [
+   "Succat Chayim",
+   1,
+   false
+  ],
+  [
+   "Ashrei Ha'ish v",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef p",
+   1,
+   false
+  ],
+  [
+   "Hilchot Chag Bchag p",
+   1,
+   false
+  ],
+  [
+   "Piskei Teshuvot p",
+   1,
+   false
+  ],
+  [
+   "ddah v",
+   1,
+   false
+  ],
+  [
+   "Torah Lishma",
+   1,
+   false
+  ],
+  [
+   "Rambam. Rama",
+   1,
+   false
+  ],
+  [
+   "Rashba. . Rama",
+   1,
+   false
+  ],
+  [
+   "Halachos of Brochos by Rabbi B",
+   1,
+   false
+  ],
+  [
+   "Lechem Chamudos",
+   1,
+   false
+  ],
+  [
+   "Shiyarei Kenesses Hagedolah",
+   1,
+   false
+  ],
+  [
+   "Avos",
+   1,
+   true
+  ],
+  [
+   "Mieri Pesachim",
+   1,
+   false
+  ],
+  [
+   "Vezot",
+   1,
+   false
+  ],
+  [
+   "Minchas Osher pages",
+   1,
+   false
+  ],
+  [
+   "Avnei Yushfei",
+   1,
+   false
+  ],
+  [
+   "Yalkut Shimoni Yirmiyahu",
+   1,
+   false
+  ],
+  [
+   "Otzar Hamilah",
+   1,
+   false
+  ],
+  [
+   "Maharach Or Zaruah",
+   1,
+   false
+  ],
+  [
+   "Ohr Zaruah",
+   1,
+   false
+  ],
+  [
+   "Ramban Devarim",
+   1,
+   true
+  ],
+  [
+   "Rambam Mamrim",
+   1,
+   true
+  ],
+  [
+   "Raavad Mamrim",
+   1,
+   true
+  ],
+  [
+   "Maharsha Rosh Hashana",
+   1,
+   false
+  ],
+  [
+   "Haghot Turei Even Rosh Hashana",
+   1,
+   false
+  ],
+  [
+   "Encyclopedia Talmudit \"Bal Tosif",
+   1,
+   false
+  ],
+  [
+   "Meyshiv Tzedek",
+   1,
+   false
+  ],
+  [
+   "Tzror Hamor",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruch in Magim Mesharim",
+   1,
+   false
+  ],
+  [
+   "Mor Ukesia",
+   1,
+   false
+  ],
+  [
+   "Eliya Raba",
+   1,
+   false
+  ],
+  [
+   "Meorei Or",
+   1,
+   false
+  ],
+  [
+   "Bear Heteiv",
+   1,
+   false
+  ],
+  [
+   "Sh”t Yaskil Avdi O”C",
+   1,
+   false
+  ],
+  [
+   "Sh”t Simchat Cohen",
+   1,
+   false
+  ],
+  [
+   "Chacham Tzvi on p",
+   1,
+   false
+  ],
+  [
+   "Mamar Mordechai",
+   1,
+   false
+  ],
+  [
+   "Sh”t Shaar Shlomo Zorafa",
+   1,
+   false
+  ],
+  [
+   "Tefillah Betzibbur: Sh”t Me’at Mayim",
+   1,
+   false
+  ],
+  [
+   "Taharat Mayim",
+   1,
+   false
+  ],
+  [
+   "Rambam, Sh”t Chatam Sofer",
+   1,
+   false
+  ],
+  [
+   "Sh”T Bear Yitzchak O”C",
+   1,
+   false
+  ],
+  [
+   "Sh”T Ish Matzliach O”C",
+   1,
+   false
+  ],
+  [
+   "Sh”t Shevet Levi",
+   1,
+   false
+  ],
+  [
+   "Sh”T Pri Tevuah",
+   1,
+   false
+  ],
+  [
+   "Sh”t Yechave Daat Y”D",
+   1,
+   false
+  ],
+  [
+   "Sh”t Chavselet Hasharon O”C",
+   1,
+   false
+  ],
+  [
+   "Tefillah Betzibbur",
+   1,
+   false
+  ],
+  [
+   "Yishtabach",
+   1,
+   false
+  ],
+  [
+   "HaMitzvot. Rosh",
+   1,
+   false
+  ],
+  [
+   "Talmidei Rabbeinu Yonah",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef Sheerit Yosef",
+   1,
+   false
+  ],
+  [
+   "Hilchot Hashkamat Haboker",
+   1,
+   false
+  ],
+  [
+   "Ramban Brachot",
+   1,
+   false
+  ],
+  [
+   "Pe’as Sadecha",
+   1,
+   false
+  ],
+  [
+   "Ran, dina d’malchusa dina",
+   1,
+   false
+  ],
+  [
+   "Mordechai, Gittin",
+   1,
+   false
+  ],
+  [
+   "Meiri Baba Kama",
+   1,
+   false
+  ],
+  [
+   "Hilchos Gezeilah",
+   1,
+   true
+  ],
+  [
+   "Pitchei Choshen Aveidah",
+   1,
+   false
+  ],
+  [
+   "Emek Mishpat v",
+   1,
+   false
+  ],
+  [
+   "Divrei Rivot",
+   1,
+   true
+  ],
+  [
+   "Bet Yosef C.M",
+   1,
+   true
+  ],
+  [
+   "Ri, Rabbenu Yonah",
+   1,
+   false
+  ],
+  [
+   "Siach Tefillah p",
+   1,
+   false
+  ],
+  [
+   "Tosfot, Berachot",
+   1,
+   true
+  ],
+  [
+   "Divrei Chamudot Brachot",
+   1,
+   false
+  ],
+  [
+   "Birchot Moshe Brachot v",
+   1,
+   false
+  ],
+  [
+   "Halichot Bayta p",
+   1,
+   false
+  ],
+  [
+   "Halichot Bat Yisrael p",
+   1,
+   false
+  ],
+  [
+   "Minchat Chen",
+   1,
+   false
+  ],
+  [
+   "Zayit Ranan",
+   1,
+   false
+  ],
+  [
+   "Orchot Shabbos v",
+   1,
+   false
+  ],
+  [
+   "Zayit Raanan",
+   1,
+   false
+  ],
+  [
+   "Torat Dovid",
+   1,
+   false
+  ],
+  [
+   "Chaggai",
+   1,
+   true
+  ],
+  [
+   "Rashi on",
+   1,
+   false
+  ],
+  [
+   "Menuchat Ahava Ahava",
+   1,
+   false
+  ],
+  [
+   "Mishna Brurah. # Hagahot Rabbi Akiva Eiger",
+   1,
+   false
+  ],
+  [
+   "Shalmei Yehuda chapter",
+   1,
+   false
+  ],
+  [
+   "Shalmei Yehuda on",
+   1,
+   false
+  ],
+  [
+   "Chut HaSheni",
+   1,
+   false
+  ],
+  [
+   "Halachot Shabbat BShabbat",
+   1,
+   false
+  ],
+  [
+   "Halacha Arucha",
+   1,
+   false
+  ],
+  [
+   "Economic Public Policy",
+   1,
+   false
+  ],
+  [
+   "Jewish Law",
+   1,
+   false
+  ],
+  [
+   "Mishpatecha L’yakov",
+   1,
+   false
+  ],
+  [
+   "Ritva s.v. vyesh",
+   1,
+   false
+  ],
+  [
+   "154b s.v. kvar",
+   1,
+   false
+  ],
+  [
+   "Netivot Hahalacha",
+   1,
+   false
+  ],
+  [
+   "Halachos of Muktzah",
+   1,
+   false
+  ],
+  [
+   "Rabbi Bodner",
+   1,
+   false
+  ],
+  [
+   "Star-K kashrus organization",
+   1,
+   false
+  ],
+  [
+   "Panim Meiros",
+   1,
+   false
+  ],
+  [
+   "Beit Meir",
+   1,
+   false
+  ],
+  [
+   "Shevut Yacov",
+   1,
+   false
+  ],
+  [
+   "Shach Yoreh De'ah",
+   1,
+   true
+  ],
+  [
+   "Minchat Shlomo Kamma",
+   1,
+   false
+  ],
+  [
+   "Tinyana",
+   1,
+   false
+  ],
+  [
+   "Minchat Shlomo Nedarim Shiurim",
+   1,
+   false
+  ],
+  [
+   "Yachave Daat",
+   1,
+   false
+  ],
+  [
+   "Revivot Efraim",
+   1,
+   false
+  ],
+  [
+   "Maharach Or Zaruah responsa n",
+   1,
+   false
+  ],
+  [
+   "Kitzur Shulchan Arukh",
+   1,
+   true
+  ],
+  [
+   "Yechave data",
+   1,
+   false
+  ],
+  [
+   "Rav Simcha Bunim Cohen, Laws of everyday living",
+   1,
+   false
+  ],
+  [
+   "Asher Yatzar . Berachot",
+   1,
+   false
+  ],
+  [
+   "ah Eruvin",
+   1,
+   false
+  ],
+  [
+   "Piskei Rav Menachem Mendel Klausner",
+   1,
+   false
+  ],
+  [
+   "Rivavan",
+   1,
+   false
+  ],
+  [
+   "Tosfot Harosh Eruvin",
+   1,
+   false
+  ],
+  [
+   "Rashbash",
+   1,
+   false
+  ],
+  [
+   "Rashba. . s.v. v'ad",
+   1,
+   false
+  ],
+  [
+   "paragraph s.v. ach ma shekatuv harashba",
+   1,
+   false
+  ],
+  [
+   "Kesef Mishna Shabbat",
+   1,
+   true
+  ],
+  [
+   "26 s.v. v'od nireh",
+   1,
+   false
+  ],
+  [
+   "paragraph s.v. v'acharei",
+   1,
+   false
+  ],
+  [
+   "Tosfot Yeshanim Shabbat",
+   1,
+   false
+  ],
+  [
+   "Shalmei Yehuda ch",
+   1,
+   false
+  ],
+  [
+   "Toras Melachos gozez",
+   1,
+   false
+  ],
+  [
+   "39 Melachos p",
+   1,
+   false
+  ],
+  [
+   "Dinim Vhanhagos",
+   1,
+   false
+  ],
+  [
+   "Yarot Devash",
+   1,
+   false
+  ],
+  [
+   "Orchot Tzion",
+   1,
+   false
+  ],
+  [
+   "Kafnita Debavel marriage",
+   1,
+   false
+  ],
+  [
+   "Zohar I",
+   1,
+   false
+  ],
+  [
+   "Midrash Talpiot",
+   1,
+   false
+  ],
+  [
+   "Sota",
+   1,
+   true
+  ],
+  [
+   "The Mandate of Genetic Testing",
+   1,
+   false
+  ],
+  [
+   "Shidduch Pictures Rav Yair Hoffman]Rav Hoffman",
+   1,
+   false
+  ],
+  [
+   "Halachot of Dating&oldid=33140#cite%20ref-4|↑",
+   1,
+   false
+  ],
+  [
+   "Rashi, the Rivash",
+   1,
+   false
+  ],
+  [
+   "Shaalei Tziyon",
+   1,
+   false
+  ],
+  [
+   "Vayomer Moshe",
+   1,
+   false
+  ],
+  [
+   "Laws of Muktzeh",
+   1,
+   false
+  ],
+  [
+   "Simla Chadasha",
+   1,
+   false
+  ],
+  [
+   "Yeshuot Dovid ch",
+   1,
+   false
+  ],
+  [
+   "Tekiyat Shofar",
+   1,
+   false
+  ],
+  [
+   "Raavad, Rosh",
+   1,
+   false
+  ],
+  [
+   "Tefillah",
+   1,
+   true
+  ],
+  [
+   "Rosh Bava Kama",
+   1,
+   true
+  ],
+  [
+   "Mordechai Bava Kama",
+   1,
+   false
+  ],
+  [
+   "Midrash Tanchuma",
+   1,
+   false
+  ],
+  [
+   "Cheshukei Chemed",
+   1,
+   false
+  ],
+  [
+   "gemara Shevuot",
+   1,
+   true
+  ],
+  [
+   "Yerushalmi Kiddushin",
+   1,
+   true
+  ],
+  [
+   "Amira LiYisrael",
+   1,
+   false
+  ],
+  [
+   "Tal Imrati",
+   1,
+   false
+  ],
+  [
+   "Banim Chavivim",
+   1,
+   false
+  ],
+  [
+   "Peninei HaMeor",
+   1,
+   false
+  ],
+  [
+   "Motzei Shabbat Shalach",
+   1,
+   false
+  ],
+  [
+   "Otzar HaBrachot]",
+   1,
+   false
+  ],
+  [
+   "Star K Brachot List",
+   1,
+   false
+  ],
+  [
+   "Magen Giborim Shiltei Giborim",
+   1,
+   false
+  ],
+  [
+   "Marechet Hashulchan Ribbit p",
+   1,
+   false
+  ],
+  [
+   "Mishpatei Ribbit v",
+   1,
+   false
+  ],
+  [
+   "Tradition Spring",
+   1,
+   false
+  ],
+  [
+   "Ribbit Btachnit Chischon Lkol Yeled p",
+   1,
+   false
+  ],
+  [
+   "Takanat Haribit p",
+   1,
+   false
+  ],
+  [
+   "Seder Haribit v",
+   1,
+   false
+  ],
+  [
+   "Investing in Bonds, Stocks, Short Selling, Buying Futures, Options",
+   1,
+   false
+  ],
+  [
+   "Shaarei Bracha",
+   1,
+   false
+  ],
+  [
+   "Sh”t Mechaze Eliyahu",
+   1,
+   false
+  ],
+  [
+   "Rabbeinu Chananel",
+   1,
+   false
+  ],
+  [
+   "Rambam Peirush Hamishnayos",
+   1,
+   false
+  ],
+  [
+   "Sh”t Rav Pealim",
+   1,
+   false
+  ],
+  [
+   "Kitzur Shulch",
+   1,
+   false
+  ],
+  [
+   "reh Deah",
+   1,
+   false
+  ],
+  [
+   "HaRivash",
+   1,
+   false
+  ],
+  [
+   "Vayikra. . Aseh Lecha rav",
+   1,
+   false
+  ],
+  [
+   "Otzar Halacha",
+   1,
+   false
+  ],
+  [
+   "Shitah Mekubeset",
+   1,
+   false
+  ],
+  [
+   "Sh”t Halachot Ketanot",
+   1,
+   false
+  ],
+  [
+   "Sh”t Teshuva MeAhava",
+   1,
+   false
+  ],
+  [
+   "Sharei Teshuva",
+   1,
+   false
+  ],
+  [
+   "Machzik Beracha",
+   1,
+   false
+  ],
+  [
+   "Shemona Esrei",
+   1,
+   false
+  ],
+  [
+   "Rabben Manoach",
+   1,
+   false
+  ],
+  [
+   "Chelkat Binymain Biurim",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef Sova Semachot v",
+   1,
+   false
+  ],
+  [
+   "Tzemech Tzedek",
+   1,
+   false
+  ],
+  [
+   "Simchat Cohen",
+   1,
+   false
+  ],
+  [
+   "Graz Ribbit n",
+   1,
+   false
+  ],
+  [
+   "Har Hakarmel",
+   1,
+   false
+  ],
+  [
+   "Shoel Umeishiv",
+   1,
+   false
+  ],
+  [
+   "Maimon",
+   1,
+   false
+  ],
+  [
+   "Tzafnat Pane'ach",
+   1,
+   false
+  ],
+  [
+   "Maharia Halevi",
+   1,
+   false
+  ],
+  [
+   "Rambam. Aruch HaShulchan",
+   1,
+   false
+  ],
+  [
+   "Chazon Ovadayah",
+   1,
+   false
+  ],
+  [
+   "Eretz Tova",
+   1,
+   false
+  ],
+  [
+   "ubot",
+   1,
+   false
+  ],
+  [
+   "Rambam Ishut",
+   1,
+   true
+  ],
+  [
+   "Rashi s.v. lismoch",
+   1,
+   false
+  ],
+  [
+   "Gra last",
+   1,
+   false
+  ],
+  [
+   "Mesivta Pesachim",
+   1,
+   false
+  ],
+  [
+   "Chut Shani Sukkot p",
+   1,
+   false
+  ],
+  [
+   "Nachalat Efraim p",
+   1,
+   false
+  ],
+  [
+   "Hilchot Chag",
+   1,
+   false
+  ],
+  [
+   "Chinuch Mitzva",
+   1,
+   false
+  ],
+  [
+   "Rambam Hilchot Succa",
+   1,
+   false
+  ],
+  [
+   "Ananei Hakavod",
+   1,
+   false
+  ],
+  [
+   "Yetsiyat Mitzrayim",
+   1,
+   false
+  ],
+  [
+   "Bikkurei Yaakov",
+   1,
+   false
+  ],
+  [
+   "Berachot.org",
+   1,
+   false
+  ],
+  [
+   "OU's Guide to Brachos",
+   1,
+   false
+  ],
+  [
+   "Star K Kashrut Kurrents Fall",
+   1,
+   false
+  ],
+  [
+   "BaZeman HaBayit",
+   1,
+   false
+  ],
+  [
+   "Batei Kenesiot",
+   1,
+   false
+  ],
+  [
+   "Batei Midrashot",
+   1,
+   false
+  ],
+  [
+   "Yeshivat Elon Moreh",
+   1,
+   false
+  ],
+  [
+   "HaMaayan",
+   1,
+   false
+  ],
+  [
+   "SheNatan MeChachmato",
+   1,
+   false
+  ],
+  [
+   "gemara in rosh hashana",
+   1,
+   false
+  ],
+  [
+   "Bitzel Hachochma",
+   1,
+   false
+  ],
+  [
+   "Taz Yoreh Dea",
+   1,
+   false
+  ],
+  [
+   "Rama ibid. Shach",
+   1,
+   false
+  ],
+  [
+   "Rama ibid",
+   1,
+   true
+  ],
+  [
+   "Shulchan Aruch Yo",
+   1,
+   false
+  ],
+  [
+   "Reshimat Shiurim to Sh’vuot",
+   1,
+   false
+  ],
+  [
+   "Biur Halacha s.v. “yesh machmirin",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai Teruma",
+   1,
+   false
+  ],
+  [
+   "Mishnah Brachot",
+   1,
+   true
+  ],
+  [
+   "Chazarat HaShas",
+   1,
+   false
+  ],
+  [
+   "Rashi Mishna",
+   1,
+   false
+  ],
+  [
+   "Ramban on",
+   1,
+   true
+  ],
+  [
+   "Ohr Zarua’s",
+   1,
+   false
+  ],
+  [
+   "Afikei Yam, II",
+   1,
+   false
+  ],
+  [
+   "Rambam Hil Shabbos",
+   1,
+   false
+  ],
+  [
+   "Otzar Hageonim Eruvin",
+   1,
+   false
+  ],
+  [
+   "Harid n",
+   1,
+   false
+  ],
+  [
+   "Hagahot Menachem Tzion ad loc citing Shu\"t Maharam Semachot",
+   1,
+   false
+  ],
+  [
+   "Moredechai Moed Kattan",
+   1,
+   false
+  ],
+  [
+   "Hagahat R' Tzvi Hirsch Berlin ad loc based on",
+   1,
+   false
+  ],
+  [
+   "Shem HaGedolim, Gedolim, Yud",
+   1,
+   false
+  ],
+  [
+   "Vayakhel-Pekudei",
+   1,
+   true
+  ],
+  [
+   "Tetzaveh",
+   1,
+   false
+  ],
+  [
+   "Ohr Torah Iyyar",
+   1,
+   false
+  ],
+  [
+   "Chaim She'al",
+   1,
+   false
+  ],
+  [
+   "Matnat Yado ad loc",
+   1,
+   false
+  ],
+  [
+   "Moriah Kovetz",
+   1,
+   false
+  ],
+  [
+   "Haga Menachem Tzion ad loc",
+   1,
+   false
+  ],
+  [
+   "Matnat Yado fn",
+   1,
+   false
+  ],
+  [
+   "Sdei Chemed Klalei HaPoskim",
+   1,
+   false
+  ],
+  [
+   "YUTorah",
+   1,
+   false
+  ],
+  [
+   "Sefarim, Heh",
+   1,
+   false
+  ],
+  [
+   "Shem HaGedlim",
+   1,
+   false
+  ],
+  [
+   "Sefarim, Taf",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruch .C",
+   1,
+   false
+  ],
+  [
+   "Motzei Shabbat Shemini",
+   1,
+   false
+  ],
+  [
+   "Meromei Sadeh",
+   1,
+   false
+  ],
+  [
+   "Magen Giborim A\"H",
+   1,
+   false
+  ],
+  [
+   "Bear Yitzchak",
+   1,
+   false
+  ],
+  [
+   "Shemirat Shabbat Kehichata",
+   1,
+   false
+  ],
+  [
+   "Kli Shekol Melachto Lisur",
+   1,
+   false
+  ],
+  [
+   "RCBC",
+   1,
+   false
+  ],
+  [
+   "kikar.co.il",
+   1,
+   false
+  ],
+  [
+   "Daf Al Hadaf",
+   1,
+   false
+  ],
+  [
+   "Mishnat Pikuach Nefesh",
+   1,
+   false
+  ],
+  [
+   "Asya Corona",
+   1,
+   false
+  ],
+  [
+   "Asya Corona p",
+   1,
+   false
+  ],
+  [
+   "Rambam Taniyot",
+   1,
+   false
+  ],
+  [
+   "Keter Yitnu Lecha",
+   1,
+   false
+  ],
+  [
+   "Miketz",
+   1,
+   false
+  ],
+  [
+   "Sheilat Shlomo p",
+   1,
+   false
+  ],
+  [
+   "Ten Minute Halacha",
+   1,
+   false
+  ],
+  [
+   "Baal HaMor s.v. Mayim",
+   1,
+   false
+  ],
+  [
+   "Biur Heitev",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruch. . Shulchan Aruch",
+   1,
+   true
+  ],
+  [
+   "Shomea Koneh to",
+   1,
+   false
+  ],
+  [
+   "Shomea Koneh. Dirshu",
+   1,
+   false
+  ],
+  [
+   "Dirshu Gilyon",
+   1,
+   false
+  ],
+  [
+   "Rama on Shulchan Aruch",
+   1,
+   true
+  ],
+  [
+   "Rashi Parshas Terumah",
+   1,
+   false
+  ],
+  [
+   "Igrot Mosher",
+   1,
+   false
+  ],
+  [
+   "Dirshu Mishna Berurah",
+   1,
+   false
+  ],
+  [
+   "Menichat Ahava",
+   1,
+   false
+  ],
+  [
+   "Shmirat Shabbat Kehilchata",
+   1,
+   false
+  ],
+  [
+   "Shmiras Shabbos K'Hilchosa",
+   1,
+   false
+  ],
+  [
+   "Eishel Avraham Butchatch",
+   1,
+   false
+  ],
+  [
+   "Nitai Gavriel Purim",
+   1,
+   false
+  ],
+  [
+   "Beiur Halacha \"hakol",
+   1,
+   false
+  ],
+  [
+   "Moadim",
+   1,
+   false
+  ],
+  [
+   "Eliya Rabbah",
+   1,
+   false
+  ],
+  [
+   "Chanoch Lanaar",
+   1,
+   false
+  ],
+  [
+   "Halacha Lmaaseh",
+   1,
+   false
+  ],
+  [
+   "Maaseh Eliyahu",
+   1,
+   false
+  ],
+  [
+   "Chida, Kitzur Shulchan Aruch, Aruch Hashulchan, Mishna Brurah",
+   1,
+   false
+  ],
+  [
+   "Shoel U'Meshiv",
+   1,
+   false
+  ],
+  [
+   "Beis Yitzchak",
+   1,
+   false
+  ],
+  [
+   "Chavot Daat . Chelkat Binyamin",
+   1,
+   false
+  ],
+  [
+   "Graz . Tashbetz",
+   1,
+   false
+  ],
+  [
+   "Rambam Sheluchin Vshutfin",
+   1,
+   false
+  ],
+  [
+   "Kesef Mishna on Rambam Sheluchin",
+   1,
+   false
+  ],
+  [
+   "Rif. Chelkat Binyamin",
+   1,
+   false
+  ],
+  [
+   "Maharbach",
+   1,
+   false
+  ],
+  [
+   "Maharikash on Shulchan Aruch",
+   1,
+   false
+  ],
+  [
+   "OU Kosher Pre- Pesach Webcast",
+   1,
+   false
+  ],
+  [
+   "Shlucho Shel Adam K’moto",
+   1,
+   false
+  ],
+  [
+   "Chametz",
+   1,
+   false
+  ],
+  [
+   "Maharam Chalava Pesachim",
+   1,
+   false
+  ],
+  [
+   "Baal Ha'Ittur",
+   1,
+   false
+  ],
+  [
+   "Rama in Darchei Moshe",
+   1,
+   false
+  ],
+  [
+   "Baal Hameor Shabbat",
+   1,
+   false
+  ],
+  [
+   "Rashba beitzah",
+   1,
+   false
+  ],
+  [
+   "Rashba. . Tosfot",
+   1,
+   false
+  ],
+  [
+   "Meiri Shabbat",
+   1,
+   false
+  ],
+  [
+   "Chut Shani Shabbat",
+   1,
+   false
+  ],
+  [
+   "Birurei Chaim v",
+   1,
+   false
+  ],
+  [
+   "Shvut Yitzchak Muktzeh p",
+   1,
+   false
+  ],
+  [
+   "Trumat Hadeshen Pesakim",
+   1,
+   false
+  ],
+  [
+   "Birkat Reuven Muktzeh p",
+   1,
+   false
+  ],
+  [
+   "Machon Lshivtecha",
+   1,
+   false
+  ],
+  [
+   "Birkat Reuven pp",
+   1,
+   false
+  ],
+  [
+   "Levushei Sarad",
+   1,
+   false
+  ],
+  [
+   "Reshimot Shiurim",
+   1,
+   false
+  ],
+  [
+   "Netivot Olam",
+   1,
+   false
+  ],
+  [
+   "Sifrei Maharal Edition v",
+   1,
+   false
+  ],
+  [
+   "Leviyat Chen p",
+   1,
+   false
+  ],
+  [
+   "Rokei’ach",
+   1,
+   false
+  ],
+  [
+   "Tosfet Shabbat",
+   1,
+   false
+  ],
+  [
+   "Levushei Srad on",
+   1,
+   false
+  ],
+  [
+   "Mishna Achrona",
+   1,
+   false
+  ],
+  [
+   "Hazechira of Rabbenu Efraim of Buna",
+   1,
+   false
+  ],
+  [
+   "Bear Haetiv",
+   1,
+   false
+  ],
+  [
+   "Hameor",
+   1,
+   false
+  ],
+  [
+   "Tisha B'av Kinnot",
+   1,
+   false
+  ],
+  [
+   "Dinei Purim Vinitchz ch",
+   1,
+   false
+  ],
+  [
+   "Holocaust",
+   1,
+   false
+  ],
+  [
+   "Kovetz Igrot Chazon Ish",
+   1,
+   false
+  ],
+  [
+   "Pear Hadur v",
+   1,
+   false
+  ],
+  [
+   "Malbushei Yom Tov",
+   1,
+   false
+  ],
+  [
+   "Temurah",
+   1,
+   true
+  ],
+  [
+   "Petach Aynayim",
+   1,
+   false
+  ],
+  [
+   "Mordechai Megillah n",
+   1,
+   false
+  ],
+  [
+   "Tosafot Ri\"d Megilla",
+   1,
+   false
+  ],
+  [
+   "Ritva Gittin",
+   1,
+   false
+  ],
+  [
+   "Ha Keitzad",
+   1,
+   false
+  ],
+  [
+   "Raavan teshuva",
+   1,
+   false
+  ],
+  [
+   "Sifrei Torah",
+   1,
+   false
+  ],
+  [
+   "Maharal Tiferet Yisrael",
+   1,
+   false
+  ],
+  [
+   "Minchat Asher Parashat Ki Tisa",
+   1,
+   false
+  ],
+  [
+   "Rabbenu Gershom Temura",
+   1,
+   false
+  ],
+  [
+   "Parshat Birkat Cohanim",
+   1,
+   false
+  ],
+  [
+   "Parshat HaTamid",
+   1,
+   false
+  ],
+  [
+   "Terumah",
+   1,
+   false
+  ],
+  [
+   "Yerayim",
+   1,
+   false
+  ],
+  [
+   "HaMeayen",
+   1,
+   false
+  ],
+  [
+   "Rama . Shulchan Aruch",
+   1,
+   true
+  ],
+  [
+   "Hilchos Shabbos",
+   1,
+   false
+  ],
+  [
+   "gemara in Beitza",
+   1,
+   true
+  ],
+  [
+   "Ben Ish Chai in Sh\"t Rav Pealim",
+   1,
+   false
+  ],
+  [
+   "Yad Soledet Bo",
+   1,
+   false
+  ],
+  [
+   "Shemen Lmeor",
+   1,
+   false
+  ],
+  [
+   "Minchat Shay",
+   1,
+   false
+  ],
+  [
+   "Kollel Shomrei Gachelet",
+   1,
+   false
+  ],
+  [
+   "Mishna in Masechet Shabbat",
+   1,
+   true
+  ],
+  [
+   "B”HL ibid . “VeYesh” Chazon Ovadia shabbat",
+   1,
+   false
+  ],
+  [
+   "tos. dilma shabbat",
+   1,
+   false
+  ],
+  [
+   "Mechzeh Eliyahu",
+   1,
+   false
+  ],
+  [
+   "Practical Halachos of Shabbos",
+   1,
+   false
+  ],
+  [
+   "Rabbi Simcha Bunim",
+   1,
+   false
+  ],
+  [
+   "Beiur Halacha s.v. VeYesh . Practical Halachos of Shabbat",
+   1,
+   false
+  ],
+  [
+   "Shaar Asher",
+   1,
+   false
+  ],
+  [
+   "Chasidim, Sh”t Zera Emet",
+   1,
+   false
+  ],
+  [
+   "Sh”t Bet Efraim",
+   1,
+   false
+  ],
+  [
+   "Rambam, Mishneh Torah: Hilchot Tefillah U'Birkat Cohanim",
+   1,
+   false
+  ],
+  [
+   "Ben Ha’shemashot",
+   1,
+   false
+  ],
+  [
+   "Gemara Sotah",
+   1,
+   true
+  ],
+  [
+   "Pe’er Hador v",
+   1,
+   false
+  ],
+  [
+   "Rambam Mishneh Torah Hilchot Shabbat]",
+   1,
+   false
+  ],
+  [
+   "Rambam in Hilchot Shabbat",
+   1,
+   true
+  ],
+  [
+   "Ierushalmi Meguilah",
+   1,
+   false
+  ],
+  [
+   "Maguen Avraham",
+   1,
+   false
+  ],
+  [
+   "Sidur Bet Ovad",
+   1,
+   false
+  ],
+  [
+   "Halikhot Shlomo cap",
+   1,
+   false
+  ],
+  [
+   "Ver también Shevet HaLevi",
+   1,
+   false
+  ],
+  [
+   "Piskei Teshuvos",
+   1,
+   false
+  ],
+  [
+   "Ialkut Shimoni Ihoshua",
+   1,
+   false
+  ],
+  [
+   "Midrash Rabah",
+   1,
+   true
+  ],
+  [
+   "la Guemará en Kidushin",
+   1,
+   false
+  ],
+  [
+   "Shu”t Trumat HaDeshen",
+   1,
+   false
+  ],
+  [
+   "Shu”t Mahari Mintz",
+   1,
+   false
+  ],
+  [
+   "Kitzur Shulchan Arukh Hilchot Chodesh Adar",
+   1,
+   false
+  ],
+  [
+   "Shu”t Iavia Omer Ioreh Dea",
+   1,
+   false
+  ],
+  [
+   "Ver también Tzitz Eliezer",
+   1,
+   false
+  ],
+  [
+   "Tur y Shulchan Arukh",
+   1,
+   false
+  ],
+  [
+   "Shu”t Sheilat Iaavetz",
+   1,
+   false
+  ],
+  [
+   "Trumat HaDeshen porque Sotah",
+   1,
+   false
+  ],
+  [
+   "haya fallecido en Adar",
+   1,
+   false
+  ],
+  [
+   "Torah HaMoadim",
+   1,
+   false
+  ],
+  [
+   "Agurah BeAhalach",
+   1,
+   false
+  ],
+  [
+   "Shu”t Halakhot Ketanot",
+   1,
+   false
+  ],
+  [
+   "Shu”t Vaiaan Itzchak Ioreh Deah",
+   1,
+   false
+  ],
+  [
+   "Rav Brakhot",
+   1,
+   false
+  ],
+  [
+   "Shu”t Iechave Daat",
+   1,
+   false
+  ],
+  [
+   "Ialkut Iosef Moadim",
+   1,
+   false
+  ],
+  [
+   "Shu”t Lev Chaim",
+   1,
+   false
+  ],
+  [
+   "Arukh HaShulchan",
+   1,
+   false
+  ],
+  [
+   "Magen Avraham Seif Katan",
+   1,
+   false
+  ],
+  [
+   "Seridei Eish",
+   1,
+   false
+  ],
+  [
+   "Meor Hasshabbat Letter",
+   1,
+   false
+  ],
+  [
+   "Eglei Tal Ofeh",
+   1,
+   false
+  ],
+  [
+   "Orot Hashabbat v",
+   1,
+   false
+  ],
+  [
+   "Shemirat Sh",
+   1,
+   false
+  ],
+  [
+   "Zikaron leMaran Grib Zolti p",
+   1,
+   false
+  ],
+  [
+   "Netivot Hamishpat Biurim",
+   1,
+   false
+  ],
+  [
+   "Mishpetei Uziel",
+   1,
+   true
+  ],
+  [
+   "Teleconference with Aguda, April",
+   1,
+   false
+  ],
+  [
+   "Histarfut Lminyan\" Nissan",
+   1,
+   false
+  ],
+  [
+   "Corona second edition n",
+   1,
+   false
+  ],
+  [
+   "OU Halacha Yomi June",
+   1,
+   false
+  ],
+  [
+   "Chachmat Adam . Chelkat Binyamin",
+   1,
+   false
+  ],
+  [
+   "Bet Dovid",
+   1,
+   false
+  ],
+  [
+   "Maharitatz",
+   1,
+   false
+  ],
+  [
+   "Shulchano Shel Avraham",
+   1,
+   false
+  ],
+  [
+   "Shiurei Ribbit p",
+   1,
+   false
+  ],
+  [
+   "Baalei Hanefesh Shaar Hatevilah p",
+   1,
+   false
+  ],
+  [
+   "HaEshkol",
+   1,
+   false
+  ],
+  [
+   "Maadenei Yom Tov",
+   1,
+   false
+  ],
+  [
+   "Korban Netanel",
+   1,
+   false
+  ],
+  [
+   "Edut L'Yisrael p",
+   1,
+   false
+  ],
+  [
+   "Bnei Binyamin p",
+   1,
+   false
+  ],
+  [
+   "Madenei Yom Tov",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Hai, Vayeshev",
+   1,
+   false
+  ],
+  [
+   "Yabia Omer O.C",
+   1,
+   false
+  ],
+  [
+   "Gra, Shaarei Teshuva",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Hai",
+   1,
+   false
+  ],
+  [
+   "Rashi in Sefer Hapardes",
+   1,
+   false
+  ],
+  [
+   "Emek Yehoshua",
+   1,
+   false
+  ],
+  [
+   "Pear HaDor of Rambam",
+   1,
+   false
+  ],
+  [
+   "Rashi ad loc, Tur",
+   1,
+   false
+  ],
+  [
+   "Rivevos Efraim",
+   1,
+   false
+  ],
+  [
+   "Shulchan Hamaarechet",
+   1,
+   false
+  ],
+  [
+   "Mikkavtze'el, gilyon",
+   1,
+   false
+  ],
+  [
+   "she'eila",
+   1,
+   false
+  ],
+  [
+   "Hakashrut Lmaaseh p",
+   1,
+   false
+  ],
+  [
+   "Terefot n",
+   1,
+   false
+  ],
+  [
+   "Rashba. Shulchan Aruch Y.D",
+   1,
+   false
+  ],
+  [
+   "Gedulei Trumah",
+   1,
+   false
+  ],
+  [
+   "Mishneh Lmelech Hilchot Malveh Vloveh",
+   1,
+   false
+  ],
+  [
+   "Talmidei Chachamim",
+   1,
+   false
+  ],
+  [
+   "Chelkas Binyamin",
+   1,
+   false
+  ],
+  [
+   "Chochmas Adam",
+   1,
+   false
+  ],
+  [
+   "Biurim of Chelkat Binyamin",
+   1,
+   false
+  ],
+  [
+   "Biurim of",
+   1,
+   false
+  ],
+  [
+   "Sh”t Nachlat Tzvi Y”D",
+   1,
+   false
+  ],
+  [
+   "Mishan Brurah",
+   1,
+   false
+  ],
+  [
+   "Shema. VZot HaBracha",
+   1,
+   false
+  ],
+  [
+   "Chazon Ovadyah Purim",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef pocket-size Moadim",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai Parashat Titzaveh Halacha",
+   1,
+   false
+  ],
+  [
+   "Mateh Efrayim",
+   1,
+   true
+  ],
+  [
+   "39 Melachot",
+   1,
+   false
+  ],
+  [
+   "Gemara in Shabbos",
+   1,
+   true
+  ],
+  [
+   "Maggid Mishneh on Rambam Hilchot Shabbat",
+   1,
+   false
+  ],
+  [
+   "Shmiras Shabbos K'hilchasa",
+   1,
+   false
+  ],
+  [
+   "Yabiah Omer",
+   1,
+   false
+  ],
+  [
+   "Maharach Or Zarua",
+   1,
+   false
+  ],
+  [
+   "Tiltulei Shabbos p",
+   1,
+   false
+  ],
+  [
+   "Moriah v",
+   1,
+   false
+  ],
+  [
+   "Igros Moshe III O.C",
+   1,
+   false
+  ],
+  [
+   "Avnei Nezer O.C",
+   1,
+   false
+  ],
+  [
+   "Halichos Shlomo on Tefillah",
+   1,
+   false
+  ],
+  [
+   "Halichos Shelomo ibid. Shevet Ha’Levi",
+   1,
+   false
+  ],
+  [
+   "Ishei Yisroel",
+   1,
+   false
+  ],
+  [
+   "Rambam Hilchos Rotzeach Chapter",
+   1,
+   true
+  ],
+  [
+   "Mesilas Yesharim Ch",
+   1,
+   false
+  ],
+  [
+   "Minchas Shelomo",
+   1,
+   false
+  ],
+  [
+   "Binyan Tzion",
+   1,
+   false
+  ],
+  [
+   "Chasam Sofer Y.D",
+   1,
+   false
+  ],
+  [
+   "Chachmas Adam Shaar Mishpetei HaAretz",
+   1,
+   false
+  ],
+  [
+   "Sanhedrin Yerushalmi",
+   1,
+   true
+  ],
+  [
+   "Kaf Hachayim O.C",
+   1,
+   false
+  ],
+  [
+   "Mishnah Berurah O.C",
+   1,
+   true
+  ],
+  [
+   "Betzel Hachachmah",
+   1,
+   false
+  ],
+  [
+   "Bach Y.D",
+   1,
+   true
+  ],
+  [
+   "Rashi s.v. ein",
+   1,
+   false
+  ],
+  [
+   "Tosfot s.v. vtisbara",
+   1,
+   false
+  ],
+  [
+   "Hilchot Sava",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef Haanah Memaaseh Shabbat",
+   1,
+   false
+  ],
+  [
+   "Byom Hashabbat",
+   1,
+   false
+  ],
+  [
+   "Derech Sicha v",
+   1,
+   false
+  ],
+  [
+   "Chut Shani v",
+   1,
+   false
+  ],
+  [
+   "Leviat Chen n",
+   1,
+   false
+  ],
+  [
+   "Meor Lyisrael Shabbat",
+   1,
+   false
+  ],
+  [
+   "n.d.): n. pag. Dh.ahavasolam.com",
+   1,
+   false
+  ],
+  [
+   "Aishel Avraham",
+   1,
+   false
+  ],
+  [
+   "Rav Simcha Bunim Cohen",
+   1,
+   false
+  ],
+  [
+   "Shmirat Shabbat KiHilchita Mahdura Kama",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef Dinei Netilat Yadayim , Birkat Hamazon, Brachot , Mincha and Arvit",
+   1,
+   false
+  ],
+  [
+   "Yerushalmi in Megilla",
+   1,
+   true
+  ],
+  [
+   "Chagigah",
+   1,
+   true
+  ],
+  [
+   "Shla Hakadosh",
+   1,
+   false
+  ],
+  [
+   "Binyamin Zev",
+   1,
+   false
+  ],
+  [
+   "Yichaveh Daas",
+   1,
+   false
+  ],
+  [
+   "Sifra . Vayikra",
+   1,
+   false
+  ],
+  [
+   "Ketuboth",
+   1,
+   false
+  ],
+  [
+   "Gates of Repentance",
+   1,
+   true
+  ],
+  [
+   "Chiddusei Anshei Shem . Bava Kama",
+   1,
+   false
+  ],
+  [
+   "Bava Metziah",
+   1,
+   false
+  ],
+  [
+   "Rambam, Hilchot Teshuva Chapter",
+   1,
+   false
+  ],
+  [
+   "Yalkout Shimoni",
+   1,
+   false
+  ],
+  [
+   "Feldman",
+   1,
+   false
+  ],
+  [
+   "Rosh b\"k",
+   1,
+   false
+  ],
+  [
+   "Chafetz Chaim",
+   1,
+   false
+  ],
+  [
+   "Meshech Chachma",
+   1,
+   false
+  ],
+  [
+   "Rabbi Yehoshua",
+   1,
+   false
+  ],
+  [
+   "Chida Avodas HaKodesh",
+   1,
+   false
+  ],
+  [
+   "Moreh B'etzba",
+   1,
+   false
+  ],
+  [
+   "Ket",
+   1,
+   false
+  ],
+  [
+   "Harav",
+   1,
+   false
+  ],
+  [
+   "Hagahot Maimoniot Hilkhot Sukkah",
+   1,
+   false
+  ],
+  [
+   "Darchei Moshe Haaroch",
+   1,
+   false
+  ],
+  [
+   "Halikhot Teiman",
+   1,
+   false
+  ],
+  [
+   "Pri Megadim Introduction to Hilchot Pesach",
+   1,
+   false
+  ],
+  [
+   "Kovetz Shiurim Pesachim n",
+   1,
+   false
+  ],
+  [
+   "Yitzchak v",
+   1,
+   false
+  ],
+  [
+   "Mishna in Pesachim",
+   1,
+   true
+  ],
+  [
+   "Maharsham in Daat Torah",
+   1,
+   false
+  ],
+  [
+   "Siddur Pesach Kihilchato",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruc",
+   1,
+   false
+  ],
+  [
+   "Kashur Kurrents Fall",
+   1,
+   false
+  ],
+  [
+   "Otzer Piskei Challah",
+   1,
+   false
+  ],
+  [
+   "Mishna Challah",
+   1,
+   true
+  ],
+  [
+   "Shmini",
+   1,
+   false
+  ],
+  [
+   "Yerushalmi, Tosfot Chullin",
+   1,
+   false
+  ],
+  [
+   "Aruch Ha",
+   1,
+   false
+  ],
+  [
+   "Binyan David",
+   1,
+   false
+  ],
+  [
+   "Minhat Yitzchak",
+   1,
+   false
+  ],
+  [
+   "Igg’rot Mosheh, E.H",
+   1,
+   false
+  ],
+  [
+   "Othodox Union",
+   1,
+   false
+  ],
+  [
+   "Cheredim",
+   1,
+   false
+  ],
+  [
+   "Nachlat Tzvi",
+   1,
+   false
+  ],
+  [
+   "Derech Emunah",
+   1,
+   false
+  ],
+  [
+   "Shach. . Kitzur Shulchan Aruch",
+   1,
+   false
+  ],
+  [
+   "Or Letzion. Tosfot Harosh a\"z",
+   1,
+   false
+  ],
+  [
+   "Tosfot Rabbenu Elchanan",
+   1,
+   false
+  ],
+  [
+   "Chukei Chaim",
+   1,
+   false
+  ],
+  [
+   "Mayim Kedoshim",
+   1,
+   false
+  ],
+  [
+   "Olot Shlomo Menachot",
+   1,
+   false
+  ],
+  [
+   "Binyan Olam",
+   1,
+   false
+  ],
+  [
+   "Pat Haba Bikisnin",
+   1,
+   false
+  ],
+  [
+   "Shaarei Habracha ch",
+   1,
+   false
+  ],
+  [
+   "Peni Hashulchan",
+   1,
+   false
+  ],
+  [
+   "Ikar and Tofel . Halachos of Brachos p",
+   1,
+   false
+  ],
+  [
+   "Sh”t Vayeshev Moshe",
+   1,
+   false
+  ],
+  [
+   "Sh”t Minchat Shlomo",
+   1,
+   false
+  ],
+  [
+   "Otsrot Shlomo version",
+   1,
+   false
+  ],
+  [
+   "Sh”t LeHorot Natan O”C",
+   1,
+   false
+  ],
+  [
+   "Kovetz Or Yisrael",
+   1,
+   false
+  ],
+  [
+   "Sh”t Shraga HaMeir",
+   1,
+   false
+  ],
+  [
+   "Megilat Sefer on Shabbat",
+   1,
+   false
+  ],
+  [
+   "Sh”t Kinyan Torah",
+   1,
+   false
+  ],
+  [
+   "Sh”t Maaseh Nisim",
+   1,
+   false
+  ],
+  [
+   "Shemirat Shabbat Kehilchasa",
+   1,
+   false
+  ],
+  [
+   "Meor Shabbat",
+   1,
+   false
+  ],
+  [
+   "Dirshu Footnote",
+   1,
+   false
+  ],
+  [
+   "Smag Lav",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aru",
+   1,
+   false
+  ],
+  [
+   "Sh”t Az Nidbaru",
+   1,
+   false
+  ],
+  [
+   "Shabbat Kitchen",
+   1,
+   false
+  ],
+  [
+   "Iglai Tal #6",
+   1,
+   false
+  ],
+  [
+   "Sh”t Tefillah lemoshe",
+   1,
+   false
+  ],
+  [
+   "Chazon Ish . Igrot Moshe O”C",
+   1,
+   false
+  ],
+  [
+   "Sh”t Maharshag",
+   1,
+   false
+  ],
+  [
+   "prophet Zechariyah",
+   1,
+   false
+  ],
+  [
+   "fourth",
+   1,
+   false
+  ],
+  [
+   "fifth",
+   1,
+   false
+  ],
+  [
+   "seventh",
+   1,
+   false
+  ],
+  [
+   "Rambam Hilchot Taaniyot",
+   1,
+   true
+  ],
+  [
+   "Kovetz Halachot Rav Shmuel Kamenetsky",
+   1,
+   false
+  ],
+  [
+   "Magen Vraham",
+   1,
+   false
+  ],
+  [
+   "torat moshe on the torah",
+   1,
+   false
+  ],
+  [
+   "taanit chalom",
+   1,
+   false
+  ],
+  [
+   "Tefillah Kehilchata c",
+   1,
+   false
+  ],
+  [
+   "Ishei Yisrael c",
+   1,
+   false
+  ],
+  [
+   "Rosh Brachos",
+   1,
+   false
+  ],
+  [
+   "Halichos Shlomo Tefillah",
+   1,
+   false
+  ],
+  [
+   "Leket Hakemach",
+   1,
+   false
+  ],
+  [
+   "Dirshu edition of the Mishnah Berurah",
+   1,
+   false
+  ],
+  [
+   "Kesef Mishnah on Rambam Hilchos Tefillah",
+   1,
+   false
+  ],
+  [
+   "Siach Halachah",
+   1,
+   false
+  ],
+  [
+   "Halichos Shelomo",
+   1,
+   false
+  ],
+  [
+   "Kitzur Shulchan Aruch. . Shulchan Aruch",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai Masei",
+   1,
+   false
+  ],
+  [
+   "Seder Birkot Hanehenin",
+   1,
+   false
+  ],
+  [
+   "Maharam Shick",
+   1,
+   false
+  ],
+  [
+   "Chatam Sofer. Sh\"t Melamed Lehoil",
+   1,
+   false
+  ],
+  [
+   "Minchat Chinuch . Shulchan Aruch",
+   1,
+   false
+  ],
+  [
+   "Chut Shani Brachot p",
+   1,
+   false
+  ],
+  [
+   "Or Letzion . Rav Poalim",
+   1,
+   false
+  ],
+  [
+   "Rashi ad loc",
+   1,
+   false
+  ],
+  [
+   "Rashi Macot",
+   1,
+   false
+  ],
+  [
+   "Mishna Avot",
+   1,
+   true
+  ],
+  [
+   "Chatom Sofer ad loc for a homiletic explanation of the mishna",
+   1,
+   false
+  ],
+  [
+   "Michtav M’Eliyahu v",
+   1,
+   false
+  ],
+  [
+   "Harosh",
+   1,
+   true
+  ],
+  [
+   "Kitzur Shulchan Aruch Yalkut Yosef",
+   1,
+   false
+  ],
+  [
+   "Kuntres Mafli Lasot",
+   1,
+   false
+  ],
+  [
+   "Catheter Insert",
+   1,
+   false
+  ],
+  [
+   "Birur Halacha v",
+   1,
+   false
+  ],
+  [
+   "Shaar Shlomo Zarafia",
+   1,
+   false
+  ],
+  [
+   "Chayey Adam . Mishna Brurah",
+   1,
+   false
+  ],
+  [
+   "Nitei Gavriel Sukkot",
+   1,
+   false
+  ],
+  [
+   "Ran Rosh Hashana",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruch. . Magen Avraham",
+   1,
+   false
+  ],
+  [
+   "Gemara Bavli",
+   1,
+   false
+  ],
+  [
+   "Igrot Moshe. . Taharat Habayit v",
+   1,
+   false
+  ],
+  [
+   "Shivat Tzion",
+   1,
+   false
+  ],
+  [
+   "Ritva Kiddushin",
+   1,
+   true
+  ],
+  [
+   "Ikar and Tofel . . Halachos of Brachos Handbook p",
+   1,
+   false
+  ],
+  [
+   "Pat Haba Bikisnin#Sweet Challah",
+   1,
+   false
+  ],
+  [
+   "Shiurei Knesset Hagedola",
+   1,
+   false
+  ],
+  [
+   "Biur Chametz p",
+   1,
+   false
+  ],
+  [
+   "Sdei Chemed Chatan viKallah",
+   1,
+   false
+  ],
+  [
+   "Pirkei Direbbi Eliezer",
+   1,
+   false
+  ],
+  [
+   "Shalmei Simcha",
+   1,
+   false
+  ],
+  [
+   "Shulchan Haezer",
+   1,
+   false
+  ],
+  [
+   "Mishna Berachot",
+   1,
+   true
+  ],
+  [
+   "Piskei Tshuvos",
+   1,
+   false
+  ],
+  [
+   "Kiddushin Packet",
+   1,
+   false
+  ],
+  [
+   "Maharit. Horah Brurah",
+   1,
+   false
+  ],
+  [
+   "Eroch Shulchan",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai Shelach",
+   1,
+   false
+  ],
+  [
+   "Bal Tigra",
+   1,
+   false
+  ],
+  [
+   "Shem Chadash",
+   1,
+   false
+  ],
+  [
+   "Rav Zachrish p",
+   1,
+   false
+  ],
+  [
+   "Kovetz Shiurim",
+   1,
+   false
+  ],
+  [
+   "Tosfot Rabbenu Peretz",
+   1,
+   false
+  ],
+  [
+   "Torat HaTaharah",
+   1,
+   false
+  ],
+  [
+   "Avot D'Rabbi Natan",
+   1,
+   true
+  ],
+  [
+   "Chazon Ish . Taharat Habayit",
+   1,
+   false
+  ],
+  [
+   "Halachos of Niddah by Rabbi Eider",
+   1,
+   false
+  ],
+  [
+   "Tosfos",
+   1,
+   false
+  ],
+  [
+   "raim",
+   1,
+   false
+  ],
+  [
+   "Haghot Ashri",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai Vayishlach Year",
+   1,
+   false
+  ],
+  [
+   "Ramaz",
+   1,
+   false
+  ],
+  [
+   "Darchei David",
+   1,
+   false
+  ],
+  [
+   "Hora’at Sha’ah",
+   1,
+   false
+  ],
+  [
+   "Maamar Mordechai. Or Letzion",
+   1,
+   false
+  ],
+  [
+   "Kaf Hachaim. Radvaz",
+   1,
+   false
+  ],
+  [
+   "Orot Hapesach",
+   1,
+   false
+  ],
+  [
+   "Motzei Shabbat Vayikra",
+   1,
+   false
+  ],
+  [
+   "Hagahot Maimoniot",
+   1,
+   false
+  ],
+  [
+   "Tosfot Rashba",
+   1,
+   false
+  ],
+  [
+   "Rabbenu Peretz",
+   1,
+   false
+  ],
+  [
+   "Darkei Moshe Haaruch",
+   1,
+   false
+  ],
+  [
+   "Minhagim of Rav Isaac Tirna",
+   1,
+   false
+  ],
+  [
+   "Otzar Hageo",
+   1,
+   false
+  ],
+  [
+   "Gra . Shulchan Aruch O.C",
+   1,
+   false
+  ],
+  [
+   "Mikor Chaim",
+   1,
+   false
+  ],
+  [
+   "Or Zarua, Rabbeinu Yerucham, Orchot Chayim, Riaz",
+   1,
+   false
+  ],
+  [
+   "Gra . Shulchan Aruch",
+   1,
+   false
+  ],
+  [
+   "Pri Megadim. Biur Halacha",
+   1,
+   false
+  ],
+  [
+   "Kitvei Madmor Mgur",
+   1,
+   false
+  ],
+  [
+   "Kovetz Bet Aharaon Vyisrael",
+   1,
+   false
+  ],
+  [
+   "Keren Ldovid",
+   1,
+   false
+  ],
+  [
+   "Baal Hameor Brachot",
+   1,
+   false
+  ],
+  [
+   "Halachot Ketanot. Halacha Brurah",
+   1,
+   false
+  ],
+  [
+   "Chazon Ovadia Yom Tov p",
+   1,
+   false
+  ],
+  [
+   "Tiferet Mishna Brurah",
+   1,
+   false
+  ],
+  [
+   "Yalku Yosef Tefillah",
+   1,
+   false
+  ],
+  [
+   "Rambam, Mishneh Torah: Hilchot Tefillah U'Bikcat Cohanim, Chapter",
+   1,
+   false
+  ],
+  [
+   "Hagahot Maimoni. Shulchan Aruch O.C",
+   1,
+   false
+  ],
+  [
+   "Beiur Halacha s.v. Aval",
+   1,
+   false
+  ],
+  [
+   "Siach Tefillah",
+   1,
+   false
+  ],
+  [
+   "Yevarechecha Hashem v'yishmerecha -- Amen",
+   1,
+   false
+  ],
+  [
+   "Weekly Halachah Discussio",
+   1,
+   false
+  ],
+  [
+   "Gemara Makkot",
+   1,
+   false
+  ],
+  [
+   "Yerushalmi Berachot",
+   1,
+   true
+  ],
+  [
+   "Kaf Achat",
+   1,
+   false
+  ],
+  [
+   "Pekudat Elazer",
+   1,
+   false
+  ],
+  [
+   "Mikraei Kodesh Sukkot",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef Milah p",
+   1,
+   false
+  ],
+  [
+   "Hagahot Maimonit",
+   1,
+   false
+  ],
+  [
+   "She'Ha'Simcha B'Meono",
+   1,
+   false
+  ],
+  [
+   "s.v. yedid",
+   1,
+   false
+  ],
+  [
+   "alveh Vloveh",
+   1,
+   false
+  ],
+  [
+   "Raavad, Rosh responsa",
+   1,
+   false
+  ],
+  [
+   "Rashba responsa chadashot",
+   1,
+   false
+  ],
+  [
+   "Rambam. . Bava Metsia",
+   1,
+   false
+  ],
+  [
+   "Hagahot Mordechai b\"m n",
+   1,
+   false
+  ],
+  [
+   "Shach. Chavot Daat",
+   1,
+   false
+  ],
+  [
+   "Smak. Shach",
+   1,
+   false
+  ],
+  [
+   "Chelkat Binyamin on",
+   1,
+   false
+  ],
+  [
+   "Ki Shem Hashem Ekrah Havu Godel LeElokenu",
+   1,
+   false
+  ],
+  [
+   "Birkot HaShevach",
+   1,
+   false
+  ],
+  [
+   "Beiur Halacha s.v. Im Lamad",
+   1,
+   false
+  ],
+  [
+   "Shaar Kavonot Nusach Hatefilah",
+   1,
+   false
+  ],
+  [
+   "Sephardim - Al Divrei Torah",
+   1,
+   false
+  ],
+  [
+   "ruch Toledano",
+   1,
+   false
+  ],
+  [
+   "Mivakshei Torah",
+   1,
+   false
+  ],
+  [
+   "Cleaning_and_Folding_Garments_on_Shabbat#Folding_Garments|Folding Garments on Shabbat . Chesed La'alafim",
+   1,
+   false
+  ],
+  [
+   "Tefilat Haderech",
+   1,
+   false
+  ],
+  [
+   "Ritva Hilchot Brachot",
+   1,
+   false
+  ],
+  [
+   "Kedushat Hashabbat pp",
+   1,
+   false
+  ],
+  [
+   "Minchat Shlomo P",
+   1,
+   false
+  ],
+  [
+   "Melamed Lehoil",
+   1,
+   false
+  ],
+  [
+   "Kuntres Gorem HaMalot",
+   1,
+   false
+  ],
+  [
+   "pages",
+   1,
+   false
+  ],
+  [
+   "Shemirat Shabbat Kehilchatah",
+   1,
+   false
+  ],
+  [
+   "Machaze Avarham",
+   1,
+   false
+  ],
+  [
+   "Beit Yitzchak Hashmatot",
+   1,
+   false
+  ],
+  [
+   "Maaseh Choshev",
+   1,
+   false
+  ],
+  [
+   "Chai Uziel Mishpatei Uziel",
+   1,
+   false
+  ],
+  [
+   "Minchat Shlomo pages",
+   1,
+   false
+  ],
+  [
+   "Minchat",
+   1,
+   false
+  ],
+  [
+   "Parashat Kedoshim",
+   1,
+   true
+  ],
+  [
+   "Hilchot Geneva",
+   1,
+   false
+  ],
+  [
+   "Baba Metzia",
+   1,
+   true
+  ],
+  [
+   "Rashi s.v. Lama Li, Halachos of Other People's Money",
+   1,
+   false
+  ],
+  [
+   "Rashbam Baba Batra",
+   1,
+   true
+  ],
+  [
+   "Sefat Tamim",
+   1,
+   false
+  ],
+  [
+   "Midrash Tanchuma Bamidbar",
+   1,
+   true
+  ],
+  [
+   "Hamitzvot Lav",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruch Harav Hilchot Gezela",
+   1,
+   false
+  ],
+  [
+   "Dibrot Moshe Bava Metzia",
+   1,
+   false
+  ],
+  [
+   "Rambam. Lechem Mishne Geneva",
+   1,
+   false
+  ],
+  [
+   "Minchat Chinuch Mitzva",
+   1,
+   false
+  ],
+  [
+   "Dibrot Moshe Baba Metzia",
+   1,
+   false
+  ],
+  [
+   "Shita Mikubetzet on Bava Metzia",
+   1,
+   false
+  ],
+  [
+   "Ketzot Hachoshen",
+   1,
+   false
+  ],
+  [
+   "Pitchei Choshen Geneva",
+   1,
+   false
+  ],
+  [
+   "Halachos of Other People",
+   1,
+   false
+  ],
+  [
+   "Pitchei Halacha",
+   1,
+   false
+  ],
+  [
+   "Rambam, Mishneh Torah: Hilchot Talmud Torah: Chapter",
+   1,
+   false
+  ],
+  [
+   "Birurei Chayim v",
+   1,
+   false
+  ],
+  [
+   "Or Same'ach Talmud Torah",
+   1,
+   false
+  ],
+  [
+   "Halichot Shlomo Tefillah p",
+   1,
+   false
+  ],
+  [
+   "Magen Avot . Sh”t Yabia Omer Y”D",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruch HaRav Hilchot Talmud Torah",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai Chukkat",
+   1,
+   false
+  ],
+  [
+   "Rashi Brachot",
+   1,
+   false
+  ],
+  [
+   "Raavad Brachot",
+   1,
+   true
+  ],
+  [
+   "Yacheve Daat",
+   1,
+   false
+  ],
+  [
+   "Otzerot Yosef",
+   1,
+   false
+  ],
+  [
+   "Rama responsa",
+   1,
+   false
+  ],
+  [
+   "Chut",
+   1,
+   false
+  ],
+  [
+   "Bach on",
+   1,
+   true
+  ],
+  [
+   "Bach. Shu”t Yabia Omer",
+   1,
+   false
+  ],
+  [
+   "Eastern Standard Time",
+   1,
+   false
+  ],
+  [
+   "Maasechet Sofrim",
+   1,
+   false
+  ],
+  [
+   "Zeh Hashulchan",
+   1,
+   false
+  ],
+  [
+   "Yad Efrayim",
+   1,
+   false
+  ],
+  [
+   "Mishna Brurah in",
+   1,
+   true
+  ],
+  [
+   "Chaye Adam. Halachos of Brachos",
+   1,
+   false
+  ],
+  [
+   "Sh”t HaRosh",
+   1,
+   true
+  ],
+  [
+   "Rambam Hilchot Tefillah U'Birkat Cohanim",
+   1,
+   false
+  ],
+  [
+   "gemara in Sota",
+   1,
+   true
+  ],
+  [
+   "Ben Ish Chai, Year",
+   1,
+   false
+  ],
+  [
+   "Sha'ar HaTziyun Ot",
+   1,
+   false
+  ],
+  [
+   "Mishna Brurah there . Rambam, Mishneh Torah: Hilchot Tefillah U'Birkat Cohanim, Chapter",
+   1,
+   false
+  ],
+  [
+   "Noda BeYehudah",
+   1,
+   false
+  ],
+  [
+   "Sefer, Halachaq Brurah",
+   1,
+   false
+  ],
+  [
+   "Berur Halacha",
+   1,
+   false
+  ],
+  [
+   "Zohar Parashat Naso",
+   1,
+   true
+  ],
+  [
+   "Siddur Ya'avetz Dinei Nesiat Kappayim Ot",
+   1,
+   false
+  ],
+  [
+   "Ma'aseh Rav Ot",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai Shana Aleph Parashat Tetzaveh",
+   1,
+   false
+  ],
+  [
+   "Halichot Olam Parashat Tetzaveh",
+   1,
+   false
+  ],
+  [
+   "Kitvei HaAri",
+   1,
+   false
+  ],
+  [
+   "Kovetz Ohr Hashabbos",
+   1,
+   false
+  ],
+  [
+   "Chazon Ovadia Avelut",
+   1,
+   false
+  ],
+  [
+   "Chazon Ish O.C",
+   1,
+   false
+  ],
+  [
+   "Yalkot Yosef",
+   1,
+   false
+  ],
+  [
+   "Rivevos Ephraim",
+   1,
+   false
+  ],
+  [
+   "Hilchos Refuah",
+   1,
+   false
+  ],
+  [
+   "yit",
+   1,
+   false
+  ],
+  [
+   "Prashat Tzav",
+   1,
+   false
+  ],
+  [
+   "Iggrot Moshe",
+   1,
+   false
+  ],
+  [
+   "Baalei Hanefesh Shaar Haperisha p",
+   1,
+   false
+  ],
+  [
+   "Mishmeret Hataharah",
+   1,
+   false
+  ],
+  [
+   "Sh”t Marharshal",
+   1,
+   false
+  ],
+  [
+   "Sh”t Elef HaMagen",
+   1,
+   false
+  ],
+  [
+   "Halichot Yosef",
+   1,
+   false
+  ],
+  [
+   "Kuntres Piskei Shmuot",
+   1,
+   false
+  ],
+  [
+   "MePeninei HaRav p",
+   1,
+   false
+  ],
+  [
+   "Mieri",
+   1,
+   false
+  ],
+  [
+   "Orchot Rabbenu Chanukah",
+   1,
+   false
+  ],
+  [
+   "Bameh Madlikin",
+   1,
+   false
+  ],
+  [
+   "Sh”t Mekadesh Yisrael",
+   1,
+   false
+  ],
+  [
+   "Pekudat Elazar",
+   1,
+   false
+  ],
+  [
+   "Meorot on Shabbat",
+   1,
+   false
+  ],
+  [
+   "Bedikat Chametz",
+   1,
+   false
+  ],
+  [
+   "Sh”t Maharanach",
+   1,
+   false
+  ],
+  [
+   "Olat Shabbat",
+   1,
+   false
+  ],
+  [
+   "Meorot",
+   1,
+   false
+  ],
+  [
+   "Kesef Mishna Kli Mikdash",
+   1,
+   false
+  ],
+  [
+   "Pri Chadash in Mayim Chayim",
+   1,
+   false
+  ],
+  [
+   "Rashba in Mishmeret Habayit",
+   1,
+   false
+  ],
+  [
+   "Mishnat Rebbe Aharon",
+   1,
+   false
+  ],
+  [
+   "introduction to Tzitz Eliezer",
+   1,
+   false
+  ],
+  [
+   "Baalai HaNefesh",
+   1,
+   false
+  ],
+  [
+   "Rashi Bereshit",
+   1,
+   false
+  ],
+  [
+   "Rambam Isurei Biya",
+   1,
+   false
+  ],
+  [
+   "Hakel Hakadosh",
+   1,
+   false
+  ],
+  [
+   "Dirshu Mishna Berura",
+   1,
+   false
+  ],
+  [
+   "Sheilat Rav p",
+   1,
+   false
+  ],
+  [
+   "Tefilla Kehilchata",
+   1,
+   false
+  ],
+  [
+   "Halichot Shlomo Tefilah",
+   1,
+   false
+  ],
+  [
+   "Halichot Shlomo, Tefillah ch",
+   1,
+   false
+  ],
+  [
+   "Derech Eretz Zuta",
+   1,
+   true
+  ],
+  [
+   "Rama Mpano",
+   1,
+   false
+  ],
+  [
+   "Rabbi Shay Schachter on yutorah.org",
+   1,
+   false
+  ],
+  [
+   "Sh”t Rashba",
+   1,
+   false
+  ],
+  [
+   "Or Zaruha",
+   1,
+   false
+  ],
+  [
+   "Mishkenaot Yacov",
+   1,
+   false
+  ],
+  [
+   "Pesukei DeZimrah with Brachot",
+   1,
+   false
+  ],
+  [
+   "Torat Chaim Sofer",
+   1,
+   false
+  ],
+  [
+   "Birur Halacha",
+   1,
+   false
+  ],
+  [
+   "Shuirei Grach",
+   1,
+   false
+  ],
+  [
+   "Maharalbach",
+   1,
+   false
+  ],
+  [
+   "Markevet Hamishna",
+   1,
+   false
+  ],
+  [
+   "Sfat Emet Shabbat",
+   1,
+   false
+  ],
+  [
+   "Mishn",
+   1,
+   false
+  ],
+  [
+   "Kitzur Dinei Ribbit p",
+   1,
+   false
+  ],
+  [
+   "Dagul Mirvava",
+   1,
+   false
+  ],
+  [
+   "tosefta shabbat",
+   1,
+   false
+  ],
+  [
+   "Kesef Mishnah on Rambam",
+   1,
+   false
+  ],
+  [
+   "section on memareach",
+   1,
+   false
+  ],
+  [
+   "Sridei Esh",
+   1,
+   false
+  ],
+  [
+   "Shu”t terumat hadeshen",
+   1,
+   false
+  ],
+  [
+   "Machatzis Hashekel to",
+   1,
+   false
+  ],
+  [
+   "new editions",
+   1,
+   false
+  ],
+  [
+   "Judaism.stackexchange.com",
+   1,
+   false
+  ],
+  [
+   "Baalei Hanefesh",
+   1,
+   false
+  ],
+  [
+   "Rosh Mikvaot",
+   1,
+   false
+  ],
+  [
+   "Tur, Shulchan Aruch",
+   1,
+   false
+  ],
+  [
+   "Ran Shavuot",
+   1,
+   true
+  ],
+  [
+   "Yereyim. Chazon Ish",
+   1,
+   false
+  ],
+  [
+   "Tevilat Kelim",
+   1,
+   false
+  ],
+  [
+   "Hagahot Ashuri Shabbat",
+   1,
+   false
+  ],
+  [
+   "Peninei Halacha Shabbat",
+   1,
+   true
+  ],
+  [
+   "Practical Laws of Shabbat",
+   1,
+   false
+  ],
+  [
+   "Rabbi Rafeal Soae",
+   1,
+   false
+  ],
+  [
+   "Dor Hamelaktim Shabbat",
+   1,
+   false
+  ],
+  [
+   "Lev Hashabbat",
+   1,
+   false
+  ],
+  [
+   "yah Rabba",
+   1,
+   false
+  ],
+  [
+   "Iyunim Bhalacha",
+   1,
+   false
+  ],
+  [
+   "Tefillah LDovid",
+   1,
+   false
+  ],
+  [
+   "Mordechai Berachot",
+   1,
+   false
+  ],
+  [
+   "Maharsha Brachot",
+   1,
+   false
+  ],
+  [
+   "Even Haozer",
+   1,
+   false
+  ],
+  [
+   "Biur Halacha. . Magen Avraham",
+   1,
+   false
+  ],
+  [
+   "Rashba in Mishmeres Habayis",
+   1,
+   false
+  ],
+  [
+   "Medrash Talpiyos",
+   1,
+   false
+  ],
+  [
+   "Hamatamim",
+   1,
+   false
+  ],
+  [
+   "Shaarey Ephraim",
+   1,
+   false
+  ],
+  [
+   "Imrey Yosher",
+   1,
+   false
+  ],
+  [
+   "Eidus Yisroel",
+   1,
+   false
+  ],
+  [
+   "Shalmey Simcha",
+   1,
+   false
+  ],
+  [
+   "Elyah Raba",
+   1,
+   false
+  ],
+  [
+   "Gemara Brachos",
+   1,
+   false
+  ],
+  [
+   "Tosfot s.v. Abaye",
+   1,
+   false
+  ],
+  [
+   "Shiur on Ribbis Devarim",
+   1,
+   false
+  ],
+  [
+   "Chedrei Deah",
+   1,
+   false
+  ],
+  [
+   "Maimoniyot",
+   1,
+   false
+  ],
+  [
+   "Bet Yosef end of",
+   1,
+   false
+  ],
+  [
+   "Trumat",
+   1,
+   false
+  ],
+  [
+   "Dirshu Mishna Brurah n",
+   1,
+   false
+  ],
+  [
+   "Hagahot HaGra",
+   1,
+   false
+  ],
+  [
+   "Avnei Yishpeh",
+   1,
+   false
+  ],
+  [
+   "Bear Heitev",
+   1,
+   false
+  ],
+  [
+   "Yeshuot Yacov",
+   1,
+   false
+  ],
+  [
+   "Birchot Kriyat Shema",
+   1,
+   false
+  ],
+  [
+   "Sh”t Otzrot Yosef",
+   1,
+   false
+  ],
+  [
+   "Sh”t Shagat Aryeh",
+   1,
+   false
+  ],
+  [
+   "Nezirut Shimshon",
+   1,
+   false
+  ],
+  [
+   "Limudei Hashem",
+   1,
+   false
+  ],
+  [
+   "Shagat Aryeh. Sh”t Shevet HaLevi",
+   1,
+   false
+  ],
+  [
+   "Tzefanya",
+   1,
+   true
+  ],
+  [
+   "Pesikta Zutrata Shemot",
+   1,
+   false
+  ],
+  [
+   "Birkat Ovadia",
+   1,
+   false
+  ],
+  [
+   "Vayizra Yitzchak",
+   1,
+   false
+  ],
+  [
+   "Kitzur Shulchan Aruch O.C",
+   1,
+   true
+  ],
+  [
+   "Pinenei Yosef, v",
+   1,
+   false
+  ],
+  [
+   "Yalkut Mefarshim of Oz Vehadar on Rif p",
+   1,
+   false
+  ],
+  [
+   "Rabben Dovid Pesachim",
+   1,
+   false
+  ],
+  [
+   "Milchamot Pesachim",
+   1,
+   false
+  ],
+  [
+   "Rashba. . Mishna Gittin",
+   1,
+   false
+  ],
+  [
+   "Mishna Gittin",
+   1,
+   true
+  ],
+  [
+   "Taz, responsa",
+   1,
+   false
+  ],
+  [
+   "Shaar Mishpat",
+   1,
+   false
+  ],
+  [
+   "Chida . Rama",
+   1,
+   false
+  ],
+  [
+   "Rashdam",
+   1,
+   false
+  ],
+  [
+   "Rabbeinu Chananeil",
+   1,
+   false
+  ],
+  [
+   "Rav Moshe HaLevi",
+   1,
+   false
+  ],
+  [
+   "Brachot Shir VeHaShevach",
+   1,
+   false
+  ],
+  [
+   "Bei’ur Halacha s.v. lo",
+   1,
+   false
+  ],
+  [
+   "Minhagim",
+   1,
+   false
+  ],
+  [
+   "Mordechai, Sedah LeDerech",
+   1,
+   false
+  ],
+  [
+   "Shaarei Knesset HaGedolah",
+   1,
+   false
+  ],
+  [
+   "Shulchan lechem Hapanim",
+   1,
+   false
+  ],
+  [
+   "Chanukah of Rav Kanievsky",
+   1,
+   false
+  ],
+  [
+   "Buir HaGra O”C",
+   1,
+   false
+  ],
+  [
+   "Maaseh Rav n",
+   1,
+   false
+  ],
+  [
+   "Gemilut Chesed",
+   1,
+   false
+  ],
+  [
+   "Or Torah",
+   1,
+   false
+  ],
+  [
+   "Chelkat Binyamin Kuntres Heter Iska n",
+   1,
+   false
+  ],
+  [
+   "Hazichronot",
+   1,
+   false
+  ],
+  [
+   "Yerushalmi Megilla",
+   1,
+   true
+  ],
+  [
+   "Petach Hadvir",
+   1,
+   false
+  ],
+  [
+   "Ginat Vradim Klal",
+   1,
+   false
+  ],
+  [
+   "Perach Shoshan Klal",
+   1,
+   false
+  ],
+  [
+   "Terumat Hadeshen",
+   1,
+   false
+  ],
+  [
+   "Rambam in Sefer Hamitzvot Mitzva",
+   1,
+   false
+  ],
+  [
+   "Smag Mitzva",
+   1,
+   false
+  ],
+  [
+   "Smak Mitzva",
+   1,
+   false
+  ],
+  [
+   "Rashi Megilla",
+   1,
+   true
+  ],
+  [
+   "Binyan Shlomo",
+   1,
+   false
+  ],
+  [
+   "Moadei Yeshurun, Laws of Purim, Section",
+   1,
+   false
+  ],
+  [
+   "4:23 s.v. uleinyan",
+   1,
+   false
+  ],
+  [
+   "Mikrei Kodesh Purim",
+   1,
+   false
+  ],
+  [
+   "Sh”t Minchat Elazar",
+   1,
+   false
+  ],
+  [
+   "Rashi s.v. Ad Sheyichleh Amen",
+   1,
+   false
+  ],
+  [
+   "Vayikra Rabbah",
+   1,
+   true
+  ],
+  [
+   "Nitzanei Eretz v",
+   1,
+   false
+  ],
+  [
+   "Kovetz Mevakshei Torah",
+   1,
+   false
+  ],
+  [
+   "HaMidot], Tefilah",
+   1,
+   false
+  ],
+  [
+   "Chalek Rishon",
+   1,
+   false
+  ],
+  [
+   "HaMidot,] Learning, Chalek Rishon",
+   1,
+   false
+  ],
+  [
+   "Kaf HaHaim",
+   1,
+   false
+  ],
+  [
+   "Pachad Yitzchak Igrot #33",
+   1,
+   false
+  ],
+  [
+   "Peni Baruch",
+   1,
+   false
+  ],
+  [
+   "Minchat David",
+   1,
+   false
+  ],
+  [
+   "Rashba. Knesset Rishonim Zevachim",
+   1,
+   false
+  ],
+  [
+   "Sfat Emet Rosh Hashana",
+   1,
+   false
+  ],
+  [
+   "Ginat Egoz",
+   1,
+   false
+  ],
+  [
+   "Haghot Imrei Baruch",
+   1,
+   false
+  ],
+  [
+   "Rashi Vayikra",
+   1,
+   true
+  ],
+  [
+   "Gemora Avoda Zara",
+   1,
+   false
+  ],
+  [
+   "Shaarim Hametzuyim Bhalacha",
+   1,
+   false
+  ],
+  [
+   "Tosfos Avodah Zara s.v. V'Rebbe Meir",
+   1,
+   false
+  ],
+  [
+   "Gemora in Avodah Zara",
+   1,
+   false
+  ],
+  [
+   "Toafos Reim O.C",
+   1,
+   false
+  ],
+  [
+   "Yaskil",
+   1,
+   false
+  ],
+  [
+   "Maharsham in Mishpat Shalom C.M",
+   1,
+   false
+  ],
+  [
+   "Chikray Lev C.M",
+   1,
+   false
+  ],
+  [
+   "Pesikta Behar",
+   1,
+   false
+  ],
+  [
+   "Maharm Shik C.M",
+   1,
+   false
+  ],
+  [
+   "Maharam Shik C.M",
+   1,
+   false
+  ],
+  [
+   "Piskay Uziel",
+   1,
+   false
+  ],
+  [
+   "Tosfot Harosh on Kiddushin",
+   1,
+   false
+  ],
+  [
+   "Tosefta, Tosfot Bava Metsia",
+   1,
+   false
+  ],
+  [
+   "gemara. Torat Ribbit",
+   1,
+   false
+  ],
+  [
+   "Shach in Nekudat Hakesef",
+   1,
+   false
+  ],
+  [
+   "Baalei Hatosfot Rashba",
+   1,
+   false
+  ],
+  [
+   "Lav She’ein Bo Maaseh",
+   1,
+   false
+  ],
+  [
+   "Rambam ibid, Chinuch",
+   1,
+   false
+  ],
+  [
+   "Shoel Bshlomo",
+   1,
+   false
+  ],
+  [
+   "Tosfots",
+   1,
+   false
+  ],
+  [
+   "Ritva A\"Z",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai Parashat Tzav halacha",
+   1,
+   false
+  ],
+  [
+   "Nitai Gavriel Pesach",
+   1,
+   false
+  ],
+  [
+   "Rambam Chametz",
+   1,
+   true
+  ],
+  [
+   "Rashi s.v. Layit",
+   1,
+   false
+  ],
+  [
+   "Beiur Halacha s.v. Oh Shelo",
+   1,
+   false
+  ],
+  [
+   "Meromei Sadeh Pesachim",
+   1,
+   false
+  ],
+  [
+   "Rama. Biur Halacha",
+   1,
+   false
+  ],
+  [
+   "Gra. Chazon Ish",
+   1,
+   false
+  ],
+  [
+   "Gra. . Agudah Beitzah",
+   1,
+   false
+  ],
+  [
+   "Or Same'ach",
+   1,
+   false
+  ],
+  [
+   "Mishna B",
+   1,
+   false
+  ],
+  [
+   "Gemara Bechorot",
+   1,
+   true
+  ],
+  [
+   "Isur Veheter v",
+   1,
+   false
+  ],
+  [
+   "Rambam Hilchot Shechitah",
+   1,
+   true
+  ],
+  [
+   "Toldot n",
+   1,
+   false
+  ],
+  [
+   "Bet Baruch",
+   1,
+   false
+  ],
+  [
+   "Mordechai Brachot",
+   1,
+   false
+  ],
+  [
+   "Artzot Hachaim",
+   1,
+   false
+  ],
+  [
+   "Ruach Raah: Mor Ukesiah",
+   1,
+   false
+  ],
+  [
+   "Birkat Cohanim",
+   1,
+   false
+  ],
+  [
+   "Tisha B'av on Motzei Shabbat",
+   1,
+   false
+  ],
+  [
+   "Chavot Yair in Mekor Chaim",
+   1,
+   false
+  ],
+  [
+   "Meshech Chochma",
+   1,
+   false
+  ],
+  [
+   "Bitachon - Lema'aseh Applications",
+   1,
+   false
+  ],
+  [
+   "Orchot Petachya p",
+   1,
+   false
+  ],
+  [
+   "Bitachon",
+   1,
+   false
+  ],
+  [
+   "Beit Shamai",
+   1,
+   false
+  ],
+  [
+   "odner",
+   1,
+   false
+  ],
+  [
+   "Magen Avrohom",
+   1,
+   false
+  ],
+  [
+   "Halachos of Broch",
+   1,
+   false
+  ],
+  [
+   "Kesef Mishneh, Hilchot Berachot",
+   1,
+   true
+  ],
+  [
+   "OU Brachot Guide",
+   1,
+   false
+  ],
+  [
+   "Halachos of Brachos is Haadama",
+   1,
+   false
+  ],
+  [
+   "Chayey Adam, Kaf Hachaim",
+   1,
+   false
+  ],
+  [
+   "Shevitat Behemto",
+   1,
+   false
+  ],
+  [
+   "Beiur Halacha s.v. VeAf",
+   1,
+   false
+  ],
+  [
+   "Ba'er Heteiv",
+   1,
+   false
+  ],
+  [
+   "Sh”t Ram Alshaker",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef Shabb",
+   1,
+   false
+  ],
+  [
+   "Birkat Kohanim",
+   1,
+   false
+  ],
+  [
+   "Sulchan Aruch",
+   1,
+   false
+  ],
+  [
+   "Yam Shel Shlomo . Mishna Brurah",
+   1,
+   false
+  ],
+  [
+   "Likutei Ha'Ramban",
+   1,
+   false
+  ],
+  [
+   "Gra . Rama",
+   1,
+   false
+  ],
+  [
+   "Misna Brurah",
+   1,
+   false
+  ],
+  [
+   "Mishbitzot Zahav . Mishna Brurah",
+   1,
+   false
+  ],
+  [
+   "Daat Esh",
+   1,
+   false
+  ],
+  [
+   "Tosfot Moed Katan",
+   1,
+   true
+  ],
+  [
+   "Rosh. Rama",
+   1,
+   false
+  ],
+  [
+   "Rashi Gittin",
+   1,
+   false
+  ],
+  [
+   "Beis Shmuel C.M",
+   1,
+   false
+  ],
+  [
+   "Bava Basra",
+   1,
+   true
+  ],
+  [
+   "Ritva Nedarim",
+   1,
+   true
+  ],
+  [
+   "Rambam Hilchot Gezelot",
+   1,
+   true
+  ],
+  [
+   "Rambam Hilchot Gezelah Vaveidah",
+   1,
+   false
+  ],
+  [
+   "Rashbam Bava Basra",
+   1,
+   true
+  ],
+  [
+   "Terumas HaDeshen",
+   1,
+   false
+  ],
+  [
+   "Gra C.M",
+   1,
+   false
+  ],
+  [
+   "Shitah Mekubetzes Nedarim",
+   1,
+   false
+  ],
+  [
+   "Aliyot of Rabbenu Yona Bava Basra",
+   1,
+   false
+  ],
+  [
+   "Shmuel Alef",
+   1,
+   false
+  ],
+  [
+   "Rabbenu Yonah Bava Batra",
+   1,
+   false
+  ],
+  [
+   "Motzei Shabbat Shiur Parshat Shoftim",
+   1,
+   false
+  ],
+  [
+   "Kitvei HaTalmidim ad loc",
+   1,
+   false
+  ],
+  [
+   "Yeshurun",
+   1,
+   false
+  ],
+  [
+   "Rabbi Akiva Eiger Hashmatot",
+   1,
+   false
+  ],
+  [
+   "Pirut HaNeder",
+   1,
+   false
+  ],
+  [
+   "Hatart Nedarim",
+   1,
+   false
+  ],
+  [
+   "Inyonei Rosh Hashana",
+   1,
+   false
+  ],
+  [
+   "Birchot Eliyahu",
+   1,
+   false
+  ],
+  [
+   "Shaarei HaBracha",
+   1,
+   false
+  ],
+  [
+   "Luach HaBrachot",
+   1,
+   false
+  ],
+  [
+   "Gemara Barchot",
+   1,
+   false
+  ],
+  [
+   "HaLevi",
+   1,
+   false
+  ],
+  [
+   "Sidur Bet Yakov Birchat Hanehenin Kuf n",
+   1,
+   false
+  ],
+  [
+   "Rama. Vezot HaBracha",
+   1,
+   false
+  ],
+  [
+   "Halachich Insights",
+   1,
+   false
+  ],
+  [
+   "Orchot Rabbeinu III, p",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruch Ha’Arizal, Nefilat Apayim",
+   1,
+   false
+  ],
+  [
+   "Noda B’Yehuda",
+   1,
+   false
+  ],
+  [
+   "Beit Avi",
+   1,
+   false
+  ],
+  [
+   "Chikrei Minhagim",
+   1,
+   false
+  ],
+  [
+   "Otzar Teshuva",
+   1,
+   false
+  ],
+  [
+   "Avnei Chefetz",
+   1,
+   false
+  ],
+  [
+   "Shiyurei Bracha)",
+   1,
+   false
+  ],
+  [
+   "Haminhagim",
+   1,
+   false
+  ],
+  [
+   "Shomea Ke’oneh",
+   1,
+   false
+  ],
+  [
+   "Yoma",
+   1,
+   true
+  ],
+  [
+   "Kesher Godel",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai Shanah",
+   1,
+   false
+  ],
+  [
+   "Tefilla Betzibbur",
+   1,
+   false
+  ],
+  [
+   "Tefillat HaTzibbur",
+   1,
+   false
+  ],
+  [
+   "vadia Purim",
+   1,
+   false
+  ],
+  [
+   "Sh”t Meishiv Dvar",
+   1,
+   false
+  ],
+  [
+   "Torat Chessed",
+   1,
+   false
+  ],
+  [
+   "Arugot Habosem",
+   1,
+   false
+  ],
+  [
+   "Divrei Chaim",
+   1,
+   false
+  ],
+  [
+   "Kovietz Halachos",
+   1,
+   false
+  ],
+  [
+   "Binyan Tziyon",
+   1,
+   true
+  ],
+  [
+   "Yeshuot Malko",
+   1,
+   false
+  ],
+  [
+   "Maharil Diskin",
+   1,
+   false
+  ],
+  [
+   "Chazon Nachum",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef Kriat Hatorah",
+   1,
+   false
+  ],
+  [
+   "Moadei Yeshurun on Purim",
+   1,
+   false
+  ],
+  [
+   "Kovetz Halachot",
+   1,
+   false
+  ],
+  [
+   "Halichot Bat Yisrael",
+   1,
+   false
+  ],
+  [
+   "Chida in Tov Ayin",
+   1,
+   false
+  ],
+  [
+   "Money",
+   1,
+   false
+  ],
+  [
+   "Hizaharu Bimamon Chaverchem",
+   1,
+   false
+  ],
+  [
+   "Gra, Radvaz",
+   1,
+   false
+  ],
+  [
+   "Beit Shmuel",
+   1,
+   true
+  ],
+  [
+   "Shulchan Aruch Harav Gezela",
+   1,
+   false
+  ],
+  [
+   "Tosefta Baba Kama",
+   1,
+   true
+  ],
+  [
+   "Leviticus",
+   1,
+   true
+  ],
+  [
+   "Hilchot Bayit Ne'eman",
+   1,
+   false
+  ],
+  [
+   "The Prohibition of Stealing from a Non-Jew Gezel Akum",
+   1,
+   false
+  ],
+  [
+   "Beer Hagolah",
+   1,
+   false
+  ],
+  [
+   "Yad Yosef",
+   1,
+   false
+  ],
+  [
+   "Shemirat Hamoed Khilchato",
+   1,
+   false
+  ],
+  [
+   "Shemirat Shabbat Kehilchato ch",
+   1,
+   false
+  ],
+  [
+   "Chol Hamoed Shiur",
+   1,
+   false
+  ],
+  [
+   "Hilchot Chol Hamoed Zichron Shlomo biurim",
+   1,
+   false
+  ],
+  [
+   "Shemirat Hamoed Kehilchato p",
+   1,
+   false
+  ],
+  [
+   "Shemirat Hamoe",
+   1,
+   false
+  ],
+  [
+   "Brachot Through a Microphone",
+   1,
+   false
+  ],
+  [
+   "Kitzur Shulchan Aruch of Rav Mordechai Eliyah",
+   1,
+   false
+  ],
+  [
+   "Rashi s.v. “chatufa",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruuch",
+   1,
+   false
+  ],
+  [
+   "Brachot HaNehenin",
+   1,
+   false
+  ],
+  [
+   "Lulav",
+   1,
+   false
+  ],
+  [
+   "Tosfot s.v. velebani",
+   1,
+   false
+  ],
+  [
+   "Ramban Niddah",
+   1,
+   false
+  ],
+  [
+   "Chibur Hateshuva",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruch Choshen Moshpat",
+   1,
+   false
+  ],
+  [
+   "HaRivash Simah",
+   1,
+   false
+  ],
+  [
+   "Eretz HaTzvi",
+   1,
+   false
+  ],
+  [
+   "Gemara b”k",
+   1,
+   false
+  ],
+  [
+   "Rama . Netivot Mishpat",
+   1,
+   false
+  ],
+  [
+   "Meromei Sadeh Brachot",
+   1,
+   false
+  ],
+  [
+   "Kesef Kedoshim",
+   1,
+   false
+  ],
+  [
+   "Piskei Din Yerushalayim",
+   1,
+   false
+  ],
+  [
+   "im O”C",
+   1,
+   false
+  ],
+  [
+   "Sh”t Hitorerut Teshuva",
+   1,
+   false
+  ],
+  [
+   "Sh”t Machneh Chaim Kama",
+   1,
+   false
+  ],
+  [
+   "Sh”t Mechtam Ledavid O”C",
+   1,
+   false
+  ],
+  [
+   "Sh”t Lev Chaim",
+   1,
+   false
+  ],
+  [
+   "Yad Rama Bava Batra",
+   1,
+   false
+  ],
+  [
+   "Rosh Avoda Zara",
+   1,
+   true
+  ],
+  [
+   "Rambam Hilchos Avodas Kochavim",
+   1,
+   true
+  ],
+  [
+   "Yalkut Yosef Kitzur Shulchan Aruch O.C",
+   1,
+   false
+  ],
+  [
+   "Charedim Mitzvos Lo Saseh",
+   1,
+   false
+  ],
+  [
+   "Btzel HaChochma",
+   1,
+   false
+  ],
+  [
+   "HaChasidim",
+   1,
+   false
+  ],
+  [
+   "Chaim BiYad",
+   1,
+   false
+  ],
+  [
+   "Rov Dagan Kuntres Os L'Tovah",
+   1,
+   false
+  ],
+  [
+   "Gra Gemorah Shabbos",
+   1,
+   false
+  ],
+  [
+   "Medrash Eicha Rabah",
+   1,
+   false
+  ],
+  [
+   "Avoda Berurah Avoda Zara",
+   1,
+   false
+  ],
+  [
+   "Ateret Paz E.H",
+   1,
+   false
+  ],
+  [
+   "seforimblog.com",
+   1,
+   false
+  ],
+  [
+   "Merosh Tzurim",
+   1,
+   false
+  ],
+  [
+   "Shemirat Shabbat kihilchatah",
+   1,
+   false
+  ],
+  [
+   "Shemirat Shabbat Khilchata ch",
+   1,
+   false
+  ],
+  [
+   "Halachos of Muktzeh p",
+   1,
+   false
+  ],
+  [
+   "Shemirat Shabbat Kehilchita",
+   1,
+   false
+  ],
+  [
+   "30 and footnote",
+   1,
+   false
+  ],
+  [
+   "Tiltul Bmiksat",
+   1,
+   false
+  ],
+  [
+   "Byizchak Yikareh on mb",
+   1,
+   false
+  ],
+  [
+   "Mishna in Betzah",
+   1,
+   false
+  ],
+  [
+   "Daat",
+   1,
+   false
+  ],
+  [
+   "Kitzur Shulchan Aruch Shulchan Hamelech",
+   1,
+   false
+  ],
+  [
+   "Birkas Reuven Shlomo Shu”t",
+   1,
+   false
+  ],
+  [
+   "Sameiach Nefesh Ot Hei s.v. hashachar nashim",
+   1,
+   false
+  ],
+  [
+   "Avodat Hakodesh",
+   1,
+   false
+  ],
+  [
+   "Od Yosef Chai Vayeshev #9",
+   1,
+   false
+  ],
+  [
+   "Yesodei Yeshurun, Maareches Birkas Hashachar",
+   1,
+   false
+  ],
+  [
+   "HaKtav VeHaKabalah Shemos",
+   1,
+   false
+  ],
+  [
+   "Veshav Verafa",
+   1,
+   false
+  ],
+  [
+   "Otzrot Gedolei Yisrael",
+   1,
+   false
+  ],
+  [
+   "Pirkei Haavodah, Brachos",
+   1,
+   false
+  ],
+  [
+   "Shelo Asani Nochri",
+   1,
+   false
+  ],
+  [
+   "Siddur Eizor Eliyahu",
+   1,
+   false
+  ],
+  [
+   "Torat Hakadmonim",
+   1,
+   false
+  ],
+  [
+   "Teshuvos Vehanhagos",
+   1,
+   false
+  ],
+  [
+   "Chashukei Chemed Nidda",
+   1,
+   false
+  ],
+  [
+   "Pe'as Sadcha-- Tefillah",
+   1,
+   false
+  ],
+  [
+   "Yevakshu Mipihu Hilchos Tefillah",
+   1,
+   false
+  ],
+  [
+   "Sdei Chemed Asifat Dinim Maarechet Chirufin, §5",
+   1,
+   false
+  ],
+  [
+   "Halichot Sheva",
+   1,
+   false
+  ],
+  [
+   "Piskei Chachmei Hamaarav",
+   1,
+   false
+  ],
+  [
+   "Nishmat Chayim",
+   1,
+   false
+  ],
+  [
+   "Rav Yehoshua Monsonego)",
+   1,
+   false
+  ],
+  [
+   "Siddur Yaavetz",
+   1,
+   false
+  ],
+  [
+   "Rav Chaim Palagi",
+   1,
+   false
+  ],
+  [
+   "Answering_Amen_to_Your_Own_Bracha . Piskei Teshuvot",
+   1,
+   false
+  ],
+  [
+   "Chazon Ovadia Succot",
+   1,
+   false
+  ],
+  [
+   "Zohar Parshat Tzav",
+   1,
+   true
+  ],
+  [
+   "Chagai",
+   1,
+   false
+  ],
+  [
+   "Eyin Yitzchak",
+   1,
+   false
+  ],
+  [
+   "Order_of_Taking_the_Four_Minim#After_Sukkot . . Star-K",
+   1,
+   false
+  ],
+  [
+   "Huffingtonpost.com",
+   1,
+   false
+  ],
+  [
+   "Tosfot r\"h",
+   1,
+   false
+  ],
+  [
+   "Aruch Hashulchan. Kaf Hachayim",
+   1,
+   false
+  ],
+  [
+   "Tosfot Harosh Sotah",
+   1,
+   false
+  ],
+  [
+   "Ran r”h",
+   1,
+   false
+  ],
+  [
+   "Pri Chadash to",
+   1,
+   false
+  ],
+  [
+   "Talmidei Rabbenu Yonah Berachot",
+   1,
+   false
+  ],
+  [
+   "Chatom Sofer O.C",
+   1,
+   false
+  ],
+  [
+   "Yemei HaPesach",
+   1,
+   false
+  ],
+  [
+   "Mishna Brurah Tiferet",
+   1,
+   false
+  ],
+  [
+   "Yerushalmi Ta'anit",
+   1,
+   true
+  ],
+  [
+   "Bava Batra",
+   1,
+   true
+  ],
+  [
+   "Rambam is Chagiga",
+   1,
+   false
+  ],
+  [
+   "Chagiga",
+   1,
+   true
+  ],
+  [
+   "Avot Drebbe Natan ch",
+   1,
+   false
+  ],
+  [
+   "Matanot Aniyim",
+   1,
+   false
+  ],
+  [
+   "Rambam Peirush Hamishnayot Avot",
+   1,
+   false
+  ],
+  [
+   "Meiri b\"b",
+   1,
+   false
+  ],
+  [
+   "Midrash Rut",
+   1,
+   true
+  ],
+  [
+   "Shaar Kavanot Mincha Drush",
+   1,
+   false
+  ],
+  [
+   "Chida in Petach Ayanim Bava Kama",
+   1,
+   false
+  ],
+  [
+   "Yerushalmi Peah",
+   1,
+   true
+  ],
+  [
+   "Rav Chaim Palagi Haggadah p",
+   1,
+   false
+  ],
+  [
+   "Minchat Ani",
+   1,
+   false
+  ],
+  [
+   "Tosefta in Berachot",
+   1,
+   true
+  ],
+  [
+   "Ravya",
+   1,
+   false
+  ],
+  [
+   "Chayei Adam Klal",
+   1,
+   false
+  ],
+  [
+   "rabba",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef Tfilla",
+   1,
+   false
+  ],
+  [
+   "Chochmat Shlomo",
+   1,
+   false
+  ],
+  [
+   "Sh”t HaRambam",
+   1,
+   false
+  ],
+  [
+   "Divrei Chol in the Ktav Ashurit",
+   1,
+   false
+  ],
+  [
+   "Divrei Chol in Ktav Ashurit",
+   1,
+   false
+  ],
+  [
+   "Sh”t Chovot Yair",
+   1,
+   false
+  ],
+  [
+   "Sh”t Rav Poalim",
+   1,
+   false
+  ],
+  [
+   "Tosfot Sotah",
+   1,
+   false
+  ],
+  [
+   "Elef Lmateh",
+   1,
+   false
+  ],
+  [
+   "Rashi script",
+   1,
+   false
+  ],
+  [
+   "Nechpeh Bkesef v",
+   1,
+   false
+  ],
+  [
+   "rishonim",
+   1,
+   false
+  ],
+  [
+   "Piskei Rid",
+   1,
+   false
+  ],
+  [
+   "Ri Mlunil Pesachim",
+   1,
+   false
+  ],
+  [
+   "Talmidei Harashba",
+   1,
+   false
+  ],
+  [
+   "Bigdei Shesh",
+   1,
+   false
+  ],
+  [
+   "Peni Yehoshua",
+   1,
+   false
+  ],
+  [
+   "Ner Tzion p",
+   1,
+   false
+  ],
+  [
+   "Zohar on Eicha",
+   1,
+   false
+  ],
+  [
+   "Mishnat Yehoshua Cheylo Milah",
+   1,
+   false
+  ],
+  [
+   "Lzecher Dovid",
+   1,
+   false
+  ],
+  [
+   "Ish Matzliach",
+   1,
+   false
+  ],
+  [
+   "Sidur Ltisha B'av",
+   1,
+   false
+  ],
+  [
+   "Mikarei Kodesh",
+   1,
+   false
+  ],
+  [
+   "Ohalei Shem",
+   1,
+   false
+  ],
+  [
+   "Horat Shaah",
+   1,
+   false
+  ],
+  [
+   "Chok Lyakov for",
+   1,
+   false
+  ],
+  [
+   "Rashi Devarim",
+   1,
+   true
+  ],
+  [
+   "Rambam Yesodei Hatorah",
+   1,
+   true
+  ],
+  [
+   "Shir Hashirim",
+   1,
+   false
+  ],
+  [
+   "Mesilat Yesharim ch",
+   1,
+   false
+  ],
+  [
+   "Rashi Kiddushin",
+   1,
+   false
+  ],
+  [
+   "Rashi Niddah",
+   1,
+   false
+  ],
+  [
+   "Melachim II",
+   1,
+   true
+  ],
+  [
+   "Baalai HaTosfot",
+   1,
+   false
+  ],
+  [
+   "Melachim I:17",
+   1,
+   true
+  ],
+  [
+   "Gm Yevamot",
+   1,
+   false
+  ],
+  [
+   "Sh”t Lechem Shlomo O”C",
+   1,
+   false
+  ],
+  [
+   "Moadei Hashem",
+   1,
+   false
+  ],
+  [
+   "Sh”t Imrei Shefer O”C",
+   1,
+   false
+  ],
+  [
+   "Sh”t Sheilat Yitzchak",
+   1,
+   false
+  ],
+  [
+   "Netah Surak",
+   1,
+   false
+  ],
+  [
+   "Sh”t Katav Sofer",
+   1,
+   false
+  ],
+  [
+   "Sh”t Shevet Sofer",
+   1,
+   false
+  ],
+  [
+   "Bet Halevi on Torah",
+   1,
+   false
+  ],
+  [
+   "Mishpat Cohen",
+   1,
+   false
+  ],
+  [
+   "Sh”t Rivavot Efraim",
+   1,
+   false
+  ],
+  [
+   "Sh”t Mishnat Halachot",
+   1,
+   false
+  ],
+  [
+   "Moadim BeHalacha",
+   1,
+   false
+  ],
+  [
+   "Orchot Chaim Chanukah",
+   1,
+   false
+  ],
+  [
+   "Sh”t Pear Hadur",
+   1,
+   false
+  ],
+  [
+   "Olot Shabbat",
+   1,
+   false
+  ],
+  [
+   "Sadeh HaAretz",
+   1,
+   false
+  ],
+  [
+   "Sh”t Yehuda Yaleh Assad O”C",
+   1,
+   false
+  ],
+  [
+   "Katav Sofer O”C",
+   1,
+   false
+  ],
+  [
+   "Kol Sinai",
+   1,
+   false
+  ],
+  [
+   "Sedei Chemed",
+   1,
+   false
+  ],
+  [
+   "Sh”t Meishev Devar",
+   1,
+   false
+  ],
+  [
+   "Masechet Taanit",
+   1,
+   true
+  ],
+  [
+   "Koren Siddur",
+   1,
+   false
+  ],
+  [
+   "Birchat Hashanim p",
+   1,
+   false
+  ],
+  [
+   "Ten Tal on December",
+   1,
+   false
+  ],
+  [
+   "Julian calendar",
+   1,
+   false
+  ],
+  [
+   "Tosfot Rabbenu Peretz Eruvin",
+   1,
+   false
+  ],
+  [
+   "Tikkun Eruvin p",
+   1,
+   false
+  ],
+  [
+   "Geon Yakov",
+   1,
+   false
+  ],
+  [
+   "Rosh. Avnei Nezer",
+   1,
+   false
+  ],
+  [
+   "Rosh. Chazon Ish",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai Vayishlach Halacha",
+   1,
+   false
+  ],
+  [
+   "Rambam Hilchot Deiot",
+   1,
+   true
+  ],
+  [
+   "Laws of Daily Living by Rav Simcha Bunim Cohen",
+   1,
+   false
+  ],
+  [
+   "Kol Eliyahu Siddur p",
+   1,
+   false
+  ],
+  [
+   "Mshiurei Maran Harishon Letzion v",
+   1,
+   false
+  ],
+  [
+   "Seder Birkat HaNehenin",
+   1,
+   true
+  ],
+  [
+   "Rambam Hilchot Teshuva",
+   1,
+   true
+  ],
+  [
+   "Raavyah Rosh Hashana",
+   1,
+   false
+  ],
+  [
+   "Pat Akum",
+   1,
+   false
+  ],
+  [
+   "Rabbeinu Manoach Hilchot Chametz UMatzah",
+   1,
+   false
+  ],
+  [
+   "Aseres Yemei Teshuvah",
+   1,
+   false
+  ],
+  [
+   "B'Yitzchak Yikra",
+   1,
+   false
+  ],
+  [
+   "Orchot Chaim Tefilla",
+   1,
+   false
+  ],
+  [
+   "Ritva on Berachot",
+   1,
+   true
+  ],
+  [
+   "Haghot Maimoni on Rambam Tefilla",
+   1,
+   false
+  ],
+  [
+   "Raavya Berachot",
+   1,
+   false
+  ],
+  [
+   "Mateh Ephraim",
+   1,
+   false
+  ],
+  [
+   "Taharat Hashulchan",
+   1,
+   false
+  ],
+  [
+   "Beraisa",
+   1,
+   false
+  ],
+  [
+   "Rashi. Aruch Hashulchan",
+   1,
+   false
+  ],
+  [
+   "Sh”t Minchat Shlomo Tinyana",
+   1,
+   false
+  ],
+  [
+   "Beiur Halachah, s.v. d’havi",
+   1,
+   false
+  ],
+  [
+   "Da’as Torah",
+   1,
+   false
+  ],
+  [
+   "Tosfos Shabbat",
+   1,
+   true
+  ],
+  [
+   "Mordechai Shabbos",
+   1,
+   false
+  ],
+  [
+   "Defensa de la Minhag",
+   1,
+   false
+  ],
+  [
+   "El Rosh",
+   1,
+   false
+  ],
+  [
+   "Taanit Tzibur. Torat HaMoadim",
+   1,
+   false
+  ],
+  [
+   "Shu”t Guinat Veradim",
+   1,
+   false
+  ],
+  [
+   "Shu”t Perach Shoshan",
+   1,
+   false
+  ],
+  [
+   "Iad Aharon",
+   1,
+   false
+  ],
+  [
+   "Hagahot Rabí Akiva Eiger",
+   1,
+   false
+  ],
+  [
+   "Sidur Iavetz",
+   1,
+   false
+  ],
+  [
+   "Rav Brachot",
+   1,
+   false
+  ],
+  [
+   "Kitzur Shulchan Aruch HilKhot Chodesh Adar #4",
+   1,
+   false
+  ],
+  [
+   "s Money",
+   1,
+   false
+  ],
+  [
+   "Pitchei Choshen Hilchot Geneava",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruch Harav Hilchot Gezela Seif",
+   1,
+   false
+  ],
+  [
+   "Stealing To Save Someone's Life",
+   1,
+   false
+  ],
+  [
+   "A Woman Donating Tzedaka",
+   1,
+   false
+  ],
+  [
+   "Gemara Baba Kama",
+   1,
+   true
+  ],
+  [
+   "Noda Biyehuda . Halachos of Other People's Money",
+   1,
+   false
+  ],
+  [
+   "Machane Ephraim Hilchot Zechiya",
+   1,
+   false
+  ],
+  [
+   "Halachos of Other",
+   1,
+   false
+  ],
+  [
+   "Ish Matzliach footnote",
+   1,
+   false
+  ],
+  [
+   "Beiur Halacha s.v. VeLo tet zayin bichlal",
+   1,
+   false
+  ],
+  [
+   "Molad calculation",
+   1,
+   false
+  ],
+  [
+   "Yeshuos Yaakov",
+   1,
+   false
+  ],
+  [
+   "daf",
+   1,
+   false
+  ],
+  [
+   "Star K Cereal List",
+   1,
+   false
+  ],
+  [
+   "Beresheet p",
+   1,
+   false
+  ],
+  [
+   "Taz E.H",
+   1,
+   false
+  ],
+  [
+   "Pitchei Teshuva Y.D",
+   1,
+   true
+  ],
+  [
+   "Chavot Yair. Mishna Brurah",
+   1,
+   false
+  ],
+  [
+   "Aruch Hashulchan E.H",
+   1,
+   true
+  ],
+  [
+   "Ruach Chaim",
+   1,
+   false
+  ],
+  [
+   "Cheena V’chisda v",
+   1,
+   false
+  ],
+  [
+   "Yemey Shlomo Isurei Biyah",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef E.H",
+   1,
+   false
+  ],
+  [
+   "First, Kibbud Av V’em",
+   1,
+   false
+  ],
+  [
+   "Second, Kibbud Av V’em",
+   1,
+   false
+  ],
+  [
+   "Maharik. Gra",
+   1,
+   false
+  ],
+  [
+   "Even Haozer. . Dirshu",
+   1,
+   false
+  ],
+  [
+   "Igrot Chazon Ish",
+   1,
+   false
+  ],
+  [
+   "Orchot Rabbenu Pesach p",
+   1,
+   false
+  ],
+  [
+   "Star-K Guide], Young Israel of Woodmere Guide",
+   1,
+   false
+  ],
+  [
+   "Pri Magadim MZ",
+   1,
+   false
+  ],
+  [
+   "Seder Erev Pesach Shchal Bshabbat n",
+   1,
+   false
+  ],
+  [
+   "Maharil Erev Pesach n",
+   1,
+   false
+  ],
+  [
+   "Darkei Chayim Vshalom p",
+   1,
+   false
+  ],
+  [
+   "Tosfot Chachmei Angliya Pesachim",
+   1,
+   false
+  ],
+  [
+   "Rabbenu Peretz Pesachim",
+   1,
+   false
+  ],
+  [
+   "Vaayen Yosef",
+   1,
+   false
+  ],
+  [
+   "Gam Ani Odecha",
+   1,
+   false
+  ],
+  [
+   "Halachos of the Four Minim",
+   1,
+   false
+  ],
+  [
+   "Pituchei Arbaat HaMinim",
+   1,
+   false
+  ],
+  [
+   "Terumat Hadeshen responsa",
+   1,
+   false
+  ],
+  [
+   "Hilchot Arba Minim",
+   1,
+   false
+  ],
+  [
+   "Halachos of the Four Species",
+   1,
+   false
+  ],
+  [
+   "A Practical Guide to Purchasing Daled Minim",
+   1,
+   false
+  ],
+  [
+   "Chaim Ubracha",
+   1,
+   false
+  ],
+  [
+   "Tiferet Yisrael Avoda Zara Boaz",
+   1,
+   false
+  ],
+  [
+   "Shalmei Moed p",
+   1,
+   false
+  ],
+  [
+   "Otzar Halachot",
+   1,
+   false
+  ],
+  [
+   "Oz Bhadar",
+   1,
+   false
+  ],
+  [
+   "Otzar Hayirchon v",
+   1,
+   false
+  ],
+  [
+   "Moreh Bi'etzba",
+   1,
+   false
+  ],
+  [
+   "Hagadat Ohalei Shem p",
+   1,
+   false
+  ],
+  [
+   "B’ikvei HaTzon B’ikvei HaTzon p",
+   1,
+   false
+  ],
+  [
+   "Kol Chamira",
+   1,
+   false
+  ],
+  [
+   "Chiddushim to Shabbos",
+   1,
+   false
+  ],
+  [
+   "HaMitzvos, Shoresh",
+   1,
+   false
+  ],
+  [
+   "Soups . Laws of Brachos",
+   1,
+   false
+  ],
+  [
+   "Ikar and Tofel",
+   1,
+   false
+  ],
+  [
+   "Halacha of Brachos",
+   1,
+   false
+  ],
+  [
+   "Pas Haba Bikisnin",
+   1,
+   false
+  ],
+  [
+   "Yamim Tovim",
+   1,
+   false
+  ],
+  [
+   "Rashi, Tosfot Megillah",
+   1,
+   false
+  ],
+  [
+   "Rashba Megillah",
+   1,
+   false
+  ],
+  [
+   "Meor Yisrael Pesachim",
+   1,
+   false
+  ],
+  [
+   "Kol Mevaser",
+   1,
+   false
+  ],
+  [
+   "Chaim LeRosh",
+   1,
+   false
+  ],
+  [
+   "Tosfot. Halacha Brurah",
+   1,
+   false
+  ],
+  [
+   "Nemukei Yosef b\"b",
+   1,
+   false
+  ],
+  [
+   "Sephardim, Halacha Brurah",
+   1,
+   false
+  ],
+  [
+   "Habatim ch",
+   1,
+   false
+  ],
+  [
+   "Halacha Brurah v",
+   1,
+   false
+  ],
+  [
+   "Mahari MeLunil",
+   1,
+   false
+  ],
+  [
+   "Ravan",
+   1,
+   false
+  ],
+  [
+   "Netivot in Tikkun Eruvin",
+   1,
+   false
+  ],
+  [
+   "Tikkun Eruvin. . Mayim Amukim",
+   1,
+   false
+  ],
+  [
+   "Binat Simcha",
+   1,
+   false
+  ],
+  [
+   "Bikurei Elazar p",
+   1,
+   false
+  ],
+  [
+   "Bikrei Elazar p",
+   1,
+   false
+  ],
+  [
+   "Chatom Sofer, Nodeh Beyehuda",
+   1,
+   false
+  ],
+  [
+   "Mareh Kohen p",
+   1,
+   false
+  ],
+  [
+   "Ran s.v. ulinyan",
+   1,
+   false
+  ],
+  [
+   "Nemukei Yosef s.v. eizhu batar mikara",
+   1,
+   false
+  ],
+  [
+   "Sharit Chaim, Igrot Moshe n",
+   1,
+   false
+  ],
+  [
+   "Chazom Ish",
+   1,
+   false
+  ],
+  [
+   "Talmid Harashba. Shach",
+   1,
+   false
+  ],
+  [
+   "Bach. Taz",
+   1,
+   false
+  ],
+  [
+   "Tosfot s.v. ein",
+   1,
+   false
+  ],
+  [
+   "Rashi. . Rambam Malveh Vloveh",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruch. . Shach",
+   1,
+   false
+  ],
+  [
+   "Pilpula Charifta",
+   1,
+   false
+  ],
+  [
+   "Maharam Shif",
+   1,
+   false
+  ],
+  [
+   "Rav in Bava Metsia",
+   1,
+   false
+  ],
+  [
+   "Rava on",
+   1,
+   false
+  ],
+  [
+   "Rashba b\"m",
+   1,
+   false
+  ],
+  [
+   "Tiferet Lmoshe on Shach",
+   1,
+   false
+  ],
+  [
+   "Or Same'ach b\"m",
+   1,
+   false
+  ],
+  [
+   "Mesivta Yalkut Biurim b\"m",
+   1,
+   false
+  ],
+  [
+   "Rabbenu Heshel of Cracow",
+   1,
+   false
+  ],
+  [
+   "shas n",
+   1,
+   false
+  ],
+  [
+   "Mesivta Yalkut Mefarshim b\"m",
+   1,
+   false
+  ],
+  [
+   "Rashi Chagiga",
+   1,
+   false
+  ],
+  [
+   "Shulchun Aruch Harav Y.D",
+   1,
+   false
+  ],
+  [
+   "Bereshit",
+   1,
+   true
+  ],
+  [
+   "Meshakh Ḥochmah Genesis",
+   1,
+   false
+  ],
+  [
+   "The Educational Experience of Sippur Yitziat Mizrayim",
+   1,
+   false
+  ],
+  [
+   "Gemara Nazir",
+   1,
+   true
+  ],
+  [
+   "Fine, D. \"The Mitzvah of Chinuch Explored.\" Shortvort. N.p., n.d. Web",
+   1,
+   false
+  ],
+  [
+   "A Parent's Guide to Teaching Children Mitzvot",
+   1,
+   false
+  ],
+  [
+   "Google Books. Shmuel Singer, n.d. Web",
+   1,
+   false
+  ],
+  [
+   "V'Zos HaBracha",
+   1,
+   false
+  ],
+  [
+   "Chanoch L’Naar",
+   1,
+   false
+  ],
+  [
+   "CHINUCH AGE.\" Ah",
+   1,
+   false
+  ],
+  [
+   "Avot",
+   1,
+   true
+  ],
+  [
+   "Bach O.C",
+   1,
+   true
+  ],
+  [
+   "Tumim C.M",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef Sukkah p",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef Hilchot Yom Tov p",
+   1,
+   false
+  ],
+  [
+   "Magen Giborim",
+   1,
+   false
+  ],
+  [
+   "Pela Yoetz",
+   1,
+   false
+  ],
+  [
+   "Devarim Rabba Ki Tetze",
+   1,
+   false
+  ],
+  [
+   "Beit Midrash",
+   1,
+   false
+  ],
+  [
+   "S”A Y”D",
+   1,
+   false
+  ],
+  [
+   "Bereshit Rabba",
+   1,
+   true
+  ],
+  [
+   "Rashi Beitzah",
+   1,
+   false
+  ],
+  [
+   "Meiri there s”v HaMenachesh",
+   1,
+   false
+  ],
+  [
+   "Mishna Brurah’s introduction to",
+   1,
+   false
+  ],
+  [
+   "Eglei Tal Choresh s”k",
+   1,
+   false
+  ],
+  [
+   "Chayei Adam Hilchos Shabbos",
+   1,
+   false
+  ],
+  [
+   "Nishmas Adam",
+   1,
+   false
+  ],
+  [
+   "Eglei Tal Zoreah s”k",
+   1,
+   false
+  ],
+  [
+   "Ohr Zarua",
+   1,
+   false
+  ],
+  [
+   "Bavli Shabbos",
+   1,
+   true
+  ],
+  [
+   "Maharam s”v B’emtza Dibburo V’od",
+   1,
+   false
+  ],
+  [
+   "Shita LaRan",
+   1,
+   false
+  ],
+  [
+   "Shabbos s”v Haysa",
+   1,
+   false
+  ],
+  [
+   "Rambam in Hilchos Shabbos",
+   1,
+   true
+  ],
+  [
+   "Lo Sa’aseh Kol Melacha Ata U-Behemtecha",
+   1,
+   false
+  ],
+  [
+   "Magid Mishnah",
+   1,
+   false
+  ],
+  [
+   "Rambam Gezela Vaaveda",
+   1,
+   false
+  ],
+  [
+   "Magen Avraham A.C",
+   1,
+   false
+  ],
+  [
+   "Tosefot on Bava Metziya",
+   1,
+   false
+  ],
+  [
+   "Gemara on Bava Metziya",
+   1,
+   false
+  ],
+  [
+   "Ketzot",
+   1,
+   false
+  ],
+  [
+   "Mishpittei HaTorah",
+   1,
+   false
+  ],
+  [
+   "Rashba in Bava Metziya",
+   1,
+   false
+  ],
+  [
+   "Ritva Baba Metzia",
+   1,
+   false
+  ],
+  [
+   "Halachos of Brachos Addendum",
+   1,
+   false
+  ],
+  [
+   "Shitat HaKadmonim",
+   1,
+   false
+  ],
+  [
+   "Gemara in Sanhedrin",
+   1,
+   true
+  ],
+  [
+   "Hashkafa",
+   1,
+   false
+  ],
+  [
+   "Az Nidabru",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef O.C",
+   1,
+   false
+  ],
+  [
+   "Tosafot Berachot",
+   1,
+   true
+  ],
+  [
+   "BeTzel HaChochmah",
+   1,
+   false
+  ],
+  [
+   "Chevel Nachalato",
+   1,
+   false
+  ],
+  [
+   "Alei Siach p",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai, Lech Lecha. . Amot Shel Halacha",
+   1,
+   false
+  ],
+  [
+   "Hagahot Mordechai Yevamot",
+   1,
+   false
+  ],
+  [
+   "Rambam. Mordechai Yevamot",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruch. Achiezer",
+   1,
+   false
+  ],
+  [
+   "Perach Mateh Aharon",
+   1,
+   false
+  ],
+  [
+   "Rambam Issurei Biah",
+   1,
+   true
+  ],
+  [
+   "Mishnah Beitzah",
+   1,
+   true
+  ],
+  [
+   "Yerushalmi, Ran",
+   1,
+   false
+  ],
+  [
+   "Yam HaMelech",
+   1,
+   false
+  ],
+  [
+   "Sh'Asah Et HaYam HaGadol within",
+   1,
+   false
+  ],
+  [
+   "Sephardim Yalkut Yosef",
+   1,
+   false
+  ],
+  [
+   "Vizot HaBracha",
+   1,
+   false
+  ],
+  [
+   "Moreshet Moshe v",
+   1,
+   false
+  ],
+  [
+   "The Great American Eclipse of",
+   1,
+   false
+  ],
+  [
+   "Halachic",
+   1,
+   false
+  ],
+  [
+   "Hachupa Vhanesuin",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai Emor II n",
+   1,
+   false
+  ],
+  [
+   "Yitzchak Yiranen",
+   1,
+   false
+  ],
+  [
+   "Refuah Sheleimah p",
+   1,
+   false
+  ],
+  [
+   "Puah v",
+   1,
+   false
+  ],
+  [
+   "Darkei Tahara c",
+   1,
+   false
+  ],
+  [
+   "Olah Shel Torah",
+   1,
+   false
+  ],
+  [
+   "Vavey Haamudim v",
+   1,
+   false
+  ],
+  [
+   "The Guide for the Perplexed",
+   1,
+   false
+  ],
+  [
+   "Hegyonei Haparsha Shemot",
+   1,
+   false
+  ],
+  [
+   "To'ameha Chaim",
+   1,
+   false
+  ],
+  [
+   "Midrash Rabba",
+   1,
+   false
+  ],
+  [
+   "C.f. Sefer Hachinuch",
+   1,
+   false
+  ],
+  [
+   "Hegyonei Haparsha",
+   1,
+   false
+  ],
+  [
+   "To'ameha Chayim",
+   1,
+   false
+  ],
+  [
+   "Rashi Beresheet",
+   1,
+   true
+  ],
+  [
+   "Parashas Vayeshev",
+   1,
+   true
+  ],
+  [
+   "Rashi there. . Ya'alkut Yosef",
+   1,
+   false
+  ],
+  [
+   "Shiltei Ha'giborim",
+   1,
+   false
+  ],
+  [
+   "Teshuvos HaBach",
+   1,
+   false
+  ],
+  [
+   "Mishnah Berura Dirshu",
+   1,
+   false
+  ],
+  [
+   "Tractate Sofrim",
+   1,
+   true
+  ],
+  [
+   "Hagaos Maimoniyos",
+   1,
+   false
+  ],
+  [
+   "Ya'alkut Yosef Shabbat",
+   1,
+   false
+  ],
+  [
+   "Meiri Sanhedrin",
+   1,
+   false
+  ],
+  [
+   "Maharam Paduah",
+   1,
+   false
+  ],
+  [
+   "Chatom Sofer on S”A",
+   1,
+   false
+  ],
+  [
+   "Shlomo",
+   1,
+   false
+  ],
+  [
+   "Orchot Shabbat ch",
+   1,
+   false
+  ],
+  [
+   "Avnei Yishfeh, Shalmei Yehuda",
+   1,
+   false
+  ],
+  [
+   "Pesik Reisha Dlo Nicha Leh",
+   1,
+   false
+  ],
+  [
+   "Molid Esh",
+   1,
+   false
+  ],
+  [
+   "Maliyot BeShabbat",
+   1,
+   false
+  ],
+  [
+   "The Shabbos Home",
+   1,
+   false
+  ],
+  [
+   "Halacha Engages Modernity Part",
+   1,
+   false
+  ],
+  [
+   "Piskei Uziel",
+   1,
+   false
+  ],
+  [
+   "Electricity on Sha",
+   1,
+   false
+  ],
+  [
+   "Rambam, Hilchot Mechira",
+   1,
+   true
+  ],
+  [
+   "Tosefta, Bava Kamma",
+   1,
+   true
+  ],
+  [
+   "Rambam Deot",
+   1,
+   true
+  ],
+  [
+   "Bach, Beer Hagolah",
+   1,
+   false
+  ],
+  [
+   "Sama . Shulchan Aruch",
+   1,
+   false
+  ],
+  [
+   "Kuntres Onat Devarim Ugenivat Daat p",
+   1,
+   false
+  ],
+  [
+   "Raavad s.v. lo yitleh",
+   1,
+   false
+  ],
+  [
+   "Chovat Hashemira . Pitchei Choshen Geniva ch",
+   1,
+   false
+  ],
+  [
+   "Meiri . Pitchei Choshen Geniva ch",
+   1,
+   false
+  ],
+  [
+   "Rashbam Pesachim",
+   1,
+   true
+  ],
+  [
+   "BusinessHalacha.com",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruch Harav n",
+   1,
+   false
+  ],
+  [
+   "Darkei Moshe Haaroch",
+   1,
+   false
+  ],
+  [
+   "Tosfot. Taharat Habayit v",
+   1,
+   false
+  ],
+  [
+   "Tzemach Tzedek responsa",
+   1,
+   false
+  ],
+  [
+   "Laws and Concepts of Niddah",
+   1,
+   false
+  ],
+  [
+   "Mordechai Niddah",
+   1,
+   false
+  ],
+  [
+   "Inyanei Erev Pesach She'chal BeShabbat\", min",
+   1,
+   false
+  ],
+  [
+   "Am Mordechai Haggadah p",
+   1,
+   false
+  ],
+  [
+   "Chidushim",
+   1,
+   false
+  ],
+  [
+   "Ritva Psachim",
+   1,
+   false
+  ],
+  [
+   "Rabbenu Dovid Pesachim",
+   1,
+   false
+  ],
+  [
+   "Rambam Chametz Umatzah",
+   1,
+   false
+  ],
+  [
+   "Teshuvat HaRambam",
+   1,
+   false
+  ],
+  [
+   "Ahavat Tzedaka",
+   1,
+   false
+  ],
+  [
+   "Rabbenu Yona",
+   1,
+   false
+  ],
+  [
+   "Hamitzvot of Rambam",
+   1,
+   false
+  ],
+  [
+   "Rishon Letzion",
+   1,
+   false
+  ],
+  [
+   "Rashba Shevuot",
+   1,
+   false
+  ],
+  [
+   "Mahari Kurkos",
+   1,
+   false
+  ],
+  [
+   "Heichlei Shen",
+   1,
+   false
+  ],
+  [
+   "Mahari Asad",
+   1,
+   false
+  ],
+  [
+   "Kol Eliyahu",
+   1,
+   false
+  ],
+  [
+   "Borach Tzedaka p",
+   1,
+   false
+  ],
+  [
+   "Bmechitzat Rabbenu p",
+   1,
+   false
+  ],
+  [
+   "Orach Tzedaka p",
+   1,
+   false
+  ],
+  [
+   "Alenu Lshabe'ach v",
+   1,
+   false
+  ],
+  [
+   "Rishon Letzion. *Laws of Tzedakah and Maaser p",
+   1,
+   false
+  ],
+  [
+   "Rashbam",
+   1,
+   false
+  ],
+  [
+   "Rashi s.v. hatov",
+   1,
+   false
+  ],
+  [
+   "Rashi Ketubot",
+   1,
+   false
+  ],
+  [
+   "Tasis and Same'ach Tisamach",
+   1,
+   false
+  ],
+  [
+   "LDovid Emet",
+   1,
+   false
+  ],
+  [
+   "Emet Lyakov p",
+   1,
+   false
+  ],
+  [
+   "Shita Mikubeset Ketubot",
+   1,
+   false
+  ],
+  [
+   "Yerushalmi. . Tosfot Brachot",
+   1,
+   false
+  ],
+  [
+   "Tefillat Haderech",
+   1,
+   false
+  ],
+  [
+   "S”A, Kitzur Shulchan Aruch",
+   1,
+   false
+  ],
+  [
+   "Rambam Eruvin",
+   1,
+   true
+  ],
+  [
+   "Biur Halacha. . Netivot Shabbat",
+   1,
+   false
+  ],
+  [
+   "Avnei Yishfeh O.C",
+   1,
+   false
+  ],
+  [
+   "Torat Hamelachot",
+   1,
+   false
+  ],
+  [
+   "Chatam Sofer Shabbat",
+   1,
+   true
+  ],
+  [
+   "Ran on the Rif",
+   1,
+   false
+  ],
+  [
+   "Rama. Taz",
+   1,
+   false
+  ],
+  [
+   "Rashba. Magen Avraham",
+   1,
+   false
+  ],
+  [
+   "Umekarev Biyemin",
+   1,
+   false
+  ],
+  [
+   "Biohala shel torah",
+   1,
+   false
+  ],
+  [
+   "Even Yisrael",
+   1,
+   false
+  ],
+  [
+   "Torah UMadah",
+   1,
+   false
+  ],
+  [
+   "Kovetz Mamarim BeInyanei Chashmal",
+   1,
+   false
+  ],
+  [
+   "Mikra Megillah",
+   1,
+   false
+  ],
+  [
+   "Tekiat Shofar",
+   1,
+   false
+  ],
+  [
+   "Chazon Ovadia Yamim Noraim p",
+   1,
+   false
+  ],
+  [
+   "Motzei Shabbat Shiurim",
+   1,
+   false
+  ],
+  [
+   "Gilyonei HaShas",
+   1,
+   false
+  ],
+  [
+   "Mishna in Sukkah",
+   1,
+   true
+  ],
+  [
+   "Beiur Halacha s.v. KeBaytzah",
+   1,
+   false
+  ],
+  [
+   "Mateh Efraim",
+   1,
+   false
+  ],
+  [
+   "Divrei Dovid",
+   1,
+   false
+  ],
+  [
+   "Mshiurei Maran Rishon Letzion v",
+   1,
+   false
+  ],
+  [
+   "Zachor Et Yom Ha Shabbat",
+   1,
+   false
+  ],
+  [
+   "Ravi’ah Brachot",
+   1,
+   false
+  ],
+  [
+   "Hachinuch Mitvah",
+   1,
+   false
+  ],
+  [
+   "Taharat Yisrael",
+   1,
+   false
+  ],
+  [
+   "Ezer Mkodesh",
+   1,
+   false
+  ],
+  [
+   "Chazon Ish Igrot",
+   1,
+   false
+  ],
+  [
+   "Lo Taturu",
+   1,
+   false
+  ],
+  [
+   "din.org",
+   1,
+   false
+  ],
+  [
+   "Shach. The Laws of Niddah v",
+   1,
+   false
+  ],
+  [
+   "Shach. Shoshanat Ha'amakim",
+   1,
+   false
+  ],
+  [
+   "Shabbat KeHilchata",
+   1,
+   false
+  ],
+  [
+   "Pitchai Teshuva",
+   1,
+   false
+  ],
+  [
+   "Laws of Amira Lenochri, halacha",
+   1,
+   false
+  ],
+  [
+   "Tiferet Yisrael in Kalkelet Hashabbat",
+   1,
+   false
+  ],
+  [
+   "Melachim Emuncha",
+   1,
+   false
+  ],
+  [
+   "Masa Ovadia pp",
+   1,
+   false
+  ],
+  [
+   "Hatrumah Hilchot Eretz Yisrael",
+   1,
+   false
+  ],
+  [
+   "Rash Sheviti",
+   1,
+   false
+  ],
+  [
+   "Rashbetz",
+   1,
+   false
+  ],
+  [
+   "Rambam. Magen Avraham",
+   1,
+   false
+  ],
+  [
+   "Rambam. Meiri Shevuot",
+   1,
+   false
+  ],
+  [
+   "Likutei Halachot Zevachim ch",
+   1,
+   false
+  ],
+  [
+   "Ridvaz teshuva",
+   1,
+   false
+  ],
+  [
+   "Mishpat Kohen",
+   1,
+   false
+  ],
+  [
+   "Rambam Shegagot",
+   1,
+   true
+  ],
+  [
+   "Derech Hakodesh",
+   1,
+   false
+  ],
+  [
+   "Ir Hakodesh Vehamikdash v",
+   1,
+   false
+  ],
+  [
+   "Mikdash Dovid Kodshim",
+   1,
+   false
+  ],
+  [
+   "Ezra",
+   1,
+   true
+  ],
+  [
+   "Hilchot Chol Hamoed Zichron Shlomo teshuva n",
+   1,
+   false
+  ],
+  [
+   "Rabbenu Gershom",
+   1,
+   false
+  ],
+  [
+   "Rama. Mishna Brurah",
+   1,
+   false
+  ],
+  [
+   "Shemirat Hamoed Kehilchato",
+   1,
+   false
+  ],
+  [
+   "Shachrit Shel Chol",
+   1,
+   false
+  ],
+  [
+   "Tosfot Shantz",
+   1,
+   false
+  ],
+  [
+   "Siftei Shoshanim",
+   1,
+   false
+  ],
+  [
+   "Tahart HaMayim",
+   1,
+   false
+  ],
+  [
+   "Shedei Chemed",
+   1,
+   false
+  ],
+  [
+   "Atret Zekenim",
+   1,
+   false
+  ],
+  [
+   "Sh”t Tzitz Eliezer",
+   1,
+   false
+  ],
+  [
+   "Shlamei Tzibbor",
+   1,
+   false
+  ],
+  [
+   "Sh”t Shalit Yavetz",
+   1,
+   false
+  ],
+  [
+   "Hitorirut Teshuva",
+   1,
+   false
+  ],
+  [
+   "Melachim",
+   1,
+   false
+  ],
+  [
+   "Siach Tzadikim",
+   1,
+   false
+  ],
+  [
+   "Piskei Maharach Or Zaruah",
+   1,
+   false
+  ],
+  [
+   "chabad.org.il",
+   1,
+   false
+  ],
+  [
+   "Otzar Habrit p",
+   1,
+   false
+  ],
+  [
+   "Bayit HaYehudah",
+   1,
+   false
+  ],
+  [
+   "Rabbenu Bechay Beresheet",
+   1,
+   false
+  ],
+  [
+   "Bechorat Habrit",
+   1,
+   false
+  ],
+  [
+   "La Guemará en Pesachim",
+   1,
+   false
+  ],
+  [
+   "Iabia Omer",
+   1,
+   false
+  ],
+  [
+   "El Bach",
+   1,
+   false
+  ],
+  [
+   "Mishna Brurah en Shaar HaTziun",
+   1,
+   false
+  ],
+  [
+   "Shiurim sobre Hilkhot Pesach",
+   1,
+   false
+  ],
+  [
+   "Ver Kaf HaChaim",
+   1,
+   false
+  ],
+  [
+   "en Bamidbar",
+   1,
+   false
+  ],
+  [
+   "Shu”t del Chatam Sofer",
+   1,
+   false
+  ],
+  [
+   "Ohr LeTzión",
+   1,
+   false
+  ],
+  [
+   "el Arukh HaShulchan",
+   1,
+   false
+  ],
+  [
+   "Perisha Ioreh Deah",
+   1,
+   false
+  ],
+  [
+   "Gemara in Bava Kama",
+   1,
+   true
+  ],
+  [
+   "emirat Shabbat KeHilchata",
+   1,
+   false
+  ],
+  [
+   "Borer #13",
+   1,
+   false
+  ],
+  [
+   "Shabbos #7 min",
+   1,
+   false
+  ],
+  [
+   "Morasha Kollel Borer #10, min",
+   1,
+   false
+  ],
+  [
+   "Ayil Meshulash p",
+   1,
+   false
+  ],
+  [
+   "Rambam. Machasit HaShekel",
+   1,
+   false
+  ],
+  [
+   "Maaseh Rokeach",
+   1,
+   false
+  ],
+  [
+   "Ta Chazi",
+   1,
+   false
+  ],
+  [
+   "Biur Halacha s.v. berach",
+   1,
+   false
+  ],
+  [
+   "Even Haozer on",
+   1,
+   false
+  ],
+  [
+   "Nachalat Yisrael",
+   1,
+   false
+  ],
+  [
+   "Shalmei Yehonatan",
+   1,
+   false
+  ],
+  [
+   "Shuirei HaMincha",
+   1,
+   false
+  ],
+  [
+   "Lessons in Leadership Parshat Bo p",
+   1,
+   false
+  ],
+  [
+   "Chovot Hatalmidim ch",
+   1,
+   false
+  ],
+  [
+   "Malbushei Mordechai Yichud",
+   1,
+   false
+  ],
+  [
+   "Marya Dachya",
+   1,
+   false
+  ],
+  [
+   "Avnei Tzedek",
+   1,
+   false
+  ],
+  [
+   "Lechem Rav",
+   1,
+   false
+  ],
+  [
+   "Sfat Hameil",
+   1,
+   false
+  ],
+  [
+   "Torat Hahistaklut",
+   1,
+   false
+  ],
+  [
+   "Avot Derabbi Natan",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef Chinuch Introduction",
+   1,
+   false
+  ],
+  [
+   "Ritva Yevamot",
+   1,
+   true
+  ],
+  [
+   "Gemara on",
+   1,
+   false
+  ],
+  [
+   "Raavad in Tamim Deyim",
+   1,
+   false
+  ],
+  [
+   "Raavad on Sukkah",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef on the Moadim",
+   1,
+   false
+  ],
+  [
+   "Maharik. . Meishiv Davar",
+   1,
+   false
+  ],
+  [
+   "Nitai Gavriel Shidduchim p",
+   1,
+   false
+  ],
+  [
+   "Nitei Gavriel Yichud",
+   1,
+   false
+  ],
+  [
+   "Chelkat Mechokek. Misgeret Hashulchan",
+   1,
+   false
+  ],
+  [
+   "Gan Naul",
+   1,
+   false
+  ],
+  [
+   "Divrei Chachamim",
+   1,
+   false
+  ],
+  [
+   "Noda Beyehuda E.H",
+   1,
+   false
+  ],
+  [
+   "Mishnat Yehoshua",
+   1,
+   false
+  ],
+  [
+   "Apei Zutrei",
+   1,
+   false
+  ],
+  [
+   "Nidrei Zerizin",
+   1,
+   false
+  ],
+  [
+   "Bet Shlomo O.C",
+   1,
+   false
+  ],
+  [
+   "Meged Givot Olam",
+   1,
+   false
+  ],
+  [
+   "Gra O.C",
+   1,
+   false
+  ],
+  [
+   "Hilchot Tefillah, not Hilchot Bet Hakneset",
+   1,
+   false
+  ],
+  [
+   "2:20 . dailyhalacha.com . dailyhalacha.com . dinonline.org . dinonline.org",
+   1,
+   false
+  ],
+  [
+   "The Shabbos Weekly",
+   1,
+   false
+  ],
+  [
+   "The Shabbos Weekly . M.B",
+   1,
+   false
+  ],
+  [
+   "The Shabbos Weekly . Rav Simcha Bunim Cohen",
+   1,
+   false
+  ],
+  [
+   "A Parent's Guide to Teaching Children Mitzvot: A Halachic Guide By: Samuel Singer . Yevamot",
+   1,
+   false
+  ],
+  [
+   "Gra . Rama O.C",
+   1,
+   false
+  ],
+  [
+   "Chinuch Habanim Lmitzvot of Rav Neuwirth n",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruch Orech Chaim",
+   1,
+   false
+  ],
+  [
+   "The Laws of Pesach on www.neveh.org",
+   1,
+   false
+  ],
+  [
+   "B'Yitzchak Yikare",
+   1,
+   false
+  ],
+  [
+   "Rabbi Simcha Bunim Cohen",
+   1,
+   false
+  ],
+  [
+   "Tosefta Sukkah",
+   1,
+   true
+  ],
+  [
+   "Tanit",
+   1,
+   false
+  ],
+  [
+   "Erchin",
+   1,
+   true
+  ],
+  [
+   "Yerushalmi Sukkah",
+   1,
+   false
+  ],
+  [
+   "Chatom Sofer Y”D",
+   1,
+   false
+  ],
+  [
+   "Sh”t Bet Sharim O”C",
+   1,
+   false
+  ],
+  [
+   "Sh”t Binyan Shlomo",
+   1,
+   false
+  ],
+  [
+   "Chatom Sofer. . Mordechai",
+   1,
+   false
+  ],
+  [
+   "Rosh, Tur",
+   1,
+   false
+  ],
+  [
+   "Ner Mitzvah",
+   1,
+   false
+  ],
+  [
+   "Sh”t Olot Yitzchak Ratzavi",
+   1,
+   false
+  ],
+  [
+   "Minchat Shlomo Tinyana",
+   1,
+   false
+  ],
+  [
+   "Doleh u'mashkeh",
+   1,
+   false
+  ],
+  [
+   "Baal Yira",
+   1,
+   false
+  ],
+  [
+   "Igros Moshe E.H",
+   1,
+   false
+  ],
+  [
+   "Honeycombs, Fruity Pebbles",
+   1,
+   false
+  ],
+  [
+   "Yerushalmi Meseches Avodah Zarah",
+   1,
+   false
+  ],
+  [
+   "Rosh Meseches Chullin",
+   1,
+   false
+  ],
+  [
+   "Sdei Chemed mareches bais",
+   1,
+   false
+  ],
+  [
+   "Kav Hayosher",
+   1,
+   false
+  ],
+  [
+   "Pardes Yosef Vayeichi",
+   1,
+   false
+  ],
+  [
+   "Levush Y.D",
+   1,
+   false
+  ],
+  [
+   "Matei Yehonosson",
+   1,
+   false
+  ],
+  [
+   "Shema Shlomo Y.D",
+   1,
+   false
+  ],
+  [
+   "Shach on Taz Y.D",
+   1,
+   false
+  ],
+  [
+   "Chavos Yuer",
+   1,
+   false
+  ],
+  [
+   "Rashi a\"z",
+   1,
+   false
+  ],
+  [
+   "Tosfas Harid Meseches Avodah Zarah",
+   1,
+   false
+  ],
+  [
+   "Bach, Levush",
+   1,
+   false
+  ],
+  [
+   "Pischei Teshuva",
+   1,
+   false
+  ],
+  [
+   "Tosfas in Meseches Avodah Zarah",
+   1,
+   false
+  ],
+  [
+   "Bach, Shulchan Aruch",
+   1,
+   false
+  ],
+  [
+   "Mordechai Meseches Avodah Zarah",
+   1,
+   false
+  ],
+  [
+   "Bais Yitzchok",
+   1,
+   false
+  ],
+  [
+   "Meseches Shabbos",
+   1,
+   false
+  ],
+  [
+   "Ran Beitzah",
+   1,
+   true
+  ],
+  [
+   "Ran Meseches Beitzah",
+   1,
+   false
+  ],
+  [
+   "Milveh Hashem v",
+   1,
+   false
+  ],
+  [
+   "Netivot HaHalacha v",
+   1,
+   false
+  ],
+  [
+   "Yerushalmi Sanhedrin",
+   1,
+   true
+  ],
+  [
+   "Aguda b”m",
+   1,
+   false
+  ],
+  [
+   "Ricanti n",
+   1,
+   false
+  ],
+  [
+   "Maharam",
+   1,
+   false
+  ],
+  [
+   "levuv",
+   1,
+   false
+  ],
+  [
+   "Rambam Malveh",
+   1,
+   false
+  ],
+  [
+   "Chachmat Shlomo",
+   1,
+   false
+  ],
+  [
+   "Mishna Lmelech . Chelkat Binyamin",
+   1,
+   false
+  ],
+  [
+   "Magid Mishna",
+   1,
+   false
+  ],
+  [
+   "Sh”t HaGoanim Sharei Teshuva",
+   1,
+   false
+  ],
+  [
+   "Ran, Sefer HaTrumah",
+   1,
+   false
+  ],
+  [
+   "Sh”t Sadeh Aretz O”C",
+   1,
+   false
+  ],
+  [
+   "Tichle Regel",
+   1,
+   false
+  ],
+  [
+   "Mishna Megillah",
+   1,
+   true
+  ],
+  [
+   "Machsor Vitri",
+   1,
+   false
+  ],
+  [
+   "Siddur Rashi",
+   1,
+   false
+  ],
+  [
+   "Teshuvat Rashi",
+   1,
+   false
+  ],
+  [
+   "Sh”t Maseh HaGoanim",
+   1,
+   false
+  ],
+  [
+   "Ri, Sefer Trumah",
+   1,
+   false
+  ],
+  [
+   "Teshuvat Ravyah",
+   1,
+   false
+  ],
+  [
+   "Smak, Rabbene Yerucham",
+   1,
+   false
+  ],
+  [
+   "Divrei Harav",
+   1,
+   false
+  ],
+  [
+   "Shidduch and Tenaim",
+   1,
+   false
+  ],
+  [
+   "Orchot Rabbenu part",
+   1,
+   false
+  ],
+  [
+   "Shu”t Maharshdam",
+   1,
+   false
+  ],
+  [
+   "Radak",
+   1,
+   false
+  ],
+  [
+   "Mevakshey Torah",
+   1,
+   false
+  ],
+  [
+   "Laws of Niddah pages",
+   1,
+   false
+  ],
+  [
+   "Lashon Hara",
+   1,
+   false
+  ],
+  [
+   "Shalmei Chayim Pesachim ch",
+   1,
+   false
+  ],
+  [
+   "Avnei Isfeh",
+   1,
+   false
+  ],
+  [
+   "Safek Brachot Lehakel. Birkat Hashem v",
+   1,
+   false
+  ],
+  [
+   "Mitzvah of Challah",
+   1,
+   false
+  ],
+  [
+   "Derech Emunah Bikkurim",
+   1,
+   false
+  ],
+  [
+   "Ritva Ketubot",
+   1,
+   true
+  ],
+  [
+   "Shiur on Parshat Shalach, min",
+   1,
+   false
+  ],
+  [
+   "Edut LeYisrael",
+   1,
+   false
+  ],
+  [
+   "Middot Vshiurei Torah p",
+   1,
+   false
+  ],
+  [
+   "Haarot Pesachim",
+   1,
+   false
+  ],
+  [
+   "Shiurin Shel Torah",
+   1,
+   false
+  ],
+  [
+   "Tzlach Pesachim",
+   1,
+   false
+  ],
+  [
+   "Tosfot Yom Tov. Hidurei Hamiddot pp",
+   1,
+   false
+  ],
+  [
+   "Middot Vmishkalot Shel Torah p",
+   1,
+   false
+  ],
+  [
+   "3 quarts. Hidurei Middot p",
+   1,
+   false
+  ],
+  [
+   "Kavanat Tefillah n",
+   1,
+   false
+  ],
+  [
+   "Byitzchak Bikareh",
+   1,
+   false
+  ],
+  [
+   "Machaneh Efraim sheluchin",
+   1,
+   false
+  ],
+  [
+   "Kovetz Divrei Chidot v",
+   1,
+   false
+  ],
+  [
+   "B’ikvei HaTzon p",
+   1,
+   false
+  ],
+  [
+   "Order of Brachot==",
+   1,
+   false
+  ],
+  [
+   "Od Yosef Chay Vayeshev n",
+   1,
+   false
+  ],
+  [
+   "Mishnah Berurah ibid",
+   1,
+   true
+  ],
+  [
+   "Al Biur",
+   1,
+   false
+  ],
+  [
+   "Shehecheyanu of Yom Tov",
+   1,
+   false
+  ],
+  [
+   "Shulchan Arukh O.C",
+   1,
+   true
+  ],
+  [
+   "Katuv Sham on Rif Pesachim",
+   1,
+   false
+  ],
+  [
+   "Roshei Yeshivah",
+   1,
+   false
+  ],
+  [
+   "A Guide to Practical Halacha v",
+   1,
+   false
+  ],
+  [
+   "Bedikas Chametz part",
+   1,
+   false
+  ],
+  [
+   "min",
+   1,
+   false
+  ],
+  [
+   "Mis",
+   1,
+   false
+  ],
+  [
+   "Gilyon Maharsha",
+   1,
+   false
+  ],
+  [
+   "Journal of Halacha and Contemporary Society v",
+   1,
+   false
+  ],
+  [
+   "Halachically Speaking v",
+   1,
+   false
+  ],
+  [
+   "Piskei Tosfot Temurah n",
+   1,
+   false
+  ],
+  [
+   "Rambam Pirush Mishnayot Keritut",
+   1,
+   false
+  ],
+  [
+   "RJJ Article p",
+   1,
+   false
+  ],
+  [
+   "Kanfei Yonah",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef Isur VIheter",
+   1,
+   false
+  ],
+  [
+   "Ikar",
+   1,
+   false
+  ],
+  [
+   "Tofel . Halachos of Brachos Handbook p",
+   1,
+   false
+  ],
+  [
+   "Shuchan Aruch",
+   1,
+   false
+  ],
+  [
+   "Chelkes Yaakov",
+   1,
+   false
+  ],
+  [
+   "Gilyon Maharsha Y.D",
+   1,
+   false
+  ],
+  [
+   "M’Bais Levi",
+   1,
+   false
+  ],
+  [
+   "OU madrich pages",
+   1,
+   false
+  ],
+  [
+   "Dugel Mervuva Y.D",
+   1,
+   false
+  ],
+  [
+   "Tosfas Meseches Beitzah",
+   1,
+   false
+  ],
+  [
+   "Gemorah in Meseches Avodah Zarah",
+   1,
+   false
+  ],
+  [
+   "Shiurei Beracha Y.D",
+   1,
+   false
+  ],
+  [
+   "Star-K “Food Fit For A King",
+   1,
+   false
+  ],
+  [
+   "Rambam in Hilchos Machalas Asuros",
+   1,
+   false
+  ],
+  [
+   "teshuvos)",
+   1,
+   false
+  ],
+  [
+   "Shevet Ha’kehusi",
+   1,
+   false
+  ],
+  [
+   "Dinei Machalei Nuchrim pages",
+   1,
+   false
+  ],
+  [
+   "OU Documents A-64:1",
+   1,
+   false
+  ],
+  [
+   "Toras Chaim Avodah Zarah",
+   1,
+   false
+  ],
+  [
+   "Zechor L’Avraham",
+   1,
+   false
+  ],
+  [
+   "Bishul Yisroe",
+   1,
+   false
+  ],
+  [
+   "shiur on yutorah.org",
+   1,
+   false
+  ],
+  [
+   "Shaar Hatziyon",
+   1,
+   false
+  ],
+  [
+   "Eiruvei Chatzerot",
+   1,
+   false
+  ],
+  [
+   "Pri Megadim, Shaar Hatziyon",
+   1,
+   false
+  ],
+  [
+   "Chachmat Lev",
+   1,
+   false
+  ],
+  [
+   "Emek Hateshuva",
+   1,
+   false
+  ],
+  [
+   "Pri Gani v",
+   1,
+   false
+  ],
+  [
+   "Lev Aharon",
+   1,
+   false
+  ],
+  [
+   "Bar Ilan",
+   1,
+   false
+  ],
+  [
+   "Malachim Emunecha p",
+   1,
+   false
+  ],
+  [
+   "Hashmata to",
+   1,
+   false
+  ],
+  [
+   "Tiferet Tzvi",
+   1,
+   false
+  ],
+  [
+   "Yad Yehuda",
+   1,
+   false
+  ],
+  [
+   "Maggid Mishna Machalot Asurot",
+   1,
+   false
+  ],
+  [
+   "Tikun Tefilin",
+   1,
+   false
+  ],
+  [
+   "Zichron Eliyahu ch",
+   1,
+   false
+  ],
+  [
+   "Rav Pe'alinm",
+   1,
+   false
+  ],
+  [
+   "Rambam Hilchot Tefillin",
+   1,
+   true
+  ],
+  [
+   "Taz ibid. Yechave Daat",
+   1,
+   false
+  ],
+  [
+   "seif",
+   1,
+   true
+  ],
+  [
+   "Ran ibid. . Tosfot Shabbat",
+   1,
+   false
+  ],
+  [
+   "Sh”t Chut MeShulash",
+   1,
+   false
+  ],
+  [
+   "Shaarei Yeshua",
+   1,
+   false
+  ],
+  [
+   "Sh”t Divrei Moshe",
+   1,
+   false
+  ],
+  [
+   "Sh”t Zechur LeYitzchak",
+   1,
+   false
+  ],
+  [
+   "Memei Shlomo",
+   1,
+   false
+  ],
+  [
+   "Sh”t Yaskil Avdi",
+   1,
+   false
+  ],
+  [
+   "Gedolei Tzion",
+   1,
+   false
+  ],
+  [
+   "The Laws of Ribbis p",
+   1,
+   false
+  ],
+  [
+   "Vaomer Yizchak",
+   1,
+   false
+  ],
+  [
+   "Mayim Chayim p",
+   1,
+   false
+  ],
+  [
+   "Kuntres Ezrat Eliezer Ribbit p",
+   1,
+   false
+  ],
+  [
+   "Bhalacha pp",
+   1,
+   false
+  ],
+  [
+   "Reshimot Shiurim Sukkah p",
+   1,
+   false
+  ],
+  [
+   "Emek Bracha p",
+   1,
+   false
+  ],
+  [
+   "Shitah Mikubeset Zevachim",
+   1,
+   false
+  ],
+  [
+   "Meiri Rosh Hashana",
+   1,
+   false
+  ],
+  [
+   "Rambam Psulei Mukdashin",
+   1,
+   false
+  ],
+  [
+   "Or Same'ach Psulei Mukdashin",
+   1,
+   false
+  ],
+  [
+   "Kol Ramaz",
+   1,
+   false
+  ],
+  [
+   "Tosafot Shantz",
+   1,
+   false
+  ],
+  [
+   "gemara in chullin",
+   1,
+   false
+  ],
+  [
+   "Rambam’s Mishnah Torah",
+   1,
+   false
+  ],
+  [
+   "Beit Shearim Y.D",
+   1,
+   false
+  ],
+  [
+   "Birchat HaBayit",
+   1,
+   false
+  ],
+  [
+   "Veyaan Yosef",
+   1,
+   false
+  ],
+  [
+   "Sh”t Minchat Yitzchak",
+   1,
+   false
+  ],
+  [
+   "Sh”t Mishneh halachot",
+   1,
+   false
+  ],
+  [
+   "Sh”t Divrei Yetsiv, Sh”t Besel Chachma",
+   1,
+   false
+  ],
+  [
+   "Mara DeShmata #34",
+   1,
+   false
+  ],
+  [
+   "Sh”t Kaneh Bossem",
+   1,
+   false
+  ],
+  [
+   "Sh”t Birur Halacha",
+   1,
+   false
+  ],
+  [
+   "Yom Tov Sheni Kehilchato",
+   1,
+   false
+  ],
+  [
+   "Shegiyot Mi Yavin",
+   1,
+   false
+  ],
+  [
+   "Sh”t Mishna Shlomo, Sh”t Vayeshev Moshe",
+   1,
+   false
+  ],
+  [
+   "A Teshuva",
+   1,
+   false
+  ],
+  [
+   "Sh”t Rivivot Efraim",
+   1,
+   false
+  ],
+  [
+   "Shigyot Mi Yavin",
+   1,
+   false
+  ],
+  [
+   "Yesh Lo",
+   1,
+   false
+  ],
+  [
+   "Yagel Yakov",
+   1,
+   false
+  ],
+  [
+   "Peni Yehoshua b\"m",
+   1,
+   false
+  ],
+  [
+   "Klala Dribita Intro n",
+   1,
+   false
+  ],
+  [
+   "Maggid Mishna Malveh Vloveh",
+   1,
+   false
+  ],
+  [
+   "Taz. Chelkat Binyamin",
+   1,
+   false
+  ],
+  [
+   "Sh”t Beer Moshe",
+   1,
+   false
+  ],
+  [
+   "Tiltulei Shabbos",
+   1,
+   false
+  ],
+  [
+   "Weekly Halacha",
+   1,
+   false
+  ],
+  [
+   "Yeladim Khalacha p",
+   1,
+   false
+  ],
+  [
+   "Yeshiva.co",
+   1,
+   false
+  ],
+  [
+   "Luach Hamuktzeh p",
+   1,
+   false
+  ],
+  [
+   "Maayan Omer",
+   1,
+   false
+  ],
+  [
+   "Aliba Dhilchata v",
+   1,
+   false
+  ],
+  [
+   "Haggadat Kol Dodi",
+   1,
+   false
+  ],
+  [
+   "Boreh Nefashot",
+   1,
+   false
+  ],
+  [
+   "Ashkenaz Artscroll Siddur",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai Matot",
+   1,
+   false
+  ],
+  [
+   "Torat Hashelamim",
+   1,
+   false
+  ],
+  [
+   "Rashi s.v. tameh",
+   1,
+   false
+  ],
+  [
+   "Chavot Daat, Sidrei Tahara",
+   1,
+   false
+  ],
+  [
+   "elkat Binyamin",
+   1,
+   false
+  ],
+  [
+   "Avkat Rochel",
+   1,
+   false
+  ],
+  [
+   "Nodeh Beyehuda. Har Tzvi",
+   1,
+   false
+  ],
+  [
+   "Kuntres Kitzur Dinei Ribbit Hametzuyim",
+   1,
+   false
+  ],
+  [
+   "Netivot Shalom Ribbit",
+   1,
+   false
+  ],
+  [
+   "Kitzur Dinei Ribbit Hametzuyim of Rav Shternbuch",
+   1,
+   false
+  ],
+  [
+   "The Laws of Ribbis pp",
+   1,
+   false
+  ],
+  [
+   "Ribit L'or Hahalacha pp",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef Iser Vheter p",
+   1,
+   false
+  ],
+  [
+   "Torat Chatat",
+   1,
+   false
+  ],
+  [
+   "OU Hechsherim on Salads",
+   1,
+   false
+  ],
+  [
+   "Contemporary Halachic Problems v",
+   1,
+   false
+  ],
+  [
+   "Shma Shlomo",
+   1,
+   false
+  ],
+  [
+   "Yeshuot Yakov",
+   1,
+   false
+  ],
+  [
+   "Shitah LRan",
+   1,
+   false
+  ],
+  [
+   "Shaarei Muktzeh",
+   1,
+   false
+  ],
+  [
+   "Mahari Vayil n",
+   1,
+   false
+  ],
+  [
+   "Bechor Shor Sanhedrin",
+   1,
+   false
+  ],
+  [
+   "Techelet Mordechai Shabbat Hagadol n",
+   1,
+   false
+  ],
+  [
+   "Hidurei Hamidot p",
+   1,
+   false
+  ],
+  [
+   "Rambam. Tosfot Brachot",
+   1,
+   false
+  ],
+  [
+   "third chapter of Brachos",
+   1,
+   false
+  ],
+  [
+   "Ahavas Chessed",
+   1,
+   false
+  ],
+  [
+   "Chesed Shel Emet",
+   1,
+   false
+  ],
+  [
+   "Nitei Gavriel Aveilut",
+   1,
+   false
+  ],
+  [
+   "Shaarei Halacha U'Minhag",
+   1,
+   false
+  ],
+  [
+   "Chaim Vchesed English Edition p",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef Aveilut",
+   1,
+   false
+  ],
+  [
+   "Badei Hashulchan biurim",
+   1,
+   false
+  ],
+  [
+   "Mishnat Ribbit Biurim",
+   1,
+   false
+  ],
+  [
+   "Mishna Ribbit",
+   1,
+   false
+  ],
+  [
+   "Maharsham Shik",
+   1,
+   false
+  ],
+  [
+   "Kuntres Acharon Lkitzur Piskei Dinei Ribbit",
+   1,
+   false
+  ],
+  [
+   "Knesset Hagedola, Lechem Mishna",
+   1,
+   false
+  ],
+  [
+   "Rambam . Shulchan Aruch C.M",
+   1,
+   false
+  ],
+  [
+   "Torat Ribbit ch",
+   1,
+   false
+  ],
+  [
+   "gemara in Gittin",
+   1,
+   true
+  ],
+  [
+   "Sema",
+   1,
+   false
+  ],
+  [
+   "Igros Moshe C.M",
+   1,
+   false
+  ],
+  [
+   "Maharsham in Mishpat Shalom",
+   1,
+   false
+  ],
+  [
+   "Shach C.M",
+   1,
+   true
+  ],
+  [
+   "Raavad, Levush",
+   1,
+   false
+  ],
+  [
+   "Maharimat",
+   1,
+   false
+  ],
+  [
+   "Chazon Ish C.M. Likutim",
+   1,
+   false
+  ],
+  [
+   "Teshuva MiAhava",
+   1,
+   false
+  ],
+  [
+   "Writings of Rav Yosef Eliyahu Henkin",
+   1,
+   false
+  ],
+  [
+   "Maadanei Eretz",
+   1,
+   false
+  ],
+  [
+   "Shani Shabbat v",
+   1,
+   false
+  ],
+  [
+   "Tiltulei Shabbat pp",
+   1,
+   false
+  ],
+  [
+   "Zeh Masati v",
+   1,
+   false
+  ],
+  [
+   "Tehillah LDovid",
+   1,
+   false
+  ],
+  [
+   "Az Nidberu",
+   1,
+   false
+  ],
+  [
+   "shvet halevi",
+   1,
+   false
+  ],
+  [
+   "Tzlach. Tzitz Eliezer",
+   1,
+   false
+  ],
+  [
+   "Magen Avraham. Halacha Brurah",
+   1,
+   false
+  ],
+  [
+   "Chavaselet Hasharon",
+   1,
+   false
+  ],
+  [
+   "Eshel Avraham Butchach",
+   1,
+   false
+  ],
+  [
+   "Motzei Shabbat Balak",
+   1,
+   false
+  ],
+  [
+   "Chesed Lavraham . Igrot Moshe",
+   1,
+   false
+  ],
+  [
+   "Dvarim Shebekedusha",
+   1,
+   false
+  ],
+  [
+   "Rambam Tefillah",
+   1,
+   true
+  ],
+  [
+   "Aruch Hashulchan. Otzar Halachot v",
+   1,
+   false
+  ],
+  [
+   "OU Brachos Guide",
+   1,
+   false
+  ],
+  [
+   "Brachos Handbook",
+   1,
+   false
+  ],
+  [
+   "Halachos of Brochos",
+   1,
+   false
+  ],
+  [
+   "Iggeros Chazon Ish",
+   1,
+   false
+  ],
+  [
+   "Mishna Brur",
+   1,
+   false
+  ],
+  [
+   "Ke'eyn Deoritta) the din deoritta of Amirah LeGer Toshav",
+   1,
+   false
+  ],
+  [
+   "Rashi Avoda Zara",
+   1,
+   false
+  ],
+  [
+   "Rashi on Shemot",
+   1,
+   false
+  ],
+  [
+   "Smag Lavin",
+   1,
+   false
+  ],
+  [
+   "Biur Hagra on Rama",
+   1,
+   false
+  ],
+  [
+   "Jew",
+   1,
+   false
+  ],
+  [
+   "Melachim Emunecha",
+   1,
+   false
+  ],
+  [
+   "shet.co.il",
+   1,
+   false
+  ],
+  [
+   "ykr.org",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai Parashat Pinchas: Halacha",
+   1,
+   false
+  ],
+  [
+   "Torat Chaim Bava Batra",
+   1,
+   false
+  ],
+  [
+   "Pri Hasadeh",
+   1,
+   false
+  ],
+  [
+   "Degel Efraim",
+   1,
+   false
+  ],
+  [
+   "Erech Lechem",
+   1,
+   false
+  ],
+  [
+   "HaBatim",
+   1,
+   false
+  ],
+  [
+   "Hashlama, Sefer Meorot",
+   1,
+   false
+  ],
+  [
+   "Yesh Omrim",
+   1,
+   false
+  ],
+  [
+   "Sh”t Chaim Shoel",
+   1,
+   false
+  ],
+  [
+   "Perisha",
+   1,
+   false
+  ],
+  [
+   "Toche Kadei Dibbur",
+   1,
+   false
+  ],
+  [
+   "Beir Heteiv",
+   1,
+   false
+  ],
+  [
+   "Rashba, Kaf HaChaim",
+   1,
+   false
+  ],
+  [
+   "Sh”t Tehila LeDavid",
+   1,
+   false
+  ],
+  [
+   "Sh”t Mateh Efraim Arditi",
+   1,
+   false
+  ],
+  [
+   "Sh”t Kol Eliyahu",
+   1,
+   false
+  ],
+  [
+   "Sh”t Har Tzvi O”C",
+   1,
+   false
+  ],
+  [
+   "Sh”t Chesed LeAvraham",
+   1,
+   false
+  ],
+  [
+   "Biur Gra",
+   1,
+   false
+  ],
+  [
+   "Az Yashir. Bear Hetiev",
+   1,
+   false
+  ],
+  [
+   "Sh”t Rav Poalim O”C",
+   1,
+   false
+  ],
+  [
+   "Sh”t Ish Matzliach",
+   1,
+   false
+  ],
+  [
+   "Sh”t Meishiv Halacha",
+   1,
+   false
+  ],
+  [
+   "Tefilah Betzibbur",
+   1,
+   false
+  ],
+  [
+   "Siddur Bet Menucha",
+   1,
+   false
+  ],
+  [
+   "Shalmei Tzibbur. Sh”t Yechave Daat",
+   1,
+   false
+  ],
+  [
+   "Sh”t Michtam LeDavid O”C",
+   1,
+   false
+  ],
+  [
+   "Lechem Hapanim",
+   1,
+   false
+  ],
+  [
+   "Leviat Chen",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef Hilchot Hashkamat Haboker",
+   1,
+   false
+  ],
+  [
+   "Rosh. Mishna Brurah",
+   1,
+   false
+  ],
+  [
+   "Shevut Yakov",
+   1,
+   false
+  ],
+  [
+   "Yad Shaul",
+   1,
+   false
+  ],
+  [
+   "Shevet Shimon",
+   1,
+   false
+  ],
+  [
+   "Mordechai Moed Katan",
+   1,
+   false
+  ],
+  [
+   "Mishna Moed Katan",
+   1,
+   true
+  ],
+  [
+   "Rambam. Chaye Adam",
+   1,
+   false
+  ],
+  [
+   "Chazon Ovadia Aveilut v",
+   1,
+   false
+  ],
+  [
+   "Lachem Yihiyeh Lachlah end of chapter",
+   1,
+   false
+  ],
+  [
+   "Jams",
+   1,
+   false
+  ],
+  [
+   "Trumas Hadeshen",
+   1,
+   false
+  ],
+  [
+   "RJJ Journal #74",
+   1,
+   false
+  ],
+  [
+   "Shach in Y.D",
+   1,
+   false
+  ],
+  [
+   "Shach in",
+   1,
+   false
+  ],
+  [
+   "Lachem Yihiyeh L'achlah",
+   1,
+   false
+  ],
+  [
+   "halacha",
+   1,
+   false
+  ],
+  [
+   "Yeshuot Chachma",
+   1,
+   false
+  ],
+  [
+   "Tosafot Sanhedrin",
+   1,
+   true
+  ],
+  [
+   "Leka Midam",
+   1,
+   false
+  ],
+  [
+   "Bereshit Chapter",
+   1,
+   true
+  ],
+  [
+   "Shemot Chapter",
+   1,
+   true
+  ],
+  [
+   "Birth Control In Jewish Law . Yevamos",
+   1,
+   false
+  ],
+  [
+   "Talmud Bavli: Niddah",
+   1,
+   true
+  ],
+  [
+   "Exodus",
+   1,
+   true
+  ],
+  [
+   "Tzitz Eliezer, Jerusalem",
+   1,
+   false
+  ],
+  [
+   "Chaim Vshalom",
+   1,
+   false
+  ],
+  [
+   "Mishna Ohelet",
+   1,
+   false
+  ],
+  [
+   "Rambam Hilchot Rotzeach Chapter",
+   1,
+   true
+  ],
+  [
+   "Peninei Halacha \"Ben Adam Lechavero UShemirat HaChaim\" p",
+   1,
+   false
+  ],
+  [
+   "Sheelas Yaavetz Teshuvah",
+   1,
+   false
+  ],
+  [
+   "HaTorah V’HaM’dinah, IV",
+   1,
+   false
+  ],
+  [
+   "Biur Halacha. Biur Halacha",
+   1,
+   false
+  ],
+  [
+   "Maarchei Lev",
+   1,
+   false
+  ],
+  [
+   "Shiltei Giborim Shevuot",
+   1,
+   false
+  ],
+  [
+   "Beshalach",
+   1,
+   false
+  ],
+  [
+   "Vayahakel",
+   1,
+   false
+  ],
+  [
+   "Arugot Bosem",
+   1,
+   false
+  ],
+  [
+   "Machazik Bracha",
+   1,
+   false
+  ],
+  [
+   "Yashanti Az Yanuach Li",
+   1,
+   false
+  ],
+  [
+   "Segulot Rabotenu",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai Tzav",
+   1,
+   false
+  ],
+  [
+   "Siddur Pesach Kehilchato v",
+   1,
+   false
+  ],
+  [
+   "Ran A\"Z",
+   1,
+   false
+  ],
+  [
+   "Nitai Gavriel Pesach v",
+   1,
+   false
+  ],
+  [
+   "Binyan Shabbat p",
+   1,
+   false
+  ],
+  [
+   "Kol Torah v",
+   1,
+   false
+  ],
+  [
+   "Migdal Dovid",
+   1,
+   false
+  ],
+  [
+   "Minchat Ish",
+   1,
+   false
+  ],
+  [
+   "Menchat Ahava v",
+   1,
+   false
+  ],
+  [
+   "Mishnah, Shabbos",
+   1,
+   true
+  ],
+  [
+   "Even Ha'ezel",
+   1,
+   false
+  ],
+  [
+   "Shabbos Home",
+   1,
+   false
+  ],
+  [
+   "Tosfot s.v. chavita",
+   1,
+   false
+  ],
+  [
+   "Maginei Shlomo Shabbat",
+   1,
+   false
+  ],
+  [
+   "Peni Yehoshua Shabbat",
+   1,
+   false
+  ],
+  [
+   "Binyan Shabbos",
+   1,
+   false
+  ],
+  [
+   "Chiddushei HaRamban, Shabbos",
+   1,
+   false
+  ],
+  [
+   "Asara B'Teves on Erev Shabbos",
+   1,
+   false
+  ],
+  [
+   "Minhagei Eretz Yisrael",
+   1,
+   false
+  ],
+  [
+   "Dvar Yehoshua",
+   1,
+   false
+  ],
+  [
+   "Mishna Taanit",
+   1,
+   true
+  ],
+  [
+   "Halachos of the Three Weeks",
+   1,
+   false
+  ],
+  [
+   "Rambam Hilchot Taanit",
+   1,
+   true
+  ],
+  [
+   "Matei Ephraim",
+   1,
+   false
+  ],
+  [
+   "Shaare Ephraim",
+   1,
+   false
+  ],
+  [
+   "Minchas Elazar",
+   1,
+   false
+  ],
+  [
+   "Minhag Yisroel Torah",
+   1,
+   false
+  ],
+  [
+   "Pri Megadim Eishel Avraham",
+   1,
+   false
+  ],
+  [
+   "Hagahot Maimoniot Taaniot",
+   1,
+   false
+  ],
+  [
+   "Laws and Concepts of Niddah by Rabbi Sobolofsky",
+   1,
+   false
+  ],
+  [
+   "Dor Hamelaktim Niddah v",
+   1,
+   false
+  ],
+  [
+   "Baal Hatrumah",
+   1,
+   false
+  ],
+  [
+   "Pitchei Halacha p",
+   1,
+   false
+  ],
+  [
+   "Ravyah Pesachim",
+   1,
+   false
+  ],
+  [
+   "Mishnah berura",
+   1,
+   false
+  ],
+  [
+   "shaar hatzfyun",
+   1,
+   false
+  ],
+  [
+   "Mor U-ketzia",
+   1,
+   false
+  ],
+  [
+   "Arizal in Shaar Hakavanot",
+   1,
+   false
+  ],
+  [
+   "Meiri Chibur Hateshuva",
+   1,
+   false
+  ],
+  [
+   "HaManhig Hilchot Rosh Hashana",
+   1,
+   false
+  ],
+  [
+   "Halichot Beitah",
+   1,
+   false
+  ],
+  [
+   "Piskei Shlomo",
+   1,
+   false
+  ],
+  [
+   "BeMoadei HaShana",
+   1,
+   false
+  ],
+  [
+   "Aderet Tiferet",
+   1,
+   false
+  ],
+  [
+   "Seder Hayom",
+   1,
+   false
+  ],
+  [
+   "Mateh Eph",
+   1,
+   false
+  ],
+  [
+   "Gemara in Bava Batra",
+   1,
+   true
+  ],
+  [
+   "Shvut Yaakov",
+   1,
+   false
+  ],
+  [
+   "Netivot Hamisphat Biurim",
+   1,
+   false
+  ],
+  [
+   "Bereishit Medrish Rabbah Vayira Parsha",
+   1,
+   false
+  ],
+  [
+   "Maaseh Melech",
+   1,
+   false
+  ],
+  [
+   "Chacham Tzvi",
+   1,
+   false
+  ],
+  [
+   "Admat Kodesh",
+   1,
+   false
+  ],
+  [
+   "Shemirat Shabbat Khilchata v",
+   1,
+   false
+  ],
+  [
+   "HaZichronot p",
+   1,
+   false
+  ],
+  [
+   "Yehuda Yaaleh",
+   1,
+   false
+  ],
+  [
+   "Chaim LRosh p",
+   1,
+   false
+  ],
+  [
+   "Tzav n",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef Iser Vheter v",
+   1,
+   false
+  ],
+  [
+   "Masat Moshe",
+   1,
+   false
+  ],
+  [
+   "Yad Dovid Di Bitton",
+   1,
+   false
+  ],
+  [
+   "Eretz Chaim",
+   1,
+   false
+  ],
+  [
+   "Admat Kodeseh",
+   1,
+   false
+  ],
+  [
+   "Bet Dino Shel Shlomo",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai Naso n",
+   1,
+   false
+  ],
+  [
+   "Maharam Rotenburg Prague",
+   1,
+   false
+  ],
+  [
+   "Taz. Yalkut Yosef Isur Vheter v",
+   1,
+   false
+  ],
+  [
+   "Halichot Olam Naso p",
+   1,
+   false
+  ],
+  [
+   "Rambam Hilchot Berachot",
+   1,
+   true
+  ],
+  [
+   "Hilchot Tefilla",
+   1,
+   true
+  ],
+  [
+   "Pirsumei Nissa",
+   1,
+   false
+  ],
+  [
+   "Maharam Rutenberg",
+   1,
+   false
+  ],
+  [
+   "Igrot Hagrid Berachot",
+   1,
+   false
+  ],
+  [
+   "Harerei Kedem",
+   1,
+   false
+  ],
+  [
+   "Haggadah Shel Pesach MiBeit Levi",
+   1,
+   false
+  ],
+  [
+   "Yachaveh Daat",
+   1,
+   false
+  ],
+  [
+   "Orchot Maran",
+   1,
+   false
+  ],
+  [
+   "Ri. Tosfot Yeshanim",
+   1,
+   false
+  ],
+  [
+   "Rav Paalim",
+   1,
+   false
+  ],
+  [
+   "Shiurei Shevet Halevi p",
+   1,
+   false
+  ],
+  [
+   "Tosfot Rosh s.v. baneha",
+   1,
+   false
+  ],
+  [
+   "Tosfot Rabbenu Peretz s.v. lo",
+   1,
+   false
+  ],
+  [
+   "Rambam Hilchot Sukkah",
+   1,
+   true
+  ],
+  [
+   "Pitchei Teshuva Yoreh",
+   1,
+   false
+  ],
+  [
+   "Bach ibid",
+   1,
+   false
+  ],
+  [
+   "Taz ibid",
+   1,
+   false
+  ],
+  [
+   "Shach ibid",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruch ibid",
+   1,
+   false
+  ],
+  [
+   "Stam LeGamrei",
+   1,
+   false
+  ],
+  [
+   "Rabbi Akiva Eiger ad loc. . Ben Ish Chai",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruch Yoreh Dea",
+   1,
+   false
+  ],
+  [
+   "Shach Yoreh De",
+   1,
+   false
+  ],
+  [
+   "Sheeilat Rav",
+   1,
+   false
+  ],
+  [
+   "Chaim Le-lo Ishun",
+   1,
+   false
+  ],
+  [
+   "Maran Peer Hador",
+   1,
+   false
+  ],
+  [
+   "Teshuva of the RCA",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai Parashat Vayikra Halacha",
+   1,
+   false
+  ],
+  [
+   "Midrash",
+   1,
+   true
+  ],
+  [
+   "Panim Yafot",
+   1,
+   false
+  ],
+  [
+   "Chazal",
+   1,
+   false
+  ],
+  [
+   "Hashoham v",
+   1,
+   false
+  ],
+  [
+   "Zavah",
+   1,
+   false
+  ],
+  [
+   "Baal Haturim",
+   1,
+   false
+  ],
+  [
+   "Maharik responsa",
+   1,
+   false
+  ],
+  [
+   "Laws of Ni",
+   1,
+   false
+  ],
+  [
+   "Ashkenazi shita",
+   1,
+   false
+  ],
+  [
+   "Bach. Mishna Brurah",
+   1,
+   false
+  ],
+  [
+   "Igrot Moshe in the footnote",
+   1,
+   false
+  ],
+  [
+   "Gemara Kesubos",
+   1,
+   false
+  ],
+  [
+   "Sheim Mishmuel",
+   1,
+   false
+  ],
+  [
+   "Biyur Halacha",
+   1,
+   false
+  ],
+  [
+   "Shulchan Haeizer",
+   1,
+   false
+  ],
+  [
+   "Yemeh Hallel VeHodah",
+   1,
+   false
+  ],
+  [
+   "Young Israel of Woodmere Packet",
+   1,
+   false
+  ],
+  [
+   "Shemaytata DeMoshe",
+   1,
+   false
+  ],
+  [
+   "Halachos of Chanukah",
+   1,
+   false
+  ],
+  [
+   "Levush, Bach, Kiseh Rachamim",
+   1,
+   false
+  ],
+  [
+   "Tefilah Ledavid",
+   1,
+   false
+  ],
+  [
+   "Chanukah of Rav Kenievsky",
+   1,
+   false
+  ],
+  [
+   "Kovetz Mebet Levi",
+   1,
+   false
+  ],
+  [
+   "Tichleh Regel Min HaShuk",
+   1,
+   false
+  ],
+  [
+   "Tichleh Regel",
+   1,
+   false
+  ],
+  [
+   "Leshonot Harambam",
+   1,
+   false
+  ],
+  [
+   "Gra end of",
+   1,
+   false
+  ],
+  [
+   "Rashi Sanhedrin",
+   1,
+   false
+  ],
+  [
+   "Pri Haaretz",
+   1,
+   false
+  ],
+  [
+   "Zera Avraham",
+   1,
+   false
+  ],
+  [
+   "Gemara BM",
+   1,
+   true
+  ],
+  [
+   "Rambam Hilchot Malveh Viloveh",
+   1,
+   false
+  ],
+  [
+   "Mishna Bava Metzia",
+   1,
+   true
+  ],
+  [
+   "Chidushei Agadot b\"m",
+   1,
+   false
+  ],
+  [
+   "Sifrei",
+   1,
+   false
+  ],
+  [
+   "Biurim in Chelkat Binyamin",
+   1,
+   false
+  ],
+  [
+   "Mekor Mayim Chayim",
+   1,
+   false
+  ],
+  [
+   "Netivot Moshe on Taz",
+   1,
+   false
+  ],
+  [
+   "Teshuva Ktav Yad",
+   1,
+   false
+  ],
+  [
+   "Nemukei Yosef b”m",
+   1,
+   false
+  ],
+  [
+   "Tradition v",
+   1,
+   false
+  ],
+  [
+   "Isur V'heter v",
+   1,
+   false
+  ],
+  [
+   "Motzei Shabbat Chukat",
+   1,
+   false
+  ],
+  [
+   "Shailos of the Week, min",
+   1,
+   false
+  ],
+  [
+   "Shach. Yabia Omer",
+   1,
+   false
+  ],
+  [
+   "Safnat Paneach",
+   1,
+   false
+  ],
+  [
+   "Sheilat Shalom",
+   1,
+   false
+  ],
+  [
+   "Bet Shlomo",
+   1,
+   false
+  ],
+  [
+   "Olat Yitzchak",
+   1,
+   false
+  ],
+  [
+   "Maharitz Chiyitz",
+   1,
+   false
+  ],
+  [
+   "Shach. . Pitchei Teshuva",
+   1,
+   false
+  ],
+  [
+   "Ayin Yitzchak",
+   1,
+   false
+  ],
+  [
+   "Maharash Engel",
+   1,
+   false
+  ],
+  [
+   "Chamudei Doniel",
+   1,
+   false
+  ],
+  [
+   "Divrei Shalom Vemet",
+   1,
+   false
+  ],
+  [
+   "Anei Tzedek",
+   1,
+   false
+  ],
+  [
+   "BI\"H, Beha'alotecha",
+   1,
+   false
+  ],
+  [
+   "Rabbenu Bechay Shemot",
+   1,
+   false
+  ],
+  [
+   "Ateret Avot",
+   1,
+   false
+  ],
+  [
+   "Chinuch Bet Yehuda",
+   1,
+   false
+  ],
+  [
+   "section on Women and Havdalah",
+   1,
+   false
+  ],
+  [
+   "Yishaya",
+   1,
+   true
+  ],
+  [
+   "Yishaya from Tehillim",
+   1,
+   false
+  ],
+  [
+   "Shmuel",
+   1,
+   false
+  ],
+  [
+   "Piskei",
+   1,
+   false
+  ],
+  [
+   "Siach Yitzchok",
+   1,
+   false
+  ],
+  [
+   "Gemora",
+   1,
+   false
+  ],
+  [
+   "Sansan Liyair",
+   1,
+   false
+  ],
+  [
+   "The Connection Between Costumes and Drinking on Purim",
+   1,
+   false
+  ],
+  [
+   "Costume Costum",
+   1,
+   false
+  ],
+  [
+   "Deuteronomy",
+   1,
+   true
+  ],
+  [
+   "Bayit Hayehudi",
+   1,
+   false
+  ],
+  [
+   "ArtScroll commentary to Nedarim",
+   1,
+   false
+  ],
+  [
+   "Yesh Mattirim",
+   1,
+   false
+  ],
+  [
+   "hilchot Niddah",
+   1,
+   false
+  ],
+  [
+   "Kriyat Sefer",
+   1,
+   false
+  ],
+  [
+   "Shalmas Chayim",
+   1,
+   false
+  ],
+  [
+   "Shulchan Shelomo",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruch. Menuchat Ahava",
+   1,
+   false
+  ],
+  [
+   "Misgeres ha-Shulchan on Kitzur Shulchan Aruch",
+   1,
+   false
+  ],
+  [
+   "Minchas Shabbos",
+   1,
+   false
+  ],
+  [
+   "HaMitzvot Hakatzar of the Chofetz Chaim",
+   1,
+   false
+  ],
+  [
+   "Yevakesh Torah",
+   1,
+   false
+  ],
+  [
+   "Aruch HaMishpat",
+   1,
+   false
+  ],
+  [
+   "Rishonim on Brachot",
+   1,
+   false
+  ],
+  [
+   "Mishna in Brachot",
+   1,
+   true
+  ],
+  [
+   "Brachot Pesukei DeZimrah",
+   1,
+   false
+  ],
+  [
+   "Shaar Kavanot",
+   1,
+   false
+  ],
+  [
+   "UBoreh Choshech. . Brachot",
+   1,
+   false
+  ],
+  [
+   "Derisha",
+   1,
+   false
+  ],
+  [
+   "Hagahot Maralach",
+   1,
+   false
+  ],
+  [
+   "Peri Megadim",
+   1,
+   false
+  ],
+  [
+   "Chasam Sofer O.C",
+   1,
+   false
+  ],
+  [
+   "Teshuvot Vihanhagot",
+   1,
+   false
+  ],
+  [
+   "Iggerot Mosh",
+   1,
+   false
+  ],
+  [
+   "Brachot p",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chai Shana Rishona Parashat Ekev §5",
+   1,
+   false
+  ],
+  [
+   "Hagahot Smak Eruvin",
+   1,
+   false
+  ],
+  [
+   "Ben Ish Chay Parshat Eikev Shana",
+   1,
+   false
+  ],
+  [
+   "Gemara Arachin",
+   1,
+   true
+  ],
+  [
+   "Rambam Hilchot Chanukah",
+   1,
+   true
+  ],
+  [
+   "Mishneh Brurahh",
+   1,
+   false
+  ],
+  [
+   "sh . Kaf HaChaim",
+   1,
+   false
+  ],
+  [
+   "Rambam. . Sh\"t Tzitz Eliezer",
+   1,
+   false
+  ],
+  [
+   "Practical Halachos v",
+   1,
+   false
+  ],
+  [
+   "Ramban Berachot",
+   1,
+   true
+  ],
+  [
+   "Yerushalmi in Berachot",
+   1,
+   true
+  ],
+  [
+   "Meiri on Berachot",
+   1,
+   false
+  ],
+  [
+   "Talmidei Rabbeinu Yona on the Dapei HaRif",
+   1,
+   false
+  ],
+  [
+   "Kuntres Vichol Hachaim",
+   1,
+   false
+  ],
+  [
+   "Beiur Halacha s.v. VeYesh Omerim, Shoneh Halachot",
+   1,
+   false
+  ],
+  [
+   "Mein Shalosh",
+   1,
+   false
+  ],
+  [
+   "Hagahot Maimoniyot Brachot",
+   1,
+   false
+  ],
+  [
+   "Nodeh Lecha",
+   1,
+   false
+  ],
+  [
+   "Gra on",
+   1,
+   false
+  ],
+  [
+   "Chidushei Haraah)",
+   1,
+   false
+  ],
+  [
+   "ishna Brurah",
+   1,
+   false
+  ],
+  [
+   "Halachayomit] Shulchan Aruch",
+   1,
+   false
+  ],
+  [
+   "Peor Hador",
+   1,
+   false
+  ],
+  [
+   "Rosh Hashana ch",
+   1,
+   false
+  ],
+  [
+   "Birchot_HaTorah#What_Type_of_Learning_Requires_Birchot_HaTorah.3F|What Type of Learning Requires Birchot HaTorah",
+   1,
+   false
+  ],
+  [
+   "Arizal . Kaf Hachaim",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef tefilla",
+   1,
+   false
+  ],
+  [
+   "P'nei Meivin Yoreh De'ah",
+   1,
+   false
+  ],
+  [
+   "K'tzeh HaMateh",
+   1,
+   false
+  ],
+  [
+   "minute",
+   1,
+   false
+  ],
+  [
+   "Mahar\"i Asad, Yoreh De'ah",
+   1,
+   false
+  ],
+  [
+   "Elef HaMagen",
+   1,
+   false
+  ],
+  [
+   "Orach Neeman",
+   1,
+   false
+  ],
+  [
+   "Teshuvot VeHanhangot",
+   1,
+   false
+  ],
+  [
+   "Bach s.v. Katav HaAvi Ezri, Magen Avraham",
+   1,
+   false
+  ],
+  [
+   "Beitza",
+   1,
+   true
+  ],
+  [
+   "gemara in shabbat",
+   1,
+   false
+  ],
+  [
+   "Radbaz",
+   1,
+   false
+  ],
+  [
+   "Shaar HaTziun",
+   1,
+   false
+  ],
+  [
+   "Chesed LeAvraham",
+   1,
+   false
+  ],
+  [
+   "Sadei Chemed",
+   1,
+   false
+  ],
+  [
+   "Likutim MeHilchot Amarchal",
+   1,
+   false
+  ],
+  [
+   "Shibolei Leket",
+   1,
+   false
+  ],
+  [
+   "Sh”t Lehorot Natan",
+   1,
+   false
+  ],
+  [
+   "Sh”t Kol Gadol",
+   1,
+   false
+  ],
+  [
+   "Sh”t Ginat Veradim",
+   1,
+   false
+  ],
+  [
+   "Sh”t Maharshal",
+   1,
+   true
+  ],
+  [
+   "Buir HaGra",
+   1,
+   false
+  ],
+  [
+   "Shulchan Aruch Harav Kuntres Acharon",
+   1,
+   false
+  ],
+  [
+   "Mishmeret HaTahara p",
+   1,
+   false
+  ],
+  [
+   "Halichot Shlomo v",
+   1,
+   false
+  ],
+  [
+   "Shevut Yitzchok v",
+   1,
+   false
+  ],
+  [
+   "Laws of Brachos p",
+   1,
+   false
+  ],
+  [
+   "Vezot Habracha c",
+   1,
+   false
+  ],
+  [
+   "Rosh Shabbat",
+   1,
+   true
+  ],
+  [
+   "Motzei Shabbat Lech Lecha",
+   1,
+   false
+  ],
+  [
+   "Minchat Cohen Shabbat",
+   1,
+   false
+  ],
+  [
+   "Kavod Shabbat",
+   1,
+   false
+  ],
+  [
+   "Rashbam s.v. mini",
+   1,
+   false
+  ],
+  [
+   "Beiur Halacha s.v. Yesh",
+   1,
+   false
+  ],
+  [
+   "Ha-Zichronos",
+   1,
+   false
+  ],
+  [
+   "Yalkut Yosef Y.D",
+   1,
+   false
+  ],
+  [
+   "OU document A-110 . Meseches Avodah Zarah",
+   1,
+   false
+  ],
+  [
+   "Ritvah Meseches Shabbos",
+   1,
+   false
+  ],
+  [
+   "Chasam Sofer",
+   1,
+   false
+  ],
+  [
+   "Chachmas Adam",
+   1,
+   false
+  ],
+  [
+   "Chelkas Binyomin",
+   1,
+   false
+  ],
+  [
+   "Tiferes Yisroel Meseches Avodah Zarah",
+   1,
+   false
+  ],
+  [
+   "Zer Zahav",
+   1,
+   false
+  ],
+  [
+   "Shearim Metzuyanim B’halacha",
+   1,
+   false
+  ],
+  [
+   "Teharas Hamayim",
+   1,
+   false
+  ],
+  [
+   "Ran on",
+   1,
+   false
+  ],
+  [
+   "Chelkes Binyomin Biurim “davar” pages",
+   1,
+   false
+  ],
+  [
+   "Avnei Nezer Y.D",
+   1,
+   false
+  ],
+  [
+   "Yehave Daat",
+   1,
+   false
+  ],
+  [
+   "Rashi Meseches Avodah Zarah",
+   1,
+   false
+  ],
+  [
+   "Laws of Praying Beyachid",
+   1,
+   false
+  ],
+  [
+   "Rabbi Yonatan Nacson p",
+   1,
+   false
+  ],
+  [
+   "Laws of Praying Beyachid by Rabbi Nacson p",
+   1,
+   false
+  ],
+  [
+   "t Meir",
+   1,
+   false
+  ],
+  [
+   "Keren Orah Shabbat",
+   1,
+   false
+  ],
+  [
+   "Rambam Yom Tov",
+   1,
+   true
+  ],
+  [
+   "Itur Yad",
+   1,
+   false
+  ],
+  [
+   "Maharam Rotenberg",
+   1,
+   false
+  ],
+  [
+   "Baal Haitur",
+   1,
+   false
+  ],
+  [
+   "Iglei Tal Bishul",
+   1,
+   false
+  ],
+  [
+   "Iglei Tal",
+   1,
+   false
+  ],
+  [
+   "Bishul",
+   1,
+   false
+  ],
+  [
+   "Kli Rishon",
+   1,
+   false
+  ],
+  [
+   "Gemara Shabbos",
+   1,
+   true
+  ],
+  [
+   "Rashba Shabbos",
+   1,
+   false
+  ],
+  [
+   "Tur O.C",
+   1,
+   true
+  ],
+  [
+   "Beit Yosef O.C",
+   1,
+   true
+  ],
+  [
+   "Nimukei Yosef in Bava Batra",
+   1,
+   true
+  ],
+  [
+   "Ten Minute Halacha: Borrowing a Sefer, Tallis or Tefillin Without Permission]by Rabbi Aryeh Lebowitz",
+   1,
+   false
+  ]
+ ]
+}

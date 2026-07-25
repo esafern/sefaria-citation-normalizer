@@ -5,7 +5,17 @@ __pycache__/
 # regenerable caches (re-mineable from the public APIs; kept out of git)
 hp_cache/
 mine_cache/
+my_cache/
 *_cache.json
 
 # run logs
 *.log
+
+# in-progress mining output (force-added when the run completes)
+pipeline/hp_failures_wide.json
+
+# raw CC-BY-SA answer text (intermediate); only derived citation strings are committed
+pipeline/miyodeya_bodies.json
+
+# in-progress find-refs output (force-added when the run completes)
+pipeline/miyodeya_failures.json
