@@ -643,6 +643,90 @@
    "my_canonical": "Minchat Shai on Torah",
    "sefaria_ref": "Minchat Shai on Torah",
    "via": "labeled"
+  },
+  {
+   "raw": "Shulchan Aruch (456:1)",
+   "my_canonical": "Shulchan Arukh, Orach Chayim 456:1",
+   "sefaria_ref": "Shulchan Arukh, Orach Chayim.456.1",
+   "via": "labeled"
+  },
+  {
+   "raw": "Midrash Tanchumah Bo 14, Sanhedrin 4B",
+   "my_canonical": "Midrash Tanchuma, Bo 14",
+   "sefaria_ref": "Midrash Tanchuma, Bo.14",
+   "via": "labeled"
+  },
+  {
+   "raw": "Mishna (Rosh haShana 1:1)",
+   "my_canonical": "Mishnah Rosh Hashanah 1:1",
+   "sefaria_ref": "Mishnah Rosh Hashanah.1.1",
+   "via": "labeled"
+  },
+  {
+   "raw": "Rashba (Responsa 1:47",
+   "my_canonical": "Teshuvot haRashba part I 47",
+   "sefaria_ref": "Teshuvot haRashba part I.47",
+   "via": "labeled"
+  },
+  {
+   "raw": "Sefer VaYikra 18:25",
+   "my_canonical": "Leviticus 18:25",
+   "sefaria_ref": "Leviticus.18.25",
+   "via": "labeled"
+  },
+  {
+   "raw": "Sha’arei Kedushah 1:2, s.v. u’zkhor v’al tishkach",
+   "my_canonical": "Shaarei Kedusha, Part 1 2",
+   "sefaria_ref": "Sha'arei Kedusha, Part 1.2",
+   "via": "labeled"
+  },
+  {
+   "raw": "Shaarei kedusha part 3 gate 8",
+   "my_canonical": "Shaarei Kedusha, Part 3 8",
+   "sefaria_ref": "Sha'arei Kedusha, Part 3.8",
+   "via": "labeled"
+  },
+  {
+   "raw": "Shulḥan Arukh 677:1",
+   "my_canonical": "Shulchan Arukh, Orach Chayim 677:1",
+   "sefaria_ref": "Shulchan Arukh, Orach Chayim.677.1",
+   "via": "labeled"
+  },
+  {
+   "raw": "Tzava'at ha-Rivash 141",
+   "my_canonical": "Tzavaat HaRivash 141",
+   "sefaria_ref": "Tzava'at HaRivash.141",
+   "via": "labeled"
+  },
+  {
+   "raw": "Tehillim, 93 (p. 202)",
+   "my_canonical": "Psalms 93",
+   "sefaria_ref": "Psalms.93",
+   "via": "labeled"
+  },
+  {
+   "raw": "Tiferes Yisrael (chapter 40",
+   "my_canonical": "Tiferet Yisrael 40",
+   "sefaria_ref": "Tiferet Yisrael.40",
+   "via": "labeled"
+  },
+  {
+   "raw": "Shu’t Maharsham 1:179",
+   "my_canonical": "Teshuvot Maharsham Volume I 179",
+   "sefaria_ref": "Teshuvot Maharsham Volume I.179",
+   "via": "labeled"
+  },
+  {
+   "raw": "Tashbeitz 1,146",
+   "my_canonical": "Tashbetz Katan 146",
+   "sefaria_ref": "Tashbetz Katan.146",
+   "via": "labeled"
+  },
+  {
+   "raw": "Zohar (Mishpatim 108b",
+   "my_canonical": "Zohar, Mishpatim",
+   "sefaria_ref": "Zohar, Mishpatim",
+   "via": "labeled"
   }
  ]
 }
