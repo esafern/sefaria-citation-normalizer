@@ -21,15 +21,15 @@ reference reached for whenever a question of method arises.
 
 ## Why it matters
 
-Its standing is not a matter of opinion. Its author was "quoted **frequently by
-major halakhic authorities of the 18th and 19th centuries**," and the Chida praised
-Yad Malachi effusively (English Wikipedia, "Malachi ben Jacob ha-Kohen").
+Its standing is not a matter of opinion — and it is not a historical curiosity.
 
-That reliance is measurable inside the digital library today: **287 places in
-Sefaria's existing texts cite יד מלאכי** — and every one is a **dead end**, because
-the work itself is not in the library. A reader who reaches "Yad Malachi, Klal …"
-inside a work Sefaria *does* have cannot follow the reference. The citing works span
-three centuries:
+**Across the centuries.** The author was "quoted **frequently by major halakhic
+authorities of the 18th and 19th centuries**," and the Chida praised Yad Malachi
+effusively (English Wikipedia, "Malachi ben Jacob ha-Kohen"). That reliance is
+measurable inside the digital library today: **287 places in Sefaria's existing
+texts cite יד מלאכי** — and every one is a **dead end**, because the work itself is
+not in the library. A reader who reaches "Yad Malachi, Klal …" inside a work Sefaria
+*does* have cannot follow the reference. The citing works span three centuries:
 
 | Mentions | Citing work |
 |---:|---|
@@ -37,9 +37,25 @@ three centuries:
 | 17 | Petach Einayim (Chida) |
 | 13 | Shem HaGedolim (Chida) |
 | 11 | Pardes Yosef |
-| 9 | Kaf HaChayim |
+| 9 | Kaf HaChayim (d. 1939) |
 | 8 | Rosh David (Chida) |
 | — | + Mishnah Berurah / Biur Halacha, Torah Temimah, Minchat Chinukh, Even Ha'azel, and living responsa (Benei Banim) |
+
+**And in active use today.** Yad Malachi is a living reference, not a shelved
+classic:
+
+- It is **continuously republished**: again in the late 20th century, a new Israeli
+  edition in 2001, a **Machon Yerushalayim critical edition in 2016** (freshly
+  typeset, cross-referencing parallel *Klalim* works), and a third volume in 2018
+  (Wikipedia). A work the contemporary Torah-publishing world keeps re-typesetting
+  is a work in active use — and the subject of modern scholarship (Benjamin Brown,
+  *"Some Say This, Some Say That": … Interpretation Rules in Yad Malachi*).
+- In a large **contemporary English-language halachic reference** (Halachipedia),
+  Yad Malachi is cited **243 times** — directly, by its numbered klalim — putting it
+  among the most-cited works that reference lacks a link for. That is present-day
+  halachic writing reaching for it, hundreds of times, right now.
+- Modern authorities cite it directly: Kaf HaChaim (d. 1939) and the contemporary
+  responsa Benei Banim appear among the 287 above.
 
 ## The gap this closes
 
@@ -91,6 +107,9 @@ obtainable here). Careful proofing of OCR'd rabbinic Hebrew runs ~10–20 pages/
 within the very library that currently lacks it — permanently online.
 
 _Sources: Sefaria search API (the 287 in-corpus references and citing-work
-breakdown); English Wikipedia, "Malachi ben Jacob ha-Kohen" (three-part structure;
-d. 1772; his standing among later authorities; the Chida's praise; printing
-history). Page count and cost are estimates pending the actual scan._
+breakdown); a citation survey of Halachipedia, a large contemporary
+English-language halachic reference (243 direct citations); English Wikipedia,
+"Malachi ben Jacob ha-Kohen" (three-part structure; d. 1772; standing among later
+authorities; the Chida's praise; republication history — 2001, Machon Yerushalayim
+2016, 2018 — and modern scholarship). Page count and cost are estimates pending the
+actual scan._
