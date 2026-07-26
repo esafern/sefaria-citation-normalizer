@@ -76,8 +76,13 @@ re-keying — permanently.
 
 ## Process
 
-1. **Acquire the scan** (free) — pick the cleanest of the Livorno 1766–7 or Berlin
-   1857 printings.
+1. **Acquire the scan** (free) — use a **fully public-domain historical printing**:
+   the Livorno 1766–7 first edition or the Berlin 1857 edition (both on
+   HebrewBooks / Otzar). **Do not scan the modern critical editions** (2001, 2016
+   Machon Yerushalayim, 2018): the *text* of Yad Malachi is public domain in any
+   edition, but their added annotations, cross-references, and biographical material
+   are copyrighted. Sourcing from a pre-20th-century printing sidesteps the question
+   entirely — nothing modern is layered on.
 2. **OCR (Hebrew)** — Jochre (purpose-built for rabbinic Hebrew), Google Cloud
    Vision, or Tesseract `heb`. Expect a high error rate: dense rabbinic Hebrew,
    heavy abbreviation (ר"ת), older type.
