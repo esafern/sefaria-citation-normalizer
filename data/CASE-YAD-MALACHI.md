@@ -51,37 +51,43 @@ classic:
   is a work in active use — and the subject of modern scholarship (Benjamin Brown,
   *"Some Say This, Some Say That": … Interpretation Rules in Yad Malachi*).
 - In a large **contemporary English-language halachic reference** (Halachipedia),
-  Yad Malachi is cited **243 times** — directly, by its numbered klalim — putting it
-  among the most-cited works that reference lacks a link for. That is present-day
-  halachic writing reaching for it, hundreds of times, right now.
+  Yad Malachi is cited **243 times** — directly, by its numbered klalim. That makes
+  it the **single most-cited public-domain work that Sefaria lacks**[^mostwanted] —
+  present-day halachic writing reaching for it, hundreds of times, right now.
 - Modern authorities cite it directly: Kaf HaChaim (d. 1939) and the contemporary
   responsa Benei Banim appear among the 287 above.
 
 ## The gap this closes
 
 Yad Malachi is **public domain** — no rights, no license, no permission needed. Yet
-there is no clean digital text of it. So every one of those 287 references is
-unlinkable, and anyone quoting the work must **hand-transcribe the Hebrew** from a
-scan. Digitizing it once turns 287 dead references into live links and ends the
+there is no **publicly available** clean digital text of it. So every one of those
+287 references is unlinkable, and anyone quoting the work must **hand-transcribe the
+Hebrew** from a scan. Digitizing it once turns 287 dead references into live links and ends the
 re-keying — permanently.
 
 ## Why it is an ideal candidate
 
 - **Public domain** — free to reproduce.
-- **Public-domain scans already exist** — multiple independent witnesses, verified
-  and (for the later editions) inspected page-by-page:
+- **Public-domain scans already exist** — **four distinct print editions, in five
+  independent scans (eight PDF files), every one inspected page-by-page:**
   - **Livorno 1766–7 first edition** (HebrewBooks): part I (#32530, 348 pp), II
-    (#32532, 54 pp), III (#32531, 55 pp). This *editio princeps* is set in **Rashi
-    script** (the body) with square keyword-lemmas.
-  - **Berlin ~1857/8, Przemyśl 1877, and Przemyśl 1888** — three later full-view
-    scans (Google Books; also on HebrewBooks, e.g. Przemyśl 1877 = #14122). Each
-    binds all three parts in one volume. **Critically, all three are set in clean
-    square Hebrew type, not Rashi** — verified by direct page inspection of the
-    scans. Square type is exactly what general-purpose OCR reads best (see process).
+    (#32532, 54 pp), III (#32531, 55 pp) — one edition digitized as three part-files.
+    This *editio princeps* is set in **Rashi script** (the body) with square
+    keyword-lemmas, and is the roughest scan (ink bleed, skew).
+  - **Berlin ~1857/8** (publisher Ephraim Herz) — the cleanest, sharpest scan.
+  - **Przemyśl 1877** (Knoller) — present in **two independent scans**: HebrewBooks
+    #14122 *and* a separate Google Books scan. Two scans of one edition = two
+    witnesses with different scan artifacts.
+  - **Przemyśl 1888** (Żupnik, Knoller & Hamerschmidt) — clean.
 
-  No physical scanning is needed, and **four independent editions are already in
-  hand** — one Rashi-script first edition plus three clean square-set reprints —
-  the ideal starting condition for the consensus ensemble below.
+  The three later editions each bind all three parts in one volume, and **all three
+  are set in clean square Hebrew type, not Rashi** — confirmed by direct page
+  inspection. Square type is exactly what general-purpose OCR reads best (see
+  process). So the "5 sources" resolve to **4 editions**, because the two Przemyśl
+  1877 files are the same printing scanned twice.
+
+  No physical scanning is needed — the ideal starting condition for the consensus
+  ensemble below.
 - **Cleanly structured** — its native form (numbered *klalim* within three parts)
   maps directly onto a digital schema, so each reference becomes individually
   linkable.
@@ -94,23 +100,42 @@ where several agree the reading is near-certain, and disagreements are automatic
 localized to specific words — turning "proofread everything" into "adjudicate the
 few conflicts."
 
-1. **Gather every public-domain witness.** Four editions are already confirmed and
-   in hand: the Livorno 1766–7 first edition (Rashi script) and three square-set
-   reprints (Berlin ~1857/8, Przemyśl 1877, Przemyśl 1888); add any further early
-   printings from Otzar if convenient. Each is an independent witness to the same PD
-   text. (Modern critical editions are *not* scanned into the corpus — see the
-   copyright note.) One caveat: the two Przemyśl printings share a press lineage
-   (Żupnik/Knoller), so treat them as *near*-independent — the Berlin edition and the
-   Livorno first edition are the most independent witnesses.
-2. **Multi-engine OCR, per scan — and lead with the square editions.** The three
-   square-set reprints are the primary OCR targets: general engines that are strong
-   on square Hebrew and weak on Rashi — **Google Cloud Vision**, **Tesseract `heb`**
-   — read them well, so they carry the load. Run **Jochre** (best for rabbinic/Rashi
-   type) on the Livorno first edition, whose Rashi body would otherwise defeat the
-   general engines; it becomes a fourth witness for collation rather than the base.
-   Add Hebrew-specialized tooling on all of them (**DICTA** post-correction;
-   **Kraken / eScriptorium** with trained Hebrew models). Uncorrelated errors across
-   engines *and* editions make agreement a strong signal.
+1. **Gather every public-domain witness.** Five scans of four editions are already in
+   hand — the Livorno 1766–7 first edition (Rashi) and three square-set reprints
+   (Berlin ~1857/8, Przemyśl 1877 in two scans, Przemyśl 1888); add any further early
+   printings from Otzar if convenient. Each edition is an independent witness to the
+   same PD text. (Modern critical editions are *not* scanned into the corpus — see the
+   copyright note.) Two caveats on independence: the two Przemyśl printings share a
+   press lineage (Żupnik/Knoller), so treat them as *near*-independent; the strongest
+   independent pairing is **Berlin** (square) against the **Livorno** first edition
+   (Rashi). The two scans of Przemyśl 1877 are the same *type* but differ in scan
+   noise, so they still help the vote.
+2. **Start from the OCR you already have, then add engines.** Every one of these PDFs
+   — both the Google Books and the HebrewBooks files — **already carries an embedded
+   OCR text layer** (verified: ~3,000 characters of extractable text per page). So
+   the ensemble does not start from zero: Google's OCR (on the Google Books scans) and
+   HebrewBooks' OCR are two *free, already-computed* witnesses on the square editions.
+   Extract those first, then add fresh passes to raise accuracy and de-correlate
+   errors:
+   - **Square editions (Berlin, Przemyśl) — the base text.** Run **Google Cloud
+     Vision / Document AI** and **Tesseract `heb`** (both strong on square Hebrew,
+     both weak on Rashi — which is why the square editions carry the load). These plus
+     the two embedded layers give **~4 passes per square edition**.
+   - **Livorno first edition (Rashi) — collation witness.** General engines fail on
+     Rashi, so read it with a Rashi-capable tool: **Jochre 3** (open-source, trained
+     for rabbinic/Rashi type) or a **Kraken/eScriptorium** model trained on this
+     typeface. It contributes variant readings, not the base.
+   - **Rabbinic-Hebrew post-correction on every pass.** Run outputs through
+     **Dicta** (dicta.org.il — a free Israeli non-profit built specifically for
+     rabbinic Hebrew): its OCR/**Maivin** tools expand abbreviations, restore
+     punctuation, and its rabbinic language model (**BEREL**) fixes context-obvious
+     OCR errors (e.g. a wrong letter inside a known talmudic phrase). Dicta is
+     web-based, so it runs on macOS in a browser; I found **no dedicated Mac desktop
+     app built on Dicta** — the closest "built-for-this" option is Dicta's own tools,
+     with **ABBYY FineReader** (desktop Mac/Windows, good general square OCR, no
+     rabbinic specialization) and **Transkribus** (trainable HTR platform) as
+     alternatives. Uncorrelated errors across these engines *and* editions make
+     agreement a strong signal.
 3. **Align and vote — per scan.** Align the engine outputs (word/character sequence
    alignment, anchored on the numbered *klalim*) and take a per-token consensus.
    Agreed tokens — the large majority — are accepted automatically; only conflicts
@@ -126,11 +151,14 @@ few conflicts."
    against each other. Genuine differences between printings (a typo or correction in
    one) are recorded as variants — yielding a text potentially *better than any
    single edition*, with an apparatus.
-6. **Human review — only the flagged set.** A Hebrew-literate reviewer resolves the
+6. **Expert review — only the flagged set.** A **domain expert — a Torah scholar
+   (Talmid Chacham) fluent in this genre**, not merely a Hebrew reader — resolves the
    remaining conflicts against the scan (and may **consult** the modern critical
    editions as a reference for hard readings — see note) and spot-checks the
-   auto-accepted text. Because the human only ever touches disagreements, this is a
-   fraction of full proofreading.
+   auto-accepted text. The genre matters: dense abbreviations, talmudic shorthand, and
+   the *klalim*-cross-references are ambiguous to a non-specialist, so the reviewer's
+   fluency is what makes the flagged readings resolvable. Because they only ever touch
+   disagreements, this is a fraction of full proofreading.
 7. **Structure and ingest** into the three parts and their klalim; output text +
    per-token confidence map + variant apparatus.
 
@@ -153,11 +181,13 @@ a couple of witnesses.
 - **One-time harness** (OCR-ensemble + alignment + adjudication): developer time,
   ~40–80 hrs, and **reusable** for every other public-domain work — so it amortizes
   far beyond this one text.
-- **Compute** (multi-engine OCR + AI adjudication over ~460 pages × 2 witnesses):
-  modest — low hundreds of dollars in OCR/API credits at most.
-- **Human review** — only the flagged conflict set. If the ensemble auto-accepts
-  ~90% of tokens, a reviewer handles the rest in perhaps **~5–10 hours (~$150–350)**,
-  versus ~25–45 hours to proofread all 457 pages single-pass.
+- **Compute** (multi-engine OCR + AI adjudication over ~460 pages across the
+  editions — and two OCR passes per square edition already exist free as embedded
+  text layers): modest — low hundreds of dollars in OCR/API credits at most.
+- **Expert review** — only the flagged conflict set, and by a Torah scholar (Talmid
+  Chacham), not a general proofreader. If the ensemble auto-accepts ~90% of tokens,
+  the reviewer handles the rest in perhaps **~5–10 hours (~$150–350)**, versus ~25–45
+  hours to proofread all 457 pages single-pass.
 
 Net: after the reusable harness exists, the **marginal cost per work is a few hundred
 dollars**, and the output is *more* accurate than a single proofread pass —
@@ -175,5 +205,14 @@ authorities; the Chida's praise; republication history — 2001, Machon Yerushal
 for the public-domain witnesses. The four editions in hand — Livorno 1766–7 (Rashi
 script), Berlin ~1857/8, Przemyśl 1877, and Przemyśl 1888 (all three square) — were
 identified from their title pages and inspected page-by-page to confirm script and
-scan quality. Cost figures are estimates; page counts are from the source catalogs
-and scan page-counts._
+scan quality. OCR-tool details: Dicta (dicta.org.il, Wikipedia "Dicta
+(organization)"). Cost figures are estimates; page counts are from the source
+catalogs and scan page-counts._
+
+[^mostwanted]: Per this project's citation analysis of the full 640-page Halachipedia
+    corpus (`data/SEFARIA-MOST-WANTED.md`, `data/CORPUS-COMPARISON.md`): among the
+    works Sefaria does **not** have, Yad Malachi (243 citations) ranks **#6 overall
+    and #1 of the public-domain tier** — the next public-domain work, Birkei Yosef,
+    trails at 129. The five works ahead of it overall are all modern, in-copyright
+    works (Yalkut Yosef, Chazon Ovadyah, Igrot Moshe, Shemirat Shabbat KeHilchata,
+    Yabia Omer) that cannot be freely digitized; Yad Malachi is the top work that can.
