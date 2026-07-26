@@ -1,100 +1,81 @@
-# The case for digitizing Yad Malachi (scan → OCR → structure)
+# A case for digitizing Yad Malachi
 
-_A worked example of the cheapest, highest-leverage move on the most-wanted list:
-a public-domain foundational work, heavily cited, that Sefaria lacks. Figures are
-measured (Sefaria search API, this project's corpus) or externally sourced
-(Wikipedia); size/cost are estimates, flagged as such._
+_A proposal to scan, OCR, and structure one foundational, public-domain work of
+Torah that is heavily relied upon but not yet available as clean digital text._
 
-## The ask
+## The work
 
-Digitize **Yad Malachi** (R. Malachi ben Jacob HaKohen of Livorno, first printed
-Livorno 1766–7; author d. **1772**, so firmly **public domain** — no licensing, no
-rights holder). Per Wikipedia (author's entry), it is "a methodological work and
-compilation in **three parts**": (1) an alphabetical list of all the rules and
-technical terms in the Talmud, (2) the rules governing the codifiers (poskim),
-(3) the rules of legal decision-making (responsa principles) — i.e. the *grammar*
-of how to learn and pasken. Sefaria does not have it.
+**Yad Malachi** (יד מלאכי), by **R. Malachi ben Jacob HaKohen of Livorno**
+(d. 1772), first printed Livorno 1766–7 (later Berlin 1857). It is a three-part
+masterwork of *methodology* — the rules by which the Talmud is learned and halacha
+is decided:
 
-## Demand is documented — 287 dead-end references inside Sefaria itself
+1. **Klalei HaTalmud** — an alphabetical index of the rules and technical terms of
+   the Talmud, with explanations.
+2. **Klalei HaPoskim** — the rules governing the codifiers (Rif, Rambam, Rosh, Tur,
+   Shulchan Aruch…).
+3. **Klalei HaDinim** — the principles of halachic decision-making and responsa.
 
-- **287 references to "יד מלאכי" across Sefaria's *own* existing Hebrew corpus**
-  (Sefaria search API). Every one is a **dead end**: a reader inside a text Sefaria
-  *does* have hits "Yad Malachi, Klal …" and cannot follow it, because the target
-  isn't in the library. This is the core argument — you don't need external usage
-  data; Sefaria's own corpus points at the hole 287 times.
-- **243 citations in this project's Anglo-Orthodox corpus** (640-page Halachipedia
-  mine) — the **#1 public-domain absent work**, ahead of Birkei Yosef (45).
+It is, in short, the *grammar* of the tradition: not a text read once, but a
+reference reached for whenever a question of method arises.
 
-_(Source sheets are **not** a strong angle here: only ~3–5 sheets reference it — it
-is advanced methodology, not typical sheet material. Reported for completeness, not
-as support. The earlier "0 sheets" was a broken query; the corrected count is 3–5.)_
+## Why it matters
 
-## How it's used — a cross-generational methodology backbone
+Its standing is not a matter of opinion. Its author was "quoted **frequently by
+major halakhic authorities of the 18th and 19th centuries**," and the Chida praised
+Yad Malachi effusively (English Wikipedia, "Malachi ben Jacob ha-Kohen").
 
-**Externally sourced:** Wikipedia's entry on the author states he was "quoted
-**frequently by major halakhic authorities of the 18th and 19th centuries**," and
-records the Chida's effusive praise of Yad Malachi — independent confirmation that
-this is a reference work the tradition leans on, not a marginal text.
-
-**Measured** (the 287 in-corpus mentions, by citing work):
+That reliance is measurable inside the digital library today: **287 places in
+Sefaria's existing texts cite יד מלאכי** — and every one is a **dead end**, because
+the work itself is not in the library. A reader who reaches "Yad Malachi, Klal …"
+inside a work Sefaria *does* have cannot follow the reference. The citing works span
+three centuries:
 
 | Mentions | Citing work |
 |---:|---|
-| 118 | Ayin Zokher (klalim) |
+| 118 | Ayin Zokher |
 | 17 | Petach Einayim (Chida) |
 | 13 | Shem HaGedolim (Chida) |
 | 11 | Pardes Yosef |
 | 9 | Kaf HaChayim |
 | 8 | Rosh David (Chida) |
-| — | + Mishnah Berurah / Biur Halacha, Torah Temimah, Minchat Chinukh, Even Ha'azel, Responsa Rav Pealim, Responsa Benei Banim (modern) |
+| — | + Mishnah Berurah / Biur Halacha, Torah Temimah, Minchat Chinukh, Even Ha'azel, and living responsa (Benei Banim) |
 
-The span is the point: cited from the 18th c. (Chida) through **Kaf HaChayim** into
-**living responsa** (Benei Banim), and inside **Mishnah Berurah / Biur Halacha**
-themselves.
+## The gap this closes
 
-**Honest caveat on R. Yosef:** Yad Malachi is bedrock of the Sephardi *klalei
-ha-poskim* method R. Ovadia and R. Yitzchak Yosef build on — but this can't be
-*measured* here, because R. Yosef's works are themselves absent from Sefaria (they
-top the modern most-wanted list). The measured 0 for Yabia Omer/Yalkut Yosef is a
-library-gap artifact, not evidence. This is domain judgment, not a counted figure.
+Yad Malachi is **public domain** — no rights, no license, no permission needed. Yet
+there is no clean digital text of it. So every one of those 287 references is
+unlinkable, and anyone quoting the work must **hand-transcribe the Hebrew** from a
+scan. Digitizing it once turns 287 dead references into live links and ends the
+re-keying — permanently.
 
-## The digitization pain it removes
+## Why it is an ideal candidate
 
-Public domain **but with no clean digital text**: every one of those 287 in-corpus
-references is an unlinkable dead-end, and anyone quoting it — English writers,
-responsa authors — must **hand-transcribe the Hebrew** off a scan (no copy-paste
-from a clean source). Digitizing it once converts 287 dead references into live
-links and ends the re-keying, permanently, for free.
+- **Public domain** — free to reproduce.
+- **A scan already exists** — the Livorno 1766–7 and Berlin 1857 printings are on
+  HebrewBooks.org / Otzar HaChochma. No physical scanning needed.
+- **Cleanly structured** — its native form (numbered *klalim* within three parts)
+  maps directly onto a digital schema, so each reference becomes individually
+  linkable.
 
-## Why this is the *cheapest* lever on the list
+## Process
 
-Unlike the translation-gap works (commissioned English, tens of thousands each), a
-PD Hebrew work needs only **scan → OCR → proof**. A scan already exists
-(HebrewBooks.org / Otzar HaChochma host the Livorno 1766–7 and Berlin 1857
-printings), so there is no physical-scanning step — only OCR and correction.
+1. **Acquire the scan** (free) — pick the cleanest of the Livorno 1766–7 or Berlin
+   1857 printings.
+2. **OCR (Hebrew)** — Jochre (purpose-built for rabbinic Hebrew), Google Cloud
+   Vision, or Tesseract `heb`. Expect a high error rate: dense rabbinic Hebrew,
+   heavy abbreviation (ר"ת), older type.
+3. **Structure** into the three parts and their numbered klalim.
+4. **Hand-proof against the scan** — a Hebrew-literate proofreader corrects the OCR
+   line by line, expands abbreviations, and fixes letter confusions (ד/ר, ב/כ,
+   ן/ו). This is the real work.
+5. **QA and ingest**, wiring up the reference structure.
 
-## Process guide
+## Cost
 
-1. **Acquire the scan** (free) from HebrewBooks/Otzar; pick the cleanest of the
-   Livorno 1766–7 or Berlin 1857 printings.
-2. **OCR (Hebrew).** Best-to-worst for this type: **Jochre** (purpose-built for
-   rabbinic Hebrew), Google Cloud Vision (strong Hebrew), Tesseract `heb`. Expect a
-   high error rate — dense rabbinic Hebrew, heavy abbreviation (ר"ת), older type.
-3. **Structure into the three parts / klalim.** The native structure (numbered
-   rules within Klalei HaTalmud / HaPoskim / HaDinim) maps onto a Sefaria schema —
-   this is what makes each of the 287 dead references *linkable*.
-4. **Hand-proof against the scan** — a Hebrew-literate proofreader corrects OCR
-   line-by-line against the image, expands abbreviations, fixes letter confusions
-   (ד/ר, ב/כ, ן/ו). This is the real work.
-5. **QA + ingest** into Sefaria's format; wire up the ref structure.
-
-## Cost estimate (hand-proofing — the only material cost)
-
-Yad Malachi is a **three-part** work; I could not obtain an exact page count from
-accessible sources (no clean scan on archive.org; HebrewBooks is the likely source
-but wasn't reachable here), so this is an estimate to confirm against the actual
-scan — call it **~700–1,000 pages** across the three parts. Careful proofing of
-OCR'd rabbinic Hebrew runs ~**10–20 pages/hour**:
+Hand-proofing is the only material cost. Yad Malachi runs across three parts —
+estimated **~700–1,000 pages** (confirm from the scan; an exact count wasn't
+obtainable here). Careful proofing of OCR'd rabbinic Hebrew runs ~10–20 pages/hour:
 
 | | low | high |
 |---|---:|---:|
@@ -102,18 +83,14 @@ OCR'd rabbinic Hebrew runs ~**10–20 pages/hour**:
 | Proofing rate (pp/hr) | 20 | 10 |
 | Hours | 35 | 100 |
 | Rate (Hebrew-literate proofer) | $20 | $35 |
-| **Proofing** | **~$700** | **~$3,500** |
+| Proofing | ~$700 | ~$3,500 |
 | + structuring / QA / ingest | +$400 | +$1,000 |
 | **Total** | **~$1,100** | **~$4,500** |
 
-Call it **~$2–5k, one-time** (confirm once the scan's page count is known), versus
-tens of thousands to translate a single gap work. For that, the single most-cited
-public-domain absent text — and 287 currently-dead references inside Sefaria's own
-corpus — goes live. Highest return-on-cost item on the acquisition list.
+**~$2–5k, one-time**, to bring a foundational work of Torah — cited 287 times
+within the very library that currently lacks it — permanently online.
 
-_Sources: Sefaria search API (287 in-corpus mentions + citing-work breakdown; ~3–5
-sheets via the corrected `field:content` sheet query); `SEFARIA-MOST-WANTED.md` /
-`work_frequency.json` (243 corpus citations, PD tier); English Wikipedia, "Malachi
-ben Jacob ha-Kohen" (three-part structure, d. 1772, "quoted frequently by major
-halakhic authorities of the 18th and 19th centuries," Chida's praise). Page count
-and cost are estimates pending the actual scan._
+_Sources: Sefaria search API (the 287 in-corpus references and citing-work
+breakdown); English Wikipedia, "Malachi ben Jacob ha-Kohen" (three-part structure;
+d. 1772; his standing among later authorities; the Chida's praise; printing
+history). Page count and cost are estimates pending the actual scan._
