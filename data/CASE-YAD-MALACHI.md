@@ -25,11 +25,11 @@ Its standing is not a matter of opinion — and it is not a historical curiosity
 
 **Across the centuries.** The author was "quoted **frequently by major halakhic
 authorities of the 18th and 19th centuries**," and the Chida praised Yad Malachi
-effusively (English Wikipedia, "Malachi ben Jacob ha-Kohen"). That reliance is
-measurable inside the digital library today: **287 places in Sefaria's existing
-texts cite יד מלאכי** — and every one is a **dead end**, because the work itself is
-not in the library. A reader who reaches "Yad Malachi, Klal …" inside a work Sefaria
-*does* have cannot follow the reference. The citing works span three centuries:
+effusively.[^wiki] That reliance is measurable inside the digital library today:
+**287 places in Sefaria's existing texts cite יד מלאכי**[^sefaria] — and every one
+is a **dead end**, because the work itself is not in the library. A reader who
+reaches "Yad Malachi, Klal …" inside a work Sefaria *does* have cannot follow the
+reference. The citing works span three centuries:[^sefaria]
 
 | Mentions | Citing work |
 |---:|---|
@@ -46,14 +46,14 @@ classic:
 
 - It is **continuously republished**: again in the late 20th century, a new Israeli
   edition in 2001, a **Machon Yerushalayim critical edition in 2016** (freshly
-  typeset, cross-referencing parallel *Klalim* works), and a third volume in 2018
-  (Wikipedia). A work the contemporary Torah-publishing world keeps re-typesetting
-  is a work in active use — and the subject of modern scholarship (Benjamin Brown,
-  *"Some Say This, Some Say That": … Interpretation Rules in Yad Malachi*).
+  typeset, cross-referencing parallel *Klalim* works), and a third volume in
+  2018.[^wiki] A work the contemporary Torah-publishing world keeps re-typesetting
+  is a work in active use — and the subject of modern scholarship.[^brown]
 - In a large **contemporary English-language halachic reference** (Halachipedia),
-  Yad Malachi is cited **243 times** — directly, by its numbered klalim. That makes
-  it the **single most-cited public-domain work that Sefaria lacks**[^mostwanted] —
-  present-day halachic writing reaching for it, hundreds of times, right now.
+  Yad Malachi is cited **243 times** — directly, by its numbered klalim.[^halachipedia]
+  That makes it the **single most-cited public-domain work that Sefaria
+  lacks**[^mostwanted] — present-day halachic writing reaching for it, hundreds of
+  times, right now.
 - Modern authorities cite it directly: Kaf HaChaim (d. 1939) and the contemporary
   responsa Benei Banim appear among the 287 above.
 
@@ -68,29 +68,34 @@ re-keying — permanently.
 ## Why it is an ideal candidate
 
 - **Public domain** — free to reproduce.
-- **Public-domain scans already exist** — **four distinct print editions, in five
-  independent scans (eight PDF files), every one inspected page-by-page:**
-  - **Livorno 1766–7 first edition** (HebrewBooks): part I (#32530, 348 pp), II
-    (#32532, 54 pp), III (#32531, 55 pp) — one edition digitized as three part-files.
-    This *editio princeps* is set in **Rashi script** (the body) with square
-    keyword-lemmas, and is the roughest scan (ink bleed, skew).
-  - **Berlin ~1857/8** (publisher Ephraim Herz) — the cleanest, sharpest scan.
-  - **Przemyśl 1877** (Knoller) — present in **two independent scans**: HebrewBooks
-    #14122 *and* a separate Google Books scan. Two scans of one edition = two
-    witnesses with different scan artifacts.
-  - **Przemyśl 1888** (Żupnik, Knoller & Hamerschmidt) — clean.
-
-  The three later editions each bind all three parts in one volume, and **all three
-  are set in clean square Hebrew type, not Rashi** — confirmed by direct page
-  inspection. Square type is exactly what general-purpose OCR reads best (see
-  process). So the "5 sources" resolve to **4 editions**, because the two Przemyśl
-  1877 files are the same printing scanned twice.
-
-  No physical scanning is needed — the ideal starting condition for the consensus
-  ensemble below.
 - **Cleanly structured** — its native form (numbered *klalim* within three parts)
   maps directly onto a digital schema, so each reference becomes individually
   linkable.
+- **Public-domain scans already exist** — no physical scanning needed; see the
+  witnesses below.
+
+### The witnesses in hand
+
+Every scan below was inspected page-by-page and identified from its title page. They
+resolve to **four distinct print editions across five independent scans** (the two
+Przemyśl 1877 files are one printing scanned twice), and each PDF already carries an
+embedded OCR text layer:
+
+| Edition | Press | Script | Scan in hand | Pages (scan) |
+|---|---|---|---|---|
+| **Livorno 1766–7** — *editio princeps*[^livorno] | (Livorno) | **Rashi** (body); square lemmas | HebrewBooks #32530 / #32532 / #32531 (3 part-files) | 348 / 54 / 55 |
+| **Berlin ~1857/8**[^berlin] | Ephraim Herz | **Square** | Google Books | 337 |
+| **Przemyśl 1877**[^p1877] | M. A. Knoller | **Square** | HebrewBooks #14122 | 491 |
+| **Przemyśl 1877** (2nd scan)[^p1877] | " | **Square** | Google Books | 489 |
+| **Przemyśl 1888**[^p1888] | Żupnik, Knoller & Hamerschmidt | **Square** | Google Books | 373 |
+
+The three later editions each bind all three parts in one volume, and **all three
+are set in clean square Hebrew type, not Rashi** — which is exactly what
+general-purpose OCR reads best (see process). The same passage — the opening of
+*Klalei HaAleph*, on Rashi to Nedarim 19b — in the Berlin (square) and Livorno
+(Rashi) editions:
+
+![Yad Malachi, opening of Klalei HaAleph: Berlin square type vs. Livorno Rashi type, the same passage side by side](images/yad-malachi-rashi-vs-square.png)
 
 ## Process — ensemble OCR with AI adjudication
 
@@ -126,8 +131,8 @@ few conflicts."
      for rabbinic/Rashi type) or a **Kraken/eScriptorium** model trained on this
      typeface. It contributes variant readings, not the base.
    - **Rabbinic-Hebrew post-correction on every pass.** Run outputs through
-     **Dicta** (dicta.org.il — a free Israeli non-profit built specifically for
-     rabbinic Hebrew): its OCR/**Maivin** tools expand abbreviations, restore
+     **Dicta**[^dicta] — a free Israeli non-profit built specifically for rabbinic
+     Hebrew: its OCR/**Maivin** tools expand abbreviations, restore
      punctuation, and its rabbinic language model (**BEREL**) fixes context-obvious
      OCR errors (e.g. a wrong letter inside a known talmudic phrase). Dicta is
      web-based, so it runs on macOS in a browser; I found **no dedicated Mac desktop
@@ -149,8 +154,11 @@ few conflicts."
    expects.
 5. **Collate the editions.** With each printing reduced to a best-text, collate them
    against each other. Genuine differences between printings (a typo or correction in
-   one) are recorded as variants — yielding a text potentially *better than any
-   single edition*, with an apparatus.
+   one) are recorded as variants — yielding a text potentially *more accurate than
+   any single historic printing*, with an apparatus. (This is a corrected reading of
+   the PD printings against each other — not a critical edition; the modern Machon
+   Yerushalayim edition is the scholarly critical text, and this does not aim to
+   supersede it.)
 6. **Expert review — only the flagged set.** A **domain expert — a Torah scholar
    (Talmid Chacham) fluent in this genre**, not merely a Hebrew reader — resolves the
    remaining conflicts against the scan (and may **consult** the modern critical
@@ -191,23 +199,33 @@ a couple of witnesses.
 
 Net: after the reusable harness exists, the **marginal cost per work is a few hundred
 dollars**, and the output is *more* accurate than a single proofread pass —
-potentially better than any existing edition. For that, a foundational work of Torah
+potentially better than any of the historic printings. For that, a foundational work
+of Torah
 — cited 287 times inside the very library that currently lacks it, and 243 times in
 contemporary halachic writing — goes permanently online.
 
-_Sources: Sefaria search API (the 287 in-corpus references and citing-work
-breakdown); a citation survey of Halachipedia, a large contemporary
-English-language halachic reference (243 direct citations); English Wikipedia,
-"Malachi ben Jacob ha-Kohen" (three-part structure; d. 1772; standing among later
-authorities; the Chida's praise; republication history — 2001, Machon Yerushalayim
-2016, 2018 — and modern scholarship); HebrewBooks.org (Livorno 1766–7:
-#32530 / #32532 / #32531; Przemyśl 1877: #14122) and Google Books full-view scans
-for the public-domain witnesses. The four editions in hand — Livorno 1766–7 (Rashi
-script), Berlin ~1857/8, Przemyśl 1877, and Przemyśl 1888 (all three square) — were
-identified from their title pages and inspected page-by-page to confirm script and
-scan quality. OCR-tool details: Dicta (dicta.org.il, Wikipedia "Dicta
-(organization)"). Cost figures are estimates; page counts are from the source
-catalogs and scan page-counts._
+_Cost figures are estimates; page counts are from the source catalogs and from the
+scan page-counts. Every scan was inspected page-by-page; edition identifications are
+from the title pages transcribed in the footnotes below._
+
+## Notes
+
+[^wiki]: English Wikipedia, "Malachi ben Jacob ha-Kohen" — three-part structure;
+    author's death in 1772; his standing among later authorities and the Chida's
+    praise; and the republication history (2001; Machon Yerushalayim critical
+    edition 2016; third volume 2018).
+
+[^sefaria]: Sefaria search API (`search-wrapper`, `type: text`), querying the corpus
+    for citations of יד מלאכי: **287** in-corpus references, and the per-work
+    breakdown in the table (Ayin Zokher 118, Petach Einayim 17, Shem HaGedolim 13,
+    Pardes Yosef 11, Kaf HaChayim 9, Rosh David 8, and the further works listed).
+
+[^halachipedia]: This project's citation survey of Halachipedia (a large contemporary
+    English-language halachic reference): **243** direct citations of Yad Malachi by
+    its numbered klalim, in the full 640-page corpus (`data/CORPUS-COMPARISON.md`).
+
+[^brown]: Benjamin Brown, *"Some Say This, Some Say That": … Interpretation Rules in
+    Yad Malachi* — modern academic scholarship on the work.
 
 [^mostwanted]: Per this project's citation analysis of the full 640-page Halachipedia
     corpus (`data/SEFARIA-MOST-WANTED.md`, `data/CORPUS-COMPARISON.md`): among the
@@ -216,3 +234,33 @@ catalogs and scan page-counts._
     trails at 129. The five works ahead of it overall are all modern, in-copyright
     works (Yalkut Yosef, Chazon Ovadyah, Igrot Moshe, Shemirat Shabbat KeHilchata,
     Yabia Omer) that cannot be freely digitized; Yad Malachi is the top work that can.
+
+[^livorno]: **Livorno 1766–7, first edition** (HebrewBooks #32530 / #32532 / #32531).
+    Title page: *ספר יד מלאכי*, by *מלאכי בכמ"ר יעקב הכהן*; the three parts (Klalei
+    HaGemara / HaPoskim / HaDinim). The *editio princeps*: body set in **Rashi
+    script** with square keyword-lemmas; the roughest of the scans (ink bleed, skew).
+    Digitized as three part-files (348 / 54 / 55 pp).
+
+[^berlin]: **Berlin ~1857/8** (Google Books full-view scan). Title page: *ספר יד
+    מלאכי חלק ראשון*, publisher *אפרים הערץ* (Ephraim Herz), *מדינת שלעזיען*, place
+    *ברלין* (Berlin); notes it was "printed first in Livorno … and now a second time."
+    The Przemyśl 1877 title page dates this Berlin printing to *התרי"ח* (5618 =
+    1857/8). **Square** type, the cleanest scan. (The NLI copy carries the
+    Hazanovitz-collection bookplate — a provenance stamp, not part of the edition.)
+
+[^p1877]: **Przemyśl 1877** — present in two independent scans: HebrewBooks #14122 and
+    a separate Google Books full-view scan. Title page: *ספר יד מלאכי חלק ראשון* …
+    *מלאכי בכמ"ר יעקב הכהן*; colophon *פרעמישלא בשנת התרל"ז לב"ע* (5637 = 1877),
+    publisher *משה אהרן קנעניל* (M. A. Knoller), printed by *ר' חיים אהרן זאפניק ען
+    קנאללער* (Zupnik & Knoller); it names the prior Livorno (first) and Berlin
+    (*התרי"ח*) printings. **Square** type. The two Przemyśl printings share this press
+    lineage, so treat them as *near*-independent.
+
+[^p1888]: **Przemyśl 1888** (Google Books full-view scan). Latin colophon: *JAD
+    MALACHI, PRZEMYŚL, Drukiem Żupnika, Knollera i Hamerszmida, 1888*; Hebrew
+    *פרעמישלא בשנת התרמ"ח לב"ע* (5648 = 1888). **Square** type.
+
+[^dicta]: Dicta — analytical tools for Hebrew texts (dicta.org.il), a free Israeli
+    non-profit; its Maivin tool vocalizes and punctuates rabbinic text, expands
+    abbreviations, and identifies sources, and its BEREL model is a rabbinic-Hebrew
+    language model. See also English Wikipedia, "Dicta (organization)."
