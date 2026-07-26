@@ -121,7 +121,13 @@ few conflicts."
    the ensemble does not start from zero: Google's OCR (on the Google Books scans) and
    HebrewBooks' OCR are two *free, already-computed* witnesses on the square editions.
    Extract those first, then add fresh passes to raise accuracy and de-correlate
-   errors:
+   errors. **Worked example:** [`data/ocr-samples/`](ocr-samples/) shows the same three
+   passages (the Aleph/Bet/Gimel section openings) as raw embedded OCR from all five
+   scans — a concrete look at how much they agree, and where they don't. It is a sharp
+   reminder that square type is *necessary but not sufficient*: the Berlin scan OCRs
+   cleanly, yet the (also square) Przemyśl Google scans come out badly letter-confused,
+   and the Rashi Livorno is unusable as-is — which is exactly why the steps below add
+   better engines rather than trusting the embedded layers:
    - **Square editions (Berlin, Przemyśl) — the base text.** Run **Google Cloud
      Vision / Document AI** and **Tesseract `heb`** (both strong on square Hebrew,
      both weak on Rashi — which is why the square editions carry the load). These plus
