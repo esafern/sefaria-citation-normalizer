@@ -310,6 +310,9 @@ md.append(f"**Method.** From the full {PAGES}-page Halachipedia corpus (every su
           f"were merged into one work, and mis-detected non-texts were dropped.\n")
 md.append(f"**Result.** {len(absent)} works, {sum(n for _,n in absent)} citations. Split by why "
           f"they're missing:\n")
+md.append("_See also: `CASE-YAD-MALACHI.md` — a data-grounded digitization case for the "
+          "top public-domain absent work; `ANALYSIS.md` — most-cited works, genre profile, and "
+          "the present-but-untranslated gap._\n")
 
 md.append("## Tier 1 — Public domain, not yet digitized\n")
 md.append("_Author died >70 years ago; Sefaria can add these without licensing._\n")

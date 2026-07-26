@@ -6,6 +6,8 @@ _A candidate priority list for Sefaria's library team._
 
 **Result.** 71 works, 6771 citations. Split by why they're missing:
 
+_See also: `CASE-YAD-MALACHI.md` — a data-grounded digitization case for the top public-domain absent work; `ANALYSIS.md` — most-cited works, genre profile, and the present-but-untranslated gap._
+
 ## Tier 1 — Public domain, not yet digitized
 
 _Author died >70 years ago; Sefaria can add these without licensing._
