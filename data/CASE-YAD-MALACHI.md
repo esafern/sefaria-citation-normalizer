@@ -74,42 +74,75 @@ re-keying — permanently.
   maps directly onto a digital schema, so each reference becomes individually
   linkable.
 
-## Process
+## Process — ensemble OCR with AI adjudication
 
-1. **Acquire the scan** (free) — use a **fully public-domain historical printing**:
-   the Livorno 1766–7 first edition or the Berlin 1857 edition (both on
-   HebrewBooks / Otzar). **Do not scan the modern critical editions** (2001, 2016
-   Machon Yerushalayim, 2018): the *text* of Yad Malachi is public domain in any
-   edition, but their added annotations, cross-references, and biographical material
-   are copyrighted. Sourcing from a pre-20th-century printing sidesteps the question
-   entirely — nothing modern is layered on.
-2. **OCR (Hebrew)** — Jochre (purpose-built for rabbinic Hebrew), Google Cloud
-   Vision, or Tesseract `heb`. Expect a high error rate: dense rabbinic Hebrew,
-   heavy abbreviation (ר"ת), older type.
-3. **Structure** into the three parts and their numbered klalim.
-4. **Hand-proof against the scan** — a Hebrew-literate proofreader corrects the OCR
-   line by line, expands abbreviations, and fixes letter confusions (ד/ר, ב/כ,
-   ן/ו). This is the real work.
-5. **QA and ingest**, wiring up the reference structure.
+High accuracy on dense rabbinic Hebrew comes not from proofreading one OCR pass but
+from **consensus across many witnesses**. OCR engines make *uncorrelated* errors, so
+where several agree the reading is near-certain, and disagreements are automatically
+localized to specific words — turning "proofread everything" into "adjudicate the
+few conflicts."
+
+1. **Gather every public-domain witness.** Collect all pre-20th-century scans — the
+   Livorno 1766–7 first edition, the Berlin 1857 edition, and any other early
+   printings on HebrewBooks / Otzar. Each is an independent witness to the same PD
+   text. (Modern critical editions are *not* scanned into the corpus — see the
+   copyright note.)
+2. **Multi-engine OCR, per scan.** Run several systems on each printing — Google
+   Cloud Vision, Tesseract `heb`, **Jochre** (best for rabbinic/Rashi type), ABBYY,
+   plus Hebrew-specialized tooling (**DICTA** post-correction; **Kraken /
+   eScriptorium** with trained Hebrew models). Uncorrelated errors make agreement a
+   strong signal.
+3. **Align and vote — per scan.** Align the engine outputs (word/character sequence
+   alignment, anchored on the numbered *klalim*) and take a per-token consensus.
+   Agreed tokens — the large majority — are accepted automatically; only conflicts
+   are flagged.
+4. **AI adjudication — image-grounded, selection-only.** For each flagged token,
+   give a multimodal model (Claude / GPT with vision) the candidate readings **plus
+   the cropped scan image** of that word, and have it *select* the correct reading —
+   never invent text. It must name the witness it relied on; anything not attested
+   by a scan is a flagged conjecture for a human, not a silent change. This is the
+   critical guardrail against the model "helpfully" emending the text to what it
+   expects.
+5. **Collate the editions.** With each printing reduced to a best-text, collate them
+   against each other. Genuine differences between printings (a typo or correction in
+   one) are recorded as variants — yielding a text potentially *better than any
+   single edition*, with an apparatus.
+6. **Human review — only the flagged set.** A Hebrew-literate reviewer resolves the
+   remaining conflicts against the scan (and may **consult** the modern critical
+   editions as a reference for hard readings — see note) and spot-checks the
+   auto-accepted text. Because the human only ever touches disagreements, this is a
+   fraction of full proofreading.
+7. **Structure and ingest** into the three parts and their klalim; output text +
+   per-token confidence map + variant apparatus.
+
+**Copyright note.** The *base text you reproduce* comes only from fully
+public-domain printings. You may **consult** modern critical editions (2001; Machon
+Yerushalayim 2016) to decide a hard reading — using a work to inform judgment is not
+infringement — but you may not reproduce their annotations, cross-references, or
+apparatus, or OCR them into the corpus; source the actual reading from a PD printing.
+(General principle, not legal advice; have counsel bless the workflow before
+publication.)
 
 ## Cost
 
-Hand-proofing is the only material cost. Yad Malachi runs across three parts —
-estimated **~700–1,000 pages** (confirm from the scan; an exact count wasn't
-obtainable here). Careful proofing of OCR'd rabbinic Hebrew runs ~10–20 pages/hour:
+The ensemble front-loads a little engineering and collapses the human cost — which
+is the expensive part of any digitization.
 
-| | low | high |
-|---|---:|---:|
-| Pages | 700 | 1,000 |
-| Proofing rate (pp/hr) | 20 | 10 |
-| Hours | 35 | 100 |
-| Rate (Hebrew-literate proofer) | $20 | $35 |
-| Proofing | ~$700 | ~$3,500 |
-| + structuring / QA / ingest | +$400 | +$1,000 |
-| **Total** | **~$1,100** | **~$4,500** |
+- **One-time harness** (OCR-ensemble + alignment + adjudication): developer time,
+  ~40–80 hrs, and **reusable** for every other public-domain work — so it amortizes
+  far beyond this one text.
+- **Compute** (multi-engine OCR + AI adjudication over ~700–1,000 pages): modest —
+  low hundreds of dollars in OCR/API credits.
+- **Human review** — only the flagged conflict set. If the ensemble auto-accepts
+  ~90% of tokens, a reviewer handles the rest in perhaps **~5–15 hours (~$150–500)**,
+  versus 35–100 hours to proofread every page single-pass.
 
-**~$2–5k, one-time**, to bring a foundational work of Torah — cited 287 times
-within the very library that currently lacks it — permanently online.
+Net: after the reusable harness exists, the **marginal cost per work is well under
+$1k**, and the output is *more* accurate than a single proofread pass — potentially
+better than any existing edition. (Page count is an estimate pending the actual
+scan.) For that, a foundational work of Torah — cited 287 times inside the very
+library that currently lacks it, and 243 times in contemporary halachic writing —
+goes permanently online.
 
 _Sources: Sefaria search API (the 287 in-corpus references and citing-work
 breakdown); a citation survey of Halachipedia, a large contemporary
