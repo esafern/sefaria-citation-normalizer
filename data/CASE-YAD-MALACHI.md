@@ -68,8 +68,11 @@ re-keying — permanently.
 ## Why it is an ideal candidate
 
 - **Public domain** — free to reproduce.
-- **A scan already exists** — the Livorno 1766–7 and Berlin 1857 printings are on
-  HebrewBooks.org / Otzar HaChochma. No physical scanning needed.
+- **Public-domain scans already exist** (verified on HebrewBooks.org): the complete
+  **Livorno 1766–7 first edition** — part I (#32530, 348 pp), part II (#32532, 54
+  pp), part III (#32531, 55 pp) — plus an independent **Przemyśl 1877** witness for
+  the large part I (#14122, 491 pp). No physical scanning needed, and multiple
+  witnesses are already in hand for the ensemble.
 - **Cleanly structured** — its native form (numbered *klalim* within three parts)
   maps directly onto a digital schema, so each reference becomes individually
   linkable.
@@ -82,11 +85,11 @@ where several agree the reading is near-certain, and disagreements are automatic
 localized to specific words — turning "proofread everything" into "adjudicate the
 few conflicts."
 
-1. **Gather every public-domain witness.** Collect all pre-20th-century scans — the
-   Livorno 1766–7 first edition, the Berlin 1857 edition, and any other early
-   printings on HebrewBooks / Otzar. Each is an independent witness to the same PD
-   text. (Modern critical editions are *not* scanned into the corpus — see the
-   copyright note.)
+1. **Gather every public-domain witness.** The Livorno 1766–7 first edition (all
+   three parts) and an 1877 Przemyśl printing are already on HebrewBooks (IDs above);
+   add any further early printings (e.g. Berlin 1857) from HebrewBooks / Otzar. Each
+   is an independent witness to the same PD text. (Modern critical editions are *not*
+   scanned into the corpus — see the copyright note.)
 2. **Multi-engine OCR, per scan.** Run several systems on each printing — Google
    Cloud Vision, Tesseract `heb`, **Jochre** (best for rabbinic/Rashi type), ABBYY,
    plus Hebrew-specialized tooling (**DICTA** post-correction; **Kraken /
@@ -128,26 +131,29 @@ publication.)
 The ensemble front-loads a little engineering and collapses the human cost — which
 is the expensive part of any digitization.
 
+The work is **~457 pages** (the verified Livorno set: 348 + 54 + 55), OCR'd across
+a couple of witnesses.
+
 - **One-time harness** (OCR-ensemble + alignment + adjudication): developer time,
   ~40–80 hrs, and **reusable** for every other public-domain work — so it amortizes
   far beyond this one text.
-- **Compute** (multi-engine OCR + AI adjudication over ~700–1,000 pages): modest —
-  low hundreds of dollars in OCR/API credits.
+- **Compute** (multi-engine OCR + AI adjudication over ~460 pages × 2 witnesses):
+  modest — low hundreds of dollars in OCR/API credits at most.
 - **Human review** — only the flagged conflict set. If the ensemble auto-accepts
-  ~90% of tokens, a reviewer handles the rest in perhaps **~5–15 hours (~$150–500)**,
-  versus 35–100 hours to proofread every page single-pass.
+  ~90% of tokens, a reviewer handles the rest in perhaps **~5–10 hours (~$150–350)**,
+  versus ~25–45 hours to proofread all 457 pages single-pass.
 
-Net: after the reusable harness exists, the **marginal cost per work is well under
-$1k**, and the output is *more* accurate than a single proofread pass — potentially
-better than any existing edition. (Page count is an estimate pending the actual
-scan.) For that, a foundational work of Torah — cited 287 times inside the very
-library that currently lacks it, and 243 times in contemporary halachic writing —
-goes permanently online.
+Net: after the reusable harness exists, the **marginal cost per work is a few hundred
+dollars**, and the output is *more* accurate than a single proofread pass —
+potentially better than any existing edition. For that, a foundational work of Torah
+— cited 287 times inside the very library that currently lacks it, and 243 times in
+contemporary halachic writing — goes permanently online.
 
 _Sources: Sefaria search API (the 287 in-corpus references and citing-work
 breakdown); a citation survey of Halachipedia, a large contemporary
 English-language halachic reference (243 direct citations); English Wikipedia,
 "Malachi ben Jacob ha-Kohen" (three-part structure; d. 1772; standing among later
 authorities; the Chida's praise; republication history — 2001, Machon Yerushalayim
-2016, 2018 — and modern scholarship). Page count and cost are estimates pending the
-actual scan._
+2016, 2018 — and modern scholarship); HebrewBooks.org for the public-domain scans
+and page counts (Livorno 1766–7: #32530 / #32532 / #32531; Przemyśl 1877: #14122).
+Cost figures are estimates; page counts are from HebrewBooks._
