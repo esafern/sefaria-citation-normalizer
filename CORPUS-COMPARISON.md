@@ -43,7 +43,7 @@ Yechave Daat, Halacha Brurah, Taharat Habayit) now accounts for **~2,300 of the
 ~14 genuinely-new absent works, mostly mid-tier — a mix of public-domain classics
 and modern works:
 
-- **Yad Malachi** (243, PD — Malachi HaKohen d.1785) — jumped straight to #6. A
+- **Yad Malachi** (243, PD — Malachi HaKohen d.1772) — jumped straight to #6. A
   Talmudic-methodology work; the count is concentrated on methodology-heavy pages.
 - **Sdei Chemed** (32, PD — C.C. Medini d.1904), **Rokeach** (18, PD), **Machzik
   Bracha** (17, Chida), **Yafeh Lelev** (18, PD), **Maharam Chalava** (18, PD).

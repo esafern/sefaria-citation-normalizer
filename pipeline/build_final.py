@@ -185,7 +185,7 @@ ERA = {
     "mekorchaim": ("Chavot Yair / Yair Bacharach (d.1702)", "PD"),  # cited by OC siman
     "halichotolam": ("Yitzchak Yosef, modern", "MOD"),  # parsha-ordered, multi-volume
     # ---- new works surfaced by the full 640-page corpus (era by author death) ----
-    "yadmalachi": ("Malachi HaKohen (d.1785)", "PD"),
+    "yadmalachi": ("Malachi HaKohen (d.1772)", "PD"),
     "sdeichemed": ("C.C. Medini (d.1904)", "PD"),
     "maharamchalavahpesachim": ("Maharam Chalava (14c)", "PD"),
     "rokeach": ("Eleazar of Worms (d.1230)", "PD"),

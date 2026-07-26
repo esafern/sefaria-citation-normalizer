@@ -14,7 +14,7 @@ _Author died >70 years ago; Sefaria can add these without licensing._
 
 | Citations | Work | Author |
 |---:|---|---|
-| 243 | Yad Malachi | Malachi HaKohen (d.1785) |
+| 243 | Yad Malachi | Malachi HaKohen (d.1772) |
 | 129 | Birkei Yosef | Chida (d.1806) |
 | 114 | Pri Chadash | H. da Silva (d.1698) |
 | 54 | Chavot Daat | Y. Lorberbaum (d.1832) |
