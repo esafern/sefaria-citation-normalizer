@@ -68,11 +68,17 @@ re-keying — permanently.
 ## Why it is an ideal candidate
 
 - **Public domain** — free to reproduce.
-- **Public-domain scans already exist** (verified on HebrewBooks.org): the complete
-  **Livorno 1766–7 first edition** — part I (#32530, 348 pp), part II (#32532, 54
-  pp), part III (#32531, 55 pp) — plus an independent **Przemyśl 1877** witness for
-  the large part I (#14122, 491 pp). No physical scanning needed, and multiple
-  witnesses are already in hand for the ensemble.
+- **Public-domain scans already exist** — multiple independent witnesses, verified:
+  - **HebrewBooks**: the complete **Livorno 1766–7 first edition** — part I (#32530,
+    348 pp), II (#32532, 54 pp), III (#32531, 55 pp) — plus a **Przemyśl 1877**
+    printing of part I (#14122, 491 pp).
+  - **Google Books** (all confirmed *full view* / public domain): the **1852**
+    (`OdiHjxI3I0EC`, 488 pp), **1877** (`Z5C0L7I9OsQC`, 336 pp), and **1888**
+    (`93dKYCA1q-YC`, whose title itself notes the work is *לשלשה חלקים* — in three
+    parts) editions.
+
+  No physical scanning is needed, and **five-plus independent witnesses are already
+  in hand** — the ideal starting condition for the consensus ensemble below.
 - **Cleanly structured** — its native form (numbered *klalim* within three parts)
   maps directly onto a digital schema, so each reference becomes individually
   linkable.
@@ -85,11 +91,12 @@ where several agree the reading is near-certain, and disagreements are automatic
 localized to specific words — turning "proofread everything" into "adjudicate the
 few conflicts."
 
-1. **Gather every public-domain witness.** The Livorno 1766–7 first edition (all
-   three parts) and an 1877 Przemyśl printing are already on HebrewBooks (IDs above);
-   add any further early printings (e.g. Berlin 1857) from HebrewBooks / Otzar. Each
-   is an independent witness to the same PD text. (Modern critical editions are *not*
-   scanned into the corpus — see the copyright note.)
+1. **Gather every public-domain witness.** Five are already confirmed and in hand
+   (the HebrewBooks and Google Books editions listed above — Livorno 1766–7, Przemyśl
+   1877, and the 1852/1877/1888 Google Books full-view scans); add any further early
+   printings from Otzar if convenient. Each is an independent witness to the same PD
+   text. (Modern critical editions are *not* scanned into the corpus — see the
+   copyright note.)
 2. **Multi-engine OCR, per scan.** Run several systems on each printing — Google
    Cloud Vision, Tesseract `heb`, **Jochre** (best for rabbinic/Rashi type), ABBYY,
    plus Hebrew-specialized tooling (**DICTA** post-correction; **Kraken /
@@ -154,6 +161,8 @@ breakdown); a citation survey of Halachipedia, a large contemporary
 English-language halachic reference (243 direct citations); English Wikipedia,
 "Malachi ben Jacob ha-Kohen" (three-part structure; d. 1772; standing among later
 authorities; the Chida's praise; republication history — 2001, Machon Yerushalayim
-2016, 2018 — and modern scholarship); HebrewBooks.org for the public-domain scans
-and page counts (Livorno 1766–7: #32530 / #32532 / #32531; Przemyśl 1877: #14122).
-Cost figures are estimates; page counts are from HebrewBooks._
+2016, 2018 — and modern scholarship); HebrewBooks.org (Livorno 1766–7:
+#32530 / #32532 / #32531; Przemyśl 1877: #14122) and Google Books (full-view:
+`OdiHjxI3I0EC` 1852, `Z5C0L7I9OsQC` 1877, `93dKYCA1q-YC` 1888) for the public-domain
+scans and page counts. Cost figures are estimates; page counts are from the source
+catalogs._
