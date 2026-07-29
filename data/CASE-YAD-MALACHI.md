@@ -119,9 +119,10 @@ few conflicts."
    — both the Google Books and the HebrewBooks files — **already carries an embedded
    OCR text layer** (verified: ~3,000 characters of extractable text per page). So
    the ensemble does not start from zero: Google's OCR (on the Google Books scans) and
-   HebrewBooks' OCR are two *free, already-computed* witnesses on the square editions.
-   Extract those first, then add fresh passes to raise accuracy and de-correlate
-   errors. **Worked example:** [`data/ocr-samples/`](ocr-samples/) shows the same three
+   HebrewBooks' OCR are two *free, already-computed* witnesses on the square editions —
+   the **Berlin (NLI) layer being the strongest** and the natural base draft (see
+   *Preparing the text for Sefaria*). Extract those first, then add fresh passes to
+   raise accuracy and de-correlate errors. **Worked example:** [`data/ocr-samples/`](ocr-samples/) shows the same three
    passages (the Aleph/Bet/Gimel section openings) as raw embedded OCR from all five
    scans — a concrete look at how much they agree, and where they don't. It is a sharp
    reminder that square type is *necessary but not sufficient*: the Berlin scan OCRs
@@ -214,6 +215,65 @@ _Cost figures are estimates; page counts are from the source catalogs and from t
 scan page-counts. Every scan was inspected page-by-page; edition identifications are
 from the title pages transcribed in the footnotes below._
 
+## Preparing the text for Sefaria
+
+Getting the text *into* the library is a distinct last mile with its own rules, and it
+keeps two things separate: **the text version** (what you transcribe) and **the links**
+(how it connects to everything else).
+
+**Start from the best existing OCR layer.** All three later Google Books scans were
+digitized from **National Library of Israel** copies and already carry a text layer —
+but they are not equal. The **Berlin ~1857/8** layer is the standout: the fullest
+(median ~4,200 characters/page, no thin pages) and, on inspection, the most accurate,
+while the two Przemyśl layers are dense but heavily letter-confused (see
+[`data/ocr-samples/`](ocr-samples/)). So the **Berlin NLI layer is the natural base
+draft** — and it is also the cleanest-set edition. That collapses most of the OCR
+work: for the base text you are *cleaning and structuring a good transcription*, not
+building one from scratch.
+
+**Licensing is clear.**[^ocrpd] The Berlin edition (~1857) is public domain, and a
+faithful mechanical OCR of a public-domain text adds no new authorship of its own — so
+the text is free to place under Sefaria's CC0 / public-domain terms. The only wrinkle
+is contractual, not copyright: files pulled from Google Books carry Google's usage
+terms (attribution, non-commercial, no bulk scraping). The clean way around it — since
+the scans are **NLI** holdings — is to source the page images from NLI directly where
+possible, treat the Google layer as a draft to verify against the image, and attribute
+the edition (Berlin 1857) and scan provenance. The resulting text stands on the PD
+edition regardless of who OCR'd it.
+
+**Keep the prose faithful — "minimal changes" is the right instinct, but not "no
+changes."** A Sefaria version represents a specific printing, so:
+
+- **Don't** expand the abbreviations or rewrite the prose — leave רש״י, פ״ב, סי׳ as
+  printed. (Abbreviation *expansion* is a read-time layer — Dicta/Maivin — not a change
+  to the submitted text; if a word ever must be added, mark it in `[brackets]` or a
+  footnote.)
+- **Do** still: (1) **proof against the image** — even a clean layer has residual
+  errors; (2) **strip non-text cruft** — running headers, page numbers, the NLI and
+  "Digitized by Google" stamps, blank plates; (3) **restore reading order** where the
+  OCR interleaved a two-column page; and (4) **segment into the schema** — the three
+  parts → their klalim → one segment per klal, so every reference gets a stable address
+  like *Yad Malachi, Klalei HaGemara, Aleph 1*.
+
+**Links are a separate layer — don't hand-insert them.**[^linker] Sefaria stores
+connections apart from the text, and its **Auto-Linker** builds them by detecting
+citations. Your job in the text is only to make citations *parseable*: the linker
+wants the **title written out** followed by the numeric reference, ordinary
+punctuation, and no dash inside a single ref (a dash denotes a range). So the useful
+"normalization" here is **not** expanding the prose's abbreviations — it is normalizing
+the **citation references** (Rashi, Tur, Shulchan Aruch, the sister klalim) into
+linker-friendly form so they auto-resolve; the residue can be added as manual links.
+This is exactly the normalization problem this repository works on. And the payoff runs
+both ways: the **287 existing references *to* Yad Malachi** light up automatically the
+moment the work exists under a canonical ref — with no edits to those 287 works at all.
+
+**Two paths, right-sized.** The *lean* path — Berlin NLI layer as base, proofed against
+the other scans where in doubt, structured and citation-normalized — gets a solid,
+honestly-labeled version into the library quickly (and Sefaria is a wiki: it can be
+refined later). The *full ensemble* above is the higher-accuracy upgrade, worth it for
+a foundational reference and reusable for the next work. Either way, the base text
+stays faithful to a public-domain printing.
+
 ## Notes
 
 [^wiki]: English Wikipedia, "Malachi ben Jacob ha-Kohen" — three-part structure;
@@ -232,6 +292,19 @@ from the title pages transcribed in the footnotes below._
 
 [^brown]: Benjamin Brown, *"Some Say This, Some Say That": … Interpretation Rules in
     Yad Malachi* — modern academic scholarship on the work.
+
+[^linker]: Sefaria "How to Format Citations for the Linker" and the "Sefaria
+    Auto-Linker" (developers.sefaria.org; Sefaria-Project wiki): links are stored as a
+    separate connections layer and generated by detecting citations written as *title
+    (spelled out) + numeric reference*; space/comma/period/colon are fine and a dash
+    denotes a range. Footnote markup within a version is
+    `<sup class="footnote-marker">n</sup><i class="footnote">…</i>`.
+
+[^ocrpd]: A faithful mechanical OCR of a public-domain text adds no original authorship
+    and so attracts no new copyright of its own (cf. the originality requirement in
+    *Feist v. Rural*, 1991); Google Books' usage terms are a contractual/attribution
+    condition on the *files*, separate from copyright in the *text*. General principle,
+    not legal advice — have counsel confirm before publication.
 
 [^mostwanted]: Per this project's citation analysis of the full 640-page Halachipedia
     corpus (`data/SEFARIA-MOST-WANTED.md`, `data/CORPUS-COMPARISON.md`): among the
