@@ -267,6 +267,23 @@ This is exactly the normalization problem this repository works on. And the payo
 both ways: the **287 existing references *to* Yad Malachi** light up automatically the
 moment the work exists under a canonical ref — with no edits to those 287 works at all.
 
+**Add a link-readiness QA step — test for auto-linking, don't apply the links.** Before
+ingest, run the finished text through Sefaria's linker (`/api/find-refs`) purely as a
+*test*. It returns each detected citation with a `linkFailed` flag, so the output is
+two lists: citations that resolve as-is (nothing to do — Sefaria will link them at
+ingest), and citations it **detects but cannot link**. Each failure is then flagged
+with a **candidate normalized citation**, itself re-tested against the linker so the
+suggestion is verified as *linkable* before a human ever sees it. The text is **never
+modified** by this step — it produces a flagged worklist for the expert reviewer, who
+confirms the candidate is not just linkable but *correct*. A worked example on a real
+Klalei HaAleph passage is in [`data/link-readiness-demo.md`](link-readiness-demo.md)
+(run by [`pipeline/link_readiness.py`](../pipeline/link_readiness.py)): of the seven
+citations the linker found, the one clean daf reference (`נדרים י"ט ב'`) auto-linked,
+and the six abbreviated/chapter-style references (`רש"י ז"ל בפ"ב דנדרים`, `בפרק המפלת
+כ"ג ב'`, …) failed — each getting a verified candidate (Rashi on Nedarim 19b, Niddah
+23b, Yoma 31b, …). That is the normalization payoff made concrete: the linker measures
+link-readiness, and this repo's normalizer supplies the fix.
+
 **Two paths, right-sized.** The *lean* path — Berlin NLI layer as base, proofed against
 the other scans where in doubt, structured and citation-normalized — gets a solid,
 honestly-labeled version into the library quickly (and Sefaria is a wiki: it can be

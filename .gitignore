@@ -6,6 +6,7 @@ __pycache__/
 hp_cache/
 mine_cache/
 my_cache/
+link_cache/
 *_cache.json
 
 # run logs
