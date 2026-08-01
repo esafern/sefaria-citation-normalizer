@@ -125,7 +125,7 @@ those 287 references is unlinkable, and anyone quoting the work must **hand-tran
 the Hebrew** from a scan. Digitizing it once turns 287 dead references into live links
 and ends the re-keying — permanently.
 
-![Three real dead-end citations of Yad Malachi — a Halachipedia footnote, a Shem HaGedolim entry inside Sefaria, and the source-sheet picture — each failing to resolve because the work is not in the library](images/yad-malachi-broken-citation.png)
+![Two real dead-end citations of Yad Malachi — a Halachipedia footnote and a Shem HaGedolim entry inside Sefaria — each failing to resolve because the work is not in the library](images/yad-malachi-broken-citation.png)
 
 _The same dead end in real contexts: a Halachipedia footnote and the Chida's Shem
 HaGedolim (already in Sefaria) both cite Yad Malachi, and the linker returns
@@ -145,8 +145,11 @@ citations and the linker's own results — not a screenshot.)_
 
 Every scan below was inspected page-by-page and identified from its title page. They
 resolve to **four distinct print editions across five independent scans** (the two
-Przemyśl 1877 files are one printing scanned twice), and each PDF already carries an
-embedded OCR text layer:
+Przemyśl 1877 files are one printing scanned twice). These are **page-image scans**.
+Some carry an embedded OCR text layer, but **that text is not good enough to use** — it
+ranges from error-ridden to unusable (see the samples under *Process*), so the work is
+to **OCR the page images properly**, not to reuse the text that happens to ship with
+them:
 
 | Edition | Press | Script | Scan in hand | Pages (scan) |
 |---|---|---|---|---|
@@ -187,26 +190,19 @@ few conflicts."
    independent pairing is **Berlin** (square) against the **Livorno** first edition
    (Rashi). The two scans of Przemyśl 1877 are the same *type* but differ in scan
    noise, so they still help the vote.
-2. **Start from the OCR you already have, then add engines.** Every one of these PDFs
-   — both the Google Books and the HebrewBooks files — **already carries an embedded
-   OCR text layer** (verified: ~3,000 characters of extractable text per page). So
-   the ensemble does not start from zero: Google's OCR (on the Google Books scans) and
-   HebrewBooks' OCR are two *free, already-computed* witnesses on the square editions —
-   the **Berlin (NLI) layer being the strongest** and the natural base draft (see
-   *Preparing the text for Sefaria*). Extract those first, then add fresh passes to
-   raise accuracy and de-correlate errors. **Worked example:** [`data/ocr-samples/`](ocr-samples/) shows the same three
-   passages (the Aleph/Bet/Gimel section openings) as raw embedded OCR from all five
-   scans — a concrete look at how much they agree, and where they don't. It is a sharp
-   reminder that square type is *necessary but not sufficient*: the Berlin scan OCRs
-   cleanly, yet the (also square) Przemyśl Google scans come out badly letter-confused,
-   and the Rashi Livorno is unusable as-is — which is exactly why the steps below add
-   better engines rather than trusting the embedded layers:
+2. **OCR the page images — don't trust the embedded text.** Some of these PDFs ship an
+   embedded OCR layer, but it is **not good enough to use as the base text**.
+   [`data/ocr-samples/`](ocr-samples/) shows the same three passages (the
+   Aleph/Bet/Gimel section openings) as the raw embedded OCR of all five scans: the
+   Berlin scan comes out cleanest, yet even it carries errors, the (also square)
+   Przemyśl Google scans are **badly letter-confused**, and the Rashi Livorno is
+   **unusable**. Square type is *necessary but not sufficient*; scan-and-OCR quality is
+   everything. So treat every witness as page images and run proper OCR over them:
    - **Square editions (Berlin, Przemyśl) — the base text.** Run **Google Cloud
      Vision / Document AI** and **Tesseract `heb`** (both strong on square Hebrew,
-     both weak on Rashi — which is why the square editions carry the load). With the
-     embedded layer that already ships in each scan, that is **≥3 passes per square
-     edition** — and **4 for Przemyśl 1877**, which exists in two scans (Google +
-     HebrewBooks), each with its own embedded layer.
+     both weak on Rashi — which is why the square editions carry the load) over the
+     page images. Several engines × several square editions give many independent
+     passes to align and vote on.
    - **Livorno first edition (Rashi) — collation witness.** General engines fail on
      Rashi, so read it with a Rashi-capable tool: **Jochre 3** (open-source, trained
      for rabbinic/Rashi type) or a **Kraken/eScriptorium** model trained on this
@@ -271,9 +267,8 @@ pages; the Livorno set is 348 + 54 + 55), OCR'd across the five scans as above.
   ~40–80 hrs, and **reusable** for every other public-domain work — so it amortizes
   far beyond this one text. This is the real cost of the *first* work; every work
   after reuses it.
-- **Compute** (multi-engine OCR + AI adjudication over the editions — noting each
-  scan already ships an embedded OCR layer for free): modest — low hundreds of
-  dollars in OCR/API credits at most.
+- **Compute** (multi-engine OCR of the page images + AI adjudication over the
+  editions): modest — low hundreds of dollars in OCR/API credits at most.
 - **Expert review** — only the flagged conflict set, and by a Torah scholar (Talmid
   Chacham), not a general proofreader. If the ensemble auto-accepts ~90% of tokens,
   the reviewer handles the rest in perhaps **~5–10 hours (~$150–350)**, versus ~25–45
@@ -298,15 +293,14 @@ Getting the text *into* the library is a distinct last mile with its own rules, 
 keeps two things separate: **the text version** (what you transcribe) and **the links**
 (how it connects to everything else).
 
-**Start from the best existing OCR layer.** All three later Google Books scans were
-digitized from **National Library of Israel** copies and already carry a text layer —
-but they are not equal. The **Berlin ~1857/8** layer is the standout: the fullest
-(median ~4,200 characters/page, no thin pages) and, on inspection, the most accurate,
-while the two Przemyśl layers are dense but heavily letter-confused (see
-[`data/ocr-samples/`](ocr-samples/)). So the **Berlin NLI layer is the natural base
-draft** — and it is also the cleanest-set edition. That collapses most of the OCR
-work: for the base text you are *cleaning and structuring a good transcription*, not
-building one from scratch.
+**OCR the best edition's images — the embedded text is not usable.** All three later
+Google Books scans were digitized from **National Library of Israel** copies; some ship
+an embedded OCR layer, but none is clean enough to submit — the Berlin layer is the best
+of them and still carries errors, while the two Przemyśl layers are badly letter-confused
+(see [`data/ocr-samples/`](ocr-samples/)). So treat every scan as **page images** and
+OCR them. Build from the **Berlin ~1857/8** edition: it is the cleanest square
+typesetting, so it OCRs best — giving a strong base text to proof and structure rather
+than key from scratch.
 
 **Licensing is clear.**[^ocrpd] The Berlin edition (~1857) is public domain, and a
 faithful mechanical OCR of a public-domain text adds no new authorship of its own — so
@@ -314,9 +308,9 @@ the text is free to place under Sefaria's CC0 / public-domain terms. The only wr
 is contractual, not copyright: files pulled from Google Books carry Google's usage
 terms (attribution, non-commercial, no bulk scraping). The clean way around it — since
 the scans are **NLI** holdings — is to source the page images from NLI directly where
-possible, treat the Google layer as a draft to verify against the image, and attribute
-the edition (Berlin 1857) and scan provenance. The resulting text stands on the PD
-edition regardless of who OCR'd it.
+possible and **OCR them yourself**, which also sidesteps Google's terms entirely, then
+attribute the edition (Berlin 1857) and scan provenance. The resulting text stands on
+the PD edition regardless of who OCR'd it.
 
 **Keep the prose faithful — "minimal changes" is the right instinct, but not "no
 changes."** A Sefaria version represents a specific printing, so:
@@ -325,7 +319,7 @@ changes."** A Sefaria version represents a specific printing, so:
   printed. (Abbreviation *expansion* is a read-time layer — Dicta/Maivin — not a change
   to the submitted text; if a word ever must be added, mark it in `[brackets]` or a
   footnote.)
-- **Do** still: (1) **proof against the image** — even a clean layer has residual
+- **Do** still: (1) **proof against the image** — even good OCR has residual
   errors; (2) **strip non-text cruft** — running headers, page numbers, the NLI and
   "Digitized by Google" stamps, blank plates; (3) **restore reading order** where the
   OCR interleaved a two-column page; and (4) **segment into the schema** — the three
@@ -365,10 +359,10 @@ the six abbreviated/chapter-style references (`רש"י ז"ל בפ"ב דנדרי�
 Yoma 31b, …) and one being a linker mis-segmentation left for manual review. That is the normalization payoff made concrete: the linker measures
 link-readiness, and this repo's normalizer supplies the fix.
 
-**Two paths, right-sized.** The *lean* path — Berlin NLI layer as base, proofed against
-the other scans where in doubt, structured and citation-normalized — gets a solid,
-honestly-labeled version into the library quickly (and Sefaria is a wiki: it can be
-refined later). The *full ensemble* above is the higher-accuracy upgrade, worth it for
+**Two paths, right-sized.** The *lean* path — OCR just the Berlin edition (its cleanest
+square images), proofed against the other scans where in doubt, structured and
+citation-normalized — gets a solid, honestly-labeled version into the library quickly
+(and Sefaria is a wiki: it can be refined later). The *full ensemble* above is the higher-accuracy upgrade, worth it for
 a foundational reference and reusable for the next work. Either way, the base text
 stays faithful to a public-domain printing.
 
@@ -378,8 +372,8 @@ Digitize Yad Malachi and place it in Sefaria — the top freely-digitizable work
 library is missing. Concretely:
 
 1. **Pilot first.** Produce one proofed, structured section — *Klalei HaGemara*, the
-   Aleph section — from the Berlin NLI layer, run it through the link-readiness check,
-   and confirm the schema and citation-linking end to end. Small, cheap, and it
+   Aleph section — OCR'd from the Berlin edition images, run it through the
+   link-readiness check, and confirm the schema and citation-linking end to end. Small, cheap, and it
    de-risks everything downstream.
 2. **Then the full work.** Complete the three parts on the chosen path (lean or
    ensemble), attaching each historic printing as its own version.
