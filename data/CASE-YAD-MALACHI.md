@@ -73,7 +73,21 @@ classic:
   edition in 2001, a **Machon Yerushalayim critical edition in 2016** (freshly
   typeset, cross-referencing parallel *Klalim* works), and a third volume in
   2018.[^wiki] A work the contemporary Torah-publishing world keeps re-typesetting
-  is a work in active use — and the subject of modern scholarship.[^brown]
+  is a work in active use — and it draws **modern academic scholarship** that treats it
+  as a classic of its genre: a peer-reviewed study by an independent (non-halachic)
+  linguist calls Yad Malachi *"one of the most important halakhic rule books"* and
+  *"one of the classic books of rules … known for its clear and organized writing
+  style,"* choosing it as the representative text through which to analyze how halacha
+  decides between opinions.[^brown]
+- **It is still the anchor of live halachic debate.** Take one rule — that where the
+  Shulchan Aruch brings two anonymous opinions (*yesh … ve-yesh …*) the halacha follows
+  the latter. A present-day Torah forum thread devoted to exactly that question **opens
+  with Yad Malachi as its lead authority** — *"the words of R. Malachi HaKohen, author
+  of Yad Malachi"* — then builds outward to later poskim (Edut BiYehosef of R. Yosef
+  Samun, R. Shmuel ibn Elbaz, R. Avraham Pinto), while another participant ties the rule
+  to the Mishnah Berurah.[^forum] Primary text, academic scholarship, and a living
+  discussion all converge on a single *klal* — and every one of them points at a Yad
+  Malachi that is not in the library.
 - In a large **contemporary English-language halachic reference** (Halachipedia),
   Yad Malachi is cited **243 times** — directly, by its numbered klalim.[^halachipedia]
   That makes it the **single most-cited public-domain work that Sefaria
@@ -386,8 +400,23 @@ and the reusable harness lowers the cost of every public-domain work after this 
     English-language halachic reference): **243** direct citations of Yad Malachi by
     its numbered klalim, in the full 640-page corpus (`data/CORPUS-COMPARISON.md`).
 
-[^brown]: Benjamin Brown, *"Some Say This, Some Say That": … Interpretation Rules in
-    Yad Malachi* — modern academic scholarship on the work.
+[^brown]: Benjamin Brown (Hebrew University of Jerusalem), *"'Some say this, some say
+    that': Pragmatics and discourse markers in Yad Malachi's interpretation rules,"*
+    **JLL 3 (2014): 1–19**, DOI 10.14762/jll.2014.001. An independent, non-halachic
+    (linguistics) study that calls Yad Malachi "one of the most important halakhic rule
+    books" and "one of the classic books of rules … known for its clear and organized
+    writing style," and takes it as the representative text for analyzing how halacha
+    decides between opinions. It also fixes the bibliography: R. Malachi HaCohen
+    Montefoscoli (1695–1772) of Livorno, *Yad Malachi*, 3 vols., Livorno: Moshe Attias
+    Press, 1766–1767.
+
+[^forum]: tora-forum.co.il, thread *"האומנם הכלל הוא שב'יש ויש' שבשולחן ערוך ההלכה כיש
+    בתרא?"* ("is the rule really that a *yesh … ve-yesh* in the Shulchan Aruch follows
+    the latter opinion?"). The opening post anchors on Yad Malachi — attaching its
+    Klalei HaPoskim page — and brings Edut BiYehosef (R. Yosef Samun), R. Shmuel ibn
+    Elbaz, and R. Avraham Pinto; a reply cites the Mishnah Berurah (Hilchot Shabbat and
+    Eruvin). A contemporary lay/lamdanut forum, cited here as evidence of live usage,
+    not as a halakhic authority; read by reference per the site's robots policy.
 
 [^ovadia]: R. Ovadia Yosef's methodology is documented as systematically applying the
     *klalei ha-hora'ah* — the rules of pesak governing the Rif/Rambam/Rosh and the
