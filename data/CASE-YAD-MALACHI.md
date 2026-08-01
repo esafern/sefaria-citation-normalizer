@@ -29,6 +29,11 @@ is decided:
 It is, in short, the *grammar* of the tradition: not a text read once, but a
 reference reached for whenever a question of method arises.
 
+![Title page of the Berlin edition of Yad Malachi, naming the three parts Klalei HaGemara, Klalei HaPoskim, and Klalei HaDinim](images/yad-malachi-berlin-title.png)
+
+_Title page of the Berlin edition — naming the three parts (כללי הגמרא, כללי הפוסקים,
+כללי הדינים) and the author, R. Malachi ben Jacob HaKohen._
+
 ## Why it matters
 
 Its standing is not a matter of opinion — and it is not a historical curiosity. The
@@ -89,6 +94,13 @@ those 287 references is unlinkable, and anyone quoting the work must **hand-tran
 the Hebrew** from a scan. Digitizing it once turns 287 dead references into live links
 and ends the re-keying — permanently.
 
+![Three real dead-end citations of Yad Malachi — a Halachipedia footnote, a Shem HaGedolim entry inside Sefaria, and the source-sheet picture — each failing to resolve because the work is not in the library](images/yad-malachi-broken-citation.png)
+
+_The same dead end in real contexts: a Halachipedia footnote and the Chida's Shem
+HaGedolim (already in Sefaria) both cite Yad Malachi, and the linker returns
+`linkFailed` because the work has no text to point to. (An evidence figure from real
+citations and the linker's own results — not a screenshot.)_
+
 ## Why it is an ideal candidate
 
 - **Public domain** — free to reproduce.
@@ -120,6 +132,11 @@ general-purpose OCR reads best (see process). The same passage — the opening o
 (Rashi) editions:
 
 ![Yad Malachi, opening of Klalei HaAleph: Berlin square type vs. Livorno Rashi type, the same passage side by side](images/yad-malachi-rashi-vs-square.png)
+
+The Berlin edition's opening of *Klalei HaGemara* (the Aleph section) — the clean,
+square-set page that would serve as the OCR base:
+
+![The opening page of Klalei HaGemara (Aleph section) in the Berlin edition of Yad Malachi, in clean square Hebrew type](images/yad-malachi-berlin-klal-aleph.png)
 
 ## Process — ensemble OCR with AI adjudication
 
