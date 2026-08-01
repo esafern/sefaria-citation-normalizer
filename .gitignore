@@ -27,3 +27,4 @@ pipeline/miyodeya_dataset_batch.json
 
 # triage queue (intermediate; deliverable is data/miyodeya_pairs.json)
 pipeline/miyodeya_labelable.json
+pipeline/mine_sheets.log
