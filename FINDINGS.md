@@ -158,6 +158,34 @@ already prototypes exactly this** (`pipeline/link_readiness.py`: `רש"י ז"ל 
 → *Rashi on Nedarim 19b*, verified against the linker); Wikisource shows the scale of
 text — the entire classic-Hebrew corpus — that such a tier would light up.
 
+### A contemporary echo — a Hebrew halacha forum (reference-only scan)
+
+A reference scan of a live Torah forum (tora-forum.co.il; 40 citation-dense threads)
+corroborates the Hebrew frontier from the *living* side. Same shape as Wikisource — the
+linker resolves only **13%** of 727 detected citations — but contemporary writers cite
+more explicitly than the classical texts, so the unresolved set yields **cleaner**
+normalization candidates. The classes:
+
+| class | ~n | sample surface |
+|---|---:|---|
+| work + siman/se'if (bare Hebrew name + location) | ~69 | `הרדב"ז … בחלק ב' מתשובותיו סי' של"ו` · `בברכי יוסף יו"ד (סי' רמו סק"ה)` |
+| abbreviation forms | ~79 | `ספה"מ לרמב"ם בלאוין קל"א` · `הפרד"ס` |
+| chapter-of + daf (allusive) | ~8 | `הראב"ע בפ"ב דנזיר מ"ב` |
+| bare / typo'd work name | ~10 | `תוסו'` (for תוס') |
+
+Two splits matter: the **Mode-A** candidates are works Sefaria *already has* whose Hebrew
+surface simply didn't match (Teshuvot HaRadbaz `סי' של"ו`; Rambam's Sefer HaMitzvot
+`בלאוין קל"א`; allusive Talmud dapim) — pure targets for a Hebrew normalizer
+(name-map + Hebrew-numeral siman parsing + abbreviation expansion). The rest are
+**Mode-B** absent works (Birkei Yosef, Yabia Omer) — an acquisition signal, not a linker
+one. The contemporary `work + siman` class is the highest-value candidate the corpora
+have surfaced for the Hebrew tier.
+
+_Provenance / ethics: the forum's robots content-signal is `ai-train=no` (with
+`use=reference`). This scan was run for reference/analysis only — **no `raw→ref` training
+pairs were harvested or persisted**; the sample surfaces above are illustrative
+bibliographic references shown for the analysis, not a training corpus._
+
 ## The strategic takeaway
 
 Normalization has a hard ceiling on *contemporary* halacha — ~43% deterministic,
