@@ -1,9 +1,9 @@
 # Most-cited public-domain works Sefaria lacks — by corpus
 
-_Two corpora, two very different answers. This documents the most-cited **public-domain
-works absent from Sefaria**, measured separately in (a) Halachipedia and (b) Sefaria's
-own source sheets — and why they diverge. Companion to `SEFARIA-MOST-WANTED.md`,
-`CORPUS-COMPARISON.md`, and `FINDINGS.md`._
+_Three corpora, and only one gives an answer. This documents the most-cited
+**public-domain works absent from Sefaria**, measured separately in (a) Halachipedia,
+(b) Sefaria's own source sheets, and (c) Hebrew Wikisource — and why they diverge.
+Companion to `SEFARIA-MOST-WANTED.md`, `CORPUS-COMPARISON.md`, and `FINDINGS.md`._
 
 ## Halachipedia — a clear public-domain acquisition signal
 
@@ -52,30 +52,62 @@ domain**. There is no public-domain absent work with a meaningful count, so neit
 *all* Sefaria sheets finds only ~2). A Talmudic-methodology reference simply is not
 crowd-sheet material.
 
-## Why the two corpora diverge (the two-mode split)
+## Hebrew Wikisource — also no acquisition signal (a normalization corpus)
+
+Method: a bounded trawl of **112 leaf pages** from eight citation-dense classic works
+(the responsa of the Rosh, Rashba, Noda BiYehuda and Chatam Sofer; Aruch HaShulchan,
+Ben Ish Chai, Mateh Efraim, Shulchan Aruch HaRav), each run through `find-refs`
+(`pipeline/mine_wikisource.py`, `wiki_freq.json`).
+
+The result is even more lopsided than the source sheets, and for the same reason. Of
+**1,793 citations detected, only 299 (17%) resolved.** But the 83% that failed are
+**not** absent works — they are:
+
+- **Allusive citations to works Sefaria already has**, in a classic Hebrew style the
+  linker can't parse — *"בפ"ק דקידושין (לו:)"* (Kiddushin 36b), *"ובשולחן ערוך"*
+  (Shulchan Aruch with no siman inline, because the siman is the section header),
+  Rema, Beit Shmuel, Chelkat Mechokek, Maggid Mishneh, Shaar HaKavanot.
+- **Structure and location fragments** — section headers, Shulchan Aruch part-names
+  (Orach Chaim, Yoreh De'ah…), *"בסימן קט"ו"*, dates.
+
+After filtering those, the genuinely-absent residue is a handful of **responsa cited
+once** (e.g. *Shav Yaakov*, *Maharam Padua*) — statistically nil. No public-domain
+acquisition target emerges. Classic Hebrew texts cite the canonical corpus Sefaria
+already holds; their unresolved links are a **normalization** problem (poor linking of
+allusive Hebrew references), not a coverage one.
+
+## Why the corpora diverge (the two-mode split)
 
 This is the central finding of `FINDINGS.md`, seen from the acquisition angle. A
 citation the linker can't resolve fails for one of two reasons, and genre decides which
 dominates:
 
-| | Source sheets | Halachipedia |
-|---|---|---|
-| Typical citation | canonical Talmud / Tanakh / codes | dense acharonic responsa & klalim |
-| Why links fail | **surface form** — the work *is* present, misspelled | **coverage** — the work is *absent* |
-| Actionable as | normalization (rules + knowledge tier) | acquisition (digitize the text) |
-| Most-cited PD absent work | *none of weight* | **Yad Malachi (243)** |
+| | Source sheets | Hebrew Wikisource | Halachipedia |
+|---|---|---|---|
+| Typical citation | canonical Talmud / Tanakh / codes | classic Talmud / Rishonim, allusive | dense acharonic responsa & klalim |
+| Linker resolve rate | low | **17%** | high (clean footnotes) |
+| Why links fail | **surface form** — work *present*, misspelled | **surface form** — allusive Hebrew | **coverage** — work *absent* |
+| Actionable as | normalization | normalization | **acquisition** (digitize) |
+| Most-cited PD absent work | *none of weight* | *none of weight* | **Yad Malachi (243)** |
 
 So "the most-cited public-domain work Sefaria lacks" is a **Halachipedia** phenomenon.
-Source sheets cite what Sefaria already has; the acquisition-priority signal — including
-Yad Malachi — comes from lived halachic writing like Halachipedia.
+Both source sheets and classic Wikisource texts cite what Sefaria already has — their
+failures are normalization problems; the acquisition-priority signal, including Yad
+Malachi, comes from **lived, explicitly-footnoted halachic writing** like Halachipedia.
+That is what makes Halachipedia special: its modern *title + number* footnotes resolve
+cleanly, so what's left over is genuine absence.
 
 ## Bottom line
 
 - **Halachipedia:** #1 **Yad Malachi (243)**, #2 **Birkei Yosef (129)**.
-- **Source sheets:** no public-domain absent work of weight; the top genuinely-absent
-  items are modern/in-copyright, cited ~3–5×, and Yad Malachi appears **0×**.
+- **Source sheets:** no public-domain absent work of weight; top genuinely-absent items
+  are modern/in-copyright, cited ~3–5×; Yad Malachi appears **0×**.
+- **Hebrew Wikisource:** no public-domain absent work of weight; 17% resolve rate, the
+  rest surface-form/normalization noise; genuine absences are one-off responsa.
 
-_Caveats: source-sheet counts come from a 750-sheet sample and are inherently noisy on
-crowd-built text; the presence classifier misflags umbrella terms (e.g. "Babylonian
-Talmud") as absent — those are treated as present here. Halachipedia figures are from
-the committed full-corpus analysis. Author death dates from `SEFARIA-MOST-WANTED.md`._
+_Caveats: source-sheet (750) and Wikisource (112-page) counts are bounded samples and
+inherently noisy; the presence classifier misflags umbrella terms (e.g. "Babylonian
+Talmud") as absent — those are treated as present here. The Wikisource pass reads a
+~3,800-char slice per page, so it samples rather than exhausts each text. Halachipedia
+figures are from the committed full-corpus analysis. Author death dates from
+`SEFARIA-MOST-WANTED.md`._
