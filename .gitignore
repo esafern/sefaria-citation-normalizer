@@ -7,6 +7,7 @@ hp_cache/
 mine_cache/
 my_cache/
 link_cache/
+sheet_cache/
 *_cache.json
 
 # run logs
