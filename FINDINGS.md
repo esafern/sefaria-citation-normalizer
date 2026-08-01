@@ -1,9 +1,11 @@
 # Findings — why citation linking fails, and what to do about it
 
-_Distilled from two mined corpora: `find-refs` failures over 289 Sefaria source
-sheets (137 hand-verified `raw → ref` pairs) and the full 640-page Halachipedia
-corpus (38,195 citation detections → 7,878 distinct works). Numbers below are from
-those datasets; see `data/citation_dataset.json` and `pipeline/work_frequency.json`._
+_Distilled from four mined corpora: `find-refs` failures over 289 Sefaria source
+sheets (137 hand-verified `raw → ref` pairs), the full 640-page Halachipedia corpus
+(38,195 citation detections → 7,878 distinct works), Mi Yodeya (Judaism Stack
+Exchange), and a bounded Hebrew Wikisource trawl. Numbers below are from those
+datasets; see `data/citation_dataset.json`, `pipeline/work_frequency.json`,
+`data/miyodeya_pairs.json`, and `pipeline/wiki_freq.json`._
 
 ## The central finding: two failure modes, split by genre
 
@@ -13,7 +15,7 @@ which one dominates depends entirely on the **genre** of the text:
 | | **Mode A — surface form** | **Mode B — coverage** |
 |---|---|---|
 | What's wrong | The work *is* on Sefaria; the citation string didn't match | The work is *not* in Sefaria's library |
-| Dominant in | Talmud / Tanakh (source sheets) | Acharonim / responsa (Halachipedia) |
+| Dominant in | Talmud / Tanakh (source sheets); classic Hebrew halacha (Wikisource) | Acharonim / responsa (Halachipedia) |
 | Fixable by | Normalization (rules + a knowledge tier) | Only by acquiring the text |
 | Ceiling | high — most strings are recoverable | zero — no string edit conjures a missing book |
 
@@ -128,12 +130,44 @@ Perplexed`, `Semag → Sefer Mitzvot Gadol`, Rambam section maps, and pervasive
 `citation_dataset.json`; together they seed the tier-2 model. Raw strings:
 `pipeline/miyodeya_failures.json` (CC-BY-SA, from the public dump).
 
+## A fourth corpus: Hebrew Wikisource — classic Hebrew, a pure Mode-A frontier
+
+Mined 112 leaf pages from eight citation-dense classic works (the responsa of the
+Rosh, Rashba, Noda BiYehuda and Chatam Sofer; Aruch HaShulchan, Ben Ish Chai, Mateh
+Efraim, Shulchan Aruch HaRav) through `find-refs` (`pipeline/mine_wikisource.py`). It
+is the most one-sided corpus yet, and sits entirely on the **Mode-A** side:
+
+- **17% resolve rate.** Of 1,793 detected citations, only 299 linked. But the 83% that
+  failed are **not absent works** (`MOST-CITED-ABSENT-BY-CORPUS.md` shows no coverage
+  signal) — they are citations to works Sefaria *already has*, in a classic Hebrew
+  style the linker can't parse.
+- **A new normalization class the English-facing rules never touch — allusive Hebrew
+  references:**
+  - *chapter-of + daf*: `בפ"ק דקידושין (לו:)` → Kiddushin 36b; `דפ"ק דביצה (דף ג:)` → Beitzah 3b.
+  - *bare work name, siman in the section header*: `ובשולחן ערוך` (no siman inline —
+    the running section *is* the siman).
+  - *named-perek references*: `בפרק במה בהמה` → the tractate + daf that perek names.
+  - *Hebrew abbreviations & bare part-names*: `אה"ע` / `ח"מ`, `אורח חיים` as a section label.
+
+This is the "findings go back to the normalizer" point. The excursion was launched to
+hunt absent works; it instead mapped a large **Hebrew normalization frontier**. Today's
+deterministic rules are English-facing (`-os/-as`, ArtScroll tails); classic Hebrew
+halacha needs a parallel Hebrew tier — chapter-name→daf and perek-name→masechet maps,
+and bare-work-name + surrounding-siman resolution. The project's **link-readiness demo
+already prototypes exactly this** (`pipeline/link_readiness.py`: `רש"י ז"ל בפ"ב דנדרים`
+→ *Rashi on Nedarim 19b*, verified against the linker); Wikisource shows the scale of
+text — the entire classic-Hebrew corpus — that such a tier would light up.
+
 ## The strategic takeaway
 
-Normalization has a hard ceiling — ~43% deterministic, ~62% with a knowledge
-tier — because the majority of real-world halachic citation failures are
-**coverage, not spelling.** The highest-leverage output of this project may be
-the licensing-priority list, not the linker itself.
+Normalization has a hard ceiling on *contemporary* halacha — ~43% deterministic,
+~62% with a knowledge tier — because there the majority of real-world citation
+failures are **coverage, not spelling**, so the highest-leverage output may be the
+licensing-priority list, not the linker itself. But the picture **inverts on classic
+Hebrew text** (Wikisource): there almost every failure is surface form, and the
+linker resolves only ~17% — a large, *recoverable* normalization gap that a Hebrew
+tier (chapter→daf, perek→masechet, bare-name+siman) would close. Two frontiers, then:
+**acquisition** for lived halacha, **Hebrew normalization** for the classical corpus.
 
 ---
 _Method caveats: the corpus is the whole mineable site (640 substantial pages; stubs excluded);
