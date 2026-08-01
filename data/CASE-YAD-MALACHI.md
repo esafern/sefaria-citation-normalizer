@@ -85,9 +85,14 @@ classic:
   with Yad Malachi as its lead authority** — *"the words of R. Malachi HaKohen, author
   of Yad Malachi"* — then builds outward to later poskim (Edut BiYehosef of R. Yosef
   Samun, R. Shmuel ibn Elbaz, R. Avraham Pinto), while another participant ties the rule
-  to the Mishnah Berurah.[^forum] Primary text, academic scholarship, and a living
-  discussion all converge on a single *klal* — and every one of them points at a Yad
-  Malachi that is not in the library.
+  to the Mishnah Berurah. And it is not one thread: a phrase search of that **single
+  forum** returns Yad Malachi cited in **~108 posts across ~71 distinct discussions** —
+  50 of them citing a specific *klal* (Klal 541, Klal 144, Klalei HaRambam §4, …) — of
+  which **six are outright requests for a *scan* of a particular klal**, because no
+  clean digital text exists to copy from.[^forum] Primary text, academic scholarship,
+  and everyday learning all converge on the same *klalim* — every pointer landing on a
+  Yad Malachi that is not in the library. Those six scan-requests are the re-keying this
+  project would end, caught in the wild.
 - In a large **contemporary English-language halachic reference** (Halachipedia),
   Yad Malachi is cited **243 times** — directly, by its numbered klalim.[^halachipedia]
   That makes it the **single most-cited public-domain work that Sefaria
@@ -416,7 +421,10 @@ and the reusable harness lowers the cost of every public-domain work after this 
     Klalei HaPoskim page — and brings Edut BiYehosef (R. Yosef Samun), R. Shmuel ibn
     Elbaz, and R. Avraham Pinto; a reply cites the Mishnah Berurah (Hilchot Shabbat and
     Eruvin). A contemporary lay/lamdanut forum, cited here as evidence of live usage,
-    not as a halakhic authority; read by reference per the site's robots policy.
+    not as a halakhic authority; read by reference per the site's robots policy. The
+    forum-wide figures are from an exact-phrase search of tora-forum.co.il for *"יד
+    מלאכי"* (108 posts / 71 threads; 50 citing a specific klal; 6 requesting a scan) —
+    counts only; no forum text is reproduced here, per the site's `ai-train=no` signal.
 
 [^ovadia]: R. Ovadia Yosef's methodology is documented as systematically applying the
     *klalei ha-hora'ah* — the rules of pesak governing the Rif/Rambam/Rosh and the
