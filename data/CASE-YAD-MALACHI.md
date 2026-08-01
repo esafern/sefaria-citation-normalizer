@@ -81,6 +81,18 @@ classic:
   times, right now.
 - Modern authorities cite it directly: Kaf HaChaim (d. 1939) and the contemporary
   responsa Benei Banim appear among the 287 above.
+- **It sits at the center of the dominant modern psak school.** R. Ovadia Yosef's
+  circle is the single largest body of works in this project's demand data — Yalkut
+  Yosef, Yabia Omer, Chazon Ovadyah and the rest make up roughly **a third of every
+  citation Sefaria is missing**. And R. Ovadia's method is built precisely on the
+  *klalei ha-hora'ah* — the rules governing the Rif, Rambam, Rosh and the Mechaber —
+  that Yad Malachi codifies.[^ovadia] That engagement is visible in the contemporary
+  Sephardi reference literature: Halachipedia invokes Yad Malachi in the **same
+  halachic discussions** as R. Ovadia's works — e.g. *Yad Malachi (Klalei Shulchan
+  Aruch 11)* pointing to his **Taharat HaBayit**, and *Yad Malachi (Klalei Tosafot
+  24)* cited alongside **Yabia Omer vol. 8**. A reader following a Yalkut Yosef or
+  Yabia Omer ruling into its methodological basis lands on Yad Malachi — and today
+  hits a dead end.
 
 ## The gap this closes
 
@@ -376,6 +388,18 @@ and the reusable harness lowers the cost of every public-domain work after this 
 
 [^brown]: Benjamin Brown, *"Some Say This, Some Say That": … Interpretation Rules in
     Yad Malachi* — modern academic scholarship on the work.
+
+[^ovadia]: R. Ovadia Yosef's methodology is documented as systematically applying the
+    *klalei ha-hora'ah* — the rules of pesak governing the Rif/Rambam/Rosh and the
+    Mechaber (e.g. webyeshiva.org, "Rabbi Ovadia Yosef's Halakhic Methodology";
+    Nishmat; R. Chaim Jachter, Kol Torah) — which is Yad Malachi's exact domain. The
+    demand figures are this project's Halachipedia analysis (`CORPUS-COMPARISON.md`);
+    the same-footnote co-citations (Yad Malachi with Taharat HaBayit and Yabia Omer)
+    are from the Halachipedia corpus (`pipeline/hp_cache`). **Caveat:** a direct
+    citation count from *within* R. Ovadia's own works could not be machine-verified —
+    they are not in a free, searchable digital corpus — so this is a qualitative
+    observation grounded in his documented method and in contemporary co-citation, not
+    a counted statistic.
 
 [^linker]: Sefaria "How to Format Citations for the Linker" and the "Sefaria
     Auto-Linker" (developers.sefaria.org; Sefaria-Project wiki): links are stored as a
