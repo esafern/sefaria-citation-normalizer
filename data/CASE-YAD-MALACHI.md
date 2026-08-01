@@ -425,6 +425,8 @@ and the reusable harness lowers the cost of every public-domain work after this 
     forum-wide figures are from an exact-phrase search of tora-forum.co.il for *"יד
     מלאכי"* (108 posts / 71 threads; 50 citing a specific klal; 6 requesting a scan) —
     counts only; no forum text is reproduced here, per the site's `ai-train=no` signal.
+    Phrase-search figures may include the occasional non-sefer occurrence of the words
+    *יד מלאכי*; sampled results were all genuine citations of the work.
 
 [^ovadia]: R. Ovadia Yosef's methodology is documented as systematically applying the
     *klalei ha-hora'ah* — the rules of pesak governing the Rif/Rambam/Rosh and the
