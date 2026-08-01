@@ -33,7 +33,7 @@
   {
    "work": "Yad Malachi",
    "citations": 243,
-   "author": "Malachi HaKohen (d.1785)",
+   "author": "Malachi HaKohen (d.1772)",
    "tier": "PD"
   },
   {
@@ -133,12 +133,6 @@
    "tier": "MOD"
   },
   {
-   "work": "Eliya Rabba",
-   "citations": 71,
-   "author": "Eliyahu Shapira (d.1712)",
-   "tier": "PD"
-  },
-  {
    "work": "Teshuvot VeHanhagot",
    "citations": 68,
    "author": "Moshe Sternbuch, modern",
@@ -191,12 +185,6 @@
    "citations": 42,
    "author": "modern",
    "tier": "MOD"
-  },
-  {
-   "work": "Radvaz",
-   "citations": 41,
-   "author": "David ibn Zimra (d.1573); responsa absent, MT commentary present",
-   "tier": "PD"
   },
   {
    "work": "Shalmei Yehuda",
@@ -506,6 +494,11 @@
    "(via normalization)"
   ],
   [
+   "Radvaz",
+   41,
+   "Teshuvot HaRadbaz Volume 1"
+  ],
+  [
    "Gemara Bava Metsia",
    37,
    "(via normalization)"
@@ -609,8 +602,13 @@
    "Or Zaruah",
    17,
    "Ohr Zarua"
+  ],
+  [
+   "Eliya Rabba",
+   71,
+   "Eliyah Rabbah on Shulchan Arukh, Orach Chayim"
   ]
  ],
- "total_absent_citations": 6883,
+ "total_absent_citations": 6771,
  "note": "Ranked by citation frequency across the full 640-page Halachipedia corpus."
 }

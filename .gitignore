@@ -6,6 +6,8 @@ __pycache__/
 hp_cache/
 mine_cache/
 my_cache/
+link_cache/
+sheet_cache/
 *_cache.json
 
 # run logs
@@ -19,3 +21,12 @@ pipeline/miyodeya_bodies.json
 
 # in-progress find-refs output (force-added when the run completes)
 pipeline/miyodeya_failures.json
+
+# intermediate batch output (deliverable is data/miyodeya_pairs.json)
+pipeline/miyodeya_dataset_batch.json
+
+# triage queue (intermediate; deliverable is data/miyodeya_pairs.json)
+pipeline/miyodeya_labelable.json
+pipeline/mine_sheets.log
+wiki_cache/
+pipeline/mine_wiki.log

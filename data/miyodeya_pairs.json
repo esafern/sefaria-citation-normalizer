@@ -1,0 +1,732 @@
+{
+ "source": "Mi Yodeya (Judaism Stack Exchange), CC-BY-SA dump",
+ "method": "propose->verify (rule) + LLM-labeled, Sefaria-verified (labeled)",
+ "pairs": [
+  {
+   "raw": "Avot De-Rabbi Natan 2:5",
+   "my_canonical": "Avot DeRabbi Natan.2.5",
+   "sefaria_ref": "Avot DeRabbi Natan.2.5",
+   "via": "rule"
+  },
+  {
+   "raw": "Berakhos 23b",
+   "my_canonical": "Berakhot.23b",
+   "sefaria_ref": "Berakhot.23b",
+   "via": "rule"
+  },
+  {
+   "raw": "Brachos 27b",
+   "my_canonical": "Berakhot.27b",
+   "sefaria_ref": "Berakhot.27b",
+   "via": "rule"
+  },
+  {
+   "raw": "Gemara Ketubos 68a",
+   "my_canonical": "Ketubot.68a",
+   "sefaria_ref": "Ketubot.68a",
+   "via": "rule"
+  },
+  {
+   "raw": "Gittin 88a D\"H Vedilma",
+   "my_canonical": "Gittin.88a",
+   "sefaria_ref": "Gittin.88a",
+   "via": "rule"
+  },
+  {
+   "raw": "Horayos 13b",
+   "my_canonical": "Horayot.13b",
+   "sefaria_ref": "Horayot.13b",
+   "via": "rule"
+  },
+  {
+   "raw": "Kaf HaChaim (583:3)",
+   "my_canonical": "Kaf HaChayim on Shulchan Arukh, Orach Chayim.583.3",
+   "sefaria_ref": "Kaf HaChayim on Shulchan Arukh, Orach Chayim.583.3",
+   "via": "rule"
+  },
+  {
+   "raw": "Kesubos 66A",
+   "my_canonical": "Ketubot.66a",
+   "sefaria_ref": "Ketubot.66a",
+   "via": "rule"
+  },
+  {
+   "raw": "Kesubos 6a",
+   "my_canonical": "Ketubot.6a",
+   "sefaria_ref": "Ketubot.6a",
+   "via": "rule"
+  },
+  {
+   "raw": "Kitzur Shulchan Aruch סימן כג - קצת דיני קריאת",
+   "my_canonical": "Kitzur Shulchan Arukh",
+   "sefaria_ref": "Kitzur Shulchan Arukh",
+   "via": "rule"
+  },
+  {
+   "raw": "Melachim Aleph 7. Bayis Sheini",
+   "my_canonical": "I Kings.7",
+   "sefaria_ref": "I Kings.7",
+   "via": "rule"
+  },
+  {
+   "raw": "Menachos 99b",
+   "my_canonical": "Menachot.99b",
+   "sefaria_ref": "Menachot.99b",
+   "via": "rule"
+  },
+  {
+   "raw": "Orchos Tzadikkim",
+   "my_canonical": "Orchot Tzadikim",
+   "sefaria_ref": "Orchot Tzadikim",
+   "via": "rule"
+  },
+  {
+   "raw": "Pirkei d'Rabbi Eliezer (34)",
+   "my_canonical": "Pirkei DeRabbi Eliezer.34",
+   "sefaria_ref": "Pirkei DeRabbi Eliezer.34",
+   "via": "rule"
+  },
+  {
+   "raw": "Radbaz to Hilchos Melachim 10:6",
+   "my_canonical": "Mishneh Torah, Kings and Wars.10.6",
+   "sefaria_ref": "Mishneh Torah, Kings and Wars.10.6",
+   "via": "rule"
+  },
+  {
+   "raw": "Rambam in Hil. Mamrim 2:3",
+   "my_canonical": "Mishneh Torah, Rebels.2.3",
+   "sefaria_ref": "Mishneh Torah, Rebels.2.3",
+   "via": "rule"
+  },
+  {
+   "raw": "Rosh Hashana 4a s.v. Beshvil",
+   "my_canonical": "Rosh Hashanah.4a",
+   "sefaria_ref": "Rosh Hashanah.4a",
+   "via": "rule"
+  },
+  {
+   "raw": "Sefer Orchos Tzaddikim",
+   "my_canonical": "Orchot Tzadikim",
+   "sefaria_ref": "Orchot Tzadikim",
+   "via": "rule"
+  },
+  {
+   "raw": "Shemot 6:2-3: וַיְדַבֵּ֥ר",
+   "my_canonical": "Exodus.6.2-3",
+   "sefaria_ref": "Exodus.6.2-3",
+   "via": "rule"
+  },
+  {
+   "raw": "tractate Kiddushin 15a דברים טו, יח",
+   "my_canonical": "Kiddushin.15a",
+   "sefaria_ref": "Kiddushin.15a",
+   "via": "rule"
+  },
+  {
+   "raw": "Avos DeRabbi Nasan ( 7:3 )",
+   "my_canonical": "Avot DeRabbi Natan 7:3",
+   "sefaria_ref": "Avot DeRabbi Natan 7:3",
+   "via": "labeled"
+  },
+  {
+   "raw": "B'rachos 60b",
+   "my_canonical": "Berakhot 60b",
+   "sefaria_ref": "Berakhot 60b",
+   "via": "labeled"
+  },
+  {
+   "raw": "Akeidas Yitzchak Lev no. 23",
+   "my_canonical": "Akeidat Yitzchak",
+   "sefaria_ref": "Akeidat Yitzchak",
+   "via": "labeled"
+  },
+  {
+   "raw": "Admur 27:20",
+   "my_canonical": "Shulchan Arukh HaRav, Orach Chayim 27:20",
+   "sefaria_ref": "Shulchan Arukh HaRav, Orach Chayim 27:20",
+   "via": "labeled"
+  },
+  {
+   "raw": "Mishna B'rura , 310:19",
+   "my_canonical": "Mishnah Berurah 310:19",
+   "sefaria_ref": "Mishnah Berurah.310.19",
+   "via": "labeled"
+  },
+  {
+   "raw": "Mishna B'rura 104:26",
+   "my_canonical": "Mishnah Berurah 104:26",
+   "sefaria_ref": "Mishnah Berurah.104.26",
+   "via": "labeled"
+  },
+  {
+   "raw": "Mishna B'rura 122:1",
+   "my_canonical": "Mishnah Berurah 122:1",
+   "sefaria_ref": "Mishnah Berurah.122.1",
+   "via": "labeled"
+  },
+  {
+   "raw": "Mishna Brura ( OC 285:7 )",
+   "my_canonical": "Mishnah Berurah 285:7",
+   "sefaria_ref": "Mishnah Berurah.285.7",
+   "via": "labeled"
+  },
+  {
+   "raw": "Yoreh Deiah 141:13",
+   "my_canonical": "Shulchan Arukh, Yoreh De'ah 141:13",
+   "sefaria_ref": "Shulchan Arukh, Yoreh De'ah.141.13",
+   "via": "labeled"
+  },
+  {
+   "raw": "Yoreh Deiah 141:14",
+   "my_canonical": "Shulchan Arukh, Yoreh De'ah 141:14",
+   "sefaria_ref": "Shulchan Arukh, Yoreh De'ah.141.14",
+   "via": "labeled"
+  },
+  {
+   "raw": "Yoreh Deiah 143:5",
+   "my_canonical": "Shulchan Arukh, Yoreh De'ah 143:5",
+   "sefaria_ref": "Shulchan Arukh, Yoreh De'ah.143.5",
+   "via": "labeled"
+  },
+  {
+   "raw": "Yoreh Deiah 143:8",
+   "my_canonical": "Shulchan Arukh, Yoreh De'ah 143:8",
+   "sefaria_ref": "Shulchan Arukh, Yoreh De'ah.143.8",
+   "via": "labeled"
+  },
+  {
+   "raw": "Melachim 2:15:29",
+   "my_canonical": "II Kings 15:29",
+   "sefaria_ref": "II Kings.15.29",
+   "via": "labeled"
+  },
+  {
+   "raw": "Melachim 2:16:7-9",
+   "my_canonical": "II Kings 16:7-9",
+   "sefaria_ref": "II Kings.16.7-9",
+   "via": "labeled"
+  },
+  {
+   "raw": "Melachim 2:20:12-15",
+   "my_canonical": "II Kings 20:12-15",
+   "sefaria_ref": "II Kings.20.12-15",
+   "via": "labeled"
+  },
+  {
+   "raw": "Shulchan Aruch O\"C 12:1",
+   "my_canonical": "Shulchan Arukh, Orach Chayim 12:1",
+   "sefaria_ref": "Shulchan Arukh, Orach Chayim.12.1",
+   "via": "labeled"
+  },
+  {
+   "raw": "Aruch YD 214",
+   "my_canonical": "Arukh HaShulchan, Yoreh De'ah 214",
+   "sefaria_ref": "Arukh HaShulchan, Yoreh De'ah.214",
+   "via": "labeled"
+  },
+  {
+   "raw": "Arokh HaShulhan ( YD 195:13 )",
+   "my_canonical": "Arukh HaShulchan, Yoreh De'ah 195:13",
+   "sefaria_ref": "Arukh HaShulchan, Yoreh De'ah.195.13",
+   "via": "labeled"
+  },
+  {
+   "raw": "Aruch HaShulchan 376:1",
+   "my_canonical": "Arukh HaShulchan, Yoreh De'ah 376:1",
+   "sefaria_ref": "Arukh HaShulchan, Yoreh De'ah.376.1",
+   "via": "labeled"
+  },
+  {
+   "raw": "Bereshis 11:20",
+   "my_canonical": "Genesis 11:20",
+   "sefaria_ref": "Genesis.11.20",
+   "via": "labeled"
+  },
+  {
+   "raw": "Bereshis 11:22",
+   "my_canonical": "Genesis 11:22",
+   "sefaria_ref": "Genesis.11.22",
+   "via": "labeled"
+  },
+  {
+   "raw": "Bereshis 38:24",
+   "my_canonical": "Genesis 38:24",
+   "sefaria_ref": "Genesis.38.24",
+   "via": "labeled"
+  },
+  {
+   "raw": "Breshit 14:18",
+   "my_canonical": "Genesis 14:18",
+   "sefaria_ref": "Genesis.14.18",
+   "via": "labeled"
+  },
+  {
+   "raw": "Badmidbar 18:21",
+   "my_canonical": "Numbers 18:21",
+   "sefaria_ref": "Numbers.18.21",
+   "via": "labeled"
+  },
+  {
+   "raw": "D'varim 22:8",
+   "my_canonical": "Deuteronomy 22:8",
+   "sefaria_ref": "Deuteronomy.22.8",
+   "via": "labeled"
+  },
+  {
+   "raw": "Rashi (Samuel 1, 17, 55)",
+   "my_canonical": "Rashi on I Samuel 17:55",
+   "sefaria_ref": "Rashi on I Samuel.17.55",
+   "via": "labeled"
+  },
+  {
+   "raw": "Guide for the Perplexed 1:1",
+   "my_canonical": "Guide for the Perplexed, Part 1 1",
+   "sefaria_ref": "Guide for the Perplexed, Part 1.1",
+   "via": "labeled"
+  },
+  {
+   "raw": "Guide for the Perplexed 3:50",
+   "my_canonical": "Guide for the Perplexed, Part 3 50",
+   "sefaria_ref": "Guide for the Perplexed, Part 3.50",
+   "via": "labeled"
+  },
+  {
+   "raw": "Moreh Nevuchim (3:8)",
+   "my_canonical": "Guide for the Perplexed, Part 3 8",
+   "sefaria_ref": "Guide for the Perplexed, Part 3.8",
+   "via": "labeled"
+  },
+  {
+   "raw": "Kaf HaHayyim OC 13:7",
+   "my_canonical": "Kaf HaChayim on Shulchan Arukh, Orach Chayim 13:7",
+   "sefaria_ref": "Kaf HaChayim on Shulchan Arukh, Orach Chayim.13.7",
+   "via": "labeled"
+  },
+  {
+   "raw": "Semag ( aseh no. 9 )",
+   "my_canonical": "Sefer Mitzvot Gadol, Positive Commandments 9",
+   "sefaria_ref": "Sefer Mitzvot Gadol, Positive Commandments.9",
+   "via": "labeled"
+  },
+  {
+   "raw": "Semag ,( Negative Commandment 132 )",
+   "my_canonical": "Sefer Mitzvot Gadol, Negative Commandments 132",
+   "sefaria_ref": "Sefer Mitzvot Gadol, Negative Commandments.132",
+   "via": "labeled"
+  },
+  {
+   "raw": "Sichot Haran no. 9",
+   "my_canonical": "Sichot HaRan 9",
+   "sefaria_ref": "Sichot HaRan.9",
+   "via": "labeled"
+  },
+  {
+   "raw": "Bava Basra 96a1",
+   "my_canonical": "Bava Batra 96a",
+   "sefaria_ref": "Bava Batra.96a",
+   "via": "labeled"
+  },
+  {
+   "raw": "Bereish Rabbah 76:2",
+   "my_canonical": "Bereshit Rabbah 76:2",
+   "sefaria_ref": "Bereshit Rabbah.76.2",
+   "via": "labeled"
+  },
+  {
+   "raw": "Chayey Moharan #597",
+   "my_canonical": "Chayei Moharan 597",
+   "sefaria_ref": "Chayei Moharan.597",
+   "via": "labeled"
+  },
+  {
+   "raw": "Chok Yaakov 7",
+   "my_canonical": "Chok Yaakov on Shulchan Arukh, Orach Chayim 7",
+   "sefaria_ref": "Chok Yaakov on Shulchan Arukh, Orach Chayim.7",
+   "via": "labeled"
+  },
+  {
+   "raw": "Chovot Halevavot",
+   "my_canonical": "Duties of the Heart",
+   "sefaria_ref": "Duties of the Heart",
+   "via": "labeled"
+  },
+  {
+   "raw": "Chronicles 1, 17:21",
+   "my_canonical": "I Chronicles 17:21",
+   "sefaria_ref": "I Chronicles.17.21",
+   "via": "labeled"
+  },
+  {
+   "raw": "Divrei Hayamim 2:28:22-25",
+   "my_canonical": "II Chronicles 28:22-25",
+   "sefaria_ref": "II Chronicles.28.22-25",
+   "via": "labeled"
+  },
+  {
+   "raw": "Eshel Avraham 37:2",
+   "my_canonical": "Eshel Avraham on Shulchan Arukh, Orach Chayim 37:2",
+   "sefaria_ref": "Eshel Avraham on Shulchan Arukh, Orach Chayim.37.2",
+   "via": "labeled"
+  },
+  {
+   "raw": "Even Ho'ezer 13-1",
+   "my_canonical": "Shulchan Arukh, Even HaEzer 13:1",
+   "sefaria_ref": "Shulchan Arukh, Even HaEzer.13.1",
+   "via": "labeled"
+  },
+  {
+   "raw": "Chayei Adom 131:11",
+   "my_canonical": "Chayei Adam 131:11",
+   "sefaria_ref": "Chayyei Adam.131.11",
+   "via": "labeled"
+  },
+  {
+   "raw": "Mishna B'rura 104:27",
+   "my_canonical": "Mishnah Berurah 104:27",
+   "sefaria_ref": "Mishnah Berurah.104.27",
+   "via": "labeled"
+  },
+  {
+   "raw": "Mishna B'rura 122:4",
+   "my_canonical": "Mishnah Berurah 122:4",
+   "sefaria_ref": "Mishnah Berurah.122.4",
+   "via": "labeled"
+  },
+  {
+   "raw": "Yoreh Deiah 141:12/143:2",
+   "my_canonical": "Shulchan Arukh, Yoreh De'ah 141:12",
+   "sefaria_ref": "Shulchan Arukh, Yoreh De'ah.141.12",
+   "via": "labeled"
+  },
+  {
+   "raw": "Yoreh Deiah 141:19",
+   "my_canonical": "Shulchan Arukh, Yoreh De'ah 141:19",
+   "sefaria_ref": "Shulchan Arukh, Yoreh De'ah.141.19",
+   "via": "labeled"
+  },
+  {
+   "raw": "Melachim 2:18:13-19:37",
+   "my_canonical": "II Kings 18:13",
+   "sefaria_ref": "II Kings.18.13",
+   "via": "labeled"
+  },
+  {
+   "raw": "Shulchan Aruch O\"C 11:4-14",
+   "my_canonical": "Shulchan Arukh, Orach Chayim 11:4",
+   "sefaria_ref": "Shulchan Arukh, Orach Chayim.11.4",
+   "via": "labeled"
+  },
+  {
+   "raw": "Kaf HaChaim O\"C 124:10",
+   "my_canonical": "Kaf HaChayim on Shulchan Arukh, Orach Chayim 124:10",
+   "sefaria_ref": "Kaf HaChayim on Shulchan Arukh, Orach Chayim.124.10",
+   "via": "labeled"
+  },
+  {
+   "raw": "Chayei Adam ( 2:8:23 )",
+   "my_canonical": "Chayei Adam 2:8",
+   "sefaria_ref": "Chayyei Adam.2.8",
+   "via": "labeled"
+  },
+  {
+   "raw": "Guide 3.24",
+   "my_canonical": "Guide for the Perplexed, Part 3 24",
+   "sefaria_ref": "Guide for the Perplexed, Part 3.24",
+   "via": "labeled"
+  },
+  {
+   "raw": "Guide of the Perplexed 3:17",
+   "my_canonical": "Guide for the Perplexed, Part 3 17",
+   "sefaria_ref": "Guide for the Perplexed, Part 3.17",
+   "via": "labeled"
+  },
+  {
+   "raw": "Iggeres Teiman",
+   "my_canonical": "Iggeret Teiman",
+   "sefaria_ref": "Iggerot HaRambam, Iggeret Teiman",
+   "via": "labeled"
+  },
+  {
+   "raw": "Megila 21b",
+   "my_canonical": "Megillah 21b",
+   "sefaria_ref": "Megillah.21b",
+   "via": "labeled"
+  },
+  {
+   "raw": "Mesilas Yesharim",
+   "my_canonical": "Messilat Yesharim",
+   "sefaria_ref": "Mesillat Yesharim",
+   "via": "labeled"
+  },
+  {
+   "raw": "Messilas Yesharim",
+   "my_canonical": "Messilat Yesharim",
+   "sefaria_ref": "Mesillat Yesharim",
+   "via": "labeled"
+  },
+  {
+   "raw": "Midrash Lekah Tov",
+   "my_canonical": "Midrash Lekach Tov",
+   "sefaria_ref": "Midrash Lekach Tov",
+   "via": "labeled"
+  },
+  {
+   "raw": "Mishna Brurah (122 s.k. 8)",
+   "my_canonical": "Mishnah Berurah 122:8",
+   "sefaria_ref": "Mishnah Berurah.122.8",
+   "via": "labeled"
+  },
+  {
+   "raw": "Mishneh Torah - Teshuva 7:3",
+   "my_canonical": "Mishneh Torah, Repentance 7:3",
+   "sefaria_ref": "Mishneh Torah, Repentance.7.3",
+   "via": "labeled"
+  },
+  {
+   "raw": "Nefesh Hachaim",
+   "my_canonical": "Nefesh HaChaim",
+   "sefaria_ref": "Nefesh HaChayim",
+   "via": "labeled"
+  },
+  {
+   "raw": "Pesachimn 35a",
+   "my_canonical": "Pesachim 35a",
+   "sefaria_ref": "Pesachim.35a",
+   "via": "labeled"
+  },
+  {
+   "raw": "Pirkei Avos (Derech Chaim Chapter 5 mishna 15)",
+   "my_canonical": "Pirkei Avot 5:15",
+   "sefaria_ref": "Pirkei Avot.5.15",
+   "via": "labeled"
+  },
+  {
+   "raw": "Rambam Gerushin 11-20",
+   "my_canonical": "Mishneh Torah, Divorce 11:20",
+   "sefaria_ref": "Mishneh Torah, Divorce.11.20",
+   "via": "labeled"
+  },
+  {
+   "raw": "Rambam Yesodey Torah 6,2",
+   "my_canonical": "Mishneh Torah, Foundations of the Torah 6:2",
+   "sefaria_ref": "Mishneh Torah, Foundations of the Torah.6.2",
+   "via": "labeled"
+  },
+  {
+   "raw": "Rambam ishut 3:2",
+   "my_canonical": "Mishneh Torah, Marriage 3:2",
+   "sefaria_ref": "Mishneh Torah, Marriage.3.2",
+   "via": "labeled"
+  },
+  {
+   "raw": "Rosh Hashshana 4:4",
+   "my_canonical": "Mishnah Rosh Hashanah 4:4",
+   "sefaria_ref": "Mishnah Rosh Hashanah.4.4",
+   "via": "labeled"
+  },
+  {
+   "raw": "Seder Olam Rabba, 16",
+   "my_canonical": "Seder Olam Rabbah 16",
+   "sefaria_ref": "Seder Olam Rabbah.16",
+   "via": "labeled"
+  },
+  {
+   "raw": "Sefer Hasidim ( 450 )",
+   "my_canonical": "Sefer Hasidim 450",
+   "sefaria_ref": "Sefer Chasidim.450",
+   "via": "labeled"
+  },
+  {
+   "raw": "Sefer Yetzira",
+   "my_canonical": "Sefer Yetzirah",
+   "sefaria_ref": "Sefer Yetzirah",
+   "via": "labeled"
+  },
+  {
+   "raw": "Shaarei Teshuva 61:2",
+   "my_canonical": "Sha'arei Teshuvah on Shulchan Arukh, Orach Chayim 61:2",
+   "sefaria_ref": "Sha'arei Teshuvah on Shulchan Arukh, Orach Chayim.61.2",
+   "via": "labeled"
+  },
+  {
+   "raw": "Smag (Asei #3)",
+   "my_canonical": "Sefer Mitzvot Gadol, Positive Commandments 3",
+   "sefaria_ref": "Sefer Mitzvot Gadol, Positive Commandments.3",
+   "via": "labeled"
+  },
+  {
+   "raw": "Tanna D'Bei Eliyahu",
+   "my_canonical": "Tanna d'bei Eliyahu Rabbah",
+   "sefaria_ref": "Tanna DeBei Eliyahu Rabbah",
+   "via": "labeled"
+  },
+  {
+   "raw": "Teshuvos haRosh",
+   "my_canonical": "Teshuvot HaRosh",
+   "sefaria_ref": "Teshuvot HaRosh",
+   "via": "labeled"
+  },
+  {
+   "raw": "Vayishlach 32:16",
+   "my_canonical": "Genesis 32:16",
+   "sefaria_ref": "Genesis.32.16",
+   "via": "labeled"
+  },
+  {
+   "raw": "Yereim (26)",
+   "my_canonical": "Sefer Yereim 26",
+   "sefaria_ref": "Sefer Yereim.26",
+   "via": "labeled"
+  },
+  {
+   "raw": "Seder Hadorot",
+   "my_canonical": "Seder HaDorot",
+   "sefaria_ref": "Seder HaDorot",
+   "via": "labeled"
+  },
+  {
+   "raw": "Machzor Vitri",
+   "my_canonical": "Machzor Vitry",
+   "sefaria_ref": "Machzor Vitry",
+   "via": "labeled"
+  },
+  {
+   "raw": "Kiddushin 66b1",
+   "my_canonical": "Kiddushin 66b",
+   "sefaria_ref": "Kiddushin.66b",
+   "via": "labeled"
+  },
+  {
+   "raw": "Gittin 31b1 #8",
+   "my_canonical": "Gittin 31b",
+   "sefaria_ref": "Gittin.31b",
+   "via": "labeled"
+  },
+  {
+   "raw": "Hekhalot Rabbatai",
+   "my_canonical": "Hechalot Rabbati",
+   "sefaria_ref": "Heikhalot Rabbati",
+   "via": "labeled"
+  },
+  {
+   "raw": "Kessef Mishneh",
+   "my_canonical": "Kessef Mishneh on Mishneh Torah, Vows",
+   "sefaria_ref": "Kessef Mishneh on Mishneh Torah, Vows",
+   "via": "labeled"
+  },
+  {
+   "raw": "Maggid Mishne",
+   "my_canonical": "Maggid Mishneh on Mishneh Torah, Fasts",
+   "sefaria_ref": "Maggid Mishneh on Mishneh Torah, Fasts",
+   "via": "labeled"
+  },
+  {
+   "raw": "Migdal Oz",
+   "my_canonical": "Migdal Oz on Mishneh Torah, Vows",
+   "sefaria_ref": "Migdal Oz on Mishneh Torah, Vows",
+   "via": "labeled"
+  },
+  {
+   "raw": "Trumas HaDeshen 2:232",
+   "my_canonical": "Terumat HaDeshen, Part II 232",
+   "sefaria_ref": "Terumat HaDeshen, Part II.232",
+   "via": "labeled"
+  },
+  {
+   "raw": "Or HaChaim",
+   "my_canonical": "Or HaChaim on Genesis",
+   "sefaria_ref": "Or HaChaim on Genesis",
+   "via": "labeled"
+  },
+  {
+   "raw": "Minchat Shai",
+   "my_canonical": "Minchat Shai on Torah",
+   "sefaria_ref": "Minchat Shai on Torah",
+   "via": "labeled"
+  },
+  {
+   "raw": "Shulchan Aruch (456:1)",
+   "my_canonical": "Shulchan Arukh, Orach Chayim 456:1",
+   "sefaria_ref": "Shulchan Arukh, Orach Chayim.456.1",
+   "via": "labeled"
+  },
+  {
+   "raw": "Midrash Tanchumah Bo 14, Sanhedrin 4B",
+   "my_canonical": "Midrash Tanchuma, Bo 14",
+   "sefaria_ref": "Midrash Tanchuma, Bo.14",
+   "via": "labeled"
+  },
+  {
+   "raw": "Mishna (Rosh haShana 1:1)",
+   "my_canonical": "Mishnah Rosh Hashanah 1:1",
+   "sefaria_ref": "Mishnah Rosh Hashanah.1.1",
+   "via": "labeled"
+  },
+  {
+   "raw": "Rashba (Responsa 1:47",
+   "my_canonical": "Teshuvot haRashba part I 47",
+   "sefaria_ref": "Teshuvot haRashba part I.47",
+   "via": "labeled"
+  },
+  {
+   "raw": "Sefer VaYikra 18:25",
+   "my_canonical": "Leviticus 18:25",
+   "sefaria_ref": "Leviticus.18.25",
+   "via": "labeled"
+  },
+  {
+   "raw": "Sha’arei Kedushah 1:2, s.v. u’zkhor v’al tishkach",
+   "my_canonical": "Shaarei Kedusha, Part 1 2",
+   "sefaria_ref": "Sha'arei Kedusha, Part 1.2",
+   "via": "labeled"
+  },
+  {
+   "raw": "Shaarei kedusha part 3 gate 8",
+   "my_canonical": "Shaarei Kedusha, Part 3 8",
+   "sefaria_ref": "Sha'arei Kedusha, Part 3.8",
+   "via": "labeled"
+  },
+  {
+   "raw": "Shulḥan Arukh 677:1",
+   "my_canonical": "Shulchan Arukh, Orach Chayim 677:1",
+   "sefaria_ref": "Shulchan Arukh, Orach Chayim.677.1",
+   "via": "labeled"
+  },
+  {
+   "raw": "Tzava'at ha-Rivash 141",
+   "my_canonical": "Tzavaat HaRivash 141",
+   "sefaria_ref": "Tzava'at HaRivash.141",
+   "via": "labeled"
+  },
+  {
+   "raw": "Tehillim, 93 (p. 202)",
+   "my_canonical": "Psalms 93",
+   "sefaria_ref": "Psalms.93",
+   "via": "labeled"
+  },
+  {
+   "raw": "Tiferes Yisrael (chapter 40",
+   "my_canonical": "Tiferet Yisrael 40",
+   "sefaria_ref": "Tiferet Yisrael.40",
+   "via": "labeled"
+  },
+  {
+   "raw": "Shu’t Maharsham 1:179",
+   "my_canonical": "Teshuvot Maharsham Volume I 179",
+   "sefaria_ref": "Teshuvot Maharsham Volume I.179",
+   "via": "labeled"
+  },
+  {
+   "raw": "Tashbeitz 1,146",
+   "my_canonical": "Tashbetz Katan 146",
+   "sefaria_ref": "Tashbetz Katan.146",
+   "via": "labeled"
+  },
+  {
+   "raw": "Zohar (Mishpatim 108b",
+   "my_canonical": "Zohar, Mishpatim",
+   "sefaria_ref": "Zohar, Mishpatim",
+   "via": "labeled"
+  }
+ ]
+}

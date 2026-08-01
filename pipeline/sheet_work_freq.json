@@ -1,0 +1,9545 @@
+{
+ "n_sheets": 750,
+ "works": [
+  {
+   "work": "Shulchan Aruch",
+   "count": 29,
+   "example": "Shulchan Aruch"
+  },
+  {
+   "work": "Passover",
+   "count": 27,
+   "example": "Passover"
+  },
+  {
+   "work": "Sefaria",
+   "count": 26,
+   "example": "Sefaria"
+  },
+  {
+   "work": "Hebrew Bible",
+   "count": 25,
+   "example": "Hebrew Bible"
+  },
+  {
+   "work": "Babylonian Talmud",
+   "count": 22,
+   "example": "Babylonian Talmud"
+  },
+  {
+   "work": "Kabbalah",
+   "count": 21,
+   "example": "Kabbalah"
+  },
+  {
+   "work": "TaNaKh",
+   "count": 19,
+   "example": "TaNaKh"
+  },
+  {
+   "work": "Prophets",
+   "count": 17,
+   "example": "Prophets"
+  },
+  {
+   "work": "Ten Commandments",
+   "count": 17,
+   "example": "Ten Commandments"
+  },
+  {
+   "work": "Purim",
+   "count": 15,
+   "example": "Purim"
+  },
+  {
+   "work": "Modeh Ani",
+   "count": 15,
+   "example": "Modeh Ani"
+  },
+  {
+   "work": "Simchat Torah",
+   "count": 14,
+   "example": "Simchat Torah"
+  },
+  {
+   "work": "Radio",
+   "count": 10,
+   "example": "Responsa Radio"
+  },
+  {
+   "work": "Shema",
+   "count": 10,
+   "example": "Shema"
+  },
+  {
+   "work": "Parah Adumah",
+   "count": 9,
+   "example": "Parah Adumah"
+  },
+  {
+   "work": "Shulhan Arukh",
+   "count": 9,
+   "example": "Shulhan Arukh"
+  },
+  {
+   "work": "Biblical Book of Exodus",
+   "count": 9,
+   "example": "Biblical Book of Exodus"
+  },
+  {
+   "work": "Shir HaMa’alot",
+   "count": 9,
+   "example": "Shir HaMa’alot"
+  },
+  {
+   "work": "Sukkot",
+   "count": 8,
+   "example": "Sukkot"
+  },
+  {
+   "work": "Pirkei Avot",
+   "count": 7,
+   "example": "Pirkei Avot."
+  },
+  {
+   "work": "Chanoch Albeck",
+   "count": 6,
+   "example": "Chanoch Albeck"
+  },
+  {
+   "work": "Mishnat Yomi",
+   "count": 6,
+   "example": "Mishnat Yomi"
+  },
+  {
+   "work": "Mesechta",
+   "count": 6,
+   "example": "Mesechta"
+  },
+  {
+   "work": "Ashamnu",
+   "count": 6,
+   "example": "Ashamnu"
+  },
+  {
+   "work": "Tisha B’Av",
+   "count": 6,
+   "example": "Tisha B’Av"
+  },
+  {
+   "work": "Megillat Esther",
+   "count": 6,
+   "example": "Megillat Esther"
+  },
+  {
+   "work": "Tzitz Eliezer",
+   "count": 5,
+   "example": "Tzitz Eliezer (sources 26-27 )"
+  },
+  {
+   "work": "Zohar",
+   "count": 5,
+   "example": "Zohar volume 3, ParshaVayikra , page 10b"
+  },
+  {
+   "work": "Shulchan Arukh",
+   "count": 5,
+   "example": "Shulchan Arukh"
+  },
+  {
+   "work": "Mishna im peirush Siyata D'ishmaya",
+   "count": 5,
+   "example": "Mishna im peirush Siyata D'ishmaya"
+  },
+  {
+   "work": "Mishna Mefureshes",
+   "count": 5,
+   "example": "Mishna Mefureshes"
+  },
+  {
+   "work": "Mishnah",
+   "count": 5,
+   "example": "Mishnah 1160"
+  },
+  {
+   "work": "Or Hachaim",
+   "count": 5,
+   "example": "Or Hachaim"
+  },
+  {
+   "work": "Visit Hadar.org",
+   "count": 5,
+   "example": "Visit Hadar.org"
+  },
+  {
+   "work": "Biblical Book of Deuteronomy",
+   "count": 5,
+   "example": "Biblical Book of Deuteronomy"
+  },
+  {
+   "work": "Deracheha: womenandmitzvot.org",
+   "count": 5,
+   "example": "Deracheha: womenandmitzvot.org"
+  },
+  {
+   "work": "Aseres HaDibros",
+   "count": 5,
+   "example": "Aseres HaDibros"
+  },
+  {
+   "work": "Targum",
+   "count": 4,
+   "example": "Targum"
+  },
+  {
+   "work": "New York City",
+   "count": 4,
+   "example": "New York City"
+  },
+  {
+   "work": "Ketuvim",
+   "count": 4,
+   "example": "Ketuvim (Writings)"
+  },
+  {
+   "work": "Sifrei",
+   "count": 4,
+   "example": "Sifrei"
+  },
+  {
+   "work": "Peirush HaRamBam L'Mishnayos",
+   "count": 4,
+   "example": "Peirush HaRamBam L'Mishnayos"
+  },
+  {
+   "work": "Artscroll",
+   "count": 4,
+   "example": "Artscroll"
+  },
+  {
+   "work": "Mishnas Eretz Yisroel",
+   "count": 4,
+   "example": "Mishnas Eretz Yisroel"
+  },
+  {
+   "work": "New Year",
+   "count": 4,
+   "example": "New Year"
+  },
+  {
+   "work": "NRSV",
+   "count": 4,
+   "example": "NRSV"
+  },
+  {
+   "work": "Why?",
+   "count": 4,
+   "example": "Why? 5"
+  },
+  {
+   "work": "Scroll of Ruth",
+   "count": 4,
+   "example": "Scroll of Ruth"
+  },
+  {
+   "work": "Five Books of Moses",
+   "count": 4,
+   "example": "Five Books of Moses"
+  },
+  {
+   "work": "Sod",
+   "count": 4,
+   "example": "Sod (Secret/Mysticism) of reincarnation"
+  },
+  {
+   "work": "Lecha Dodi",
+   "count": 4,
+   "example": "Lecha Dodi"
+  },
+  {
+   "work": "Bavli",
+   "count": 4,
+   "example": "Bavli"
+  },
+  {
+   "work": "On the Kabbalah",
+   "count": 4,
+   "example": "On the Kabbalah"
+  },
+  {
+   "work": "Yezirah",
+   "count": 4,
+   "example": "Sefer Yezirah"
+  },
+  {
+   "work": "Ethical Life",
+   "count": 4,
+   "example": "Ethical Life (pp. 149)"
+  },
+  {
+   "work": "CCAR Press",
+   "count": 4,
+   "example": "CCAR Press"
+  },
+  {
+   "work": "JPS",
+   "count": 4,
+   "example": "JPS"
+  },
+  {
+   "work": "Rambam",
+   "count": 4,
+   "example": "Rambam (Hilkhot Brakhot 1:16)"
+  },
+  {
+   "work": "Biblical Book of Genesis",
+   "count": 4,
+   "example": "Biblical Book of Genesis"
+  },
+  {
+   "work": "JPS Torah Commentary",
+   "count": 4,
+   "example": "JPS Torah Commentary,"
+  },
+  {
+   "work": "The Observant Life",
+   "count": 4,
+   "example": "The Observant Life, 172"
+  },
+  {
+   "work": "Derekh Chaim",
+   "count": 4,
+   "example": "Derekh Chaim"
+  },
+  {
+   "work": "Quran",
+   "count": 4,
+   "example": "Quran"
+  },
+  {
+   "work": "Wall Street",
+   "count": 4,
+   "example": "Wall Street"
+  },
+  {
+   "work": "IDB",
+   "count": 3,
+   "example": "IDB"
+  },
+  {
+   "work": "Pentateuch",
+   "count": 3,
+   "example": "Pentateuch"
+  },
+  {
+   "work": "Igros Moshe",
+   "count": 3,
+   "example": "Igros Moshe, Yoreh Deah 1:36"
+  },
+  {
+   "work": "Sifrei Torah",
+   "count": 3,
+   "example": "Sifrei Torah"
+  },
+  {
+   "work": "Rashi",
+   "count": 3,
+   "example": "Rashi (18a s.v. \"v'achar yashuvu\" )"
+  },
+  {
+   "work": "Chumash",
+   "count": 3,
+   "example": "Chumash"
+  },
+  {
+   "work": "Samaritan Pentateuch",
+   "count": 3,
+   "example": "Samaritan Pentateuch"
+  },
+  {
+   "work": "Talmud Yerushalmi",
+   "count": 3,
+   "example": "Talmud Yerushalmi"
+  },
+  {
+   "work": "Six?",
+   "count": 3,
+   "example": "Six?"
+  },
+  {
+   "work": "Midrash Rabbah",
+   "count": 3,
+   "example": "Midrash Rabbah"
+  },
+  {
+   "work": "Seder",
+   "count": 3,
+   "example": "Seder"
+  },
+  {
+   "work": "Iggeret Hakodesh",
+   "count": 3,
+   "example": "Iggeret Hakodesh"
+  },
+  {
+   "work": "Mishnayos",
+   "count": 3,
+   "example": "Mishnayos"
+  },
+  {
+   "work": "Nishmat HaMishnah",
+   "count": 3,
+   "example": "Nishmat HaMishnah (Hebrew)"
+  },
+  {
+   "work": "Tumas Yadayim",
+   "count": 3,
+   "example": "Tumas Yadayim"
+  },
+  {
+   "work": "Moadei Yisroel B'Tekufas HaMishna v'Hatalmud",
+   "count": 3,
+   "example": "Moadei Yisroel B'Tekufas HaMishna v'Hatalmud (Hebrew)"
+  },
+  {
+   "work": "Tosefta Kepshutah",
+   "count": 3,
+   "example": "Tosefta Kepshutah"
+  },
+  {
+   "work": "Mesechtas Rosh HaShana",
+   "count": 3,
+   "example": "Mesechtas Rosh HaShana"
+  },
+  {
+   "work": "Passover Seder",
+   "count": 3,
+   "example": "Passover Seder"
+  },
+  {
+   "work": "Babylonian",
+   "count": 3,
+   "example": "Babylonian"
+  },
+  {
+   "work": "My Jewish Learning",
+   "count": 3,
+   "example": "My Jewish Learning"
+  },
+  {
+   "work": "Medieval Kabbalah",
+   "count": 3,
+   "example": "Medieval Kabbalah"
+  },
+  {
+   "work": "Tzava'at Harivash",
+   "count": 3,
+   "example": "Tzava'at Harivash"
+  },
+  {
+   "work": "Hasichos",
+   "count": 3,
+   "example": "Sefer Hasichos 5750 II, pg. 501, ft.85"
+  },
+  {
+   "work": "Ein Sof",
+   "count": 3,
+   "example": "Ein Sof (אֵין סוֹף"
+  },
+  {
+   "work": "Kol Nidrei",
+   "count": 3,
+   "example": "Kol Nidrei"
+  },
+  {
+   "work": "Barukh She'amar",
+   "count": 3,
+   "example": "Barukh She'amar"
+  },
+  {
+   "work": "Adon Olam",
+   "count": 3,
+   "example": "Adon Olam"
+  },
+  {
+   "work": "Psalms of the Day",
+   "count": 3,
+   "example": "Psalms of the Day"
+  },
+  {
+   "work": "Jewish Bible Quarterly",
+   "count": 3,
+   "example": "Jewish Bible Quarterly"
+  },
+  {
+   "work": "Biblical Book of Leviticus",
+   "count": 3,
+   "example": "Biblical Book of Leviticus"
+  },
+  {
+   "work": "Leviticus Baruch A. Levine",
+   "count": 3,
+   "example": "Leviticus Baruch A. Levine"
+  },
+  {
+   "work": "Bach",
+   "count": 3,
+   "example": "Bach (Joel ben Samuel Sirkis"
+  },
+  {
+   "work": "Haftorah",
+   "count": 3,
+   "example": "Haftorah"
+  },
+  {
+   "work": "Written Torah",
+   "count": 3,
+   "example": "Written Torah"
+  },
+  {
+   "work": "Eishet Chayil",
+   "count": 3,
+   "example": "Eishet Chayil"
+  },
+  {
+   "work": "Pirke Avot: A Modern Commentary on Jewish Ethics",
+   "count": 3,
+   "example": "Pirke Avot: A Modern Commentary on Jewish Ethics"
+  },
+  {
+   "work": "Midrashim",
+   "count": 3,
+   "example": "Midrashim"
+  },
+  {
+   "work": "Shnayim Mikrah",
+   "count": 3,
+   "example": "Shnayim Mikrah"
+  },
+  {
+   "work": "Back to Top of",
+   "count": 3,
+   "example": "Back to Top of page Rabbinic Literature"
+  },
+  {
+   "work": "Likkutei-Sichos",
+   "count": 3,
+   "example": "Likkutei-Sichos 33 p.103 note 71"
+  },
+  {
+   "work": "Tosafot",
+   "count": 2,
+   "example": "Tosafot (source 17-19 )"
+  },
+  {
+   "work": "Shma",
+   "count": 2,
+   "example": "Shma"
+  },
+  {
+   "work": "NJV",
+   "count": 2,
+   "example": "NJV"
+  },
+  {
+   "work": "Sifre",
+   "count": 2,
+   "example": "Sifre"
+  },
+  {
+   "work": "Vavei Ha'amudim Tradition",
+   "count": 2,
+   "example": "Vavei Ha'amudim Tradition"
+  },
+  {
+   "work": "Lashon HaKodesh",
+   "count": 2,
+   "example": "Lashon HaKodesh"
+  },
+  {
+   "work": "Halacha L'Moshe MiSinai",
+   "count": 2,
+   "example": "Halacha L'Moshe MiSinai"
+  },
+  {
+   "work": "Pseudo-Aristeas",
+   "count": 2,
+   "example": "Pseudo-Aristeas"
+  },
+  {
+   "work": "Talmuds",
+   "count": 2,
+   "example": "Talmuds"
+  },
+  {
+   "work": "Yavneh",
+   "count": 2,
+   "example": "Yavneh"
+  },
+  {
+   "work": "Four Questions",
+   "count": 2,
+   "example": "Four Questions"
+  },
+  {
+   "work": "Birkei Yosef",
+   "count": 2,
+   "example": "Birkei Yosef, Yoreh Deah 246:7"
+  },
+  {
+   "work": "Tanach The Tanach",
+   "count": 2,
+   "example": "Tanach The Tanach"
+  },
+  {
+   "work": "TaNaCh",
+   "count": 2,
+   "example": "TaNaCh"
+  },
+  {
+   "work": "Nevi’im",
+   "count": 2,
+   "example": "Nevi’im"
+  },
+  {
+   "work": "Geneva Bible of",
+   "count": 2,
+   "example": "Geneva Bible of 1551"
+  },
+  {
+   "work": "Rashi’s Commentary on the Tanach Rashi",
+   "count": 2,
+   "example": "Rashi’s Commentary on the Tanach Rashi"
+  },
+  {
+   "work": "Midrash If the Mishnah",
+   "count": 2,
+   "example": "Midrash If the Mishnah"
+  },
+  {
+   "work": "Halachic Midrash",
+   "count": 2,
+   "example": "Halachic Midrash"
+  },
+  {
+   "work": "Aggadic Midrash",
+   "count": 2,
+   "example": "Aggadic Midrash"
+  },
+  {
+   "work": "Classical Midrashic texts",
+   "count": 2,
+   "example": "Classical Midrashic texts"
+  },
+  {
+   "work": "Iggeret Hakodesh, ​Ch",
+   "count": 2,
+   "example": "Iggeret Hakodesh, ​Ch. 2"
+  },
+  {
+   "work": "Mor v’Ketziyah",
+   "count": 2,
+   "example": "Sefer Mor v’Ketziyah"
+  },
+  {
+   "work": "Twitter",
+   "count": 2,
+   "example": "Twitter"
+  },
+  {
+   "work": "Menachos",
+   "count": 2,
+   "example": "Menachos"
+  },
+  {
+   "work": "Hebrewbooks.org",
+   "count": 2,
+   "example": "Hebrewbooks.org"
+  },
+  {
+   "work": "New Moon",
+   "count": 2,
+   "example": "New Moon"
+  },
+  {
+   "work": "Shofar",
+   "count": 2,
+   "example": "Shofar"
+  },
+  {
+   "work": "Avos HaTumah",
+   "count": 2,
+   "example": "Avos HaTumah"
+  },
+  {
+   "work": "Mishna",
+   "count": 2,
+   "example": "Mishna 2"
+  },
+  {
+   "work": "Mishnayos in our Mesechta",
+   "count": 2,
+   "example": "Mishnayos in our Mesechta"
+  },
+  {
+   "work": "Prefatory Mishnayos",
+   "count": 2,
+   "example": "Prefatory Mishnayos"
+  },
+  {
+   "work": "Mishnayos Chagigah",
+   "count": 2,
+   "example": "Mishnayos Chagigah"
+  },
+  {
+   "work": "Seder Moed",
+   "count": 2,
+   "example": "Seder Moed"
+  },
+  {
+   "work": "Olas Re'iyah",
+   "count": 2,
+   "example": "Olas Re'iyah"
+  },
+  {
+   "work": "Shalmei Simcha",
+   "count": 2,
+   "example": "Shalmei Simcha"
+  },
+  {
+   "work": "Tractate",
+   "count": 2,
+   "example": "Tractate"
+  },
+  {
+   "work": "May",
+   "count": 2,
+   "example": "May 17, 2023 | 26 Iyar, 5783"
+  },
+  {
+   "work": "JPS TANAKH: Gender-Sensitive Edition",
+   "count": 2,
+   "example": "JPS TANAKH: Gender-Sensitive Edition"
+  },
+  {
+   "work": "Preface",
+   "count": 2,
+   "example": "Preface"
+  },
+  {
+   "work": "Tisha B'av",
+   "count": 2,
+   "example": "Tisha B'av"
+  },
+  {
+   "work": "Psalm",
+   "count": 2,
+   "example": "Psalm 145:13a"
+  },
+  {
+   "work": "Exodus",
+   "count": 2,
+   "example": "Exodus 8:20: 9:6"
+  },
+  {
+   "work": "Midrash HaGadol, Genesis",
+   "count": 2,
+   "example": "Midrash HaGadol, Genesis 45:26"
+  },
+  {
+   "work": "Avivah Zornberg",
+   "count": 2,
+   "example": "Avivah Zornberg"
+  },
+  {
+   "work": "Shnayim Mikra",
+   "count": 2,
+   "example": "Shnayim Mikra"
+  },
+  {
+   "work": "Jewish Study Bible",
+   "count": 2,
+   "example": "Jewish Study Bible"
+  },
+  {
+   "work": "ArtScroll Berachos",
+   "count": 2,
+   "example": "ArtScroll Berachos 57b, note 38"
+  },
+  {
+   "work": "Kesef Mishna",
+   "count": 2,
+   "example": "Kesef Mishna"
+  },
+  {
+   "work": "Maimonides, Letter to Ovadia to Convert Thus",
+   "count": 2,
+   "example": "Maimonides, Letter to Ovadia to Convert Thus"
+  },
+  {
+   "work": "Rambam, Sefer HaMitzvot, Prohibition",
+   "count": 2,
+   "example": "Rambam, Sefer HaMitzvot, Prohibition 49 The 49th prohibition"
+  },
+  {
+   "work": "Hasidism - Contemporary",
+   "count": 2,
+   "example": "Hasidism - Contemporary"
+  },
+  {
+   "work": "Kedushath Levi",
+   "count": 2,
+   "example": "Kedushath Levi (Beshalach)"
+  },
+  {
+   "work": "Search Of Man",
+   "count": 2,
+   "example": "Search Of Man"
+  },
+  {
+   "work": "Sha'ar Hagilgulim, Chapter",
+   "count": 2,
+   "example": "Sha'ar Hagilgulim, Chapter 9"
+  },
+  {
+   "work": "Transformed Judaism\" Tikkun , March",
+   "count": 2,
+   "example": "Transformed Judaism\" Tikkun , March 11, 2011"
+  },
+  {
+   "work": "TB Sota",
+   "count": 2,
+   "example": "TB Sota 14a"
+  },
+  {
+   "work": "Jewish scriptures",
+   "count": 2,
+   "example": "Jewish scriptures"
+  },
+  {
+   "work": "HaPeliah I",
+   "count": 2,
+   "example": "Sefer HaPeliah I 36b"
+  },
+  {
+   "work": "Genesis",
+   "count": 2,
+   "example": "Genesis 36 JPS Torah Commentary"
+  },
+  {
+   "work": "Bitachon—Trust: Trusting the Process",
+   "count": 2,
+   "example": "Bitachon—Trust: Trusting the Process"
+  },
+  {
+   "work": "Pirke Avot",
+   "count": 2,
+   "example": "Pirke Avot 1:14"
+  },
+  {
+   "work": "The Living Torah",
+   "count": 2,
+   "example": "The Living Torah"
+  },
+  {
+   "work": "Hoshanah Rabbah",
+   "count": 2,
+   "example": "Hoshanah Rabbah"
+  },
+  {
+   "work": "SECTION",
+   "count": 2,
+   "example": "SECTION 3"
+  },
+  {
+   "work": "Pesikta",
+   "count": 2,
+   "example": "Pesikta"
+  },
+  {
+   "work": "Machzor Vitry",
+   "count": 2,
+   "example": "Machzor Vitry (1340)"
+  },
+  {
+   "work": "Al HaNissim",
+   "count": 2,
+   "example": "Al HaNissim"
+  },
+  {
+   "work": "Antiquities of the Jews",
+   "count": 2,
+   "example": "Antiquities of the Jews 12:319-325 (C.E. 94/95)"
+  },
+  {
+   "work": "Barukh She’amar",
+   "count": 2,
+   "example": "Barukh She’amar"
+  },
+  {
+   "work": "Tur",
+   "count": 2,
+   "example": "Tur 215:1"
+  },
+  {
+   "work": "Shulkhan Arukh",
+   "count": 2,
+   "example": "Shulkhan Arukh"
+  },
+  {
+   "work": "Gender Equality and Prayer in Jewish Law",
+   "count": 2,
+   "example": "Gender Equality and Prayer in Jewish Law"
+  },
+  {
+   "work": "Principle",
+   "count": 2,
+   "example": "Principle 1: Shabbat as Sacred Time Source 1: The Sabbath"
+  },
+  {
+   "work": "Fourth Commandment",
+   "count": 2,
+   "example": "Fourth Commandment"
+  },
+  {
+   "work": "October",
+   "count": 2,
+   "example": "October 23, 2023"
+  },
+  {
+   "work": "Talmud",
+   "count": 2,
+   "example": "Talmud (Chagiga 13b:14)"
+  },
+  {
+   "work": "Lulav",
+   "count": 2,
+   "example": "Lulav"
+  },
+  {
+   "work": "Netivot Shalom",
+   "count": 2,
+   "example": "Netivot Shalom"
+  },
+  {
+   "work": "Ha Lachma Anya",
+   "count": 2,
+   "example": "Ha Lachma Anya"
+  },
+  {
+   "work": "Psychology Today: Anger",
+   "count": 2,
+   "example": "Psychology Today: Anger"
+  },
+  {
+   "work": "Maharil",
+   "count": 2,
+   "example": "Sefer Maharil"
+  },
+  {
+   "work": "Yamim Nora'im",
+   "count": 2,
+   "example": "Yamim Nora'im"
+  },
+  {
+   "work": "Rosh Hashanah la-Behemah",
+   "count": 2,
+   "example": "Rosh Hashanah la-Behemah"
+  },
+  {
+   "work": "Un’taneh Tokef",
+   "count": 2,
+   "example": "Un’taneh Tokef"
+  },
+  {
+   "work": "Maimonides’ Mishneh Torah",
+   "count": 2,
+   "example": "Maimonides’ Mishneh Torah"
+  },
+  {
+   "work": "Reason",
+   "count": 2,
+   "example": "Reason 2: The Joy of Giving Context"
+  },
+  {
+   "work": "Kol B’Seder",
+   "count": 2,
+   "example": "Kol B’Seder"
+  },
+  {
+   "work": "Chanukah Gemara",
+   "count": 2,
+   "example": "Chanukah Gemara"
+  },
+  {
+   "work": "Vezot HaBeracha",
+   "count": 2,
+   "example": "Vezot HaBeracha"
+  },
+  {
+   "work": "Hazon Ish",
+   "count": 2,
+   "example": "Hazon Ish"
+  },
+  {
+   "work": "Gmilut Chassadim",
+   "count": 2,
+   "example": "Gmilut Chassadim"
+  },
+  {
+   "work": "TaNaKH",
+   "count": 2,
+   "example": "TaNaKH"
+  },
+  {
+   "work": "Megillot Esther",
+   "count": 2,
+   "example": "Megillot Esther (Esther scrolls)"
+  },
+  {
+   "work": "Biblical Book of Esther",
+   "count": 2,
+   "example": "Biblical Book of Esther"
+  },
+  {
+   "work": "Tikkun Leil Shavuot",
+   "count": 2,
+   "example": "Tikkun Leil Shavuot"
+  },
+  {
+   "work": "Shirat HaYam",
+   "count": 2,
+   "example": "Shirat HaYam"
+  },
+  {
+   "work": "Sivan",
+   "count": 2,
+   "example": "Sivan 30"
+  },
+  {
+   "work": "Peninei Halakha",
+   "count": 2,
+   "example": "Peninei Halakha"
+  },
+  {
+   "work": "Law",
+   "count": 2,
+   "example": "Law"
+  },
+  {
+   "work": "Chatam Sofer, Orech Chaim",
+   "count": 2,
+   "example": "Chatam Sofer, Orech Chaim 5:190"
+  },
+  {
+   "work": "School of Hillel",
+   "count": 2,
+   "example": "School of Hillel"
+  },
+  {
+   "work": "Pirke Avot , Commentary on",
+   "count": 2,
+   "example": "Pirke Avot , Commentary on 4:14"
+  },
+  {
+   "work": "Musar",
+   "count": 2,
+   "example": "Musar"
+  },
+  {
+   "work": "Tosafot Yom Tov on Mishnah Avot",
+   "count": 2,
+   "example": "Tosafot Yom Tov on Mishnah Avot 4:5:2-4"
+  },
+  {
+   "work": "Tz ur Yisrael",
+   "count": 2,
+   "example": "Tz ur Yisrael"
+  },
+  {
+   "work": "The Rock of Israel",
+   "count": 2,
+   "example": "The Rock of Israel"
+  },
+  {
+   "work": "February",
+   "count": 2,
+   "example": "February 1986"
+  },
+  {
+   "work": "Shir Hama'alot",
+   "count": 2,
+   "example": "Shir Hama'alot"
+  },
+  {
+   "work": "Birkat HaMazon",
+   "count": 2,
+   "example": "Birkat HaMazon"
+  },
+  {
+   "work": "Pereh Adam",
+   "count": 2,
+   "example": "Pereh Adam"
+  },
+  {
+   "work": "Proverbs",
+   "count": 2,
+   "example": "Proverbs 556"
+  },
+  {
+   "work": "Mitzvah",
+   "count": 2,
+   "example": "Mitzvah 222"
+  },
+  {
+   "work": "Toldot Adam VeChava, Path",
+   "count": 2,
+   "example": "Toldot Adam VeChava, Path 5, Section 3, Page 101"
+  },
+  {
+   "work": "Frank Dictionary",
+   "count": 2,
+   "example": "Frank Dictionary"
+  },
+  {
+   "work": "London Beth Din",
+   "count": 2,
+   "example": "London Beth Din"
+  },
+  {
+   "work": "Jerem​iah",
+   "count": 2,
+   "example": "Jerem​iah 33:10-11"
+  },
+  {
+   "work": "Breishit Rabba",
+   "count": 2,
+   "example": "Breishit Rabba (71b)"
+  },
+  {
+   "work": "Tanna Devei Eliyahu Rabbah",
+   "count": 2,
+   "example": "Tanna Devei Eliyahu Rabbah 9"
+  },
+  {
+   "work": "P’sik Reisha",
+   "count": 2,
+   "example": "P’sik Reisha"
+  },
+  {
+   "work": "Aruch Ha’Shulchan",
+   "count": 2,
+   "example": "Aruch Ha’Shulchan"
+  },
+  {
+   "work": "Teshuva",
+   "count": 2,
+   "example": "Teshuva"
+  },
+  {
+   "work": "Medical History and Ethics",
+   "count": 2,
+   "example": "Medical History and Ethics"
+  },
+  {
+   "work": "Iggerot Moshe",
+   "count": 2,
+   "example": "Iggerot Moshe OC I:39"
+  },
+  {
+   "work": "Elohai Neshama",
+   "count": 2,
+   "example": "Elohai Neshama"
+  },
+  {
+   "work": "Yiddish",
+   "count": 2,
+   "example": "Yiddish"
+  },
+  {
+   "work": "Midrash",
+   "count": 2,
+   "example": "Midrash ( Shabbat 88a)"
+  },
+  {
+   "work": "Song of Hannah",
+   "count": 2,
+   "example": "Song of Hannah"
+  },
+  {
+   "work": "Na'aseh V'Nishmah",
+   "count": 2,
+   "example": "Na'aseh V'Nishmah"
+  },
+  {
+   "work": "Mosaic",
+   "count": 2,
+   "example": "Mosaic"
+  },
+  {
+   "work": "Taheb",
+   "count": 2,
+   "example": "Taheb"
+  },
+  {
+   "work": "Sepharia",
+   "count": 2,
+   "example": "Sepharia"
+  },
+  {
+   "work": "Holy Language",
+   "count": 2,
+   "example": "Holy Language"
+  },
+  {
+   "work": "Mesorah",
+   "count": 2,
+   "example": "Mesorah"
+  },
+  {
+   "work": "Dura Europos Synagogue",
+   "count": 2,
+   "example": "Dura Europos Synagogue"
+  },
+  {
+   "work": "Akedah",
+   "count": 2,
+   "example": "Akedah"
+  },
+  {
+   "work": "Bet Alpha Synagogue",
+   "count": 2,
+   "example": "Bet Alpha Synagogue"
+  },
+  {
+   "work": "The Splitting of the Red Sea",
+   "count": 2,
+   "example": "The Splitting of the Red Sea, 1999"
+  },
+  {
+   "work": "Kinna",
+   "count": 2,
+   "example": "Kinna 33: Talks"
+  },
+  {
+   "work": "Mekoros V'Tziyunim",
+   "count": 2,
+   "example": "Mekoros V'Tziyunim"
+  },
+  {
+   "work": "Rambam, Ḥametz Umatzah",
+   "count": 2,
+   "example": "Rambam, Ḥametz Umatzah, 5:1"
+  },
+  {
+   "work": "DSM-5",
+   "count": 1,
+   "example": "DSM-5"
+  },
+  {
+   "work": "of R. Betzalel Zev Spirn",
+   "count": 1,
+   "example": "Responsa of R. Betzalel Zev Spirn"
+  },
+  {
+   "work": "Maharit",
+   "count": 1,
+   "example": "Maharit"
+  },
+  {
+   "work": "Maharit, et. al",
+   "count": 1,
+   "example": "Maharit, et. al."
+  },
+  {
+   "work": "Halakhic Issues",
+   "count": 1,
+   "example": "Halakhic Issues"
+  },
+  {
+   "work": "Gemarot",
+   "count": 1,
+   "example": "Gemarot"
+  },
+  {
+   "work": "עב.), ערכין",
+   "count": 1,
+   "example": "עב.), ערכין (ז. Rishonim"
+  },
+  {
+   "work": "September",
+   "count": 1,
+   "example": "September 18, 2022 | 22 Elul, 5782"
+  },
+  {
+   "work": "Lawrence Hoffman",
+   "count": 1,
+   "example": "Lawrence Hoffman"
+  },
+  {
+   "work": "My People's Prayer Book",
+   "count": 1,
+   "example": "My People's Prayer Book, Vol. 1"
+  },
+  {
+   "work": "Relics for the Present",
+   "count": 1,
+   "example": "Relics for the Present, 94"
+  },
+  {
+   "work": "Shemiras HaLoshon",
+   "count": 1,
+   "example": "Shemiras HaLoshon volume 2, chapter 1, second Hagahah"
+  },
+  {
+   "work": "Tanchuma, Tzav #7",
+   "count": 1,
+   "example": "Tanchuma, Tzav #7"
+  },
+  {
+   "work": "Shoftim #18",
+   "count": 1,
+   "example": "Shoftim #18"
+  },
+  {
+   "work": "Avos D’Rebbi Nosson",
+   "count": 1,
+   "example": "Avos D’Rebbi Nosson 28:3"
+  },
+  {
+   "work": "Yamim Nora’im",
+   "count": 1,
+   "example": "Yamim Nora’im"
+  },
+  {
+   "work": "The Power of Speech by Yehudah Cahn, pages",
+   "count": 1,
+   "example": "The Power of Speech by Yehudah Cahn, pages 34-35"
+  },
+  {
+   "work": "Seifer Chofeitz Chayim , Hilchos Issurei Loshon Hara",
+   "count": 1,
+   "example": "Seifer Chofeitz Chayim , Hilchos Issurei Loshon Hara 4:12"
+  },
+  {
+   "work": "Hilchos Issurei Rechilus",
+   "count": 1,
+   "example": "Hilchos Issurei Rechilus 4:3"
+  },
+  {
+   "work": "Chofetz Chaim – English Translation",
+   "count": 1,
+   "example": "Sefer Chofetz Chaim – English Translation , page 18"
+  },
+  {
+   "work": "Israel Bookshop Publications",
+   "count": 1,
+   "example": "Israel Bookshop Publications"
+  },
+  {
+   "work": "Derech Pekudechah",
+   "count": 1,
+   "example": "Derech Pekudechah"
+  },
+  {
+   "work": "Mitzvos Lo Sa’aseh",
+   "count": 1,
+   "example": "Mitzvos Lo Sa’aseh 34 (3)"
+  },
+  {
+   "work": "note on Genesis",
+   "count": 1,
+   "example": "note on Genesis 10:2"
+  },
+  {
+   "work": "Menachoth",
+   "count": 1,
+   "example": "Menachoth 34b"
+  },
+  {
+   "work": "The Living Torah Amos Chacham",
+   "count": 1,
+   "example": "The Living Torah Amos Chacham"
+  },
+  {
+   "work": "Daat Mikra",
+   "count": 1,
+   "example": "Daat Mikra"
+  },
+  {
+   "work": "Torah Sheleimah Parshat Bo",
+   "count": 1,
+   "example": "Torah Sheleimah Parshat Bo"
+  },
+  {
+   "work": "H. M. Orlinsky",
+   "count": 1,
+   "example": "H. M. Orlinsky"
+  },
+  {
+   "work": "Exod",
+   "count": 1,
+   "example": "Exod 13:9.7"
+  },
+  {
+   "work": "Frontlets\"8",
+   "count": 1,
+   "example": "Frontlets\"8"
+  },
+  {
+   "work": "Jewish",
+   "count": 1,
+   "example": "Jewish"
+  },
+  {
+   "work": "Samaritan Version of the",
+   "count": 1,
+   "example": "Samaritan Version of the"
+  },
+  {
+   "work": "Reste Arabische Heidentums [Berlin: Reimer",
+   "count": 1,
+   "example": "Reste Arabische Heidentums [Berlin: Reimer, 1887] 165"
+  },
+  {
+   "work": "Phylacteries,\" HDB",
+   "count": 1,
+   "example": "Phylacteries,\" HDB 3. 872"
+  },
+  {
+   "work": "Samaritan targum",
+   "count": 1,
+   "example": "Samaritan targum"
+  },
+  {
+   "work": "Tue",
+   "count": 1,
+   "example": "Tue, 12 Jun 2018 13:50:02"
+  },
+  {
+   "work": "Merkzeichen an d. Stirn",
+   "count": 1,
+   "example": "Merkzeichen an d. Stirn"
+  },
+  {
+   "work": "Resposta lógica",
+   "count": 1,
+   "example": "Resposta lógica"
+  },
+  {
+   "work": "commentary Table",
+   "count": 1,
+   "example": "commentary Table"
+  },
+  {
+   "work": "Part I",
+   "count": 1,
+   "example": "Part I, Page 2. Exodus 14:19"
+  },
+  {
+   "work": "Halakhah",
+   "count": 1,
+   "example": "Halakhah"
+  },
+  {
+   "work": "Halakhah connections Part III",
+   "count": 1,
+   "example": "Halakhah connections Part III, Page 22. Lexicons"
+  },
+  {
+   "work": "Yesh",
+   "count": 1,
+   "example": "Yesh 11:1-4"
+  },
+  {
+   "work": "Tosafot on Chullin",
+   "count": 1,
+   "example": "Tosafot on Chullin 64b , s.v. vehu"
+  },
+  {
+   "work": "Blood Spots In the past",
+   "count": 1,
+   "example": "Blood Spots In the past"
+  },
+  {
+   "work": "History and Origins of Halloween",
+   "count": 1,
+   "example": "History and Origins of Halloween"
+  },
+  {
+   "work": "Jews Trick-or-Treat",
+   "count": 1,
+   "example": "Jews Trick-or-Treat"
+  },
+  {
+   "work": "Maharik. Tosfot Avodah Zarah",
+   "count": 1,
+   "example": "Maharik. Tosfot Avodah Zarah 11a V’EE"
+  },
+  {
+   "work": "Chukat Ha'Akum",
+   "count": 1,
+   "example": "Chukat Ha'Akum"
+  },
+  {
+   "work": "Lo Sechanem",
+   "count": 1,
+   "example": "Lo Sechanem"
+  },
+  {
+   "work": "Meiri on Bava",
+   "count": 1,
+   "example": "Meiri on Bava"
+  },
+  {
+   "work": "Maharam of Rothenburg",
+   "count": 1,
+   "example": "Maharam of Rothenburg (1260-1298)"
+  },
+  {
+   "work": "Hagahot Maimoni",
+   "count": 1,
+   "example": "Hagahot Maimoni"
+  },
+  {
+   "work": "Benei Yonah",
+   "count": 1,
+   "example": "Benei Yonah: 2"
+  },
+  {
+   "work": "Hachinuch",
+   "count": 1,
+   "example": "Sefer Hachinuch"
+  },
+  {
+   "work": "Bonei Yerushalayim",
+   "count": 1,
+   "example": "Bonei Yerushalayim"
+  },
+  {
+   "work": "Rambam Hilchos M'lachim",
+   "count": 1,
+   "example": "Rambam Hilchos M'lachim 1:1"
+  },
+  {
+   "work": "Barech Aleinu",
+   "count": 1,
+   "example": "Barech Aleinu 2"
+  },
+  {
+   "work": "Ulemalshinim",
+   "count": 1,
+   "example": "Ulemalshinim 5"
+  },
+  {
+   "work": "Al Hatzadakim",
+   "count": 1,
+   "example": "Al Hatzadakim 6"
+  },
+  {
+   "work": "Ulireyushalaim",
+   "count": 1,
+   "example": "Ulireyushalaim 7"
+  },
+  {
+   "work": "Tzemach David Rambam",
+   "count": 1,
+   "example": "Tzemach David Rambam"
+  },
+  {
+   "work": "30a Gemara Rosh Hashana",
+   "count": 1,
+   "example": "30a Gemara Rosh Hashana"
+  },
+  {
+   "work": "Rashi Pros",
+   "count": 1,
+   "example": "Rashi Pros"
+  },
+  {
+   "work": "Galus Bavel",
+   "count": 1,
+   "example": "Galus Bavel"
+  },
+  {
+   "work": "Mos",
+   "count": 1,
+   "example": "Mos"
+  },
+  {
+   "work": "of the Rashba",
+   "count": 1,
+   "example": "Responsa of the Rashba 1:94 (13th cent. Spain)"
+  },
+  {
+   "work": "of R. Moshe Rothenburg",
+   "count": 1,
+   "example": "Responsa of R. Moshe Rothenburg"
+  },
+  {
+   "work": "New York Hamilton",
+   "count": 1,
+   "example": "New York Hamilton"
+  },
+  {
+   "work": "The Book of Grass",
+   "count": 1,
+   "example": "The Book of Grass"
+  },
+  {
+   "work": "Igros Moshe, Yoreh De’ah",
+   "count": 1,
+   "example": "Igros Moshe, Yoreh De’ah Vol. 3"
+  },
+  {
+   "work": "New York State",
+   "count": 1,
+   "example": "New York State"
+  },
+  {
+   "work": "Artscroll Yevamos",
+   "count": 1,
+   "example": "Artscroll Yevamos 63a, note 44"
+  },
+  {
+   "work": "Magein Avraham",
+   "count": 1,
+   "example": "Magein Avraham 151:1"
+  },
+  {
+   "work": "Kav HaYosher , chapter",
+   "count": 1,
+   "example": "Kav HaYosher , chapter 3"
+  },
+  {
+   "work": "Parshas Vayeishev",
+   "count": 1,
+   "example": "Parshas Vayeishev, 24 th of Kisleiv, 5735"
+  },
+  {
+   "work": "Bartenura Yadayim",
+   "count": 1,
+   "example": "Bartenura Yadayim 4:3"
+  },
+  {
+   "work": "Rashi Vayikra",
+   "count": 1,
+   "example": "Rashi Vayikra 25:1 s.v. ּּּBehar"
+  },
+  {
+   "work": "Torat Kohanim",
+   "count": 1,
+   "example": "Torat Kohanim"
+  },
+  {
+   "work": "Rambam: Introduction to Mishneh Torah All",
+   "count": 1,
+   "example": "Rambam: Introduction to Mishneh Torah All"
+  },
+  {
+   "work": "Halachos D'Rabanan",
+   "count": 1,
+   "example": "Halachos D'Rabanan"
+  },
+  {
+   "work": "HaRan",
+   "count": 1,
+   "example": "HaRan 3:23-25"
+  },
+  {
+   "work": "Iddyoth",
+   "count": 1,
+   "example": "Iddyoth 1:2"
+  },
+  {
+   "work": "Daf Yomi",
+   "count": 1,
+   "example": "Daf Yomi"
+  },
+  {
+   "work": "Sifrah",
+   "count": 1,
+   "example": "Sifrah"
+  },
+  {
+   "work": "Vayyikra",
+   "count": 1,
+   "example": "Vayyikra"
+  },
+  {
+   "work": "Shema Vehaya",
+   "count": 1,
+   "example": "Shema Vehaya"
+  },
+  {
+   "work": "Anshei Kenneses Hagadolah",
+   "count": 1,
+   "example": "Anshei Kenneses Hagadolah"
+  },
+  {
+   "work": "Dinai Hamitzvah",
+   "count": 1,
+   "example": "Dinai Hamitzvah: 15:1"
+  },
+  {
+   "work": "Kaddish",
+   "count": 1,
+   "example": "Kaddish. 15:2"
+  },
+  {
+   "work": "Adar One",
+   "count": 1,
+   "example": "Adar One"
+  },
+  {
+   "work": "Hashem",
+   "count": 1,
+   "example": "Hashem . 15:9"
+  },
+  {
+   "work": "Pesuki Dezimrah",
+   "count": 1,
+   "example": "Pesuki Dezimrah"
+  },
+  {
+   "work": "Damiran d'alma v imru",
+   "count": 1,
+   "example": "Damiran d'alma v imru"
+  },
+  {
+   "work": "Asarah b'Tevet",
+   "count": 1,
+   "example": "Asarah b'Tevet"
+  },
+  {
+   "work": "Megillat Taanit and Masekhet Soferim",
+   "count": 1,
+   "example": "Megillat Taanit and Masekhet Soferim"
+  },
+  {
+   "work": "Lev Israel, Chief Data Officer at Sefaria",
+   "count": 1,
+   "example": "Lev Israel, Chief Data Officer at Sefaria"
+  },
+  {
+   "work": "Palestinian Talmud",
+   "count": 1,
+   "example": "Palestinian Talmud"
+  },
+  {
+   "work": "Korban HaEdah",
+   "count": 1,
+   "example": "Korban HaEdah"
+  },
+  {
+   "work": "Penei Moshe",
+   "count": 1,
+   "example": "Penei Moshe"
+  },
+  {
+   "work": "Mareh HaPanim",
+   "count": 1,
+   "example": "Mareh HaPanim"
+  },
+  {
+   "work": "The Forward. December",
+   "count": 1,
+   "example": "The Forward. December 14, 2021"
+  },
+  {
+   "work": "Times of Israel. January",
+   "count": 1,
+   "example": "Times of Israel. January 7, 2022"
+  },
+  {
+   "work": "Lehrhaus. January",
+   "count": 1,
+   "example": "Lehrhaus. January 13, 2022"
+  },
+  {
+   "work": "Noda B'Yehuda",
+   "count": 1,
+   "example": "Responsa Noda B'Yehuda , YD 10"
+  },
+  {
+   "work": "Mishnah Nasir",
+   "count": 1,
+   "example": "Mishnah Nasir 6:1"
+  },
+  {
+   "work": "Tohorot",
+   "count": 1,
+   "example": "Tohorot (Purities)"
+  },
+  {
+   "work": "Books of the Mishnah",
+   "count": 1,
+   "example": "Books of the Mishnah"
+  },
+  {
+   "work": "Seder Mo’ed",
+   "count": 1,
+   "example": "Seder Mo’ed"
+  },
+  {
+   "work": "Karpas, the Four Questions",
+   "count": 1,
+   "example": "Karpas, the Four Questions"
+  },
+  {
+   "work": "UMA OUTRA ACUSAÇÃO “Yebamoth",
+   "count": 1,
+   "example": "UMA OUTRA ACUSAÇÃO “Yebamoth 98a"
+  },
+  {
+   "work": "Berakoth",
+   "count": 1,
+   "example": "Berakoth 58a"
+  },
+  {
+   "work": "QUE REALMENTE ESTÁ SENDO",
+   "count": 1,
+   "example": "QUE REALMENTE ESTÁ SENDO"
+  },
+  {
+   "work": "Commentary Commentaries",
+   "count": 1,
+   "example": "Commentary Commentaries"
+  },
+  {
+   "work": "William Davidson Talmud",
+   "count": 1,
+   "example": "William Davidson Talmud"
+  },
+  {
+   "work": "Wild Stories of the Talmud",
+   "count": 1,
+   "example": "Wild Stories of the Talmud"
+  },
+  {
+   "work": "Angels One",
+   "count": 1,
+   "example": "Angels One"
+  },
+  {
+   "work": "Shabbat",
+   "count": 1,
+   "example": "Shabbat 88a:5-89b:1 2. Four"
+  },
+  {
+   "work": "Chagigah",
+   "count": 1,
+   "example": "Chagigah 14b:8-9 15a:3-16a:4"
+  },
+  {
+   "work": "Riaz, Sotah",
+   "count": 1,
+   "example": "Riaz, Sotah, 1:2"
+  },
+  {
+   "work": "Talmud Torah",
+   "count": 1,
+   "example": "Talmud Torah"
+  },
+  {
+   "work": "Halachot",
+   "count": 1,
+   "example": "Halachot"
+  },
+  {
+   "work": "Maharshal, Notes",
+   "count": 1,
+   "example": "Maharshal, Notes Siman 29"
+  },
+  {
+   "work": "Haisha Vechinukha",
+   "count": 1,
+   "example": "Haisha Vechinukha, 32"
+  },
+  {
+   "work": "2 - Oral Torah Tur",
+   "count": 1,
+   "example": "2 - Oral Torah Tur, Yoreh Deah 246"
+  },
+  {
+   "work": "What is Sexual Consent?",
+   "count": 1,
+   "example": "What is Sexual Consent?\""
+  },
+  {
+   "work": "Raymond Martini",
+   "count": 1,
+   "example": "Raymond Martini (1215-1285)"
+  },
+  {
+   "work": "Talmud usadas hoje",
+   "count": 1,
+   "example": "Talmud usadas hoje"
+  },
+  {
+   "work": "Judaism on Trial , pp",
+   "count": 1,
+   "example": "Judaism on Trial , pp. 23-38"
+  },
+  {
+   "work": "Ponto. A própria acusação de que o Talmud Judaico",
+   "count": 1,
+   "example": "Ponto. A própria acusação de que o Talmud Judaico"
+  },
+  {
+   "work": "Jewish Books",
+   "count": 1,
+   "example": "Jewish Books"
+  },
+  {
+   "work": "Likutey Etzot, Shalom",
+   "count": 1,
+   "example": "Likutey Etzot, Shalom 4"
+  },
+  {
+   "work": "Talmud?",
+   "count": 1,
+   "example": "Talmud?"
+  },
+  {
+   "work": "Talmud - Baraitot",
+   "count": 1,
+   "example": "Talmud - Baraitot (1st/2nd century)"
+  },
+  {
+   "work": "Gimel-Mem",
+   "count": 1,
+   "example": "Gimel-Mem"
+  },
+  {
+   "work": "Bishvili nivra ha-olam",
+   "count": 1,
+   "example": "Bishvili nivra ha-olam"
+  },
+  {
+   "work": "Ten Rings: Hasidic Sayings",
+   "count": 1,
+   "example": "Ten Rings: Hasidic Sayings"
+  },
+  {
+   "work": "II. Creation and the Longing for Reunification When",
+   "count": 1,
+   "example": "II. Creation and the Longing for Reunification When"
+  },
+  {
+   "work": "Zohar , Genesis",
+   "count": 1,
+   "example": "Zohar , Genesis, 49b-50a"
+  },
+  {
+   "work": "Zohar Hadash, Bereshit",
+   "count": 1,
+   "example": "Zohar Hadash, Bereshit 11a-11b"
+  },
+  {
+   "work": "L'zecher Nishmas",
+   "count": 1,
+   "example": "L'zecher Nishmas"
+  },
+  {
+   "work": "Chiddushei HaRitva , Makot",
+   "count": 1,
+   "example": "Chiddushei HaRitva , Makot 9a n."
+  },
+  {
+   "work": "Sefaria Newsletter | Instagram | Facebook |",
+   "count": 1,
+   "example": "Sefaria Newsletter | Instagram | Facebook |"
+  },
+  {
+   "work": "Twitter February",
+   "count": 1,
+   "example": "Twitter February 25th, 2021"
+  },
+  {
+   "work": "Leningrad Codex",
+   "count": 1,
+   "example": "Leningrad Codex"
+  },
+  {
+   "work": "Tanakh. Mishnah",
+   "count": 1,
+   "example": "Tanakh. Mishnah"
+  },
+  {
+   "work": "Kaufmann manuscript",
+   "count": 1,
+   "example": "Kaufmann manuscript"
+  },
+  {
+   "work": "Munich manuscript",
+   "count": 1,
+   "example": "Munich manuscript"
+  },
+  {
+   "work": "Bomberg",
+   "count": 1,
+   "example": "Bomberg"
+  },
+  {
+   "work": "Yerushalmi —",
+   "count": 1,
+   "example": "Yerushalmi —"
+  },
+  {
+   "work": "Stay Connected Sefaria Newsletter | Instagram | Facebook",
+   "count": 1,
+   "example": "Stay Connected Sefaria Newsletter | Instagram | Facebook"
+  },
+  {
+   "work": "Locust Junior",
+   "count": 1,
+   "example": "Locust Junior"
+  },
+  {
+   "work": "Sefaria One",
+   "count": 1,
+   "example": "Sefaria One"
+  },
+  {
+   "work": "Munkatch",
+   "count": 1,
+   "example": "Munkatch 1894"
+  },
+  {
+   "work": "Mesechtas Menochos",
+   "count": 1,
+   "example": "Mesechtas Menochos"
+  },
+  {
+   "work": "Soloniki",
+   "count": 1,
+   "example": "Soloniki 1804, pp 1a-2a"
+  },
+  {
+   "work": "תולדות המשנה",
+   "count": 1,
+   "example": "תולדות המשנה (Chaim (Joachim Heinreich)"
+  },
+  {
+   "work": "Megillas Ta'anis",
+   "count": 1,
+   "example": "Megillas Ta'anis"
+  },
+  {
+   "work": "Doros HaRishonim",
+   "count": 1,
+   "example": "Doros HaRishonim, Vol. page 91"
+  },
+  {
+   "work": "Mesechtas Berochos",
+   "count": 1,
+   "example": "Mesechtas Berochos"
+  },
+  {
+   "work": "Chanukkah",
+   "count": 1,
+   "example": "Chanukkah"
+  },
+  {
+   "work": "חידושי חתם סופר",
+   "count": 1,
+   "example": "חידושי חתם סופר (Gittin, Daf 78a"
+  },
+  {
+   "work": "Mesechtas Pesachim",
+   "count": 1,
+   "example": "Mesechtas Pesachim"
+  },
+  {
+   "work": "Haggados",
+   "count": 1,
+   "example": "Haggados"
+  },
+  {
+   "work": "Arvei Pesachim section",
+   "count": 1,
+   "example": "Arvei Pesachim section"
+  },
+  {
+   "work": "Mivchar Mishnayos",
+   "count": 1,
+   "example": "Mivchar Mishnayos"
+  },
+  {
+   "work": "Chagim",
+   "count": 1,
+   "example": "Chagim"
+  },
+  {
+   "work": "Tosfos Yom Tov, Peirush HaRamBam L'Mishnayos",
+   "count": 1,
+   "example": "Tosfos Yom Tov, Peirush HaRamBam L'Mishnayos"
+  },
+  {
+   "work": "Mishnayos Yadayim",
+   "count": 1,
+   "example": "Mishnayos Yadayim"
+  },
+  {
+   "work": "Stam Yadayim",
+   "count": 1,
+   "example": "Stam Yadayim"
+  },
+  {
+   "work": "Chapters One and Two. Chapter Three",
+   "count": 1,
+   "example": "Chapters One and Two. Chapter Three"
+  },
+  {
+   "work": "Sifrei Kodesh",
+   "count": 1,
+   "example": "Sifrei Kodesh"
+  },
+  {
+   "work": "Chapter Four",
+   "count": 1,
+   "example": "Chapter Four"
+  },
+  {
+   "work": "first Mishna of the Mesechta",
+   "count": 1,
+   "example": "first Mishna of the Mesechta"
+  },
+  {
+   "work": "Netilas Yadayim",
+   "count": 1,
+   "example": "Netilas Yadayim"
+  },
+  {
+   "work": "Yehudah Shaviv",
+   "count": 1,
+   "example": "Yehudah Shaviv"
+  },
+  {
+   "work": "Introduction to Tumah",
+   "count": 1,
+   "example": "Introduction to Tumah"
+  },
+  {
+   "work": "Seder Taharos",
+   "count": 1,
+   "example": "Seder Taharos"
+  },
+  {
+   "work": "Tumas Meis",
+   "count": 1,
+   "example": "Tumas Meis"
+  },
+  {
+   "work": "N'veila",
+   "count": 1,
+   "example": "N'veila"
+  },
+  {
+   "work": "Severity of Tumah",
+   "count": 1,
+   "example": "Severity of Tumah"
+  },
+  {
+   "work": "Tumas Midras",
+   "count": 1,
+   "example": "Tumas Midras"
+  },
+  {
+   "work": "Tumas Ohel",
+   "count": 1,
+   "example": "Tumas Ohel"
+  },
+  {
+   "work": "Klei Cheres",
+   "count": 1,
+   "example": "Klei Cheres"
+  },
+  {
+   "work": "Mishnat Eretz Yisroel-Safrai",
+   "count": 1,
+   "example": "Mishnat Eretz Yisroel-Safrai"
+  },
+  {
+   "work": "Jewish New Year",
+   "count": 1,
+   "example": "Jewish New Year"
+  },
+  {
+   "work": "Seder of Tahros",
+   "count": 1,
+   "example": "Seder of Tahros"
+  },
+  {
+   "work": "Halachik Literature",
+   "count": 1,
+   "example": "Halachik Literature"
+  },
+  {
+   "work": "Eglah",
+   "count": 1,
+   "example": "Eglah"
+  },
+  {
+   "work": "Par Helem Davar",
+   "count": 1,
+   "example": "Par Helem Davar"
+  },
+  {
+   "work": "fourteenth chapter of Mesechtas Negaim",
+   "count": 1,
+   "example": "fourteenth chapter of Mesechtas Negaim"
+  },
+  {
+   "work": "Eglah Arufah",
+   "count": 1,
+   "example": "Eglah Arufah"
+  },
+  {
+   "work": "Sotah Ordeal",
+   "count": 1,
+   "example": "Sotah Ordeal"
+  },
+  {
+   "work": "Meseches Yoma",
+   "count": 1,
+   "example": "Meseches Yoma"
+  },
+  {
+   "work": "fouteenth",
+   "count": 1,
+   "example": "fouteenth Perek of Negaim"
+  },
+  {
+   "work": "Metzorah",
+   "count": 1,
+   "example": "Metzorah."
+  },
+  {
+   "work": "Chapter One Chapter one",
+   "count": 1,
+   "example": "Chapter One Chapter one"
+  },
+  {
+   "work": "The Sages",
+   "count": 1,
+   "example": "The Sages Vol. 2"
+  },
+  {
+   "work": "Shisha Sidre Mishna",
+   "count": 1,
+   "example": "Shisha Sidre Mishna"
+  },
+  {
+   "work": "Mesechtas Chagigah",
+   "count": 1,
+   "example": "Mesechtas Chagigah"
+  },
+  {
+   "work": "Mesechtas Chagigah Mesechtas Chagigah",
+   "count": 1,
+   "example": "Mesechtas Chagigah Mesechtas Chagigah"
+  },
+  {
+   "work": "final Mesechta",
+   "count": 1,
+   "example": "final Mesechta"
+  },
+  {
+   "work": "first",
+   "count": 1,
+   "example": "first Perek"
+  },
+  {
+   "work": "Purity and Impurity",
+   "count": 1,
+   "example": "Purity and Impurity"
+  },
+  {
+   "work": "Shalmei Chagigah",
+   "count": 1,
+   "example": "Shalmei Chagigah"
+  },
+  {
+   "work": "Yismach Yisrael Haggadah p",
+   "count": 1,
+   "example": "Yismach Yisrael Haggadah p. 107a"
+  },
+  {
+   "work": "Ritba",
+   "count": 1,
+   "example": "Ritba (Rabbi Yom Tov ben Avraham Ishbili, 125-1330)"
+  },
+  {
+   "work": "ZEVAHIM: INTRODUCTION Tractate Zevahim",
+   "count": 1,
+   "example": "ZEVAHIM: INTRODUCTION Tractate Zevahim"
+  },
+  {
+   "work": "Fifth Chapter",
+   "count": 1,
+   "example": "Fifth Chapter"
+  },
+  {
+   "work": "Biblical Sources For the Mitzvah of Bikkurim Midrash Halacha",
+   "count": 1,
+   "example": "Biblical Sources For the Mitzvah of Bikkurim Midrash Halacha"
+  },
+  {
+   "work": "Halachos of Bikkurim",
+   "count": 1,
+   "example": "Halachos of Bikkurim"
+  },
+  {
+   "work": "Mishnah in Terumos",
+   "count": 1,
+   "example": "Mishnah in Terumos (11:3)"
+  },
+  {
+   "work": "Mishnayos Chagigah: A running Commentary",
+   "count": 1,
+   "example": "Mishnayos Chagigah: A running Commentary"
+  },
+  {
+   "work": "Mesechtas Chaggah",
+   "count": 1,
+   "example": "Mesechtas Chaggah"
+  },
+  {
+   "work": "Tosefta, Talmud Yerushalmi",
+   "count": 1,
+   "example": "Tosefta, Talmud Yerushalmi"
+  },
+  {
+   "work": "Talmud Bavli",
+   "count": 1,
+   "example": "Talmud Bavli"
+  },
+  {
+   "work": "II. The Drama of the Omer",
+   "count": 1,
+   "example": "II. The Drama of the Omer"
+  },
+  {
+   "work": "The Barley Offering Megillah",
+   "count": 1,
+   "example": "The Barley Offering Megillah 21a"
+  },
+  {
+   "work": "Bread and First Fruits The Five Books of Moses",
+   "count": 1,
+   "example": "Bread and First Fruits The Five Books of Moses"
+  },
+  {
+   "work": "Everett Fox Translation Deuteronomy",
+   "count": 1,
+   "example": "Everett Fox Translation Deuteronomy 26"
+  },
+  {
+   "work": "Tosefta in Tractate Chagigah in the first chapter",
+   "count": 1,
+   "example": "Tosefta in Tractate Chagigah in the first chapter"
+  },
+  {
+   "work": "Seder. Chapter",
+   "count": 1,
+   "example": "Seder. Chapter 10"
+  },
+  {
+   "work": "Tehillim? מזמור",
+   "count": 1,
+   "example": "Sefer Tehillim? מזמור"
+  },
+  {
+   "work": "Radak",
+   "count": 1,
+   "example": "Radak: ( ב )"
+  },
+  {
+   "work": "Mas. Sanhedrin",
+   "count": 1,
+   "example": "Mas. Sanhedrin"
+  },
+  {
+   "work": "The Song of",
+   "count": 1,
+   "example": "The Song of"
+  },
+  {
+   "work": "Yavneh - The Book fo Maccabees",
+   "count": 1,
+   "example": "Yavneh - The Book fo Maccabees"
+  },
+  {
+   "work": "Books of Maccabees",
+   "count": 1,
+   "example": "Books of Maccabees"
+  },
+  {
+   "work": "First Book of the Maccabees",
+   "count": 1,
+   "example": "First Book of the Maccabees"
+  },
+  {
+   "work": "Mattathias",
+   "count": 1,
+   "example": "Mattathias ( 5:62 )"
+  },
+  {
+   "work": "I Maccabees Chapter",
+   "count": 1,
+   "example": "I Maccabees Chapter 1 15The officers of the king"
+  },
+  {
+   "work": "Second Book of the Maccabees",
+   "count": 1,
+   "example": "Second Book of the Maccabees"
+  },
+  {
+   "work": "Verb, Subject, Object sentence structure",
+   "count": 1,
+   "example": "Verb, Subject, Object sentence structure"
+  },
+  {
+   "work": "Tevet",
+   "count": 1,
+   "example": "Tevet 5775 | January 2, 2015 Parshat Vayechi"
+  },
+  {
+   "work": "Samaritan Tanakh",
+   "count": 1,
+   "example": "Samaritan Tanakh"
+  },
+  {
+   "work": "HaMalach HaGoel",
+   "count": 1,
+   "example": "HaMalach HaGoel"
+  },
+  {
+   "work": "Avot d'Rabbi Nassan",
+   "count": 1,
+   "example": "Avot d'Rabbi Nassan"
+  },
+  {
+   "work": "Lev Simchah, Maggdei HaEmet",
+   "count": 1,
+   "example": "Lev Simchah, Maggdei HaEmet"
+  },
+  {
+   "work": "The Jewish Publication Society",
+   "count": 1,
+   "example": "The Jewish Publication Society (JPS)"
+  },
+  {
+   "work": "JPS Tanakh",
+   "count": 1,
+   "example": "JPS Tanakh"
+  },
+  {
+   "work": "Rut, Shir Hashirim, Eicha",
+   "count": 1,
+   "example": "Rut, Shir Hashirim, Eicha"
+  },
+  {
+   "work": "Hag He'aviv , the spring festival",
+   "count": 1,
+   "example": "Hag He'aviv , the spring festival"
+  },
+  {
+   "work": "Ecclesiastes: Fleeting and Timeless",
+   "count": 1,
+   "example": "Ecclesiastes: Fleeting and Timeless"
+  },
+  {
+   "work": "William Halo",
+   "count": 1,
+   "example": "William Halo, 1985, p. 3"
+  },
+  {
+   "work": "Gate of Reincarnations , Chapter",
+   "count": 1,
+   "example": "Gate of Reincarnations , Chapter 34, Section 1"
+  },
+  {
+   "work": "Legend of Miriam",
+   "count": 1,
+   "example": "Legend of Miriam"
+  },
+  {
+   "work": "Targum Jonathan of Uzziel",
+   "count": 1,
+   "example": "Targum Jonathan of Uzziel (1st Century?)"
+  },
+  {
+   "work": "Origen",
+   "count": 1,
+   "example": "Origen (184-235 AD),"
+  },
+  {
+   "work": "Maharsha Megillah",
+   "count": 1,
+   "example": "Maharsha Megillah 15b"
+  },
+  {
+   "work": "בילקוט Targum Sheini ad loc",
+   "count": 1,
+   "example": "בילקוט Targum Sheini ad loc."
+  },
+  {
+   "work": "Artscroll Masechet Megillah",
+   "count": 1,
+   "example": "Artscroll Masechet Megillah 15b 4"
+  },
+  {
+   "work": "Detail of Psalm",
+   "count": 1,
+   "example": "Detail of Psalm 145"
+  },
+  {
+   "work": "H. H. Schmid",
+   "count": 1,
+   "example": "H. H. Schmid"
+  },
+  {
+   "work": "Creation, Righteousness, and Salvation",
+   "count": 1,
+   "example": "Creation, Righteousness, and Salvation"
+  },
+  {
+   "work": "Old Testament",
+   "count": 1,
+   "example": "Old Testament (1984), p. 105"
+  },
+  {
+   "work": "Sacred Fragments, Neil Gillman",
+   "count": 1,
+   "example": "Sacred Fragments, Neil Gillman. 1990"
+  },
+  {
+   "work": "Shir HaShirim on Shabbat of Chol HaMoed Pesach",
+   "count": 1,
+   "example": "Shir HaShirim on Shabbat of Chol HaMoed Pesach"
+  },
+  {
+   "work": "L’susati b’richvei Paroh dimitich rayati",
+   "count": 1,
+   "example": "L’susati b’richvei Paroh dimitich rayati"
+  },
+  {
+   "work": "Halacha The Zohar",
+   "count": 1,
+   "example": "Halacha The Zohar"
+  },
+  {
+   "work": "Shir HaShirim? Part",
+   "count": 1,
+   "example": "Shir HaShirim? Part 2: Samples from Shir HaShirim"
+  },
+  {
+   "work": "Tishrei",
+   "count": 1,
+   "example": "Tishrei 5780 | October 2019"
+  },
+  {
+   "work": "midrash",
+   "count": 1,
+   "example": "midrash (Sifrei, Bamidbar 77)"
+  },
+  {
+   "work": "V’Zot Habracha",
+   "count": 1,
+   "example": "V’Zot Habracha"
+  },
+  {
+   "work": "Shema Yisrael",
+   "count": 1,
+   "example": "Shema Yisrael"
+  },
+  {
+   "work": "Book of Jasher, p",
+   "count": 1,
+   "example": "Book of Jasher, p. 167, v. 92-98"
+  },
+  {
+   "work": "Book of Jasher",
+   "count": 1,
+   "example": "Book of Jasher"
+  },
+  {
+   "work": "Otzar HaMidrashim",
+   "count": 1,
+   "example": "Otzar HaMidrashim (Eisenstein Gen. 46:17)"
+  },
+  {
+   "work": "Pirkei d'Rabi Eliezer Ch",
+   "count": 1,
+   "example": "Pirkei d'Rabi Eliezer Ch. 48"
+  },
+  {
+   "work": "Sennacharib Annals",
+   "count": 1,
+   "example": "Sennacharib Annals"
+  },
+  {
+   "work": "Mus",
+   "count": 1,
+   "example": "Mus(u)ri"
+  },
+  {
+   "work": "Yigal Le",
+   "count": 1,
+   "example": "Yigal Le"
+  },
+  {
+   "work": "פרשת בראשית Parshas Bereishis Rashi",
+   "count": 1,
+   "example": "פרשת בראשית Parshas Bereishis Rashi"
+  },
+  {
+   "work": "Parshas Bereishis Creation רש\"י דיבור המתחיל בראשית Q: Why",
+   "count": 1,
+   "example": "Parshas Bereishis Creation רש\"י דיבור המתחיל בראשית Q: Why"
+  },
+  {
+   "work": "Halacha",
+   "count": 1,
+   "example": "Halacha"
+  },
+  {
+   "work": "Shaarei Ramchal",
+   "count": 1,
+   "example": "Shaarei Ramchal"
+  },
+  {
+   "work": "Third Census רש\"י",
+   "count": 1,
+   "example": "Third Census רש\"י"
+  },
+  {
+   "work": "Jewish Encampment Hashem",
+   "count": 1,
+   "example": "Jewish Encampment Hashem"
+  },
+  {
+   "work": "Life Insurance",
+   "count": 1,
+   "example": "Life Insurance"
+  },
+  {
+   "work": "Loshon Hora",
+   "count": 1,
+   "example": "Loshon Hora"
+  },
+  {
+   "work": "Bavli Chulin",
+   "count": 1,
+   "example": "Bavli Chulin 92a/b Bavli Yevamot 76a Shabbat 65a/b"
+  },
+  {
+   "work": "Vilna)",
+   "count": 1,
+   "example": "Vilna) page 9d (Venice)"
+  },
+  {
+   "work": "Chazal Medieval Commentators - Rishonim",
+   "count": 1,
+   "example": "Chazal Medieval Commentators - Rishonim 1. Mesolelot"
+  },
+  {
+   "work": "12 Iyyar",
+   "count": 1,
+   "example": "12 Iyyar 5778"
+  },
+  {
+   "work": "Yerushalmi",
+   "count": 1,
+   "example": "Yerushalmi (Nedarim 43c)"
+  },
+  {
+   "work": "VaYikra",
+   "count": 1,
+   "example": "VaYikra"
+  },
+  {
+   "work": "Chazak, Chazak, v'Nitchazek",
+   "count": 1,
+   "example": "Chazak, Chazak, v'Nitchazek"
+  },
+  {
+   "work": "Mikra",
+   "count": 1,
+   "example": "Mikra"
+  },
+  {
+   "work": "Tanakh where ד-מ-ם",
+   "count": 1,
+   "example": "Tanakh where ד-מ-ם"
+  },
+  {
+   "work": "Aharei Mot",
+   "count": 1,
+   "example": "Aharei Mot"
+  },
+  {
+   "work": "Mekhilta de-Milu'im",
+   "count": 1,
+   "example": "Mekhilta de-Milu'im 32"
+  },
+  {
+   "work": "Mo'ed Qatan",
+   "count": 1,
+   "example": "Mo'ed Qatan 17b"
+  },
+  {
+   "work": "Old French",
+   "count": 1,
+   "example": "Old French"
+  },
+  {
+   "work": "The Murmuring Deep, p",
+   "count": 1,
+   "example": "The Murmuring Deep, p. 112"
+  },
+  {
+   "work": "King James",
+   "count": 1,
+   "example": "King James 2000"
+  },
+  {
+   "work": "MS Collection of Sefaria Sheets",
+   "count": 1,
+   "example": "MS Collection of Sefaria Sheets"
+  },
+  {
+   "work": "Art of Bible Translation",
+   "count": 1,
+   "example": "Art of Bible Translation 2020"
+  },
+  {
+   "work": "MS Sefaria Sheet. Parshat HaShavua",
+   "count": 1,
+   "example": "MS Sefaria Sheet. Parshat HaShavua"
+  },
+  {
+   "work": "The Five Books of Moses, Introduction to Genesis",
+   "count": 1,
+   "example": "The Five Books of Moses, Introduction to Genesis"
+  },
+  {
+   "work": "MS Emphasis",
+   "count": 1,
+   "example": "MS Emphasis"
+  },
+  {
+   "work": "Modern Hebrew Literature",
+   "count": 1,
+   "example": "Modern Hebrew Literature"
+  },
+  {
+   "work": "Reading Genesis] GENESIS - INTRODUCTION",
+   "count": 1,
+   "example": "Reading Genesis] GENESIS - INTRODUCTION (pp 9-16)"
+  },
+  {
+   "work": "Patriarchal Tales",
+   "count": 1,
+   "example": "Patriarchal Tales (chapters 12–50)"
+  },
+  {
+   "work": "Toras Chayim",
+   "count": 1,
+   "example": "Toras Chayim volume 1, chapter 8"
+  },
+  {
+   "work": "Bava Basra",
+   "count": 1,
+   "example": "Bava Basra 134 ד\"ה לקיים"
+  },
+  {
+   "work": "The Laws of Chanukah",
+   "count": 1,
+   "example": "The Laws of Chanukah"
+  },
+  {
+   "work": "The Hirsch Chumash",
+   "count": 1,
+   "example": "The Hirsch Chumash (New Edition), pages 69-70"
+  },
+  {
+   "work": "Rashi on Shemos",
+   "count": 1,
+   "example": "Rashi on Shemos 19:2 ד\"ה ויחן"
+  },
+  {
+   "work": "Artscroll Chullin",
+   "count": 1,
+   "example": "Artscroll Chullin 84b, note 12"
+  },
+  {
+   "work": "Artscroll Pesachim",
+   "count": 1,
+   "example": "Artscroll Pesachim 109a, note 11"
+  },
+  {
+   "work": "ArtScrollBava Metzia",
+   "count": 1,
+   "example": "ArtScrollBava Metzia 59a, note 17 and 18"
+  },
+  {
+   "work": "Michtav MeEliyahu",
+   "count": 1,
+   "example": "Michtav MeEliyahu, volume 1"
+  },
+  {
+   "work": "Kuntress HaChessed",
+   "count": 1,
+   "example": "Kuntress HaChessed"
+  },
+  {
+   "work": "Understanding Emunah",
+   "count": 1,
+   "example": "Understanding Emunah , page 174"
+  },
+  {
+   "work": "Artscroll Kesubos",
+   "count": 1,
+   "example": "Artscroll Kesubos 59b, note 26"
+  },
+  {
+   "work": "Seven Common Myths about Marriage",
+   "count": 1,
+   "example": "Seven Common Myths about Marriage"
+  },
+  {
+   "work": "Halachik Codes",
+   "count": 1,
+   "example": "Halachik Codes"
+  },
+  {
+   "work": "Pesach Doros",
+   "count": 1,
+   "example": "Pesach Doros"
+  },
+  {
+   "work": "Hilchot Avodah Zarah. Rambam, Laws of Kings",
+   "count": 1,
+   "example": "Hilchot Avodah Zarah. Rambam, Laws of Kings 8:10-11"
+  },
+  {
+   "work": "Rambam Mishneh Torah",
+   "count": 1,
+   "example": "Rambam Mishneh Torah"
+  },
+  {
+   "work": "Kings",
+   "count": 1,
+   "example": "Kings"
+  },
+  {
+   "work": "The False Prophet The Rules To Be A Prophet",
+   "count": 1,
+   "example": "The False Prophet The Rules To Be A Prophet"
+  },
+  {
+   "work": "RationalistJudaism.com",
+   "count": 1,
+   "example": "RationalistJudaism.com"
+  },
+  {
+   "work": "Yad, Yesodey Hatorah",
+   "count": 1,
+   "example": "Yad, Yesodey Hatorah 1"
+  },
+  {
+   "work": "PRINCIPLE IV",
+   "count": 1,
+   "example": "PRINCIPLE IV"
+  },
+  {
+   "work": "Guide to the Perplexed",
+   "count": 1,
+   "example": "Guide to the Perplexed 2:13"
+  },
+  {
+   "work": "YESH VAYESH Tanya, Shaar HaYichud VehaEmunah , chs",
+   "count": 1,
+   "example": "YESH VAYESH Tanya, Shaar HaYichud VehaEmunah , chs. 1-3"
+  },
+  {
+   "work": "Iggeres HaKodesh , Epistle",
+   "count": 1,
+   "example": "Iggeres HaKodesh , Epistle 20"
+  },
+  {
+   "work": "Likkutei Sichos",
+   "count": 1,
+   "example": "Likkutei Sichos , Vol. VI, p. 17ff., Vol. XXIV, p. 41ff"
+  },
+  {
+   "work": "Tehilim/Psalms",
+   "count": 1,
+   "example": "Tehilim/Psalms 90:2-3"
+  },
+  {
+   "work": "Theodicy Tosafos",
+   "count": 1,
+   "example": "Theodicy Tosafos ( Kesubos 30b sv. din )"
+  },
+  {
+   "work": "Bedikat Chametz",
+   "count": 1,
+   "example": "Bedikat Chametz"
+  },
+  {
+   "work": "Art Below",
+   "count": 1,
+   "example": "Art Below"
+  },
+  {
+   "work": "Amsterdam Searching for Chametz, Amsterdam",
+   "count": 1,
+   "example": "Amsterdam Searching for Chametz, Amsterdam"
+  },
+  {
+   "work": "Mishnah Source #1",
+   "count": 1,
+   "example": "Mishnah Source #1"
+  },
+  {
+   "work": "Mishnah Source #2",
+   "count": 1,
+   "example": "Mishnah Source #2"
+  },
+  {
+   "work": "Mishneh Torah Source The Mishneh Torah",
+   "count": 1,
+   "example": "Mishneh Torah Source The Mishneh Torah"
+  },
+  {
+   "work": "Oral Law",
+   "count": 1,
+   "example": "Oral Law"
+  },
+  {
+   "work": "Heretics",
+   "count": 1,
+   "example": "Heretics. 2.28.3"
+  },
+  {
+   "work": "Guide for the Perplexed, Introduction",
+   "count": 1,
+   "example": "Guide for the Perplexed, Introduction"
+  },
+  {
+   "work": "Ma‘aseh Merkavah",
+   "count": 1,
+   "example": "Ma‘aseh Merkavah"
+  },
+  {
+   "work": "Natural Science",
+   "count": 1,
+   "example": "Natural Science"
+  },
+  {
+   "work": "Iggeret HaShemad, Iggeret Kiddush HaShem",
+   "count": 1,
+   "example": "Iggeret HaShemad, Iggeret Kiddush HaShem 1165"
+  },
+  {
+   "work": "Completes Commentary to the Mishnah",
+   "count": 1,
+   "example": "Completes Commentary to the Mishnah 1169"
+  },
+  {
+   "work": "Completes Mishneh Torah",
+   "count": 1,
+   "example": "Completes Mishneh Torah"
+  },
+  {
+   "work": "Completes Guide for the Perplexed",
+   "count": 1,
+   "example": "Completes Guide for the Perplexed"
+  },
+  {
+   "work": "Ma'amar Techiyat HaMetim",
+   "count": 1,
+   "example": "Ma'amar Techiyat HaMetim 1204"
+  },
+  {
+   "work": "Maimonides After",
+   "count": 1,
+   "example": "Maimonides After 800 Years"
+  },
+  {
+   "work": "Yad ha-Hazaqah",
+   "count": 1,
+   "example": "Yad ha-Hazaqah"
+  },
+  {
+   "work": "Parashat Zachor",
+   "count": 1,
+   "example": "Parashat Zachor"
+  },
+  {
+   "work": "Permission",
+   "count": 1,
+   "example": "Permission"
+  },
+  {
+   "work": "Mishneh Torah",
+   "count": 1,
+   "example": "Mishneh Torah (1:8)"
+  },
+  {
+   "work": "White Supremacy and Chattel Slavery",
+   "count": 1,
+   "example": "White Supremacy and Chattel Slavery"
+  },
+  {
+   "work": "June",
+   "count": 1,
+   "example": "June 2025"
+  },
+  {
+   "work": "Judiasm on Trial by Hyam MacCoby",
+   "count": 1,
+   "example": "Judiasm on Trial by Hyam MacCoby"
+  },
+  {
+   "work": "Chattel Slavery",
+   "count": 1,
+   "example": "Chattel Slavery"
+  },
+  {
+   "work": "Bible View of Slavery",
+   "count": 1,
+   "example": "Bible View of Slavery"
+  },
+  {
+   "work": "Guide for the Perplexed I:1",
+   "count": 1,
+   "example": "Guide for the Perplexed I:1"
+  },
+  {
+   "work": "Moses Maimonides, Mishneh Torah, Laws of Repentance",
+   "count": 1,
+   "example": "Moses Maimonides, Mishneh Torah, Laws of Repentance 5:1"
+  },
+  {
+   "work": "Atonement, Forgiveness",
+   "count": 1,
+   "example": "Atonement, Forgiveness"
+  },
+  {
+   "work": "Repentance",
+   "count": 1,
+   "example": "Repentance"
+  },
+  {
+   "work": "This Too Is For The Best",
+   "count": 1,
+   "example": "This Too Is For The Best"
+  },
+  {
+   "work": "Season I, Episode",
+   "count": 1,
+   "example": "Season I, Episode 15 (script: Ilan Eshkoli"
+  },
+  {
+   "work": "ArtScroll Siddur, Ashkenaz, p",
+   "count": 1,
+   "example": "ArtScroll Siddur, Ashkenaz, p. 283"
+  },
+  {
+   "work": "Chovos haLevovos",
+   "count": 1,
+   "example": "Chovos haLevovos"
+  },
+  {
+   "work": "Rosh Hashanah of the year",
+   "count": 1,
+   "example": "Rosh Hashanah of the year 5507 (1746"
+  },
+  {
+   "work": "Mysteries",
+   "count": 1,
+   "example": "Mysteries"
+  },
+  {
+   "work": "Alim LeTerufah #254",
+   "count": 1,
+   "example": "Alim LeTerufah #254"
+  },
+  {
+   "work": "Halleluyah Likutey T'fillot",
+   "count": 1,
+   "example": "Halleluyah Likutey T'fillot 2:21"
+  },
+  {
+   "work": "Likutey T'fillot - Rabbi Natan of Breslov",
+   "count": 1,
+   "example": "Likutey T'fillot - Rabbi Natan of Breslov"
+  },
+  {
+   "work": "Book of Traits",
+   "count": 1,
+   "example": "Book of Traits"
+  },
+  {
+   "work": "Prophecy, Prophet authentication",
+   "count": 1,
+   "example": "Prophecy, Prophet authentication"
+  },
+  {
+   "work": "Reward and Punishment of God",
+   "count": 1,
+   "example": "Reward and Punishment of God"
+  },
+  {
+   "work": "Individual Providence, Omniscience)",
+   "count": 1,
+   "example": "Individual Providence, Omniscience)"
+  },
+  {
+   "work": "Liqqutim II",
+   "count": 1,
+   "example": "Liqqutim II 105"
+  },
+  {
+   "work": "Excursus I - Faith, Doubt, and Reason Liqqutim",
+   "count": 1,
+   "example": "Excursus I - Faith, Doubt, and Reason Liqqutim 60:6"
+  },
+  {
+   "work": "Baal Shem Tov",
+   "count": 1,
+   "example": "Sefer Baal Shem Tov"
+  },
+  {
+   "work": "Ramban, Introduction",
+   "count": 1,
+   "example": "Ramban, Introduction"
+  },
+  {
+   "work": "Taamei Ha-Mitzvot God",
+   "count": 1,
+   "example": "Taamei Ha-Mitzvot God"
+  },
+  {
+   "work": "Ramban",
+   "count": 1,
+   "example": "Ramban (Nachmanides, c. 13th century) on"
+  },
+  {
+   "work": "Tzava'at haRivash",
+   "count": 1,
+   "example": "Tzava'at haRivash 76"
+  },
+  {
+   "work": "Testament of the Ba'al Shem Tov",
+   "count": 1,
+   "example": "Testament of the Ba'al Shem Tov"
+  },
+  {
+   "work": "Bereishit Rabbah",
+   "count": 1,
+   "example": "Bereishit Rabbah 56:9 א\"ר חנינא ב\"ר יצחק"
+  },
+  {
+   "work": "Keter Shem Tov",
+   "count": 1,
+   "example": "Keter Shem Tov, 194"
+  },
+  {
+   "work": "The Torah of Music",
+   "count": 1,
+   "example": "The Torah of Music"
+  },
+  {
+   "work": "Hadar Press",
+   "count": 1,
+   "example": "Hadar Press"
+  },
+  {
+   "work": "The Art of the Nigun",
+   "count": 1,
+   "example": "The Art of the Nigun"
+  },
+  {
+   "work": "B'nei Machzhavah Tovah §18",
+   "count": 1,
+   "example": "B'nei Machzhavah Tovah §18"
+  },
+  {
+   "work": "Seder Oneg Shabbas Bentscher",
+   "count": 1,
+   "example": "Seder Oneg Shabbas Bentscher"
+  },
+  {
+   "work": "Tzav ve-Zeiruz §36",
+   "count": 1,
+   "example": "Tzav ve-Zeiruz §36"
+  },
+  {
+   "work": "Eish Kodesh , Parashat BeShallah",
+   "count": 1,
+   "example": "Eish Kodesh , Parashat BeShallah , 1942"
+  },
+  {
+   "work": "Piaseczna Nigun Another",
+   "count": 1,
+   "example": "Piaseczna Nigun Another"
+  },
+  {
+   "work": "Derech Hamelech",
+   "count": 1,
+   "example": "Derech Hamelech"
+  },
+  {
+   "work": "Jason Aronson",
+   "count": 1,
+   "example": "Jason Aronson"
+  },
+  {
+   "work": "Andros + Gynos Man + Woman",
+   "count": 1,
+   "example": "Andros + Gynos Man + Woman"
+  },
+  {
+   "work": "Androgynos",
+   "count": 1,
+   "example": "Androgynos"
+  },
+  {
+   "work": "Mishnah Bikkurim Rabbi Arthur Green",
+   "count": 1,
+   "example": "Mishnah Bikkurim Rabbi Arthur Green"
+  },
+  {
+   "work": "153)",
+   "count": 1,
+   "example": "153). 18 th Century Hasidus"
+  },
+  {
+   "work": "Midrash Temurah",
+   "count": 1,
+   "example": "Midrash Temurah"
+  },
+  {
+   "work": "Sfat Emet",
+   "count": 1,
+   "example": "Sfat Emet 1:58"
+  },
+  {
+   "work": "Midrash Hagadol",
+   "count": 1,
+   "example": "Midrash Hagadol"
+  },
+  {
+   "work": "Yetzer ha ra",
+   "count": 1,
+   "example": "Yetzer ha ra"
+  },
+  {
+   "work": "Martin Buber",
+   "count": 1,
+   "example": "Martin Buber 18 th Century Hasidus"
+  },
+  {
+   "work": "Me'or Eynayim",
+   "count": 1,
+   "example": "Me'or Eynayim"
+  },
+  {
+   "work": "Metzar Yam",
+   "count": 1,
+   "example": "Metzar Yam"
+  },
+  {
+   "work": "Yetziat Mitzrayim",
+   "count": 1,
+   "example": "Yetziat Mitzrayim"
+  },
+  {
+   "work": "Mivchar HaPninim",
+   "count": 1,
+   "example": "Mivchar HaPninim"
+  },
+  {
+   "work": "The Gate of Love",
+   "count": 1,
+   "example": "The Gate of Love"
+  },
+  {
+   "work": "God Deuteronomy",
+   "count": 1,
+   "example": "God Deuteronomy 6:5"
+  },
+  {
+   "work": "Maimonides Hilchot Yisodei HaTorah",
+   "count": 1,
+   "example": "Maimonides Hilchot Yisodei HaTorah 2:2"
+  },
+  {
+   "work": "Love of Fellow Human Genesis Raba",
+   "count": 1,
+   "example": "Love of Fellow Human Genesis Raba 24:7"
+  },
+  {
+   "work": "Perkai Avot",
+   "count": 1,
+   "example": "Perkai Avot 5:16"
+  },
+  {
+   "work": "Kidushat Levi",
+   "count": 1,
+   "example": "Kidushat Levi"
+  },
+  {
+   "work": "Berashit Parshat Chayeh Sara",
+   "count": 1,
+   "example": "Berashit Parshat Chayeh Sara"
+  },
+  {
+   "work": "Love of Parents “Parents",
+   "count": 1,
+   "example": "Love of Parents “Parents"
+  },
+  {
+   "work": "Invisible Monsters TB Kiddushin",
+   "count": 1,
+   "example": "Invisible Monsters TB Kiddushin 30b-31a"
+  },
+  {
+   "work": "Avot D'Rabbi Natan",
+   "count": 1,
+   "example": "Avot D'Rabbi Natan 7:17a"
+  },
+  {
+   "work": "Ten Sefirot A sefirah",
+   "count": 1,
+   "example": "Ten Sefirot A sefirah"
+  },
+  {
+   "work": "Ten Divine Emanations",
+   "count": 1,
+   "example": "Ten Divine Emanations"
+  },
+  {
+   "work": "Ten Divine Radiances",
+   "count": 1,
+   "example": "Ten Divine Radiances"
+  },
+  {
+   "work": "Ten Divine Eluminices",
+   "count": 1,
+   "example": "Ten Divine Eluminices"
+  },
+  {
+   "work": "Credit: Creative Commons/lootdujour",
+   "count": 1,
+   "example": "Credit: Creative Commons/lootdujour."
+  },
+  {
+   "work": "Emphasis on Happiness: Halacha Is Changeable",
+   "count": 1,
+   "example": "Emphasis on Happiness: Halacha Is Changeable"
+  },
+  {
+   "work": "Moderns: A fourth area",
+   "count": 1,
+   "example": "Moderns: A fourth area"
+  },
+  {
+   "work": "Toldot Ya’akov Yosef",
+   "count": 1,
+   "example": "Toldot Ya’akov Yosef"
+  },
+  {
+   "work": "Modern Judaism",
+   "count": 1,
+   "example": "Modern Judaism, Volume 29, Number 1, February 2009, p. 72"
+  },
+  {
+   "work": "Hasidism: The Verdict of Israeli Historiography",
+   "count": 1,
+   "example": "Hasidism: The Verdict of Israeli Historiography"
+  },
+  {
+   "work": "Maarei Mekomos",
+   "count": 1,
+   "example": "Maarei Mekomos"
+  },
+  {
+   "work": "He'aros on",
+   "count": 1,
+   "example": "He'aros on"
+  },
+  {
+   "work": "Yerushalmi Talmuds",
+   "count": 1,
+   "example": "Yerushalmi Talmuds."
+  },
+  {
+   "work": "Bais Rebbe",
+   "count": 1,
+   "example": "Bais Rebbe vol. 1, ch. 27"
+  },
+  {
+   "work": "Tanya the Alter Rebbe",
+   "count": 1,
+   "example": "Tanya the Alter Rebbe"
+  },
+  {
+   "work": "Reshimos III",
+   "count": 1,
+   "example": "Reshimos III pg.19"
+  },
+  {
+   "work": "Igros Kodesh",
+   "count": 1,
+   "example": "Igros Kodesh 6 pg.68"
+  },
+  {
+   "work": "Likkutei Biurim",
+   "count": 1,
+   "example": "Likkutei Biurim pg.9"
+  },
+  {
+   "work": "Shevirah - Shattering the Vessels",
+   "count": 1,
+   "example": "Shevirah - Shattering the Vessels"
+  },
+  {
+   "work": "Talmudic Judaism",
+   "count": 1,
+   "example": "Talmudic Judaism"
+  },
+  {
+   "work": "Maaseh Merkava",
+   "count": 1,
+   "example": "Maaseh Merkava"
+  },
+  {
+   "work": "Megilot",
+   "count": 1,
+   "example": "Megilot"
+  },
+  {
+   "work": "Ma'aseh Merkavah",
+   "count": 1,
+   "example": "Ma'aseh Merkavah"
+  },
+  {
+   "work": "Ma'aseh B'reshit",
+   "count": 1,
+   "example": "Ma'aseh B'reshit"
+  },
+  {
+   "work": "Inner Torah",
+   "count": 1,
+   "example": "Inner Torah"
+  },
+  {
+   "work": "Origins of Lecha dodi Shlomo Alkabetz on",
+   "count": 1,
+   "example": "Origins of Lecha dodi Shlomo Alkabetz on"
+  },
+  {
+   "work": "Kings of Edom in chapter",
+   "count": 1,
+   "example": "Kings of Edom in chapter 36"
+  },
+  {
+   "work": "Book of Chronicles",
+   "count": 1,
+   "example": "Book of Chronicles"
+  },
+  {
+   "work": "I Chronicles",
+   "count": 1,
+   "example": "I Chronicles 1:]43-54"
+  },
+  {
+   "work": "Genesis xxxvi",
+   "count": 1,
+   "example": "Genesis xxxvi 31-43"
+  },
+  {
+   "work": "Chronicles at the end of the list",
+   "count": 1,
+   "example": "Chronicles at the end of the list"
+  },
+  {
+   "work": "Source Sheet Luria",
+   "count": 1,
+   "example": "Source Sheet Luria"
+  },
+  {
+   "work": "Or Ein Sof",
+   "count": 1,
+   "example": "Or Ein Sof"
+  },
+  {
+   "work": "Basics of Kabbalah",
+   "count": 1,
+   "example": "Basics of Kabbalah"
+  },
+  {
+   "work": "Schwartz). Biblical Interpretations - She'ol",
+   "count": 1,
+   "example": "Schwartz). Biblical Interpretations - She'ol"
+  },
+  {
+   "work": "Williams",
+   "count": 1,
+   "example": "Williams"
+  },
+  {
+   "work": "Study Sheet Mishnah : Collection of teachings",
+   "count": 1,
+   "example": "Study Sheet Mishnah : Collection of teachings"
+  },
+  {
+   "work": "Mishnah of Tractate Chagigah",
+   "count": 1,
+   "example": "Mishnah of Tractate Chagigah"
+  },
+  {
+   "work": "Act of Creation",
+   "count": 1,
+   "example": "Act of Creation"
+  },
+  {
+   "work": "Tosefta to Tractate Chagigah",
+   "count": 1,
+   "example": "Tosefta to Tractate Chagigah"
+  },
+  {
+   "work": "Mishnah. Yerushalmi : A compilation comprising the",
+   "count": 1,
+   "example": "Mishnah. Yerushalmi : A compilation comprising the"
+  },
+  {
+   "work": "Germara",
+   "count": 1,
+   "example": "Germara"
+  },
+  {
+   "work": "Temples",
+   "count": 1,
+   "example": "Temples"
+  },
+  {
+   "work": "Tuesday, March",
+   "count": 1,
+   "example": "Tuesday, March 23"
+  },
+  {
+   "work": "Shulchan Aruch. Cordevero",
+   "count": 1,
+   "example": "Shulchan Aruch. Cordevero"
+  },
+  {
+   "work": "Lurianic Kabbalah",
+   "count": 1,
+   "example": "Lurianic Kabbalah"
+  },
+  {
+   "work": "Jewitches, “Kabbalah vs. Cabala vs. Qabalah.”Kabbalah",
+   "count": 1,
+   "example": "Jewitches, “Kabbalah vs. Cabala vs. Qabalah.”Kabbalah"
+  },
+  {
+   "work": "Baruch Hashem",
+   "count": 1,
+   "example": "Baruch Hashem"
+  },
+  {
+   "work": "Awesome SHIR LAMAALOT",
+   "count": 1,
+   "example": "Awesome SHIR LAMAALOT"
+  },
+  {
+   "work": "Midrash of Ben Sira",
+   "count": 1,
+   "example": "Midrash of Ben Sira"
+  },
+  {
+   "work": "Chasriel",
+   "count": 1,
+   "example": "Chasriel"
+  },
+  {
+   "work": "Semangeloph ! ELEMENT #5",
+   "count": 1,
+   "example": "Semangeloph ! ELEMENT #5"
+  },
+  {
+   "work": "Her Sect Without! Acccording",
+   "count": 1,
+   "example": "Her Sect Without! Acccording"
+  },
+  {
+   "work": "Legends of the Jews",
+   "count": 1,
+   "example": "Legends of the Jews (1909/1913)"
+  },
+  {
+   "work": "ELEMENT #6",
+   "count": 1,
+   "example": "ELEMENT #6"
+  },
+  {
+   "work": "Daniel Matt, The Essential Kabbalah , p",
+   "count": 1,
+   "example": "Daniel Matt, The Essential Kabbalah , p. 189"
+  },
+  {
+   "work": "Legality of Magic",
+   "count": 1,
+   "example": "Legality of Magic"
+  },
+  {
+   "work": "Jewish Magic and Superstition: A Study in Folk Religion",
+   "count": 1,
+   "example": "Jewish Magic and Superstition: A Study in Folk Religion"
+  },
+  {
+   "work": "Ex. Smashing a glass",
+   "count": 1,
+   "example": "Ex. Smashing a glass"
+  },
+  {
+   "work": "Whizin Center",
+   "count": 1,
+   "example": "Whizin Center"
+  },
+  {
+   "work": "Writings",
+   "count": 1,
+   "example": "Writings"
+  },
+  {
+   "work": "Seder Dark",
+   "count": 1,
+   "example": "Seder Dark"
+  },
+  {
+   "work": "Grace",
+   "count": 1,
+   "example": "Grace"
+  },
+  {
+   "work": "After Blessing. Guidelines for the Seder Gather a group",
+   "count": 1,
+   "example": "After Blessing. Guidelines for the Seder Gather a group"
+  },
+  {
+   "work": "Reprint",
+   "count": 1,
+   "example": "Reprint"
+  },
+  {
+   "work": "Trees Are Davening, A COEJL Haggadah Counting the Omer",
+   "count": 1,
+   "example": "Trees Are Davening, A COEJL Haggadah Counting the Omer"
+  },
+  {
+   "work": "Terrence McKillip The Tu B’Shevat Seder A PARTICIPANT ASKS",
+   "count": 1,
+   "example": "Terrence McKillip The Tu B’Shevat Seder A PARTICIPANT ASKS"
+  },
+  {
+   "work": "Reshit Chochmah Gates of Holiness",
+   "count": 1,
+   "example": "Reshit Chochmah Gates of Holiness 15:83"
+  },
+  {
+   "work": "Midrash Avkir",
+   "count": 1,
+   "example": "Midrash Avkir"
+  },
+  {
+   "work": "Tagi",
+   "count": 1,
+   "example": "Sefer Tagi"
+  },
+  {
+   "work": "Hayyei ha-'Olam ha-Ba",
+   "count": 1,
+   "example": "Hayyei ha-'Olam ha-Ba' (Life of the World to Come)"
+  },
+  {
+   "work": "Four-Lettered Name",
+   "count": 1,
+   "example": "Four-Lettered Name (c. 1170-1250)"
+  },
+  {
+   "work": "January",
+   "count": 1,
+   "example": "January 29, 2023 | 7 Shevat, 5783 Kabbalah"
+  },
+  {
+   "work": "Zohar The Zohar",
+   "count": 1,
+   "example": "Zohar The Zohar"
+  },
+  {
+   "work": "Daf",
+   "count": 1,
+   "example": "Daf (the Vilna pagination)"
+  },
+  {
+   "work": "Essay",
+   "count": 1,
+   "example": "Essay"
+  },
+  {
+   "work": "Ba'al HaSulam's Introduction to Zohar",
+   "count": 1,
+   "example": "Ba'al HaSulam's Introduction to Zohar"
+  },
+  {
+   "work": "Kabbalah Glossary Feature﻿ To",
+   "count": 1,
+   "example": "Kabbalah Glossary Feature﻿ To"
+  },
+  {
+   "work": "Mikdash Melekh Mikdash Melekh",
+   "count": 1,
+   "example": "Mikdash Melekh Mikdash Melekh"
+  },
+  {
+   "work": "Gate of Reincarnations",
+   "count": 1,
+   "example": "Gate of Reincarnations"
+  },
+  {
+   "work": "Shnei Luc hot HaBrit",
+   "count": 1,
+   "example": "Shnei Luc hot HaBrit (Shaloh). 1"
+  },
+  {
+   "work": "Margalya Press",
+   "count": 1,
+   "example": "Margalya Press"
+  },
+  {
+   "work": "Midrash Sod- Secret, Mystical, Hidden Truth Isaac Luria",
+   "count": 1,
+   "example": "Midrash Sod- Secret, Mystical, Hidden Truth Isaac Luria"
+  },
+  {
+   "work": "Menuchat Nefesh- Equanimity",
+   "count": 1,
+   "example": "Menuchat Nefesh- Equanimity"
+  },
+  {
+   "work": "Everyday Holiness Aspect",
+   "count": 1,
+   "example": "Everyday Holiness Aspect 1"
+  },
+  {
+   "work": "Trivial/Not Letting what is Trivial Overtake",
+   "count": 1,
+   "example": "Trivial/Not Letting what is Trivial Overtake"
+  },
+  {
+   "work": "Midrash—Sifrei",
+   "count": 1,
+   "example": "Midrash—Sifrei 144a"
+  },
+  {
+   "work": "Peskita",
+   "count": 1,
+   "example": "Peskita 102b"
+  },
+  {
+   "work": "Everyday Holiness",
+   "count": 1,
+   "example": "Everyday Holiness 3"
+  },
+  {
+   "work": "Poses for Practice",
+   "count": 1,
+   "example": "Poses for Practice"
+  },
+  {
+   "work": "Above the Good",
+   "count": 1,
+   "example": "Above the Good"
+  },
+  {
+   "work": "Bad. A Tree Planted by the Waters",
+   "count": 1,
+   "example": "Bad. A Tree Planted by the Waters"
+  },
+  {
+   "work": "Pass - Gam Ze Ya'avor",
+   "count": 1,
+   "example": "Pass - Gam Ze Ya'avor"
+  },
+  {
+   "work": "Fray Mountain Pose Jeremiah Alternative Translation",
+   "count": 1,
+   "example": "Fray Mountain Pose Jeremiah Alternative Translation"
+  },
+  {
+   "work": "Concepts of Watchfulness - Zehirut",
+   "count": 1,
+   "example": "Concepts of Watchfulness - Zehirut"
+  },
+  {
+   "work": "Inner Judaism",
+   "count": 1,
+   "example": "Inner Judaism"
+  },
+  {
+   "work": "Encyclopaedia Judaica",
+   "count": 1,
+   "example": "Encyclopaedia Judaica"
+  },
+  {
+   "work": "book Man of Faith in the Modern World",
+   "count": 1,
+   "example": "book Man of Faith in the Modern World (Ktav Publishing)"
+  },
+  {
+   "work": "second chapter of the Shema",
+   "count": 1,
+   "example": "second chapter of the Shema"
+  },
+  {
+   "work": "זכור Zachor",
+   "count": 1,
+   "example": "זכור Zachor"
+  },
+  {
+   "work": "Zachreini M'su'af",
+   "count": 1,
+   "example": "Zachreini M'su'af"
+  },
+  {
+   "work": "Sforno, on Eikev",
+   "count": 1,
+   "example": "Sforno, on Eikev 7: 12"
+  },
+  {
+   "work": "~Baal HaTurim ikveta d’meshicha",
+   "count": 1,
+   "example": "~Baal HaTurim ikveta d’meshicha"
+  },
+  {
+   "work": "Eliezer Ashkenazi",
+   "count": 1,
+   "example": "Eliezer Ashkenazi (1583)"
+  },
+  {
+   "work": "Maasei Hashem",
+   "count": 1,
+   "example": "Maasei Hashem"
+  },
+  {
+   "work": "Shenei Luchot HaBerit, Torah Shebikhtav, Eikev",
+   "count": 1,
+   "example": "Shenei Luchot HaBerit, Torah Shebikhtav, Eikev,"
+  },
+  {
+   "work": "Rabbinic Tradition",
+   "count": 1,
+   "example": "Rabbinic Tradition"
+  },
+  {
+   "work": "Avot",
+   "count": 1,
+   "example": "Avot 1:2 - Torah"
+  },
+  {
+   "work": "Alan Morinis . Everyday Holiness",
+   "count": 1,
+   "example": "Alan Morinis . Everyday Holiness (p. 159)"
+  },
+  {
+   "work": "Ed Bacon",
+   "count": 1,
+   "example": "Ed Bacon"
+  },
+  {
+   "work": "Rationalist Judaism",
+   "count": 1,
+   "example": "Rationalist Judaism"
+  },
+  {
+   "work": "Midbar",
+   "count": 1,
+   "example": "Midbar"
+  },
+  {
+   "work": "Mekhilta BaChodesh",
+   "count": 1,
+   "example": "Mekhilta BaChodesh 20:2"
+  },
+  {
+   "work": "Tanakh",
+   "count": 1,
+   "example": "Tanakh (Hebrew Bible) 51"
+  },
+  {
+   "work": "MJL",
+   "count": 1,
+   "example": "MJL"
+  },
+  {
+   "work": "Ohef Sholom",
+   "count": 1,
+   "example": "Ohef Sholom"
+  },
+  {
+   "work": "MJL) Source #1",
+   "count": 1,
+   "example": "MJL) Source #1"
+  },
+  {
+   "work": "Conflicting Opinions",
+   "count": 1,
+   "example": "Conflicting Opinions"
+  },
+  {
+   "work": "Eternal Victory Netzach Yisrael",
+   "count": 1,
+   "example": "Eternal Victory Netzach Yisrael"
+  },
+  {
+   "work": "Maharal Bullet Points",
+   "count": 1,
+   "example": "Maharal Bullet Points"
+  },
+  {
+   "work": "Levi, Exodus, Bo:6",
+   "count": 1,
+   "example": "Levi, Exodus, Bo:6"
+  },
+  {
+   "work": "Bullet Points",
+   "count": 1,
+   "example": "Bullet Points"
+  },
+  {
+   "work": "Verses",
+   "count": 1,
+   "example": "Verses"
+  },
+  {
+   "work": "B'rachot U'Klallot / Blessings",
+   "count": 1,
+   "example": "B'rachot U'Klallot / Blessings"
+  },
+  {
+   "work": "Tzadikkim",
+   "count": 1,
+   "example": "Tzadikkim, 13:4"
+  },
+  {
+   "work": "Midrash Tanchuma, Vayakhel",
+   "count": 1,
+   "example": "Midrash Tanchuma, Vayakhel 2 (1)"
+  },
+  {
+   "work": "Siftei Kohen Excerpt from 'The Other Side of the Story",
+   "count": 1,
+   "example": "Siftei Kohen Excerpt from 'The Other Side of the Story"
+  },
+  {
+   "work": "Minor Sanhedrin",
+   "count": 1,
+   "example": "Minor Sanhedrin"
+  },
+  {
+   "work": "Prayer for Members of the Israel Defense Force",
+   "count": 1,
+   "example": "Prayer for Members of the Israel Defense Force"
+  },
+  {
+   "work": "Ma'Ariv Aravim - Text",
+   "count": 1,
+   "example": "Ma'Ariv Aravim - Text"
+  },
+  {
+   "work": "Divrei Mishkan T'filah",
+   "count": 1,
+   "example": "Divrei Mishkan T'filah"
+  },
+  {
+   "work": "Babylonian Talmud, B'rachot",
+   "count": 1,
+   "example": "Babylonian Talmud, B'rachot 11b"
+  },
+  {
+   "work": "Union Prayer Book [1940]",
+   "count": 1,
+   "example": "Union Prayer Book [1940]"
+  },
+  {
+   "work": "Philogos, The Forward",
+   "count": 1,
+   "example": "Philogos, The Forward ( June 25, 2012)"
+  },
+  {
+   "work": "Translations",
+   "count": 1,
+   "example": "Translations: 20"
+  },
+  {
+   "work": "Life and Acceptance",
+   "count": 1,
+   "example": "Life and Acceptance"
+  },
+  {
+   "work": "Modeh Ani Le'fanecha",
+   "count": 1,
+   "example": "Modeh Ani Le'fanecha"
+  },
+  {
+   "work": "Living and Everlasting King",
+   "count": 1,
+   "example": "Living and Everlasting King"
+  },
+  {
+   "work": "Metsudah",
+   "count": 1,
+   "example": "Metsudah"
+  },
+  {
+   "work": "ArtScroll Series Siddur, The Schottenstein Edition",
+   "count": 1,
+   "example": "ArtScroll Series Siddur, The Schottenstein Edition"
+  },
+  {
+   "work": "What Makes a Jewish Soul Source Sheet",
+   "count": 1,
+   "example": "What Makes a Jewish Soul Source Sheet"
+  },
+  {
+   "work": "Robert Gamer Orot Hakodesh",
+   "count": 1,
+   "example": "Robert Gamer Orot Hakodesh 1:177 - English translation"
+  },
+  {
+   "work": "Inner Spark",
+   "count": 1,
+   "example": "Inner Spark"
+  },
+  {
+   "work": "Panarion",
+   "count": 1,
+   "example": "Panarion 29:9"
+  },
+  {
+   "work": "Epiphanius of Salamis",
+   "count": 1,
+   "example": "Epiphanius of Salamis (c. 315-403)"
+  },
+  {
+   "work": "Tur, OH",
+   "count": 1,
+   "example": "Tur, OH 118"
+  },
+  {
+   "work": "Koren Siddur, Commentary",
+   "count": 1,
+   "example": "Koren Siddur, Commentary"
+  },
+  {
+   "work": "Hoshanah Rabbah? Hoshana Rabbahh",
+   "count": 1,
+   "example": "Hoshanah Rabbah? Hoshana Rabbahh"
+  },
+  {
+   "work": "Issue Moral Grandeur and Spiritual Audacity",
+   "count": 1,
+   "example": "Issue Moral Grandeur and Spiritual Audacity"
+  },
+  {
+   "work": "Rabbinic Literature",
+   "count": 1,
+   "example": "Rabbinic Literature"
+  },
+  {
+   "work": "prayer A. Hannah",
+   "count": 1,
+   "example": "prayer A. Hannah"
+  },
+  {
+   "work": "Life and Thoughts",
+   "count": 1,
+   "example": "Life and Thoughts"
+  },
+  {
+   "work": "Mishneh Torah's \"Laws Concerning Prayer,\" two of",
+   "count": 1,
+   "example": "Mishneh Torah's \"Laws Concerning Prayer,\" two of"
+  },
+  {
+   "work": "Mishnayot",
+   "count": 1,
+   "example": "Mishnayot"
+  },
+  {
+   "work": "Text of Mi Chamocha Context",
+   "count": 1,
+   "example": "Text of Mi Chamocha Context"
+  },
+  {
+   "work": "Mi Chamocha",
+   "count": 1,
+   "example": "Mi Chamocha"
+  },
+  {
+   "work": "Biblical Book of First Kings",
+   "count": 1,
+   "example": "Biblical Book of First Kings"
+  },
+  {
+   "work": "SEPHARDIM Rashba, Teshuva",
+   "count": 1,
+   "example": "SEPHARDIM Rashba, Teshuva 1:123"
+  },
+  {
+   "work": "The Laws of Tefillin, Section",
+   "count": 1,
+   "example": "The Laws of Tefillin, Section 21"
+  },
+  {
+   "work": "Orchot Chaim",
+   "count": 1,
+   "example": "Orchot Chaim (Tefillin 3)"
+  },
+  {
+   "work": "chapter Hamotzee Tefillin",
+   "count": 1,
+   "example": "chapter Hamotzee Tefillin"
+  },
+  {
+   "work": "Vidui",
+   "count": 1,
+   "example": "Vidui"
+  },
+  {
+   "work": "Positive Vidui",
+   "count": 1,
+   "example": "Positive Vidui"
+  },
+  {
+   "work": "Yeshivat Chovevei Torah",
+   "count": 1,
+   "example": "Yeshivat Chovevei Torah"
+  },
+  {
+   "work": "Gemara",
+   "count": 1,
+   "example": "Gemara (Yoma 87b:5-7)"
+  },
+  {
+   "work": "From There You Shall Seek",
+   "count": 1,
+   "example": "From There You Shall Seek , page 75"
+  },
+  {
+   "work": "Imitatio Dei V. Imitatio Dei",
+   "count": 1,
+   "example": "Imitatio Dei V. Imitatio Dei"
+  },
+  {
+   "work": "Selichot Liturgy The Guide of the Perplexed",
+   "count": 1,
+   "example": "Selichot Liturgy The Guide of the Perplexed 1:54"
+  },
+  {
+   "work": "Reishit Hokhmah Sha'ar Anavah",
+   "count": 1,
+   "example": "Reishit Hokhmah Sha'ar Anavah 1"
+  },
+  {
+   "work": "Mesechet Rosh Hashanah",
+   "count": 1,
+   "example": "Mesechet Rosh Hashanah"
+  },
+  {
+   "work": "Shiur #3: Alternatives to the Shemoneh Esrei",
+   "count": 1,
+   "example": "Shiur #3: Alternatives to the Shemoneh Esrei"
+  },
+  {
+   "work": "Diogenes Laertius, Lives of Eminent Philosophers I.1.33",
+   "count": 1,
+   "example": "Diogenes Laertius, Lives of Eminent Philosophers I.1.33"
+  },
+  {
+   "work": "Cambridge Add",
+   "count": 1,
+   "example": "Cambridge Add. 3160:1"
+  },
+  {
+   "work": "Siddur Sim Shalom",
+   "count": 1,
+   "example": "Siddur Sim Shalom, 1985 Blessed are you"
+  },
+  {
+   "work": "Modeh Ani - מוֹדֶה אֲנִי",
+   "count": 1,
+   "example": "Modeh Ani - מוֹדֶה אֲנִי"
+  },
+  {
+   "work": "Ani Modeh",
+   "count": 1,
+   "example": "Ani Modeh"
+  },
+  {
+   "work": "Will of G-D",
+   "count": 1,
+   "example": "Will of G-D"
+  },
+  {
+   "work": "Chai Vkayam - חַי",
+   "count": 1,
+   "example": "Chai Vkayam - חַי"
+  },
+  {
+   "work": "Al Hanisim",
+   "count": 1,
+   "example": "Al Hanisim"
+  },
+  {
+   "work": "Catholic",
+   "count": 1,
+   "example": "Catholic"
+  },
+  {
+   "work": "Christian Bible",
+   "count": 1,
+   "example": "Christian Bible"
+  },
+  {
+   "work": "1 Maccabees",
+   "count": 1,
+   "example": "1 Maccabees, 2 Maccabees"
+  },
+  {
+   "work": "Protestant Bible",
+   "count": 1,
+   "example": "Protestant Bible. 2"
+  },
+  {
+   "work": "Kislev",
+   "count": 1,
+   "example": "Kislev"
+  },
+  {
+   "work": "The Festival of Lights",
+   "count": 1,
+   "example": "The Festival of Lights"
+  },
+  {
+   "work": "History of Kol Nidrei",
+   "count": 1,
+   "example": "History of Kol Nidrei"
+  },
+  {
+   "work": "Great Texts of the Bible",
+   "count": 1,
+   "example": "Great Texts of the Bible"
+  },
+  {
+   "work": "Seifer Devarim",
+   "count": 1,
+   "example": "Seifer Devarim"
+  },
+  {
+   "work": "Chazon Ovadia",
+   "count": 1,
+   "example": "Chazon Ovadia (Yamim Noraim, p. 83)"
+  },
+  {
+   "work": "Yalkut Yosef",
+   "count": 1,
+   "example": "Yalkut Yosef 56:25"
+  },
+  {
+   "work": "Ohr LeTzion",
+   "count": 1,
+   "example": "Shu\"t Ohr LeTzion (vol. 2 Perek 5 Teshuvah 11"
+  },
+  {
+   "work": "Yamim Noraim",
+   "count": 1,
+   "example": "Yamim Noraim"
+  },
+  {
+   "work": "Shavua Tov",
+   "count": 1,
+   "example": "Shavua Tov"
+  },
+  {
+   "work": "Modim Ankhnu Lakh",
+   "count": 1,
+   "example": "Modim Ankhnu Lakh"
+  },
+  {
+   "work": "Modim Anachnu Lakh",
+   "count": 1,
+   "example": "Modim Anachnu Lakh"
+  },
+  {
+   "work": "She’ata Hu",
+   "count": 1,
+   "example": "She’ata Hu"
+  },
+  {
+   "work": "Vayishlach",
+   "count": 1,
+   "example": "Vayishlach, 6"
+  },
+  {
+   "work": "Pesukei Ha-Ze'mirot",
+   "count": 1,
+   "example": "Pesukei Ha-Ze'mirot"
+  },
+  {
+   "work": "Ha-Minhagim",
+   "count": 1,
+   "example": "Sefer Ha-Minhagim"
+  },
+  {
+   "work": "Barukh She\"amar",
+   "count": 1,
+   "example": "Barukh She\"amar"
+  },
+  {
+   "work": "V'Ahava",
+   "count": 1,
+   "example": "V'Ahava"
+  },
+  {
+   "work": "Sim Shalom, Hallel, the Haftarah brakhot",
+   "count": 1,
+   "example": "Sim Shalom, Hallel, the Haftarah brakhot,"
+  },
+  {
+   "work": "Gemara of Brakhot",
+   "count": 1,
+   "example": "Gemara of Brakhot 45"
+  },
+  {
+   "work": "Qriyat Ha'Tora",
+   "count": 1,
+   "example": "Qriyat Ha'Tora"
+  },
+  {
+   "work": "Birkhat Ha'Tora for Qriyat HaTora",
+   "count": 1,
+   "example": "Birkhat Ha'Tora for Qriyat HaTora"
+  },
+  {
+   "work": "Igrot Moshe on Shulkhan Arukh",
+   "count": 1,
+   "example": "Igrot Moshe on Shulkhan Arukh 5:9:1"
+  },
+  {
+   "work": "Habura chat Realism",
+   "count": 1,
+   "example": "Habura chat Realism"
+  },
+  {
+   "work": "note on Ezekiel",
+   "count": 1,
+   "example": "note on Ezekiel 1:5"
+  },
+  {
+   "work": "Epic of Etana",
+   "count": 1,
+   "example": "Epic of Etana"
+  },
+  {
+   "work": "Mincha Ma'ariv",
+   "count": 1,
+   "example": "Mincha Ma'ariv"
+  },
+  {
+   "work": "Abraham",
+   "count": 1,
+   "example": "Abraham 2"
+  },
+  {
+   "work": "Isaac",
+   "count": 1,
+   "example": "Isaac 3"
+  },
+  {
+   "work": "Shema , V'haya im",
+   "count": 1,
+   "example": "Shema , V'haya im"
+  },
+  {
+   "work": "Yefeh Toar to Bamidbar Rabbah",
+   "count": 1,
+   "example": "Yefeh Toar to Bamidbar Rabbah 22:8"
+  },
+  {
+   "work": "Dover Tzedek, Acharei Mos §105",
+   "count": 1,
+   "example": "Dover Tzedek, Acharei Mos §105"
+  },
+  {
+   "work": "Vehaya im shamoa",
+   "count": 1,
+   "example": "Vehaya im shamoa"
+  },
+  {
+   "work": "Taanis",
+   "count": 1,
+   "example": "Taanis 2b. Avodah Zara 3b. Berachos 29b"
+  },
+  {
+   "work": "Yerushalmi Berachos",
+   "count": 1,
+   "example": "Yerushalmi Berachos 4:2. IV"
+  },
+  {
+   "work": "Shenei Luchot HaBrit, Maseches Chullin, Torah Ohr",
+   "count": 1,
+   "example": "Shenei Luchot HaBrit, Maseches Chullin, Torah Ohr 20"
+  },
+  {
+   "work": "Ibid., Maseches Chullin, Ner Mitzvah",
+   "count": 1,
+   "example": "Ibid., Maseches Chullin, Ner Mitzvah 58"
+  },
+  {
+   "work": "Siddur Tefillah le'Moshe",
+   "count": 1,
+   "example": "Siddur Tefillah le'Moshe"
+  },
+  {
+   "work": "Birkas HaMazon",
+   "count": 1,
+   "example": "Birkas HaMazon"
+  },
+  {
+   "work": "Shul",
+   "count": 1,
+   "example": "Shul,"
+  },
+  {
+   "work": "Order \"Gender Equality and Prayer in Jewish Law",
+   "count": 1,
+   "example": "Order \"Gender Equality and Prayer in Jewish Law"
+  },
+  {
+   "work": "1: SPACE",
+   "count": 1,
+   "example": "1: SPACE"
+  },
+  {
+   "work": "2: TIME",
+   "count": 1,
+   "example": "2: TIME"
+  },
+  {
+   "work": "ADON OLAM - God",
+   "count": 1,
+   "example": "ADON OLAM - God"
+  },
+  {
+   "work": "WRITING ACTIVITY - One",
+   "count": 1,
+   "example": "WRITING ACTIVITY - One"
+  },
+  {
+   "work": "Old",
+   "count": 1,
+   "example": "Old"
+  },
+  {
+   "work": "KADDISH D'RABBANAN After Torah she-Ba'al Peh",
+   "count": 1,
+   "example": "KADDISH D'RABBANAN After Torah she-Ba'al Peh"
+  },
+  {
+   "work": "Bameh Madlikin",
+   "count": 1,
+   "example": "Bameh Madlikin"
+  },
+  {
+   "work": "Gesher ha-Chaim",
+   "count": 1,
+   "example": "Gesher ha-Chaim 20:3:8"
+  },
+  {
+   "work": "Kaddish Shalem",
+   "count": 1,
+   "example": "Kaddish Shalem"
+  },
+  {
+   "work": "Holy Time",
+   "count": 1,
+   "example": "Holy Time"
+  },
+  {
+   "work": "Holy Relationships Defining קָדוֹשׁ קָדֹשׁ",
+   "count": 1,
+   "example": "Holy Relationships Defining קָדוֹשׁ קָדֹשׁ"
+  },
+  {
+   "work": "Jastrow Dictionary",
+   "count": 1,
+   "example": "Jastrow Dictionary"
+  },
+  {
+   "work": "Neil Gilman, Sacred Fragments",
+   "count": 1,
+   "example": "Neil Gilman, Sacred Fragments, p.229"
+  },
+  {
+   "work": "Bechirat Yisrael Questions to Consider",
+   "count": 1,
+   "example": "Bechirat Yisrael Questions to Consider 1"
+  },
+  {
+   "work": "The Sabbath Judaism",
+   "count": 1,
+   "example": "The Sabbath Judaism"
+  },
+  {
+   "work": "Holy Space Questions to Consider",
+   "count": 1,
+   "example": "Holy Space Questions to Consider 1"
+  },
+  {
+   "work": "Holy Relationships Jewish Wedding Vows",
+   "count": 1,
+   "example": "Holy Relationships Jewish Wedding Vows"
+  },
+  {
+   "work": "Israel Questions to Consider",
+   "count": 1,
+   "example": "Israel Questions to Consider 1."
+  },
+  {
+   "work": "Rosh Ha-Shanah",
+   "count": 1,
+   "example": "Rosh Ha-Shanah"
+  },
+  {
+   "work": "New Dictionary of Sacramental Worship",
+   "count": 1,
+   "example": "New Dictionary of Sacramental Worship"
+  },
+  {
+   "work": "Five",
+   "count": 1,
+   "example": "Five"
+  },
+  {
+   "work": "Midrash Otiot d'Rabbi Akiva",
+   "count": 1,
+   "example": "Midrash Otiot d'Rabbi Akiva"
+  },
+  {
+   "work": "CC BY-SA",
+   "count": 1,
+   "example": "CC BY-SA 3.0 How to Light Shabbat Candles"
+  },
+  {
+   "work": "A Shabbat Reader p",
+   "count": 1,
+   "example": "A Shabbat Reader p 199-201"
+  },
+  {
+   "work": "The Breakfast of Champions",
+   "count": 1,
+   "example": "The Breakfast of Champions"
+  },
+  {
+   "work": "Shomer Shabbat , Keeper of Shabbat",
+   "count": 1,
+   "example": "Shomer Shabbat , Keeper of Shabbat"
+  },
+  {
+   "work": "Dinosaurs in Judaism",
+   "count": 1,
+   "example": "Dinosaurs in Judaism"
+  },
+  {
+   "work": "Barney the Purple Dinosaur in",
+   "count": 1,
+   "example": "Barney the Purple Dinosaur in 1992"
+  },
+  {
+   "work": "Song Inspires Some Books Diane Levine Rauchwerger",
+   "count": 1,
+   "example": "Song Inspires Some Books Diane Levine Rauchwerger"
+  },
+  {
+   "work": "Los Altos Hills, CA",
+   "count": 1,
+   "example": "Los Altos Hills, CA"
+  },
+  {
+   "work": "Sydney Taylor Award",
+   "count": 1,
+   "example": "Sydney Taylor Award"
+  },
+  {
+   "work": "Age of Dinosaurs vs",
+   "count": 1,
+   "example": "Age of Dinosaurs vs. 57"
+  },
+  {
+   "work": "Tiferes Yisrael",
+   "count": 1,
+   "example": "Tiferes Yisrael"
+  },
+  {
+   "work": "Shabbat Shirah",
+   "count": 1,
+   "example": "Shabbat Shirah"
+  },
+  {
+   "work": "Rising Song Records on Spotify and Mixcloud",
+   "count": 1,
+   "example": "Rising Song Records on Spotify and Mixcloud"
+  },
+  {
+   "work": "Shir Bliss Radio Hour Tu BiShvat",
+   "count": 1,
+   "example": "Shir Bliss Radio Hour Tu BiShvat"
+  },
+  {
+   "work": "Song “Yonati",
+   "count": 1,
+   "example": "Song “Yonati"
+  },
+  {
+   "work": "Transformation of a Nigun",
+   "count": 1,
+   "example": "Transformation of a Nigun"
+  },
+  {
+   "work": "Rising Song Records on Bandcamp",
+   "count": 1,
+   "example": "Rising Song Records on Bandcamp ."
+  },
+  {
+   "work": "Jewish Folktales",
+   "count": 1,
+   "example": "Jewish Folktales"
+  },
+  {
+   "work": "Hen, the Dove, the Vulture",
+   "count": 1,
+   "example": "Hen, the Dove, the Vulture"
+  },
+  {
+   "work": "Ziz The Ziz",
+   "count": 1,
+   "example": "Ziz The Ziz"
+  },
+  {
+   "work": "Howard Schwartz, Tree of Souls",
+   "count": 1,
+   "example": "Howard Schwartz, Tree of Souls"
+  },
+  {
+   "work": "How?",
+   "count": 1,
+   "example": "How? 5"
+  },
+  {
+   "work": "TeshuvotV’hanhagot I #260",
+   "count": 1,
+   "example": "TeshuvotV’hanhagot I #260"
+  },
+  {
+   "work": "Igrot Moshe",
+   "count": 1,
+   "example": "Igrot Moshe , Orach Chaim 2:75"
+  },
+  {
+   "work": "Me'orei Eish, ch",
+   "count": 1,
+   "example": "Me'orei Eish, ch. 5"
+  },
+  {
+   "work": "Lamentations? Question",
+   "count": 1,
+   "example": "Lamentations? Question 4"
+  },
+  {
+   "work": "Birkat Nehenin",
+   "count": 1,
+   "example": "Birkat Nehenin"
+  },
+  {
+   "work": "Bach. Aruch Hashulchan",
+   "count": 1,
+   "example": "Bach. Aruch Hashulchan 296"
+  },
+  {
+   "work": "Maggid Mishna",
+   "count": 1,
+   "example": "Maggid Mishna"
+  },
+  {
+   "work": "Shofar, Tefillin, and",
+   "count": 1,
+   "example": "Shofar, Tefillin, and"
+  },
+  {
+   "work": "A Guide to Jewish Religious Practice, p",
+   "count": 1,
+   "example": "A Guide to Jewish Religious Practice, p. 83-84"
+  },
+  {
+   "work": "Maggid section of the Passover seder",
+   "count": 1,
+   "example": "Maggid section of the Passover seder"
+  },
+  {
+   "work": "The Four Questions",
+   "count": 1,
+   "example": "The Four Questions"
+  },
+  {
+   "work": "​​​​​​​What About the Tune",
+   "count": 1,
+   "example": "​​​​​​​What About the Tune"
+  },
+  {
+   "work": "Music Theory and Composition",
+   "count": 1,
+   "example": "Music Theory and Composition"
+  },
+  {
+   "work": "Yemenite",
+   "count": 1,
+   "example": "Yemenite"
+  },
+  {
+   "work": "Wine MS",
+   "count": 1,
+   "example": "Wine MS"
+  },
+  {
+   "work": "Robert Alter - Introduction",
+   "count": 1,
+   "example": "Robert Alter - Introduction"
+  },
+  {
+   "work": "Song of Songs : Chapter",
+   "count": 1,
+   "example": "Song of Songs : Chapter 1 - Notes 1"
+  },
+  {
+   "work": "Y ehudah HaLev i",
+   "count": 1,
+   "example": "Y ehudah HaLev i"
+  },
+  {
+   "work": "Song of Songs in My Jewish Learning",
+   "count": 1,
+   "example": "Song of Songs in My Jewish Learning"
+  },
+  {
+   "work": "The Art of Biblical Poetry",
+   "count": 1,
+   "example": "The Art of Biblical Poetry, (2011)"
+  },
+  {
+   "work": "The Garden of Metaphor",
+   "count": 1,
+   "example": "The Garden of Metaphor, p.231-32"
+  },
+  {
+   "work": "New Yorker magazine",
+   "count": 1,
+   "example": "New Yorker magazine"
+  },
+  {
+   "work": "The New Yorker",
+   "count": 1,
+   "example": "The New Yorker"
+  },
+  {
+   "work": "Passover Context",
+   "count": 1,
+   "example": "Passover Context"
+  },
+  {
+   "work": "B’dikat Chametz",
+   "count": 1,
+   "example": "B’dikat Chametz"
+  },
+  {
+   "work": "More Complicated Version Context",
+   "count": 1,
+   "example": "More Complicated Version Context"
+  },
+  {
+   "work": "Most Complicated Version Context",
+   "count": 1,
+   "example": "Most Complicated Version Context"
+  },
+  {
+   "work": "Same tractate of the Talmud",
+   "count": 1,
+   "example": "Same tractate of the Talmud"
+  },
+  {
+   "work": "Teyku",
+   "count": 1,
+   "example": "Teyku"
+  },
+  {
+   "work": "Anshe Emet Synagogue in Chicago",
+   "count": 1,
+   "example": "Anshe Emet Synagogue in Chicago"
+  },
+  {
+   "work": "YouTube Link to Transcript",
+   "count": 1,
+   "example": "YouTube Link to Transcript"
+  },
+  {
+   "work": "Global RSJ Jewish Educator Dear Yom Kippur",
+   "count": 1,
+   "example": "Global RSJ Jewish Educator Dear Yom Kippur"
+  },
+  {
+   "work": "Bitter Vs Sweet At The Seder By",
+   "count": 1,
+   "example": "Bitter Vs Sweet At The Seder By:"
+  },
+  {
+   "work": "Dvar Torah",
+   "count": 1,
+   "example": "Dvar Torah"
+  },
+  {
+   "work": "Tadhg Cleary",
+   "count": 1,
+   "example": "Tadhg Cleary"
+  },
+  {
+   "work": "Dvar Torah Comic",
+   "count": 1,
+   "example": "Dvar Torah Comic"
+  },
+  {
+   "work": "PDF",
+   "count": 1,
+   "example": "PDF"
+  },
+  {
+   "work": "Chovot Halevavot",
+   "count": 1,
+   "example": "Chovot Halevavot"
+  },
+  {
+   "work": "Activity Two — Chametz",
+   "count": 1,
+   "example": "Activity Two — Chametz"
+  },
+  {
+   "work": "Shabbos Hagadol",
+   "count": 1,
+   "example": "Shabbos Hagadol - 5785"
+  },
+  {
+   "work": "Many Lessons -Teacher's Version- QUICK NOTES TO PRESENTERS",
+   "count": 1,
+   "example": "Many Lessons -Teacher's Version- QUICK NOTES TO PRESENTERS"
+  },
+  {
+   "work": "U'mavey Geulah L'Olam",
+   "count": 1,
+   "example": "U'mavey Geulah L'Olam"
+  },
+  {
+   "work": "The Midresh Rabba ad loc",
+   "count": 1,
+   "example": "The Midresh Rabba ad loc."
+  },
+  {
+   "work": "Shiurim Lzecher Avi Mori",
+   "count": 1,
+   "example": "Shiurim Lzecher Avi Mori, chelek beis, p. 159"
+  },
+  {
+   "work": "Halo Davar Hu",
+   "count": 1,
+   "example": "Halo Davar Hu"
+  },
+  {
+   "work": "Haggada",
+   "count": 1,
+   "example": "Haggada"
+  },
+  {
+   "work": "' Approach #4",
+   "count": 1,
+   "example": "' Approach #4"
+  },
+  {
+   "work": "Time Allowing - Brief Bonus Section",
+   "count": 1,
+   "example": "Time Allowing - Brief Bonus Section"
+  },
+  {
+   "work": "Shabbos HaGadol Derasha",
+   "count": 1,
+   "example": "Shabbos HaGadol Derasha 5778"
+  },
+  {
+   "work": "Eliyahu hanavi",
+   "count": 1,
+   "example": "Eliyahu hanavi"
+  },
+  {
+   "work": "Zohar , vayigash",
+   "count": 1,
+   "example": "Zohar , vayigash,"
+  },
+  {
+   "work": "The Birth of Yocheved",
+   "count": 1,
+   "example": "The Birth of Yocheved"
+  },
+  {
+   "work": "Bridegroom of Blood",
+   "count": 1,
+   "example": "Bridegroom of Blood"
+  },
+  {
+   "work": "Chag Sameach",
+   "count": 1,
+   "example": "Chag Sameach"
+  },
+  {
+   "work": "JTS Cantorial School",
+   "count": 1,
+   "example": "JTS Cantorial School"
+  },
+  {
+   "work": "Borei P’ri HaGafen",
+   "count": 1,
+   "example": "Borei P’ri HaGafen"
+  },
+  {
+   "work": "PURPOSE OF KEYS",
+   "count": 1,
+   "example": "PURPOSE OF KEYS"
+  },
+  {
+   "work": "The Why) Coming Back to You - Leonard Cohen",
+   "count": 1,
+   "example": "The Why) Coming Back to You - Leonard Cohen"
+  },
+  {
+   "work": "The How",
+   "count": 1,
+   "example": "The How"
+  },
+  {
+   "work": "Ohev Yisrael",
+   "count": 1,
+   "example": "Ohev Yisrael, p.217"
+  },
+  {
+   "work": "Imrei Pinchas",
+   "count": 1,
+   "example": "Imrei Pinchas 298"
+  },
+  {
+   "work": "The What) ANOTHER POSSIBLE CONNECTION TO PESACH",
+   "count": 1,
+   "example": "The What) ANOTHER POSSIBLE CONNECTION TO PESACH"
+  },
+  {
+   "work": "Hashem Nisi part",
+   "count": 1,
+   "example": "Hashem Nisi part 1 pg. 13"
+  },
+  {
+   "work": "Ohr Torah",
+   "count": 1,
+   "example": "Ohr Torah 5749 Siman 101"
+  },
+  {
+   "work": "Halachapedia, Selling Chametz",
+   "count": 1,
+   "example": "Halachapedia, Selling Chametz"
+  },
+  {
+   "work": "Exodus Sarna",
+   "count": 1,
+   "example": "Exodus Sarna"
+  },
+  {
+   "work": "Gemara Rebbe, Rabbi Nuriel Klinger",
+   "count": 1,
+   "example": "Gemara Rebbe, Rabbi Nuriel Klinger"
+  },
+  {
+   "work": "Borei Pri Ha-gafen",
+   "count": 1,
+   "example": "Borei Pri Ha-gafen"
+  },
+  {
+   "work": "Tadir ve-she'eino tadir – tadir kodem",
+   "count": 1,
+   "example": "Tadir ve-she'eino tadir – tadir kodem"
+  },
+  {
+   "work": "verse Devarim",
+   "count": 1,
+   "example": "verse Devarim 25:19"
+  },
+  {
+   "work": "Devarim verse",
+   "count": 1,
+   "example": "Devarim verse 25:19"
+  },
+  {
+   "work": "MS Collection",
+   "count": 1,
+   "example": "MS Collection"
+  },
+  {
+   "work": "Sinat Chinom",
+   "count": 1,
+   "example": "Sinat Chinom"
+  },
+  {
+   "work": "Resources panel on Sefaria",
+   "count": 1,
+   "example": "Resources panel on Sefaria."
+  },
+  {
+   "work": "Koren Translation JPS",
+   "count": 1,
+   "example": "Koren Translation JPS 1985"
+  },
+  {
+   "work": "Schocken Bible E. Fox",
+   "count": 1,
+   "example": "Schocken Bible E. Fox 1995"
+  },
+  {
+   "work": "March",
+   "count": 1,
+   "example": "March 26"
+  },
+  {
+   "work": "Good to Great, “We",
+   "count": 1,
+   "example": "Good to Great, “We"
+  },
+  {
+   "work": "RED SEA",
+   "count": 1,
+   "example": "RED SEA"
+  },
+  {
+   "work": "FIRST STEP",
+   "count": 1,
+   "example": "FIRST STEP"
+  },
+  {
+   "work": "Hardcover: $30 Paperback: $22",
+   "count": 1,
+   "example": "Hardcover: $30 Paperback: $22"
+  },
+  {
+   "work": "Passover Resources",
+   "count": 1,
+   "example": "Passover Resources"
+  },
+  {
+   "work": "The Women's Seder Sourcebook",
+   "count": 1,
+   "example": "The Women's Seder Sourcebook"
+  },
+  {
+   "work": "Yad Binyamin, Israel on Elul",
+   "count": 1,
+   "example": "Yad Binyamin, Israel on Elul 26 5777:"
+  },
+  {
+   "work": "Ismar Schorsch",
+   "count": 1,
+   "example": "Ismar Schorsch"
+  },
+  {
+   "work": "New Year of Nisan",
+   "count": 1,
+   "example": "New Year of Nisan"
+  },
+  {
+   "work": "Guide to the High Holy Days - Ronald H. Isaacs Rosh Hashanah",
+   "count": 1,
+   "example": "Guide to the High Holy Days - Ronald H. Isaacs Rosh Hashanah"
+  },
+  {
+   "work": "Yamim Noraim - the Days of Awe",
+   "count": 1,
+   "example": "Yamim Noraim - the Days of Awe"
+  },
+  {
+   "work": "Days of Awe",
+   "count": 1,
+   "example": "Days of Awe"
+  },
+  {
+   "work": "A Complete Guide to the History, Prayers",
+   "count": 1,
+   "example": "A Complete Guide to the History, Prayers"
+  },
+  {
+   "work": "Themes - Rabbi Reuven Hammer Rosh Hashanah",
+   "count": 1,
+   "example": "Themes - Rabbi Reuven Hammer Rosh Hashanah"
+  },
+  {
+   "work": "Open Siddur Project",
+   "count": 1,
+   "example": "Open Siddur Project"
+  },
+  {
+   "work": "New Year's Day for the",
+   "count": 1,
+   "example": "New Year's Day for the"
+  },
+  {
+   "work": "Maasei Bereshit",
+   "count": 1,
+   "example": "Maasei Bereshit"
+  },
+  {
+   "work": "New Year's Day for Animals",
+   "count": 1,
+   "example": "New Year's Day for Animals"
+  },
+  {
+   "work": "Shalom Spiegel, The Last Trial, p",
+   "count": 1,
+   "example": "Shalom Spiegel, The Last Trial, p. 64"
+  },
+  {
+   "work": "MhG on",
+   "count": 1,
+   "example": "MhG on 22:19"
+  },
+  {
+   "work": "Seder Hibbur Berakot",
+   "count": 1,
+   "example": "Seder Hibbur Berakot"
+  },
+  {
+   "work": "JQR. XXI",
+   "count": 1,
+   "example": "JQR. XXI (1931), 252"
+  },
+  {
+   "work": "ha-Eshkol",
+   "count": 1,
+   "example": "Sefer ha-Eshkol"
+  },
+  {
+   "work": "H. Albeck, I, p",
+   "count": 1,
+   "example": "H. Albeck, I, p. 27"
+  },
+  {
+   "work": "The Last Trial.”",
+   "count": 1,
+   "example": "The Last Trial.”"
+  },
+  {
+   "work": "S. Spiegel’s The Last Trial",
+   "count": 1,
+   "example": "S. Spiegel’s The Last Trial (New York"
+  },
+  {
+   "work": "The Last Trial",
+   "count": 1,
+   "example": "The Last Trial"
+  },
+  {
+   "work": "Gemara?",
+   "count": 1,
+   "example": "Gemara? 2"
+  },
+  {
+   "work": "Book of Faith and Opinions",
+   "count": 1,
+   "example": "Book of Faith and Opinions"
+  },
+  {
+   "work": "Book of Life",
+   "count": 1,
+   "example": "Book of Life"
+  },
+  {
+   "work": "Shana Tova Greeting in Jewish Texts",
+   "count": 1,
+   "example": "Shana Tova Greeting in Jewish Texts"
+  },
+  {
+   "work": "Hilchot Rosh Hashanah",
+   "count": 1,
+   "example": "Hilchot Rosh Hashanah"
+  },
+  {
+   "work": "Unetaneh Tokef Context",
+   "count": 1,
+   "example": "Unetaneh Tokef Context"
+  },
+  {
+   "work": "Biblical Book of Jonah",
+   "count": 1,
+   "example": "Biblical Book of Jonah"
+  },
+  {
+   "work": "B’Rosh HaShana",
+   "count": 1,
+   "example": "B’Rosh HaShana"
+  },
+  {
+   "work": "Simanim in Jewish Texts Below",
+   "count": 1,
+   "example": "Simanim in Jewish Texts Below"
+  },
+  {
+   "work": "Simanim in National Library",
+   "count": 1,
+   "example": "Simanim in National Library"
+  },
+  {
+   "work": "Kitzur",
+   "count": 1,
+   "example": "Kitzur"
+  },
+  {
+   "work": "Landslide, Fleetwood Mac",
+   "count": 1,
+   "example": "Landslide, Fleetwood Mac, 1975"
+  },
+  {
+   "work": "Ch-ch-ch-ch-changes Turn",
+   "count": 1,
+   "example": "Ch-ch-ch-ch-changes Turn"
+  },
+  {
+   "work": "Maharil Hilchos Rosh HaShanah",
+   "count": 1,
+   "example": "Maharil Hilchos Rosh HaShanah"
+  },
+  {
+   "work": "Tashlich",
+   "count": 1,
+   "example": "Tashlich"
+  },
+  {
+   "work": "Tashuv Terachmeinu",
+   "count": 1,
+   "example": "Tashuv Terachmeinu"
+  },
+  {
+   "work": "Minhagim",
+   "count": 1,
+   "example": "Sefer Minhagim"
+  },
+  {
+   "work": "Levush",
+   "count": 1,
+   "example": "Levush Orach Chaim, 596"
+  },
+  {
+   "work": "Toras HaOlah",
+   "count": 1,
+   "example": "Toras HaOlah 3:56"
+  },
+  {
+   "work": "Maaseh Rav The",
+   "count": 1,
+   "example": "Maaseh Rav The"
+  },
+  {
+   "work": "Iggeres HaGra",
+   "count": 1,
+   "example": "Iggeres HaGra"
+  },
+  {
+   "work": "Machzor",
+   "count": 1,
+   "example": "Machzor"
+  },
+  {
+   "work": "Justice and Mercy",
+   "count": 1,
+   "example": "Justice and Mercy"
+  },
+  {
+   "work": "Text",
+   "count": 1,
+   "example": "Text 3 and Questions"
+  },
+  {
+   "work": "Alshich in Itturei Torah",
+   "count": 1,
+   "example": "Alshich in Itturei Torah , pg. 268"
+  },
+  {
+   "work": "Shloshah Asar Ikkarim",
+   "count": 1,
+   "example": "Shloshah Asar Ikkarim"
+  },
+  {
+   "work": "Thirteen Fundamental Principles",
+   "count": 1,
+   "example": "Thirteen Fundamental Principles"
+  },
+  {
+   "work": "Legend",
+   "count": 1,
+   "example": "Legend (Longer version"
+  },
+  {
+   "work": "Earthen Potter , Earthen Potter Hands , CC BY-SA",
+   "count": 1,
+   "example": "Earthen Potter , Earthen Potter Hands , CC BY-SA 4.0"
+  },
+  {
+   "work": "Kimhi on Isa",
+   "count": 1,
+   "example": "Kimhi on Isa. 40:1) 15"
+  },
+  {
+   "work": "Transl",
+   "count": 1,
+   "example": "Transl."
+  },
+  {
+   "work": "Targum Jonathan",
+   "count": 1,
+   "example": "Targum Jonathan"
+  },
+  {
+   "work": "Unetenah Tokef",
+   "count": 1,
+   "example": "Unetenah Tokef"
+  },
+  {
+   "work": "Or Zarua",
+   "count": 1,
+   "example": "Sefer Or Zarua 12c"
+  },
+  {
+   "work": "Purity and Goats Unlike Rosh Hashanah",
+   "count": 1,
+   "example": "Purity and Goats Unlike Rosh Hashanah"
+  },
+  {
+   "work": "Rome",
+   "count": 1,
+   "example": "Rome"
+  },
+  {
+   "work": "Avodah section of the Musaf service",
+   "count": 1,
+   "example": "Avodah section of the Musaf service"
+  },
+  {
+   "work": "Baruch shem k'vod malchuto l'olam va-ed",
+   "count": 1,
+   "example": "Baruch shem k'vod malchuto l'olam va-ed"
+  },
+  {
+   "work": "V'Ahavta",
+   "count": 1,
+   "example": "V'Ahavta"
+  },
+  {
+   "work": "Siddur of",
+   "count": 1,
+   "example": "Siddur of"
+  },
+  {
+   "work": "Polish",
+   "count": 1,
+   "example": "Polish, 44"
+  },
+  {
+   "work": "Gilabrand , EtrogC , CC BY-SA",
+   "count": 1,
+   "example": "Gilabrand , EtrogC , CC BY-SA 3.0"
+  },
+  {
+   "work": "East, South, West, North",
+   "count": 1,
+   "example": "East, South, West, North"
+  },
+  {
+   "work": "Time of Our Joy",
+   "count": 1,
+   "example": "Time of Our Joy"
+  },
+  {
+   "work": "The Time of Our Hoppiness",
+   "count": 1,
+   "example": "The Time of Our Hoppiness"
+  },
+  {
+   "work": "Time of Our Freedom), Shavuot",
+   "count": 1,
+   "example": "Time of Our Freedom), Shavuot (Time of Giving the Torah)"
+  },
+  {
+   "work": "Biblical Book of Nehemiah",
+   "count": 1,
+   "example": "Biblical Book of Nehemiah"
+  },
+  {
+   "work": "Birkat HaMazon Context",
+   "count": 1,
+   "example": "Birkat HaMazon Context"
+  },
+  {
+   "work": "Grace After Meals",
+   "count": 1,
+   "example": "Grace After Meals"
+  },
+  {
+   "work": "Nodeh l'cha",
+   "count": 1,
+   "example": "Nodeh l'cha"
+  },
+  {
+   "work": "Elohai N’shama",
+   "count": 1,
+   "example": "Elohai N’shama"
+  },
+  {
+   "work": "Bentching Gomel Context",
+   "count": 1,
+   "example": "Bentching Gomel Context"
+  },
+  {
+   "work": "Shmos",
+   "count": 1,
+   "example": "Shmos 34:6"
+  },
+  {
+   "work": "Clouds of Glory",
+   "count": 1,
+   "example": "Clouds of Glory"
+  },
+  {
+   "work": "Sukkot in Kislev\" First Book of Maccabees",
+   "count": 1,
+   "example": "Sukkot in Kislev\" First Book of Maccabees"
+  },
+  {
+   "work": "2nd Book of Macabees",
+   "count": 1,
+   "example": "2nd Book of Macabees 10:5-9"
+  },
+  {
+   "work": "Haggai Prophecy",
+   "count": 1,
+   "example": "Haggai Prophecy 1"
+  },
+  {
+   "work": "Midrash Chanukah",
+   "count": 1,
+   "example": "Midrash Chanukah"
+  },
+  {
+   "work": "Mishnaic",
+   "count": 1,
+   "example": "Mishnaic"
+  },
+  {
+   "work": "Symbolism of the Four Species",
+   "count": 1,
+   "example": "Symbolism of the Four Species"
+  },
+  {
+   "work": "Triennial",
+   "count": 1,
+   "example": "Triennial"
+  },
+  {
+   "work": "Yearly Torah Cycles ​​​​​​​ Benjamin of Tudela",
+   "count": 1,
+   "example": "Yearly Torah Cycles ​​​​​​​ Benjamin of Tudela (1130-1173)"
+  },
+  {
+   "work": "Benjamin of Tudela",
+   "count": 1,
+   "example": "Benjamin of Tudela"
+  },
+  {
+   "work": "Itineraries",
+   "count": 1,
+   "example": "Itineraries, 98 Two large synagogues"
+  },
+  {
+   "work": "East and Those",
+   "count": 1,
+   "example": "East and Those"
+  },
+  {
+   "work": "Chag Sukkot",
+   "count": 1,
+   "example": "Chag Sukkot"
+  },
+  {
+   "work": "HaManhig",
+   "count": 1,
+   "example": "Sefer HaManhig"
+  },
+  {
+   "work": "HaManhig, Sukkah",
+   "count": 1,
+   "example": "Sefer HaManhig, Sukkah 413"
+  },
+  {
+   "work": "Vezot HaBeracha on Simchat Torah",
+   "count": 1,
+   "example": "Vezot HaBeracha on Simchat Torah"
+  },
+  {
+   "work": "HaMinhagim",
+   "count": 1,
+   "example": "Sefer HaMinhagim"
+  },
+  {
+   "work": "Hagahot section",
+   "count": 1,
+   "example": "Hagahot section"
+  },
+  {
+   "work": "HaMinhagim, Hagahot Why",
+   "count": 1,
+   "example": "Sefer HaMinhagim, Hagahot Why"
+  },
+  {
+   "work": "Chatan Bereishit",
+   "count": 1,
+   "example": "Chatan Bereishit"
+  },
+  {
+   "work": "Russia/Israel",
+   "count": 1,
+   "example": "Russia/Israel, 1878-1953"
+  },
+  {
+   "work": "A Guide to Jewish Religious Practice",
+   "count": 1,
+   "example": "A Guide to Jewish Religious Practice, 160"
+  },
+  {
+   "work": "Hanokh Albeck on Mishnah Sukkah",
+   "count": 1,
+   "example": "Hanokh Albeck on Mishnah Sukkah 1:11"
+  },
+  {
+   "work": "Jewish Life Specialist Tzom Gedaliah",
+   "count": 1,
+   "example": "Jewish Life Specialist Tzom Gedaliah"
+  },
+  {
+   "work": "Tzom Gedaliah",
+   "count": 1,
+   "example": "Tzom Gedaliah (b. Talmud Rosh Hashanah 18b )"
+  },
+  {
+   "work": "Sefaria.org",
+   "count": 1,
+   "example": "Sefaria.org"
+  },
+  {
+   "work": "Moving Forward",
+   "count": 1,
+   "example": "Moving Forward"
+  },
+  {
+   "work": "Jewish Life Specialist “ Kaparah",
+   "count": 1,
+   "example": "Jewish Life Specialist “ Kaparah"
+  },
+  {
+   "work": "TaNaKH, Mishnah",
+   "count": 1,
+   "example": "TaNaKH, Mishnah"
+  },
+  {
+   "work": "Poor",
+   "count": 1,
+   "example": "Poor 3."
+  },
+  {
+   "work": "Zchut Avot : Merit of the Ancestors",
+   "count": 1,
+   "example": "Zchut Avot : Merit of the Ancestors 4. V'Halachta Bidrachav"
+  },
+  {
+   "work": "TaNakh",
+   "count": 1,
+   "example": "TaNakh"
+  },
+  {
+   "work": "Zechut Avot : Merit of the Ancestors",
+   "count": 1,
+   "example": "Zechut Avot : Merit of the Ancestors"
+  },
+  {
+   "work": "Zechut Avot",
+   "count": 1,
+   "example": "Zechut Avot"
+  },
+  {
+   "work": "Ha'aretz, February",
+   "count": 1,
+   "example": "Ha'aretz, February 26, 2015"
+  },
+  {
+   "work": "Ephraim Rubin Posted August",
+   "count": 1,
+   "example": "Ephraim Rubin Posted August 9, 2002"
+  },
+  {
+   "work": "Medrash Tanchuma",
+   "count": 1,
+   "example": "Medrash Tanchuma"
+  },
+  {
+   "work": "Medrash",
+   "count": 1,
+   "example": "Medrash"
+  },
+  {
+   "work": "Ha'aretz, March",
+   "count": 1,
+   "example": "Ha'aretz, March 16, 2016"
+  },
+  {
+   "work": "Gottingen Manuscript London Manuscript Vatican Manuscript I",
+   "count": 1,
+   "example": "Gottingen Manuscript London Manuscript Vatican Manuscript I"
+  },
+  {
+   "work": "RAVA",
+   "count": 1,
+   "example": "RAVA (d. 352 C.E. )"
+  },
+  {
+   "work": "Babylonian amora . ZE'EIRA",
+   "count": 1,
+   "example": "Babylonian amora . ZE'EIRA"
+  },
+  {
+   "work": "TB Zeira",
+   "count": 1,
+   "example": "TB Zeira"
+  },
+  {
+   "work": "II. The Plot",
+   "count": 1,
+   "example": "II. The Plot"
+  },
+  {
+   "work": "Authors One",
+   "count": 1,
+   "example": "Authors One"
+  },
+  {
+   "work": "NLI",
+   "count": 1,
+   "example": "NLI"
+  },
+  {
+   "work": "Megillah Illustrated Megillat Esther",
+   "count": 1,
+   "example": "Megillah Illustrated Megillat Esther (Book of Esther)"
+  },
+  {
+   "work": "II. Mapping the Jewish Year - Times of Sadness",
+   "count": 1,
+   "example": "II. Mapping the Jewish Year - Times of Sadness"
+  },
+  {
+   "work": "Times of Joy Jewish tradition",
+   "count": 1,
+   "example": "Times of Joy Jewish tradition"
+  },
+  {
+   "work": "Matanot La'evyonim - Gifts to the Poor – Giving to the poor",
+   "count": 1,
+   "example": "Matanot La'evyonim - Gifts to the Poor – Giving to the poor"
+  },
+  {
+   "work": "Shulchan Aruch --Code of Jewish Law",
+   "count": 1,
+   "example": "Shulchan Aruch --Code of Jewish Law"
+  },
+  {
+   "work": "Patsy Cline",
+   "count": 1,
+   "example": "Patsy Cline 1961"
+  },
+  {
+   "work": "Hag HaAsif – the Harvest Festival",
+   "count": 1,
+   "example": "Hag HaAsif – the Harvest Festival (Ex 34:22)"
+  },
+  {
+   "work": "2012 Rosh Hashanah",
+   "count": 1,
+   "example": "2012 Rosh Hashanah 5773"
+  },
+  {
+   "work": "Medrash Tehilim",
+   "count": 1,
+   "example": "Medrash Tehilim (22:17)"
+  },
+  {
+   "work": "MeHodu ve'ad Kush",
+   "count": 1,
+   "example": "MeHodu ve'ad Kush"
+  },
+  {
+   "work": "Shulhan Aruch",
+   "count": 1,
+   "example": "Shulhan Aruch"
+  },
+  {
+   "work": "Megila",
+   "count": 1,
+   "example": "Megila"
+  },
+  {
+   "work": "Derech Eretz",
+   "count": 1,
+   "example": "Derech Eretz"
+  },
+  {
+   "work": "Divre Torah",
+   "count": 1,
+   "example": "Divre Torah"
+  },
+  {
+   "work": "Mishnat Hasofer",
+   "count": 1,
+   "example": "Mishnat Hasofer 28"
+  },
+  {
+   "work": "Shu”t Zerah Emet",
+   "count": 1,
+   "example": "Shu”t Zerah Emet 1:100"
+  },
+  {
+   "work": "Biur HaGr”a",
+   "count": 1,
+   "example": "Biur HaGr”a , Orach Chaim 691:25"
+  },
+  {
+   "work": "Yoma",
+   "count": 1,
+   "example": "Yoma 29a, i.e."
+  },
+  {
+   "work": "Shulĥan Arukh, Oraĥ Ĥayyim",
+   "count": 1,
+   "example": "Shulĥan Arukh, Oraĥ Ĥayyim 694:1"
+  },
+  {
+   "work": "Koren Talmud - Megillah daf",
+   "count": 1,
+   "example": "Koren Talmud - Megillah daf 7b"
+  },
+  {
+   "work": "Talmud Bavli Megillah daf",
+   "count": 1,
+   "example": "Talmud Bavli Megillah daf 7b"
+  },
+  {
+   "work": "Shulĥan Arukh , Oraĥ Ĥayyim",
+   "count": 1,
+   "example": "Shulĥan Arukh , Oraĥ Ĥayyim 688:6"
+  },
+  {
+   "work": "Bayit Chadash",
+   "count": 1,
+   "example": "Bayit Chadash"
+  },
+  {
+   "work": "ShevusYitzchok on Purim",
+   "count": 1,
+   "example": "ShevusYitzchok on Purim, pg. 98"
+  },
+  {
+   "work": "Maharsha, a",
+   "count": 1,
+   "example": "Maharsha, a 16 th century Polish rabbi"
+  },
+  {
+   "work": "Be'er Hetev",
+   "count": 1,
+   "example": "Be'er Hetev, 695:2"
+  },
+  {
+   "work": "Dapei HaRif Megillah",
+   "count": 1,
+   "example": "Dapei HaRif Megillah"
+  },
+  {
+   "work": "Sheets",
+   "count": 1,
+   "example": "Sheets"
+  },
+  {
+   "work": "Purim Hide",
+   "count": 1,
+   "example": "Purim Hide"
+  },
+  {
+   "work": "Chefallen , Megillat Esther",
+   "count": 1,
+   "example": "Chefallen , Megillat Esther (1) ,"
+  },
+  {
+   "work": "Megillat Esther - Purim Edition",
+   "count": 1,
+   "example": "Megillat Esther - Purim Edition"
+  },
+  {
+   "work": "Emoji Esther",
+   "count": 1,
+   "example": "Emoji Esther"
+  },
+  {
+   "work": "Additional Core Texts Mishnah Megillah - Masechet Megillah",
+   "count": 1,
+   "example": "Additional Core Texts Mishnah Megillah - Masechet Megillah"
+  },
+  {
+   "work": "Mishneh Torah, Scroll of Esther",
+   "count": 1,
+   "example": "Mishneh Torah, Scroll of Esther"
+  },
+  {
+   "work": "Rambam's Mishneh Torah, Scroll of Esther",
+   "count": 1,
+   "example": "Rambam's Mishneh Torah, Scroll of Esther"
+  },
+  {
+   "work": "Sheets The Four Key Purim Mitzvot - Study texts",
+   "count": 1,
+   "example": "Sheets The Four Key Purim Mitzvot - Study texts"
+  },
+  {
+   "work": "Purim Plate, Germany",
+   "count": 1,
+   "example": "Purim Plate, Germany, 19th Century"
+  },
+  {
+   "work": "Purim Style",
+   "count": 1,
+   "example": "Purim Style"
+  },
+  {
+   "work": "Public Domain Parshat Zachor",
+   "count": 1,
+   "example": "Public Domain Parshat Zachor"
+  },
+  {
+   "work": "Forget - Review the texts",
+   "count": 1,
+   "example": "Forget - Review the texts"
+  },
+  {
+   "work": "The Phillip Medhurst Picture Torah",
+   "count": 1,
+   "example": "The Phillip Medhurst Picture Torah 416"
+  },
+  {
+   "work": "Rubens , CC BY-SA",
+   "count": 1,
+   "example": "Rubens , CC BY-SA 3.0 Purim"
+  },
+  {
+   "work": "Purim Panel, Synagogue of Dura Europos",
+   "count": 1,
+   "example": "Purim Panel, Synagogue of Dura Europos"
+  },
+  {
+   "work": "Scroll of Esther",
+   "count": 1,
+   "example": "Scroll of Esther"
+  },
+  {
+   "work": "Esther",
+   "count": 1,
+   "example": "Esther 9:20f"
+  },
+  {
+   "work": "Infant Moses panel",
+   "count": 1,
+   "example": "Infant Moses panel"
+  },
+  {
+   "work": "Yeshivat Lev Aryeh",
+   "count": 1,
+   "example": "Yeshivat Lev Aryeh"
+  },
+  {
+   "work": "Binyomin Miller / Dr. Dreizich",
+   "count": 1,
+   "example": "Binyomin Miller / Dr. Dreizich"
+  },
+  {
+   "work": "Purim Spiel",
+   "count": 1,
+   "example": "Purim Spiel"
+  },
+  {
+   "work": "Derek Jeter",
+   "count": 1,
+   "example": "Derek Jeter"
+  },
+  {
+   "work": "Hetev",
+   "count": 1,
+   "example": "Hetev, 695:"
+  },
+  {
+   "work": "Haman”",
+   "count": 1,
+   "example": "Haman”"
+  },
+  {
+   "work": "Matanot LeEvyonim. Matanot LeEvyonim Context",
+   "count": 1,
+   "example": "Matanot LeEvyonim. Matanot LeEvyonim Context"
+  },
+  {
+   "work": "Megillah Context",
+   "count": 1,
+   "example": "Megillah Context"
+  },
+  {
+   "work": "same chapter of Esther",
+   "count": 1,
+   "example": "same chapter of Esther"
+  },
+  {
+   "work": "Biblical Book / Scroll of Esther",
+   "count": 1,
+   "example": "Biblical Book / Scroll of Esther"
+  },
+  {
+   "work": "Songs / Shir HaShirim",
+   "count": 1,
+   "example": "Songs / Shir HaShirim"
+  },
+  {
+   "work": "Lamentations / Eicha",
+   "count": 1,
+   "example": "Lamentations / Eicha"
+  },
+  {
+   "work": "Ecclesiastes / Kohelet",
+   "count": 1,
+   "example": "Ecclesiastes / Kohelet"
+  },
+  {
+   "work": "Yerushalmi Shelamim",
+   "count": 1,
+   "example": "Yerushalmi Shelamim 6:1, 49d"
+  },
+  {
+   "work": "The Challenge of Modernity",
+   "count": 1,
+   "example": "The Challenge of Modernity"
+  },
+  {
+   "work": "Sanhedrin",
+   "count": 1,
+   "example": "Sanhedrin (High Court)"
+  },
+  {
+   "work": "Shulhan Arukh, Yoreh De`ah",
+   "count": 1,
+   "example": "Shulhan Arukh, Yoreh De`ah 196:11"
+  },
+  {
+   "work": "Arukh HaShulhan",
+   "count": 1,
+   "example": "Arukh HaShulhan 494:2"
+  },
+  {
+   "work": "Shulchan Aruch, R. Shlomo HaLevi Alkabetz",
+   "count": 1,
+   "example": "Shulchan Aruch, R. Shlomo HaLevi Alkabetz"
+  },
+  {
+   "work": "Writings, Mishnah, Zohar",
+   "count": 1,
+   "example": "Writings, Mishnah, Zohar"
+  },
+  {
+   "work": "Drashot",
+   "count": 1,
+   "example": "Drashot"
+  },
+  {
+   "work": "Zohar parshat Emor",
+   "count": 1,
+   "example": "Zohar parshat Emor"
+  },
+  {
+   "work": "Coffee, Coffeehouses",
+   "count": 1,
+   "example": "Coffee, Coffeehouses"
+  },
+  {
+   "work": "Book of Our Heritage",
+   "count": 1,
+   "example": "Book of Our Heritage"
+  },
+  {
+   "work": "N’varech Shekhina Eloteinu Ruach HaOlam",
+   "count": 1,
+   "example": "N’varech Shekhina Eloteinu Ruach HaOlam"
+  },
+  {
+   "work": "Y'varechecha Adonai V'yish'm'recha",
+   "count": 1,
+   "example": "Y'varechecha Adonai V'yish'm'recha"
+  },
+  {
+   "work": "RitualWell.org Order of the Seder: Kadeish, Urchatz",
+   "count": 1,
+   "example": "RitualWell.org Order of the Seder: Kadeish, Urchatz"
+  },
+  {
+   "work": "Shulchan Orech, Tzafun",
+   "count": 1,
+   "example": "Shulchan Orech, Tzafun"
+  },
+  {
+   "work": "Barech",
+   "count": 1,
+   "example": "Barech"
+  },
+  {
+   "work": "L'-Hayyim",
+   "count": 1,
+   "example": "L'-Hayyim"
+  },
+  {
+   "work": "P'ri ha-Etz - Blessing Over Fruit",
+   "count": 1,
+   "example": "P'ri ha-Etz - Blessing Over Fruit"
+  },
+  {
+   "work": "Biblical Sources for Shavuot Shavuot",
+   "count": 1,
+   "example": "Biblical Sources for Shavuot Shavuot"
+  },
+  {
+   "work": "Rome Machzor",
+   "count": 1,
+   "example": "Rome Machzor, 1450"
+  },
+  {
+   "work": "Ruth Postcard",
+   "count": 1,
+   "example": "Ruth Postcard, 1870 , National Library of Israel"
+  },
+  {
+   "work": "Jezreel Valley",
+   "count": 1,
+   "example": "Jezreel Valley"
+  },
+  {
+   "work": "HaRambam",
+   "count": 1,
+   "example": "Teshuvot HaRambam (Freiman Ed.) no. 46"
+  },
+  {
+   "work": "Aruch",
+   "count": 1,
+   "example": "Aruch"
+  },
+  {
+   "work": "AMI MAGAZINE",
+   "count": 1,
+   "example": "AMI MAGAZINE"
+  },
+  {
+   "work": "Shul Chronicles",
+   "count": 1,
+   "example": "Shul Chronicles (#205)"
+  },
+  {
+   "work": "Tifferes Yisroel",
+   "count": 1,
+   "example": "Tifferes Yisroel"
+  },
+  {
+   "work": "Boaz to Avos Chapter",
+   "count": 1,
+   "example": "Boaz to Avos Chapter 3 (א)"
+  },
+  {
+   "work": "Burning Bush",
+   "count": 1,
+   "example": "Burning Bush"
+  },
+  {
+   "work": "New Law Context",
+   "count": 1,
+   "example": "New Law Context"
+  },
+  {
+   "work": "Biblical Song of",
+   "count": 1,
+   "example": "Biblical Song of"
+  },
+  {
+   "work": "Mishnah, Talmud, Mishneh Torah",
+   "count": 1,
+   "example": "Mishnah, Talmud, Mishneh Torah"
+  },
+  {
+   "work": "Shulchan Aruch, and",
+   "count": 1,
+   "example": "Shulchan Aruch, and"
+  },
+  {
+   "work": "Biblical Book of Numbers",
+   "count": 1,
+   "example": "Biblical Book of Numbers"
+  },
+  {
+   "work": "GUIDE FOR THE PERPLEXED, BOOK",
+   "count": 1,
+   "example": "GUIDE FOR THE PERPLEXED, BOOK 3 CHAPTER 39"
+  },
+  {
+   "work": "Yalkut Shimoni on Megillat Ruth Ch",
+   "count": 1,
+   "example": "Yalkut Shimoni on Megillat Ruth Ch 606:4"
+  },
+  {
+   "work": "Gershon Winkler",
+   "count": 1,
+   "example": "Gershon Winkler"
+  },
+  {
+   "work": "Middles Ages: The",
+   "count": 1,
+   "example": "Middles Ages: The"
+  },
+  {
+   "work": "Frymer-Kensky",
+   "count": 1,
+   "example": "Frymer-Kensky, 173"
+  },
+  {
+   "work": "Woman Zion as Harlot",
+   "count": 1,
+   "example": "Woman Zion as Harlot"
+  },
+  {
+   "work": "Stromberg",
+   "count": 1,
+   "example": "Stromberg, 62"
+  },
+  {
+   "work": "Hays",
+   "count": 1,
+   "example": "Hays, 763"
+  },
+  {
+   "work": "An Introduction to the Study of Isaiah",
+   "count": 1,
+   "example": "An Introduction to the Study of Isaiah"
+  },
+  {
+   "work": "Deutero-Isaiah: A Metaphor for Zion Theology",
+   "count": 1,
+   "example": "Deutero-Isaiah: A Metaphor for Zion Theology"
+  },
+  {
+   "work": "Isaiah’s Vineyard",
+   "count": 1,
+   "example": "Isaiah’s Vineyard (5:1-7)"
+  },
+  {
+   "work": "Biblical Origins",
+   "count": 1,
+   "example": "Biblical Origins"
+  },
+  {
+   "work": "Contemporary Folklore , The Bilgray Lectureship",
+   "count": 1,
+   "example": "Contemporary Folklore , The Bilgray Lectureship"
+  },
+  {
+   "work": "The Brodsky Library Press",
+   "count": 1,
+   "example": "The Brodsky Library Press, 2005"
+  },
+  {
+   "work": "MASh",
+   "count": 1,
+   "example": "MASh"
+  },
+  {
+   "work": "Positive Time Bound Commandments",
+   "count": 1,
+   "example": "Positive Time Bound Commandments"
+  },
+  {
+   "work": "Turei Even - Chagigah",
+   "count": 1,
+   "example": "Turei Even - Chagigah 16b"
+  },
+  {
+   "work": "Sha'agat Aryeh",
+   "count": 1,
+   "example": "Sha'agat Aryeh"
+  },
+  {
+   "work": "Shofar, Sukkah, Lulav",
+   "count": 1,
+   "example": "Shofar, Sukkah, Lulav"
+  },
+  {
+   "work": "Ex: Lulav for",
+   "count": 1,
+   "example": "Ex: Lulav for 5775"
+  },
+  {
+   "work": "Chachmat Shlomoh Orech Chaim",
+   "count": 1,
+   "example": "Chachmat Shlomoh Orech Chaim 426"
+  },
+  {
+   "work": "holy Shla'h",
+   "count": 1,
+   "example": "holy Shla'h"
+  },
+  {
+   "work": "Ex: Sukkah, Matzah",
+   "count": 1,
+   "example": "Ex: Sukkah, Matzah"
+  },
+  {
+   "work": "Chiyuv Hamitzvah",
+   "count": 1,
+   "example": "Chiyuv Hamitzvah"
+  },
+  {
+   "work": "Ex: Eidut",
+   "count": 1,
+   "example": "Ex: Eidut"
+  },
+  {
+   "work": "D'vorah She",
+   "count": 1,
+   "example": "D'vorah She"
+  },
+  {
+   "work": "Laws of Foundations of Torah",
+   "count": 1,
+   "example": "Laws of Foundations of Torah 5 Rambam 1."
+  },
+  {
+   "work": "Answers on War",
+   "count": 1,
+   "example": "Answers on War 1:2"
+  },
+  {
+   "work": "ArtScroll Sotah",
+   "count": 1,
+   "example": "ArtScroll Sotah 21a, note 43"
+  },
+  {
+   "work": "Targum Yonasan",
+   "count": 1,
+   "example": "Targum Yonasan"
+  },
+  {
+   "work": "Parshas Mikeitz",
+   "count": 1,
+   "example": "Parshas Mikeitz , 17:8"
+  },
+  {
+   "work": "Bavli , a Tosefta , Medrash Rabbah",
+   "count": 1,
+   "example": "Bavli , a Tosefta , Medrash Rabbah"
+  },
+  {
+   "work": "Wise, The Wicked, The Simple",
+   "count": 1,
+   "example": "Wise, The Wicked, The Simple"
+  },
+  {
+   "work": "Haggadah Step",
+   "count": 1,
+   "example": "Haggadah Step 1"
+  },
+  {
+   "work": "Bible Step",
+   "count": 1,
+   "example": "Bible Step 2"
+  },
+  {
+   "work": "Mechilta Step",
+   "count": 1,
+   "example": "Mechilta Step 3"
+  },
+  {
+   "work": "Jerusalem Talmud Step",
+   "count": 1,
+   "example": "Jerusalem Talmud Step 4"
+  },
+  {
+   "work": "Haggadah Bonus Step: The Ballad of the Four Sons",
+   "count": 1,
+   "example": "Haggadah Bonus Step: The Ballad of the Four Sons"
+  },
+  {
+   "work": "Anshe Emet Synagogue",
+   "count": 1,
+   "example": "Anshe Emet Synagogue"
+  },
+  {
+   "work": "Bonus Step",
+   "count": 1,
+   "example": "Bonus Step 2"
+  },
+  {
+   "work": "Chocolate Seder The Four Children Blessed is G-d",
+   "count": 1,
+   "example": "Chocolate Seder The Four Children Blessed is G-d"
+  },
+  {
+   "work": "Chocolate Deprived Child: Alas",
+   "count": 1,
+   "example": "Chocolate Deprived Child: Alas"
+  },
+  {
+   "work": "Appendix: Other Texts The Verses The Haggadah",
+   "count": 1,
+   "example": "Appendix: Other Texts The Verses The Haggadah"
+  },
+  {
+   "work": "December",
+   "count": 1,
+   "example": "December 2006"
+  },
+  {
+   "work": "B. Talmud Sanhedrin",
+   "count": 1,
+   "example": "B. Talmud Sanhedrin 42a"
+  },
+  {
+   "work": "Shnei Meorot The moon",
+   "count": 1,
+   "example": "Shnei Meorot The moon"
+  },
+  {
+   "work": "Vaikra",
+   "count": 1,
+   "example": "Vaikra 23"
+  },
+  {
+   "work": "Maharam Shik, Orech Chaim",
+   "count": 1,
+   "example": "Maharam Shik, Orech Chaim"
+  },
+  {
+   "work": "Igrat Moshe",
+   "count": 1,
+   "example": "Igrat Moshe , Orach Chaim 1:39"
+  },
+  {
+   "work": "Nechama's Method",
+   "count": 1,
+   "example": "Nechama's Method - 4"
+  },
+  {
+   "work": "Efrat Gerber-Aran",
+   "count": 1,
+   "example": "Efrat Gerber-Aran"
+  },
+  {
+   "work": "Freedom of Expression and Protection of Minority Rights",
+   "count": 1,
+   "example": "Freedom of Expression and Protection of Minority Rights"
+  },
+  {
+   "work": "Babylonian Talmud Interpretations",
+   "count": 1,
+   "example": "Babylonian Talmud Interpretations"
+  },
+  {
+   "work": "Inclusion Interpretations \" H ineinu",
+   "count": 1,
+   "example": "Inclusion Interpretations \" H ineinu"
+  },
+  {
+   "work": "The Religious Action Center of Reform Judaism",
+   "count": 1,
+   "example": "The Religious Action Center of Reform Judaism"
+  },
+  {
+   "work": "Jewish Texts on Inclusion Jewish tradition",
+   "count": 1,
+   "example": "Jewish Texts on Inclusion Jewish tradition"
+  },
+  {
+   "work": "Grounding for the Metaphysics of Morals Act",
+   "count": 1,
+   "example": "Grounding for the Metaphysics of Morals Act"
+  },
+  {
+   "work": "1}This",
+   "count": 1,
+   "example": "1}This"
+  },
+  {
+   "work": "משנה, פרקי אבות ד:א Suggested Discussion Questions",
+   "count": 1,
+   "example": "משנה, פרקי אבות ד:א Suggested Discussion Questions: 1"
+  },
+  {
+   "work": "First Question Why",
+   "count": 1,
+   "example": "First Question Why"
+  },
+  {
+   "work": "Second Question Rashi",
+   "count": 1,
+   "example": "Second Question Rashi"
+  },
+  {
+   "work": "Third Question How",
+   "count": 1,
+   "example": "Third Question How"
+  },
+  {
+   "work": "Fourth Question",
+   "count": 1,
+   "example": "Fourth Question"
+  },
+  {
+   "work": "Fifth Question When",
+   "count": 1,
+   "example": "Fifth Question When"
+  },
+  {
+   "work": "Neusner",
+   "count": 1,
+   "example": "Neusner"
+  },
+  {
+   "work": "Meiri) Knowledge/Understanding. The",
+   "count": 1,
+   "example": "Meiri) Knowledge/Understanding. The"
+  },
+  {
+   "work": "Meiri",
+   "count": 1,
+   "example": "Meiri"
+  },
+  {
+   "work": "תלמוד בבלי, שבת לא. Suggested Discussion Questions",
+   "count": 1,
+   "example": "תלמוד בבלי, שבת לא. Suggested Discussion Questions: 1"
+  },
+  {
+   "work": "Torahand",
+   "count": 1,
+   "example": "Torahand"
+  },
+  {
+   "work": "Yetzer Hara",
+   "count": 1,
+   "example": "Yetzer Hara"
+  },
+  {
+   "work": "introduction to Yisrael Salanter's",
+   "count": 1,
+   "example": "introduction to Yisrael Salanter's"
+  },
+  {
+   "work": "Ohr Yisrael",
+   "count": 1,
+   "example": "Ohr Yisrael, p.38"
+  },
+  {
+   "work": "Everyday Holiness by Alan Morinis",
+   "count": 1,
+   "example": "Everyday Holiness by Alan Morinis (p.3)"
+  },
+  {
+   "work": "Or HaChaim",
+   "count": 1,
+   "example": "Or HaChaim"
+  },
+  {
+   "work": "Internet",
+   "count": 1,
+   "example": "Internet"
+  },
+  {
+   "work": "The End of Forgetting",
+   "count": 1,
+   "example": "The End of Forgetting"
+  },
+  {
+   "work": "Judaism and Privacy\" myjewishlearning.com",
+   "count": 1,
+   "example": "Judaism and Privacy\" myjewishlearning.com"
+  },
+  {
+   "work": "Midrash Sh'muel",
+   "count": 1,
+   "example": "Midrash Sh'muel"
+  },
+  {
+   "work": "Pirke Avot : Wisdom of the Jewish Sages",
+   "count": 1,
+   "example": "Pirke Avot : Wisdom of the Jewish Sages"
+  },
+  {
+   "work": "Pirke Avot : A Modern Commentary on Jewish Ethics",
+   "count": 1,
+   "example": "Pirke Avot : A Modern Commentary on Jewish Ethics"
+  },
+  {
+   "work": "JPS translation ] Mishneh Torah",
+   "count": 1,
+   "example": "JPS translation ] Mishneh Torah 8"
+  },
+  {
+   "work": "Mishneh Torah Laws of Mezzuza",
+   "count": 1,
+   "example": "Mishneh Torah Laws of Mezzuza 6:1"
+  },
+  {
+   "work": "Anaf Yosef",
+   "count": 1,
+   "example": "Anaf Yosef"
+  },
+  {
+   "work": "Moed Le’kol Chai",
+   "count": 1,
+   "example": "Moed Le’kol Chai"
+  },
+  {
+   "work": "בראשית רבה ח:ה Suggested Discussion Questions",
+   "count": 1,
+   "example": "בראשית רבה ח:ה Suggested Discussion Questions: 1"
+  },
+  {
+   "work": "Josephus, Jewish Antiquities",
+   "count": 1,
+   "example": "Josephus, Jewish Antiquities 4:276"
+  },
+  {
+   "work": "Sifra Kedoshim, parashah",
+   "count": 1,
+   "example": "Sifra Kedoshim, parashah 2"
+  },
+  {
+   "work": "Ibid. To the Mekhilta",
+   "count": 1,
+   "example": "Ibid. To the Mekhilta"
+  },
+  {
+   "work": "Avnei Nezer: Orah Hayim",
+   "count": 1,
+   "example": "Avnei Nezer: Orah Hayim 2:508"
+  },
+  {
+   "work": "Manischewitz Wants to Move to a Mainstream Aisle",
+   "count": 1,
+   "example": "Manischewitz Wants to Move to a Mainstream Aisle"
+  },
+  {
+   "work": "Jan",
+   "count": 1,
+   "example": "Jan. 28"
+  },
+  {
+   "work": "How to Run a Traditional Jewish Household",
+   "count": 1,
+   "example": "How to Run a Traditional Jewish Household"
+  },
+  {
+   "work": "Weekly Parashah Study Companion",
+   "count": 1,
+   "example": "Weekly Parashah Study Companion"
+  },
+  {
+   "work": "The Israeli Declaration of Independence",
+   "count": 1,
+   "example": "The Israeli Declaration of Independence"
+  },
+  {
+   "work": "Balfour Declaration of the",
+   "count": 1,
+   "example": "Balfour Declaration of the 2nd November, 1917"
+  },
+  {
+   "work": "Official Gazette",
+   "count": 1,
+   "example": "Official Gazette"
+  },
+  {
+   "work": "Shevat",
+   "count": 1,
+   "example": "Shevat 5709"
+  },
+  {
+   "work": "Figure",
+   "count": 1,
+   "example": "Figure 3"
+  },
+  {
+   "work": "Lion of Jud",
+   "count": 1,
+   "example": "Lion of Jud"
+  },
+  {
+   "work": "Liturgical “Return to Zion",
+   "count": 1,
+   "example": "Liturgical “Return to Zion"
+  },
+  {
+   "work": "Speech Before Sentencing”",
+   "count": 1,
+   "example": "Speech Before Sentencing” (1978)"
+  },
+  {
+   "work": "Great Speeches Throughout Jewish Hisotry",
+   "count": 1,
+   "example": "Great Speeches Throughout Jewish Hisotry"
+  },
+  {
+   "work": "Birth and Transformation of an Ideal",
+   "count": 1,
+   "example": "Birth and Transformation of an Ideal"
+  },
+  {
+   "work": "Declaration of Independence",
+   "count": 1,
+   "example": "Declaration of Independence"
+  },
+  {
+   "work": "Modeh Ani By Meir Ariel Modeh ani Before Thee",
+   "count": 1,
+   "example": "Modeh Ani By Meir Ariel Modeh ani Before Thee"
+  },
+  {
+   "work": "Above you, the Divine Presence",
+   "count": 1,
+   "example": "Above you, the Divine Presence,"
+  },
+  {
+   "work": "Light of Israel, Right-Hand Pillar",
+   "count": 1,
+   "example": "Light of Israel, Right-Hand Pillar"
+  },
+  {
+   "work": "Torah of Israel",
+   "count": 1,
+   "example": "Torah of Israel"
+  },
+  {
+   "work": "Biblical Book of Psalms",
+   "count": 1,
+   "example": "Biblical Book of Psalms"
+  },
+  {
+   "work": "Live at the Del",
+   "count": 1,
+   "example": "Live at the Del"
+  },
+  {
+   "work": "Schlock Rock",
+   "count": 1,
+   "example": "Schlock Rock"
+  },
+  {
+   "work": "The Longest Time",
+   "count": 1,
+   "example": "The Longest Time"
+  },
+  {
+   "work": "Keil Adon",
+   "count": 1,
+   "example": "Keil Adon"
+  },
+  {
+   "work": "Times of Israel",
+   "count": 1,
+   "example": "Times of Israel"
+  },
+  {
+   "work": "Leviticus/Vayikra",
+   "count": 1,
+   "example": "Leviticus/Vayikra"
+  },
+  {
+   "work": "Kol Yisrael",
+   "count": 1,
+   "example": "Kol Yisrael"
+  },
+  {
+   "work": "Yehuda ha-Levi",
+   "count": 1,
+   "example": "Yehuda ha-Levi (1075? – 1141?)"
+  },
+  {
+   "work": "Judah ha-Levi",
+   "count": 1,
+   "example": "Judah ha-Levi"
+  },
+  {
+   "work": "Kaufmann, \"Jehuda Halevi",
+   "count": 1,
+   "example": "Kaufmann, \"Jehuda Halevi"
+  },
+  {
+   "work": "Neot Deshe",
+   "count": 1,
+   "example": "Neot Deshe"
+  },
+  {
+   "work": "Tosfot Rid",
+   "count": 1,
+   "example": "Tosfot Rid"
+  },
+  {
+   "work": "Pirkei D'Rebi Eliezer",
+   "count": 1,
+   "example": "Pirkei D'Rebi Eliezer"
+  },
+  {
+   "work": "Zohar end of Parsha Lech Lecha",
+   "count": 1,
+   "example": "Zohar end of Parsha Lech Lecha"
+  },
+  {
+   "work": "Jewish Chronicle. T",
+   "count": 1,
+   "example": "Jewish Chronicle. T"
+  },
+  {
+   "work": "Jewish Question",
+   "count": 1,
+   "example": "Jewish Question"
+  },
+  {
+   "work": "Amos Yadlin Shared Leadership Lessons",
+   "count": 1,
+   "example": "Amos Yadlin Shared Leadership Lessons"
+  },
+  {
+   "work": "Amos Yadlin",
+   "count": 1,
+   "example": "Amos Yadlin"
+  },
+  {
+   "work": "Israel, My People",
+   "count": 1,
+   "example": "Israel, My People"
+  },
+  {
+   "work": "Midrash Sifrei, Re",
+   "count": 1,
+   "example": "Midrash Sifrei, Re'eh. 80"
+  },
+  {
+   "work": "Roots and Wings I want",
+   "count": 1,
+   "example": "Roots and Wings I want"
+  },
+  {
+   "work": "Chanuka",
+   "count": 1,
+   "example": "Chanuka"
+  },
+  {
+   "work": "Menorah",
+   "count": 1,
+   "example": "Menorah"
+  },
+  {
+   "work": "Menorah Returns",
+   "count": 1,
+   "example": "Menorah Returns, 1951"
+  },
+  {
+   "work": "Creative Activity",
+   "count": 1,
+   "example": "Creative Activity"
+  },
+  {
+   "work": "Mark Twain",
+   "count": 1,
+   "example": "Mark Twain"
+  },
+  {
+   "work": "Mark Twain, The Innocents Abroad . [London",
+   "count": 1,
+   "example": "Mark Twain, The Innocents Abroad . [London: 1881]"
+  },
+  {
+   "work": "JNF Blue Box",
+   "count": 1,
+   "example": "JNF Blue Box."
+  },
+  {
+   "work": "PikiWiki Israel",
+   "count": 1,
+   "example": "PikiWiki Israel 14886 Blue box , CC BY 2.5"
+  },
+  {
+   "work": "Israel Religious Action Center",
+   "count": 1,
+   "example": "Israel Religious Action Center"
+  },
+  {
+   "work": "Ruach Tzahal Draws from Four Sources",
+   "count": 1,
+   "example": "Ruach Tzahal Draws from Four Sources"
+  },
+  {
+   "work": "Locusts, Giraffes",
+   "count": 1,
+   "example": "Locusts, Giraffes"
+  },
+  {
+   "work": "Shulchan Aruch has",
+   "count": 1,
+   "example": "Shulchan Aruch has 4 sections"
+  },
+  {
+   "work": "Yoreh De’ah section",
+   "count": 1,
+   "example": "Yoreh De’ah section"
+  },
+  {
+   "work": "commentary on Leviticus",
+   "count": 1,
+   "example": "commentary on Leviticus 11:21"
+  },
+  {
+   "work": "Yemenite Tradition",
+   "count": 1,
+   "example": "Yemenite Tradition"
+  },
+  {
+   "work": "Schistocerca gregaria",
+   "count": 1,
+   "example": "Schistocerca gregaria"
+  },
+  {
+   "work": "Kashrut Guide",
+   "count": 1,
+   "example": "Kashrut Guide"
+  },
+  {
+   "work": "Bakelite",
+   "count": 1,
+   "example": "Bakelite"
+  },
+  {
+   "work": "Teflon",
+   "count": 1,
+   "example": "Teflon"
+  },
+  {
+   "work": "EXPLANATION OF THE ABARBANEL",
+   "count": 1,
+   "example": "EXPLANATION OF THE ABARBANEL (Introduction and Translation"
+  },
+  {
+   "work": "Abarbanel",
+   "count": 1,
+   "example": "Abarbanel (15 th century, Spain)"
+  },
+  {
+   "work": "Horeb",
+   "count": 1,
+   "example": "Horeb p.318-319"
+  },
+  {
+   "work": "Mesharim",
+   "count": 1,
+   "example": "Sefer Mesharim"
+  },
+  {
+   "work": "Toledot Adam we-Ḥawwah",
+   "count": 1,
+   "example": "Toledot Adam we-Ḥawwah"
+  },
+  {
+   "work": "Toldot Adam v'Chava, Netiv",
+   "count": 1,
+   "example": "Toldot Adam v'Chava, Netiv 15 [If]"
+  },
+  {
+   "work": "Shem Hagedolim",
+   "count": 1,
+   "example": "Shem Hagedolim"
+  },
+  {
+   "work": "Adam V'Chava",
+   "count": 1,
+   "example": "Sefer Adam V'Chava"
+  },
+  {
+   "work": "Meisharim",
+   "count": 1,
+   "example": "Sefer Meisharim"
+  },
+  {
+   "work": "Minchat Asher",
+   "count": 1,
+   "example": "Shut Minchat Asher"
+  },
+  {
+   "work": "Isur V'Heter",
+   "count": 1,
+   "example": "Isur V'Heter"
+  },
+  {
+   "work": "Rabbeinu Yerucham",
+   "count": 1,
+   "example": "Rabbeinu Yerucham (Toldat Adam V'Chava)"
+  },
+  {
+   "work": "Manuscript MS Oct",
+   "count": 1,
+   "example": "Manuscript MS Oct 65"
+  },
+  {
+   "work": "Isur V'Heter is essentially Netiv",
+   "count": 1,
+   "example": "Isur V'Heter is essentially Netiv 15"
+  },
+  {
+   "work": "Toldot Adam V'Chava",
+   "count": 1,
+   "example": "Toldot Adam V'Chava"
+  },
+  {
+   "work": "This Psak",
+   "count": 1,
+   "example": "This Psak: 1"
+  },
+  {
+   "work": "Hagaohot Maimoniyos Taryag",
+   "count": 1,
+   "example": "Hagaohot Maimoniyos Taryag (613)"
+  },
+  {
+   "work": "A Heart of Many Rooms p",
+   "count": 1,
+   "example": "A Heart of Many Rooms p. 196 (2001)"
+  },
+  {
+   "work": "Mark",
+   "count": 1,
+   "example": "Mark 7:15"
+  },
+  {
+   "work": "Torah: A Modern Commentary, Revised Edition",
+   "count": 1,
+   "example": "Torah: A Modern Commentary, Revised Edition, Page 721"
+  },
+  {
+   "work": "Tshuvot ha-Geonim",
+   "count": 1,
+   "example": "Tshuvot ha-Geonim 352 kumnita de-uma"
+  },
+  {
+   "work": "Excerpts from Charles Perry",
+   "count": 1,
+   "example": "Excerpts from Charles Perry"
+  },
+  {
+   "work": "The Book of Recipes",
+   "count": 1,
+   "example": "The Book of Recipes"
+  },
+  {
+   "work": "Ein Ayah, Shabbat",
+   "count": 1,
+   "example": "Ein Ayah, Shabbat 6:109"
+  },
+  {
+   "work": "Alternative Medicine",
+   "count": 1,
+   "example": "Alternative Medicine"
+  },
+  {
+   "work": "Halakhah U’refuah",
+   "count": 1,
+   "example": "Halakhah U’refuah , vol. 3"
+  },
+  {
+   "work": "Rashi there",
+   "count": 1,
+   "example": "Rashi there, 26a, s.v. ha’bayit tamei"
+  },
+  {
+   "work": "Tosefta Brakhot",
+   "count": 1,
+   "example": "Tosefta Brakhot 2:14"
+  },
+  {
+   "work": "Rambam, Peirush Ha’mishnayot , Mishnah Zevahim",
+   "count": 1,
+   "example": "Rambam, Peirush Ha’mishnayot , Mishnah Zevahim 3:5"
+  },
+  {
+   "work": "Rashi , Berakhot",
+   "count": 1,
+   "example": "Rashi , Berakhot 4a, s.v. u’vishilya"
+  },
+  {
+   "work": "Original Sources Why",
+   "count": 1,
+   "example": "Original Sources Why"
+  },
+  {
+   "work": "Literal Blood Thirst​ ​",
+   "count": 1,
+   "example": "Literal Blood Thirst​ ​"
+  },
+  {
+   "work": "Richard H. Schwartz",
+   "count": 1,
+   "example": "Richard H. Schwartz"
+  },
+  {
+   "work": "Kashrut Cultivates a Peaceful Person",
+   "count": 1,
+   "example": "Kashrut Cultivates a Peaceful Person"
+  },
+  {
+   "work": "K’li Yakar",
+   "count": 1,
+   "example": "K’li Yakar"
+  },
+  {
+   "work": "The Whiskey Brouhaha",
+   "count": 1,
+   "example": "The Whiskey Brouhaha"
+  },
+  {
+   "work": "Minchat Yitzhak",
+   "count": 1,
+   "example": "Minchat Yitzhak (aka Rabbi Yitzhak Yaakov Weiss)"
+  },
+  {
+   "work": "LBD",
+   "count": 1,
+   "example": "LBD: 1"
+  },
+  {
+   "work": "Minchas Yitzchok",
+   "count": 1,
+   "example": "Minchas Yitzchok Vol 2, 28"
+  },
+  {
+   "work": "Igros Moshe Yore Deah",
+   "count": 1,
+   "example": "Igros Moshe Yore Deah Vol 1, 62 and"
+  },
+  {
+   "work": "Teshuvos Igros Moshe",
+   "count": 1,
+   "example": "Teshuvos Igros Moshe"
+  },
+  {
+   "work": "CRC Website",
+   "count": 1,
+   "example": "CRC Website"
+  },
+  {
+   "work": "Tosafot ad loc",
+   "count": 1,
+   "example": "Tosafot ad loc."
+  },
+  {
+   "work": "second chapter of Shabbat",
+   "count": 1,
+   "example": "second chapter of Shabbat"
+  },
+  {
+   "work": "Mikdash Melech to Zohar Parshat Bereishit",
+   "count": 1,
+   "example": "Mikdash Melech to Zohar Parshat Bereishit 17b"
+  },
+  {
+   "work": "1. A Destructive Force of Nature",
+   "count": 1,
+   "example": "1. A Destructive Force of Nature 2"
+  },
+  {
+   "work": "Hazon Ish's Commentary to Bava Batra",
+   "count": 1,
+   "example": "Hazon Ish's Commentary to Bava Batra (translation from"
+  },
+  {
+   "work": "Showiness That Could Lead to Jealousy",
+   "count": 1,
+   "example": "Showiness That Could Lead to Jealousy"
+  },
+  {
+   "work": "Gemara Eruvin",
+   "count": 1,
+   "example": "Gemara Eruvin 64ab"
+  },
+  {
+   "work": "Avodah Zarah had",
+   "count": 1,
+   "example": "Avodah Zarah had (44)"
+  },
+  {
+   "work": "book of Esther on Purim",
+   "count": 1,
+   "example": "book of Esther on Purim"
+  },
+  {
+   "work": "Mitzvot HaGadol",
+   "count": 1,
+   "example": "Sefer Mitzvot HaGadol"
+  },
+  {
+   "work": "Keter Torah",
+   "count": 1,
+   "example": "Keter Torah"
+  },
+  {
+   "work": "Ten Sayings",
+   "count": 1,
+   "example": "Ten Sayings (aka 10 commandments)"
+  },
+  {
+   "work": "Heart of Torah",
+   "count": 1,
+   "example": "Heart of Torah"
+  },
+  {
+   "work": "The Heart of Torah, Parashat Vayera",
+   "count": 1,
+   "example": "The Heart of Torah, Parashat Vayera"
+  },
+  {
+   "work": "Pirkei Avot is at the end of Seder Nezikin",
+   "count": 1,
+   "example": "Pirkei Avot is at the end of Seder Nezikin"
+  },
+  {
+   "work": "Kodashim",
+   "count": 1,
+   "example": "Kodashim"
+  },
+  {
+   "work": "Biblical Books of Exodus, Leviticus",
+   "count": 1,
+   "example": "Biblical Books of Exodus, Leviticus"
+  },
+  {
+   "work": "Samuel",
+   "count": 1,
+   "example": "Samuel 1 22:5"
+  },
+  {
+   "work": "Nathan",
+   "count": 1,
+   "example": "Nathan (Samuel 2 7:2)"
+  },
+  {
+   "work": "Megillah",
+   "count": 1,
+   "example": "Megillah 17b, 18a"
+  },
+  {
+   "work": "Bible",
+   "count": 1,
+   "example": "Bible (Nehemiah 12:22)"
+  },
+  {
+   "work": "Book of First Maccabees",
+   "count": 1,
+   "example": "Book of First Maccabees (2:1-3)"
+  },
+  {
+   "work": "Pirkei Avot, t",
+   "count": 1,
+   "example": "Pirkei Avot, t"
+  },
+  {
+   "work": "Kindness Test",
+   "count": 1,
+   "example": "Kindness Test 1"
+  },
+  {
+   "work": "V’Shamru",
+   "count": 1,
+   "example": "V’Shamru"
+  },
+  {
+   "work": "Zachor v’Shamor b’dibur echad",
+   "count": 1,
+   "example": "Zachor v’Shamor b’dibur echad"
+  },
+  {
+   "work": "Mechilta",
+   "count": 1,
+   "example": "Mechilta 20:8:1"
+  },
+  {
+   "work": "B’nai Yisrael et haShabbat",
+   "count": 1,
+   "example": "B’nai Yisrael et haShabbat"
+  },
+  {
+   "work": "Tzelem, take",
+   "count": 1,
+   "example": "Tzelem, take 5: A Challenge to CommunityRabbi Deborah Waxman"
+  },
+  {
+   "work": "From Remarks at the",
+   "count": 1,
+   "example": "From Remarks at the 2016 LGBT Health Forum"
+  },
+  {
+   "work": "Tzelem , Take",
+   "count": 1,
+   "example": "Tzelem , Take 6: What Does That Word Mean, Again"
+  },
+  {
+   "work": "Old Akkadian",
+   "count": 1,
+   "example": "Old Akkadian"
+  },
+  {
+   "work": "Old Babylonian",
+   "count": 1,
+   "example": "Old Babylonian"
+  },
+  {
+   "work": "Judaism and Environmental Ethics: A Reader",
+   "count": 1,
+   "example": "Judaism and Environmental Ethics: A Reader"
+  },
+  {
+   "work": "Julius Rosenwald",
+   "count": 1,
+   "example": "Julius Rosenwald (1862-1932)"
+  },
+  {
+   "work": "Year",
+   "count": 1,
+   "example": "Year 6"
+  },
+  {
+   "work": "Babylonian Talmu",
+   "count": 1,
+   "example": "Babylonian Talmu"
+  },
+  {
+   "work": "Li Zhou, Vox , October",
+   "count": 1,
+   "example": "Li Zhou, Vox , October 15, 2021"
+  },
+  {
+   "work": "Heavy of Tongue",
+   "count": 1,
+   "example": "Heavy of Tongue"
+  },
+  {
+   "work": "Spong",
+   "count": 1,
+   "example": "Spong, 1992, 1994"
+  },
+  {
+   "work": "Twelve Prophets",
+   "count": 1,
+   "example": "Twelve Prophets"
+  },
+  {
+   "work": "Yom Kippurim is Yom K",
+   "count": 1,
+   "example": "Yom Kippurim is Yom K"
+  },
+  {
+   "work": "Pachad Yitzchak, Purim",
+   "count": 1,
+   "example": "Pachad Yitzchak, Purim 8"
+  },
+  {
+   "work": "JSB",
+   "count": 1,
+   "example": "JSB"
+  },
+  {
+   "work": "Cambridge Bible Commentary",
+   "count": 1,
+   "example": "Cambridge Bible Commentary"
+  },
+  {
+   "work": "BibleHub",
+   "count": 1,
+   "example": "BibleHub"
+  },
+  {
+   "work": "Giver of Life",
+   "count": 1,
+   "example": "Giver of Life"
+  },
+  {
+   "work": "Lord of Life",
+   "count": 1,
+   "example": "Lord of Life"
+  },
+  {
+   "work": "Lord of Eternity and Infinity” c. Wonderful, Counseller",
+   "count": 1,
+   "example": "Lord of Eternity and Infinity” c. Wonderful, Counseller"
+  },
+  {
+   "work": "ch. Isaiah",
+   "count": 1,
+   "example": "ch. Isaiah 28:29"
+  },
+  {
+   "work": "ESV Study Bible",
+   "count": 1,
+   "example": "ESV Study Bible"
+  },
+  {
+   "work": "Joshua Judges Samuel I",
+   "count": 1,
+   "example": "Joshua Judges Samuel I"
+  },
+  {
+   "work": "II Kings I",
+   "count": 1,
+   "example": "II Kings I"
+  },
+  {
+   "work": "II Major Prophets",
+   "count": 1,
+   "example": "II Major Prophets"
+  },
+  {
+   "work": "Isaiah Jeremiah Ezekiel Minor Prophets: Hosea Joel Amos",
+   "count": 1,
+   "example": "Isaiah Jeremiah Ezekiel Minor Prophets: Hosea Joel Amos"
+  },
+  {
+   "work": "Male Prophets",
+   "count": 1,
+   "example": "Male Prophets"
+  },
+  {
+   "work": "Week #1: Law Week #1: Law",
+   "count": 1,
+   "example": "Week #1: Law Week #1: Law 1st Wave Feminism"
+  },
+  {
+   "work": "Women Jewish Law",
+   "count": 1,
+   "example": "Women Jewish Law , 1995"
+  },
+  {
+   "work": "Engendering Judaism",
+   "count": 1,
+   "example": "Engendering Judaism"
+  },
+  {
+   "work": "Starhawk, Dreaming the Dark",
+   "count": 1,
+   "example": "Starhawk, Dreaming the Dark"
+  },
+  {
+   "work": "Ta'anit Ester",
+   "count": 1,
+   "example": "Ta'anit Ester"
+  },
+  {
+   "work": "Ethan Tucker",
+   "count": 1,
+   "example": "Ethan Tucker"
+  },
+  {
+   "work": "Mishnaic texts",
+   "count": 1,
+   "example": "Mishnaic texts"
+  },
+  {
+   "work": "Eliyahu Zuta",
+   "count": 1,
+   "example": "Eliyahu Zuta 8:3"
+  },
+  {
+   "work": "Multiplier of Universes",
+   "count": 1,
+   "example": "Multiplier of Universes"
+  },
+  {
+   "work": "Taanit Esther",
+   "count": 1,
+   "example": "Taanit Esther"
+  },
+  {
+   "work": "Radak: רד\"ק ירמיהו פרק מא",
+   "count": 1,
+   "example": "Radak: רד\"ק ירמיהו פרק מא (א)"
+  },
+  {
+   "work": "Haftorah. Chapter three",
+   "count": 1,
+   "example": "Haftorah. Chapter three"
+  },
+  {
+   "work": "Artscroll translation",
+   "count": 1,
+   "example": "Artscroll translation"
+  },
+  {
+   "work": "commentary to their Wasserman siddur",
+   "count": 1,
+   "example": "commentary to their Wasserman siddur"
+  },
+  {
+   "work": "Wassserman Edition Artscroll Siddur",
+   "count": 1,
+   "example": "Wassserman Edition Artscroll Siddur, page 108"
+  },
+  {
+   "work": "Strong's Bible Dictionary",
+   "count": 1,
+   "example": "Strong's Bible Dictionary"
+  },
+  {
+   "work": "Commentary to the Torah",
+   "count": 1,
+   "example": "Commentary to the Torah"
+  },
+  {
+   "work": "Haftarot of Rebuke and Comfort",
+   "count": 1,
+   "example": "Haftarot of Rebuke and Comfort"
+  },
+  {
+   "work": "Haftarot of Comfort",
+   "count": 1,
+   "example": "Haftarot of Comfort"
+  },
+  {
+   "work": "Eili Tziyon",
+   "count": 1,
+   "example": "Eili Tziyon"
+  },
+  {
+   "work": "Mishnah, Masechet",
+   "count": 1,
+   "example": "Mishnah, Masechet (tractate) Megillah"
+  },
+  {
+   "work": "Sukkot)",
+   "count": 1,
+   "example": "Sukkot), 6 on Yom Kippur"
+  },
+  {
+   "work": "weekly Torah Reading",
+   "count": 1,
+   "example": "weekly Torah Reading"
+  },
+  {
+   "work": "Torah Blessings",
+   "count": 1,
+   "example": "Torah Blessings"
+  },
+  {
+   "work": "Old Testamen",
+   "count": 1,
+   "example": "Old Testamen"
+  },
+  {
+   "work": "Liturgical Body",
+   "count": 1,
+   "example": "Liturgical Body"
+  },
+  {
+   "work": "10 Commandments",
+   "count": 1,
+   "example": "10 Commandments"
+  },
+  {
+   "work": "The Unsettling of America , pgs",
+   "count": 1,
+   "example": "The Unsettling of America , pgs 126-127"
+  },
+  {
+   "work": "first chapter of Ezekiel",
+   "count": 1,
+   "example": "first chapter of Ezekiel"
+  },
+  {
+   "work": "Haftorah, Ezekial",
+   "count": 1,
+   "example": "Haftorah, Ezekial 44:15-31"
+  },
+  {
+   "work": "Ezekial",
+   "count": 1,
+   "example": "Ezekial"
+  },
+  {
+   "work": "Moses",
+   "count": 1,
+   "example": "Moses. 2b"
+  },
+  {
+   "work": "Pirke d'Rabbi Eliezer,1st-3rd Century",
+   "count": 1,
+   "example": "Pirke d'Rabbi Eliezer,1st-3rd Century"
+  },
+  {
+   "work": "JEWISH WEDDING CEREMONY Before the Ceremony",
+   "count": 1,
+   "example": "JEWISH WEDDING CEREMONY Before the Ceremony"
+  },
+  {
+   "work": "on Homosexuality Conclusions",
+   "count": 1,
+   "example": "Responsa on Homosexuality Conclusions: 1"
+  },
+  {
+   "work": "Babylonian Talmud, Nadarim",
+   "count": 1,
+   "example": "Babylonian Talmud, Nadarim 20b"
+  },
+  {
+   "work": "MARRIAGES Leviticus",
+   "count": 1,
+   "example": "MARRIAGES Leviticus 18"
+  },
+  {
+   "work": "LORD. Leviticus",
+   "count": 1,
+   "example": "LORD. Leviticus 18:22"
+  },
+  {
+   "work": "Mekor HaChayim",
+   "count": 1,
+   "example": "Mekor HaChayim"
+  },
+  {
+   "work": "USHPERIN - FIRST HAIRCUT Tu",
+   "count": 1,
+   "example": "USHPERIN - FIRST HAIRCUT Tu"
+  },
+  {
+   "work": "S trive for Truth",
+   "count": 1,
+   "example": "S trive for Truth volume 1 , pages 127"
+  },
+  {
+   "work": "Michtav Me’Eliyahu , see",
+   "count": 1,
+   "example": "Michtav Me’Eliyahu , see volume 1"
+  },
+  {
+   "work": "Kuntrus HaChesed",
+   "count": 1,
+   "example": "Kuntrus HaChesed"
+  },
+  {
+   "work": "Pirkei HaNosein V’Hanoteil",
+   "count": 1,
+   "example": "Pirkei HaNosein V’Hanoteil , page 36, chapter 4 בשורש האהבה"
+  },
+  {
+   "work": "ArtScroll Yevamos",
+   "count": 1,
+   "example": "ArtScroll Yevamos 63a, note 4"
+  },
+  {
+   "work": "book, She Rises Above All",
+   "count": 1,
+   "example": "book, She Rises Above All"
+  },
+  {
+   "work": "Shulchan Aruch Paskens",
+   "count": 1,
+   "example": "Shulchan Aruch Paskens"
+  },
+  {
+   "work": "Peru Urivu",
+   "count": 1,
+   "example": "Peru Urivu"
+  },
+  {
+   "work": "Dor Haflaga. The Haemek Davar",
+   "count": 1,
+   "example": "Dor Haflaga. The Haemek Davar"
+  },
+  {
+   "work": "Babylonian Echoes in a Late Rabbinic Legend",
+   "count": 1,
+   "example": "Babylonian Echoes in a Late Rabbinic Legend"
+  },
+  {
+   "work": "Footnote",
+   "count": 1,
+   "example": "Footnote 11"
+  },
+  {
+   "work": "BT Pesahim",
+   "count": 1,
+   "example": "BT Pesahim 113a, Baba Qama 60b"
+  },
+  {
+   "work": "81b. Geonic Rulings Anonymous in Shaarei Tzedek",
+   "count": 1,
+   "example": "81b. Geonic Rulings Anonymous in Shaarei Tzedek, 4.4.60"
+  },
+  {
+   "work": "of the Rosh",
+   "count": 1,
+   "example": "Responsa of the Rosh, 43:8"
+  },
+  {
+   "work": "Bavli Type",
+   "count": 1,
+   "example": "Bavli Type 1"
+  },
+  {
+   "work": "B. Bathra",
+   "count": 1,
+   "example": "B. Bathra 48b"
+  },
+  {
+   "work": "Eicha Rabba",
+   "count": 1,
+   "example": "Eicha Rabba (Vilna) Proem 24 ( A collection of"
+  },
+  {
+   "work": "Midrashim on Eicha",
+   "count": 1,
+   "example": "Midrashim on Eicha"
+  },
+  {
+   "work": "Deutoronomy",
+   "count": 1,
+   "example": "Deutoronomy 21:15: Two"
+  },
+  {
+   "work": "Chizkuni on Geneis",
+   "count": 1,
+   "example": "Chizkuni on Geneis 29:34"
+  },
+  {
+   "work": "Midrash Shocher Tov on Mishlei",
+   "count": 1,
+   "example": "Midrash Shocher Tov on Mishlei"
+  },
+  {
+   "work": "Shabbos Queen \"Eishes Chayil",
+   "count": 1,
+   "example": "Shabbos Queen \"Eishes Chayil"
+  },
+  {
+   "work": "Eishes Chayil",
+   "count": 1,
+   "example": "Eishes Chayil"
+  },
+  {
+   "work": "Eshet Chayil ?\" TheTorah.org",
+   "count": 1,
+   "example": "Eshet Chayil ?\" TheTorah.org"
+  },
+  {
+   "work": "Eshet Chayil",
+   "count": 1,
+   "example": "Eshet Chayil"
+  },
+  {
+   "work": "More Precious Than Pearls",
+   "count": 1,
+   "example": "More Precious Than Pearls"
+  },
+  {
+   "work": "Tanna Devei Eliyahu Rabba",
+   "count": 1,
+   "example": "Tanna Devei Eliyahu Rabba 9"
+  },
+  {
+   "work": "Sheva Brachot",
+   "count": 1,
+   "example": "Sheva Brachot (Seven Blessings, #5-7)"
+  },
+  {
+   "work": "Wedding Liturgy",
+   "count": 1,
+   "example": "Wedding Liturgy"
+  },
+  {
+   "work": "Hirsch Chumash",
+   "count": 1,
+   "example": "Hirsch Chumash"
+  },
+  {
+   "work": "Sparkling Speech",
+   "count": 1,
+   "example": "Sparkling Speech"
+  },
+  {
+   "work": "The",
+   "count": 1,
+   "example": "The 39 Melochos , pages 95-132"
+  },
+  {
+   "work": "Hilchos Shabbos Review: Havdala For Women Opinion #1 - Women",
+   "count": 1,
+   "example": "Hilchos Shabbos Review: Havdala For Women Opinion #1 - Women"
+  },
+  {
+   "work": "hilchos Shabbos – Davar she’eino Miskaven",
+   "count": 1,
+   "example": "hilchos Shabbos – Davar she’eino Miskaven"
+  },
+  {
+   "work": "JewishBaseballPlayers.com",
+   "count": 1,
+   "example": "JewishBaseballPlayers.com"
+  },
+  {
+   "work": "JewishBaseballMuseum.com",
+   "count": 1,
+   "example": "JewishBaseballMuseum.com"
+  },
+  {
+   "work": "HaRefuah KeHalacha",
+   "count": 1,
+   "example": "HaRefuah KeHalacha vol. 4, pg. 547"
+  },
+  {
+   "work": "Yaskil Avdi",
+   "count": 1,
+   "example": "Responsa Yaskil Avdi, vol. 7, E\"H 4"
+  },
+  {
+   "work": "Dibros Eliyahu",
+   "count": 1,
+   "example": "Dibros Eliyahu vol. 8, 100"
+  },
+  {
+   "work": "Pischei Teshuva",
+   "count": 1,
+   "example": "Pischei Teshuva, E\"H 5:11"
+  },
+  {
+   "work": "Chasam Sofer",
+   "count": 1,
+   "example": "Chasam Sofer"
+  },
+  {
+   "work": "Cass Review",
+   "count": 1,
+   "example": "Cass Review"
+  },
+  {
+   "work": "Shiurei Torah l'Rofim",
+   "count": 1,
+   "example": "Shiurei Torah l'Rofim vol. 4 pg. 581"
+  },
+  {
+   "work": "book Irreversible Damage",
+   "count": 1,
+   "example": "book Irreversible Damage"
+  },
+  {
+   "work": "Journal of Halacha Contemporary Society",
+   "count": 1,
+   "example": "Journal of Halacha Contemporary Society, 2017"
+  },
+  {
+   "work": "Aruch ha’Shulchan",
+   "count": 1,
+   "example": "Aruch ha’Shulchan"
+  },
+  {
+   "work": "Halachos of Malbush",
+   "count": 1,
+   "example": "Halachos of Malbush"
+  },
+  {
+   "work": "Malbush",
+   "count": 1,
+   "example": "Malbush 2"
+  },
+  {
+   "work": "Birkat Habayit",
+   "count": 1,
+   "example": "Sefer Birkat Habayit (40:5)"
+  },
+  {
+   "work": "Tefillah Ke’hilchatah",
+   "count": 1,
+   "example": "Tefillah Ke’hilchatah (12:6)"
+  },
+  {
+   "work": "Schloendorff v Society of New York Hospitals",
+   "count": 1,
+   "example": "Schloendorff v Society of New York Hospitals"
+  },
+  {
+   "work": "Arato v. Avedon",
+   "count": 1,
+   "example": "Arato v. Avedon"
+  },
+  {
+   "work": "2. Clarence H. Braddock III",
+   "count": 1,
+   "example": "2. Clarence H. Braddock III"
+  },
+  {
+   "work": "Clarence H. Braddock III",
+   "count": 1,
+   "example": "Clarence H. Braddock III"
+  },
+  {
+   "work": "Mishloach Manos Ish l’reya’hu",
+   "count": 1,
+   "example": "Mishloach Manos Ish l’reya’hu"
+  },
+  {
+   "work": "﻿Spotify | Apple Podcasts | YouTube Link to Substack post",
+   "count": 1,
+   "example": "﻿Spotify | Apple Podcasts | YouTube Link to Substack post"
+  },
+  {
+   "work": "Ben Ish Chai",
+   "count": 1,
+   "example": "Ben Ish Chai"
+  },
+  {
+   "work": "haChinuch",
+   "count": 1,
+   "example": "Sefer haChinuch"
+  },
+  {
+   "work": "is Sheet",
+   "count": 1,
+   "example": "is Sheet"
+  },
+  {
+   "work": "Shavua Tov, Shabbat Shalom",
+   "count": 1,
+   "example": "Shavua Tov, Shabbat Shalom"
+  },
+  {
+   "work": "Siddur HaTalmid siddur",
+   "count": 1,
+   "example": "Siddur HaTalmid siddur"
+  },
+  {
+   "work": "Pesukei d’Zimra",
+   "count": 1,
+   "example": "Pesukei d’Zimra"
+  },
+  {
+   "work": "Verses of Song)",
+   "count": 1,
+   "example": "Verses of Song)"
+  },
+  {
+   "work": "Ashrei",
+   "count": 1,
+   "example": "Ashrei"
+  },
+  {
+   "work": "Yishtabach",
+   "count": 1,
+   "example": "Yishtabach. 4"
+  },
+  {
+   "work": "Alphabetical Order",
+   "count": 1,
+   "example": "Alphabetical Order"
+  },
+  {
+   "work": "Verse of Sustenance",
+   "count": 1,
+   "example": "Verse of Sustenance"
+  },
+  {
+   "work": "Vayikra chapter twenty-two",
+   "count": 1,
+   "example": "Vayikra chapter twenty-two"
+  },
+  {
+   "work": "Trivia Question: Those",
+   "count": 1,
+   "example": "Trivia Question: Those 5"
+  },
+  {
+   "work": "Blessings in My Life",
+   "count": 1,
+   "example": "Blessings in My Life"
+  },
+  {
+   "work": "Jewish Blessings",
+   "count": 1,
+   "example": "Jewish Blessings"
+  },
+  {
+   "work": "Asher kidshanu b’mitzvotav v’tzivanu",
+   "count": 1,
+   "example": "Asher kidshanu b’mitzvotav v’tzivanu"
+  },
+  {
+   "work": "BIRCHOT HA-SHACHAR ברכות השחר WOMEN AND",
+   "count": 1,
+   "example": "BIRCHOT HA-SHACHAR ברכות השחר WOMEN AND"
+  },
+  {
+   "work": "Shevet Ha-levi",
+   "count": 1,
+   "example": "Responsa Shevet Ha-levi 10:8:1"
+  },
+  {
+   "work": "Birchot Ha-shachar",
+   "count": 1,
+   "example": "Birchot Ha-shachar"
+  },
+  {
+   "work": "Halichot Beitah",
+   "count": 1,
+   "example": "Halichot Beitah 13:1, note 2"
+  },
+  {
+   "work": "Yalkut Yosef Pesukei De-zemra U-keriat Shema",
+   "count": 1,
+   "example": "Yalkut Yosef Pesukei De-zemra U-keriat Shema 46:3:5"
+  },
+  {
+   "work": "Open Siddur",
+   "count": 1,
+   "example": "Open Siddur"
+  },
+  {
+   "work": "Movement #5",
+   "count": 1,
+   "example": "Movement #5"
+  },
+  {
+   "work": "The Path of Blessing, pp",
+   "count": 1,
+   "example": "The Path of Blessing, pp. 58/59/60"
+  },
+  {
+   "work": "Lachish Letters",
+   "count": 1,
+   "example": "Lachish Letters"
+  },
+  {
+   "work": "Hebrew Scriptures",
+   "count": 1,
+   "example": "Hebrew Scriptures"
+  },
+  {
+   "work": "Hebrew ha-Shem",
+   "count": 1,
+   "example": "Hebrew ha-Shem"
+  },
+  {
+   "work": "Third Commandment",
+   "count": 1,
+   "example": "Third Commandment (Ex. 20:7"
+  },
+  {
+   "work": "Y’varech’cha Hashem v’yish’mirecha",
+   "count": 1,
+   "example": "Y’varech’cha Hashem v’yish’mirecha"
+  },
+  {
+   "work": "Psalms for Everyone",
+   "count": 1,
+   "example": "Psalms for Everyone"
+  },
+  {
+   "work": "Kesubos",
+   "count": 1,
+   "example": "Kesubos"
+  },
+  {
+   "work": "Tosfos Rosh",
+   "count": 1,
+   "example": "Tosfos Rosh"
+  },
+  {
+   "work": "Birkas Kohanim",
+   "count": 1,
+   "example": "Birkas Kohanim"
+  },
+  {
+   "work": "Torah Temima - Naso #131",
+   "count": 1,
+   "example": "Torah Temima - Naso #131"
+  },
+  {
+   "work": "Keshet Shoval 'The Text of Birkat Ha-mazon,' p",
+   "count": 1,
+   "example": "Keshet Shoval 'The Text of Birkat Ha-mazon,' p. 146-147"
+  },
+  {
+   "work": "Siddur Rav Sa'adya Ga'on",
+   "count": 1,
+   "example": "Siddur Rav Sa'adya Ga'on"
+  },
+  {
+   "work": "Birkat Ha-aretz",
+   "count": 1,
+   "example": "Birkat Ha-aretz"
+  },
+  {
+   "work": "Ha-ge’onim",
+   "count": 1,
+   "example": "Teshuvot Ha-ge’onim"
+  },
+  {
+   "work": "Sha’arei Teshuva",
+   "count": 1,
+   "example": "Sha’arei Teshuva 345"
+  },
+  {
+   "work": "Tosafot Rav Yehuda Sirleon",
+   "count": 1,
+   "example": "Tosafot Rav Yehuda Sirleon,"
+  },
+  {
+   "work": "Beit Ha-bechira, Berachot",
+   "count": 1,
+   "example": "Beit Ha-bechira, Berachot 48b"
+  },
+  {
+   "work": "Rabbeinu Yona Berachot",
+   "count": 1,
+   "example": "Rabbeinu Yona Berachot 11b"
+  },
+  {
+   "work": "Rishon Le-Tzion Berachot",
+   "count": 1,
+   "example": "Rishon Le-Tzion Berachot 20b"
+  },
+  {
+   "work": "Birkat Ha-Mazon",
+   "count": 1,
+   "example": "Birkat Ha-Mazon"
+  },
+  {
+   "work": "Chiddushei Ha-Ritva, Pesachim",
+   "count": 1,
+   "example": "Chiddushei Ha-Ritva, Pesachim 7b"
+  },
+  {
+   "work": "Or Zarua II Rosh Ha-shana",
+   "count": 1,
+   "example": "Or Zarua II Rosh Ha-shana 266"
+  },
+  {
+   "work": "Hagahot Maymoniyot, Laws of Tzitzit",
+   "count": 1,
+   "example": "Hagahot Maymoniyot, Laws of Tzitzit, 3:40"
+  },
+  {
+   "work": "Or Zarua II Rosh Hashana",
+   "count": 1,
+   "example": "Or Zarua II Rosh Hashana 266"
+  },
+  {
+   "work": "Yosef Ometz",
+   "count": 1,
+   "example": "Responsa Yosef Ometz 82"
+  },
+  {
+   "work": "Yabia Omer Part",
+   "count": 1,
+   "example": "Responsa Yabia Omer Part 5: Orach Chayim 43"
+  },
+  {
+   "work": "Megillat Rut",
+   "count": 1,
+   "example": "Megillat Rut"
+  },
+  {
+   "work": "Writings section of the",
+   "count": 1,
+   "example": "Writings section of the"
+  },
+  {
+   "work": "first chapter of the Book of Ruth",
+   "count": 1,
+   "example": "first chapter of the Book of Ruth"
+  },
+  {
+   "work": "Mara",
+   "count": 1,
+   "example": "Mara"
+  },
+  {
+   "work": "1. History",
+   "count": 1,
+   "example": "1. History"
+  },
+  {
+   "work": "First Ruth",
+   "count": 1,
+   "example": "First Ruth"
+  },
+  {
+   "work": "Everett Fox",
+   "count": 1,
+   "example": "Everett Fox"
+  },
+  {
+   "work": "TRADITION: FROM THE TALMUD - ONLY ONE READER",
+   "count": 1,
+   "example": "TRADITION: FROM THE TALMUD - ONLY ONE READER"
+  },
+  {
+   "work": "Schapira Summary Bechukotai [My statutes]",
+   "count": 1,
+   "example": "Schapira Summary Bechukotai [My statutes]"
+  },
+  {
+   "work": "Leviticus / Vayikra",
+   "count": 1,
+   "example": "Leviticus / Vayikra"
+  },
+  {
+   "work": "Deuteronomy / Devarim",
+   "count": 1,
+   "example": "Deuteronomy / Devarim 28"
+  },
+  {
+   "work": "Parshah of Bechukotai",
+   "count": 1,
+   "example": "Parshah of Bechukotai"
+  },
+  {
+   "work": "Tzitz Eliezer IV",
+   "count": 1,
+   "example": "Responsa Tzitz Eliezer IV 16:12"
+  },
+  {
+   "work": "Unnamed Early Halachic Authority, Kiddushin",
+   "count": 1,
+   "example": "Unnamed Early Halachic Authority, Kiddushin 41a"
+  },
+  {
+   "work": "Rambam, Sefer Ha-mitzvot, End of Positive Commandments",
+   "count": 1,
+   "example": "Rambam, Sefer Ha-mitzvot, End of Positive Commandments"
+  },
+  {
+   "work": "213th. Ha-makneh Kiddushin",
+   "count": 1,
+   "example": "213th. Ha-makneh Kiddushin 41a"
+  },
+  {
+   "work": "Rav David Cohen Mahadurat Kushta",
+   "count": 1,
+   "example": "Responsa Rav David Cohen Mahadurat Kushta 17"
+  },
+  {
+   "work": "Rav David Cohen",
+   "count": 1,
+   "example": "Responsa Rav David Cohen"
+  },
+  {
+   "work": "Constantinople Edition",
+   "count": 1,
+   "example": "Constantinople Edition, 17"
+  },
+  {
+   "work": "Shevut Yaakov",
+   "count": 1,
+   "example": "Responsa Shevut Yaakov 2:151"
+  },
+  {
+   "work": "Herald",
+   "count": 1,
+   "example": "Herald"
+  },
+  {
+   "work": "Emet V'Emunah",
+   "count": 1,
+   "example": "Emet V'Emunah"
+  },
+  {
+   "work": "Koren, Artscroll, Lev Shalem , Eit Ratzon",
+   "count": 1,
+   "example": "Koren, Artscroll, Lev Shalem , Eit Ratzon"
+  },
+  {
+   "work": "Mishkan T'filah",
+   "count": 1,
+   "example": "Mishkan T'filah"
+  },
+  {
+   "work": "Kol Haneshama",
+   "count": 1,
+   "example": "Kol Haneshama"
+  },
+  {
+   "work": "Tanakh. Mishkan T'filah offers texts",
+   "count": 1,
+   "example": "Tanakh. Mishkan T'filah offers texts"
+  },
+  {
+   "work": "Ecclesiastes/ Kohelet",
+   "count": 1,
+   "example": "Ecclesiastes/ Kohelet 9 and 12. Kol Haneshama"
+  },
+  {
+   "work": "Biblical Selection II",
+   "count": 1,
+   "example": "Biblical Selection II"
+  },
+  {
+   "work": "1. Vernacular",
+   "count": 1,
+   "example": "1. Vernacular 2. New words 3"
+  },
+  {
+   "work": "God V'achalta v'savata u-veyrachta",
+   "count": 1,
+   "example": "God V'achalta v'savata u-veyrachta"
+  },
+  {
+   "work": "Maimonides Guide of the Perplexed",
+   "count": 1,
+   "example": "Maimonides Guide of the Perplexed (3, 48)"
+  },
+  {
+   "work": "Shirat Ha-Yam",
+   "count": 1,
+   "example": "Shirat Ha-Yam"
+  },
+  {
+   "work": "Shiras Ha-Be'er",
+   "count": 1,
+   "example": "Shiras Ha-Be'er"
+  },
+  {
+   "work": "Song of the Well",
+   "count": 1,
+   "example": "Song of the Well"
+  },
+  {
+   "work": "4th Song \"Ha'azinu",
+   "count": 1,
+   "example": "4th Song \"Ha'azinu"
+  },
+  {
+   "work": "Shiras Ha-Yam",
+   "count": 1,
+   "example": "Shiras Ha-Yam"
+  },
+  {
+   "work": "Song of the Sea",
+   "count": 1,
+   "example": "Song of the Sea"
+  },
+  {
+   "work": "Shirat Ha-Givon",
+   "count": 1,
+   "example": "Shirat Ha-Givon"
+  },
+  {
+   "work": "Footsteps - Taking the Next Step",
+   "count": 1,
+   "example": "Footsteps - Taking the Next Step"
+  },
+  {
+   "work": "Mishpatim",
+   "count": 1,
+   "example": "Mishpatim 5776"
+  },
+  {
+   "work": "ad loc. Bereshit",
+   "count": 1,
+   "example": "ad loc. Bereshit 12:6"
+  },
+  {
+   "work": "ad loc. Devarim",
+   "count": 1,
+   "example": "ad loc. Devarim 3:14"
+  },
+  {
+   "work": "Last Twelve Verses of the Torah",
+   "count": 1,
+   "example": "Last Twelve Verses of the Torah"
+  },
+  {
+   "work": "Part III",
+   "count": 1,
+   "example": "Part III"
+  },
+  {
+   "work": "Deverim",
+   "count": 1,
+   "example": "Deverim 34"
+  },
+  {
+   "work": "III. Mosaic Authorship",
+   "count": 1,
+   "example": "III. Mosaic Authorship"
+  },
+  {
+   "work": "BT Sandhedrin",
+   "count": 1,
+   "example": "BT Sandhedrin 99a"
+  },
+  {
+   "work": "Eighth Principle of Faith",
+   "count": 1,
+   "example": "Eighth Principle of Faith"
+  },
+  {
+   "work": ".Rambam, Introduction to Pereq Heleq",
+   "count": 1,
+   "example": ".Rambam, Introduction to Pereq Heleq"
+  },
+  {
+   "work": "Principles of the Faith",
+   "count": 1,
+   "example": "Principles of the Faith"
+  },
+  {
+   "work": "Holy and True Sacred Scripture",
+   "count": 1,
+   "example": "Holy and True Sacred Scripture"
+  },
+  {
+   "work": "Exodus, Leviticus",
+   "count": 1,
+   "example": "Exodus, Leviticus"
+  },
+  {
+   "work": "Holy Chosen Place of worship",
+   "count": 1,
+   "example": "Holy Chosen Place of worship"
+  },
+  {
+   "work": "Celebrations and Holidays Like the Jews",
+   "count": 1,
+   "example": "Celebrations and Holidays Like the Jews"
+  },
+  {
+   "work": "ZOHAR CHADASH",
+   "count": 1,
+   "example": "ZOHAR CHADASH ("
+  },
+  {
+   "work": "Shir ha'Shirim, p",
+   "count": 1,
+   "example": "Shir ha'Shirim, p. 74"
+  },
+  {
+   "work": "Va'etchanan #186:1",
+   "count": 1,
+   "example": "Va'etchanan #186:1"
+  },
+  {
+   "work": "White Parchment",
+   "count": 1,
+   "example": "White Parchment"
+  },
+  {
+   "work": "Mikdash Melech to Zohar Parshas Bereishis",
+   "count": 1,
+   "example": "Mikdash Melech to Zohar Parshas Bereishis 17b"
+  },
+  {
+   "work": "Elu v’elu divrei Elohim chaim",
+   "count": 1,
+   "example": "Elu v’elu divrei Elohim chaim"
+  },
+  {
+   "work": "Yehoshua/Joshua",
+   "count": 1,
+   "example": "Yehoshua/Joshua 2:1-24"
+  },
+  {
+   "work": "Journey to Virtue",
+   "count": 1,
+   "example": "Journey to Virtue 10:2"
+  },
+  {
+   "work": "Key Themes of Section I: ​",
+   "count": 1,
+   "example": "Key Themes of Section I: ​"
+  },
+  {
+   "work": "Remarks at Afternoon Hannukah Reception",
+   "count": 1,
+   "example": "Remarks at Afternoon Hannukah Reception 2014"
+  },
+  {
+   "work": "Gilad Shalit, Jun",
+   "count": 1,
+   "example": "Gilad Shalit, Jun 27 2006"
+  },
+  {
+   "work": "Maharam Lublin, Section",
+   "count": 1,
+   "example": "Maharam Lublin, Section 15"
+  },
+  {
+   "work": "Radbaz, Part",
+   "count": 1,
+   "example": "Radbaz, Part 1, Section 40 [S]ince"
+  },
+  {
+   "work": "Marginal glosses to folio",
+   "count": 1,
+   "example": "Marginal glosses to folio 85"
+  },
+  {
+   "work": "ArtScroll Chumashim",
+   "count": 1,
+   "example": "ArtScroll Chumashim"
+  },
+  {
+   "work": "HaDibros",
+   "count": 1,
+   "example": "HaDibros"
+  },
+  {
+   "work": "Sapirstein Edition Rashi",
+   "count": 1,
+   "example": "Sapirstein Edition Rashi (page 2)"
+  },
+  {
+   "work": "Aseres HaTzivuyim",
+   "count": 1,
+   "example": "Aseres HaTzivuyim"
+  },
+  {
+   "work": "SermonSlam Jerusalem",
+   "count": 1,
+   "example": "SermonSlam Jerusalem (12/22/2013)"
+  },
+  {
+   "work": "Commentary on Tractate Berakhot One",
+   "count": 1,
+   "example": "Commentary on Tractate Berakhot One"
+  },
+  {
+   "work": "Search of Man",
+   "count": 1,
+   "example": "Search of Man, p.49"
+  },
+  {
+   "work": "Mitzvah of Procreating Everyone",
+   "count": 1,
+   "example": "Mitzvah of Procreating Everyone"
+  },
+  {
+   "work": "Braisa",
+   "count": 1,
+   "example": "Braisa"
+  },
+  {
+   "work": "The Rabbinic Injunction Part",
+   "count": 1,
+   "example": "The Rabbinic Injunction Part 3: The Greatness of The Mitzvah"
+  },
+  {
+   "work": "Ran Kiddushin",
+   "count": 1,
+   "example": "Ran Kiddushin 41A"
+  },
+  {
+   "work": "Shitoh Lo Nodah Lemi Kidushin",
+   "count": 1,
+   "example": "Shitoh Lo Nodah Lemi Kidushin 41a"
+  },
+  {
+   "work": "Yechidus",
+   "count": 1,
+   "example": "Yechidus"
+  },
+  {
+   "work": "Big Questions",
+   "count": 1,
+   "example": "Big Questions: 1"
+  },
+  {
+   "work": "Shnayim Mikrah? Detail Questions",
+   "count": 1,
+   "example": "Shnayim Mikrah? Detail Questions 1"
+  },
+  {
+   "work": "Rosh Yeshiva of Sura Academy",
+   "count": 1,
+   "example": "Rosh Yeshiva of Sura Academy"
+  },
+  {
+   "work": "Giving, Used to say \"Anyone",
+   "count": 1,
+   "example": "Giving, Used to say \"Anyone"
+  },
+  {
+   "work": "Limud Zechut",
+   "count": 1,
+   "example": "Limud Zechut"
+  },
+  {
+   "work": "Bait Yosef",
+   "count": 1,
+   "example": "Bait Yosef (Orach Chaim 285 s.v. Aval Misham)"
+  },
+  {
+   "work": "Raavan",
+   "count": 1,
+   "example": "Raavan"
+  },
+  {
+   "work": "Biur Hagra O.C",
+   "count": 1,
+   "example": "Biur Hagra O.C. 285:1"
+  },
+  {
+   "work": "Times Sichot of the Lubavitcher Rebbe",
+   "count": 1,
+   "example": "Times Sichot of the Lubavitcher Rebbe"
+  },
+  {
+   "work": "Hayom Yom of Bet Cheshvan",
+   "count": 1,
+   "example": "Hayom Yom of Bet Cheshvan"
+  },
+  {
+   "work": "Covenant and Conversation",
+   "count": 1,
+   "example": "Covenant and Conversation"
+  },
+  {
+   "work": "Maharal: Netivot Olam, Netiv Haavodah, Chapter",
+   "count": 1,
+   "example": "Maharal: Netivot Olam, Netiv Haavodah, Chapter 13"
+  },
+  {
+   "work": "Targum? The",
+   "count": 1,
+   "example": "Targum? The"
+  },
+  {
+   "work": "Assyrianist Jews",
+   "count": 1,
+   "example": "Assyrianist Jews"
+  },
+  {
+   "work": "Parshat Behukotai",
+   "count": 1,
+   "example": "Parshat Behukotai"
+  },
+  {
+   "work": "Nachmanides on Parshat b'Haalotcha",
+   "count": 1,
+   "example": "Nachmanides on Parshat b'Haalotcha"
+  },
+  {
+   "work": "Translation of Final Stanza Bare Your holy arm",
+   "count": 1,
+   "example": "Translation of Final Stanza Bare Your holy arm"
+  },
+  {
+   "work": "Zelem Ruv",
+   "count": 1,
+   "example": "Zelem Ruv"
+  },
+  {
+   "work": "Induced Abortion",
+   "count": 1,
+   "example": "Induced Abortion"
+  },
+  {
+   "work": "Birnbaum HaSiddur HaShalem Tanach",
+   "count": 1,
+   "example": "Birnbaum HaSiddur HaShalem Tanach (Jewish Bible)"
+  },
+  {
+   "work": "Masoretic Text",
+   "count": 1,
+   "example": "Masoretic Text"
+  },
+  {
+   "work": "Interactive Torah Trainer: Learn to Read the Torah",
+   "count": 1,
+   "example": "Interactive Torah Trainer: Learn to Read the Torah"
+  },
+  {
+   "work": "Torah Talmud",
+   "count": 1,
+   "example": "Torah Talmud"
+  },
+  {
+   "work": "Commentaries When a section of text in",
+   "count": 1,
+   "example": "Commentaries When a section of text in"
+  },
+  {
+   "work": "Khovot Ha-Levavot",
+   "count": 1,
+   "example": "Khovot Ha-Levavot"
+  },
+  {
+   "work": "History of the Holy Language \"Essay on the Holy Tongue",
+   "count": 1,
+   "example": "History of the Holy Language \"Essay on the Holy Tongue"
+  },
+  {
+   "work": "ie L'shon Kodesh",
+   "count": 1,
+   "example": "ie L'shon Kodesh"
+  },
+  {
+   "work": "Contemporary Questions",
+   "count": 1,
+   "example": "Contemporary Questions"
+  },
+  {
+   "work": "Ma’amar Lashon HaKodesh",
+   "count": 1,
+   "example": "Ma’amar Lashon HaKodesh"
+  },
+  {
+   "work": "Sifri",
+   "count": 1,
+   "example": "Sifri"
+  },
+  {
+   "work": "Selected Essays",
+   "count": 1,
+   "example": "Selected Essays\" 1892"
+  },
+  {
+   "work": "Moment Magazine , Jan",
+   "count": 1,
+   "example": "Moment Magazine , Jan. 2017"
+  },
+  {
+   "work": "Crosby Street",
+   "count": 1,
+   "example": "Crosby Street"
+  },
+  {
+   "work": "2. Maimonides",
+   "count": 1,
+   "example": "2. Maimonides (1138-1204)"
+  },
+  {
+   "work": "Thirteen Articles of Faith",
+   "count": 1,
+   "example": "Thirteen Articles of Faith"
+  },
+  {
+   "work": "Ani Ma’amin",
+   "count": 1,
+   "example": "Ani Ma’amin"
+  },
+  {
+   "work": "Yigdal Goes to Church Kippah",
+   "count": 1,
+   "example": "Yigdal Goes to Church Kippah"
+  },
+  {
+   "work": "Ancient of Everlasting Days",
+   "count": 1,
+   "example": "Ancient of Everlasting Days"
+  },
+  {
+   "work": "Omniscience II",
+   "count": 1,
+   "example": "Omniscience II"
+  },
+  {
+   "work": "Art Green, Tormented Master",
+   "count": 1,
+   "example": "Art Green, Tormented Master , pg 306"
+  },
+  {
+   "work": "Problem of Pain",
+   "count": 1,
+   "example": "Problem of Pain , pg 11"
+  },
+  {
+   "work": "III. Halachic Catch-22s",
+   "count": 1,
+   "example": "III. Halachic Catch-22s"
+  },
+  {
+   "work": "Tradition Journal of Jewish Thought",
+   "count": 1,
+   "example": "Tradition Journal of Jewish Thought, 2014"
+  },
+  {
+   "work": "2. Major Questions",
+   "count": 1,
+   "example": "2. Major Questions"
+  },
+  {
+   "work": "Maharal's",
+   "count": 1,
+   "example": "Maharal's 3 Pillars of Emunah"
+  },
+  {
+   "work": "The Thinking Jew Podcast episode",
+   "count": 1,
+   "example": "The Thinking Jew Podcast episode 71"
+  },
+  {
+   "work": "New York Times , Nov",
+   "count": 1,
+   "example": "New York Times , Nov. 20"
+  },
+  {
+   "work": "ed. Neusner, et al",
+   "count": 1,
+   "example": "ed. Neusner, et al."
+  },
+  {
+   "work": "With Perfect Faith",
+   "count": 1,
+   "example": "With Perfect Faith , 4"
+  },
+  {
+   "work": "What About Mesorah",
+   "count": 1,
+   "example": "What About Mesorah"
+  },
+  {
+   "work": "Cross-Currents , June",
+   "count": 1,
+   "example": "Cross-Currents , June 3, 2013"
+  },
+  {
+   "work": "Mara Benjamin",
+   "count": 1,
+   "example": "Mara Benjamin"
+  },
+  {
+   "work": "The Obligated Self",
+   "count": 1,
+   "example": "The Obligated Self"
+  },
+  {
+   "work": "Images: A Journal of Jewish Art and Culture",
+   "count": 1,
+   "example": "Images: A Journal of Jewish Art and Culture"
+  },
+  {
+   "work": "Journal of the American Academy of Religion",
+   "count": 1,
+   "example": "Journal of the American Academy of Religion"
+  },
+  {
+   "work": "Lakeview Beit Midrash",
+   "count": 1,
+   "example": "Lakeview Beit Midrash"
+  },
+  {
+   "work": "Franz Kafka, Parables and Paradoxes",
+   "count": 1,
+   "example": "Franz Kafka, Parables and Paradoxes (New York"
+  },
+  {
+   "work": "Art Green, The Language of Truth",
+   "count": 1,
+   "example": "Art Green, The Language of Truth , 355"
+  },
+  {
+   "work": "Medinat Ha-yehudim v' 'Tzarat Ha-yehudim",
+   "count": 1,
+   "example": "Medinat Ha-yehudim v' 'Tzarat Ha-yehudim"
+  },
+  {
+   "work": "Old New Land",
+   "count": 1,
+   "example": "Old New Land (1902)"
+  },
+  {
+   "work": "Golda Meir",
+   "count": 1,
+   "example": "Golda Meir"
+  },
+  {
+   "work": "Joshua Sobol",
+   "count": 1,
+   "example": "Joshua Sobol (1939-)"
+  },
+  {
+   "work": "The Making of Modern Zionsim",
+   "count": 1,
+   "example": "The Making of Modern Zionsim, 1981, p. 190 4"
+  },
+  {
+   "work": "Hannah Greenebaum Solomon, Introduction to",
+   "count": 1,
+   "example": "Hannah Greenebaum Solomon, Introduction to"
+  },
+  {
+   "work": "Judaism",
+   "count": 1,
+   "example": "Judaism"
+  },
+  {
+   "work": "Third Introductory Principle",
+   "count": 1,
+   "example": "Third Introductory Principle"
+  },
+  {
+   "work": "Jewish scribe Ben Sira of Jerusalem",
+   "count": 1,
+   "example": "Jewish scribe Ben Sira of Jerusalem"
+  },
+  {
+   "work": "Alphabet of ben Sirach",
+   "count": 1,
+   "example": "Alphabet of ben Sirach"
+  },
+  {
+   "work": "First Part of the Tragedy",
+   "count": 1,
+   "example": "First Part of the Tragedy, 1808 Faust"
+  },
+  {
+   "work": "Southpark",
+   "count": 1,
+   "example": "Southpark"
+  },
+  {
+   "work": "midrash Missing",
+   "count": 1,
+   "example": "midrash Missing"
+  },
+  {
+   "work": "Codex Gr",
+   "count": 1,
+   "example": "Codex Gr. 749 VAT 749, folio 25r"
+  },
+  {
+   "work": "רחל Genesis",
+   "count": 1,
+   "example": "רחל Genesis 29:18"
+  },
+  {
+   "work": "דוד I Samuel",
+   "count": 1,
+   "example": "דוד I Samuel 18:20"
+  },
+  {
+   "work": "אהבתי Genesis",
+   "count": 1,
+   "example": "אהבתי Genesis 27:4"
+  },
+  {
+   "work": "Goodואהבו טוב Amos",
+   "count": 1,
+   "example": "Goodואהבו טוב Amos 5:15"
+  },
+  {
+   "work": "חסד Micha",
+   "count": 1,
+   "example": "חסד Micha 6:8"
+  },
+  {
+   "work": "Songs in Medieval Art The",
+   "count": 1,
+   "example": "Songs in Medieval Art The"
+  },
+  {
+   "work": "Mahzor",
+   "count": 1,
+   "example": "Mahzor"
+  },
+  {
+   "work": "Worms Mahzor",
+   "count": 1,
+   "example": "Worms Mahzor, page 36, 1272 Levy Mahzor"
+  },
+  {
+   "work": "Levi Mahzor",
+   "count": 1,
+   "example": "Levi Mahzor"
+  },
+  {
+   "work": "Leipzig Mahzor",
+   "count": 1,
+   "example": "Leipzig Mahzor"
+  },
+  {
+   "work": "Darmstadt Mahzor",
+   "count": 1,
+   "example": "Darmstadt Mahzor"
+  },
+  {
+   "work": "Judgment In I Kings",
+   "count": 1,
+   "example": "Judgment In I Kings 3"
+  },
+  {
+   "work": "The Judgment of Solomon",
+   "count": 1,
+   "example": "The Judgment of Solomon, 1865"
+  },
+  {
+   "work": "Judgment of Solomon Ivory",
+   "count": 1,
+   "example": "Judgment of Solomon Ivory"
+  },
+  {
+   "work": "Books of Kings",
+   "count": 1,
+   "example": "Books of Kings"
+  },
+  {
+   "work": "Piety and Protest Some time",
+   "count": 1,
+   "example": "Piety and Protest Some time"
+  },
+  {
+   "work": "Midrash in Targum Yonatan",
+   "count": 1,
+   "example": "Midrash in Targum Yonatan"
+  },
+  {
+   "work": "Scroll of Freedom",
+   "count": 1,
+   "example": "Scroll of Freedom"
+  },
+  {
+   "work": "The Scroll of Ruth, The Departure from Bethlehem",
+   "count": 1,
+   "example": "The Scroll of Ruth, The Departure from Bethlehem, 1930"
+  },
+  {
+   "work": "Golden Haggadah Koberger Bible, folio",
+   "count": 1,
+   "example": "Golden Haggadah Koberger Bible, folio 31v ca. 1340 1478 - 79"
+  },
+  {
+   "work": "Mekhilta DeRabbi Ishmael",
+   "count": 1,
+   "example": "Mekhilta DeRabbi Ishmael (Parashat Bo, introduction)"
+  },
+  {
+   "work": "American artist Bo Bartlett",
+   "count": 1,
+   "example": "American artist Bo Bartlett"
+  },
+  {
+   "work": "Urchatz",
+   "count": 1,
+   "example": "Urchatz: 1"
+  },
+  {
+   "work": "Ma'arechet Heidenheim",
+   "count": 1,
+   "example": "Ma'arechet Heidenheim"
+  },
+  {
+   "work": "Maarechet Heidenheim",
+   "count": 1,
+   "example": "Maarechet Heidenheim"
+  },
+  {
+   "work": "Weitzmann, K",
+   "count": 1,
+   "example": "Weitzmann, K."
+  },
+  {
+   "work": "Dumbarton Oaks Research Library and Collection",
+   "count": 1,
+   "example": "Dumbarton Oaks Research Library and Collection, 1990"
+  },
+  {
+   "work": "Medieval Legends Bereshit Rabbati Parshat VaYetzei",
+   "count": 1,
+   "example": "Medieval Legends Bereshit Rabbati Parshat VaYetzei"
+  },
+  {
+   "work": "Aggadah",
+   "count": 1,
+   "example": "Aggadah"
+  },
+  {
+   "work": "term Midrash",
+   "count": 1,
+   "example": "term Midrash"
+  },
+  {
+   "work": "Midrash Halakha",
+   "count": 1,
+   "example": "Midrash Halakha"
+  },
+  {
+   "work": "Halakhic Midrashim",
+   "count": 1,
+   "example": "Halakhic Midrashim"
+  },
+  {
+   "work": "b. Post-Destruction Reaction: The Second Temple period",
+   "count": 1,
+   "example": "b. Post-Destruction Reaction: The Second Temple period"
+  },
+  {
+   "work": "TALI Visual Midrash",
+   "count": 1,
+   "example": "TALI Visual Midrash"
+  },
+  {
+   "work": "The Golden Haggadah, ca",
+   "count": 1,
+   "example": "The Golden Haggadah, ca. 1320"
+  },
+  {
+   "work": "Dura Europos",
+   "count": 1,
+   "example": "Dura Europos, 244"
+  },
+  {
+   "work": "The Fall of Goliath",
+   "count": 1,
+   "example": "The Fall of Goliath"
+  },
+  {
+   "work": "Ezekiel Cycle",
+   "count": 1,
+   "example": "Ezekiel Cycle"
+  },
+  {
+   "work": "C. Kraeling",
+   "count": 1,
+   "example": "C. Kraeling"
+  },
+  {
+   "work": "Dura Europos synagogue",
+   "count": 1,
+   "example": "Dura Europos synagogue"
+  },
+  {
+   "work": "Iggrot Moshe Introduction",
+   "count": 1,
+   "example": "Iggrot Moshe Introduction"
+  },
+  {
+   "work": "Join Madlik",
+   "count": 1,
+   "example": "Join Madlik"
+  },
+  {
+   "work": "שו\"ת שרידי אש ב':י\"א \"20 Cheshvan",
+   "count": 1,
+   "example": "שו\"ת שרידי אש ב':י\"א \"20 Cheshvan, 5686 (1925)"
+  },
+  {
+   "work": "Illustration Credit",
+   "count": 1,
+   "example": "Illustration Credit"
+  },
+  {
+   "work": "Mishnah in Brakhot",
+   "count": 1,
+   "example": "Mishnah in Brakhot"
+  },
+  {
+   "work": "of Maimonides #",
+   "count": 1,
+   "example": "Responsa of Maimonides # 321"
+  },
+  {
+   "work": "Kol Gadol",
+   "count": 1,
+   "example": "Responsa Kol Gadol Siman 26"
+  },
+  {
+   "work": "Zman Shenas",
+   "count": 1,
+   "example": "Zman Shenas (4)856, b'yud alef"
+  },
+  {
+   "work": "17 to",
+   "count": 1,
+   "example": "17 to 27 November 1095"
+  },
+  {
+   "work": "Auvergne",
+   "count": 1,
+   "example": "Auvergne"
+  },
+  {
+   "work": "August. C. Krey",
+   "count": 1,
+   "example": "August. C. Krey"
+  },
+  {
+   "work": "The First Crusade: The Accounts of Eyewitnesses",
+   "count": 1,
+   "example": "The First Crusade: The Accounts of Eyewitnesses"
+  },
+  {
+   "work": "Participants, Princeton",
+   "count": 1,
+   "example": "Participants, Princeton (1921), 28–30"
+  },
+  {
+   "work": "Rosalind M. Hill, ed",
+   "count": 1,
+   "example": "Rosalind M. Hill, ed."
+  },
+  {
+   "work": "Speech of Pope Urban II. At Clermont",
+   "count": 1,
+   "example": "Speech of Pope Urban II. At Clermont, 1095"
+  },
+  {
+   "work": "Ta'us bikshu",
+   "count": 1,
+   "example": "Ta'us bikshu"
+  },
+  {
+   "work": "Divrei HaYamim L'R' Yosef HaCohen",
+   "count": 1,
+   "example": "Divrei HaYamim L'R' Yosef HaCohen"
+  },
+  {
+   "work": "Kuntrus Gezeiros",
+   "count": 1,
+   "example": "Kuntrus Gezeiros 846"
+  },
+  {
+   "work": "Yirasam Kishkeshu, v'osos hekishu",
+   "count": 1,
+   "example": "Yirasam Kishkeshu, v'osos hekishu"
+  },
+  {
+   "work": "Parshas Bechukosai",
+   "count": 1,
+   "example": "Parshas Bechukosai (26:33)"
+  },
+  {
+   "work": "Birkei-Yosef",
+   "count": 1,
+   "example": "Birkei-Yosef 8:7 s.v."
+  },
+  {
+   "work": "Michtavim-Chadashim part-1b",
+   "count": 1,
+   "example": "Michtavim-Chadashim part-1b"
+  },
+  {
+   "work": "Shaar-HaKavanos",
+   "count": 1,
+   "example": "Shaar-HaKavanos"
+  },
+  {
+   "work": "Leshabeach",
+   "count": 1,
+   "example": "Leshabeach 50:4"
+  },
+  {
+   "work": "Shaar-HaTefillah",
+   "count": 1,
+   "example": "Shaar-HaTefillah 68b"
+  },
+  {
+   "work": "Shaar-HaKolel introduction",
+   "count": 1,
+   "example": "Shaar-HaKolel introduction 7"
+  },
+  {
+   "work": "Shomer-Emunim introduction",
+   "count": 1,
+   "example": "Shomer-Emunim introduction 2 proposal 9"
+  },
+  {
+   "work": "Shaar-HaKolel there",
+   "count": 1,
+   "example": "Shaar-HaKolel there"
+  },
+  {
+   "work": "Shulchan-Aruch",
+   "count": 1,
+   "example": "Shulchan-Aruch 25:28"
+  },
+  {
+   "work": "D'varim",
+   "count": 1,
+   "example": "D'varim 34:6"
+  },
+  {
+   "work": "RambamHilchot HaTeshuva",
+   "count": 1,
+   "example": "RambamHilchot HaTeshuva 3:11"
+  },
+  {
+   "work": "Orot , p",
+   "count": 1,
+   "example": "Orot , p. 144"
+  },
+  {
+   "work": "On Repentance , pp",
+   "count": 1,
+   "example": "On Repentance , pp. 114-115"
+  },
+  {
+   "work": "Stanford University Press",
+   "count": 1,
+   "example": "Stanford University Press, 2006"
+  },
+  {
+   "work": "Ta’amei Minhagim",
+   "count": 1,
+   "example": "Ta’amei Minhagim 929"
+  },
+  {
+   "work": "Rambam's View on Superstitions Mishnah Avodah Zarah",
+   "count": 1,
+   "example": "Rambam's View on Superstitions Mishnah Avodah Zarah 4:7"
+  },
+  {
+   "work": "Superstitions Surrounding Death IMMEDIATELY",
+   "count": 1,
+   "example": "Superstitions Surrounding Death IMMEDIATELY"
+  },
+  {
+   "work": "Ve-Zot ha-Bracha",
+   "count": 1,
+   "example": "Ve-Zot ha-Bracha"
+  },
+  {
+   "work": "Lurianic Kabbalah Chaim Vital",
+   "count": 1,
+   "example": "Lurianic Kabbalah Chaim Vital"
+  },
+  {
+   "work": "Sha'ar Ha-Kavvanot",
+   "count": 1,
+   "example": "Sha'ar Ha-Kavvanot"
+  },
+  {
+   "work": "Jewish Customs of Kabbalistic Origin",
+   "count": 1,
+   "example": "Jewish Customs of Kabbalistic Origin"
+  },
+  {
+   "work": "Parshat Pinhas",
+   "count": 1,
+   "example": "Parshat Pinhas, page 256b"
+  },
+  {
+   "work": "Raya Mehemna",
+   "count": 1,
+   "example": "Raya Mehemna"
+  },
+  {
+   "work": "Simhat Torah",
+   "count": 1,
+   "example": "Simhat Torah"
+  },
+  {
+   "work": "Talmud on Kitniyot",
+   "count": 1,
+   "example": "Talmud on Kitniyot"
+  },
+  {
+   "work": "Haminhagot",
+   "count": 1,
+   "example": "Sefer Haminhagot"
+  },
+  {
+   "work": "Provence ca",
+   "count": 1,
+   "example": "Provence ca. 1210"
+  },
+  {
+   "work": "Or Zarua, part",
+   "count": 1,
+   "example": "Or Zarua, part 2, fol. 58c"
+  },
+  {
+   "work": "Hagahot Semak, paragraph",
+   "count": 1,
+   "example": "Hagahot Semak, paragraph 222"
+  },
+  {
+   "work": "Orḥot Ḥayyim, Hilkhot Ḥametz Umatzah, paragraph",
+   "count": 1,
+   "example": "Sefer Orḥot Ḥayyim, Hilkhot Ḥametz Umatzah, paragraph 55"
+  },
+  {
+   "work": "Mordechai on Pesaḥim, Chapter",
+   "count": 1,
+   "example": "Mordechai on Pesaḥim, Chapter 2, paragraph 588"
+  },
+  {
+   "work": "Golinkin",
+   "count": 1,
+   "example": "Golinkin 6-7"
+  },
+  {
+   "work": "ḥimtzei",
+   "count": 1,
+   "example": "ḥimtzei (Yevamot 63a"
+  },
+  {
+   "work": "Rabbeynu Peterz",
+   "count": 1,
+   "example": "Rabbeynu Peterz"
+  },
+  {
+   "work": "Emanuel, p",
+   "count": 1,
+   "example": "Emanuel, p. 52) 7"
+  },
+  {
+   "work": "Provence, ca",
+   "count": 1,
+   "example": "Provence, ca. 1265"
+  },
+  {
+   "work": "Sahih al-Bukhari",
+   "count": 1,
+   "example": "Sahih al-Bukhari, 435 (9th Century)"
+  },
+  {
+   "work": "Not Death Halakhic Man",
+   "count": 1,
+   "example": "Not Death Halakhic Man"
+  },
+  {
+   "work": "Poland",
+   "count": 1,
+   "example": "Poland 1748 – Lithuania 1820"
+  },
+  {
+   "work": "Ketef Hinnom amulets",
+   "count": 1,
+   "example": "Ketef Hinnom amulets"
+  },
+  {
+   "work": "Priestly Blessing",
+   "count": 1,
+   "example": "Priestly Blessing"
+  },
+  {
+   "work": "Bar Kochba Caves Lilith Magazine",
+   "count": 1,
+   "example": "Bar Kochba Caves Lilith Magazine 12/19/1990"
+  },
+  {
+   "work": "Bar Kochba",
+   "count": 1,
+   "example": "Bar Kochba"
+  },
+  {
+   "work": "1. BIBLE: NUMBERS",
+   "count": 1,
+   "example": "1. BIBLE: NUMBERS 9:23"
+  },
+  {
+   "work": "ZECHARIAH",
+   "count": 1,
+   "example": "ZECHARIAH 3:2"
+  },
+  {
+   "work": "PSALMS",
+   "count": 1,
+   "example": "PSALMS 55:8"
+  },
+  {
+   "work": "Bahaa Amer Al-Jubouri",
+   "count": 1,
+   "example": "Bahaa Amer Al-Jubouri (1.)"
+  },
+  {
+   "work": "Yosef Hayim Yerushalmi",
+   "count": 1,
+   "example": "Yosef Hayim Yerushalmi"
+  },
+  {
+   "work": "Zakhor",
+   "count": 1,
+   "example": "Zakhor"
+  },
+  {
+   "work": "Sefirat Ha'Omer",
+   "count": 1,
+   "example": "Sefirat Ha'Omer"
+  },
+  {
+   "work": "Babylon, circa",
+   "count": 1,
+   "example": "Babylon, circa 800"
+  },
+  {
+   "work": "Rabbanit Bracha Jaffe Class of",
+   "count": 1,
+   "example": "Rabbanit Bracha Jaffe Class of 2017"
+  },
+  {
+   "work": "Positive",
+   "count": 1,
+   "example": "Positive"
+  },
+  {
+   "work": "Negative Law",
+   "count": 1,
+   "example": "Negative Law"
+  },
+  {
+   "work": "Siyugim. CHiyuvim",
+   "count": 1,
+   "example": "Siyugim. CHiyuvim"
+  },
+  {
+   "work": "Netilas Yedaim",
+   "count": 1,
+   "example": "Netilas Yedaim"
+  },
+  {
+   "work": "Ethical Will of",
+   "count": 1,
+   "example": "Ethical Will of"
+  },
+  {
+   "work": "Noda B'Yehuda EVHZ #79",
+   "count": 1,
+   "example": "Noda B'Yehuda EVHZ #79 (ב)"
+  },
+  {
+   "work": "Noada B'Yeh",
+   "count": 1,
+   "example": "Noada B'Yeh"
+  },
+  {
+   "work": "Berachot",
+   "count": 1,
+   "example": "Berachot 2:"
+  },
+  {
+   "work": "Siach Yitzchak",
+   "count": 1,
+   "example": "Responsa Siach Yitzchak 264"
+  },
+  {
+   "work": "2nd book of Kings",
+   "count": 1,
+   "example": "2nd book of Kings 9:2"
+  },
+  {
+   "work": "Alei Tamar Peah Chapter",
+   "count": 1,
+   "example": "Alei Tamar Peah Chapter 7"
+  },
+  {
+   "work": "Minhag Avot Rambam's Father",
+   "count": 1,
+   "example": "Minhag Avot Rambam's Father,"
+  },
+  {
+   "work": "Chibur HaTefillot Those customs",
+   "count": 1,
+   "example": "Chibur HaTefillot Those customs"
+  },
+  {
+   "work": "Laws of Women's Prayer",
+   "count": 1,
+   "example": "Laws of Women's Prayer"
+  },
+  {
+   "work": "Tashbetz",
+   "count": 1,
+   "example": "Tashbetz 3:179"
+  },
+  {
+   "work": "Ta’amei HaPardes Commentary",
+   "count": 1,
+   "example": "Ta’amei HaPardes Commentary"
+  },
+  {
+   "work": "Megilla on Purim",
+   "count": 1,
+   "example": "Megilla on Purim ( Megilla 4:1 )"
+  },
+  {
+   "work": "Haribo Gold Bears",
+   "count": 1,
+   "example": "Haribo Gold Bears"
+  },
+  {
+   "work": "RJPS or Revised JPS edition",
+   "count": 1,
+   "example": "RJPS or Revised JPS edition"
+  },
+  {
+   "work": "Jewish Publication Society Bible translation",
+   "count": 1,
+   "example": "Jewish Publication Society Bible translation"
+  },
+  {
+   "work": "NJPS",
+   "count": 1,
+   "example": "NJPS"
+  },
+  {
+   "work": "Rashba",
+   "count": 1,
+   "example": "Responsa Rashba, Vol. 1 Ch. 9"
+  },
+  {
+   "work": "Rashi Tractate Makkos",
+   "count": 1,
+   "example": "Rashi Tractate Makkos 23a"
+  }
+ ]
+}
