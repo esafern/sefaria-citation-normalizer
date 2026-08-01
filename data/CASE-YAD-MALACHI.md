@@ -3,14 +3,24 @@
 _A proposal to scan, OCR, and structure one foundational, public-domain work of
 Torah that is heavily relied upon but not yet available as clean digital text._
 
+> **Bottom line.** *Yad Malachi* is the **#1 public-domain work Sefaria lacks** — it
+> is cited **287 times inside Sefaria's own corpus** (every one a dead-end link) and
+> **243 times** in contemporary halachic writing. It is fully public domain, and
+> **four print editions in five scans are already in hand** (three in clean square
+> type). The plan: OCR the square editions, structure them into the work's native
+> three-part / *klalim* schema, and ingest — turning 287 dead references into live
+> links. **Cost:** a lean single-edition path is a few hundred dollars; the full
+> multi-witness ensemble adds a one-time, reusable engineering harness.
+> **First step:** a proofed *Klalei HaGemara* Aleph-section pilot.
+
 ## The work
 
 **Yad Malachi** (יד מלאכי), by **R. Malachi ben Jacob HaKohen of Livorno**
-(d. 1772), first printed Livorno 1766–7 (later Berlin 1857). It is a three-part
+(d. 1772), first printed Livorno 1766–7 (later Berlin ~1857/8). It is a three-part
 masterwork of *methodology* — the rules by which the Talmud is learned and halacha
 is decided:
 
-1. **Klalei HaTalmud** — an alphabetical index of the rules and technical terms of
+1. **Klalei HaGemara** — an alphabetical index of the rules and technical terms of
    the Talmud, with explanations.
 2. **Klalei HaPoskim** — the rules governing the codifiers (Rif, Rambam, Rosh, Tur,
    Shulchan Aruch…).
@@ -21,25 +31,35 @@ reference reached for whenever a question of method arises.
 
 ## Why it matters
 
-Its standing is not a matter of opinion — and it is not a historical curiosity.
+Its standing is not a matter of opinion — and it is not a historical curiosity. The
+Chida praised Yad Malachi effusively, and it was "quoted frequently by major halakhic
+authorities of the 18th and 19th centuries."[^wiki]
 
-**Across the centuries.** The author was "quoted **frequently by major halakhic
-authorities of the 18th and 19th centuries**," and the Chida praised Yad Malachi
-effusively.[^wiki] That reliance is measurable inside the digital library today:
-**287 places in Sefaria's existing texts cite יד מלאכי**[^sefaria] — and every one
-is a **dead end**, because the work itself is not in the library. A reader who
+**Across the centuries.** That reliance is measurable inside the digital library
+today: **287 places in Sefaria's existing texts cite יד מלאכי**[^sefaria] — and every
+one is a **dead end**, because the work itself is not in the library. A reader who
 reaches "Yad Malachi, Klal …" inside a work Sefaria *does* have cannot follow the
-reference. The citing works span three centuries:[^sefaria]
+reference. Two things stand out in who is citing it:
 
 | Mentions | Citing work |
 |---:|---|
-| 118 | Ayin Zokher |
+| 118 | Ayin Zokher (Chida) |
 | 17 | Petach Einayim (Chida) |
 | 13 | Shem HaGedolim (Chida) |
+| 8 | Rosh David (Chida) |
 | 11 | Pardes Yosef |
 | 9 | Kaf HaChayim (d. 1939) |
-| 8 | Rosh David (Chida) |
 | — | + Mishnah Berurah / Biur Halacha, Torah Temimah, Minchat Chinukh, Even Ha'azel, and living responsa (Benei Banim) |
+
+First, **the Chida leans on it enormously** — four of his works account for **~156 of
+the 287 citations** (Ayin Zokher, Petach Einayim, Shem HaGedolim, Rosh David). That is
+not a weakness in the argument, it is the argument: the **Chida — the towering Sephardi
+authority of the era and the author's own contemporary — treats Yad Malachi as a
+standing reference**, reaching for it more than 150 times. Second, the reliance does
+**not** stop with him: the remaining ~130 citations **span the next two centuries** —
+Pardes Yosef, Kaf HaChaim (d. 1939), Mishnah Berurah / Biur Halacha, Torah Temimah,
+Minchat Chinukh, Even Ha'azel, and living responsa (Benei Banim). One giant leans on it
+constantly, and a long tail of later authorities keeps citing it.
 
 **And in active use today.** Yad Malachi is a living reference, not a shelved
 classic:
@@ -60,10 +80,14 @@ classic:
 ## The gap this closes
 
 Yad Malachi is **public domain** — no rights, no license, no permission needed. Yet
-there is no **publicly available** clean digital text of it. So every one of those
-287 references is unlinkable, and anyone quoting the work must **hand-transcribe the
-Hebrew** from a scan. Digitizing it once turns 287 dead references into live links and ends the
-re-keying — permanently.
+there is no **free, structured, linkable** digital text of it. What exists is behind
+paywalls or unstructured: **Otzar HaChochma** serves it as OCR-*searchable* page-images
+(a subscription library, print-format scans — not clean linkable text), and the
+**Machon Yerushalayim** critical edition is proprietary. None of these is on Sefaria,
+and none is a free structured text that a reference can resolve to. So every one of
+those 287 references is unlinkable, and anyone quoting the work must **hand-transcribe
+the Hebrew** from a scan. Digitizing it once turns 287 dead references into live links
+and ends the re-keying — permanently.
 
 ## Why it is an ideal candidate
 
@@ -131,8 +155,10 @@ few conflicts."
    better engines rather than trusting the embedded layers:
    - **Square editions (Berlin, Przemyśl) — the base text.** Run **Google Cloud
      Vision / Document AI** and **Tesseract `heb`** (both strong on square Hebrew,
-     both weak on Rashi — which is why the square editions carry the load). These plus
-     the two embedded layers give **~4 passes per square edition**.
+     both weak on Rashi — which is why the square editions carry the load). With the
+     embedded layer that already ships in each scan, that is **≥3 passes per square
+     edition** — and **4 for Przemyśl 1877**, which exists in two scans (Google +
+     HebrewBooks), each with its own embedded layer.
    - **Livorno first edition (Rashi) — collation witness.** General engines fail on
      Rashi, so read it with a Rashi-capable tool: **Jochre 3** (open-source, trained
      for rabbinic/Rashi type) or a **Kraken/eScriptorium** model trained on this
@@ -190,26 +216,29 @@ publication.)
 The ensemble front-loads a little engineering and collapses the human cost — which
 is the expensive part of any digitization.
 
-The work is **~457 pages** (the verified Livorno set: 348 + 54 + 55), OCR'd across
-a couple of witnesses.
+The work runs **~340–460 pages** (the square editions bind all three parts in ~340
+pages; the Livorno set is 348 + 54 + 55), OCR'd across the five scans as above.
 
 - **One-time harness** (OCR-ensemble + alignment + adjudication): developer time,
   ~40–80 hrs, and **reusable** for every other public-domain work — so it amortizes
-  far beyond this one text.
-- **Compute** (multi-engine OCR + AI adjudication over ~460 pages across the
-  editions — and two OCR passes per square edition already exist free as embedded
-  text layers): modest — low hundreds of dollars in OCR/API credits at most.
+  far beyond this one text. This is the real cost of the *first* work; every work
+  after reuses it.
+- **Compute** (multi-engine OCR + AI adjudication over the editions — noting each
+  scan already ships an embedded OCR layer for free): modest — low hundreds of
+  dollars in OCR/API credits at most.
 - **Expert review** — only the flagged conflict set, and by a Torah scholar (Talmid
   Chacham), not a general proofreader. If the ensemble auto-accepts ~90% of tokens,
   the reviewer handles the rest in perhaps **~5–10 hours (~$150–350)**, versus ~25–45
   hours to proofread all 457 pages single-pass.
 
-Net: after the reusable harness exists, the **marginal cost per work is a few hundred
-dollars**, and the output is *more* accurate than a single proofread pass —
-potentially better than any of the historic printings. For that, a foundational work
-of Torah
-— cited 287 times inside the very library that currently lacks it, and 243 times in
-contemporary halachic writing — goes permanently online.
+Net: the **first** work costs the one-time harness (~40–80 hrs of engineering) plus a
+few hundred dollars of compute and expert review; **each work after it** is just the
+few hundred dollars, because the harness is reused. The output is *more* accurate than
+a single proofread pass — potentially better than any of the historic printings. For
+that, a foundational work of Torah — cited 287 times inside the very library that
+currently lacks it, and 243 times in contemporary halachic writing — goes permanently
+online. (The leaner single-witness path in *Preparing the text for Sefaria* is cheaper
+still, skipping the harness entirely.)
 
 _Cost figures are estimates; page counts are from the source catalogs and from the
 scan page-counts. Every scan was inspected page-by-page; edition identifications are
@@ -266,6 +295,10 @@ linker-friendly form so they auto-resolve; the residue can be added as manual li
 This is exactly the normalization problem this repository works on. And the payoff runs
 both ways: the **287 existing references *to* Yad Malachi** light up automatically the
 moment the work exists under a canonical ref — with no edits to those 287 works at all.
+One design dependency to get right: the schema's addressing (e.g.
+*Klalei HaGemara, [letter], [klal]* vs. a running klal number) should be **chosen to
+match how those 287 sources actually cite it**, or the inbound links won't resolve on
+their own — so sample the existing citation style before fixing the scheme.
 
 **Add a link-readiness QA step — test for auto-linking, don't apply the links.** Before
 ingest, run the finished text through Sefaria's linker (`/api/find-refs`) purely as a
@@ -278,10 +311,10 @@ modified** by this step — it produces a flagged worklist for the expert review
 confirms the candidate is not just linkable but *correct*. A worked example on a real
 Klalei HaAleph passage is in [`data/link-readiness-demo.md`](link-readiness-demo.md)
 (run by [`pipeline/link_readiness.py`](../pipeline/link_readiness.py)): of the seven
-citations the linker found, the one clean daf reference (`נדרים י"ט ב'`) auto-linked,
-and the six abbreviated/chapter-style references (`רש"י ז"ל בפ"ב דנדרים`, `בפרק המפלת
-כ"ג ב'`, …) failed — each getting a verified candidate (Rashi on Nedarim 19b, Niddah
-23b, Yoma 31b, …). That is the normalization payoff made concrete: the linker measures
+spans the linker flagged, the one clean daf reference (`נדרים י"ט ב'`) auto-linked, and
+the six abbreviated/chapter-style references (`רש"י ז"ל בפ"ב דנדרים`, `בפרק המפלת כ"ג
+ב'`, …) failed — five getting a verified candidate (Rashi on Nedarim 19b, Niddah 23b,
+Yoma 31b, …) and one being a linker mis-segmentation left for manual review. That is the normalization payoff made concrete: the linker measures
 link-readiness, and this repo's normalizer supplies the fix.
 
 **Two paths, right-sized.** The *lean* path — Berlin NLI layer as base, proofed against
@@ -290,6 +323,23 @@ honestly-labeled version into the library quickly (and Sefaria is a wiki: it can
 refined later). The *full ensemble* above is the higher-accuracy upgrade, worth it for
 a foundational reference and reusable for the next work. Either way, the base text
 stays faithful to a public-domain printing.
+
+## The ask
+
+Digitize Yad Malachi and place it in Sefaria — the top freely-digitizable work its
+library is missing. Concretely:
+
+1. **Pilot first.** Produce one proofed, structured section — *Klalei HaGemara*, the
+   Aleph section — from the Berlin NLI layer, run it through the link-readiness check,
+   and confirm the schema and citation-linking end to end. Small, cheap, and it
+   de-risks everything downstream.
+2. **Then the full work.** Complete the three parts on the chosen path (lean or
+   ensemble), attaching each historic printing as its own version.
+3. **Coordinate ingest** with Sefaria (**hello@sefaria.org**), offering the
+   expert-review quality certification and the per-printing variant apparatus.
+
+The result is permanent: 287 dead references become live links, the re-keying ends,
+and the reusable harness lowers the cost of every public-domain work after this one.
 
 ## Notes
 
