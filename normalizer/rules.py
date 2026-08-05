@@ -66,7 +66,18 @@ _SPELLING = [
     (r"\bOlas\b", "Olat"), (r"\bChovos\b", "Chovot"),
     (r"\bAvos\b", "Avot"), (r"\bShabbos\b", "Shabbat"), (r"\bToras\b", "Torat"),
     (r"\bHilchos\b", "Hilchot"), (r"\bTumas\b", "Tumat"), (r"\bMoed Qatan\b", "Moed Katan"),
+    # Tractate-name abbreviations, valid wherever they appear (not just Rambam).
+    # \b sits right after the literal Z, before the optional trailing period —
+    # \b after an *optional* character backtracks unpredictably when what's on
+    # both sides of it is non-word (the dot and following space/comma), and
+    # silently drops the dot from the match instead of consuming it.
+    (r"\bAv\.?\s*Z\b\.?", "Avodah Zarah"),
 ]
+
+# Corpus-level structural prefixes: Sefaria's /api/name resolves "Tosefta X"
+# but not "Tosefta, X" — measured, not assumed (see PROVENANCE). A small,
+# bounded set of corpus names, not a per-work whitelist.
+_STRUCTURAL_PREFIX = re.compile(r"^(Tosefta|Yerushalmi|Mishnah|Mishna|Tanchuma),\s+", re.I)
 
 _ROMAN = {"i": 1, "v": 5, "x": 10, "l": 50, "c": 100}
 
@@ -118,12 +129,25 @@ def candidates(citation):
         add(_numbers_to_colon(stripped))
 
     # spelling swaps (on both raw and prefix-stripped)
+    # Colonize BEFORE tail-stripping: _STRIP_TAIL's trailing-footnote-number
+    # rule (\s+\d+\s*$) can't tell "chapter, verse" from a stray trailing
+    # number when they're both just "<space><digits>" at the end — converting
+    # "N, N" to "N:N" first removes the ambiguity.
     for src in (base, stripped):
         sp = src
         for pat, rep in _SPELLING:
             sp = re.sub(pat, rep, sp, flags=re.I)
         if sp != src:
-            add(_numbers_to_colon(_STRIP_TAIL.sub("", sp).strip()))
+            add(_STRIP_TAIL.sub("", _numbers_to_colon(sp)).strip())
+
+    # Structural corpus prefix: "Tosefta, X" -> "Tosefta X" (Sefaria's trie
+    # rejects the comma). Runs early, before any candidate gets truncated by
+    # the "trim to first ref" rule below, so the precise (untruncated) form
+    # is proposed first. Composed over every candidate found so far.
+    for cand in list(out):
+        nc = _STRUCTURAL_PREFIX.sub(r"\1 ", cand)
+        if nc != cand:
+            add(nc)
 
     # Ashkenazi/academic endings: rewrite the tractate-like leading word
     mw = re.match(r"^([A-Za-z']+)(\b.*)$", stripped)

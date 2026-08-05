@@ -713,5 +713,17 @@
   "my_canonical": "Yoma 29a",
   "sefaria_ref": "Yoma 29a",
   "source": "rule-verified"
+ },
+ {
+  "raw": "Tosefta, Av.Z. 5, 2",
+  "my_canonical": "Tosefta Avodah Zarah 5:2",
+  "sefaria_ref": "Tosefta Avodah Zarah 5:2",
+  "source": "rule-verified"
+ },
+ {
+  "raw": "Tosefta Av.Z. 5,2",
+  "my_canonical": "Tosefta Avodah Zarah 5:2",
+  "sefaria_ref": "Tosefta Avodah Zarah 5:2",
+  "source": "rule-verified"
  }
 ]
