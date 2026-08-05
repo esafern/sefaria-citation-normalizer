@@ -47,14 +47,18 @@ README explicitly commits to ("offline builds never fail if Sefaria is unreachab
 Porting this into the propose→verify model is a bigger, separate, deliberate project
 (that would be "C" from the options considered) — not this task.
 
-**E — No live cross-repo dependency.** The other session actively evolving this repo
-(Yad Malachi, Mi Yodeya, most-wanted rebuilds — see git log) makes a live import/submodule
-dependency risky: the blog's Sefaria links could destabilize from unrelated changes here.
-Instead: the shared dialect module is **vendored** — a byte-identical copy lives in both
-repos — with a **diff-check test in each repo's test suite** that fails loudly the moment
-the two copies diverge. Drift becomes impossible to miss, even though it's still possible
-to happen (a deliberate trade against A's instability risk, revisit if that calculus
-changes — e.g. once the other session's work stabilizes).
+**E — No live cross-repo dependency.** This repo gets substantial, sporadic contributions
+from other sessions not coordinated with the blog work (Yad Malachi, Mi Yodeya, most-wanted
+rebuilds — see git log; commits dated 2026-07-25 and 2026-08-01, i.e. days apart, not a live
+race — corrected after initially overstating this as "actively evolving in real time," which
+it wasn't). The point stands regardless of cadence: nobody coordinates this repo's changes
+with the blog's needs, so a live import/submodule dependency means the blog's Sefaria links
+could break from an unrelated change here, discovered only when the blog build next runs —
+not when the breaking change was made. Instead: the shared dialect module is **vendored** —
+a byte-identical copy lives in both repos — with a **diff-check test in each repo's test
+suite** that fails loudly the moment the two copies diverge. Drift becomes impossible to
+miss, even though it's still possible to happen (a deliberate trade against A's instability
+risk; revisit if this repo ever gets a stable release/tagging discipline worth pinning to).
 
 ## Concrete steps
 
@@ -121,10 +125,10 @@ of commit `413770c`, and in the blog's `offline.py`/`dialect.py` as of commit `9
 
 ## Current repo state (as of this writing, both pushed)
 
-- Blog: `rav-shvat-blog` @ `9d98ada` — clean, nothing pending.
-- Normalizer: `sefaria-citation-normalizer` @ `413770c` — clean except a gitignored
-  `.DS_Store`. **Note**: another session is actively working in this repo (see git log
-  for `claude/pd-index-submissions`, `claude/project-onboarding-*` branches and recent
-  large commits on `main` — Yad Malachi case study, Mi Yodeya corpus, most-wanted
-  rebuild). Pull before starting; expect more drift-in-the-other-direction (i.e. new
-  normalizer work you haven't seen) by the time you read this.
+- Blog: `rav-shvat-blog` @ `f0c358f` — clean, nothing pending.
+- Normalizer: `sefaria-citation-normalizer` @ `dc8eb1a` — clean. This repo also gets
+  substantial contributions from other, uncoordinated sessions — not live/concurrent (the
+  most recent one before today was 2026-08-01, four days prior), but real and unpredictable
+  in timing. Branches `claude/pd-index-submissions`, `claude/project-onboarding-*` exist
+  from that work. **Always `git pull` before starting** — assume there may be new normalizer
+  work you haven't seen, and don't assume it's "still fresh from a moment ago" either way.
