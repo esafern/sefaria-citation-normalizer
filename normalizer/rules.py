@@ -13,25 +13,9 @@ that belongs to the LLM/SLM tier.
 """
 import re
 
-PROVENANCE = "citation corpus mined from Sefaria source sheets; see data/citation_dataset.json"
+from . import shared_dialect
 
-# Rambam (Mishneh Torah) section names -> Sefaria canonical English book.
-# Bounded by the ~40 hilchot concepts, not by spellings (letters-only key).
-RAMBAM_SECTIONS = {
-    "melachim": "Kings and Wars", "milachim": "Kings and Wars",
-    "melachimumilchamoteihem": "Kings and Wars",
-    "teshuva": "Repentance", "teshuvah": "Repentance", "mamrim": "Rebels",
-    "kriatshema": "Reading the Shema", "krsh": "Reading the Shema",
-    "yesodeihatorah": "Foundations of the Torah", "yesodeihaatorah": "Foundations of the Torah",
-    "matnotaniim": "Gifts to the Poor", "matnotaniyim": "Gifts to the Poor",
-    "mlachim": "Kings and Wars",
-    "chanuka": "Scroll of Esther and Hanukkah", "chanukah": "Scroll of Esther and Hanukkah",
-    "brachot": "Blessings", "berachot": "Blessings", "berakhot": "Blessings",
-    "issureibiah": "Forbidden Intercourse", "isuraybiah": "Forbidden Intercourse",
-    "mezuza": "Tefillin Mezuzah and the Torah Scroll",
-    "avodazara": "Foreign Worship and Customs of the Nations",
-    "shabbat": "Sabbath", "shabbos": "Sabbath", "avel": "Mourning",
-}
+PROVENANCE = "citation corpus mined from Sefaria source sheets; see data/citation_dataset.json"
 
 # Prefixes / editions / structural words to strip from the front.
 _STRIP_PREFIX = re.compile(
@@ -66,18 +50,7 @@ _SPELLING = [
     (r"\bOlas\b", "Olat"), (r"\bChovos\b", "Chovot"),
     (r"\bAvos\b", "Avot"), (r"\bShabbos\b", "Shabbat"), (r"\bToras\b", "Torat"),
     (r"\bHilchos\b", "Hilchot"), (r"\bTumas\b", "Tumat"), (r"\bMoed Qatan\b", "Moed Katan"),
-    # Tractate-name abbreviations, valid wherever they appear (not just Rambam).
-    # \b sits right after the literal Z, before the optional trailing period —
-    # \b after an *optional* character backtracks unpredictably when what's on
-    # both sides of it is non-word (the dot and following space/comma), and
-    # silently drops the dot from the match instead of consuming it.
-    (r"\bAv\.?\s*Z\b\.?", "Avodah Zarah"),
 ]
-
-# Corpus-level structural prefixes: Sefaria's /api/name resolves "Tosefta X"
-# but not "Tosefta, X" — measured, not assumed (see PROVENANCE). A small,
-# bounded set of corpus names, not a per-work whitelist.
-_STRUCTURAL_PREFIX = re.compile(r"^(Tosefta|Yerushalmi|Mishnah|Mishna|Tanchuma),\s+", re.I)
 
 _ROMAN = {"i": 1, "v": 5, "x": 10, "l": 50, "c": 100}
 
@@ -137,17 +110,31 @@ def candidates(citation):
         sp = src
         for pat, rep in _SPELLING:
             sp = re.sub(pat, rep, sp, flags=re.I)
+        for pat, rep in shared_dialect.TRACTATES:
+            sp = re.sub(pat, rep, sp, flags=re.I)
         if sp != src:
             add(_STRIP_TAIL.sub("", _numbers_to_colon(sp)).strip())
 
+    # Shulchan Aruch section abbreviations (O.Ch., Y.D., E.H., C.M.)
+    for pat, full in shared_dialect.SECTIONS:
+        if re.search(pat, citation):
+            expanded = re.sub(pat, full, citation)
+            add(_numbers_to_colon(expanded))
+            if not re.match(r"^\s*Shulchan", expanded, re.I):
+                add(_numbers_to_colon("Shulchan Aruch, " + expanded.lstrip(", ")))
+            else:
+                add(_numbers_to_colon(re.sub(r"^(\s*Shulchan Aruch)\s+", r"\1, ", expanded)))
+
     # Structural corpus prefix: "Tosefta, X" -> "Tosefta X" (Sefaria's trie
-    # rejects the comma). Runs early, before any candidate gets truncated by
-    # the "trim to first ref" rule below, so the precise (untruncated) form
-    # is proposed first. Composed over every candidate found so far.
+    # rejects the comma); Yerushalmi/Tanchuma also get renamed to Sefaria's
+    # corpus name. Runs early, before any candidate gets truncated by the
+    # "trim to first ref" rule below, so the precise (untruncated) form is
+    # proposed first. Composed over every candidate found so far.
     for cand in list(out):
-        nc = _STRUCTURAL_PREFIX.sub(r"\1 ", cand)
-        if nc != cand:
-            add(nc)
+        for pat, repl in shared_dialect.PREFIXES:
+            nc = re.sub(pat, repl, cand, flags=re.I)
+            if nc != cand:
+                add(nc)
 
     # Ashkenazi/academic endings: rewrite the tractate-like leading word
     mw = re.match(r"^([A-Za-z']+)(\b.*)$", stripped)
@@ -164,7 +151,7 @@ def candidates(citation):
                   r"(?P<sec>[A-Za-z'’ ]+?)\s*(?P<nums>\d[\d:,\- ]*)$", citation, re.I)
     if mr:
         key = re.sub(r"[^a-z]", "", mr.group("sec").lower())
-        book = RAMBAM_SECTIONS.get(key)
+        book = shared_dialect.RAMBAM_SECTIONS.get(key)
         if book:
             add(f"Mishneh Torah, {book} {_numbers_to_colon(mr.group('nums'))}")
 
