@@ -74,8 +74,18 @@ This work spun out of `~/work/rav-shvat-blog`, which has its own embedded copy o
 two from drifting. `SEFARIA-API-BUG.md` / `SEFARIA-CONTRIB-DRAFTS.md` currently live in the
 blog repo but document Sefaria issues — candidates to move here.
 
+**They have already drifted** (found 2026-08-05: an abbreviation fix had to be made twice
+by hand, in two different rule syntaxes, because nothing shares code between the repos).
+A pending integration task — extract the shared dialect/abbreviation layer, vendor a
+byte-identical copy in each repo, add a diff-check test so drift can't happen silently
+again — is fully specced in **[`INTEGRATION-PLAN.md`](INTEGRATION-PLAN.md)**. Read that
+before touching either linker.
+
 ## Next steps
 
+0. **Integrate the shared dialect layer with the blog repo.** Specced, ready to execute:
+   see [`INTEGRATION-PLAN.md`](INTEGRATION-PLAN.md). Do this before further dialect/rule
+   work in either repo, or the drift just gets worse.
 1. **Grow tier 2.** The 137-pair dataset + the ~8,800 unresolved Halachipedia citations are
    raw material for an LLM/SLM that surfaces citations and generalizes transform rules. The
    dataset is the training/eval seed.

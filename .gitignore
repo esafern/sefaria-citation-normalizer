@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 .venv/
+.DS_Store
 
 # regenerable caches (re-mineable from the public APIs; kept out of git)
 hp_cache/
