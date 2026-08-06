@@ -1,8 +1,39 @@
 # Integration Plan: Shared Dialect Layer (B+E)
 
-_Start here if you're picking up the "integrate the blog's linker with this repo" task.
-Read this file first, then `HANDOFF.md`, then look at the two live codebases below
-before writing anything — they've moved since this was written._
+**Status: done, 2026-08-05.** Steps 1–5 below are implemented and verified in both repos:
+`normalizer/shared_dialect.py` (this repo) and `pipeline/sefaria_linker/shared_dialect.py`
+(blog repo) are byte-identical, checked by `test_shared_dialect.py` in each repo. Both
+repos' local dialect logic delegates to it. **Step 6 (re-verify against the real 118-letter
+corpus) was not done** — that content now lives in the blog's `content.db`/live WordPress,
+not files, so it needs a deliberate decision, not a routine test run.
+
+**Same-day follow-up, twice-revised — read this before adding tractate spelling anywhere:**
+A first pass added `TRACTATE_ALIASES` (a hand-typed list of tractate spelling variants —
+Brachot/Berakhot, Psachim/Pesachim, etc.) to the shared file, after discovering the
+Yerushalmi-prefix rename didn't actually resolve live without some spelling fix. That list
+was then challenged as fundamentally the wrong shape: it can never be complete (every
+Anglo/Sephardi/academic transliteration a writer might use), and both repos already had
+*their own*, differently-incomplete versions of the same idea before this task started.
+
+**The actual fix**, replacing the list for both repos' propose-verify paths: a second
+resolver pass that canonicalizes just the bare tractate/parsha word via Sefaria's own
+`/api/name` completions, then recomposes with the corpus prefix — "Yerushalmi Brachot" ->
+ask Sefaria what "Brachot" canonicalizes to -> "Berakhot" -> "Jerusalem Talmud Berakhot".
+This already existed as dead code in the blog's `resolver.py`, but had a real bug: its
+skip-guard (meant to reject un-renamed candidates like raw "Yerushalmi X") also matched
+Tosefta/Mishnah/Mishna candidates, because those prefixes' `PREFIXES` rewrite only
+normalizes a comma — same word in and out — so their "already renamed" and "still raw"
+forms were textually identical and always got excluded. Fixed with a `for`/`else`: only
+apply the raw-form skip-check when no recognized (already-renamed) prefix was found. Ported
+this fixed pass into `normalizer/resolve.py`, which didn't have any canonicalization
+fallback before. Result: `benchmark.py` went from 79/139 to **101/139** (56% -> 72%),
+confirmed live, not a caching artifact. `TRACTATE_ALIASES` stays in `shared_dialect.py` for
+exactly one reason: `offline.py`'s no-network path has no oracle to call, so it's the one
+consumer where a finite hardcoded list is still the only option — kept intentionally small
+and *not* treated as a target for completeness.
+
+_Kept below as the original spec/rationale for the shared-vs-local boundary — still the
+right read before touching either repo's dialect layer._
 
 ## Why this exists
 

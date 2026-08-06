@@ -83,6 +83,32 @@ TRACTATES = [
     (r"\bAv\.?\s*Z\b\.?", "Avodah Zarah"),
 ]
 
+# Tractate-name spelling/transliteration variants -> Sefaria's canonical
+# English tractate name. Reconciled 2026-08-05 from three independently-
+# grown sources: this repo's normalizer/rules.py _SPELLING list, and the
+# blog's pipeline/sefaria_linker/offline.py TALMUD and TALMUD_TRACT dicts
+# (which had *each other* out of sync too — Brachos/Rosh HaShana/Baba Batra
+# were in one but not the other). A bare tractate name usually resolves via
+# Sefaria's own alt-title data without help; this list mainly earns its keep
+# composed onto a corpus-prefixed form ("Jerusalem Talmud Brachot"), where
+# Sefaria's alt-title coverage is much thinner, and for offline.py's
+# no-network dict lookups, which have no fuzzy matching at all.
+TRACTATE_ALIASES = [
+    (r"\bBrachot\b", "Berakhot"), (r"\bBrachos\b", "Berakhot"),
+    (r"\bBerachos\b", "Berakhot"), (r"\bBerakoth\b", "Berakhot"),
+    (r"\bPsachim\b", "Pesachim"),
+    (r"\bSukka\b", "Sukkah"),
+    (r"\bMegilla\b", "Megillah"),
+    (r"\bKetuvot\b", "Ketubot"), (r"\bKesubos\b", "Ketubot"),
+    (r"\bBaba Batra\b", "Bava Batra"), (r"\bBava Basra\b", "Bava Batra"),
+    (r"\bChagiga\b", "Chagigah"),
+    (r"\bYevamos\b", "Yevamot"),
+    (r"\bMenachos\b", "Menachot"), (r"\bMenachoth\b", "Menachot"),
+    (r"\bMo'?ed Qatan\b", "Moed Katan"),
+    (r"\bRosh Ha[Ss]hana\b", "Rosh Hashanah"),
+    (r"\bAvos\b", "Avot"),
+]
+
 # Corpus prefixes that change which work a tractate/parsha name belongs to.
 # Sefaria's /api/name trie rejects "Tosefta, X" but accepts "Tosefta X"
 # (measured, not assumed) — Tosefta/Mishnah/Mishna's entries below are

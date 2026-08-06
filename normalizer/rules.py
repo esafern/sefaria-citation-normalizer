@@ -37,19 +37,17 @@ _STRIP_TAIL = re.compile(
 # Word-final Ashkenazi / academic transliteration endings -> Sefaria's -ot form.
 _ENDINGS = [("oth", "ot"), ("os", "ot"), ("us", "ut"), ("ois", "ot")]
 
-# Small spelling swaps seen repeatedly.
+# Small spelling swaps seen repeatedly. Tractate-name variants live in
+# shared_dialect.TRACTATE_ALIASES instead (general dialect knowledge, not
+# specific to this repo's candidate-generation strategy).
 _SPELLING = [
     (r"\bPirke\b", "Pirkei"), (r"\bd'?e?[- ]?(?:Rebb?i|Rabb?i)\b", "DeRabbi"),
     (r"\bNoss?on\b", "Natan"), (r"\bNassan\b", "Natan"),
     (r"\bDerekh\b", "Derech"), (r"\bShul[hk]han\b", "Shulchan"), (r"\bShulkhan\b", "Shulchan"),
     (r"\bShemos\b", "Exodus"), (r"\bDevorim\b", "Deuteronomy"),
-    (r"\bBerachos\b", "Berakhot"), (r"\bBerakoth\b", "Berakhot"),
-    (r"\bKesubos\b", "Ketubot"), (r"\bYevamos\b", "Yevamot"),
-    (r"\bMenachos\b", "Menachot"), (r"\bMenachoth\b", "Menachot"),
-    (r"\bBava Basra\b", "Bava Batra"), (r"\bMo'?ed Qatan\b", "Moed Katan"),
     (r"\bOlas\b", "Olat"), (r"\bChovos\b", "Chovot"),
-    (r"\bAvos\b", "Avot"), (r"\bShabbos\b", "Shabbat"), (r"\bToras\b", "Torat"),
-    (r"\bHilchos\b", "Hilchot"), (r"\bTumas\b", "Tumat"), (r"\bMoed Qatan\b", "Moed Katan"),
+    (r"\bShabbos\b", "Shabbat"), (r"\bToras\b", "Torat"),
+    (r"\bHilchos\b", "Hilchot"), (r"\bTumas\b", "Tumat"),
 ]
 
 _ROMAN = {"i": 1, "v": 5, "x": 10, "l": 50, "c": 100}

@@ -19,15 +19,20 @@ deterministically with no model at link time.
 
 ## Two things this repo produces
 
-1. **The normalizer** (`normalizer/`) — the tier-1 deterministic layer. Resolves ~43% of
-   the sheet corpus; the other ~57% is irreducibly knowledge-based (English-translated
-   titles, alternate names, Hebrew) and is the job of an LLM/SLM — that's tier 2, and the
-   dataset feeds it.
+1. **The normalizer** (`normalizer/`) — the tier-1 deterministic layer. Resolves 101/139
+   (72%) of the verified corpus as of 2026-08-05 (`python3 benchmark.py`; up from ~43% at
+   this file's last full rewrite — see "Progress so far" below for what moved it). The
+   remainder is irreducibly knowledge-based (English-translated titles, alternate names,
+   Hebrew) and is the job of an LLM/SLM — that's tier 2, and the dataset feeds it.
 2. **A licensing-priority list for Sefaria** (`data/SEFARIA-MOST-WANTED.md`) — a byproduct
    that turned out to be independently valuable. See below.
 
-## Progress so far (as of 2026-07-24)
+## Progress so far (as of 2026-07-24, with a 2026-08-05 update below)
 
+- **2026-08-05**: rule coverage jumped from 79/139 to 101/139 (56% -> 72%) after replacing
+  a hand-typed tractate-spelling list with a resolver pass that canonicalizes tractate
+  names live via Sefaria's own `/api/name` completions. Details in "Relationship to the
+  blog repo" below and in `INTEGRATION-PLAN.md`.
 - **`data/citation_dataset.json`** — 137 verified `raw → Sefaria ref` pairs, mined from
   `find-refs` failures over 289 source sheets, LLM-labeled, Sefaria-verified. `my_canonical`
   is the labeler's guess; `sefaria_ref` is Sefaria's authoritative answer (they differ in
@@ -74,18 +79,32 @@ This work spun out of `~/work/rav-shvat-blog`, which has its own embedded copy o
 two from drifting. `SEFARIA-API-BUG.md` / `SEFARIA-CONTRIB-DRAFTS.md` currently live in the
 blog repo but document Sefaria issues — candidates to move here.
 
-**They have already drifted** (found 2026-08-05: an abbreviation fix had to be made twice
-by hand, in two different rule syntaxes, because nothing shares code between the repos).
-A pending integration task — extract the shared dialect/abbreviation layer, vendor a
-byte-identical copy in each repo, add a diff-check test so drift can't happen silently
-again — is fully specced in **[`INTEGRATION-PLAN.md`](INTEGRATION-PLAN.md)**. Read that
-before touching either linker.
+**They had drifted** (found 2026-08-05: an abbreviation fix had to be made twice by hand,
+in two different rule syntaxes, because nothing shared code between the repos). **Fixed
+2026-08-05**: `normalizer/shared_dialect.py` is now vendored byte-identically into both
+repos (`SECTIONS`, `RAMBAM_SECTIONS`, `PREFIXES`, `TRACTATES`, `TRACTATE_ALIASES`), each
+repo's local candidate-generation/URL-construction logic delegates to it, and
+`test_shared_dialect.py` in each repo fails loudly the moment the two copies diverge
+(skips, doesn't fail, if the sibling repo isn't checked out).
+
+Tractate-name spelling (Brachot/Berakhot, Psachim/Pesachim, ...) is deliberately **not**
+handled by a hand-typed list in the propose-verify path (`normalizer/resolve.py` here, the
+blog's `resolver.py`) — such a list can never keep up with every transliteration. Both now
+canonicalize the bare tractate word live via Sefaria's own `/api/name` completions instead.
+`benchmark.py` went from 79/139 to **101/139** as a result. `TRACTATE_ALIASES` still exists
+in the shared file only for `offline.py`'s no-network path, which has no oracle to call.
+Full history is in **[`INTEGRATION-PLAN.md`](INTEGRATION-PLAN.md)** — worth reading before
+touching either linker's dialect layer, since it explains the boundary and a bug (silently
+excluding Tosefta/Mishnah from canonicalization) that was found and fixed along the way.
+
+**Still open**: re-running the linker over the real 118-letter + 6-Q&A corpus to confirm
+nothing regressed post-integration (plan step 6). Not done — that content now lives in the
+blog's `content.db` / live WordPress site rather than as files, so this needs a deliberate
+read-only pass (or an explicit decision to skip it) rather than a routine test run.
 
 ## Next steps
 
-0. **Integrate the shared dialect layer with the blog repo.** Specced, ready to execute:
-   see [`INTEGRATION-PLAN.md`](INTEGRATION-PLAN.md). Do this before further dialect/rule
-   work in either repo, or the drift just gets worse.
+0. ~~Integrate the shared dialect layer with the blog repo~~ — done 2026-08-05, see above.
 1. **Grow tier 2.** The 137-pair dataset + the ~8,800 unresolved Halachipedia citations are
    raw material for an LLM/SLM that surfaces citations and generalizes transform rules. The
    dataset is the training/eval seed.
@@ -108,6 +127,7 @@ author-specific, by design, to avoid one-author overfitting.
 
 ```bash
 python3 benchmark.py                       # rule coverage vs the verified dataset
+python3 test_shared_dialect.py             # diff-check vs the blog repo's vendored copy
 python3 pipeline/build_final.py            # rebuild the most-wanted list (uses work_frequency.json)
 python3 -c "import json;print(len(json.load(open('data/citation_dataset.json'))))"  # 137
 ```
