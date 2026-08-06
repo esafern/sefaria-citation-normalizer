@@ -8,6 +8,8 @@ _A candidate priority list for Sefaria's library team._
 
 _See also: `CASE-YAD-MALACHI.md` — a data-grounded digitization case for the top public-domain absent work; `ANALYSIS.md` — most-cited works, genre profile, and the present-but-untranslated gap; `MOST-CITED-ABSENT-BY-CORPUS.md` — the top public-domain absent works in Halachipedia vs. Sefaria source sheets, and why they diverge._
 
+**Copyright-date re-check (2026-08-05).** The Tier 1/Tier 2 split was classified once by hand, anchored to whatever "today" was at classification time — it doesn't re-check itself as years pass. `pipeline/wikidata_deathdates.py` cross-checked each tier-1/tier-2 author's death year against Wikidata (P570) and flagged anything crossing the 70-years-since-death public-domain threshold as of now. Result: **Chazon Ish** (A.Y. Karelitz, d.1953 — 73 years ago) had aged past the threshold since this list was first built and is reclassified PD; **Rokeach**'s death year is corrected from 1230 to 1238 per Wikidata (doesn't change its tier). 38 of 55 checkable authors were confirmed matching; 16 had no confident Wikidata match (mostly older/obscure figures already unambiguous by century, not in doubt); 15 have no individual author name recorded at all (anonymous/institutional works like "modern rabbinical institute") and couldn't be checked this way. Full detail in `data/wikidata_deathdate_findings.json`. Worth re-running this check periodically — the threshold only moves one direction.
+
 ## Tier 1 — Public domain, not yet digitized
 
 _Author died >70 years ago; Sefaria can add these without licensing._
@@ -15,6 +17,7 @@ _Author died >70 years ago; Sefaria can add these without licensing._
 | Citations | Work | Author |
 |---:|---|---|
 | 243 | Yad Malachi | Malachi HaKohen (d.1772) |
+| 160 | Chazon Ish | A.Y. Karelitz (d.1953) |
 | 129 | Birkei Yosef | Chida (d.1806) |
 | 114 | Pri Chadash | H. da Silva (d.1698) |
 | 54 | Chavot Daat | Y. Lorberbaum (d.1832) |
@@ -32,7 +35,7 @@ _Author died >70 years ago; Sefaria can add these without licensing._
 | 18 | Daat Torah | Maharsham / S. Schwadron (d.1911) |
 | 18 | Yafeh Lelev | Yitzchak Palache (d.1907) |
 | 18 | Maharam Chalavah Pesachim | Maharam Chalava (14c) |
-| 18 | Rokeach | Eleazar of Worms (d.1230) |
+| 18 | Rokeach | Eleazar of Worms (d.1238) |
 | 17 | Ravyah | Eliezer b. Yoel HaLevi (d.1225) |
 | 17 | Machzik Bracha | Chida (d.1806) |
 
@@ -53,7 +56,6 @@ _Recent authorities; would require a licensing arrangement. Ranked by demand._
 | 186 | Badei Hashulchan | modern, on Yoreh De'ah |
 | 170 | Yechave Daat | Ovadia Yosef (d.2013) |
 | 166 | Shevet Halevi | S.H. Wosner (d.2015) |
-| 160 | Chazon Ish | A.Y. Karelitz (d.1953) |
 | 141 | Tzitz Eliezer | E. Waldenberg (d.2006) |
 | 117 | Nitei Gavriel | Gavriel Zinner, modern |
 | 109 | Chelkat Binyamin | on Hilchot Basar b'Chalav, modern |

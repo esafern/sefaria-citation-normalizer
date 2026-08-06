@@ -1,0 +1,635 @@
+{
+ "tier_flips": [
+  {
+   "work": "Chazon Ish",
+   "tier": "MOD",
+   "author": "A.Y. Karelitz (d.1953)",
+   "searched": "qid:Q543442",
+   "wikidata_label": "Avrohom Yeshaya Karelitz",
+   "wikidata_description": "Israeli rabbi (1878-1953)",
+   "wikidata_death_year": 1953,
+   "hand_year": 1953,
+   "hand_century": null,
+   "confident": true,
+   "correct_tier": "PD",
+   "years_since_death": 73
+  }
+ ],
+ "year_mismatches": [
+  {
+   "work": "Rokeach",
+   "tier": "PD",
+   "author": "Eleazar of Worms (d.1230)",
+   "searched": "Eleazar of Worms",
+   "wikidata_label": "Eleazar of Worms",
+   "wikidata_description": "German rabbi",
+   "wikidata_death_year": 1238,
+   "hand_year": 1230,
+   "hand_century": null,
+   "confident": true
+  }
+ ],
+ "no_name_recorded": [
+  {
+   "work": "Badei Hashulchan",
+   "author": "modern, on Yoreh De'ah"
+  },
+  {
+   "work": "Chelkat Binyamin",
+   "author": "on Hilchot Basar b'Chalav, modern"
+  },
+  {
+   "work": "Tiltulei Shabbat",
+   "author": "modern"
+  },
+  {
+   "work": "Menuchat Ahava",
+   "author": "modern"
+  },
+  {
+   "work": "Orchot Shabbat",
+   "author": "modern"
+  },
+  {
+   "work": "Torat HaMoadim",
+   "author": "modern"
+  },
+  {
+   "work": "Ginzei Hakodesh",
+   "author": "modern"
+  },
+  {
+   "work": "Mishpitei Aretz",
+   "author": "modern (Torah VeHaaretz)"
+  },
+  {
+   "work": "Agur Bohalecha",
+   "author": "modern"
+  },
+  {
+   "work": "Yismach Lev v",
+   "author": "modern"
+  },
+  {
+   "work": "Torat Ribbit",
+   "author": "modern"
+  },
+  {
+   "work": "Otzar Haposkim",
+   "author": "modern rabbinical institute"
+  },
+  {
+   "work": "Horah Brurah",
+   "author": "modern"
+  },
+  {
+   "work": "Amot Shel Halacha",
+   "author": "modern"
+  },
+  {
+   "work": "Matnat Yado fn",
+   "author": "modern"
+  }
+ ],
+ "no_wikidata_match": [
+  {
+   "work": "Yad Malachi",
+   "author": "Malachi HaKohen (d.1772)",
+   "searched": "Malachi HaKohen Yad Malachi"
+  },
+  {
+   "work": "Piskei Teshuvot",
+   "author": "Simcha Rabinowitz, modern",
+   "searched": "Simcha Rabinowitz"
+  },
+  {
+   "work": "Ishei Yisrael",
+   "author": "A.Y. Pfoifer, modern",
+   "searched": "A.Y. Pfoifer"
+  },
+  {
+   "work": "Avnei Nezer",
+   "author": "Avraham Bornsztain (d.1910)",
+   "searched": "Avraham Bornsztain"
+  },
+  {
+   "work": "Sdei Chemed",
+   "author": "C.C. Medini (d.1904)",
+   "searched": "C.C. Medini"
+  },
+  {
+   "work": "Darkei Teshuva",
+   "author": "Tzvi Hirsch Shapira (d.1913)",
+   "searched": "Tzvi Hirsch Shapira"
+  },
+  {
+   "work": "Sidrei Tahara",
+   "author": "Elchanan Ashkenazi (d.1780)",
+   "searched": "Elchanan Ashkenazi"
+  },
+  {
+   "work": "Brit Yehuda",
+   "author": "Y. Blau (d.2013)",
+   "searched": "Y. Blau"
+  },
+  {
+   "work": "Rabbenu Yerucham",
+   "author": "Yerucham b. Meshullam (14c)",
+   "searched": "Yerucham b. Meshullam"
+  },
+  {
+   "work": "Maamar Mordechai",
+   "author": "Mordechai Carmi (d.1825)",
+   "searched": "Mordechai Carmi"
+  },
+  {
+   "work": "Chelkat Yakov",
+   "author": "Mordechai Y. Breisch (d.1976)",
+   "searched": "Mordechai Yaakov Breisch"
+  },
+  {
+   "work": "Mekor Chaim",
+   "author": "Chavot Yair / Yair Bacharach (d.1702)",
+   "searched": "Yair Chaim Bacharach"
+  },
+  {
+   "work": "Minchat Asher",
+   "author": "Asher Weiss, modern",
+   "searched": "Asher Weiss"
+  },
+  {
+   "work": "Maharam Shik",
+   "author": "Moshe Schick (d.1879)",
+   "searched": "Moshe Schick"
+  },
+  {
+   "work": "Nishmat Avraham",
+   "author": "A.S. Abraham (d.2010)",
+   "searched": "Avraham Sofer Abraham"
+  },
+  {
+   "work": "Yafeh Lelev",
+   "author": "Yitzchak Palache (d.1907)",
+   "searched": "Yitzchak Palache"
+  }
+ ],
+ "low_confidence": [],
+ "confirmed": [
+  {
+   "work": "Yalkut Yosef",
+   "tier": "MOD",
+   "author": "Yitzchak Yosef",
+   "searched": "Yitzhak Yosef",
+   "wikidata_label": "Isaac Joseph",
+   "wikidata_description": "Israeli chief (Sephardi Jewish) rabbi",
+   "wikidata_death_year": null,
+   "hand_year": null,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Chazon Ovadyah",
+   "tier": "MOD",
+   "author": "Ovadia Yosef (d.2013)",
+   "searched": "qid:Q467172",
+   "wikidata_label": "Ovadia Joseph",
+   "wikidata_description": "Talmudic scholar, posek and Sephardi Chief Rabbi of Israel from 1973 to 1983",
+   "wikidata_death_year": 2013,
+   "hand_year": 2013,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Igrot Moshe",
+   "tier": "MOD",
+   "author": "Moshe Feinstein (d.1986)",
+   "searched": "Moshe Feinstein",
+   "wikidata_label": "Moshe Feinstein",
+   "wikidata_description": "Great Orthodox Jewish Rabbi of the 20th century (1895–1986)",
+   "wikidata_death_year": 1986,
+   "hand_year": 1986,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Shemirat Shabbat KeHilchata",
+   "tier": "MOD",
+   "author": "Y.Y. Neuwirth (d.2013)",
+   "searched": "Yehoshua Neuwirth",
+   "wikidata_label": "Yehoshua Neuwirth",
+   "wikidata_description": "Israeli rabbi (1927-2013)",
+   "wikidata_death_year": 2013,
+   "hand_year": 2013,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Yabia Omer",
+   "tier": "MOD",
+   "author": "Ovadia Yosef (d.2013)",
+   "searched": "qid:Q467172",
+   "wikidata_label": "Ovadia Joseph",
+   "wikidata_description": "Talmudic scholar, posek and Sephardi Chief Rabbi of Israel from 1973 to 1983",
+   "wikidata_death_year": 2013,
+   "hand_year": 2013,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Halacha Brurah",
+   "tier": "MOD",
+   "author": "David Yosef",
+   "searched": "David Yosef",
+   "wikidata_label": "David Yosef",
+   "wikidata_description": "Israeli rabbi",
+   "wikidata_death_year": null,
+   "hand_year": null,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Or Letzion",
+   "tier": "MOD",
+   "author": "Ben Zion Abba Shaul (d.1998)",
+   "searched": "Ben Zion Abba Shaul",
+   "wikidata_label": "Ben Zion Abba Shaul",
+   "wikidata_description": "Sephardic rabbi, Torah scholar and halakhic arbiter",
+   "wikidata_death_year": 1998,
+   "hand_year": 1998,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Yechave Daat",
+   "tier": "MOD",
+   "author": "Ovadia Yosef (d.2013)",
+   "searched": "qid:Q467172",
+   "wikidata_label": "Ovadia Joseph",
+   "wikidata_description": "Talmudic scholar, posek and Sephardi Chief Rabbi of Israel from 1973 to 1983",
+   "wikidata_death_year": 2013,
+   "hand_year": 2013,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Shevet Halevi",
+   "tier": "MOD",
+   "author": "S.H. Wosner (d.2015)",
+   "searched": "Shmuel Wosner",
+   "wikidata_label": "Shmuel Wosner",
+   "wikidata_description": "Austrian Haredi Rabbi (1913–2015)",
+   "wikidata_death_year": 2015,
+   "hand_year": 2015,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Tzitz Eliezer",
+   "tier": "MOD",
+   "author": "E. Waldenberg (d.2006)",
+   "searched": "Eliezer Waldenberg",
+   "wikidata_label": "Eliezer Waldenberg",
+   "wikidata_description": "Israeli rabbi (1915–2006)",
+   "wikidata_death_year": 2006,
+   "hand_year": 2006,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Birkei Yosef",
+   "tier": "PD",
+   "author": "Chida (d.1806)",
+   "searched": "Chaim Yosef David Azulai",
+   "wikidata_label": "Chaim Joseph David Azulai",
+   "wikidata_description": "Jerusalem rabbi and kabalist.",
+   "wikidata_death_year": 1806,
+   "hand_year": 1806,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Nitei Gavriel",
+   "tier": "MOD",
+   "author": "Gavriel Zinner, modern",
+   "searched": "Gavriel Zinner",
+   "wikidata_label": "Gavriel Zinner",
+   "wikidata_description": "Rabbi and religious author",
+   "wikidata_death_year": null,
+   "hand_year": null,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Pri Chadash",
+   "tier": "PD",
+   "author": "H. da Silva (d.1698)",
+   "searched": "Hezekiah da Silva",
+   "wikidata_label": "Hezekiah da Silva",
+   "wikidata_description": "Italian rabbi",
+   "wikidata_death_year": 1698,
+   "hand_year": 1698,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Taharat Habayit v",
+   "tier": "MOD",
+   "author": "Ovadia Yosef (d.2013)",
+   "searched": "qid:Q467172",
+   "wikidata_label": "Ovadia Joseph",
+   "wikidata_description": "Talmudic scholar, posek and Sephardi Chief Rabbi of Israel from 1973 to 1983",
+   "wikidata_death_year": 2013,
+   "hand_year": 2013,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Halichot Shlomo",
+   "tier": "MOD",
+   "author": "S.Z. Auerbach (d.1995)",
+   "searched": "Shlomo Zalman Auerbach",
+   "wikidata_label": "rabbi Shlomo Zalman Auerbach",
+   "wikidata_description": "rabbi (1910–1995)",
+   "wikidata_death_year": 1995,
+   "hand_year": 1995,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Minchat Yitzchak",
+   "tier": "MOD",
+   "author": "Y.Y. Weiss (d.1989)",
+   "searched": "Yitzchok Yaakov Weiss",
+   "wikidata_label": "Yitzchok Yaakov Weiss",
+   "wikidata_description": "Hungarian rabbi",
+   "wikidata_death_year": 1989,
+   "hand_year": 1989,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Rivevot Efraim",
+   "tier": "MOD",
+   "author": "Efraim Greenblatt (d.2014)",
+   "searched": "Efraim Greenblatt",
+   "wikidata_label": "Ephraim Greenblatt",
+   "wikidata_description": "American rabbi",
+   "wikidata_death_year": 2014,
+   "hand_year": 2014,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Teshuvot VeHanhagot",
+   "tier": "MOD",
+   "author": "Moshe Sternbuch, modern",
+   "searched": "Moshe Sternbuch",
+   "wikidata_label": "Moshe Sternbuch",
+   "wikidata_description": "South African rabbi",
+   "wikidata_death_year": null,
+   "hand_year": null,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Minchat Shlomo",
+   "tier": "MOD",
+   "author": "S.Z. Auerbach (d.1995)",
+   "searched": "Shlomo Zalman Auerbach",
+   "wikidata_label": "rabbi Shlomo Zalman Auerbach",
+   "wikidata_description": "rabbi (1910–1995)",
+   "wikidata_death_year": 1995,
+   "hand_year": 1995,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Chavot Daat",
+   "tier": "PD",
+   "author": "Y. Lorberbaum (d.1832)",
+   "searched": "Yaakov Lorberbaum",
+   "wikidata_label": "Yaakov Lorberbaum",
+   "wikidata_description": "rabbi",
+   "wikidata_death_year": 1832,
+   "hand_year": 1832,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Halichot Olam",
+   "tier": "MOD",
+   "author": "Yitzchak Yosef, modern",
+   "searched": "Yitzhak Yosef",
+   "wikidata_label": "Isaac Joseph",
+   "wikidata_description": "Israeli chief (Sephardi Jewish) rabbi",
+   "wikidata_death_year": null,
+   "hand_year": null,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Shalmei Yehuda",
+   "tier": "MOD",
+   "author": "modern (R. Elyashiv)",
+   "searched": "Yosef Shalom Elyashiv",
+   "wikidata_label": "Yosef Shalom Eliashiv",
+   "wikidata_description": "Israeli haredi rabbi. (1910–2012)",
+   "wikidata_death_year": 2012,
+   "hand_year": null,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Beer Moshe",
+   "tier": "MOD",
+   "author": "Moshe Stern (d.1997)",
+   "searched": "Moshe Stern",
+   "wikidata_label": "Moshe Stern",
+   "wikidata_description": "Hungarian American rabbi (1914–1997)",
+   "wikidata_death_year": 1997,
+   "hand_year": 1997,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Mishneh Halachot",
+   "tier": "MOD",
+   "author": "Menashe Klein (d.2011)",
+   "searched": "Menashe Klein",
+   "wikidata_label": "Menashe Klein",
+   "wikidata_description": "Rabbi of Ungvar community in Brooklyn, moved to Jerusalem at end of his life",
+   "wikidata_death_year": 2011,
+   "hand_year": 2011,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Hagahot Maimoniyot",
+   "tier": "PD",
+   "author": "Meir HaKohen (13c)",
+   "searched": "Meir HaKohen",
+   "wikidata_label": "Meir HaKohen",
+   "wikidata_description": "German rabbi",
+   "wikidata_death_year": 1298,
+   "hand_year": null,
+   "hand_century": 13,
+   "confident": true
+  },
+  {
+   "work": "Chut Shani",
+   "tier": "MOD",
+   "author": "Nissim Karelitz (d.2019)",
+   "searched": "Nissim Karelitz",
+   "wikidata_label": "Nissim Karelitz",
+   "wikidata_description": "Israeli rabbi",
+   "wikidata_death_year": 2019,
+   "hand_year": 2019,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Pitchei Choshen",
+   "tier": "MOD",
+   "author": "Yaakov Blau (d.2013)",
+   "searched": "Yaakov Blau",
+   "wikidata_label": "Yaakov Blau",
+   "wikidata_description": "rabbi (1929-2013)",
+   "wikidata_death_year": 2013,
+   "hand_year": 2013,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Knesset Hagedola",
+   "tier": "PD",
+   "author": "Chaim Benveniste (d.1673)",
+   "searched": "Chaim Benveniste",
+   "wikidata_label": "Chaim Benveniste",
+   "wikidata_description": "Ottoman rabbi",
+   "wikidata_death_year": 1673,
+   "hand_year": 1673,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Ashrei Ha'ish",
+   "tier": "MOD",
+   "author": "rulings of R. Elyashiv, modern",
+   "searched": "Yosef Shalom Elyashiv",
+   "wikidata_label": "Yosef Shalom Eliashiv",
+   "wikidata_description": "Israeli haredi rabbi. (1910–2012)",
+   "wikidata_death_year": 2012,
+   "hand_year": null,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Har Tzvi",
+   "tier": "MOD",
+   "author": "Tzvi Pesach Frank (d.1960)",
+   "searched": "Tzvi Pesach Frank",
+   "wikidata_label": "Tzvi Pesach Frank",
+   "wikidata_description": "rabbi of Jerusalem",
+   "wikidata_death_year": 1960,
+   "hand_year": 1960,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Gesher Hachaim",
+   "tier": "PD",
+   "author": "Y.M. Tucazinsky (d.1955)",
+   "searched": "Yechiel Michel Tucazinsky",
+   "wikidata_label": "Yechiel Michel Tucazinsky",
+   "wikidata_description": "Rabbi",
+   "wikidata_death_year": 1955,
+   "hand_year": 1955,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Shulchan Shlomo",
+   "tier": "MOD",
+   "author": "S.Z. Auerbach (d.1995)",
+   "searched": "Shlomo Zalman Auerbach",
+   "wikidata_label": "rabbi Shlomo Zalman Auerbach",
+   "wikidata_description": "rabbi (1910–1995)",
+   "wikidata_death_year": 1995,
+   "hand_year": 1995,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Daat Torah",
+   "tier": "PD",
+   "author": "Maharsham / S. Schwadron (d.1911)",
+   "searched": "Sholom Mordechai Schwadron",
+   "wikidata_label": "Sholom Mordechai Schwadron",
+   "wikidata_description": "Ukrainian rabbi",
+   "wikidata_death_year": 1911,
+   "hand_year": 1911,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Maharam Chalavah Pesachim",
+   "tier": "PD",
+   "author": "Maharam Chalava (14c)",
+   "searched": "Maharam Chalava",
+   "wikidata_label": "Moshe Chalava",
+   "wikidata_description": "Catalan rabbi and commentarist",
+   "wikidata_death_year": 1370,
+   "hand_year": null,
+   "hand_century": 14,
+   "confident": true
+  },
+  {
+   "work": "Nefesh Harav",
+   "tier": "MOD",
+   "author": "H. Schachter on R. Soloveitchik, modern",
+   "searched": "Hershel Schachter",
+   "wikidata_label": "Hershel Schachter",
+   "wikidata_description": "Gadol and posek hador for American Jews",
+   "wikidata_death_year": null,
+   "hand_year": null,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Ravyah",
+   "tier": "PD",
+   "author": "Eliezer b. Yoel HaLevi (d.1225)",
+   "searched": "Eliezer ben Joel HaLevi",
+   "wikidata_label": "Eliezer ben Joel HaLevi",
+   "wikidata_description": "German Rabbinic scholar",
+   "wikidata_death_year": 1225,
+   "hand_year": 1225,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Yaskil Avdi",
+   "tier": "MOD",
+   "author": "Ovadia Hedaya (d.1969)",
+   "searched": "Ovadia Hedaya",
+   "wikidata_label": "Ovadia Hedaya",
+   "wikidata_description": "Israeli rabbi (1889–1969)",
+   "wikidata_death_year": 1969,
+   "hand_year": 1969,
+   "hand_century": null,
+   "confident": true
+  },
+  {
+   "work": "Machzik Bracha",
+   "tier": "PD",
+   "author": "Chida (d.1806)",
+   "searched": "Chaim Yosef David Azulai",
+   "wikidata_label": "Chaim Joseph David Azulai",
+   "wikidata_description": "Jerusalem rabbi and kabalist.",
+   "wikidata_death_year": 1806,
+   "hand_year": 1806,
+   "hand_century": null,
+   "confident": true
+  }
+ ]
+}

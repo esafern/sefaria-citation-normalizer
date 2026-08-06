@@ -118,7 +118,11 @@ ERA = {
     "taharathabayit": ("Ovadia Yosef (d.2013)", "MOD"),
     "chelkatbinyamin": ("on Hilchot Basar b'Chalav, modern", "MOD"),
     "piskeiteshuvot": ("Simcha Rabinowitz, modern", "MOD"),
-    "chazonish": ("A.Y. Karelitz (d.1953)", "MOD"),
+    # Was MOD; Wikidata-confirmed d.1953 = 73 years ago (>70y threshold as of
+    # 2026) -> reclassified PD 2026-08-05. See pipeline/wikidata_deathdates.py
+    # and HANDOFF.md item 2 -- these eras age and need periodic re-checking,
+    # not just one-time classification.
+    "chazonish": ("A.Y. Karelitz (d.1953)", "PD"),
     "orletzion": ("Ben Zion Abba Shaul (d.1998)", "MOD"),
     "shevethalevi": ("S.H. Wosner (d.2015)", "MOD"),
     "badeihashulchan": ("modern, on Yoreh De'ah", "MOD"),
@@ -188,7 +192,7 @@ ERA = {
     "yadmalachi": ("Malachi HaKohen (d.1772)", "PD"),
     "sdeichemed": ("C.C. Medini (d.1904)", "PD"),
     "maharamchalavahpesachim": ("Maharam Chalava (14c)", "PD"),
-    "rokeach": ("Eleazar of Worms (d.1230)", "PD"),
+    "rokeach": ("Eleazar of Worms (d.1238)", "PD"),  # was d.1230; Wikidata-corrected 2026-08-05
     "yafehlelev": ("Yitzchak Palache (d.1907)", "PD"),
     "machzikbracha": ("Chida (d.1806)", "PD"),
     "pitcheichoshen": ("Yaakov Blau (d.2013)", "MOD"),

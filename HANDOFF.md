@@ -110,8 +110,29 @@ read-only pass (or an explicit decision to skip it) rather than a routine test r
    dataset is the training/eval seed.
 2. **Most-wanted list — pressure-test + full-corpus rebuild done** (see above; whole 640-page
    site mined, Tier-3 fully classified, false-absents and ambiguous abbreviations resolved).
-   Remaining before outreach: re-check the acharonim tier's copyright dates (a Wikidata
-   author-death-date pass can automate this — access is enabled, query design pending).
+   **Copyright-date re-check done (2026-08-05)** — `pipeline/wikidata_deathdates.py` cross-checked
+   Tier 1/2 authors' death years against Wikidata. Found and fixed a real, live case: **Chazon
+   Ish** (d.1953) had quietly aged past the 70-years-since-death public-domain threshold since
+   this list was first classified and is now correctly Tier 1, not Tier 2 — the concrete proof
+   that these tables need *periodic* re-checking, not a one-time classification. Also corrected
+   Rokeach's death year (1230 -> 1238). 38/55 checkable authors confirmed; 16 had no confident
+   Wikidata match (mostly obscure/century-only figures, not in doubt); 15 have no individual
+   author name recorded at all. Full detail in `data/SEFARIA-MOST-WANTED.md`'s "Copyright-date
+   re-check" note and `data/wikidata_deathdate_findings.json`. Worth re-running periodically.
+   - Correction to what this item originally assumed: death-year lookup by author name was
+     expected to sidestep the entity-matching brittleness `ANALYSIS.md`'s translation-
+     availability check ran into (see below) — that assumption was wrong. Wikidata's search is
+     exact/prefix label-alias matching, not transliteration-fuzzy, so abbreviated Anglo-Orthodox
+     names ("S.Z. Auerbach") mostly missed entities that ARE on Wikidata under a fuller name
+     ("Shlomo Zalman Auerbach"), and one very-online figure ("Ovadia Yosef") collided with a
+     living namesake. Worked around with a small, bounded, hand-verified name-override table in
+     the script (~20 entries) — legitimate there because it's a finite set of named people, not
+     an open-ended spelling tail like the tractate-name problem earlier in this file.
+   - **Open issue, not the same task**: `data/ANALYSIS.md`'s "Existing translations to
+     license?" section (the *translation-availability* judgment, not copyright dates) is a
+     domain assessment, not machine-verified — an automated Wikipedia/Wikidata check was
+     tried there and found unreliable (thin coverage, poor title matching for these works).
+     Getting a definitive answer needs a library-catalog (WorldCat/publisher) pass instead.
 3. **Contribute to Sefaria — when it's "truly real."** The strongest form isn't a repo link
    but a PR / data contribution into Sefaria's own repos: the dataset (as linker eval cases),
    the dialect map, and the most-wanted list (for their library/licensing team). Hold outreach
