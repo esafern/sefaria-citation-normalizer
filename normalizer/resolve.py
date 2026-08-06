@@ -33,6 +33,9 @@ BASE = "https://www.sefaria.org"
 _RENAMED_PREFIXES = sorted({repl for _, repl in shared_dialect.PREFIXES}, key=len, reverse=True)
 
 
+_UNSET = object()
+
+
 class Cache:
     def __init__(self, path=None):
         self.path = path
@@ -46,7 +49,12 @@ class Cache:
         return k in self.data
 
     def set(self, k, v):
-        if self.data.get(k) != v:
+        # dict.get's default (None) is indistinguishable from a stored
+        # known-miss (also None) -- use a sentinel so setting a *fresh*
+        # known-miss actually persists instead of silently no-op'ing (it
+        # otherwise never lands in self.data, so every genuinely-unresolved
+        # citation gets re-queried against Sefaria on every run, forever).
+        if self.data.get(k, _UNSET) != v:
             self.data[k] = v
             self._dirty = True
 
