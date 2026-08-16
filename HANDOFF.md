@@ -97,10 +97,18 @@ Full history is in **[`INTEGRATION-PLAN.md`](INTEGRATION-PLAN.md)** — worth re
 touching either linker's dialect layer, since it explains the boundary and a bug (silently
 excluding Tosefta/Mishnah from canonicalization) that was found and fixed along the way.
 
-**Still open**: re-running the linker over the real 118-letter + 6-Q&A corpus to confirm
-nothing regressed post-integration (plan step 6). Not done — that content now lives in the
-blog's `content.db` / live WordPress site rather than as files, so this needs a deliberate
-read-only pass (or an explicit decision to skip it) rather than a routine test run.
+**Still open, partially de-risked (2026-08-16)**: re-running the linker over the real
+118-letter + 6-Q&A corpus to confirm nothing regressed post-integration (plan step 6) has
+still not been done in its literal form (rebuild from source, diff old vs. new resolution)
+— that content lives in the blog's `content.db` / live WordPress site, not files, so a true
+regression diff still needs a deliberate pass. What *did* happen 2026-08-16: a full
+content-integrity + link-validity audit of all 253 live posts (`check_site.py`, plus a
+targeted cross-check of every "context-risky" cache key against live links) found zero
+broken or invalid Sefaria links anywhere in the corpus — indirect evidence against a
+resolution regression, though not the rigorous before/after diff step 6 asks for. It did
+find one unrelated, pre-existing defect (a context-blind cache mislink predating the
+Aug 6 dialect work, in "Ya'akov Dons Esav's Arms" — fixed). Full detail in the blog repo's
+`HANDOFF.md`, "Correction (2026-08-16)" note.
 
 ## Next steps
 

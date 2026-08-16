@@ -4,8 +4,13 @@
 `normalizer/shared_dialect.py` (this repo) and `pipeline/sefaria_linker/shared_dialect.py`
 (blog repo) are byte-identical, checked by `test_shared_dialect.py` in each repo. Both
 repos' local dialect logic delegates to it. **Step 6 (re-verify against the real 118-letter
-corpus) was not done** — that content now lives in the blog's `content.db`/live WordPress,
-not files, so it needs a deliberate decision, not a routine test run.
+corpus) still hasn't been done in its literal form** (rebuild from source, diff old vs. new
+resolution) — that content lives in the blog's `content.db`/live WordPress, not files, so a
+true regression diff still needs a deliberate pass. **Partially de-risked 2026-08-16**: a
+full content-integrity + link-validity audit of all 253 live posts found zero broken or
+invalid Sefaria links — indirect evidence against a regression, not the rigorous diff this
+step asks for. See `HANDOFF.md`'s "Still open" note and the blog repo's `HANDOFF.md`
+"Correction (2026-08-16)" for detail.
 
 **Same-day follow-up, twice-revised — read this before adding tractate spelling anywhere:**
 A first pass added `TRACTATE_ALIASES` (a hand-typed list of tractate spelling variants —
