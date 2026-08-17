@@ -183,6 +183,70 @@ corpus. It also found one unrelated, pre-existing defect (a context-blind cache 
 predating the Aug 6 dialect work, in "Ya'akov Dons Esav's Arms" — fixed). Full detail in
 the blog repo's `HANDOFF.md`, "Correction (2026-08-16)" note.
 
+## In-flight, checkpointed mid-session (2026-08-18) — pick up here
+
+- **Bare-tractate-name fix implemented, NOT yet verified/committed.** Added
+  `_resolve_bare_via_canonicalization` to `normalizer/resolve.py` (third
+  fallback pass, after the locator-bearing canonicalization): for a candidate
+  with no numeric locator, ask `/api/name` for ref completions and accept one
+  only if every word of its canonical `key` is already a normalized whole-word
+  match somewhere in the original raw citation (safe, provenance-based — never
+  a spelling guess). Confirmed working on the 3 target cases (`"Mesechet Rosh
+  Hashanah"`, `"Rosh Ha-Shanah"`, `"Tosefta to Tractate Chagigah"` all now
+  resolve) and correctly still rejects the 3 cases that need a real spelling
+  correction, not just reformatting (`"Kesubos"`, `"Mesechtas Berochos"`,
+  `"Mesechtas Menochos"` — disclosed gap, not fixed, see code comment). Also
+  added `"Mesechet"` (no final s) to `_STRIP_PREFIX` in `rules.py`. **A fresh,
+  cache-cleared full-corpus benchmark run was in progress when checkpointed —
+  re-run `rm -f pipeline/verify_cache.json && python3 benchmark.py --misses`,
+  confirm no regressions vs. the committed 107/139 baseline, then commit** (this
+  is exactly the "verify against the full benchmark before committing" the
+  owner asked for — not yet done).
+- **HP triage review dashboard — scope decided, not built.** Owner confirmed
+  (2026-08-18): review target is the Halachipedia unresolved-citation triage
+  queue (the tier-2 design plan's "~200 top-frequency heads cover 40%"
+  concrete next task), styled after `~/work/yad-malachi/yad-malachi-pipeline`'s
+  review dashboard pattern — explicitly "don't reinvent the wheel, use a
+  familiar look and feel". That pattern, read directly from the source: a
+  stdlib-only local HTTP server (`review_server.py`, `ThreadingHTTPServer`, no
+  framework) that re-reads its JSON data fresh off disk every request and
+  merges in human decisions at serve time; decisions are an **append-only
+  JSONL log** (`review_decisions.py` — one line per decision, "current" =
+  last matching line for a key, full history always recoverable, and a
+  promote-to-corpus step is a separate, deliberately manual script so a
+  rebuild can never clobber a human decision); a vanilla static JS/CSS
+  frontend (`review_frontend/`, no build step) with a fixed design system
+  worth reusing verbatim (`--ink`/`--paper`/`--wash`/`--accent`/`--danger`
+  CSS custom properties, Frank Ruhl Libre serif for content + Inter for UI
+  chrome, a left nav-pane of items with red=open/green=decided count badges,
+  a sliding side-panel drawer for making a decision, a legend box pinned
+  bottom-corner as a tri-state readout). One sharp implementation lesson
+  worth carrying over: `review_decisions.py`'s `_resolve(path)` docstring
+  documents a real bug they hit twice — a function default argument
+  (`path=DECISIONS_PATH`) binds at *import time*, so reassigning the module
+  constant later (e.g. to redirect tests at a throwaway file) silently doesn't
+  work; resolve the path *inside* the function body instead.
+  **Data-prep prototyped, not yet in the repo**: a head-extraction heuristic
+  (strip trailing locators/volume-section qualifiers/unbalanced parens from
+  each of the 8,789 raw strings in `pipeline/hp_unresolved.json`, group,
+  count) was iterated on on in `/private/tmp/.../scratchpad/head_explore.py`
+  (a throwaway path, not in this repo) — current state finds ~7,253 distinct
+  heads with the top 200 covering only ~16% (not the ~40% the design agent's
+  quick pass estimated; that estimate was informal too, so neither number
+  should be trusted over the other without a proper side-by-side). The
+  extraction needs another pass before it's good enough to build the real
+  queue from — remaining noise: unclosed volume/page fragments like
+  `"39 melachos (rabbi ribiat, vol"`, and un-merged spelling twins like
+  `"chazon ovadia"` vs `"chazon ovadyah"` splitting one work's count across
+  two queue rows (`pipeline/presence.py`'s already-hardened fuzzy word
+  matcher is the right tool to merge these — reuse it, don't rewrite it).
+  **Not started at all**: the actual `pipeline/build_hp_triage.py` (would
+  call `presence.check()` per head, paced, to pre-flag likely-absent heads
+  against `data/sefaria_most_wanted.json`'s 71-work list, and fetch a few
+  ref-completion candidates per head for the reviewer to pick from), the
+  review server, and the frontend. All next steps for whoever/whatever
+  session picks this up.
+
 ## Next steps
 
 0. ~~Integrate the shared dialect layer with the blog repo~~ — done 2026-08-05, see above.
