@@ -140,6 +140,66 @@ def _resolve_via_canonicalization(cands, polite):
     return None
 
 
+def _name_ref_completions(work, limit=10, timeout=15):
+    """Like _name_candidates, but keeps each completion's canonical `key`
+    (not just its display `title`) — needed to resolve a target whose
+    canonical form isn't textually close to the query."""
+    d = json.loads(urllib.request.urlopen(
+        BASE + "/api/name/" + urllib.parse.quote(work) + f"?limit={limit}",
+        timeout=timeout).read())
+    return [o for o in (d.get("completion_objects") or [])
+            if o.get("type") == "ref" and o.get("key")]
+
+
+def _normalize_word(w):
+    return re.sub(r"[.'’\-,]", "", w).lower()
+
+
+def _resolve_bare_via_canonicalization(cands, orig_citation, polite):
+    """Third-pass fallback for candidates with NO trailing locator (a bare
+    work name: "Kesubos", "Tosefta to Tractate Chagigah") -- the regex-based
+    canonicalization above only fires on a head+numbers shape. Ask Sefaria
+    for ref completions and accept one only if every word of its canonical
+    `key` is already traceable, as a normalized whole-word match, to
+    something the user actually wrote. Deliberately stricter than the
+    locator-bearing fallback: with no page number to anchor on, a wrong
+    accept here mislinks a whole book, not just widens a page match.
+
+    This will NOT catch a genuine spelling correction ("Kesubos" ->
+    "Ketubot" needs an actual letter change: Ashkenazi soft-tav as "s" vs.
+    Sephardi/modern "t" -- not just reformatting). That's a known, disclosed
+    gap, not a bug here: closing it needs either a hand-typed alias (this
+    project deliberately rejects that shape, see HANDOFF.md) or a bounded
+    phonetic-substitution generator (real mislink-risk surface of its own,
+    not attempted). It does catch legitimate reformatting: connector words
+    ("Tosefta to Tractate Chagigah" -> "Tosefta Chagigah"), hyphenation
+    ("Rosh Ha-Shanah" -> "Rosh Hashanah"), and an unstripped prefix
+    ("Mesechet Rosh Hashanah" -> "Rosh Hashanah").
+    """
+    orig_tokens = {_normalize_word(w) for w in re.findall(r"[A-Za-z'’\-.]+", orig_citation)}
+    for cand in cands:
+        if re.search(r"\d", cand):
+            continue  # has a locator; handled by _resolve_via_canonicalization
+        try:
+            refs = _name_ref_completions(cand)
+        except Exception:
+            return None
+        for o in refs:
+            key = o["key"]
+            words = re.findall(r"[A-Za-z'’\-.]+", key)
+            if not words or not all(_normalize_word(w) in orig_tokens for w in words):
+                continue
+            try:
+                url = _name(key)
+            except Exception:
+                return None
+            if polite:
+                time.sleep(polite)
+            if url:
+                return url
+    return None
+
+
 def resolve(citation, cache=None, online=True, polite=0.0):
     """Return a Sefaria URL for `citation`, or None. Cache holds citation->url
     (or None for a known miss)."""
@@ -161,6 +221,8 @@ def resolve(citation, cache=None, online=True, polite=0.0):
                 break
         if not url:
             url = _resolve_via_canonicalization(cands, polite)
+        if not url:
+            url = _resolve_bare_via_canonicalization(cands, citation, polite)
     if cache is not None:
         cache.set(citation, url)
     return url

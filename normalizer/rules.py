@@ -23,7 +23,7 @@ _STRIP_PREFIX = re.compile(
     r"William Davidson(?: Talmud)?|Vilna|Completes|Study Sheet|Source Sheet|"
     r"B\.?\s*Talmud|Babylonian Talmud|Talmud Bavli|Bavli|Talmud|"
     r"Gemara(?: of)?|Mishnah of Tractate|Mishnah of|"
-    r"Mesechtas?|Meseches|Masechet|Masekhet|Masechta?|Maseches|Tractate|Seifer|Sefer)\s+",
+    r"Mesechtas?|Mesechet|Meseches|Masechet|Masekhet|Masechta?|Maseches|Tractate|Seifer|Sefer)\s+",
     re.I)
 
 # Trailing editorial noise: notes, s.v., page/verse tails, Hebrew dibur-hamatchil.
