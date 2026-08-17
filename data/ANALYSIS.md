@@ -71,17 +71,45 @@ codes** (Chayei Adam, Chochmat Adam).
   per page because it assumes the base text.
 
 ### Existing translations to license?
-For most of this list — Shach, Taz, Beit Yosef, Bach, Beit Shmuel, Rosh/Ran/Rif —
-**no complete non-ArtScroll English translation exists**, so there is nothing to
-license; the realistic path is Sefaria **commissioning** original translation (as
-with the William Davidson Talmud), prioritized by this demand list. ArtScroll
-covers much of it but is not licensable (own closed digital library). The few
-realistic partners — Koren/Steinsaltz (already Sefaria's Talmud partner) and
-academic presses (Yale Judaica, Brill) — cover Talmud and some Rishonim, not these
-halachic commentaries.
+Checked each work below via WorldCat and Judaica-publisher catalogs (replacing
+the earlier Wikidata-based attempt, which proved unreliable — see caveat). The
+original assumption holds for nearly everything: **no complete, independently-
+published English translation exists** for the Rishonic commentaries (Rosh,
+Ran, Rashba, Rif, Tosafot) or the Acharonic nosei keilim on Shulchan Aruch
+(Shach, Taz, Bach, Beit Shmuel, Chelkat Mechokek), or for Beit Yosef, Kessef
+Mishneh, Kol Bo, Havot Yair, Teshuvot HaRivash, or Teshuvot HaRosh. Sefaria's
+own site already carries the only English these works have (partial/community
+translations) — there is no outside edition to license, so the realistic path
+stays **commissioning** original translation (as with the William Davidson
+Talmud), prioritized by this demand list.
+
+- **Rashi on Talmud** — confirmed absent as a standalone translation too:
+  Soncino's Talmud paraphrases Rashi into its own English rendering and
+  footnotes but never published Rashi as an independent English work.
+- **Chayei Adam / Chochmat Adam / Nishmat Adam** — small Orthodox presses
+  (Hoffman, and a Chochmas Adam edition from a niddah/kashrut-focused
+  publisher) have translated **individual hilchot** — Chanukah, Megillah,
+  Niddah, Meat & Milk — with facing-page Hebrew/English. These are excerpts of
+  single sections, not complete-work editions, so they don't change the
+  commission-vs-license calculus for the work as a whole.
+- **Aruch HaShulchan — new finding, different from the rest of this list.** A
+  complete English translation exists: all four sections (Orach Chaim, Yoreh
+  De'ah, Even HaEzer, Choshen Mishpat; ~24,161 subsections), made by Joshua
+  Broyde (an ML engineer, not a Judaica publisher) using an LLM, sourced from
+  Sefaria's own Hebrew text, and published free online with code+data on
+  GitHub ([Seforim Blog writeup](https://seforimblog.com/2026/05/translating-the-aruch-hashulchan-with-ai-method-and-lessons/)).
+  This isn't a "license an existing human translation" opportunity — it's an
+  AI first-pass the author himself flags as imperfect, and no explicit reuse
+  license is stated — but it's a real, complete, freely-available draft
+  Sefaria could evaluate for direct incorporation or as scaffolding to human-
+  review, which is a materially different (and cheaper) option than
+  commissioning Aruch HaShulchan from scratch. Worth a direct conversation
+  with Broyde before assuming either the quality or the rights.
 
 _Caveats: English coverage sampled from each work's opening section (ranks well,
-not a precise %). Translation-availability is a domain assessment, not
-machine-verified — an automated Wikipedia/Wikidata check proved unreliable for
-these works (thin coverage, poor title matching); a definitive answer needs a
-library-catalog (WorldCat/publisher) pass._
+not a precise %). This library-catalog pass is a web-search-based domain
+assessment (WorldCat + publisher sites), not a systematic bibliographic
+search — absence of evidence for a translation isn't definitive proof none
+exists, especially for small/out-of-print Judaica editions that don't surface
+well in general search. Treat "no complete translation found" as reasonably
+confident, not certain._

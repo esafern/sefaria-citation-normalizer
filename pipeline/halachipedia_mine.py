@@ -10,7 +10,7 @@ detects but can't resolve.
 Polite: robots.txt allows content pages & the API; we pace fetches and cap
 find-refs concurrency (ML). Everything cached.
 """
-import json, os, re, sys, time, urllib.parse, urllib.request
+import hashlib, json, os, re, sys, time, urllib.parse, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 import threading
 
@@ -68,7 +68,10 @@ def footnote_text(title):
 
 
 def find_refs(body):
-    key = os.path.join(CACHE, "fr_" + str(abs(hash(body))) + ".json")
+    # md5, not the builtin hash(): that's per-process randomized (PYTHONHASHSEED),
+    # so cache keys built from it are unreadable on any later run. mine_wide.py
+    # already learned this the hard way; match it.
+    key = os.path.join(CACHE, "fr_" + hashlib.md5(body.encode()).hexdigest() + ".json")
     if os.path.exists(key):
         return json.load(open(key))
     req = urllib.request.Request(SEF + "/api/find-refs",

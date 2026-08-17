@@ -3,14 +3,19 @@
 **Status: done, 2026-08-05.** Steps 1–5 below are implemented and verified in both repos:
 `normalizer/shared_dialect.py` (this repo) and `pipeline/sefaria_linker/shared_dialect.py`
 (blog repo) are byte-identical, checked by `test_shared_dialect.py` in each repo. Both
-repos' local dialect logic delegates to it. **Step 6 (re-verify against the real 118-letter
-corpus) still hasn't been done in its literal form** (rebuild from source, diff old vs. new
-resolution) — that content lives in the blog's `content.db`/live WordPress, not files, so a
-true regression diff still needs a deliberate pass. **Partially de-risked 2026-08-16**: a
-full content-integrity + link-validity audit of all 253 live posts found zero broken or
-invalid Sefaria links — indirect evidence against a regression, not the rigorous diff this
-step asks for. See `HANDOFF.md`'s "Still open" note and the blog repo's `HANDOFF.md`
-"Correction (2026-08-16)" for detail.
+repos' local dialect logic delegates to it. **Step 6 done 2026-08-18, mixed result.** Literal
+before/after diff: baseline `9d98ada` vs. current HEAD, offline linker over all 138 real
+letter/Q&A drafts, same committed cache both runs. 638 -> 521 citations resolved, 195
+changed — 115 an intentional specificity guard working as designed, 35 new links gained, 2
+real bug fixes, and **43 a genuine coverage regression** (citations currently linked live
+that the new code fails to resolve — Shulchan Aruch, Sefer HaChinuch, Tosfot, Bava Batra,
+Mesilat Yesharim, Yechezkel, some Yalkut spelling variants). Zero wrong-URL cases — the
+fail-safe property held. So: no silent mislinks (the question this step was meant to
+answer), but a real, unaddressed 43-citation coverage gap that needs its own follow-up
+pass before the integration is fully settled. See `HANDOFF.md`'s "Step 6 done, mixed
+result (2026-08-18)" note for full detail; earlier partial de-risking from 2026-08-16 (a
+site-wide link-validity audit finding zero broken links) is also there and in the blog
+repo's `HANDOFF.md` "Correction (2026-08-16)".
 
 **Same-day follow-up, twice-revised — read this before adding tractate spelling anywhere:**
 A first pass added `TRACTATE_ALIASES` (a hand-typed list of tractate spelling variants —

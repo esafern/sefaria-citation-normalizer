@@ -27,8 +27,68 @@ deterministically with no model at link time.
 2. **A licensing-priority list for Sefaria** (`data/SEFARIA-MOST-WANTED.md`) — a byproduct
    that turned out to be independently valuable. See below.
 
-## Progress so far (as of 2026-07-24, with a 2026-08-05 update below)
+## Progress so far (as of 2026-07-24, with 2026-08-05 and 2026-08-18 updates below)
 
+- **2026-08-18**: rule coverage moved from 101/139 to **107/139 (72% -> 76%)**, fresh and
+  live-verified (not a cache artifact — the prior number partly rested on stale local cache;
+  clearing it exposed one masked gap, see below). Four fixes in `normalizer/rules.py` /
+  `shared_dialect.py`: bare `"Talmud"` was missing from the prefix-strip list; wrapping
+  parens around a whole citation (`"Talmud (Chagiga 13b:14)"`, `"Rambam (Hilkhot Brakhot
+  1:16)"`) broke every downstream rule (now unwrapped-and-recursed through the full rule
+  set); `/api/name`'s `is_ref` path is case-sensitive beyond the first letter of the whole
+  string with no fuzzy fallback (`"Chovot Halevavot"` misses, `"Chovot HaLevavot"` resolves
+  to *Duties of the Heart*) and tier 1 never generated case variants (now does); and
+  `RAMBAM_SECTIONS` (shared with the blog repo) was missing the `brakhot` spelling of
+  Blessings. Also fixed a real cross-process cache-key bug in `pipeline/halachipedia_mine.py`
+  (`hash()` is per-process randomized; switched to `hashlib.md5`, matching `mine_wide.py`).
+  **Open gap exposed by the fresh run**: bare tractate names with no locator (`"Kesubos"`,
+  `"Rosh Ha-Shanah"` alone) don't resolve — the live-canonicalization fallback in
+  `resolve.py`'s `_resolve_via_canonicalization` only triggers on candidates that end in a
+  numeric locator, so a bare mis-spelled tractate name never reaches it. `/api/name`'s
+  completions for these *do* contain the right target but wrapped in unrelated prefixes
+  (`"Tos. Kesuvos"`, `"Yerushalmi Kesuvos"` for `"Kesubos"`) — filtering those down to a bare
+  match safely (without risking a mislink) needs more care than the fixes above; not
+  attempted yet, flagged for a decision rather than guessed at.
+  - **Sefaria's own architecture, read directly from their public repo**: the trie-based
+    fuzzy system (`sefaria/model/autospell.py` — `AutoCompleter`/`TitleTrie`/Norvig
+    spell-checker/n-gram TF-IDF) only powers `/api/name`'s `completions` suggestion list. It
+    is **never consulted for `is_ref`/`url`** — those come from `Ref.__init__` in
+    `sefaria/model/text.py`, an exact-string dict lookup (`library.get_title_node_dict`)
+    that only capitalizes the very first letter of the whole input and does no other
+    normalization. Confirmed live: `"rosh Hashanah 30a"` resolves (leading letter forced
+    upper), `"Rosh hashanah 30a"` does not (mid-string casing untouched), even though that
+    same query's `completions` list has `"Rosh Hashanah"` as its first suggestion. This means
+    contributing our alias data to their fuzzy matcher would not fix anything we depend on —
+    it's not in the decision path. A bug report against the exact-match path is drafted at
+    `SEFARIA-CASE-SENSITIVITY-BUG.md` (this repo), not yet posted (see "Contribute to
+    Sefaria" below).
+  - **Tier-2 design plan** (dispatched to an Opus-backed planning pass): recommends *not*
+    building tier 2 yet — land "tier 1.5" first (case/whitespace candidates, done above in
+    part; vocabulary-anchored span extraction against Sefaria's own 65k-title list, vendored
+    in the blog repo as `sefaria_titles.txt.gz`, not yet ported here) and re-measure, since
+    several "knowledge-tier" misses are actually reachable without a model. For tier 2 itself
+    when the residue is re-scoped: RAG-constrained *selection* (retrieve candidates from
+    Sefaria's own title vocabulary, model picks/recomposes, never free-generates a title) over
+    fine-tuning (too little labeled data, ~200 works) or free-generation prompting (the
+    existing `titles.py` docstring in the blog repo already recorded `/api/name` returning
+    "confident nonsense" for junk input — free generation would be a *better* junk generator
+    than that). Small model (Haiku) with Opus escalation on disagreement; cost is not a
+    binding constraint at any scale measured here (~$40 for a full frontier pass over the
+    entire unresolved Halachipedia corpus). **The load-bearing risk**: `/api/name` cannot
+    adjudicate section-inference (`Shulchan Aruch 294:2` -> Orach Chayim vs. Yoreh De'ah 294:2
+    are both real refs), so an LLM proposer can break the "unlinked, never mislinked" property
+    that rule-based over-generation gets for free — this needs an explicit decision (accept a
+    bounded mislink rate behind confidence gates, or permanently abstain on section-inference).
+    Also caught in passing: **`benchmark.py` scores truthiness, not correctness** — it never
+    checks the resolved ref matches `sefaria_ref`, which was fine for rule-based
+    over-generation (a wrong candidate just doesn't resolve) but is the wrong shape once an
+    LLM can resolve to a wrong-but-real ref. A 4-part harness upgrade (three-outcome
+    correct/wrong/abstain scoring, an absent-works mislink-trap fixture from
+    `data/sefaria_most_wanted.json`, a specificity check, and a held-out eval on the separate
+    121-pair Mi Yodeya corpus) is recommended as the go/no-go instrument to build *before* any
+    tier-2 code — not yet implemented, flagged for a scoping decision rather than built
+    speculatively. ~23% of the ~8,748 unresolved Halachipedia strings name a work on the
+    71-work absent list — a free, zero-labeling mislink-risk measurement once that trap exists.
 - **2026-08-05**: rule coverage jumped from 79/139 to 101/139 (56% -> 72%) after replacing
   a hand-typed tractate-spelling list with a resolver pass that canonicalizes tractate
   names live via Sefaria's own `/api/name` completions. Details in "Relationship to the
@@ -97,25 +157,55 @@ Full history is in **[`INTEGRATION-PLAN.md`](INTEGRATION-PLAN.md)** — worth re
 touching either linker's dialect layer, since it explains the boundary and a bug (silently
 excluding Tosefta/Mishnah from canonicalization) that was found and fixed along the way.
 
-**Still open, partially de-risked (2026-08-16)**: re-running the linker over the real
-118-letter + 6-Q&A corpus to confirm nothing regressed post-integration (plan step 6) has
-still not been done in its literal form (rebuild from source, diff old vs. new resolution)
-— that content lives in the blog's `content.db` / live WordPress site, not files, so a true
-regression diff still needs a deliberate pass. What *did* happen 2026-08-16: a full
-content-integrity + link-validity audit of all 253 live posts (`check_site.py`, plus a
-targeted cross-check of every "context-risky" cache key against live links) found zero
-broken or invalid Sefaria links anywhere in the corpus — indirect evidence against a
-resolution regression, though not the rigorous before/after diff step 6 asks for. It did
-find one unrelated, pre-existing defect (a context-blind cache mislink predating the
-Aug 6 dialect work, in "Ya'akov Dons Esav's Arms" — fixed). Full detail in the blog repo's
-`HANDOFF.md`, "Correction (2026-08-16)" note.
+**Step 6 done, mixed result (2026-08-18)**: the literal before/after diff (baseline
+`9d98ada` vs. current HEAD, offline linker over all 138 real letter/Q&A drafts, same
+committed cache both runs — this is the actual default non-`--online` build path, so
+Cache.set()'s known-miss fix landing after baseline doesn't confound the comparison)
+found **638 -> 521 citations resolved, 195 changed**: 115 an intentional specificity guard
+now correctly *not* auto-linking bare/generic citations ("12", "Bo", "ibid") — working as
+designed; 35 new links gained from the integration's new rules; 2 real bug fixes (a
+corrupted nested-link URL from a context-blind cache splice, now clean); and **43 a genuine
+coverage regression** — citations currently linked live that the new code fails to resolve
+(mostly non-Yalkut-remez cases: Shulchan Aruch, Sefer HaChinuch, Tosfot, Bava Batra,
+Mesilat Yesharim, Yechezkel, plus Yalkut spelling variants like "Zechariya"/"Zecharia" the
+new vocab doesn't cover). **Zero cases of a wrong new URL replacing a correct old one** —
+the fail-safe property held throughout. This closes the "did the integration silently
+mislink anything" question (no). It does **not** close the coverage question — the
+43-citation regression is real and unaddressed; a follow-up pass on the non-Yalkut offline
+rules and the Yalkut spelling vocab is needed before calling the integration fully settled.
+Full data/script: `/tmp/step6-diff/` (untracked, not committed — recreate the diff run if
+needed rather than relying on that path surviving).
+
+Earlier, partial de-risking (2026-08-16): a full content-integrity + link-validity audit of
+all 253 live posts (`check_site.py`, plus a targeted cross-check of every "context-risky"
+cache key against live links) found zero broken or invalid Sefaria links anywhere in the
+corpus. It also found one unrelated, pre-existing defect (a context-blind cache mislink
+predating the Aug 6 dialect work, in "Ya'akov Dons Esav's Arms" — fixed). Full detail in
+the blog repo's `HANDOFF.md`, "Correction (2026-08-16)" note.
 
 ## Next steps
 
 0. ~~Integrate the shared dialect layer with the blog repo~~ — done 2026-08-05, see above.
-1. **Grow tier 2.** The 137-pair dataset + the ~8,800 unresolved Halachipedia citations are
-   raw material for an LLM/SLM that surfaces citations and generalizes transform rules. The
-   dataset is the training/eval seed.
+   ~~Regression-diff step 6~~ — done 2026-08-18, see above (no mislinks; 43-citation coverage
+   regression found and left open, see item 1b).
+1. **Grow tier 2 — design plan done 2026-08-18, not yet built** (see "Progress so far" above
+   for the full recommendation). Concrete decisions needed before writing tier-2 code:
+   - **(a)** Land "tier 1.5" first (vocabulary-anchored span extraction against Sefaria's
+     65k-title list) and re-measure the residue — currently un-scoped work, not yet started.
+   - **(b)** Build the benchmark-harness upgrade (three-outcome scoring, absent-works
+     mislink-trap, specificity check, Mi Yodeya held-out eval) as the go/no-go instrument —
+     currently un-scoped work, not yet started.
+   - **(c)** Decide whether "unlinked, never mislinked" stays inviolable for tier 2, or a
+     bounded mislink rate is acceptable behind confidence gates — the owner's call, not made.
+   - Smaller, safe fix left undone by choice: the bare-tractate-name-with-no-locator gap
+     (`"Kesubos"`, `"Rosh Ha-Shanah"` alone) found 2026-08-18 — `/api/name`'s completions have
+     the right answer but wrapped in prefixes a naive filter could grab wrong; needs a
+     mislink-risk decision, not a guess.
+   - Also queued from the design pass, not yet done: fix `pipeline/mine_wide.py`'s HP-corpus
+     re-mine to reuse the now-fixed cache-key scheme (see "Progress so far" above) before any
+     re-mine of the ~8,748 unresolved strings for tier-2 use as a triage/eval set (they're
+     unlabeled — not training signal; see design plan for the triage-by-head-frequency
+     approach, ~200 hand-labeled heads covers 40% of citations).
 2. **Most-wanted list — pressure-test + full-corpus rebuild done** (see above; whole 640-page
    site mined, Tier-3 fully classified, false-absents and ambiguous abbreviations resolved).
    **Copyright-date re-check done (2026-08-05)** — `pipeline/wikidata_deathdates.py` cross-checked
@@ -136,15 +226,34 @@ Aug 6 dialect work, in "Ya'akov Dons Esav's Arms" — fixed). Full detail in the
      living namesake. Worked around with a small, bounded, hand-verified name-override table in
      the script (~20 entries) — legitimate there because it's a finite set of named people, not
      an open-ended spelling tail like the tractate-name problem earlier in this file.
-   - **Open issue, not the same task**: `data/ANALYSIS.md`'s "Existing translations to
-     license?" section (the *translation-availability* judgment, not copyright dates) is a
-     domain assessment, not machine-verified — an automated Wikipedia/Wikidata check was
-     tried there and found unreliable (thin coverage, poor title matching for these works).
-     Getting a definitive answer needs a library-catalog (WorldCat/publisher) pass instead.
+   - **Translation-availability pass — done 2026-08-18.** `data/ANALYSIS.md`'s "Existing
+     translations to license?" section is now a real WorldCat/publisher-catalog pass (not
+     Wikidata) across ~22 merged works (the 44 `english_gap.json` rows collapse to ~19-22
+     distinct author/work questions once tractate/section splits are merged). Confirms the
+     original assumption for nearly everything — no independently licensable English edition
+     exists for Rosh, Ran, Rashba, Rif, Tosafot, Shach, Taz, Bach, Beit Yosef, Kessef Mishneh,
+     Kol Bo, Havot Yair, Teshuvot HaRivash/HaRosh, Beit Shmuel, Chelkat Mechokek; Sefaria's own
+     site holds the only English these have. **One real surprise, flagged in the doc**: a
+     complete, free, LLM-generated English translation of the entire Aruch HaShulchan (all 4
+     sections) was published May 2026 by an independent ML engineer (Joshua Broyde), sourced
+     from Sefaria's own Hebrew text, code/data on GitHub — not a traditional license, quality
+     self-described as AI first-pass, but a materially cheaper option than commissioning from
+     scratch. Worth a direct conversation with the author — not yet reached out to, the
+     owner's call on outreach per item 3 below.
 3. **Contribute to Sefaria — when it's "truly real."** The strongest form isn't a repo link
    but a PR / data contribution into Sefaria's own repos: the dataset (as linker eval cases),
    the dialect map, and the most-wanted list (for their library/licensing team). Hold outreach
    until the deliverable is polished — the owner's explicit call.
+   - **New, sharper candidate found 2026-08-18**: `Ref()`'s exact-match title lookup (the
+     path that actually decides `/api/name`'s `is_ref`/`url` — separate from and *not*
+     covered by Sefaria's fuzzy `AutoCompleter`, confirmed by reading `sefaria/model/text.py`
+     and `autospell.py` directly) is case-sensitive beyond the first letter of the query, with
+     no fallback to the suggestion engine that already has the right answer. Draft bug report
+     at `SEFARIA-CASE-SENSITIVITY-BUG.md` (this repo) — not posted, pending the same
+     "deliverable is polished" call as the dataset/dialect-map contribution. This also
+     sharpens the already-drafted-but-unposted comment on their issue #577 in the blog repo's
+     `archive/SEFARIA-CONTRIB-DRAFTS.md` (draft B, "the alias list is structurally
+     incomplete") with a concrete root cause instead of just symptom examples.
 
 ## Provenance & privacy
 

@@ -30,10 +30,11 @@ resolve("ArtScroll Berachos 57b, note 38", cache=Cache("cache.json"))
 
 Built from a corpus mined off Sefaria source sheets: `find-refs` over 289 sheets
 surfaced ~1,100 distinct English citations it *detected but could not resolve*;
-after LLM labeling and Sefaria verification, **137 verified `raw → ref` pairs**
-(`data/citation_dataset.json`).
+after LLM labeling and Sefaria verification, **139 verified `raw → ref` pairs**
+(`data/citation_dataset.json`; `python3 benchmark.py` reports `/139`).
 
-The deterministic general rules resolve **~43%** of that corpus. The families:
+The deterministic general rules resolve **107/139 (76%)** of that corpus (2026-08-18;
+up from ~43% at this repo's start — see `HANDOFF.md` for what moved it). The families:
 
 | family | rule-able |
 |---|---|
@@ -41,12 +42,17 @@ The deterministic general rules resolve **~43%** of that corpus. The families:
 | edition / structural prefix strip (`ArtScroll`, `Meseches`, `Gemara`) | yes |
 | Rambam section → Mishneh Torah English (bounded ~40-section map) | yes |
 | `Pirke → Pirkei`, `d'Rebbi → DeRabbi`, roman numerals, note-tail strip | yes |
+| wrapping-paren unwrap (`Talmud (Chagiga 13b:14)`), casing/spacing fixes | yes |
+| live tractate-name canonicalization via Sefaria's own `/api/name` | yes |
 
-The other **~57%** is irreducibly knowledge-based and no rule captures it:
-English-translated titles (`Chovot Halevavot → Duties of the Heart`), alternate
+The remaining ~24% is mostly irreducibly knowledge-based: English-translated
+titles (`Book of Faith and Opinions → The Book of Beliefs and Opinions`), alternate
 names (`Book of Jasher → Sefer HaYashar`), Hebrew, and a long tail of one-off
-spellings. That half is the job of an LLM (at small scale) or a fine-tuned SLM /
-Sefaria's find-refs (at large scale).
+spellings — plus a smaller, real gap in bare tractate names with no locator
+(`Kesubos`, `Rosh Ha-Shanah` alone) that the live-canonicalization pass doesn't
+yet reach (open item, see `HANDOFF.md`). The knowledge-based share is the job of
+an LLM (at small scale) or a fine-tuned SLM / Sefaria's find-refs (at large
+scale) — see `HANDOFF.md`'s tier-2 design notes.
 
 So this repo is deliberately **tier 1** — the deterministic ceiling — and the
 dataset is what feeds tier 2.

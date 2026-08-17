@@ -21,7 +21,7 @@ PROVENANCE = "citation corpus mined from Sefaria source sheets; see data/citatio
 _STRIP_PREFIX = re.compile(
     r"^\s*(?:ArtScroll|Artscroll|Bomberg|Soncino|Koren|Steinsaltz|"
     r"William Davidson(?: Talmud)?|Vilna|Completes|Study Sheet|Source Sheet|"
-    r"B\.?\s*Talmud|Babylonian Talmud|Talmud Bavli|Bavli|"
+    r"B\.?\s*Talmud|Babylonian Talmud|Talmud Bavli|Bavli|Talmud|"
     r"Gemara(?: of)?|Mishnah of Tractate|Mishnah of|"
     r"Mesechtas?|Meseches|Masechet|Masekhet|Masechta?|Maseches|Tractate|Seifer|Sefer)\s+",
     re.I)
@@ -99,6 +99,25 @@ def candidates(citation):
     if stripped != base:
         add(_numbers_to_colon(stripped))
 
+    # Casing/spacing: /api/name is case- and whitespace-sensitive and does
+    # not fuzzy-match casing itself ("Chovot Halevavot" misses, "Chovot
+    # HaLevavot" resolves to "Duties of the Heart"). Title-case every word,
+    # then capitalize the letter right after a mid-word "Ha" definite
+    # article ("Halevavot" -> "HaLevavot", "Hachinuch" -> "HaChinuch"), and
+    # tidy comma/period spacing ("Zohar , vayigash" -> "Zohar, Vayigash").
+    # Just an extra over-generated candidate; wrong casing simply won't
+    # resolve.
+    def _cap_ha(s):
+        s = re.sub(r"\b([a-z])", lambda m: m.group(1).upper(), s)
+        return re.sub(r"\bHa([a-z])", lambda m: "Ha" + m.group(1).upper(), s)
+
+    def _fix_spacing(s):
+        s = re.sub(r"\s+([,.;:])", r"\1", s)
+        return re.sub(r"([,.;:])(?=\S)", r"\1 ", s)
+
+    for src in (citation, stripped):
+        add(_numbers_to_colon(_fix_spacing(_cap_ha(src))))
+
     # spelling swaps (on both raw and prefix-stripped)
     # Colonize BEFORE tail-stripping: _STRIP_TAIL's trailing-footnote-number
     # rule (\s+\d+\s*$) can't tell "chapter, verse" from a stray trailing
@@ -170,5 +189,17 @@ def candidates(citation):
     rom = re.sub(r"\b[ivxlcIVXLC]{2,}\b", _roman_sub, citation)
     if rom != citation:
         add(_numbers_to_colon(rom))
+
+    # Wrapping parens around the whole reference ("Talmud (Chagiga 13b:14)",
+    # "Rambam (Hilkhot Brakhot 1:16)"): flatten to "prefix inner" and to
+    # "inner" alone, then recurse so the flattened form gets every rule
+    # above for free (prefix strip, spelling, Rambam-section map, ...). Safe
+    # against infinite recursion: the flattened forms have no parens left.
+    mp = re.match(r"^(?P<pre>[A-Za-z][A-Za-z'.\s]*?)\s*\(\s*(?P<inner>[^()]+?)\s*\)\s*$", citation)
+    if mp:
+        pre, inner = mp.group("pre").strip(" ,."), mp.group("inner").strip()
+        for flat in (f"{pre} {inner}", inner):
+            for c in candidates(flat):
+                add(c)
 
     return out

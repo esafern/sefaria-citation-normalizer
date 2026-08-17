@@ -56,6 +56,7 @@ RAMBAM_SECTIONS = {
     "chanuka": "Scroll of Esther and Hanukkah", "chanukah": "Scroll of Esther and Hanukkah",
     # Blessings
     "brachot": "Blessings", "berachot": "Blessings", "berakhot": "Blessings",
+    "brakhot": "Blessings",
     # Forbidden Intercourse
     "issureibiah": "Forbidden Intercourse", "isuraybiah": "Forbidden Intercourse",
     # Tefillin, Mezuzah, and the Torah Scroll
