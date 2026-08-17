@@ -185,7 +185,14 @@ the blog repo's `HANDOFF.md`, "Correction (2026-08-16)" note.
 
 ## In-flight, checkpointed mid-session (2026-08-18) — pick up here
 
-- **Bare-tractate-name fix implemented, NOT yet verified/committed.** Added
+- **Bare-tractate-name fix: done, verified, committed 2026-08-18.** Fresh
+  full-corpus benchmark confirmed **116/139 (83%)**, up from 107/139 — miss
+  list strictly shrank (32 -> 22), no regressions. The fallback generalized
+  well beyond its 3 target cases (6 bonus resolves: *Eternal Victory Netzach
+  Yisrael*, *Guide for the Perplexed Introduction*, *Midrash Sh'muel*,
+  *Midrash of Ben Sira*, *Mishnah Bikkurim Rabbi Arthur Green*, *Tzava'at
+  Harivash*). Detail below is otherwise still accurate (the mechanism, what
+  it deliberately doesn't fix). Added
   `_resolve_bare_via_canonicalization` to `normalizer/resolve.py` (third
   fallback pass, after the locator-bearing canonicalization): for a candidate
   with no numeric locator, ask `/api/name` for ref completions and accept one
