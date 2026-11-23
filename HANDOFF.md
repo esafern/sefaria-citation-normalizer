@@ -251,6 +251,35 @@ the blog repo's `HANDOFF.md`, "Correction (2026-08-16)" note.
   review server, and the frontend. All next steps for whoever/whatever
   session picks this up.
 
+## ⚠ Mislinks found (2026-11-23): the fail-safe claim does not hold today
+
+A correctness check of the 116 benchmark resolves against each row's `sefaria_ref`
+(this is not what `benchmark.py` measures; it only checks that *something* resolved):
+**100 exact, 6 coarser (parent section, acceptable), 3 where we're more specific than
+the label, 7 real mislinks** (~6%):
+
+- `Seifer Chofeitz Chayim … 4:12` -> *Mishneh Torah, Repentance 4:12*
+- `Rambam, Sefer HaMitzvot, Prohibition 51` -> *Shorashim 51* (should be Negative Commandments)
+- `… Rambam, Laws of Kings 8:10-11` -> *Heave Offerings 8:10-11*
+- `Laws of Foundations of Torah 5 Rambam 1.` -> chapter 1 (should be 5)
+- `Mishnah of Tractate Chagigah` -> Bavli Chagigah (dropped "Mishnah")
+- `Tosfot Avodah Zarah 11a`, `Tosafos (Kesubos 30b)` -> the Gemara daf (dropped "Tosafot")
+
+The Halachipedia sample has more of the same: `Kaf Hachaim Palagi` -> Kaf HaChayim (Sofer);
+`Kaf Hachaim YD` -> the OC volume; `Kaf Hachaim. Radvaz 1:489` -> Kaf HaChayim 1:489;
+`Sefer HaMitzvot Hakatzar of the Chofetz Chaim 77` -> *Sefer Etz Chaim 77*;
+`Sefer Hamitzvot of Rambam (Lavin 232)` -> *Rasag's* Sefer HaMitzvot.
+
+**Root cause (most cases): `_resolve_via_canonicalization` (pass 2, added 2026-08-05)**
+accepts any `/api/name` completion for the work name, even when the completion
+**drops words the citation contains** (Palagi, YD, Radvaz, of Rambam, Lav, Tosfot). Pass 3
+has the opposite check (every title word must appear in the citation); pass 2 has no
+check that no citation word is dropped. Fix: an "every distinctive word of the head must
+appear in the canonical title" check in pass 2, and the same check added to pass 3.
+The Rambam-section and wrong-locator cases are separate rule bugs.
+**This also means the blog repo's 35 newly gained links from step 6 were never checked
+against the right answer**, only against the old output. Audit them.
+
 ## Remote branch review (2026-11-23), resolved
 
 - `claude/project-onboarding-status-lw5947`: superseded by PR #2 (its PR #1 was closed). **Remote branch deleted.**
