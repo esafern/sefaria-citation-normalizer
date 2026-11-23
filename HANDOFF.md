@@ -19,8 +19,8 @@ deterministically with no model at link time.
 
 ## Two things this repo produces
 
-1. **The normalizer** (`normalizer/`) — the tier-1 deterministic layer. Resolves 101/139
-   (72%) of the verified corpus as of 2026-08-05 (`python3 benchmark.py`; up from ~43% at
+1. **The normalizer** (`normalizer/`) — the tier-1 deterministic layer. Resolves 116/139
+   (83%) of the verified corpus as of 2026-08-18 (`python3 benchmark.py`; up from ~43% at
    this file's last full rewrite — see "Progress so far" below for what moved it). The
    remainder is irreducibly knowledge-based (English-translated titles, alternate names,
    Hebrew) and is the job of an LLM/SLM — that's tier 2, and the dataset feeds it.
@@ -41,7 +41,8 @@ deterministically with no model at link time.
   `RAMBAM_SECTIONS` (shared with the blog repo) was missing the `brakhot` spelling of
   Blessings. Also fixed a real cross-process cache-key bug in `pipeline/halachipedia_mine.py`
   (`hash()` is per-process randomized; switched to `hashlib.md5`, matching `mine_wide.py`).
-  **Open gap exposed by the fresh run**: bare tractate names with no locator (`"Kesubos"`,
+  **Open gap exposed by the fresh run** (since mostly fixed — see "Bare-tractate-name
+  fallback" below): bare tractate names with no locator (`"Kesubos"`,
   `"Rosh Ha-Shanah"` alone) don't resolve — the live-canonicalization fallback in
   `resolve.py`'s `_resolve_via_canonicalization` only triggers on candidates that end in a
   numeric locator, so a bare mis-spelled tractate name never reaches it. `/api/name`'s
@@ -93,11 +94,11 @@ deterministically with no model at link time.
   a hand-typed tractate-spelling list with a resolver pass that canonicalizes tractate
   names live via Sefaria's own `/api/name` completions. Details in "Relationship to the
   blog repo" below and in `INTEGRATION-PLAN.md`.
-- **`data/citation_dataset.json`** — 137 verified `raw → Sefaria ref` pairs, mined from
+- **`data/citation_dataset.json`** — 139 verified `raw → Sefaria ref` pairs, mined from
   `find-refs` failures over 289 source sheets, LLM-labeled, Sefaria-verified. `my_canonical`
   is the labeler's guess; `sefaria_ref` is Sefaria's authoritative answer (they differ in
   ~14 cases — that gap is exactly why propose→verify beats compute-the-name).
-- **Normalizer + benchmark** — `benchmark.py` tracks the ~43% deterministic ceiling. Rule
+- **Normalizer + benchmark** — `benchmark.py` tracks rule coverage (originally ~43%, now 83%). Rule
   families: Ashkenazi endings, edition/prefix strip, Rambam-section map, note-tail strip.
 - **Halachipedia phase** — `pipeline/halachipedia_mine.py` mined a 250-page sample:
   14,511 detections → 3,520 distinct works. `hp_failures.json` (8,990 distinct unresolved),
@@ -183,16 +184,15 @@ corpus. It also found one unrelated, pre-existing defect (a context-blind cache 
 predating the Aug 6 dialect work, in "Ya'akov Dons Esav's Arms" — fixed). Full detail in
 the blog repo's `HANDOFF.md`, "Correction (2026-08-16)" note.
 
-## In-flight, checkpointed mid-session (2026-08-18) — pick up here
+## Latest work (2026-08-18)
 
-- **Bare-tractate-name fix: done, verified, committed 2026-08-18.** Fresh
+- **Bare-tractate-name fallback: done, verified, committed (`2dbf999`).** Fresh
   full-corpus benchmark confirmed **116/139 (83%)**, up from 107/139 — miss
   list strictly shrank (32 -> 22), no regressions. The fallback generalized
   well beyond its 3 target cases (6 bonus resolves: *Eternal Victory Netzach
   Yisrael*, *Guide for the Perplexed Introduction*, *Midrash Sh'muel*,
   *Midrash of Ben Sira*, *Mishnah Bikkurim Rabbi Arthur Green*, *Tzava'at
-  Harivash*). Detail below is otherwise still accurate (the mechanism, what
-  it deliberately doesn't fix). Added
+  Harivash*). Added
   `_resolve_bare_via_canonicalization` to `normalizer/resolve.py` (third
   fallback pass, after the locator-bearing canonicalization): for a candidate
   with no numeric locator, ask `/api/name` for ref completions and accept one
@@ -203,12 +203,9 @@ the blog repo's `HANDOFF.md`, "Correction (2026-08-16)" note.
   resolve) and correctly still rejects the 3 cases that need a real spelling
   correction, not just reformatting (`"Kesubos"`, `"Mesechtas Berochos"`,
   `"Mesechtas Menochos"` — disclosed gap, not fixed, see code comment). Also
-  added `"Mesechet"` (no final s) to `_STRIP_PREFIX` in `rules.py`. **A fresh,
-  cache-cleared full-corpus benchmark run was in progress when checkpointed —
-  re-run `rm -f pipeline/verify_cache.json && python3 benchmark.py --misses`,
-  confirm no regressions vs. the committed 107/139 baseline, then commit** (this
-  is exactly the "verify against the full benchmark before committing" the
-  owner asked for — not yet done).
+  added `"Mesechet"` (no final s) to `_STRIP_PREFIX` in `rules.py`. Verified
+  with a cache-cleared full-corpus run before committing; re-confirmed
+  116/139 on 2026-08-18 after the session resumed.
 - **HP triage review dashboard — scope decided, not built.** Owner confirmed
   (2026-08-18): review target is the Halachipedia unresolved-citation triage
   queue (the tier-2 design plan's "~200 top-frequency heads cover 40%"
@@ -258,7 +255,7 @@ the blog repo's `HANDOFF.md`, "Correction (2026-08-16)" note.
 
 0. ~~Integrate the shared dialect layer with the blog repo~~ — done 2026-08-05, see above.
    ~~Regression-diff step 6~~ — done 2026-08-18, see above (no mislinks; 43-citation coverage
-   regression found and left open, see item 1b).
+   regression found and left open, see item 1d).
 1. **Grow tier 2 — design plan done 2026-08-18, not yet built** (see "Progress so far" above
    for the full recommendation). Concrete decisions needed before writing tier-2 code:
    - **(a)** Land "tier 1.5" first (vocabulary-anchored span extraction against Sefaria's
@@ -268,15 +265,19 @@ the blog repo's `HANDOFF.md`, "Correction (2026-08-16)" note.
      currently un-scoped work, not yet started.
    - **(c)** Decide whether "unlinked, never mislinked" stays inviolable for tier 2, or a
      bounded mislink rate is acceptable behind confidence gates — the owner's call, not made.
-   - Smaller, safe fix left undone by choice: the bare-tractate-name-with-no-locator gap
-     (`"Kesubos"`, `"Rosh Ha-Shanah"` alone) found 2026-08-18 — `/api/name`'s completions have
-     the right answer but wrapped in prefixes a naive filter could grab wrong; needs a
-     mislink-risk decision, not a guess.
+   - **(d)** Blog-repo coverage regression from step 6: 43 citations linked by the old
+     offline rules no longer resolve (Shulchan Aruch, Sefer HaChinuch, Tosfot, Bava Batra,
+     Mesilat Yesharim, Yechezkel, Yalkut spelling variants). No mislinks; coverage only.
+   - Bare-tractate gap: **mostly fixed** (`2dbf999`, see "Latest work"). Still open: names
+     needing a real spelling correction rather than reformatting (`"Kesubos"`,
+     `"Mesechtas Berochos"`, `"Mesechtas Menochos"`) — needs a mislink-risk decision, not a
+     guess.
    - Also queued from the design pass, not yet done: fix `pipeline/mine_wide.py`'s HP-corpus
      re-mine to reuse the now-fixed cache-key scheme (see "Progress so far" above) before any
      re-mine of the ~8,748 unresolved strings for tier-2 use as a triage/eval set (they're
      unlabeled — not training signal; see design plan for the triage-by-head-frequency
-     approach, ~200 hand-labeled heads covers 40% of citations).
+     approach — the design pass estimated ~200 heads cover 40% of citations; the later
+     prototype measured ~16%, so treat both as unverified).
 2. **Most-wanted list — pressure-test + full-corpus rebuild done** (see above; whole 640-page
    site mined, Tier-3 fully classified, false-absents and ambiguous abbreviations resolved).
    **Copyright-date re-check done (2026-08-05)** — `pipeline/wikidata_deathdates.py` cross-checked
@@ -338,5 +339,5 @@ author-specific, by design, to avoid one-author overfitting.
 python3 benchmark.py                       # rule coverage vs the verified dataset
 python3 test_shared_dialect.py             # diff-check vs the blog repo's vendored copy
 python3 pipeline/build_final.py            # rebuild the most-wanted list (uses work_frequency.json)
-python3 -c "import json;print(len(json.load(open('data/citation_dataset.json'))))"  # 137
+python3 -c "import json;print(len(json.load(open('data/citation_dataset.json'))))"  # 139
 ```
