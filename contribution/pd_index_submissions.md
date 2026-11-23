@@ -29,8 +29,8 @@ library.
 - **Absence** is taken from the merged full-corpus most-wanted list, which was
   live-verified against `/api/name`. Two caveats carried over: **Eliya Rabba is
   excluded here** (it's already on Sefaria as "Eliyah Rabbah on Shulchan Arukh,
-  Orach Chayim" — a false-absent in the list), and **Radvaz** is included only
-  for its responsa, which need a presence re-check (see its entry).
+  Orach Chayim" — a false-absent in the list), and **Teshuvot HaRadbaz** is excluded
+  (re-checked 2026-11-23: present as "Teshuvot HaRadbaz Volume 1–5").
 
 ## Sefaria conventions this follows (from live index lookups)
 
@@ -136,20 +136,14 @@ section(s); schema `["Siman","Seif"]`. Works spanning several SA sections are
 
 Category `Responsa › Acharonim` (or `Rishonim`); complex (node per SA section → Siman), like Noda BiYehudah.
 
-### D1. Teshuvot HaRadbaz — שו"ת רדב"ז  ⚠ verify presence first
-- **Author:** David ibn Zimra (Radbaz), d.1573.
-- **Category:** `Responsa › Rishonim` (or early Acharonim).
-- **⚠ Caveat:** the most-wanted list marks "responsa absent, MT commentary present," but a live `/api/name` probe returned a completion **"Teshuvot HaRadbaz Volume 1"** — so the responsa may already be present. **Re-check before submitting**; if present, drop from this list.
-- **Confidence:** identity high; **absence uncertain** (the point of the caveat).
-
-### D2. Avnei Nezer — אבני נזר
+### D1. Avnei Nezer — אבני נזר
 - **Author:** Avraham Bornsztain of Sochatchov, d.1910.
 - **Category:** `Responsa › Acharonim`.
 - **Base / structure:** responsa across **OC, YD, EH, CM** → complex, node per section → Siman.
 - **Source hint:** standard; scans plentiful.
 - **Confidence:** high.
 
-### D3. Teshuvot Maharam Shik — שו"ת מהר"ם שיק
+### D2. Teshuvot Maharam Shik — שו"ת מהר"ם שיק
 - **Author:** Moshe Schick (Maharam Shik), d.1879.
 - **Category:** `Responsa › Acharonim`.
 - **Base / structure:** responsa ordered by SA sections → complex per section → Siman.
@@ -163,7 +157,7 @@ Category `Responsa › Acharonim` (or `Rishonim`); complex (node per SA section 
 Category `Halakhah › Rishonim` (Talmud-commentary chiddushim go under `Talmud`).
 
 ### E1. Sefer HaRokeach — ספר הרוקח
-- **Author:** Eleazar of Worms (the Rokeach), d.1230.
+- **Author:** Eleazar of Worms (the Rokeach), d.1238.
 - **Category:** `Halakhah › Rishonim`.
 - **Structure:** halakhic-ethical work in numbered **simanim** → `["Siman","Paragraph"]` (model: Sefer Chasidim).
 - **Confidence:** high on model; confirm siman count/segmentation.
@@ -202,7 +196,7 @@ These are **not** simple commentaries; each needs a schema designed with Sefaria
 - **Confidence:** identity high; **schema is a real design task** — do not auto-generate.
 
 ### F2. Yad Malachi — יד מלאכי
-- **Author:** Malachi HaKohen, d.1785.
+- **Author:** Malachi HaKohen, d.1772.
 - **Category:** `Halakhah › Acharonim` (methodology — kllei ha-Talmud / kllei ha-poskim).
 - **Structure:** rules arranged **alphabetically within sections** (kllalei ha-Talmud; kllalei ha-poskim; misc.) → complex, node per section → numbered rule.
 - **Confidence:** medium — confirm the section division and rule numbering.
@@ -213,6 +207,13 @@ These are **not** simple commentaries; each needs a schema designed with Sefaria
 - **Structure:** topical monograph in **three parts**, chapters → sections → `["Chapter","Paragraph"]` per part (complex).
 - **⚠ Caveat:** d.1955 → life+70 lapses in **2026**; PD status is fresh and jurisdiction-dependent. **Confirm the copyright determination** before treating as CC0.
 - **Confidence:** medium.
+
+### F4. Chazon Ish — חזון איש
+- **Author:** Avraham Yeshayahu Karelitz (the Chazon Ish), d.1953. _(Reclassified public domain 2026-08-05: life+70 lapsed in 2024; see `data/SEFARIA-MOST-WANTED.md`.)_
+- **Category:** `Halakhah › Acharonim`.
+- **Structure:** novellae in **volumes arranged by Shulchan Arukh section** (Orach Chayim, Yoreh De'ah, Even HaEzer, Choshen Mishpat) **and by Talmudic order** (Zeraim, Moed, Nashim, Nezikin, Kodashim, Taharot). Within each volume, simanim with numbered se'if katan. → **complex**, one `["Siman","Seif Katan"]` node per volume.
+- **⚠ Caveats:** (1) The author is public domain, but **posthumous editions** (later printings with editorial additions and notes, *Kovetz Iggerot*) may carry their own rights. Base the text on an edition printed in his lifetime or one known to be clean. (2) Halachipedia cites it heavily (#2 in Tier 1, 160 citations), mostly the OC volumes, so those are the obvious first nodes.
+- **Confidence:** identity high; **confirm the volume list and internal numbering** against a printed set.
 
 ---
 
@@ -232,19 +233,20 @@ These are **not** simple commentaries; each needs a schema designed with Sefaria
 | A10 | Yafeh Lelev | Y. Palache (1907) | SA commentary | Shulchan Arukh | verify sections |
 | B1 | Hagahot Maimoniyot | Meir HaKohen (13c) | MT gloss | Mishneh Torah | build node list |
 | C1 | Knesset HaGedolah | C. Benveniste (1673) | Tur gloss | Tur | confirm layer |
-| D1 | Teshuvot HaRadbaz | ibn Zimra (1573) | Responsa | Responsa | ⚠ verify presence |
-| D2 | Avnei Nezer | Bornsztain (1910) | Responsa | Responsa | ready |
-| D3 | Maharam Shik | M. Schick (1879) | Responsa | Responsa | ready |
-| E1 | Sefer HaRokeach | Eleazar of Worms (1230) | Rishonim halakhah | Halakhah | ready |
+| D1 | Avnei Nezer | Bornsztain (1910) | Responsa | Responsa | ready |
+| D2 | Maharam Shik | M. Schick (1879) | Responsa | Responsa | ready |
+| E1 | Sefer HaRokeach | Eleazar of Worms (1238) | Rishonim halakhah | Halakhah | ready |
 | E2 | Ravyah | Eliezer b. Yoel (1225) | Rishonim halakhah | Halakhah | confirm siman |
 | E3 | Rabbeinu Yerucham | Yerucham b. Meshullam (14c) | Rishonim halakhah | Halakhah | design schema |
 | E4 | Maharam Chalava on Pesachim | M. Chalava (14c) | Talmud commentary | Talmud | ready |
 | F1 | Sdei Chemed | Medini (1904) | Encyclopedia | Halakhah | design schema |
-| F2 | Yad Malachi | Malachi HaKohen (1785) | Methodology | Halakhah | design schema |
+| F2 | Yad Malachi | Malachi HaKohen (1772) | Methodology | Halakhah | design schema |
 | F3 | Gesher HaChaim | Tucazinsky (1955) | Aveilut monograph | Halakhah | ⚠ borderline PD |
+| F4 | Chazon Ish | Karelitz (1953) | Novellae (SA + Talmud orders) | Halakhah | ⚠ edition rights; design schema |
 
-**Excluded from submission:** _Eliya Rabba_ — already on Sefaria (Eliyah Rabbah
-on SA OC); listed as absent in error and flagged to the pipeline track.
+**Excluded from submission:** _Eliya Rabba_ (already on Sefaria as Eliyah Rabbah
+on SA OC) and _Teshuvot HaRadbaz_ (present as Volumes 1–5). Both were listed as
+absent in error and have since been fixed in the most-wanted list.
 
 ---
 _Source of the absent-PD set: `data/SEFARIA-MOST-WANTED.md` (full 640-page
