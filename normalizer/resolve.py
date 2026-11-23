@@ -95,6 +95,100 @@ def _name_candidates(work, limit=5, timeout=15):
     return out[:limit]
 
 
+# Words a canonical title may legitimately drop: connectors and generic
+# structural/editorial words that never distinguish one work from another.
+# Anything NOT in this set (Tosafot, Mishnah, Midrash, Palagi, YD, Lav, ...)
+# carries meaning, and a canonical title that drops it is a different work.
+_DROPPABLE = {
+    "of", "the", "on", "to", "and", "in", "a",
+    "laws", "hilchot", "hilchos", "hilkhot", "hil",
+    "sefer", "seifer", "tractate", "masechet", "maseches", "masechta",
+    "mesechet", "meseches", "mesechta", "mesechtas", "masekhet",
+    "talmud", "bavli", "babylonian", "gemara",
+    "note", "notes", "verse", "verses", "chapter", "chap", "ch",
+    "introduction", "intro",
+    # numbering words: they label the number, they don't pick a section
+    # (unlike Lav / Prohibition / responsa, which stay distinctive)
+    "mitzvah", "mitzva", "mitvah", "siman", "seif", "no", "number",
+    "page", "pg", "daf", "vol", "volume",
+}
+
+# Names for the Rambam / Mishneh Torah: any one in the citation is satisfied
+# by any one in the canonical title ("Yad, Yesodey Hatorah" -> "Rambam,
+# Yesodey haTorah"; "Moses Maimonides, Mishneh Torah, ..." -> "Mishneh Torah,
+# ..."). Deliberately NOT satisfied by an unrelated title: "Sefer Hamitzvot of
+# Rambam" -> "Sefer Hamitzvot of Rasag" still fails.
+_RAMBAM = {"rambam", "maimonides", "moses", "yad", "mishneh"}
+
+
+def _split_words(s):
+    # rejoin a hyphenated/apostrophized article: Ha-Shanah, Ha'Shanah -> HaShanah
+    s = re.sub(r"\b(ha|de|ve)[-'’](?=[a-z])", r"\1", s, flags=re.I)
+    return re.findall(r"[A-Za-z'’]+", s)
+
+
+def _word_key(w):
+    """Lowercase, drop apostrophes/punctuation and a leading 'ha'/'de' article
+    so HaChaim/Hachaim/Chaim and D'Rabbi/DeRabbi compare equal."""
+    w = re.sub(r"[^a-z]", "", w.lower())
+    return re.sub(r"^(?:ha|de)(?=[a-z]{3})", "", w)
+
+
+def _skeleton(k):
+    """Consonant skeleton for transliteration-insensitive comparison:
+    kh/ch/q->k, th->t, Ashkenazi s->t (Kesubos/Ketubot), vowels and
+    doubled letters dropped. HaYosher/HaYashar and Brachot/Berakhot agree;
+    Bekhorot/Berakhot (bkrt vs brkt) do not."""
+    k = k.replace("kh", "k").replace("ch", "k").replace("q", "k").replace("th", "t")
+    k = k.replace("sh", "S").replace("s", "t").replace("ph", "f")
+    k = k[0] + re.sub(r"[aeiouy]", "", k[1:]) if k else k
+    return re.sub(r"(.)\1+", r"\1", k)
+
+
+def _words_match(a, b):
+    """Same word up to transliteration. Short words must match exactly: at
+    2-3 letters nothing can tell YD from OC."""
+    if a == b:
+        return True
+    if min(len(a), len(b)) <= 3:
+        return False
+    if _skeleton(a) == _skeleton(b):
+        return True
+    from difflib import SequenceMatcher
+    return SequenceMatcher(None, a, b).ratio() >= 0.8
+
+
+def _distinctive(words):
+    return [k for w in words if (k := _word_key(w)) and w.lower() not in _DROPPABLE
+            and k not in _DROPPABLE]
+
+
+def _matches_any(k, keys):
+    if k in _RAMBAM and _RAMBAM & set(keys):
+        return True
+    return any(_words_match(k, c) for c in keys if c)
+
+
+def _keeps_all_words(source, canon):
+    """True if `canon` is a safe canonicalization of `source`:
+    1. every distinctive word of `source` has a match in `canon` (nothing
+       dropped: "Kaf Hachaim Palagi" -> "Kaf HaChayim on Shulchan Arukh" drops
+       the author; "Tosfot Avodah Zarah" -> "Avodah Zarah" drops the
+       commentary layer; "of Rambam" -> "of Rasag" swaps the author), and
+    2. canon's first distinctive word comes from `source` (nothing prefixed:
+       "Pirkei Avot, Commentary on" -> "German Commentary on Pirkei Avot" is
+       a different work about the cited one). Expansions after the cited
+       name are fine ("Kaf Hachaim" -> "Kaf HaChayim on Shulchan Arukh, ...").
+    """
+    src = _distinctive(_split_words(source))
+    can = _distinctive(_split_words(canon))
+    if not src or not can:
+        return False
+    if not all(_matches_any(k, can) for k in src):
+        return False
+    return _matches_any(can[0], src)
+
+
 def _resolve_via_canonicalization(cands, polite):
     """Second-pass fallback: split a candidate into (corpus prefix, work
     head, numbers), ask Sefaria to canonicalize just the head, recompose."""
@@ -103,6 +197,11 @@ def _resolve_via_canonicalization(cands, polite):
         if not m:
             continue
         head, nums = m.group("head"), m.group("nums").strip()
+        if re.search(r"\d", head):
+            # A number inside the work name ("Foundations of Torah 5 Rambam 1")
+            # means the locator is split; recomposing with only the trailing
+            # number would point at the wrong chapter.
+            continue
         prefix = ""
         for pre in _RENAMED_PREFIXES:
             if head.startswith(pre):
@@ -129,6 +228,8 @@ def _resolve_via_canonicalization(cands, polite):
         for canon in canons:
             if not canon or canon == head:
                 continue
+            if not _keeps_all_words(head, canon):
+                continue  # completion drops part of the citation: a different work
             try:
                 url = _name(f"{prefix}{canon} {nums}")
             except Exception:
@@ -189,6 +290,8 @@ def _resolve_bare_via_canonicalization(cands, orig_citation, polite):
             words = re.findall(r"[A-Za-z'’\-.]+", key)
             if not words or not all(_normalize_word(w) in orig_tokens for w in words):
                 continue
+            if not _keeps_all_words(cand, key):
+                continue  # same guard as pass 2, in the other direction
             try:
                 url = _name(key)
             except Exception:

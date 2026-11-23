@@ -19,8 +19,10 @@ deterministically with no model at link time.
 
 ## Two things this repo produces
 
-1. **The normalizer** (`normalizer/`) — the tier-1 deterministic layer. Resolves 116/139
-   (83%) of the verified corpus as of 2026-08-18 (`python3 benchmark.py`; up from ~43% at
+1. **The normalizer** (`normalizer/`) — the tier-1 deterministic layer. As of 2026-11-23:
+   **95/139 correct, 8 coarser/finer, 0 wrong, 36 unresolved** (`python3 benchmark.py`, which
+   now scores correctness, not just "resolved"). Before the 2026-11-23 mislink fix it reported
+   116/139 "resolved", 7 of which were wrong links. Up from ~43% at
    this file's last full rewrite — see "Progress so far" below for what moved it). The
    remainder is irreducibly knowledge-based (English-translated titles, alternate names,
    Hebrew) and is the job of an LLM/SLM — that's tier 2, and the dataset feeds it.
@@ -98,7 +100,7 @@ deterministically with no model at link time.
   `find-refs` failures over 289 source sheets, LLM-labeled, Sefaria-verified. `my_canonical`
   is the labeler's guess; `sefaria_ref` is Sefaria's authoritative answer (they differ in
   ~14 cases — that gap is exactly why propose→verify beats compute-the-name).
-- **Normalizer + benchmark** — `benchmark.py` tracks rule coverage (originally ~43%, now 83%). Rule
+- **Normalizer + benchmark** — `benchmark.py` scores correctness against `sefaria_ref` (correct / coarser / finer / WRONG / unresolved; `--strict` exits 1 on any WRONG). Rule
   families: Ashkenazi endings, edition/prefix strip, Rambam-section map, note-tail strip.
 - **Halachipedia phase** — `pipeline/halachipedia_mine.py` mined a 250-page sample:
   14,511 detections → 3,520 distinct works. `hp_failures.json` (8,990 distinct unresolved),
@@ -251,7 +253,7 @@ the blog repo's `HANDOFF.md`, "Correction (2026-08-16)" note.
   review server, and the frontend. All next steps for whoever/whatever
   session picks this up.
 
-## ⚠ Mislinks found (2026-11-23): the fail-safe claim does not hold today
+## Mislinks found and fixed (2026-11-23)
 
 A correctness check of the 116 benchmark resolves against each row's `sefaria_ref`
 (this is not what `benchmark.py` measures; it only checks that *something* resolved):
@@ -277,8 +279,27 @@ has the opposite check (every title word must appear in the citation); pass 2 ha
 check that no citation word is dropped. Fix: an "every distinctive word of the head must
 appear in the canonical title" check in pass 2, and the same check added to pass 3.
 The Rambam-section and wrong-locator cases are separate rule bugs.
-**This also means the blog repo's 35 newly gained links from step 6 were never checked
-against the right answer**, only against the old output. Audit them.
+**Fixed 2026-11-23 (benchmark WRONG 7 -> 0, fresh cache-cleared run):**
+- `resolve.py`: `_keeps_all_words` guard on pass 2 and pass 3. A canonical title must
+  keep every distinctive word of the citation, and must not put a new work name in
+  front of it ("German Commentary on Pirkei Avot"). Generic, numbering and connector words
+  (`_DROPPABLE`) may be dropped; Rambam / Maimonides / Yad / Mishneh are treated as one
+  name; spelling is compared by a consonant skeleton (Kesubos=Ketubot,
+  HaYosher=HaYashar, but Bekhorot != Berakhot). Pass 2 also skips heads containing a
+  digit (a split locator).
+- `rules.py`: `Mishnah of (Tractate) X` -> `Mishnah X` instead of stripping "Mishnah";
+  `X (inner)` emits bare `inner` only when X is generic (Talmud, Gemara, ...), so
+  `Tosafos (Kesubos 30b)` no longer becomes `Kesubos 30b`.
+- Cost: 8 previously-correct links are now unresolved, because each depended on
+  dropping words that happened to be noise (`Eternal Victory`, `Rabbi Arthur Green`,
+  `Isaiah's Vineyard`, `Torah Babylonian Talmud`, `Midrash of Ben Sira`, two
+  `Pirke Avot, Commentary on`). That is the intended trade.
+- Halachipedia mislinks above: all now unresolved, except `Kaf Hachaim YD 116:12`,
+  which now resolves to the correct Yoreh De'ah volume.
+- **Not yet ported to the blog repo**, whose `resolver.py` has the same pass-2 logic.
+  The blog's 35 newly gained links from step 6 also still need auditing against
+  the right answer.
+
 
 ## Remote branch review (2026-11-23), resolved
 
@@ -375,7 +396,7 @@ author-specific, by design, to avoid one-author overfitting.
 ## Quick orientation
 
 ```bash
-python3 benchmark.py                       # rule coverage vs the verified dataset
+python3 benchmark.py --strict              # correctness vs the verified dataset; must show WRONG 0
 python3 test_shared_dialect.py             # diff-check vs the blog repo's vendored copy
 python3 pipeline/build_final.py            # rebuild the most-wanted list (uses work_frequency.json)
 python3 -c "import json;print(len(json.load(open('data/citation_dataset.json'))))"  # 139

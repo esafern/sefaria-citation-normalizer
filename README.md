@@ -85,7 +85,7 @@ pure halachic citations. Mining the **full site (640 substantial pages)** yielde
 - `normalizer/resolve.py` — propose → `/api/name` → cache.
 - `data/citation_dataset.json` — verified `raw → Sefaria ref` pairs.
 - `pipeline/` — the corpus miner (`find-refs` failures) and verify/cluster tools.
-- `benchmark.py` — coverage of the rules against the dataset (tracks the ~43%).
+- `benchmark.py` — scores the rules against the dataset: correct / coarser / finer / WRONG / unresolved (`--strict` fails on any WRONG).
 
 ## Provenance & scope
 

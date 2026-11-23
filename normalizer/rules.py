@@ -22,9 +22,13 @@ _STRIP_PREFIX = re.compile(
     r"^\s*(?:ArtScroll|Artscroll|Bomberg|Soncino|Koren|Steinsaltz|"
     r"William Davidson(?: Talmud)?|Vilna|Completes|Study Sheet|Source Sheet|"
     r"B\.?\s*Talmud|Babylonian Talmud|Talmud Bavli|Bavli|Talmud|"
-    r"Gemara(?: of)?|Mishnah of Tractate|Mishnah of|"
+    r"Gemara(?: of)?|"
     r"Mesechtas?|Mesechet|Meseches|Masechet|Masekhet|Masechta?|Maseches|Tractate|Seifer|Sefer)\s+",
     re.I)
+
+# Words that may sit outside a parenthesized citation without changing what
+# it refers to: "Talmud (Chagiga 13b:14)" == "Chagiga 13b:14".
+_GENERIC_OUTER = {"talmud", "gemara", "bavli", "babylonian", "b", "see", "cf"}
 
 # Trailing editorial noise: notes, s.v., page/verse tails, Hebrew dibur-hamatchil.
 _STRIP_TAIL = re.compile(
@@ -89,6 +93,10 @@ def candidates(citation):
     base = re.sub(r"\b(ArtScroll|Artscroll)(?=[A-Z])", r"\1 ", base)
     # leading "N - " enumerations ("2 - Oral Torah Tur, ...")
     base = re.sub(r"^\s*\d+\s*[-.)]\s*(?:Oral Torah\s+)?", "", base)
+    # "Mishnah of (Tractate) X" -> "Mishnah X". The word "Mishnah" is what
+    # separates Mishnah Chagigah from Bavli Chagigah, so it must be kept, not
+    # stripped like an edition prefix (stripping it mislinked to the Bavli).
+    base = re.sub(r"^\s*Mishnah? of (?:Tractate\s+)?", "Mishnah ", base, flags=re.I)
     stripped = base
     for _ in range(3):  # peel stacked prefixes ("Artscroll Masechet ...")
         nxt = _STRIP_PREFIX.sub("", stripped, count=1)
@@ -198,7 +206,13 @@ def candidates(citation):
     mp = re.match(r"^(?P<pre>[A-Za-z][A-Za-z'.\s]*?)\s*\(\s*(?P<inner>[^()]+?)\s*\)\s*$", citation)
     if mp:
         pre, inner = mp.group("pre").strip(" ,."), mp.group("inner").strip()
-        for flat in (f"{pre} {inner}", inner):
+        flats = [f"{pre} {inner}"]
+        # "inner" alone only when the outside is a generic corpus word.
+        # "Tosafos (Kesubos 30b)" must not become bare "Kesubos 30b": that
+        # drops the commentary layer and links the Gemara instead.
+        if all(w.lower() in _GENERIC_OUTER for w in re.findall(r"[A-Za-z]+", pre)):
+            flats.append(inner)
+        for flat in flats:
             for c in candidates(flat):
                 add(c)
 
