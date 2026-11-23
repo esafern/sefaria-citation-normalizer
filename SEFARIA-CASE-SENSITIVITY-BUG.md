@@ -1,5 +1,69 @@
 # Bug report: `/api/name` ref-resolution is case-sensitive beyond the first letter, even when the suggestion engine already has the correct casing
 
+> ## Research notes (2026-11-23) — read before filing
+>
+> **Re-verified live on 2026-11-23** against production and Sefaria-Project `master`
+> @ `c18cf5a217`: every repro below still behaves as described, and the quoted code
+> (`Ref.__clean_tref`, `Ref.__init_tref`, `get_name_completions`, autospell's
+> `normalizer`) is unchanged.
+>
+> **1. Already reported: file as a comment on #1016, not a new issue.**
+> [Sefaria/Sefaria-Project#1016](https://github.com/Sefaria/Sefaria-Project/issues/1016)
+> ("Case sensitivity inconsistent with 2-word titles in names/refs on Links REST API",
+> opened 2022-09-18 by DovOps, **still open, zero replies, no labels**) is the same
+> bug seen from `/api/links`, even using `Rosh Hashanah` as its example. The reporter
+> guessed it was a search-index or data problem. What this draft adds is the root cause
+> (one shared code path in `Ref()`), the wider scope, and evidence that a fix is safe.
+>
+> **2. It's not just `/api/name`.** Everything that builds a `Ref` fails the same way
+> (all tested with `Bava metzia 58b` vs `Bava Metzia 58b`):
+>
+> | endpoint | wrong case | correct case |
+> |---|---|---|
+> | `/api/name` | `is_ref: false` | resolves |
+> | `/api/v3/texts` | 404 "Could not find title in reference" | 200 |
+> | `/api/texts` (legacy) | 200 + error body | 200 |
+> | `/api/links` | error | 434 links |
+> | `/api/related` | error | 434 links, 218 sheets |
+> | **`/api/find-refs` (the linker)** | span **detected**, `refs: null` | resolves |
+>
+> The `find-refs` row is the strongest point: Sefaria's own linker finds the citation in
+> running text and then can't resolve it, so users don't get a link.
+>
+> **3. Sefaria already handles this in the data, one title at a time.** In
+> `/api/index/titles` (67,472 titles), **1,097 groups of titles differ only by
+> case**, each added as an alternate title by hand: `Rosh HaShanah`/`Rosh Hashanah`,
+> `Even HaEzer`/`Even Haezer`, `Meilah`/`meilah`, even a lowercase
+> `shulchan aruch orach chaim`. This matches the maintainers' stated preference in
+> #1526 (2023, closed by rneiss: "we're probably not going to change the underlying API
+> behavior, but we would love the various alt-titles … solve this issue on the data
+> end"). **Expect that pushback.** The counter-argument is that 1,097 manual patches show
+> the data approach can't keep up. `Kaf Hachaim`, `Sefer Hachinuch`, `Bava metzia` and
+> `Terumat Hadeshen` all still fail.
+>
+> **4. A case-insensitive fallback looks safe.** The obvious objection is that
+> lowercasing could merge two different titles. Of the 1,097 case-only groups, a random
+> sample of 40 (85 titles) was resolved live: **0 groups mapped to different refs, 0
+> unresolved**, so every case variant Sefaria has added points to the same text. The 27
+> groups with all-caps words (`GRA`/`Gra`, `JT`, Roman numerals) were checked by eye and
+> also look like the same text. Proposed fix: on an exact-match miss, look up a
+> lowercased title map, and accept only if the lowercased key maps to exactly **one**
+> node. That keeps it safe even if a real collision is added later.
+>
+> **5. Measured impact in our corpus.** Of the 8,789 unresolved Halachipedia citation
+> strings (`pipeline/hp_unresolved.json`), **138 would resolve with case-insensitive
+> matching alone**, spread over 19 works. Top ones: `Kaf Hachaim` (98), `Sefer Hachinuch`
+> (16), then `Mishna brurah`, `Sefer Hamitzvot`, `Terumat Hadeshen`, `Shibbolei Haleket`,
+> `Noda Beyehuda`, `Magen avraham`, `Bava metzia`. Live check: `Kaf Hachaim 103:5` →
+> unresolved; `Kaf HaChaim 103:5` → *Kaf HaChayim on Shulchan Arukh, Orach Chayim
+> 103:5*. (This was an offline title-list match that mimics `__init_tref`'s
+> word-boundary prefix loop, not a full live re-run of all 138.)
+>
+> **Suggested filing:** a comment on #1016 with the root cause, the endpoint table, the
+> 0-collision result, the unique-match fix, and a short repro. Optionally offer a PR, since
+> the change is small and confined to `Ref.__init_tref` + `Library`. The body below is
+> the original 2026-08-18 draft, still accurate; trim it into that comment.
+
 ## Summary
 
 `GET /api/name/<query>` decides `is_ref` / `url` via `Ref()`'s exact-match title
@@ -125,7 +189,7 @@ False None
 
 ## Environment
 
-- Observed: 2026-08-18, `www.sefaria.org` production, `/api/name`.
+- Observed: 2026-08-18; re-verified 2026-11-23, `www.sefaria.org` production.
 - Source read: `Sefaria/Sefaria-Project` (public GitHub), `reader/views.py`,
   `sefaria/model/text.py`, `sefaria/model/autospell.py`, current `master` as of
   2026-08-18.

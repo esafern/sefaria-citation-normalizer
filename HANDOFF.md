@@ -251,6 +251,20 @@ the blog repo's `HANDOFF.md`, "Correction (2026-08-16)" note.
   review server, and the frontend. All next steps for whoever/whatever
   session picks this up.
 
+## Remote branch review (2026-11-23)
+
+- `claude/project-onboarding-status-lw5947`: PR #1 was **closed as superseded by #2**. Its
+  QA finding (Eliya Rabba false-absent) was fixed in #3. Nothing to port; safe to delete.
+- `claude/project-onboarding-plan-0ctxcz`: 6 docs-only commits made after PR #3 merged
+  (`CASE-YAD-MALACHI.md` trimmed 487 -> 298 lines, scans reframed as images-only, Hebrew
+  forum evidence; new `FINDINGS.md` section on a tora-forum.co.il reference scan). Merges
+  cleanly; `main` hasn't touched those files. **Unmerged work: review and merge.**
+- `claude/pd-index-submissions`: 1 commit, `contribution/pd_index_submissions.md`
+  (index specs for the 22 Tier-1 public-domain works, for Sefaria's Add-a-New-Text tool).
+  Merges cleanly but is **out of date vs. `main`**: it lacks **Chazon Ish** (reclassified
+  PD on 2026-08-05; now #2 in Tier 1), still includes **Teshuvot HaRadbaz** (now confirmed
+  present, so drop D1), and lists Rokeach d.1230 (corrected to 1238). Update, then merge.
+
 ## Next steps
 
 0. ~~Integrate the shared dialect layer with the blog repo~~ — done 2026-08-05, see above.
