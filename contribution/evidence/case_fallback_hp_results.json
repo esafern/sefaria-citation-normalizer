@@ -1,0 +1,846 @@
+{
+ "resolved": [
+  [
+   "Bava metzia 58b",
+   "Bava Metzia 58b",
+   "Bava Metzia 58b"
+  ],
+  [
+   "Kaf Hachaim",
+   "Kaf HaChaim",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim"
+  ],
+  [
+   "Kaf Hachaim (647:6)",
+   "Kaf HaChaim (647.6)",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 647:6"
+  ],
+  [
+   "Kaf Hachaim 1",
+   "Kaf HaChaim 1",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 1"
+  ],
+  [
+   "Kaf Hachaim 103:5",
+   "Kaf HaChaim 103.5",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 103:5"
+  ],
+  [
+   "Kaf Hachaim 116:20",
+   "Kaf HaChaim 116.20",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 116:20"
+  ],
+  [
+   "Kaf Hachaim 117:69",
+   "Kaf HaChaim 117.69",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 117:69"
+  ],
+  [
+   "Kaf Hachaim 117:92",
+   "Kaf HaChaim 117.92",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 117:92"
+  ],
+  [
+   "Kaf Hachaim 124:47",
+   "Kaf HaChaim 124.47",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 124:47"
+  ],
+  [
+   "Kaf Hachaim 128:150",
+   "Kaf HaChaim 128.150",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 128:150"
+  ],
+  [
+   "Kaf Hachaim 13:2",
+   "Kaf HaChaim 13.2",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 13:2"
+  ],
+  [
+   "Kaf Hachaim 15",
+   "Kaf HaChaim 15",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 15"
+  ],
+  [
+   "Kaf Hachaim 151:10",
+   "Kaf HaChaim 151.10",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 151:10"
+  ],
+  [
+   "Kaf Hachaim 154:21",
+   "Kaf HaChaim 154.21",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 154:21"
+  ],
+  [
+   "Kaf Hachaim 154:39",
+   "Kaf HaChaim 154.39",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 154:39"
+  ],
+  [
+   "Kaf Hachaim 154:65",
+   "Kaf HaChaim 154.65",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 154:65"
+  ],
+  [
+   "Kaf Hachaim 161:4",
+   "Kaf HaChaim 161.4",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 161:4"
+  ],
+  [
+   "Kaf Hachaim 168:59",
+   "Kaf HaChaim 168.59",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 168:59"
+  ],
+  [
+   "Kaf Hachaim 168:78",
+   "Kaf HaChaim 168.78",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 168:78"
+  ],
+  [
+   "Kaf Hachaim 173:9",
+   "Kaf HaChaim 173.9",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 173:9"
+  ],
+  [
+   "Kaf Hachaim 184:24",
+   "Kaf HaChaim 184.24",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 184:24"
+  ],
+  [
+   "Kaf Hachaim 184:29",
+   "Kaf HaChaim 184.29",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 184:29"
+  ],
+  [
+   "Kaf Hachaim 203:2",
+   "Kaf HaChaim 203.2",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 203:2"
+  ],
+  [
+   "Kaf Hachaim 204:33",
+   "Kaf HaChaim 204.33",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 204:33"
+  ],
+  [
+   "Kaf Hachaim 208:58",
+   "Kaf HaChaim 208.58",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 208:58"
+  ],
+  [
+   "Kaf Hachaim 215:1",
+   "Kaf HaChaim 215.1",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 215:1"
+  ],
+  [
+   "Kaf Hachaim 219:3",
+   "Kaf HaChaim 219.3",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 219:3"
+  ],
+  [
+   "Kaf Hachaim 219:7",
+   "Kaf HaChaim 219.7",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 219:7"
+  ],
+  [
+   "Kaf Hachaim 222:11",
+   "Kaf HaChaim 222.11",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 222:11"
+  ],
+  [
+   "Kaf Hachaim 223:6",
+   "Kaf HaChaim 223.6",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 223:6"
+  ],
+  [
+   "Kaf Hachaim 225:11",
+   "Kaf HaChaim 225.11",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 225:11"
+  ],
+  [
+   "Kaf Hachaim 225:12",
+   "Kaf HaChaim 225.12",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 225:12"
+  ],
+  [
+   "Kaf Hachaim 226:10",
+   "Kaf HaChaim 226.10",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 226:10"
+  ],
+  [
+   "Kaf Hachaim 226:2",
+   "Kaf HaChaim 226.2",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 226:2"
+  ],
+  [
+   "Kaf Hachaim 251:1",
+   "Kaf HaChaim 251.1",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 251:1"
+  ],
+  [
+   "Kaf Hachaim 258:3",
+   "Kaf HaChaim 258.3",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 258:3"
+  ],
+  [
+   "Kaf Hachaim 3",
+   "Kaf HaChaim 3",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 3"
+  ],
+  [
+   "Kaf Hachaim 318:62",
+   "Kaf HaChaim 318.62",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 318:62"
+  ],
+  [
+   "Kaf Hachaim 362:106",
+   "Kaf HaChaim 362.106",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 362:106"
+  ],
+  [
+   "Kaf Hachaim 362:97",
+   "Kaf HaChaim 362.97",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 362:97"
+  ],
+  [
+   "Kaf Hachaim 419:2",
+   "Kaf HaChaim 419.2",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 419:2"
+  ],
+  [
+   "Kaf Hachaim 419:5",
+   "Kaf HaChaim 419.5",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 419:5"
+  ],
+  [
+   "Kaf Hachaim 419:6",
+   "Kaf HaChaim 419.6",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 419:6"
+  ],
+  [
+   "Kaf Hachaim 420:1",
+   "Kaf HaChaim 420.1",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 420:1"
+  ],
+  [
+   "Kaf Hachaim 444:11",
+   "Kaf HaChaim 444.11",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 444:11"
+  ],
+  [
+   "Kaf Hachaim 444:8",
+   "Kaf HaChaim 444.8",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 444:8"
+  ],
+  [
+   "Kaf Hachaim 46:17",
+   "Kaf HaChaim 46.17",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 46:17"
+  ],
+  [
+   "Kaf Hachaim 46:2",
+   "Kaf HaChaim 46.2",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 46:2"
+  ],
+  [
+   "Kaf Hachaim 46:36",
+   "Kaf HaChaim 46.36",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 46:36"
+  ],
+  [
+   "Kaf Hachaim 471:35",
+   "Kaf HaChaim 471.35",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 471:35"
+  ],
+  [
+   "Kaf Hachaim 487:15",
+   "Kaf HaChaim 487.15",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 487:15"
+  ],
+  [
+   "Kaf Hachaim 487:16",
+   "Kaf HaChaim 487.16",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 487:16"
+  ],
+  [
+   "Kaf Hachaim 487:17",
+   "Kaf HaChaim 487.17",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 487:17"
+  ],
+  [
+   "Kaf Hachaim 487:20",
+   "Kaf HaChaim 487.20",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 487:20"
+  ],
+  [
+   "Kaf Hachaim 487:23",
+   "Kaf HaChaim 487.23",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 487:23"
+  ],
+  [
+   "Kaf Hachaim 487:39",
+   "Kaf HaChaim 487.39",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 487:39"
+  ],
+  [
+   "Kaf Hachaim 49:3",
+   "Kaf HaChaim 49.3",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 49:3"
+  ],
+  [
+   "Kaf Hachaim 52:3",
+   "Kaf HaChaim 52.3",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 52:3"
+  ],
+  [
+   "Kaf Hachaim 537:13",
+   "Kaf HaChaim 537.13",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 537:13"
+  ],
+  [
+   "Kaf Hachaim 549:9",
+   "Kaf HaChaim 549.9",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 549:9"
+  ],
+  [
+   "Kaf Hachaim 551:8:117",
+   "Kaf HaChaim 551.8.117",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 551:8:117"
+  ],
+  [
+   "Kaf Hachaim 55:46",
+   "Kaf HaChaim 55.46",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 55:46"
+  ],
+  [
+   "Kaf Hachaim 567:10",
+   "Kaf HaChaim 567.10",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 567:10"
+  ],
+  [
+   "Kaf Hachaim 582:10",
+   "Kaf HaChaim 582.10",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 582:10"
+  ],
+  [
+   "Kaf Hachaim 582:9",
+   "Kaf HaChaim 582.9",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 582:9"
+  ],
+  [
+   "Kaf Hachaim 60:12",
+   "Kaf HaChaim 60.12",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 60:12"
+  ],
+  [
+   "Kaf Hachaim 61:44",
+   "Kaf HaChaim 61.44",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 61:44"
+  ],
+  [
+   "Kaf Hachaim 635:11",
+   "Kaf HaChaim 635.11",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 635:11"
+  ],
+  [
+   "Kaf Hachaim 635:18",
+   "Kaf HaChaim 635.18",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 635:18"
+  ],
+  [
+   "Kaf Hachaim 648:122",
+   "Kaf HaChaim 648.122",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 648:122"
+  ],
+  [
+   "Kaf Hachaim 662:14",
+   "Kaf HaChaim 662.14",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 662:14"
+  ],
+  [
+   "Kaf Hachaim 671:26",
+   "Kaf HaChaim 671.26",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 671:26"
+  ],
+  [
+   "Kaf Hachaim 671:9",
+   "Kaf HaChaim 671.9",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 671:9"
+  ],
+  [
+   "Kaf Hachaim 672:2",
+   "Kaf HaChaim 672.2",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 672:2"
+  ],
+  [
+   "Kaf Hachaim 672:20",
+   "Kaf HaChaim 672.20",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 672:20"
+  ],
+  [
+   "Kaf Hachaim 672:26",
+   "Kaf HaChaim 672.26",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 672:26"
+  ],
+  [
+   "Kaf Hachaim 686:22",
+   "Kaf HaChaim 686.22",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 686:22"
+  ],
+  [
+   "Kaf Hachaim 6:1",
+   "Kaf HaChaim 6.1",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 6:1"
+  ],
+  [
+   "Kaf Hachaim 7",
+   "Kaf HaChaim 7",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 7"
+  ],
+  [
+   "Kaf Hachaim 71",
+   "Kaf HaChaim 71",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 71"
+  ],
+  [
+   "Kaf Hachaim 84:100",
+   "Kaf HaChaim 84.100",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 84:100"
+  ],
+  [
+   "Kaf Hachaim 84:94",
+   "Kaf HaChaim 84.94",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 84:94"
+  ],
+  [
+   "Kaf Hachaim 87:24",
+   "Kaf HaChaim 87.24",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 87:24"
+  ],
+  [
+   "Kaf Hachaim 89:31",
+   "Kaf HaChaim 89.31",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 89:31"
+  ],
+  [
+   "Kaf Hachaim 90:149",
+   "Kaf HaChaim 90.149",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 90:149"
+  ],
+  [
+   "Kaf Hachaim 90:63",
+   "Kaf HaChaim 90.63",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 90:63"
+  ],
+  [
+   "Kaf Hachayim on Shulchan Arukh, Orach Chayim 308:235:1",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 308.235.1",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 308:235:1"
+  ],
+  [
+   "Kaf Hachayim on Shulchan Arukh, Orach Chayim 318:12",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 318.12",
+   "Kaf HaChayim on Shulchan Arukh, Orach Chayim 318:12"
+  ],
+  [
+   "Mishna berura 267:9",
+   "Mishna Berura 267.9",
+   "Mishnah Berurah 267:9"
+  ],
+  [
+   "Mishna brurah",
+   "Mishna Brurah",
+   "Mishnah Berurah"
+  ],
+  [
+   "Mishna brurah 117:15",
+   "Mishna Brurah 117.15",
+   "Mishnah Berurah 117:15"
+  ],
+  [
+   "Sefer Hachinuch (529)",
+   "Sefer HaChinuch (529)",
+   "Sefer HaChinukh 529"
+  ],
+  [
+   "Sefer Hachinuch 418",
+   "Sefer HaChinuch 418",
+   "Sefer HaChinukh 418"
+  ],
+  [
+   "Sefer Hachinuch 454",
+   "Sefer HaChinuch 454",
+   "Sefer HaChinukh 454"
+  ],
+  [
+   "Sefer Hachinuch 478",
+   "Sefer HaChinuch 478",
+   "Sefer HaChinukh 478"
+  ],
+  [
+   "Sefer Hachinuch 479",
+   "Sefer HaChinuch 479",
+   "Sefer HaChinukh 479"
+  ],
+  [
+   "Sefer Hachinuch 546",
+   "Sefer HaChinuch 546",
+   "Sefer HaChinukh 546"
+  ],
+  [
+   "Shaar Hakavanot",
+   "Shaar HaKavanot",
+   "Sha'ar HaKavanot"
+  ],
+  [
+   "Shibbolei Haleket 263",
+   "Shibbolei HaLeket 263",
+   "Shibbolei HaLeket 263"
+  ],
+  [
+   "Taamei Haminhagim",
+   "Taamei HaMinhagim",
+   "Ta'amei HaMinhagim"
+  ],
+  [
+   "VaYikra 25:17",
+   "Vayikra 25.17",
+   "Leviticus 25:17"
+  ],
+  [
+   "magen avraham (340:1)",
+   "Magen Avraham (340.1)",
+   "Magen Avraham 340:1"
+  ],
+  [
+   "tosefta shabbat 13:7",
+   "Tosefta Shabbat 13.7",
+   "Tosefta Shabbat 13:7"
+  ],
+  [
+   "yd 3:37",
+   "YD 3.37",
+   "Shulchan Arukh, Yoreh De'ah 3:37"
+  ]
+ ],
+ "still_unresolved": [
+  [
+   "Aruch HaShulchan 128:64",
+   "Aruch Hashulchan 128.64",
+   null
+  ],
+  [
+   "Aruch HaShulchan 150:1",
+   "Aruch Hashulchan 150.1",
+   null
+  ],
+  [
+   "Aruch HaShulchan 161:6",
+   "Aruch Hashulchan 161.6",
+   null
+  ],
+  [
+   "Aruch HaShulchan 202:11",
+   "Aruch Hashulchan 202.11",
+   null
+  ],
+  [
+   "Aruch HaShulchan 215:2",
+   "Aruch Hashulchan 215.2",
+   null
+  ],
+  [
+   "Aruch HaShulchan 229:1",
+   "Aruch Hashulchan 229.1",
+   null
+  ],
+  [
+   "Aruch HaShulchan 229:2",
+   "Aruch Hashulchan 229.2",
+   null
+  ],
+  [
+   "Aruch HaShulchan 249:4",
+   "Aruch Hashulchan 249.4",
+   null
+  ],
+  [
+   "Aruch HaShulchan 249:6",
+   "Aruch Hashulchan 249.6",
+   null
+  ],
+  [
+   "Aruch HaShulchan 258:3",
+   "Aruch Hashulchan 258.3",
+   null
+  ],
+  [
+   "Aruch HaShulchan 263:7",
+   "Aruch Hashulchan 263.7",
+   null
+  ],
+  [
+   "Aruch HaShulchan 284:8",
+   "Aruch Hashulchan 284.8",
+   null
+  ],
+  [
+   "Aruch HaShulchan 296:8",
+   "Aruch Hashulchan 296.8",
+   null
+  ],
+  [
+   "Aruch HaShulchan 323:7",
+   "Aruch Hashulchan 323.7",
+   null
+  ],
+  [
+   "Aruch HaShulchan 358:8",
+   "Aruch Hashulchan 358.8",
+   null
+  ],
+  [
+   "Aruch HaShulchan 49:3",
+   "Aruch Hashulchan 49.3",
+   null
+  ],
+  [
+   "Aruch HaShulchan 671:10",
+   "Aruch Hashulchan 671.10",
+   null
+  ],
+  [
+   "Aruch HaShulchan 672:7",
+   "Aruch Hashulchan 672.7",
+   null
+  ],
+  [
+   "Aruch HaShulchan 6:1",
+   "Aruch Hashulchan 6.1",
+   null
+  ],
+  [
+   "Aruch HaShulchan 6:2",
+   "Aruch Hashulchan 6.2",
+   null
+  ],
+  [
+   "Aruch HaShulchan 70:1",
+   "Aruch Hashulchan 70.1",
+   null
+  ],
+  [
+   "Aruch HaShulchan 7:4",
+   "Aruch Hashulchan 7.4",
+   null
+  ],
+  [
+   "Aruch HaShulchan 7:5",
+   "Aruch Hashulchan 7.5",
+   null
+  ],
+  [
+   "Aruch HaShulchan Choshen Mishpat 370.9. . Bava Kama 114b",
+   "Aruch Hashulchan Choshen Mishpat 370.9. . Bava Kama 114b",
+   null
+  ],
+  [
+   "Avodat Hakodesh (Chida) vol. 2 5:22",
+   "Avodat HaKodesh (Chida) vol. 2 5.22",
+   null
+  ],
+  [
+   "Kaf Hachaim Palacci 15:53",
+   "Kaf HaChaim Palacci 15.53",
+   null
+  ],
+  [
+   "Kaf Hachaim Palacci 15:58",
+   "Kaf HaChaim Palacci 15.58",
+   null
+  ],
+  [
+   "Kaf Hachaim Palacci 16:13",
+   "Kaf HaChaim Palacci 16.13",
+   null
+  ],
+  [
+   "Kaf Hachaim Palagi 11:23",
+   "Kaf HaChaim Palagi 11.23",
+   null
+  ],
+  [
+   "Kaf Hachaim Palagi 14:2",
+   "Kaf HaChaim Palagi 14.2",
+   null
+  ],
+  [
+   "Kaf Hachaim Sofer 124:24",
+   "Kaf HaChaim Sofer 124.24",
+   null
+  ],
+  [
+   "Kaf Hachaim Sofer 52",
+   "Kaf HaChaim Sofer 52",
+   null
+  ],
+  [
+   "Kaf Hachaim YD 116:12",
+   "Kaf HaChaim YD 116.12",
+   null
+  ],
+  [
+   "Kaf Hachaim YD 116:211",
+   "Kaf HaChaim YD 116.211",
+   null
+  ],
+  [
+   "Kaf Hachaim on Orach Chaim 174:34:1",
+   "Kaf HaChaim on Orach Chaim 174.34.1",
+   null
+  ],
+  [
+   "Kaf Hachaim on Orach Chaim 174:35:1",
+   "Kaf HaChaim on Orach Chaim 174.35.1",
+   null
+  ],
+  [
+   "Kaf Hachaim, OC 147:40",
+   "Kaf HaChaim, OC 147.40",
+   null
+  ],
+  [
+   "Kaf Hachaim. Radvaz 1:489",
+   "Kaf HaChaim. Radvaz 1.489",
+   null
+  ],
+  [
+   "Noda Beyehuda E.H. 2:18",
+   "Noda BeYehuda E.H. 2.18",
+   null
+  ],
+  [
+   "Or Zarua 1:29",
+   "or zarua 1.29",
+   null
+  ],
+  [
+   "Or Zarua 2:257",
+   "or zarua 2.257",
+   null
+  ],
+  [
+   "Or Zarua, Rabbeinu Yerucham, Orchot Chayim, Riaz",
+   "or zarua, Rabbeinu Yerucham, Orchot Chayim, Riaz",
+   null
+  ],
+  [
+   "Rif shabbat (41a",
+   "Rif Shabbat (41a",
+   null
+  ],
+  [
+   "Rosh Hashana ch. 10, fnt. 1",
+   "Rosh HaShana ch. 10, fnt. 1",
+   null
+  ],
+  [
+   "Sefer HaMitzvot Hakatzar of the Chofetz Chaim 77",
+   "Sefer HaMitzvot HaKatzar of the Chofetz Chaim 77",
+   null
+  ],
+  [
+   "Sefer Hachinuch (Mitzvah 247)",
+   "Sefer HaChinuch (Mitzvah 247)",
+   null
+  ],
+  [
+   "Sefer Hachinuch (Mitzvah 387)",
+   "Sefer HaChinuch (Mitzvah 387)",
+   null
+  ],
+  [
+   "Sefer Hachinuch (no. 430)",
+   "Sefer HaChinuch (no. 430)",
+   null
+  ],
+  [
+   "Sefer Hachinuch 362-3",
+   "Sefer HaChinuch 362-3",
+   null
+  ],
+  [
+   "Sefer Hachinuch 479, Laws of Tzedakah and Maaser p. 27",
+   "Sefer HaChinuch 479, Laws of Tzedakah and Maaser p. 27",
+   null
+  ],
+  [
+   "Sefer Hachinuch Mitvah 31",
+   "Sefer HaChinuch Mitvah 31",
+   null
+  ],
+  [
+   "Sefer Hachinuch Mitzva 228",
+   "Sefer HaChinuch Mitzva 228",
+   null
+  ],
+  [
+   "Sefer Hachinuch Mitzva 259",
+   "Sefer HaChinuch Mitzva 259",
+   null
+  ],
+  [
+   "Sefer Hachinuch Mitzva 9",
+   "Sefer HaChinuch Mitzva 9",
+   null
+  ],
+  [
+   "Sefer Hachinuch Mitzvah 603",
+   "Sefer HaChinuch Mitzvah 603",
+   null
+  ],
+  [
+   "Sefer Hamitzvot Lav 244",
+   "Sefer HaMitzvot Lav 244",
+   null
+  ],
+  [
+   "Sefer Hamitzvot of Rambam (Lavin 232)",
+   "Sefer HaMitzvot of Rambam (Lavin 232)",
+   null
+  ],
+  [
+   "Sefer Hayashar no. 174",
+   "Sefer HaYashar no. 174",
+   null
+  ],
+  [
+   "Sefer Hayashar no. 235",
+   "Sefer HaYashar no. 235",
+   null
+  ],
+  [
+   "Shaar Hakavanot 105a",
+   "Shaar HaKavanot 105a",
+   null
+  ],
+  [
+   "Shibbolei Haleket 371. Shaar Hakavanot 103D",
+   "Shibbolei HaLeket 371. Shaar Hakavanot 103D",
+   null
+  ],
+  [
+   "Terumat Hadeshen 108",
+   "Terumat HaDeshen 108",
+   null
+  ],
+  [
+   "Terumat Hadeshen responsa 99",
+   "Terumat HaDeshen responsa 99",
+   null
+  ],
+  [
+   "torat moshe on the torah pg. 346",
+   "Torat Moshe on the torah pg. 346",
+   null
+  ]
+ ]
+}
