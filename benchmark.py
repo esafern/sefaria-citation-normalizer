@@ -72,6 +72,15 @@ def classify(url, label):
         return "correct"
     if _covers(got, want):
         return "coarser"
+    # gold is a range ("Bava Metzia 85a:23-85b:1") and ours sits at one end of
+    # it ("Bava Metzia 85b"): the writer cited part of what they linked
+    if "-" in label:
+        start, tail = label.rsplit("-", 1)
+        st, tt = ref_tokens(start), ref_tokens(tail)
+        if tt and tt[0][:1].isdigit() and len(tt) <= len(st):
+            end = st[:len(st) - len(tt)] + tt
+            if any(_covers(got, e) or _covers(e, got) for e in (st, end)):
+                return "coarser"
     if _covers(want, got):
         return "finer"
     return "WRONG"

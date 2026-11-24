@@ -11,6 +11,7 @@ Sources (all CC BY-SA, bulk/API access only, no crawling):
 
 Steps (each resumable; raw files live in pipeline/web_pairs_raw/, gitignored):
   python3 web_pairs.py miyodeya     # dump -> web_pairs_raw/miyodeya_pairs.jsonl
+  python3 web_pairs.py miyodeya_api  # posts since the dump, via SE API -> miyodeya_api_pairs.jsonl
   python3 web_pairs.py stackexchange hermeneutics christianity history
                                     # other SE dumps -> web_pairs_raw/se_<site>_pairs.jsonl
   python3 web_pairs.py wikipedia    # API  -> web_pairs_raw/wikipedia_<lang>_pairs.jsonl
@@ -162,6 +163,58 @@ def mine_stackexchange(site="judaism", source="miyodeya"):
     print(f"{source}: {n_posts} posts with sefaria links, {n_pairs} pairs")
 
 
+def mine_miyodeya_api(since=1712448000):
+    """Mi Yodeya posts after the archive.org dump (2024-04), via the public SE API.
+    No key: pages stop at 25, so slide the fromdate window instead of paging on.
+    ~120 requests for 2024-04 -> 2026-11; well inside the 300/day keyless quota."""
+    import gzip
+    import urllib.error
+    H = {"User-Agent": "curl/8.7.1 (sefaria-citation-normalizer research)", "Accept-Encoding": "gzip"}
+
+    def fetch(params):
+        q = urllib.parse.urlencode(params)
+        for i in range(4):
+            try:
+                raw = urllib.request.urlopen(urllib.request.Request(
+                    "https://api.stackexchange.com/2.3/posts?" + q, headers=H), timeout=60).read()
+                return json.loads(gzip.decompress(raw) if raw[:2] == b"\x1f\x8b" else raw)
+            except urllib.error.HTTPError as e:
+                b = e.read()
+                print("  HTTP", e.code, (gzip.decompress(b) if b[:2] == b"\x1f\x8b" else b)[:160])
+                time.sleep(30 * (i + 1))
+        raise SystemExit("giving up")
+
+    out = open(os.path.join(RAW, "miyodeya_api_pairs.jsonl"), "w")
+    seen, total, n_pairs, last, quota = set(), 0, 0, since, None
+    while True:
+        for page in range(1, 26):
+            d = fetch(dict(site="judaism", fromdate=since, filter="withbody", pagesize=100,
+                           page=page, order="asc", sort="creation"))
+            for p in d["items"]:
+                if p["post_id"] in seen:
+                    continue
+                seen.add(p["post_id"])
+                total += 1
+                last = p["creation_date"]
+                body = p.get("body", "")
+                for href, inner in (_A.findall(body) if "sefaria" in body else []):
+                    tref, a = href_to_tref(href), clean_anchor(inner)
+                    if tref and anchor_ok(a):
+                        n_pairs += 1
+                        out.write(json.dumps({"raw": a, "href": html.unescape(href), "tref": tref,
+                                              "source": "miyodeya_2024on",
+                                              "where": f"https://judaism.stackexchange.com/a/{p['post_id']}"},
+                                             ensure_ascii=False) + "\n")
+            quota = d.get("quota_remaining")
+            time.sleep(max(2.0, d.get("backoff", 0)))
+            if not d.get("has_more"):
+                break
+        if not d.get("has_more") or quota < 30:
+            break
+        since = last
+    print(f"miyodeya_2024on: {total} posts, {n_pairs} pairs, quota left {quota}")
+
+
 # ---------------------------------------------------------------- Wikipedia
 
 def _wapi(lang, **params):
@@ -248,7 +301,7 @@ def _name(q, cache):
 def verify(per_source):
     cache = json.load(open(NAME_CACHE)) if os.path.exists(NAME_CACHE) else {}
     rows = []
-    first = ["miyodeya_pairs.jsonl", "wikipedia_en_pairs.jsonl", "wikipedia_he_pairs.jsonl"]
+    first = ["miyodeya_pairs.jsonl", "wikipedia_en_pairs.jsonl", "wikipedia_he_pairs.jsonl"]  # then the rest, alphabetically
     files = [f for f in os.listdir(RAW) if f.endswith("_pairs.jsonl")]
     for fn in sorted(files, key=lambda f: (f not in first, first.index(f) if f in first else 0, f)):
         if fn.endswith("_pairs.jsonl"):
@@ -372,6 +425,8 @@ if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
     if cmd == "miyodeya":
         mine_stackexchange()
+    elif cmd == "miyodeya_api":
+        mine_miyodeya_api()
     elif cmd == "stackexchange":   # web_pairs.py stackexchange hermeneutics christianity ...
         for site in sys.argv[2:]:
             mine_stackexchange(site, f"se_{site}")

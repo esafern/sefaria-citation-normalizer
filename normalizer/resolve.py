@@ -163,7 +163,9 @@ def _words_match(a, b):
 # What a canonical title may ADD that the citation lacks: connectors only.
 # (The citation may contain any _DROPPABLE word the title lacks, but a title
 # that adds "Introduction" or "Volume" has picked a section.)
-_CANON_MAY_ADD = {"of", "the", "on", "to", "and", "in", "a", "talmud", "bavli", "sefer", "seifer"}
+# ("Sefer" is NOT here: "Sefer Yesodei HaTorah" is a different book from the
+# Rambam's "Yesodei HaTorah".)
+_CANON_MAY_ADD = {"of", "the", "on", "to", "and", "in", "a", "talmud", "bavli"}
 
 
 def _distinctive(words):
@@ -382,6 +384,31 @@ def _resolve_bare_via_canonicalization(cands, orig_citation, polite):
     return None
 
 
+def _hilchot_is_ambiguous(citation, url):
+    """rules.candidates() rewrites a bare "Hilchot X n:m" to the Rambam's
+    "Rambam, Hilchot X". That's only safe if no OTHER work is called "Hilchot
+    X": "Hilchot Talmud Torah 3:7" is also the Baal HaTanya's Hilkhot Talmud
+    Torah. If the bare head (spelling-matched) is a non-Rambam title in
+    Sefaria's completions, the citation is ambiguous: leave it unlinked."""
+    if not url or "Mishneh_Torah" not in url:
+        return False
+    m = re.match(r"^\s*(Hil(?:chot|chos|khot|\.)\s+.+?)\s*\(?\d", citation, re.I)
+    if not m or re.search(r"\b(Rambam|Mishneh Torah|Mishnah Torah|Maimonides|Yad)\b", citation, re.I):
+        return False
+    head = m.group(1)
+    try:
+        others = _name_ref_completions(head, limit=15)
+    except Exception:
+        return True   # can't check, so don't guess
+    for o in others:
+        t = o.get("title", "")
+        if re.match(r"^(Rambam|Mishneh Torah)\b", t):
+            continue
+        if _keeps_all_words(head, t):
+            return True
+    return False
+
+
 def resolve(citation, cache=None, online=True, polite=0.0):
     """Return a Sefaria URL for `citation`, or None. Cache holds citation->url
     (or None for a known miss)."""
@@ -405,6 +432,8 @@ def resolve(citation, cache=None, online=True, polite=0.0):
             url = _resolve_via_canonicalization(cands, polite)
         if not url:
             url = _resolve_bare_via_canonicalization(cands, citation, polite)
+        if url and _hilchot_is_ambiguous(citation, url):
+            url = None
     if cache is not None:
         cache.set(citation, url)
     return url

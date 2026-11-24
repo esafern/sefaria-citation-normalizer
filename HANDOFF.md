@@ -343,6 +343,29 @@ was wrong (`Sh'mot 19` was labeled the Shemot parasha; corrected to Exodus 19).
 **Treat `data/web_pairs.json` as the primary correctness test from now on.** The
 rule-verified rows should be re-labeled from an independent source or dropped.
 
+## Mi Yodeya 2024+ via API, more fixes, source status (2026-11-24, later)
+
+- `web_pairs.py miyodeya_api`: Mi Yodeya posts after the dump via the keyless SE API
+  (sliding date window; pages stop at 25 without a key). 11,700 posts, 2,825 with Sefaria
+  links (~24%, vs far fewer in the dump era), 6,732 pairs, **3,824 new usable pairs**.
+  Source label `miyodeya_2024on`, so the committed sample stays stable.
+- Web sample now **1,588 pairs** (616 mangled). Mangled: correct 225, coarser 148,
+  finer 1, label noise 15, WRONG 5, unresolved 222. The 5 WRONG: 2 bare-section (decision
+  c), 3 label disagreements (writer's text vs link: "with Rashi", a typo'd verse, Hebrew
+  vs Christian verse numbering). **No resolver errors outside the bare-section policy.**
+- Fixed: `Sefer` may no longer be added by a suggestion (*Sefer Yesodei HaTorah* is a
+  different book); `Hilchot X` -> Rambam is skipped when another work in Sefaria is also
+  called "Hilchot X" (`Hilchot Talmud Torah` = the Baal HaTanya's; also `Hilchot Shabbat`).
+  Scoring: a cited point at one end of a linked range counts as coarser.
+- **Source status:** Stack Exchange dumps done (small); Mi Yodeya API done; Common Crawl
+  index currently timing out (plan: query the columnar Parquet index by domain instead,
+  e.g. thetorah.com, myjewishlearning.com, etzion.org.il, ou.org, then fetch only those
+  WARC records from data.commoncrawl.org); Usenet soc.culture.jewish available but
+  unlabeled; Reddit pending your call; Quora excluded.
+- The background full run started before these sources existed, so it covers only the
+  dump + Wikipedia pairs. Rerun `verify`/`eval` with WEB_PAIRS_OUT afterwards to include
+  the new ones.
+
 ## Second gap pass + Stack Exchange (2026-11-24)
 
 - Added Hermeneutics / Christianity / History SE dumps: only 104 usable pairs (93 kept),
