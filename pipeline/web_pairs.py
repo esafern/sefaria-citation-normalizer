@@ -11,6 +11,8 @@ Sources (all CC BY-SA, bulk/API access only, no crawling):
 
 Steps (each resumable; raw files live in pipeline/web_pairs_raw/, gitignored):
   python3 web_pairs.py miyodeya     # dump -> web_pairs_raw/miyodeya_pairs.jsonl
+  python3 web_pairs.py stackexchange hermeneutics christianity history
+                                    # other SE dumps -> web_pairs_raw/se_<site>_pairs.jsonl
   python3 web_pairs.py wikipedia    # API  -> web_pairs_raw/wikipedia_<lang>_pairs.jsonl
   python3 web_pairs.py verify [N]   # dedup, filter, sample N per source, verify the
                                     # gold ref live -> data/web_pairs.json
@@ -126,14 +128,19 @@ def consistent(raw, tref):
 _A = re.compile(r"<a\s[^>]*href=\"([^\"]+)\"[^>]*>(.*?)</a>", re.S | re.I)
 
 
-def mine_miyodeya():
+def mine_stackexchange(site="judaism", source="miyodeya"):
+    """Any Stack Exchange site dump: <site>.stackexchange.com.7z from archive.org."""
     import py7zr  # noqa: F401  (venv only)
-    dump = os.path.join(RAW, "judaism.stackexchange.com.7z")
-    posts = os.path.join(RAW, "Posts.xml")
+    dump = os.path.join(RAW, f"{site}.stackexchange.com.7z")
+    sitedir = os.path.join(RAW, site)
+    posts = os.path.join(sitedir, "Posts.xml")
+    if site == "judaism" and os.path.exists(os.path.join(RAW, "Posts.xml")):
+        posts = os.path.join(RAW, "Posts.xml")   # extracted before per-site dirs existed
     if not os.path.exists(posts):
+        os.makedirs(sitedir, exist_ok=True)
         with py7zr.SevenZipFile(dump) as z:
-            z.extract(path=RAW, targets=["Posts.xml"])
-    out = open(os.path.join(RAW, "miyodeya_pairs.jsonl"), "w")
+            z.extract(path=sitedir, targets=["Posts.xml"])
+    out = open(os.path.join(RAW, f"{source}_pairs.jsonl"), "w")
     n_posts = n_pairs = 0
     import xml.etree.ElementTree as ET
     for _, el in ET.iterparse(posts, events=("end",)):
@@ -148,11 +155,11 @@ def mine_miyodeya():
                 if tref and anchor_ok(a):
                     n_pairs += 1
                     out.write(json.dumps({"raw": a, "href": html.unescape(href), "tref": tref,
-                                          "source": "miyodeya",
-                                          "where": f"https://judaism.stackexchange.com/a/{el.get('Id')}"},
+                                          "source": source,
+                                          "where": f"https://{site}.stackexchange.com/a/{el.get('Id')}"},
                                          ensure_ascii=False) + "\n")
         el.clear()
-    print(f"miyodeya: {n_posts} posts with sefaria links, {n_pairs} pairs")
+    print(f"{source}: {n_posts} posts with sefaria links, {n_pairs} pairs")
 
 
 # ---------------------------------------------------------------- Wikipedia
@@ -241,7 +248,9 @@ def _name(q, cache):
 def verify(per_source):
     cache = json.load(open(NAME_CACHE)) if os.path.exists(NAME_CACHE) else {}
     rows = []
-    for fn in sorted(os.listdir(RAW)):
+    first = ["miyodeya_pairs.jsonl", "wikipedia_en_pairs.jsonl", "wikipedia_he_pairs.jsonl"]
+    files = [f for f in os.listdir(RAW) if f.endswith("_pairs.jsonl")]
+    for fn in sorted(files, key=lambda f: (f not in first, first.index(f) if f in first else 0, f)):
         if fn.endswith("_pairs.jsonl"):
             rows += [json.loads(l) for l in open(os.path.join(RAW, fn))]
     # dedup on (raw, tref); Latin-script anchors only for now (Hebrew is a later tier)
@@ -260,7 +269,12 @@ def verify(per_source):
         by_src[r["source"]].append(r)
     rnd = random.Random(SEED)
     out = []
-    for src, rs in sorted(by_src.items()):
+    # original sources first, in their original order, so adding a source never
+    # reshuffles an existing source's sample
+    order = ["miyodeya", "wikipedia_en", "wikipedia_he"]
+    for src, rs in sorted(by_src.items(), key=lambda kv: (kv[0] not in order,
+                                                         order.index(kv[0]) if kv[0] in order else 0,
+                                                         kv[0])):
         rnd.shuffle(rs)
         kept = 0
         for r in rs:
@@ -294,6 +308,21 @@ def _layer_noise(raw, url, gold):
     ours = " ".join(ref_tokens(url))
     g = " ".join(ref_tokens(gold))
     raw_words = _distinctive(_split_words(raw))
+    # Same location, different work: if every word of OUR title is in the text
+    # and our title names more of the text than gold's does, the writer named a
+    # work and linked its base text ('Midrash Sechel Tov to Genesis 26:34' linked
+    # to Genesis 26:34). We followed the text, so it's label noise.
+    def split(t):
+        m = re.match(r"^(.*?)\s+([\d][\w:.\- ]*)$", t)
+        return (m.group(1), m.group(2)) if m else (t, "")
+    (ot, osec), (gt, gsec) = split(ours), split(g)
+    if osec and osec.split(" ")[:2] == gsec.split(" ")[:2]:
+        ow, gw = _distinctive(_split_words(ot)), _distinctive(_split_words(gt))
+        o_in = all(_matches_any(w, raw_words) for w in ow)
+        n_o = sum(_matches_any(w, raw_words) for w in ow)
+        n_g = sum(_matches_any(w, raw_words) for w in gw)
+        if o_in and n_o > n_g:
+            return True
     for base, layered, gold_is_layered in ((ours, g, True), (g, ours, False)):
         m = re.match(r"^(.+?) on (.+)$", layered)
         if not m:
@@ -342,7 +371,10 @@ if __name__ == "__main__":
     os.makedirs(RAW, exist_ok=True)
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
     if cmd == "miyodeya":
-        mine_miyodeya()
+        mine_stackexchange()
+    elif cmd == "stackexchange":   # web_pairs.py stackexchange hermeneutics christianity ...
+        for site in sys.argv[2:]:
+            mine_stackexchange(site, f"se_{site}")
     elif cmd == "wikipedia":
         for lang in (sys.argv[2:] or ["en", "he"]):
             mine_wikipedia(lang)

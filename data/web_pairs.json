@@ -9001,6 +9001,843 @@
    "where": "https://en.wikipedia.org/wiki/Bereshit_%28parashah%29",
    "sefaria_ref": "Chagigah 16a",
    "clean": false
+  },
+  {
+   "raw": "Mishnah Yoma 6",
+   "href": "http://www.sefaria.org/Mishnah_Yoma.6",
+   "tref": "Mishnah Yoma.6",
+   "source": "se_christianity",
+   "where": "https://christianity.stackexchange.com/a/50639",
+   "sefaria_ref": "Mishnah Yoma 6",
+   "clean": true
+  },
+  {
+   "raw": "Sefaria: Pesachim 108a",
+   "href": "https://www.sefaria.org/Pesachim.108a.4?ven=William_Davidson_Edition_-_English&vhe=William_Davidson_Edition_-_Vocalized_Punctuated_Aramaic&lang=bi",
+   "tref": "Pesachim.108a.4",
+   "source": "se_christianity",
+   "where": "https://christianity.stackexchange.com/a/88986",
+   "sefaria_ref": "Pesachim 108a:4",
+   "clean": false
+  },
+  {
+   "raw": "Mishnah Sotah, 5:3",
+   "href": "https://www.sefaria.org/Mishnah_Sotah.5.3?lang=bi&with=all&lang2=en",
+   "tref": "Mishnah Sotah.5.3",
+   "source": "se_christianity",
+   "where": "https://christianity.stackexchange.com/a/54354",
+   "sefaria_ref": "Mishnah Sotah 5:3",
+   "clean": true
+  },
+  {
+   "raw": "Sanhedrin 38b:21",
+   "href": "https://www.sefaria.org/Sanhedrin.38b.21?lang=bi",
+   "tref": "Sanhedrin.38b.21",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/69858",
+   "sefaria_ref": "Sanhedrin 38b:21",
+   "clean": true
+  },
+  {
+   "raw": "Isaiah 7:13",
+   "href": "https://www.sefaria.org/Isaiah.7.13?lang=bi",
+   "tref": "Isaiah.7.13",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/77799",
+   "sefaria_ref": "Isaiah 7:13",
+   "clean": true
+  },
+  {
+   "raw": "Shmuel II 14:17",
+   "href": "https://www.sefaria.org/II_Samuel.14.17?lang=bi&with=Commentary&lang2=en",
+   "tref": "II Samuel.14.17",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/77373",
+   "sefaria_ref": "II Samuel 14:17",
+   "clean": true
+  },
+  {
+   "raw": "Circumcision 1:1",
+   "href": "https://www.sefaria.org/Mishneh_Torah%2C_Circumcision.1.1?lang=bi&with=Shabbat&lang2=en",
+   "tref": "Mishneh Torah, Circumcision.1.1",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/76699",
+   "sefaria_ref": "Mishneh Torah, Circumcision 1:1",
+   "clean": false
+  },
+  {
+   "raw": "Jewish Publication Society's translation of Proverbs 6",
+   "href": "https://www.sefaria.org/Proverbs.6.20-35?lang=bi",
+   "tref": "Proverbs.6.20-35",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/80521",
+   "sefaria_ref": "Proverbs 6:20-35",
+   "clean": false
+  },
+  {
+   "raw": "Genesis 22:17",
+   "href": "https://www.sefaria.org/Genesis.22.17?lang=bi&with=Commentary&lang2=en",
+   "tref": "Genesis.22.17",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/58844",
+   "sefaria_ref": "Genesis 22:17",
+   "clean": true
+  },
+  {
+   "raw": "Mishneh Torah, Vessels of the Sanctuary and Those Who Serve Therein 1:3",
+   "href": "https://www.sefaria.org/Mishneh_Torah,_Vessels_of_the_Sanctuary_and_Those_Who_Serve_Therein.1.3",
+   "tref": "Mishneh Torah, Vessels of the Sanctuary and Those Who Serve Therein.1.3",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/89982",
+   "sefaria_ref": "Mishneh Torah, Vessels of the Sanctuary and Those Who Serve Therein 1:3",
+   "clean": true
+  },
+  {
+   "raw": "Zevachim 113b",
+   "href": "https://www.sefaria.org/Zevachim.113b?lang=bi",
+   "tref": "Zevachim.113b",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/34210",
+   "sefaria_ref": "Zevachim 113b",
+   "clean": true
+  },
+  {
+   "raw": "Vayikra Rabbah 10",
+   "href": "https://www.sefaria.org/Vayikra_Rabbah.10.3?lang=bi",
+   "tref": "Vayikra Rabbah.10.3",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/83427",
+   "sefaria_ref": "Vayikra Rabbah 10:3",
+   "clean": true
+  },
+  {
+   "raw": "Genesis Rabbah 84:11",
+   "href": "http://www.sefaria.org/Bereishit_Rabbah.84.11?lang=he&layout=lines&sidebarLang=all",
+   "tref": "Bereishit Rabbah.84.11",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/21471",
+   "sefaria_ref": "Bereshit Rabbah 84:11",
+   "clean": true
+  },
+  {
+   "raw": "Genesis 3:7",
+   "href": "http://www.sefaria.org/Genesis.3.7",
+   "tref": "Genesis.3.7",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/40343",
+   "sefaria_ref": "Genesis 3:7",
+   "clean": true
+  },
+  {
+   "raw": "Leviticus 18:18",
+   "href": "https://www.sefaria.org/Leviticus.18.18?ven=The_Contemporary_Torah,_Jewish_Publication_Society,_2006&vhe=Miqra_according_to_the_Masorah&lang=bi&with=all&lang2=he",
+   "tref": "Leviticus.18.18",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/76474",
+   "sefaria_ref": "Leviticus 18:18",
+   "clean": true
+  },
+  {
+   "raw": "Midrash Sechel Tov to Genesis 26:34",
+   "href": "https://www.sefaria.org/Genesis.26.34?lang=he&aliyot=0&p2=Midrash_Sekhel_Tov%2C_Bereshit.26.34.2&lang2=he",
+   "tref": "Genesis.26.34",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/79063",
+   "sefaria_ref": "Genesis 26:34",
+   "clean": false
+  },
+  {
+   "raw": "Rashi on Genesis 31:10",
+   "href": "https://www.sefaria.org/Genesis.31.10?lang=bi&with=Rashi&lang2=he",
+   "tref": "Genesis.31.10",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/48682",
+   "sefaria_ref": "Genesis 31:10",
+   "clean": true
+  },
+  {
+   "raw": "Genesis Rabbah 23:6",
+   "href": "https://www.sefaria.org/Bereishit_Rabbah.23.6?vhe=Midrash_Rabbah_--_TE&lang=he&with=Commentary&lang2=he",
+   "tref": "Bereishit Rabbah.23.6",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/50368",
+   "sefaria_ref": "Bereshit Rabbah 23:6",
+   "clean": true
+  },
+  {
+   "raw": "Sefaria Radak on Genesis 32:32",
+   "href": "https://www.sefaria.org/Radak_on_Genesis.32.33.1?ven=Eliyahu_Munk,_HaChut_Hameshulash&vhe=Presburg_:_A._Schmid,_1842&lang=bi",
+   "tref": "Radak on Genesis.32.33.1",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/74891",
+   "sefaria_ref": "Radak on Genesis 32:33:1",
+   "clean": false
+  },
+  {
+   "raw": "Exodus Rabbah 23:13",
+   "href": "http://www.sefaria.org/Shemot_Rabbah.23.13?lang=en&with=all&lang2=en",
+   "tref": "Shemot Rabbah.23.13",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/24876",
+   "sefaria_ref": "Shemot Rabbah 23:13",
+   "clean": true
+  },
+  {
+   "raw": "Shabbat 32b 2",
+   "href": "https://www.sefaria.org/Shabbat.32b.2?lang=bi&with=all&lang2=en",
+   "tref": "Shabbat.32b.2",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/60328",
+   "sefaria_ref": "Shabbat 32b:2",
+   "clean": true
+  },
+  {
+   "raw": "Pirkei DeRabbi Eliezer 13",
+   "href": "https://www.sefaria.org/Pirkei_DeRabbi_Eliezer.13?lang=bi",
+   "tref": "Pirkei DeRabbi Eliezer.13",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/40201",
+   "sefaria_ref": "Pirkei DeRabbi Eliezer 13",
+   "clean": true
+  },
+  {
+   "raw": "Judges 19:2",
+   "href": "http://www.sefaria.org/Judges.19.2?lang=bi&with=Rashi&lang2=en",
+   "tref": "Judges.19.2",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/27018",
+   "sefaria_ref": "Judges 19:2",
+   "clean": true
+  },
+  {
+   "raw": "M. Pesachim 1",
+   "href": "https://www.sefaria.org/Mishnah_Pesachim.1.1?lang=bi&with=Talmud&lang2=bips://",
+   "tref": "Mishnah Pesachim.1.1",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/18610",
+   "sefaria_ref": "Mishnah Pesachim 1:1",
+   "clean": true
+  },
+  {
+   "raw": "Talmud — Kiddushin 40a:13",
+   "href": "https://www.sefaria.org/Kiddushin.40a.13?lang=bi",
+   "tref": "Kiddushin.40a.13",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/53918",
+   "sefaria_ref": "Kiddushin 40a:13",
+   "clean": false
+  },
+  {
+   "raw": "Megilla 9a",
+   "href": "https://www.sefaria.org/Megillah.9a.12?lang=bi",
+   "tref": "Megillah.9a.12",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/29151",
+   "sefaria_ref": "Megillah 9a:12",
+   "clean": true
+  },
+  {
+   "raw": "Genesis 15:6",
+   "href": "http://www.sefaria.org/Genesis.15.6?lang=bi",
+   "tref": "Genesis.15.6",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/24725",
+   "sefaria_ref": "Genesis 15:6",
+   "clean": true
+  },
+  {
+   "raw": "Genesis Raba 17:4",
+   "href": "https://www.sefaria.org/Bereishit_Rabbah.17.4?lang=bi",
+   "tref": "Bereishit Rabbah.17.4",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/49077",
+   "sefaria_ref": "Bereshit Rabbah 17:4",
+   "clean": false
+  },
+  {
+   "raw": "Midrash Bereshit Rabba (80:11",
+   "href": "http://www.sefaria.org/Bereishit_Rabbah.80.11?lang=he&layout=lines&sidebarLang=all",
+   "tref": "Bereishit Rabbah.80.11",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/22860",
+   "sefaria_ref": "Bereshit Rabbah 80:11",
+   "clean": false
+  },
+  {
+   "raw": "Tractate Berakhot 31a",
+   "href": "https://www.sefaria.org/Berakhot.31a?lang=bi",
+   "tref": "Berakhot.31a",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/54675",
+   "sefaria_ref": "Berakhot 31a",
+   "clean": true
+  },
+  {
+   "raw": "Genesis Rabbah 8.1",
+   "href": "https://www.sefaria.org/Bereishit_Rabbah.8.1?lang=bi",
+   "tref": "Bereishit Rabbah.8.1",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/47910",
+   "sefaria_ref": "Bereshit Rabbah 8:1",
+   "clean": true
+  },
+  {
+   "raw": "commentary of the Bereishit Rabbah on 80:11",
+   "href": "http://www.sefaria.org/Bereishit_Rabbah.80.11?lang=he&layout=lines&sidebarLang=all",
+   "tref": "Bereishit Rabbah.80.11",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/22860",
+   "sefaria_ref": "Bereshit Rabbah 80:11",
+   "clean": false
+  },
+  {
+   "raw": "Mishnah Sanhedrin 10:1",
+   "href": "https://www.sefaria.org/English_Explanation_of_Mishnah_Sanhedrin.10.1.1?lang=en&with=all&lang2=en",
+   "tref": "English Explanation of Mishnah Sanhedrin.10.1.1",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/76844",
+   "sefaria_ref": "English Explanation of Mishnah Sanhedrin 10:1:1",
+   "clean": true
+  },
+  {
+   "raw": "Rashi to Genesis 18:8",
+   "href": "https://www.sefaria.org/Genesis.18.8?lang=bi&aliyot=0&p2=Rashi_on_Genesis.18.8.1&lang2=bi",
+   "tref": "Genesis.18.8",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/87026",
+   "sefaria_ref": "Genesis 18:8",
+   "clean": false
+  },
+  {
+   "raw": "Shabbat 105a.3",
+   "href": "https://www.sefaria.org/Shabbat.105a.3?ven=William_Davidson_Edition_-_English&vhe=William_Davidson_Edition_-_Aramaic&lang=bi&with=Chavruta&lang2=en",
+   "tref": "Shabbat.105a.3",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/70834",
+   "sefaria_ref": "Shabbat 105a:3",
+   "clean": true
+  },
+  {
+   "raw": "Kiddishun 72b",
+   "href": "https://www.sefaria.org/Kiddushin.72b?lang=bi",
+   "tref": "Kiddushin.72b",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/73758",
+   "sefaria_ref": "Kiddushin 72b",
+   "clean": false
+  },
+  {
+   "raw": "Talmud, (Sukka 52b",
+   "href": "https://www.sefaria.org/Sukkah.52b?lang=bi",
+   "tref": "Sukkah.52b",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/30649",
+   "sefaria_ref": "Sukkah 52b",
+   "clean": false
+  },
+  {
+   "raw": "Mishnah Yoma 6.2",
+   "href": "https://www.sefaria.org/English_Explanation_of_Mishnah_Yoma.6.2?lang=bi",
+   "tref": "English Explanation of Mishnah Yoma.6.2",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/44034",
+   "sefaria_ref": "English Explanation of Mishnah Yoma 6:2",
+   "clean": true
+  },
+  {
+   "raw": "Sanhedrin 90b:2",
+   "href": "https://www.sefaria.org/Sanhedrin.90b.2?ven=William_Davidson_Edition_-_English&vhe=Wikisource_Talmud_Bavli&lang=bi&with=all&lang2=en",
+   "tref": "Sanhedrin.90b.2",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/74982",
+   "sefaria_ref": "Sanhedrin 90b:2",
+   "clean": true
+  },
+  {
+   "raw": "Shemot 20:14",
+   "href": "https://www.sefaria.org/Exodus.20.14?lang=bi&with=all&lang2=en",
+   "tref": "Exodus.20.14",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/54418",
+   "sefaria_ref": "Exodus 20:14",
+   "clean": true
+  },
+  {
+   "raw": "Mishnah Gittin 9:10",
+   "href": "https://www.sefaria.org/Mishnah_Gittin.9.10?ven=William_Davidson_Edition_-_English&vhe=Torat_Emet_357&lang=bi",
+   "tref": "Mishnah Gittin.9.10",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/75917",
+   "sefaria_ref": "Mishnah Gittin 9:10",
+   "clean": true
+  },
+  {
+   "raw": "Targum Jerusalem, Genesis 19:24",
+   "href": "https://www.sefaria.org/Targum_Jerusalem%2C_Genesis.19.24?lang=bi",
+   "tref": "Targum Jerusalem, Genesis.19.24",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/69858",
+   "sefaria_ref": "Targum Jerusalem, Genesis 19:24",
+   "clean": true
+  },
+  {
+   "raw": "Mishneh Torah, Kings and Wars 11:6",
+   "href": "https://www.sefaria.org/Mishneh_Torah%2C_Kings_and_Wars.11.6?ven=Laws_of_Kings_and_Wars._trans._Reuven_Brauner,_2012&lang=en&with=all&lang2=en",
+   "tref": "Mishneh Torah, Kings and Wars.11.6",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/63131",
+   "sefaria_ref": "Mishneh Torah, Kings and Wars 11:6",
+   "clean": true
+  },
+  {
+   "raw": "Suk. 34a",
+   "href": "https://www.sefaria.org/Sukkah.34a?lang=bi",
+   "tref": "Sukkah.34a",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/43994",
+   "sefaria_ref": "Sukkah 34a",
+   "clean": false
+  },
+  {
+   "raw": "Genesis (or Bereshit) Rabbah 80:11",
+   "href": "http://www.sefaria.org/Bereishit_Rabbah.80.11?lang=he&layout=lines&sidebarLang=all",
+   "tref": "Bereishit Rabbah.80.11",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/22860",
+   "sefaria_ref": "Bereshit Rabbah 80:11",
+   "clean": false
+  },
+  {
+   "raw": "Mishna Sukkah 5:8",
+   "href": "https://www.sefaria.org/Mishnah_Sukkah.5.8?lang=en&with=all&lang2=en",
+   "tref": "Mishnah Sukkah.5.8",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/31962",
+   "sefaria_ref": "Mishnah Sukkah 5:8",
+   "clean": true
+  },
+  {
+   "raw": "Genesis 14:13",
+   "href": "https://www.sefaria.org/Genesis.14.13?ven=The_Contemporary_Torah,_Jewish_Publication_Society,_2006&vhe=Miqra_according_to_the_Masorah&lang=bi&with=Radak&lang2=en",
+   "tref": "Genesis.14.13",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/74333",
+   "sefaria_ref": "Genesis 14:13",
+   "clean": true
+  },
+  {
+   "raw": "Mishna Pesachim 22b",
+   "href": "https://www.sefaria.org/Pesachim.22b?lang=bi",
+   "tref": "Pesachim.22b",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/73526",
+   "sefaria_ref": "Pesachim 22b",
+   "clean": false
+  },
+  {
+   "raw": "Pirkei Avot 1:5",
+   "href": "https://www.sefaria.org/Pirkei_Avot.1.5?lang=bi",
+   "tref": "Pirkei Avot.1.5",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/70303",
+   "sefaria_ref": "Pirkei Avot 1:5",
+   "clean": true
+  },
+  {
+   "raw": "Gen. 31:30",
+   "href": "https://www.sefaria.org/Genesis.31.30?lang=he-en",
+   "tref": "Genesis.31.30",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/92922",
+   "sefaria_ref": "Genesis 31:30",
+   "clean": true
+  },
+  {
+   "raw": "Ketubot 3:4",
+   "href": "https://www.sefaria.org/Mishnah_Ketubot.3.4?ven=William_Davidson_Edition_-_English&vhe=Torat_Emet_357&lang=he&with=all&lang2=he",
+   "tref": "Mishnah Ketubot.3.4",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/76472",
+   "sefaria_ref": "Mishnah Ketubot 3:4",
+   "clean": true
+  },
+  {
+   "raw": "Bereshit Rebbah 22",
+   "href": "https://www.sefaria.org/Bereishit_Rabbah.22.6?lang=bi&with=all&lang2=en",
+   "tref": "Bereishit Rabbah.22.6",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/48146",
+   "sefaria_ref": "Bereshit Rabbah 22:6",
+   "clean": false
+  },
+  {
+   "raw": "Numbers 11 @sefaria.org",
+   "href": "https://www.sefaria.org/Numbers.11.25?lang=bi&with=Rashi&lang2=en",
+   "tref": "Numbers.11.25",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/92696",
+   "sefaria_ref": "Numbers 11:25",
+   "clean": false
+  },
+  {
+   "raw": "Sanhedrin 10:1:6",
+   "href": "https://www.sefaria.org/Rambam_on_Mishnah_Sanhedrin.10.1.6?ven=Sefaria_Community_Translation&lang=en",
+   "tref": "Rambam on Mishnah Sanhedrin.10.1.6",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/76844",
+   "sefaria_ref": "Rambam on Mishnah Sanhedrin 10:1:6",
+   "clean": true
+  },
+  {
+   "raw": "In Mishna Chagigah 12a",
+   "href": "https://www.sefaria.org/Chagigah.12a?lang=bi",
+   "tref": "Chagigah.12a",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/73526",
+   "sefaria_ref": "Chagigah 12a",
+   "clean": false
+  },
+  {
+   "raw": "Sukkah 52a",
+   "href": "https://www.sefaria.org/Sukkah.52a.6?lang=bi",
+   "tref": "Sukkah.52a.6",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/47037",
+   "sefaria_ref": "Sukkah 52a:6",
+   "clean": true
+  },
+  {
+   "raw": "Genesis 3:16",
+   "href": "https://www.sefaria.org/Genesis.3.16?lang=bi&with=all&lang2=he",
+   "tref": "Genesis.3.16",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/48502",
+   "sefaria_ref": "Genesis 3:16",
+   "clean": true
+  },
+  {
+   "raw": "Sukkah 55b:9",
+   "href": "https://www.sefaria.org/Sukkah.55b.9?lang=bi",
+   "tref": "Sukkah.55b.9",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/70494",
+   "sefaria_ref": "Sukkah 55b:9",
+   "clean": true
+  },
+  {
+   "raw": "Exodus 22:16",
+   "href": "https://www.sefaria.org/Exodus.22.16?ven=The_Contemporary_Torah,_Jewish_Publication_Society,_2006&vhe=Miqra_according_to_the_Masorah&lang=bi&aliyot=0",
+   "tref": "Exodus.22.16",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/76472",
+   "sefaria_ref": "Exodus 22:16",
+   "clean": true
+  },
+  {
+   "raw": "Onqelos' Aramaic Translation of Genesis 22:8",
+   "href": "http://www.sefaria.org/Onkelos_Genesis.22.8?lang=he-en&layout=heLeft&sidebarLang=all",
+   "tref": "Onkelos Genesis.22.8",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/22688",
+   "sefaria_ref": "Onkelos Genesis 22:8",
+   "clean": false
+  },
+  {
+   "raw": "Sotah 33b",
+   "href": "https://www.sefaria.org/Sotah.33b.10?lang=bi&with=all&lang2=en",
+   "tref": "Sotah.33b.10",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/31433",
+   "sefaria_ref": "Sotah 33b:10",
+   "clean": true
+  },
+  {
+   "raw": "Leviticus 5:7-10 (JPS",
+   "href": "https://www.sefaria.org/Leviticus.5.7-10?ven=The_Contemporary_Torah,_Jewish_Publication_Society,_2006&vhe=Miqra_according_to_the_Masorah&lang=bi&aliyot=0",
+   "tref": "Leviticus.5.7-10",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/75166",
+   "sefaria_ref": "Leviticus 5:7-10",
+   "clean": false
+  },
+  {
+   "raw": "Genesis 4:7",
+   "href": "https://www.sefaria.org/Genesis.4.7?lang=bi&with=all&lang2=he",
+   "tref": "Genesis.4.7",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/48502",
+   "sefaria_ref": "Genesis 4:7",
+   "clean": true
+  },
+  {
+   "raw": "Shab. 36a",
+   "href": "https://www.sefaria.org/Shabbat.36a?lang=bi",
+   "tref": "Shabbat.36a",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/43994",
+   "sefaria_ref": "Shabbat 36a",
+   "clean": true
+  },
+  {
+   "raw": "B. Yevamot 46a",
+   "href": "https://www.sefaria.org/Yevamot.46a?lang=bi",
+   "tref": "Yevamot.46a",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/38604",
+   "sefaria_ref": "Yevamot 46a",
+   "clean": false
+  },
+  {
+   "raw": "Malbim on 42:13",
+   "href": "https://www.sefaria.org/Job.42.13?lang=bi&with=Malbim&lang2=en",
+   "tref": "Job.42.13",
+   "source": "se_hermeneutics",
+   "where": "https://hermeneutics.stackexchange.com/a/9245",
+   "sefaria_ref": "Job 42:13",
+   "clean": false
+  },
+  {
+   "raw": "Tosefta Ketubot 4:9",
+   "href": "https://www.sefaria.org.il/Tosefta_Ketubot.4.9?ven=Sefaria_Community_Translation&vhe=Tosefta_Ketuvot_--_Machon_Mamre&lang=bi",
+   "tref": "Tosefta Ketubot.4.9",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68783",
+   "sefaria_ref": "Tosefta Ketubot 4:9",
+   "clean": true
+  },
+  {
+   "raw": "Menahot 109b",
+   "href": "https://www.sefaria.org.il/Menachot.109b.14-16?ven=William_Davidson_Edition_-_English&vhe=Wikisource_Talmud_Bavli&lang=bi",
+   "tref": "Menachot.109b.14-16",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/33093",
+   "sefaria_ref": "Menachot 109b:14-16",
+   "clean": true
+  },
+  {
+   "raw": "Ezra 6:1-15",
+   "href": "https://www.sefaria.org.il/Ezra.6.1-15?ven=Tanakh:_The_Holy_Scriptures,_published_by_JPS&vhe=Miqra_according_to_the_Masorah&lang=bi",
+   "tref": "Ezra.6.1-15",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68638",
+   "sefaria_ref": "Ezra 6:1-15",
+   "clean": true
+  },
+  {
+   "raw": "Mishna Sotah 9:15",
+   "href": "https://www.sefaria.org.il/Mishnah_Sotah.9.15?vhe=Torat_Emet_357&qh=%D7%A8%D7%91%D7%99%20%D7%99%D7%A9%D7%9E%D7%A2%D7%90%D7%9C%20%D7%91%D7%9F%20%D7%A4%D7%99%D7%90%D7%91%D7%99",
+   "tref": "Mishnah Sotah.9.15",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68779",
+   "sefaria_ref": "Mishnah Sotah 9:15",
+   "clean": true
+  },
+  {
+   "raw": "Sotah 47a",
+   "href": "https://www.sefaria.org.il/Sotah.47a.13?ven=William_Davidson_Edition_-_English&vhe=William_Davidson_Edition_-_Vocalized_Aramaic&lang=he",
+   "tref": "Sotah.47a.13",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68567",
+   "sefaria_ref": "Sotah 47a:13",
+   "clean": true
+  },
+  {
+   "raw": "JT Ketubot 12:3",
+   "href": "https://www.sefaria.org.il/Jerusalem_Talmud_Ketubot.12.3.8?ven=The_Jerusalem_Talmud,_translation_and_commentary_by_Heinrich_W._Guggenheimer._Berlin,_De_Gruyter,_1999-2015&vhe=The_Jerusalem_Talmud,_edition_by_Heinrich_W._Guggenheimer._Berlin,_De_Gruyter,_1999-2015&lang=bi",
+   "tref": "Jerusalem Talmud Ketubot.12.3.8",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68779",
+   "sefaria_ref": "Jerusalem Talmud Ketubot 12:3:8",
+   "clean": true
+  },
+  {
+   "raw": "Bavli Zevachim 19a",
+   "href": "https://www.sefaria.org.il/Zevachim.19a.2?ven=William_Davidson_Edition_-_English&vhe=Wikisource_Talmud_Bavli&lang=bi&with=all&lang2=en",
+   "tref": "Zevachim.19a.2",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68638",
+   "sefaria_ref": "Zevachim 19a:2",
+   "clean": false
+  },
+  {
+   "raw": "Shemot Rabbah 29:9",
+   "href": "https://www.sefaria.org.il/Shemot_Rabbah.29.9?vhe=Midrash_Rabbah_--_TE&lang=bi",
+   "tref": "Shemot Rabbah.29.9",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68625",
+   "sefaria_ref": "Shemot Rabbah 29:9",
+   "clean": true
+  },
+  {
+   "raw": "JT Kila'im 9:3",
+   "href": "https://www.sefaria.org.il/Jerusalem_Talmud_Kilayim.9.3.8?ven=The_Jerusalem_Talmud,_translation_and_commentary_by_Heinrich_W._Guggenheimer._Berlin,_De_Gruyter,_1999-2015&vhe=The_Jerusalem_Talmud,_edition_by_Heinrich_W._Guggenheimer._Berlin,_De_Gruyter,_1999-2015&lang=bi",
+   "tref": "Jerusalem Talmud Kilayim.9.3.8",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68779",
+   "sefaria_ref": "Jerusalem Talmud Kilayim 9:3:8",
+   "clean": false
+  },
+  {
+   "raw": "Joshua 12:7",
+   "href": "https://www.sefaria.org.il/Joshua.12.7?ven=Tanakh:_The_Holy_Scriptures,_published_by_JPS&vhe=Tanach_with_Ta%27amei_Hamikra&lang=bi&with=all&lang2=en",
+   "tref": "Joshua.12.7",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68891",
+   "sefaria_ref": "Joshua 12:7",
+   "clean": true
+  },
+  {
+   "raw": "Tosefta Shabbat 2:3",
+   "href": "https://www.sefaria.org.il/Tosefta_Shabbat.2.3?vhe=Tosefta_Shabbat&lang=bi",
+   "tref": "Tosefta Shabbat.2.3",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68783",
+   "sefaria_ref": "Tosefta Shabbat 2:3",
+   "clean": true
+  },
+  {
+   "raw": "BT Chullin 123a",
+   "href": "https://www.sefaria.org.il/Chullin.123a.3?ven=William_Davidson_Edition_-_English&vhe=Wikisource_Talmud_Bavli&lang=bi&with=all&lang2=en",
+   "tref": "Chullin.123a.3",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68779",
+   "sefaria_ref": "Chullin 123a:3",
+   "clean": true
+  },
+  {
+   "raw": "Bavli Megillah 13b",
+   "href": "https://www.sefaria.org.il/Megillah.13b.10?ven=William_Davidson_Edition_-_English&vhe=William_Davidson_Edition_-_Vocalized_Aramaic&lang=bi",
+   "tref": "Megillah.13b.10",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68638",
+   "sefaria_ref": "Megillah 13b:10",
+   "clean": false
+  },
+  {
+   "raw": "Seder Olam Zuta, 7-10",
+   "href": "https://www.sefaria.org.il/Seder_Olam_Zutta.7.1-10.1?vhe=Seder_Olam_Zuta,_Rabbi_M._Grossberg._London,_1910&lang=bi",
+   "tref": "Seder Olam Zutta.7.1-10.1",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68638",
+   "sefaria_ref": "Seder Olam Zutta 7:1-10:1",
+   "clean": false
+  },
+  {
+   "raw": "Isaiah 29:1",
+   "href": "https://www.sefaria.org.il/Isaiah.29.1?ven=Tanakh:_The_Holy_Scriptures,_published_by_JPS&vhe=Tanach_with_Ta%27amei_Hamikra&lang=bi",
+   "tref": "Isaiah.29.1",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68625",
+   "sefaria_ref": "Isaiah 29:1",
+   "clean": true
+  },
+  {
+   "raw": "Tosefta Menachot 13:4",
+   "href": "https://www.sefaria.org.il/Tosefta_Menachot.13.4?ven=Rabbi_Mike_Feuer&vhe=Tosefta_Menahot_-_Machon_Mamre&lang=bi",
+   "tref": "Tosefta Menachot.13.4",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68779",
+   "sefaria_ref": "Tosefta Menachot 13:4",
+   "clean": true
+  },
+  {
+   "raw": "Ezekiel 43:15-16",
+   "href": "https://www.sefaria.org.il/Ezekiel.43.15-16?ven=Tanakh:_The_Holy_Scriptures,_published_by_JPS&vhe=Miqra_according_to_the_Masorah&lang=bi",
+   "tref": "Ezekiel.43.15-16",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68625",
+   "sefaria_ref": "Ezekiel 43:15-16",
+   "clean": true
+  },
+  {
+   "raw": "JT Taanit 4:2",
+   "href": "https://www.sefaria.org.il/Jerusalem_Talmud_Taanit.4.2.13?ven=The_Jerusalem_Talmud,_translation_and_commentary_by_Heinrich_W._Guggenheimer._Berlin,_De_Gruyter,_1999-2015&vhe=The_Jerusalem_Talmud,_edition_by_Heinrich_W._Guggenheimer._Berlin,_De_Gruyter,_1999-2015&lang=bi&namedEntity=shephatya-b-abutal&namedEntityText=%D7%A9%D6%B0%D7%81%D7%A4%D6%B7%D7%98%D6%B0%D7%99%D6%B8%D7%94%20%D7%91%D6%B6%D6%BC%D7%9F%20%D7%90%D6%B2%D7%91%D7%95%D6%BC%D7%98%D6%B8%D7%9C&with=Lexicon&lang2=en",
+   "tref": "Jerusalem Talmud Taanit.4.2.13",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68779",
+   "sefaria_ref": "Jerusalem Talmud Taanit 4:2:13",
+   "clean": true
+  },
+  {
+   "raw": "BT Avodah Zara 11b",
+   "href": "https://www.sefaria.org.il/Avodah_Zarah.11b.3?ven=William_Davidson_Edition_-_English&vhe=Wikisource_Talmud_Bavli&lang=bi&with=all&lang2=en",
+   "tref": "Avodah Zarah.11b.3",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68779",
+   "sefaria_ref": "Avodah Zarah 11b:3",
+   "clean": false
+  },
+  {
+   "raw": "Esther Rabbah 8:3",
+   "href": "https://www.sefaria.org.il/Esther_Rabbah.8.3?ven=The_Sefaria_Midrash_Rabbah,_2022&vhe=Midrash_Rabbah_--_TE&lang=bi",
+   "tref": "Esther Rabbah.8.3",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68638",
+   "sefaria_ref": "Esther Rabbah 8:3",
+   "clean": true
+  },
+  {
+   "raw": "Tosefta Niddah 4:8",
+   "href": "https://www.sefaria.org.il/Tosefta_Niddah.4.8?vhe=Tosefta_Niddah_-_Machon_Mamre&lang=bi&lookup=%D7%90%22&with=Lexicon&lang2=en",
+   "tref": "Tosefta Niddah.4.8",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68783",
+   "sefaria_ref": "Tosefta Niddah 4:8",
+   "clean": true
+  },
+  {
+   "raw": "Bavli Ketubot 61a-b",
+   "href": "https://www.sefaria.org.il/Ketubot.61a.16-61b.1?ven=William_Davidson_Edition_-_English&vhe=William_Davidson_Edition_-_Vocalized_Aramaic&lang=bi",
+   "tref": "Ketubot.61a.16-61b.1",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68638",
+   "sefaria_ref": "Ketubot 61a:16-61b:1",
+   "clean": false
+  },
+  {
+   "raw": "Ezra 8:16",
+   "href": "https://www.sefaria.org.il/Ezra.8.16?ven=Tanakh:_The_Holy_Scriptures,_published_by_JPS&vhe=Tanach_with_Ta%27amei_Hamikra&lang=bi",
+   "tref": "Ezra.8.16",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68625",
+   "sefaria_ref": "Ezra 8:16",
+   "clean": true
+  },
+  {
+   "raw": "Sanhedrin 107b",
+   "href": "https://www.sefaria.org.il/Sanhedrin.107b.18?ven=William_Davidson_Edition_-_English&vhe=Wikisource_Talmud_Bavli&lang=he",
+   "tref": "Sanhedrin.107b.18",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68567",
+   "sefaria_ref": "Sanhedrin 107b:18",
+   "clean": true
+  },
+  {
+   "raw": "JT Sotah 9:16",
+   "href": "https://www.sefaria.org.il/Jerusalem_Talmud_Sotah.9.16.1?vhe=The_Jerusalem_Talmud,_edition_by_Heinrich_W._Guggenheimer._Berlin,_De_Gruyter,_1999-2015&qh=%D7%A8%D7%91%D7%99%20%D7%99%D7%A9%D7%9E%D7%A2%D7%90%D7%9C%20%D7%91%D7%9F%20%D7%A4%D7%99%D7%90%D7%91%D7%99",
+   "tref": "Jerusalem Talmud Sotah.9.16.1",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68779",
+   "sefaria_ref": "Jerusalem Talmud Sotah 9:16:1",
+   "clean": true
+  },
+  {
+   "raw": "Tosefta Challah 1:10",
+   "href": "https://www.sefaria.org.il/Tosefta_Challah_(Lieberman).1.10?vhe=The_Tosefta_according_to_to_codex_Vienna._Third_Augmented_Edition,_JTS_2001&lang=bi",
+   "tref": "Tosefta Challah (Lieberman).1.10",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68779",
+   "sefaria_ref": "Tosefta Challah (Lieberman) 1:10",
+   "clean": true
+  },
+  {
+   "raw": "BT Yoma 35b",
+   "href": "https://www.sefaria.org.il/Yoma.35b.4?vhe=William_Davidson_Edition_-_Vocalized_Aramaic&qh=%D7%A8%D7%91%D7%99%20%D7%99%D7%A9%D7%9E%D7%A2%D7%90%D7%9C%20%D7%91%D7%9F%20%D7%A4%D7%99%D7%90%D7%91%D7%99",
+   "tref": "Yoma.35b.4",
+   "source": "se_history",
+   "where": "https://history.stackexchange.com/a/68779",
+   "sefaria_ref": "Yoma 35b:4",
+   "clean": true
   }
  ]
 }
