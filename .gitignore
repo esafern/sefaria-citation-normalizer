@@ -37,3 +37,4 @@ pipeline/web_pairs_raw/
 contribution/evidence/sefaria_titles_snapshot.json
 contribution/evidence/casefold_groups_cache.json
 contribution/evidence/casefold_run.log
+normalizer/.titles_cache.json

@@ -101,7 +101,8 @@ def _name_candidates(work, limit=5, timeout=15):
 # carries meaning, and a canonical title that drops it is a different work.
 _DROPPABLE = {
     "of", "the", "on", "to", "and", "in", "a",
-    "laws", "hilchot", "hilchos", "hilkhot", "hil",
+    # ("laws"/"hilchot" are NOT droppable: "Hilchot Shabbat 2:3" -> "Shabbat 2:3" would
+    # make Sefaria read Mishnah Shabbat 2:3. Hilchot says "a halachic code".)
     "sefer", "seifer", "tractate", "masechet", "maseches", "masechta",
     "mesechet", "meseches", "mesechta", "mesechtas", "masekhet",
     "talmud", "bavli", "babylonian", "gemara",
@@ -142,7 +143,7 @@ def _skeleton(k):
     k = re.sub(r"(?<=.{3})h$", "", k)          # Metziah/Metzia, Rabbah/Rabba
     k = k.replace("tz", "z").replace("ts", "z")  # Metzia/Metsia
     k = k.replace("kh", "k").replace("ch", "k").replace("q", "k").replace("th", "t")
-    k = k.replace("sh", "S").replace("s", "t").replace("ph", "f")
+    k = k.replace("sh", "S").replace("s", "t").replace("ph", "f").replace("v", "b")  # bet/vet
     k = k[0] + re.sub(r"[aeiouy]", "", k[1:]) if k else k
     return re.sub(r"(.)\1+", r"\1", k)
 
@@ -213,6 +214,9 @@ def _keeps_all_words(source, canon):
        guessing, so the citation is left unlinked instead.
     So canonicalization may change spelling and casing, never meaning.
     """
+    # Sefaria titles some Torah commentaries "X on Torah, Genesis"; that's the
+    # same thing as "X on Genesis", not an added word.
+    canon = re.sub(r"\bon Torah, ", "on ", canon)
     src = _distinctive(_split_words(source))
     can = _distinctive(_split_words(canon))
     if not src or not can:
@@ -397,16 +401,107 @@ def _hilchot_is_ambiguous(citation, url):
         return False
     head = m.group(1)
     try:
-        others = _name_ref_completions(head, limit=15)
+        titles = [o.get("title", "") for o in _name_ref_completions(head, limit=15)]
     except Exception:
         return True   # can't check, so don't guess
-    for o in others:
-        t = o.get("title", "")
-        if re.match(r"^(Rambam|Mishneh Torah)\b", t):
+    titles += _vocab_matches(head)
+    seen = set()
+    for t in titles:
+        if t in seen or re.match(r"^(Rambam|Mishneh Torah)\b", t) or not _keeps_all_words(head, t):
             continue
-        if _keeps_all_words(head, t):
+        seen.add(t)
+        # same name; does it belong to a different work? (a lowercase or variant
+        # alt title of the Mishneh Torah itself doesn't count)
+        try:
+            other = _name(t[:1].upper() + t[1:])
+        except Exception:
             return True
+        if other and "Mishneh_Torah" not in other:
+            return True
+        if len(seen) >= 6:
+            break
     return False
+
+
+# --------------------------------------------------------------------------
+# Vocabulary-anchored pass ("tier 1.5"): match the work name against Sefaria's
+# full title list instead of relying on /api/name's top-N autocomplete ranking,
+# which often omits the right title ("Rambam, Hilchot Eidus" never surfaces
+# "Rambam, Hilchot Edut"). Same _keeps_all_words guard; every pick is still
+# verified live by _name().
+_TITLES_PATH = os.path.join(os.path.dirname(__file__), ".titles_cache.json")
+_TITLE_INDEX = None
+
+
+def _title_index():
+    """first-distinctive-word skeleton -> [titles]. Fetches /api/index/titles once
+    (cached next to this file, gitignored); returns {} if offline."""
+    global _TITLE_INDEX
+    if _TITLE_INDEX is not None:
+        return _TITLE_INDEX
+    try:
+        if not os.path.exists(_TITLES_PATH):
+            data = urllib.request.urlopen(BASE + "/api/index/titles", timeout=60).read()
+            open(_TITLES_PATH, "wb").write(data)
+        titles = json.load(open(_TITLES_PATH))["books"]
+    except Exception:
+        _TITLE_INDEX = {}
+        return _TITLE_INDEX
+    idx = {}
+    for t in titles:
+        if "<" in t or re.search(r"[-\u2010-\u2015]", t):
+            continue  # markup / hyphenated titles can't resolve anyway
+        words = _distinctive(_split_words(re.sub(r"\bon Torah, ", "on ", t)))
+        if words:
+            idx.setdefault(_skeleton(words[0]), []).append(t)
+    _TITLE_INDEX = idx
+    return idx
+
+
+def _vocab_matches(head):
+    words = _distinctive(_split_words(head))
+    if not words:
+        return []
+    keys = {_skeleton(words[0])}
+    if words[0] in _RAMBAM:
+        keys |= {_skeleton(w) for w in _RAMBAM}
+    bg = _book_group(words[0])
+    if bg:
+        keys.add(_skeleton(bg))
+    out = []
+    for k in keys:
+        for t in _title_index().get(k, []):
+            if _keeps_all_words(head, t):
+                out.append(t)
+    return out
+
+
+def _resolve_via_vocabulary(cands, polite):
+    """For each head+locator candidate, find titles in Sefaria's list that are the
+    same name up to spelling/casing. Accept only if every such title that
+    resolves lands on the same ref (two different works -> ambiguous -> skip)."""
+    for cand in cands:
+        m = re.match(r"^(?P<head>.*?[A-Za-z])\s+(?P<nums>\d[\d:,.\s\-ab]*)$", cand)
+        if not m or re.search(r"\d", m.group("head")):
+            continue
+        head, nums = m.group("head"), m.group("nums").strip()
+        titles = _vocab_matches(head)[:8]
+        if not titles:
+            continue
+        hits = {}
+        for t in titles:
+            try:
+                url = _name(f"{t} {nums}")
+            except Exception:
+                return None
+            if polite:
+                time.sleep(polite)
+            if url and not _adds_part_numeral(head, url):
+                hits[url] = t
+        if len(hits) == 1:
+            return next(iter(hits))
+        # >1 distinct refs: genuinely ambiguous name, leave it
+    return None
 
 
 def resolve(citation, cache=None, online=True, polite=0.0):
@@ -432,6 +527,8 @@ def resolve(citation, cache=None, online=True, polite=0.0):
             url = _resolve_via_canonicalization(cands, polite)
         if not url:
             url = _resolve_bare_via_canonicalization(cands, citation, polite)
+        if not url:
+            url = _resolve_via_vocabulary(cands, polite)
         if url and _hilchot_is_ambiguous(citation, url):
             url = None
     if cache is not None:

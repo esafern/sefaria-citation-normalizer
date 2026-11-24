@@ -394,7 +394,11 @@ def evaluate():
     sys.path.insert(0, ROOT)
     from benchmark import classify
     from normalizer.resolve import resolve, Cache
-    cache = Cache(os.path.join(RAW, "resolve_cache.json"))
+    # One resolver cache per output file: concurrent runs (a background full run and
+    # a sample run) sharing one cache overwrite each other's entries on save, and a
+    # cache filled by older code silently returns stale answers.
+    tag = os.path.splitext(os.path.basename(OUT))[0]
+    cache = Cache(os.path.join(RAW, f"resolve_cache_{tag}.json"))
     pairs = json.load(open(OUT))["pairs"]
     tally = collections.defaultdict(collections.Counter)
     wrong = []

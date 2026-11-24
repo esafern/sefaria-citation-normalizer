@@ -22,7 +22,7 @@ _STRIP_PREFIX = re.compile(
     r"^\s*(?:ArtScroll|Artscroll|Bomberg|Soncino|Koren|Steinsaltz|"
     r"William Davidson(?: Talmud)?|Vilna|Completes|Study Sheet|Source Sheet|"
     r"B\.?\s*Talmud|Babylonian Talmud|Talmud Bavli|Bavli|Talmud|"
-    r"Gemara(?: of)?|"
+    r"(?:The\s+)?Gem[ao]r[ao]h?(?: of)?|Gemera|"
     r"Mesechtas?|Mesechet|Meseches|Masechet|Masekhet|Masechta?|Maseches|Tractate|Seifer|Sefer)\s+",
     re.I)
 
@@ -52,6 +52,7 @@ _SPELLING = [
     (r"\bOlas\b", "Olat"), (r"\bChovos\b", "Chovot"),
     (r"\bShabbos\b", "Shabbat"), (r"\bToras\b", "Torat"),
     (r"\bHilchos\b", "Hilchot"), (r"\bTumas\b", "Tumat"),
+    (r"\bNathan\b", "Natan"),
 ]
 
 _ROMAN = {"i": 1, "v": 5, "x": 10, "l": 50, "c": 100}
@@ -106,7 +107,8 @@ def _strip_tail(s):
 
 
 def _numbers_to_colon(s):
-    return re.sub(r"(\d)\s*,\s*(\d)", r"\1:\2", s)
+    s = re.sub(r"(\d)\s*,\s*(\d)", r"\1:\2", s)
+    return re.sub(r"(?<=\s)(\d+)\.(\d+)\b", r"\1:\2", s)   # "Hil. Melachim 11.1" -> 11:1
 
 
 def candidates(citation):
@@ -122,6 +124,11 @@ def candidates(citation):
             out.append(s)
 
     add(citation)
+    # Stray brackets inside a locator ("I Chronicles 1:]43-54"): clean them up
+    # front so the precise form is tried before any truncated one.
+    if re.search(r"[\[\]{}]", citation):
+        citation = re.sub(r"\s*[\[\]{}]\s*", lambda m: " " if m.group(0).strip() != m.group(0) else "", citation)
+        add(citation)
     add(_numbers_to_colon(citation))
 
     base = citation
@@ -218,6 +225,14 @@ def candidates(citation):
         if book:
             add(f"Mishneh Torah, {book} {_numbers_to_colon(mr.group('nums'))}")
 
+    # Keep two levels before falling back to one: "Pirkei Avot 4:5:7" (one level
+    # too deep for Sefaria) -> "Pirkei Avot 4:5", "Exod 13:9.7" -> "Exod 13:9",
+    # "Yerushalmi Berachos 4:2. IV" -> "... 4:2". Coarser beats unlinked, but
+    # the less coarse the better.
+    m2 = re.match(r"^([A-Za-z'’.\- ]+?\s\d+[ab]?[:.]\s?\d+[ab]?)(?=[:.,\s]|$)", stripped)
+    if m2 and m2.group(1) != stripped:
+        add(_numbers_to_colon(m2.group(1).replace(". ", ":").replace(".", ":")))
+
     # Trim to the first ref when several are jammed together
     # ("Chagigah 14b:8-9 15a:3-16a:4" -> "Chagigah 14b")
     mt = re.match(r"^([A-Za-z'’.\- ]+?\s\d+[ab]?)\b", stripped)
@@ -280,7 +295,7 @@ def candidates(citation):
     _also(re.sub(r"(?<=[A-Za-z])'(?=\s|,|$)", "", citation))
 
     # Ashkenazi final s for tav beyond -os (handled above): Koheles, Bereshis, Megillas
-    _also(re.sub(r"\b([A-Za-z]{3,}[aei])s\b", r"\1t", citation))
+    _also(re.sub(r"\b(?!Genesis\b|Moses\b|Ramses\b|Exodus\b|Chronicles\b|Judges\b|Ecclesiastes\b|Lamentations\b|Maccabees\b)([A-Za-z]{3,}[aei])s\b", r"\1t", citation))
 
     # "SA"/"S.A."/"Sh\"A"/"Shu\"A" before a section name -> Shulchan Arukh
     sa = re.sub(r"^\s*(?:S\.?\s?A\.?|Sh\.?\s?A\.?|SH?U?\"A|Sh\"A|Shu\"A)\s+"
@@ -324,6 +339,34 @@ def candidates(citation):
     tn = re.sub(r"\bTanhuma\b", "Tanchuma", citation, flags=re.I)
     tn = re.sub(r"^\s*(?:Midrash\s+)?Tanchuma,?\s+(?!Buber)", "Midrash Tanchuma, ", tn, flags=re.I)
     _also(tn)
+
+    # I/II books written with a marker: "Shmuel A 9:2", "Sh'muel B 15:4",
+    # "Melachim A 1:24", "Samuel 1 13:1", "Shemuel I:26:6", "Shmuel 1:1:3-4"
+    two = {r"Sh'?e?muel|Samuel": "Samuel", r"M'?e?la[ck]h?im|Kings": "Kings",
+           r"Divrei Ha-?[Yy]amim|Chronicles": "Chronicles"}
+    for pat, eng in two.items():
+        mm = re.match(rf"^\s*(?:Sefer\s+)?(?:{pat})\s*(?:(A|Alef|Aleph|I|1)|(B|Bet|Beis|II|2))"
+                      rf"(?:\s+|:)(\d+[:.]\d+.*|\d+\s*$|\d+:\d+.*)$", citation, flags=re.I)
+        if mm:
+            num = "I" if mm.group(1) else "II"
+            _also(f"{num} {eng} {mm.group(3)}")
+
+    # Torah commentaries Sefaria titles as "X, Book" or "X on Torah, Book"
+    if re.search(r"\s+(?:on|to)\s+", citation) and "Torah, " not in citation:
+        _also(re.sub(r"\s+(?:on|to)\s+", ", ", citation, count=1))
+        _also(re.sub(r"\s+(?:on|to)\s+", " on Torah, ", citation, count=1))
+
+    # Commentaries that exist only on Orach Chayim: the section name is noise
+    # ("Magen Avraham OC 189:1" -> "Magen Avraham 189:1"). Bounded list.
+    if re.match(r"^\s*(Magen Avraham|Mishnah Berurah|Mishna Brura|Kaf Ha[Cc]hayi?m|Biur Halacha|"
+                r"Be'?ur Halakhah|Shaar HaTziyun|Eliyah? Rabbah?|Machatzit HaShekel)\b", citation, re.I):
+        _also(re.sub(r"[\s,(]+(?:O\.?\s?C\.?|O\"C|OC|Orach Ch?a[iy]+m)\b", " ", citation, flags=re.I))
+
+    # Leading filler: "in Eruvin 43b", "See Rashi to Genesis 19:1"
+    _also(re.sub(r"^\s*(?:see also|see|cf\.?|in)\s+", "", citation, flags=re.I))
+
+    # "MT, Kings and Wars 11.1" -> "Mishneh Torah, Kings and Wars 11:1"
+    _also(re.sub(r"^\s*MT,?\s+", "Mishneh Torah, ", citation))
 
     # A citation that STARTS with Hilchot/Hilchos ("Hilchos Eidus 4:1") is the
     # Rambam by near-universal convention (Sefaria's own bare "Hilchot Teshuva"
