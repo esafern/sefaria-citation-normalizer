@@ -229,7 +229,7 @@ def candidates(citation):
     # too deep for Sefaria) -> "Pirkei Avot 4:5", "Exod 13:9.7" -> "Exod 13:9",
     # "Yerushalmi Berachos 4:2. IV" -> "... 4:2". Coarser beats unlinked, but
     # the less coarse the better.
-    m2 = re.match(r"^([A-Za-z'’.\- ]+?\s\d+[ab]?[:.]\s?\d+[ab]?)(?=[:.,\s]|$)", stripped)
+    m2 = re.match(r"^([A-Za-z'’.\- ]+?\s\d+[ab]?[:.]\s?\d+[ab]?(?:-\d+(?:[:.]\d+)?)?)(?=[:.,\s]|$)", stripped)
     if m2 and m2.group(1) != stripped:
         add(_numbers_to_colon(m2.group(1).replace(". ", ":").replace(".", ":")))
 
@@ -277,6 +277,12 @@ def candidates(citation):
         if variant and variant != citation:
             for c in candidates(variant):
                 add(c)
+
+    # Verse-part letters after a verse number: "Esther 9:20f", "Exodus 15:1b-18",
+    # "Psalm 145:13a" -> 9:20, 15:1-18, 145:13. Only after a colon, so a Talmud
+    # folio ("Shabbat 13a") is untouched.
+    if re.search(r":\s?\d+[abf]\b", citation):
+        _also(re.sub(r"(:\s?\d+)[abf]\b", r"\1", citation))
 
     # Link text cut off at an unclosed parenthesis: "Shabbat (23a", "Pirkei Avot (3:2"
     if citation.count("(") > citation.count(")"):
@@ -377,4 +383,25 @@ def candidates(citation):
     if m:
         _also("Rambam, Hilchot " + m.group(1))
 
-    return out
+    return _specific_first(out)
+
+
+def _specific_first(cands):
+    """Stable reorder: a candidate whose locator is a strict prefix of another
+    candidate's locator for the same work ("Esther 9" vs "Esther 9:20") goes
+    after it, so the precise form is tried first and the truncation is only a
+    fallback."""
+    def split(c):
+        m = re.match(r"^(.*?[A-Za-z'’)])\s*,?\s+(\d[\d:ab\-\s]*)$", c)
+        if not m:
+            return None, None
+        return m.group(1).casefold(), [t for t in re.split(r"[:\s]+", m.group(2).strip()) if t]
+    parsed = [split(c) for c in cands]
+    out, deferred = [], []
+    for i, c in enumerate(cands):
+        head, nums = parsed[i]
+        less_specific = head is not None and any(
+            h == head and n is not None and len(n) > len(nums) and n[:len(nums)] == nums
+            for j, (h, n) in enumerate(parsed) if j != i)
+        (deferred if less_specific else out).append(c)
+    return out + deferred

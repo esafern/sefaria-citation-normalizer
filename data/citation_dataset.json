@@ -539,193 +539,201 @@
   "raw": "ArtScroll Yevamos 63a, note 4",
   "my_canonical": "Yevamot 63a",
   "sefaria_ref": "Yevamot 63a",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Avot D'Rabbi Natan 7:17a",
   "my_canonical": "Avot D'Rabbi Natan 7",
   "sefaria_ref": "Avot DeRabbi Natan 7",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Berakhot 54a , Berakhot 61b",
   "my_canonical": "Berakhot 54a",
   "sefaria_ref": "Berakhot 54a",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Deuteronomy 5:6-21. Myth 3",
   "my_canonical": "Deuteronomy 5",
-  "sefaria_ref": "Deuteronomy 5",
-  "source": "rule-verified"
+  "sefaria_ref": "Deuteronomy 5:6-21",
+  "source": "rule-verified, hand-reviewed 2026-11-24",
+  "label_note": "2026-11-24: relabeled from 'Deuteronomy 5' (a rule-derived, coarser label) to what the raw text states."
  },
  {
   "raw": "Esther 9:20f",
   "my_canonical": "Esther 9",
-  "sefaria_ref": "Esther 9",
-  "source": "rule-verified"
+  "sefaria_ref": "Esther 9:20",
+  "source": "rule-verified, hand-reviewed 2026-11-24",
+  "label_note": "2026-11-24: relabeled from 'Esther 9' (a rule-derived, coarser label) to what the raw text states."
  },
  {
   "raw": "Exodus 15:1b-18",
   "my_canonical": "Exodus 15",
-  "sefaria_ref": "Exodus 15",
-  "source": "rule-verified"
+  "sefaria_ref": "Exodus 15:1-18",
+  "source": "rule-verified, hand-reviewed 2026-11-24",
+  "label_note": "2026-11-24: relabeled from 'Exodus 15' (a rule-derived, coarser label) to what the raw text states."
  },
  {
   "raw": "Exodus 1:7. 3",
   "my_canonical": "Exodus 1:7",
   "sefaria_ref": "Exodus 1:7",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Exodus 8:20: 9:6",
   "my_canonical": "Exodus 8",
-  "sefaria_ref": "Exodus 8",
-  "source": "rule-verified"
+  "sefaria_ref": "Exodus 8:20-9:6",
+  "source": "rule-verified, hand-reviewed 2026-11-24",
+  "label_note": "2026-11-24: relabeled from 'Exodus 8' (a rule-derived, coarser label) to what the raw text states."
  },
  {
   "raw": "Gemara Chullin 60a/b, Orot HaKodesh 97",
   "my_canonical": "Chullin 60a",
   "sefaria_ref": "Chullin 60a",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Genesis 1:1-2 (SP) 2",
   "my_canonical": "Genesis 1",
-  "sefaria_ref": "Genesis 1",
-  "source": "rule-verified"
+  "sefaria_ref": "Genesis 1:1-2",
+  "source": "rule-verified, hand-reviewed 2026-11-24",
+  "label_note": "2026-11-24: relabeled from 'Genesis 1' (a rule-derived, coarser label) to what the raw text states."
  },
  {
   "raw": "Genesis 1:1 (SP)",
   "my_canonical": "Genesis 1",
-  "sefaria_ref": "Genesis 1",
-  "source": "rule-verified"
+  "sefaria_ref": "Genesis 1:1",
+  "source": "rule-verified, hand-reviewed 2026-11-24",
+  "label_note": "2026-11-24: relabeled from 'Genesis 1' (a rule-derived, coarser label) to what the raw text states."
  },
  {
   "raw": "Kesubos",
   "my_canonical": "Ketubot",
   "sefaria_ref": "Ketubot",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Keter Shem Tov, 194",
   "my_canonical": "Keter Shem Tov",
   "sefaria_ref": "Keter Shem Tov",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Megillah 17b, 18a",
   "my_canonical": "Megillah 17b",
   "sefaria_ref": "Megillah 17b",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Mishpatim 5776",
   "my_canonical": "Mishpatim",
   "sefaria_ref": "Exodus 21:1-24:18",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Pirkei Avot.",
   "my_canonical": "Pirkei Avot",
   "sefaria_ref": "Pirkei Avot",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Psalm 145:13a",
   "my_canonical": "Psalm 145",
-  "sefaria_ref": "Psalms 145",
-  "source": "rule-verified"
+  "sefaria_ref": "Psalms 145:13",
+  "source": "rule-verified, hand-reviewed 2026-11-24",
+  "label_note": "2026-11-24: relabeled from 'Psalms 145' (a rule-derived, coarser label) to what the raw text states."
  },
  {
   "raw": "Proverbs 556",
   "my_canonical": "Proverbs",
   "sefaria_ref": "Proverbs",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Sefer Baal Shem Tov",
   "my_canonical": "Baal Shem Tov",
   "sefaria_ref": "Ba'al Shem Tov",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Seifer Bamidbar",
   "my_canonical": "Bamidbar",
   "sefaria_ref": "Numbers",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Seifer Shemos",
   "my_canonical": "Shemos",
   "sefaria_ref": "Exodus",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Seifer Bereishis",
   "my_canonical": "Bereishis",
   "sefaria_ref": "Genesis",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Sh'mot 19",
   "my_canonical": "Sh'mot",
   "sefaria_ref": "Exodus 19",
-  "source": "rule-verified",
+  "source": "rule-verified, hand-reviewed 2026-11-24",
   "label_note": "2026-11-24: corrected from the Shemot parasha (Exodus 1:1-6:1); 'Sh'mot 19' is chapter 19. The old label came from the trailing-number-strip rule (circular)."
  },
  {
   "raw": "Shenei Luchot HaBerit, Torah Shebikhtav, Eikev,",
   "my_canonical": "Shenei Luchot HaBerit, Torah Shebikhtav, Eikev",
   "sefaria_ref": "Shenei Luchot HaBerit, Torah Shebikhtav, Eikev",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Shmos 34:6",
   "my_canonical": "Shmot 34:6",
   "sefaria_ref": "Exodus 34:6",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Talmud Bavli Megillah daf 7b",
   "my_canonical": "Megillah daf 7b",
   "sefaria_ref": "Megillah 7b",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Vayishlach, 6",
   "my_canonical": "Vayishlach",
   "sefaria_ref": "Genesis 32:4-36:43",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Yevamos 47a-47b",
   "my_canonical": "Yevamot 47a-47b",
   "sefaria_ref": "Yevamot 47",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24",
+  "label_note": "2026-11-24: relabeled from 'Yevamot 47' (a rule-derived, coarser label) to what the raw text states."
  },
  {
   "raw": "Yevamos 47b",
   "my_canonical": "Yevamot 47b",
   "sefaria_ref": "Yevamot 47b",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Yoma 29a, i.e.",
   "my_canonical": "Yoma 29a",
   "sefaria_ref": "Yoma 29a",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Tosefta, Av.Z. 5, 2",
   "my_canonical": "Tosefta Avodah Zarah 5:2",
   "sefaria_ref": "Tosefta Avodah Zarah 5:2",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  },
  {
   "raw": "Tosefta Av.Z. 5,2",
   "my_canonical": "Tosefta Avodah Zarah 5:2",
   "sefaria_ref": "Tosefta Avodah Zarah 5:2",
-  "source": "rule-verified"
+  "source": "rule-verified, hand-reviewed 2026-11-24"
  }
 ]
