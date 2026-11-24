@@ -40,6 +40,9 @@ _STRIP_TAIL = re.compile(
 
 # Word-final Ashkenazi / academic transliteration endings -> Sefaria's -ot form.
 _ENDINGS = [("oth", "ot"), ("os", "ot"), ("us", "ut"), ("ois", "ot")]
+# English words the ending rewrite must leave alone ("Exodus" is not "Exodut")
+_ENGLISH_ENDINGS_EXEMPT = {"exodus", "genesis", "leviticus", "numbers", "moses", "chronicles",
+                           "judges", "lamentations", "ecclesiastes", "maccabees", "psalms"}
 
 # Small spelling swaps seen repeatedly. Tractate-name variants live in
 # shared_dialect.TRACTATE_ALIASES instead (general dialect knowledge, not
@@ -211,7 +214,7 @@ def candidates(citation):
     if mw:
         head, rest = mw.group(1), mw.group(2)
         for a, b in _ENDINGS:
-            if head.lower().endswith(a):
+            if head.lower().endswith(a) and head.lower() not in _ENGLISH_ENDINGS_EXEMPT:
                 add(_numbers_to_colon((head[: -len(a)] + b + rest)))
         if head.lower() == "shabbos":
             add(_numbers_to_colon("Shabbat" + rest))
@@ -240,7 +243,7 @@ def candidates(citation):
         add(mt.group(1))
         for a, b in _ENDINGS:  # apply ending-fix to the trimmed head too
             hw = re.match(r"^([A-Za-z']+)", mt.group(1))
-            if hw and hw.group(1).lower().endswith(a):
+            if hw and hw.group(1).lower().endswith(a) and hw.group(1).lower() not in _ENGLISH_ENDINGS_EXEMPT:
                 add(hw.group(1)[:-len(a)] + b + mt.group(1)[len(hw.group(1)):])
 
     # Roman-numeral chapter/verse ("Genesis xxxvi 31-43")
