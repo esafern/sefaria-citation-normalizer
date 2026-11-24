@@ -70,3 +70,23 @@ alongside `HANDOFF.md` ("Current status"). Each lesson names the incident that t
     linker), and a full check that a fix is safe: all 1,097 case-variant groups resolve to
     one text each. That check also turned up two more unreachable title families
     (lowercase-initial, hyphenated).
+
+13. **Concurrent jobs must not share a writable cache.** A background full run and a
+    sample run shared one resolver cache file. Each loaded it at start and overwrote it on
+    save, so either could write back answers computed by older code, and the other then
+    reported them as current. Give every run its own cache (keyed by its output) and
+    clear it whenever the code it caches changes.
+
+14. **Stop background processes by PID, never by pattern.** `pkill -f "web_pairs.py eval$"`
+    meant for one job also killed another with the identical command line, losing hours
+    of a full run. `ps`, pick the PID, `kill <pid>`.
+
+15. **Autocomplete is not a lookup.** `/api/name` completions are ranked for humans
+    typing, not for canonicalization; the right title is often in Sefaria's title list
+    but not in the top suggestions. Matching against the full title list, with the same
+    guard and live verification, recovers these without guessing.
+
+16. **Coarse labels make a benchmark flatter itself.** Labels derived from the old rules
+    (`Genesis 1:1 (SP)` labeled "Genesis 1") scored coarse answers as "correct". Relabeling
+    to what the text actually says turned 7 apparent successes into visible "coarser"
+    results, which were then fixed (precise-first candidate order, verse-part letters).

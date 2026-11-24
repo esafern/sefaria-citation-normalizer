@@ -56,13 +56,43 @@ correctness test**; the benchmark has 32 circular rule-labeled rows (loose end 8
   **Neither posted.**
 - Branches: `0ctxcz` merged, `pd-index-submissions` updated and merged, `lw5947` deleted.
 
+### Update, 2026-11-24 evening
+
+- **Vocabulary-anchored pass ("tier 1.5") landed** (`_resolve_via_vocabulary` in
+  `normalizer/resolve.py`). It matches the work name against Sefaria's full 67k title list
+  (`normalizer/.titles_cache.json`, fetched once, gitignored) with the same guard, then
+  verifies live. Sefaria's autocomplete ranking often omits the right title
+  (`Rambam, Hilchot Eidus` never surfaced `Rambam, Hilchot Edut`).
+- **Latent mislink fixed:** "hilchot"/"laws" were droppable, so `Hilchot Shabbat 2:3`
+  could have become `Shabbat 2:3`, which Sefaria reads as *Mishnah* Shabbat 2:3.
+- More rules: I/II markers (`Shmuel A`, `Melachim B`, `Samuel 1 13:1`); `X on Torah,
+  Book` and `X, Book` commentary titles; dropping `OC` after Orach-Chayim-only
+  commentaries; Gemara spelling variants; leading `in`/`See`; `MT,`; v/b in spelling
+  comparison; verse-part letters (`9:20f`); two-level truncation before one-level;
+  precise-first candidate order; bracket cleanup.
+- The Hilchot -> Rambam ambiguity check now resolves each same-name title and only
+  abstains if one lands outside the Mishneh Torah.
+- **Benchmark relabel (loose end 8, mostly done):** 8 coarse rule-derived labels now say
+  what the raw text says (`Genesis 1:1 (SP)` -> Genesis 1:1, not Genesis 1). All 32
+  rule-verified rows are marked hand-reviewed. Benchmark against the honest labels:
+  **101 correct, 1 coarser, 0 wrong, 37 unresolved**.
+- **Cache race fixed:** each eval output now gets its own resolver cache
+  (`resolve_cache_<output>.json`). The earlier shared `resolve_cache.json` (renamed
+  `resolve_cache_OLD_shared.json`) was written by concurrent runs on different code, so
+  sample numbers reported between the full run's eval start and this fix may be off.
+  Fresh runs on current code are in progress.
+- **Mistake:** a `pkill -f "web_pairs.py eval$"` meant for the sample run also killed the
+  full run's eval (same command line). The full run was restarted on current code and
+  now also covers the Mi Yodeya 2024+ and SE pairs (loose end 7). Stop background jobs
+  by PID only.
+
 ### Running in the background
 
-`pipeline/web_pairs_raw/full_run.sh` (log `full_run.log`): verify done for all 15,365 pairs
-from the original dump + Wikipedia; eval in progress (~1,075/15,365 at 2026-11-24 19:50),
-roughly a day to go. Writes `pipeline/web_pairs_raw/web_pairs_full_scored.json`. It does
-**not** include the Mi Yodeya 2024+ or other SE pairs, and may have started before the last
-fixes, so re-score its unresolved/WRONG rows afterwards. Resumable: rerun the script.
+`pipeline/web_pairs_raw/full_run.sh` (log `full_run.log`), restarted 2026-11-24 ~22:00 on
+current code: verifies every consistent pair from all sources (now including Mi Yodeya
+2024+ and the other SE sites), then scores. Writes
+`pipeline/web_pairs_raw/web_pairs_full_scored.json`. About a day. Resumable: rerun the script.
+A fresh sample eval (`sample_eval.log`) runs alongside it.
 
 ### Git
 
@@ -89,12 +119,12 @@ fixes, so re-score its unresolved/WRONG rows afterwards. Resumable: rerun the sc
 
 **Data / evaluation:**
 7. When the full run finishes, rerun verify+eval including the 2024+ and SE pairs.
-8. 32 of the 139 benchmark rows are `source: rule-verified` (circular). Re-label
-   independently or drop.
+8. ~~32 rule-verified benchmark rows~~: hand-reviewed and 8 relabeled 2026-11-24. Still
+   genuinely ambiguous, so kept as-is: `Vayishlach, 6`, `Proverbs 556`.
 9. Common Crawl via its columnar Parquet index filtered by domain (thetorah.com,
    myjewishlearning.com, etzion.org.il, ou.org), since the CDX index server timed out.
-10. Sample runs and the background run share `name_cache.json`; concurrent writers can
-    overwrite each other's additions (wasted requests, not wrong results).
+10. ~~Shared resolver cache~~: fixed (per-output caches). `name_cache.json` (gold-ref
+    lookups) is still shared; concurrent writers only waste requests there.
 
 **Resolver:**
 11. Remaining 222 unresolved mangled: parts of multi-part works (`Moreh Nevuchim
