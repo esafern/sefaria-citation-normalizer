@@ -343,6 +343,28 @@ was wrong (`Sh'mot 19` was labeled the Shemot parasha; corrected to Exodus 19).
 **Treat `data/web_pairs.json` as the primary correctness test from now on.** The
 rule-verified rows should be re-labeled from an independent source or dropped.
 
+## Second gap pass + Stack Exchange (2026-11-24)
+
+- Added Hermeneutics / Christianity / History SE dumps: only 104 usable pairs (93 kept),
+  but an academic citation register (`BT Yoma 35b`, `Genesis (or Bereshit) Rabbah 80:11`).
+  The sample stays order-stable: existing sources keep their exact 1,000 pairs.
+- Gap fixes (local `rules.py`/`resolve.py`; port to `shared_dialect.py` with the blog):
+  a bounded Tanakh book-name map (Hebrew -> English, only in book position before a
+  number; Shoftim/Shmuel/Melachim/Divrei HaYamim deliberately excluded), "X to Y" -> "X on
+  Y", quoted abbreviations (`B"M`, `B"R`, `O"C`, `Yo"D`, `Rash"i`, ...), BT/B./JT/`Sefaria:`
+  prefixes, Tanchuma-by-parasha comma form, and a trailing "and ..." clause allowed for
+  Sefaria's `Rambam, Hilchot ...` compound titles.
+- Web sample now 1,093 pairs. Mangled (n=399): correct 158, coarser 103, label noise 9,
+  WRONG 2, unresolved 127. Benchmark unchanged at 0 WRONG.
+- The 2 mangled WRONG: `Sefaria Radak on Genesis 32:32` (Christian vs Hebrew verse
+  numbering; we followed the writer) and `Y"D 289` -> Shulchan Arukh (link went to the Tur).
+- **Decision needed, bare section citations** (`YD 289`, `O.C. 122:1`, no work named).
+  The pre-existing rule maps them to the Shulchan Arukh. Measured over all ~28k mined
+  pairs: 477 bare section citations, **87% Shulchan Arukh, 13% other works** (Tur 3%,
+  Arukh HaShulchan 2%, Mishnah Berurah 1%, Beit Yosef 1%, responsa, ...). Keep the
+  convention (accept ~13% mislinks on this pattern) or abstain on bare sections. This is
+  decision (c) in concrete form.
+
 ## Gap analysis + more sources (2026-11-24)
 
 **Full web run in the background** (`pipeline/web_pairs_raw/full_run.sh`, log

@@ -69,6 +69,34 @@ def _roman_to_int(s):
     return total
 
 
+# Hebrew/transliterated Tanakh book names -> Sefaria's English titles. A
+# bounded list (the 24 books), not an open-ended spelling tail, so it's the
+# acceptable kind of table. Deliberately omitted: Shoftim (also a parasha in
+# Deuteronomy, so "Shoftim 12" is ambiguous), and Shmuel / Melachim / Divrei
+# HaYamim, which split into I/II and can't be decided from the name alone.
+# Torah books are safe even though they double as parasha names: every parasha
+# lies inside its book, so chapter:verse means the same thing either way.
+BOOKS = [
+    (r"B'?e?r[ae]?['e]?i?sh(?:i|ee)?[ts]", "Genesis"),
+    (r"Sh'?e?mo[ts]", "Exodus"),
+    (r"Vayi[kq]ra", "Leviticus"),
+    (r"B[ae]-?midbar", "Numbers"),
+    (r"D'?e?v[ao]rim", "Deuteronomy"),
+    (r"Yehoshua", "Joshua"),
+    (r"Y'?e?sha[iy]ah?u?", "Isaiah"),
+    (r"Yirm[ie]yahu?", "Jeremiah"),
+    (r"Y'?e?[ch]?h?ezkel", "Ezekiel"),
+    (r"Hoshea", "Hosea"), (r"Yoel", "Joel"), (r"Ovadi?y?ah?", "Obadiah"),
+    (r"Yonah?", "Jonah"), (r"Mich?ah?", "Micah"), (r"Nachum", "Nahum"),
+    (r"Chavakuk", "Habakkuk"), (r"Tz'?e?fan[iy]ah?", "Zephaniah"),
+    (r"Chaggai", "Haggai"), (r"Z'?e?char[iy]ah?u?", "Zechariah"),
+    (r"T'?e?h?ill?im", "Psalms"), (r"Mishle[iy]?", "Proverbs"),
+    (r"Iyy?ov", "Job"), (r"Shir Ha-?[Ss]hirim", "Song of Songs"),
+    (r"Eic?hah?|Echah?", "Lamentations"), (r"[KQ]oh[ae]le[ts]", "Ecclesiastes"),
+    (r"Nech[ae]m[iy]ah?", "Nehemiah"),
+]
+
+
 def _strip_tail(s):
     """Strip editorial tails (notes, s.v., footnote numbers), but never the
     only number: "Megillah 15b 4" -> "Megillah 15b", while "Yalkut Shimoni
@@ -260,6 +288,42 @@ def candidates(citation):
                 "Shulchan Arukh, ", citation)
     sa = re.sub(r"\bO\.?\s?H\b", "Orach Chayim", sa) if sa != citation else sa
     _also(sa)
+
+    # Hebrew book names -> English (Ohr HaChaim to Shemot 23:2 -> ... Exodus 23:2).
+    # A "Rabbah" right after the name means the midrash, which Sefaria titles in
+    # Hebrew (Bereshit Rabbah), so those are left alone.
+    bk = citation
+    for pat, eng in BOOKS:
+        # only in book position: at the start or after on/to/of/a comma or
+        # paren, and followed by a chapter number ("Rabbeinu Yonah 3:5" stays)
+        bk = re.sub(rf"(?:^|(?<=\bon )|(?<=\bto )|(?<=\bof )|(?<=, )|(?<=\())\s*(?:{pat})(?=\s+\d)",
+                    eng, bk, flags=re.I)
+    _also(bk)
+
+    # Commentator "X to Y" -> "X on Y" (Prisha to Tur ..., Malbim to Micah ...)
+    if re.search(r"\s+to\s+", citation):
+        _also(re.sub(r"\s+to\s+", " on ", citation))
+
+    # Quoted Hebrew abbreviations (the dotted forms are handled in SECTIONS).
+    ab = citation
+    for pat, rep in [(r'\bB"M\b', "Bava Metzia"), (r'\bB"K\b', "Bava Kamma"),
+                     (r'\bB"B\b', "Bava Batra"), (r'\bB"R\b', "Bereshit Rabbah"),
+                     (r'\bO"[CH]\b', "Orach Chayim"), (r'\bYo?"D\b', "Yoreh Deah"),
+                     (r'\bE"H\b', "Even HaEzer"), (r'\bC[h]?"M\b', "Choshen Mishpat"),
+                     (r'\bRash"i\b', "Rashi"), (r'\bM"B\b', "Mishnah Berurah")]:
+        ab = re.sub(pat, rep, ab)
+    _also(ab)
+
+    # Corpus prefixes and junk around the citation
+    pre = re.sub(r"^\s*(?:BT|B\.|Bavli)\s+", "", citation)
+    pre = re.sub(r"^\s*JT\s+", "Jerusalem Talmud ", pre)
+    pre = re.sub(r"^\s*Sefaria:?\s+|\s*@\s*sefaria\.org\s*$", "", pre, flags=re.I)
+    _also(pre)
+
+    # Midrash Tanchuma by parasha: "Midrash Tanhuma Ki Sisa 9" -> "Midrash Tanchuma, Ki Sisa 9"
+    tn = re.sub(r"\bTanhuma\b", "Tanchuma", citation, flags=re.I)
+    tn = re.sub(r"^\s*(?:Midrash\s+)?Tanchuma,?\s+(?!Buber)", "Midrash Tanchuma, ", tn, flags=re.I)
+    _also(tn)
 
     # A citation that STARTS with Hilchot/Hilchos ("Hilchos Eidus 4:1") is the
     # Rambam by near-universal convention (Sefaria's own bare "Hilchot Teshuva"

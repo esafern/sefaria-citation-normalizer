@@ -579,8 +579,8 @@
   "where": "https://judaism.stackexchange.com/a/104103",
   "sefaria_ref": "Bava Metzia 59b:5",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Bava_Metzia.59b",
+  "outcome": "coarser"
  },
  {
   "raw": "Yoma 6:5",
@@ -2526,8 +2526,8 @@
   "where": "https://judaism.stackexchange.com/a/109979",
   "sefaria_ref": "Genesis 29:25",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Rashi_on_Genesis.29.25",
+  "outcome": "label_noise"
  },
  {
   "raw": "Bereshit 3:19",
@@ -2900,8 +2900,8 @@
   "where": "https://judaism.stackexchange.com/a/132369",
   "sefaria_ref": "Ibn Ezra on Psalms 3:3:4",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Ibn_Ezra_on_Psalms.3.3",
+  "outcome": "coarser"
  },
  {
   "raw": "Shmuel I, 21:5",
@@ -3032,8 +3032,8 @@
   "where": "https://judaism.stackexchange.com/a/27768",
   "sefaria_ref": "Bereshit Rabbah 24:7",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Bereshit_Rabbah.24",
+  "outcome": "coarser"
  },
  {
   "raw": "Avoda Zara 3, 4",
@@ -3483,8 +3483,8 @@
   "where": "https://judaism.stackexchange.com/a/87630",
   "sefaria_ref": "Malbim on Micah 5:4:1",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Malbim_on_Micah.5.4.1",
+  "outcome": "correct"
  },
  {
   "raw": "SA YD 87:3",
@@ -4121,8 +4121,8 @@
   "where": "https://judaism.stackexchange.com/a/59474",
   "sefaria_ref": "Taanit 9a:1",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Tosafot_on_Taanit.9a",
+  "outcome": "label_noise"
  },
  {
   "raw": "Kiddushin 82a",
@@ -4154,8 +4154,8 @@
   "where": "https://judaism.stackexchange.com/a/127401",
   "sefaria_ref": "Tur, Yoreh De'ah 247:1",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Tur,_Yoreh_De'ah.247",
+  "outcome": "coarser"
  },
  {
   "raw": "Rashi on Shemot 32:18",
@@ -4187,8 +4187,8 @@
   "where": "https://judaism.stackexchange.com/a/103232",
   "sefaria_ref": "Shulchan Arukh, Choshen Mishpat 228:3",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Shulchan_Arukh,_Choshen_Mishpat.228",
+  "outcome": "coarser"
  },
  {
   "raw": "Genesis 31:35",
@@ -4242,8 +4242,8 @@
   "where": "https://judaism.stackexchange.com/a/133958",
   "sefaria_ref": "Ritva on Rosh Hashanah 25b:5",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Ritva_on_Rosh_Hashanah.25b",
+  "outcome": "coarser"
  },
  {
   "raw": "Sefer HaChinukh, in mitzvah 612",
@@ -5122,8 +5122,8 @@
   "where": "https://judaism.stackexchange.com/a/105502",
   "sefaria_ref": "Bava Batra 15a:2",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Bava_Batra.15a",
+  "outcome": "coarser"
  },
  {
   "raw": "Zvachim 102a",
@@ -5243,8 +5243,8 @@
   "where": "https://judaism.stackexchange.com/a/127579",
   "sefaria_ref": "Bereshit Rabbah 54:4",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Bereshit_Rabbah.54.4",
+  "outcome": "correct"
  },
  {
   "raw": "Isaiah 25:9",
@@ -5309,8 +5309,8 @@
   "where": "https://judaism.stackexchange.com/a/111907",
   "sefaria_ref": "Tur, Yoreh De'ah 289:1",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Shulchan_Arukh,_Yoreh_De'ah.289",
+  "outcome": "WRONG"
  },
  {
   "raw": "Talmud Torah 3:5",
@@ -6673,8 +6673,8 @@
   "where": "https://en.wikipedia.org/wiki/Shimon_bar_Yochai",
   "sefaria_ref": "Midrash Tehillim 103:6",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Midrash_Tehillim.103.6",
+  "outcome": "correct"
  },
  {
   "raw": "Babylonian Talmud Shevuot 34a",
@@ -9698,8 +9698,8 @@
   "where": "https://en.wikipedia.org/wiki/Eikev",
   "sefaria_ref": "Midrash Tanchuma, Ki Tisa 9:2",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Midrash_Tanchuma,_Ki_Tisa.9",
+  "outcome": "coarser"
  },
  {
   "raw": "Berakhot 33a",
@@ -11018,8 +11018,8 @@
   "where": "https://christianity.stackexchange.com/a/88986",
   "sefaria_ref": "Pesachim 108a:4",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Pesachim.108a",
+  "outcome": "coarser"
  },
  {
   "raw": "Mishnah Sotah, 5:3",
@@ -11173,7 +11173,7 @@
   "sefaria_ref": "Genesis 26:34",
   "clean": false,
   "ours": "https://www.sefaria.org/Midrash_Sekhel_Tov,_Bereshit.26.34",
-  "outcome": "WRONG"
+  "outcome": "label_noise"
  },
  {
   "raw": "Rashi on Genesis 31:10",
@@ -11205,8 +11205,8 @@
   "where": "https://hermeneutics.stackexchange.com/a/74891",
   "sefaria_ref": "Radak on Genesis 32:33:1",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Radak_on_Genesis.32.32",
+  "outcome": "WRONG"
  },
  {
   "raw": "Exodus Rabbah 23:13",
@@ -11370,8 +11370,8 @@
   "where": "https://hermeneutics.stackexchange.com/a/87026",
   "sefaria_ref": "Genesis 18:8",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Rashi_on_Genesis.18.8",
+  "outcome": "label_noise"
  },
  {
   "raw": "Shabbat 105a.3",
@@ -11711,8 +11711,8 @@
   "where": "https://hermeneutics.stackexchange.com/a/38604",
   "sefaria_ref": "Yevamot 46a",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Yevamot.46a",
+  "outcome": "correct"
  },
  {
   "raw": "Malbim on 42:13",
@@ -11821,8 +11821,8 @@
   "where": "https://history.stackexchange.com/a/68779",
   "sefaria_ref": "Jerusalem Talmud Kilayim 9:3:8",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Jerusalem_Talmud_Kilayim.9.3",
+  "outcome": "coarser"
  },
  {
   "raw": "Joshua 12:7",

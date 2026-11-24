@@ -178,8 +178,20 @@ def _distinctive(words):
     return out
 
 
+def _book_group(k):
+    """The English book title for a Hebrew book-name word key, else None."""
+    from .rules import BOOKS
+    for pat, eng in BOOKS:
+        if " " not in eng and re.fullmatch(pat.lower().replace("'", ""), k):
+            return eng.lower()
+    return k if any(k == e.lower() for _, e in BOOKS) else None
+
+
 def _matches_any(k, keys):
     if k in _RAMBAM and _RAMBAM & set(keys):
+        return True
+    bg = _book_group(k)
+    if bg and any(_book_group(c) == bg for c in keys if c):
         return True
     return any(_words_match(k, c) for c in keys if c)
 
@@ -213,6 +225,12 @@ def _keeps_all_words(source, canon):
     # no added numbers: "..., part" -> "..., Part 1" picks a part
     if set(re.findall(r"\d+", canon)) - set(re.findall(r"\d+", source)):
         return False
+    # Sefaria titles some Mishneh Torah sections only by their full compound
+    # name ("Rambam, Hilchot Tefilah and Birkat Kohanim"); a writer citing the
+    # first half ("Hilchot Tfila") means the same section. Allow a trailing
+    # "and ..." clause for that title family only.
+    if re.match(r"^Rambam, Hilchot ", canon) and re.search(r"\s(?:and|u|v')\s?\S", canon):
+        canon = re.split(r"\s(?:and)\s", canon)[0]
     src_all = [_word_key(w) for w in _split_words(source)]
     added = [w for w in _split_words(canon)
              if w.lower() not in _CANON_MAY_ADD
