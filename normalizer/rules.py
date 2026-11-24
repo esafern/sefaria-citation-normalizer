@@ -69,6 +69,14 @@ def _roman_to_int(s):
     return total
 
 
+def _strip_tail(s):
+    """Strip editorial tails (notes, s.v., footnote numbers), but never the
+    only number: "Megillah 15b 4" -> "Megillah 15b", while "Yalkut Shimoni
+    1046" stays (stripping it lets Sefaria pick a default section)."""
+    t = re.sub(_STRIP_TAIL, "", s).strip()
+    return t if re.search(r"\d", t) or not re.search(r"\d", s) else s
+
+
 def _numbers_to_colon(s):
     return re.sub(r"(\d)\s*,\s*(\d)", r"\1:\2", s)
 
@@ -105,13 +113,7 @@ def candidates(citation):
         stripped = nxt
     # a trailing Hebrew year is a date, not a locator ("Mishpatim 5776")
     stripped = re.sub(r"\s+5[78]\d\d\s*$", "", stripped)
-    tail_stripped = re.sub(_STRIP_TAIL, "", stripped).strip()
-    # Only accept the tail strip if a locator survives it: "Megillah 15b 4"
-    # (footnote 4) -> "Megillah 15b" is fine, but "Yalkut Shimoni 1046" ->
-    # "Yalkut Shimoni" throws away the only number and lets Sefaria pick a
-    # default section (it maps the bare title to Yalkut Shimoni on Torah).
-    if re.search(r"\d", tail_stripped) or not re.search(r"\d", stripped):
-        stripped = tail_stripped
+    stripped = _strip_tail(stripped)
     if stripped != base:
         add(_numbers_to_colon(stripped))
 
@@ -146,7 +148,7 @@ def candidates(citation):
         for pat, rep in shared_dialect.TRACTATES:
             sp = re.sub(pat, rep, sp, flags=re.I)
         if sp != src:
-            add(_STRIP_TAIL.sub("", _numbers_to_colon(sp)).strip())
+            add(_strip_tail(_numbers_to_colon(sp)))
 
     # Shulchan Aruch section abbreviations (O.Ch., Y.D., E.H., C.M.)
     for pat, full in shared_dialect.SECTIONS:
@@ -223,5 +225,49 @@ def candidates(citation):
         for flat in flats:
             for c in candidates(flat):
                 add(c)
+
+    # --- 2026-11-24 batch, from the web-pairs gap analysis -------------------
+    # Each rewrite produces a new string and recurses through every rule above.
+    # Over-generation is safe: a candidate only counts if Sefaria verifies it,
+    # and the canonicalization guard rejects anything that adds or drops meaning.
+    def _also(variant):
+        if variant and variant != citation:
+            for c in candidates(variant):
+                add(c)
+
+    # Link text cut off at an unclosed parenthesis: "Shabbat (23a", "Pirkei Avot (3:2"
+    if citation.count("(") > citation.count(")"):
+        _also(citation.replace("(", " "))
+
+    # Wikipedia-style locators: "chapter 2, ¶ 3" -> "2:3", "chapter 24" -> "24",
+    # "§ 1" / "# 594" -> "1" / "594", "chap. 10 mishna 3" -> "10:3"
+    loc = re.sub(r",?\s*\b(?:chapter|chap\.?|ch\.|perek)\s*(\d+)\s*,?\s*"
+                 r"(?:\u00b6|paragraph|para\.?|halacha|halakhah|halakha|mishna|mishnah|\u00a7)\s*(\d+)",
+                 r" \1:\2", citation, flags=re.I)
+    loc = re.sub(r",?\s*\b(?:chapter|chap\.?|perek)\s+(\d+)", r" \1", loc, flags=re.I)
+    loc = re.sub(r"(?:\u00a7|#)\s*(\d+)", r" \1", loc)
+    _also(loc)
+
+    # Stray word-final apostrophe: "Hoshea' 14:2"
+    _also(re.sub(r"(?<=[A-Za-z])'(?=\s|,|$)", "", citation))
+
+    # Ashkenazi final s for tav beyond -os (handled above): Koheles, Bereshis, Megillas
+    _also(re.sub(r"\b([A-Za-z]{3,}[aei])s\b", r"\1t", citation))
+
+    # "SA"/"S.A."/"Sh\"A"/"Shu\"A" before a section name -> Shulchan Arukh
+    sa = re.sub(r"^\s*(?:S\.?\s?A\.?|Sh\.?\s?A\.?|SH?U?\"A|Sh\"A|Shu\"A)\s+"
+                r"(?=(?:Orach|Yoreh|Even|Choshen|O\.?\s?[CH]\b|Y\.?\s?D\b|E\.?\s?H\b|C\.?\s?M\b))",
+                "Shulchan Arukh, ", citation)
+    sa = re.sub(r"\bO\.?\s?H\b", "Orach Chayim", sa) if sa != citation else sa
+    _also(sa)
+
+    # A citation that STARTS with Hilchot/Hilchos ("Hilchos Eidus 4:1") is the
+    # Rambam by near-universal convention (Sefaria's own bare "Hilchot Teshuva"
+    # alias assumes the same). Rewrite to Sefaria's "Rambam, Hilchot X" alt-title
+    # form; the canonicalization pass then fixes the spelling (Eidus -> Edut).
+    m = re.match(r"^\s*(?:(?:Rambam|Mishneh Torah|Mishnah Torah)[,:]?\s+(?:in\s+)?)?"
+                 r"(?:Hilchot|Hilchos|Hilkhot|Hil\.)\s+(.+)$", citation, flags=re.I)
+    if m:
+        _also("Rambam, Hilchot " + m.group(1))
 
     return out

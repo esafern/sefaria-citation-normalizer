@@ -34,7 +34,8 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 RAW = os.path.join(HERE, "web_pairs_raw")
-OUT = os.path.join(ROOT, "data", "web_pairs.json")
+# WEB_PAIRS_OUT lets a full run write elsewhere without clobbering the committed sample
+OUT = os.environ.get("WEB_PAIRS_OUT", os.path.join(ROOT, "data", "web_pairs.json"))
 NAME_CACHE = os.path.join(RAW, "name_cache.json")
 UA = "sefaria-citation-normalizer/0.1 (research; github.com/esafern)"
 SEED = 20261124
@@ -321,12 +322,14 @@ def evaluate():
         if k == "WRONG" and _layer_noise(r["raw"], url, r["sefaria_ref"]):
             k = "label_noise"
         tally["clean" if r["clean"] else "mangled"][k] += 1
+        r["ours"], r["outcome"] = url, k
         if k == "WRONG":
             wrong.append((r["raw"], url, r["sefaria_ref"], r["where"]))
         if i % 25 == 0:
             cache.save()
             print(f"  {i}/{len(pairs)}", flush=True)
     cache.save()
+    json.dump(pairs, open(OUT.replace(".json", "_scored.json"), "w"), ensure_ascii=False, indent=1)
     for kind, c in tally.items():
         n = sum(c.values())
         print(f"{kind:8} n={n}: " + ", ".join(f"{k} {c[k]}" for k in

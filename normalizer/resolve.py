@@ -139,6 +139,8 @@ def _skeleton(k):
     kh/ch/q->k, th->t, Ashkenazi s->t (Kesubos/Ketubot), vowels and
     doubled letters dropped. HaYosher/HaYashar and Brachot/Berakhot agree;
     Bekhorot/Berakhot (bkrt vs brkt) do not."""
+    k = re.sub(r"(?<=.{3})h$", "", k)          # Metziah/Metzia, Rabbah/Rabba
+    k = k.replace("tz", "z").replace("ts", "z")  # Metzia/Metsia
     k = k.replace("kh", "k").replace("ch", "k").replace("q", "k").replace("th", "t")
     k = k.replace("sh", "S").replace("s", "t").replace("ph", "f")
     k = k[0] + re.sub(r"[aeiouy]", "", k[1:]) if k else k
@@ -203,6 +205,14 @@ def _keeps_all_words(source, canon):
         return False
     if not all(_matches_any(k, can) for k in src):
         return False
+    # same order: "Aruch Hashulchan" -> "Shulchan Aruch" is a different book
+    pos = [next(i for i, c in enumerate(can) if _matches_any(k, [c]) or
+                (k in _RAMBAM and c in _RAMBAM)) for k in src]
+    if pos != sorted(pos):
+        return False
+    # no added numbers: "..., part" -> "..., Part 1" picks a part
+    if set(re.findall(r"\d+", canon)) - set(re.findall(r"\d+", source)):
+        return False
     src_all = [_word_key(w) for w in _split_words(source)]
     added = [w for w in _split_words(canon)
              if w.lower() not in _CANON_MAY_ADD
@@ -237,6 +247,7 @@ def _resolve_via_canonicalization(cands, polite):
             # number would point at the wrong chapter.
             continue
         prefix = ""
+        full_head = head
         for pre in _RENAMED_PREFIXES:
             if head.startswith(pre):
                 prefix, head = pre, head[len(pre):]
@@ -255,10 +266,24 @@ def _resolve_via_canonicalization(cands, polite):
             # wrongly exclude them too.
             if any(re.search(pat, cand, re.I) for pat, _ in shared_dialect.PREFIXES):
                 continue
-        try:
-            canons = _name_candidates(head)
-        except Exception:
-            return None
+        # Try the head without its corpus prefix, then the whole head: "Mishna
+        # Brura" must not be canonicalized as the Mishnah of tractate "Brura".
+        attempts = [(prefix, head)] + ([("", full_head)] if prefix else [])
+        for pre, hd in attempts:
+            url = _canonicalize_and_resolve(pre, hd, nums, polite)
+            if url == "ERROR":
+                return None
+            if url:
+                return url
+    return None
+
+
+def _canonicalize_and_resolve(prefix, head, nums, polite):
+    try:
+        canons = _name_candidates(head)
+    except Exception:
+        return "ERROR"
+    if True:
         for canon in canons:
             if not canon or canon == head:
                 continue
@@ -267,7 +292,7 @@ def _resolve_via_canonicalization(cands, polite):
             try:
                 url = _name(f"{prefix}{canon} {nums}")
             except Exception:
-                return None
+                return "ERROR"
             if polite:
                 time.sleep(polite)
             if url and _adds_part_numeral(head, url):
