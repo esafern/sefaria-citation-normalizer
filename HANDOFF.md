@@ -343,6 +343,49 @@ was wrong (`Sh'mot 19` was labeled the Shemot parasha; corrected to Exodus 19).
 **Treat `data/web_pairs.json` as the primary correctness test from now on.** The
 rule-verified rows should be re-labeled from an independent source or dropped.
 
+## Gap analysis + more sources (2026-11-24)
+
+**Full web run in the background** (`pipeline/web_pairs_raw/full_run.sh`, log
+`full_run.log`): verifies every consistent pair (~15.5k), then scores the resolver,
+writing `pipeline/web_pairs_raw/web_pairs_full.json` and `..._scored.json`. Polite
+serial pace, about a day in total; resumable from caches if interrupted.
+
+**Gap fixes landed** (sample, mangled n=371): correct 122 -> 151, coarser 71 -> 86,
+unresolved 173 -> 129, WRONG 0. Unclosed parens, chapter/paragraph/section-sign
+locators, final s->t (Koheles), `SA`+section, `Hilchot X` -> Sefaria's own
+`Rambam, Hilchot X` alt titles, tz/ts and final-h in the spelling skeleton, retrying the
+full head (Mishna Brura). The guard now also rejects reordered words (`Aruch Hashulchan`
+-> `Shulchan Aruch`) and added numbers (`..., part` -> `..., Part 1`).
+
+**Remaining 129 unresolved, by kind (rough):** 21 name no work (context-only: `Nasso
+16:1`, `Mitzvah # 594`), correct to leave; ~20 ambiguous or label disagrees (`Shmuel
+23:8`); 20 commentator `X to/on/in Y` with Hebrew book names (`Ohr HaChaim to Shemot
+23:2`), fixable with "to"->"on" + a bounded Hebrew->English book-name map; 11 parts of
+multi-part works (`Moreh Nevuchim 3:53:2`); 10 abbreviations with quotes (`B"M`, `B"R`,
+`O"C`, `Yo"D`); 3 Tanchuma by parasha; ~44 knowledge-heavy. Also: Sefaria's only title
+for some Rambam sections is the full compound (`Hilchot Tefilah and Birkat Kohanim`), so
+`Hilchot Tfila` is rejected as "adds words"; allowing a trailing `and ...` clause for
+those would recover several.
+
+**Source survey (for more test data):**
+- *Other Stack Exchange dumps*, same format and code as Mi Yodeya (CC BY-SA, one
+  download each): Hermeneutics (121 MB), Christianity (125 MB), History (93 MB). They
+  cite Talmud/Midrash with Sefaria links in a non-yeshivish register. **Cheapest next win.**
+- *Usenet soc.culture.jewish* (archive.org `usenet-soc.culture`: 750 MB mbox, plus
+  soc.culture.jewish.moderated 666 MB). 1990s-2010s, mostly pre-Sefaria, so **unlabeled**.
+  Good as a mangling stress set and for abstain-rate checks, not for correctness.
+  (`soc.culture.judaism` doesn't exist; it's soc.culture.jewish.)
+- *Reddit* (r/Judaism, r/Jewish via the Arctic Shift research API): links do appear,
+  but Reddit's data terms restrict ML use and the archive is third-party. Gray; ask first.
+- *Quora*: robots.txt explicitly forbids use for ML/AI systems without a license. **Skip.**
+- *Sefaria's Hugging Face datasets*: `Sefaria/en_linker_gold_dataset` (GPL-3.0, 887
+  examples, includes Halachipedia text) marks citation **spans** but not their refs, so it
+  tests span detection (tier 1.5), not resolution. `Sefaria/links` and `database_export`
+  are ref-to-ref links, not citations.
+- *Not yet probed*: Common Crawl WAT outlinks to sefaria.org (labeled pairs at web scale,
+  heavy processing); Sefaria source-sheet outside-text links (many are linker output,
+  so biased); Mi Yodeya posts after the 2024-04 dump (SE API).
+
 ## Remote branch review (2026-11-23), resolved
 
 - `claude/project-onboarding-status-lw5947`: superseded by PR #2 (its PR #1 was closed). **Remote branch deleted.**
