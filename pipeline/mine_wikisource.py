@@ -11,6 +11,7 @@ surface-form misses of present works.
 
 Polite: descriptive UA, maxlag=5, cached, low concurrency, paced.
 """
+import hashlib
 import json, os, re, time, urllib.parse, urllib.request
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
@@ -68,7 +69,9 @@ def page_text(title):
 
 
 def find_refs(body):
-    key = os.path.join(CACHE, "fr_" + str(abs(hash(body))) + ".json")
+    # md5, not the builtin hash(): hash() is randomized per process
+    # (PYTHONHASHSEED), so keys built from it are unfindable on any later run.
+    key = os.path.join(CACHE, "fr_" + hashlib.md5(body.encode()).hexdigest() + ".json")
     if os.path.exists(key):
         return json.load(open(key))
     req = urllib.request.Request(SEF + "/api/find-refs",

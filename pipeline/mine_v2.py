@@ -3,6 +3,7 @@
 full distinct set of English citations Sefaria DETECTS but can't resolve, plus a
 noise-filtered candidate list for LLM labeling. Polite: cached, bounded workers.
 """
+import hashlib
 import json, os, re, sys, time, urllib.parse, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 import threading
@@ -59,7 +60,9 @@ def free_text(sheet):
 
 
 def find_refs(body):
-    key = os.path.join(CACHE, "fr_" + str(abs(hash(body))) + ".json")
+    # md5, not the builtin hash(): hash() is randomized per process
+    # (PYTHONHASHSEED), so keys built from it are unfindable on any later run.
+    key = os.path.join(CACHE, "fr_" + hashlib.md5(body.encode()).hexdigest() + ".json")
     if os.path.exists(key):
         return json.load(open(key))
     req = urllib.request.Request(BASE + "/api/find-refs",

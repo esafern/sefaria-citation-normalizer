@@ -8,6 +8,7 @@ one in build_final.py). Absence + PD classification happen in a later step.
 
 Polite: cached, bounded workers, paced. Writes pipeline/sheet_work_freq.json.
 """
+import hashlib
 import json, os, re, time, urllib.parse, urllib.request
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
@@ -68,7 +69,9 @@ def free_text(sheet):
 
 
 def find_refs(body):
-    key = os.path.join(CACHE, "fr_" + str(abs(hash(body))) + ".json")
+    # md5, not the builtin hash(): hash() is randomized per process
+    # (PYTHONHASHSEED), so keys built from it are unfindable on any later run.
+    key = os.path.join(CACHE, "fr_" + hashlib.md5(body.encode()).hexdigest() + ".json")
     if os.path.exists(key):
         return json.load(open(key))
     req = urllib.request.Request(BASE + "/api/find-refs",

@@ -121,9 +121,11 @@ fixes, so re-score its unresolved/WRONG rows afterwards. Resumable: rerun the sc
   2026-08-18. What remains: 439 old `pipeline/hp_cache/fr_<int>.json` files written under
   the old keys are unreachable. They don't store the text they were computed from, so they
   can't be re-keyed; a re-mine would re-fetch those find-refs results (and should, gently).
-  **Deleted 2026-11-24.** Found while doing so: `pipeline/mine_v2.py` (the source-sheet
-  miner) still keys `find_refs` with `abs(hash(body))`, the same bug, live; its
-  `pipeline/mine_cache/` holds 2,765 `fr_` files that no later run can find. Not yet fixed.
+  **Deleted 2026-11-24.** The same bug was still live in four more miners
+  (`mine_v2.py`, `trawl_big.py`, `mine_sheets_freq.py`, `mine_wikisource.py`): **fixed
+  2026-11-24** (md5 keys), and the 1,259 unreachable `fr_` files in `pipeline/mine_cache/`
+  were deleted. Its 1,506 URL/name-keyed files (`sheet_`, `tag_`, `nm_`) are stable and were
+  kept. No `hash()`-keyed caches remain in `pipeline/`.
 - **Aruch HaShulchan translation outreach.** The translation-availability pass
   (`data/ANALYSIS.md`) found that Joshua Broyde, an independent ML engineer, published a
   complete, free, LLM-generated English translation of all four sections of the Aruch
