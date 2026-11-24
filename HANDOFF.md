@@ -688,6 +688,7 @@ author-specific, by design, to avoid one-author overfitting.
 ## Quick orientation
 
 ```bash
+python3 test_rules_offline.py              # 67 offline regression cases (no network); must pass
 python3 benchmark.py --strict              # correctness vs the verified dataset; must show WRONG 0
 python3 test_shared_dialect.py             # diff-check vs the blog repo's vendored copy
 python3 pipeline/build_final.py            # rebuild the most-wanted list (uses work_frequency.json)
