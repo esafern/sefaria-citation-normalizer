@@ -31,3 +31,6 @@ pipeline/miyodeya_labelable.json
 pipeline/mine_sheets.log
 wiki_cache/
 pipeline/mine_wiki.log
+
+# raw web-pair sources (CC BY-SA dumps, regenerable)
+pipeline/web_pairs_raw/
