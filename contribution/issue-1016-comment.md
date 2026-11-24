@@ -29,6 +29,7 @@ What this changes:
 - Refs that parse today never reach the new code.
 - It never guesses a spelling: it only resolves to a node the correctly-cased input would already reach.
 - Hebrew is untouched.
-- I checked a random 40 of the 1,097 case-variant groups live, and none mapped to different refs.
+- I resolved **every** title in all 1,097 case-variant groups live (2,207 titles): **no group maps to two different refs**. A miscasing that isn't in the title list (`Rosh hashanah`-style) fails today for **1,093 of 1,093** groups.
+- Side finding: 18 of those alt titles start with a lowercase letter (`vaYikra`, `shulchan aruch orach chaim`, `or zarua, Volume II`, ...) and **can never match**, because `__clean_tref` capitalizes the first letter before the lookup. Data-side case fixes can fail even on their own terms; the fallback would make these work too.
 
 Would you accept a PR along these lines? It's roughly 60 lines in `text.py` plus tests in `ref_test.py`. I'm happy to adjust where the retry lives (e.g. inside `__init_tref` next to the term-dict reinit) if you'd prefer that.

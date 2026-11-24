@@ -62,9 +62,20 @@ capital (`HaChaim`, `BeYehuda`) doubles the possible casings, so common forms li
   title already in the library's own title map. It resolves to exactly the node that
   correctly-cased input would reach. Prefixes that fold to more than one node are
   excluded.
-- **No case-only collisions found in practice.** A random sample of 40 of the 1,097
-  case-variant groups (85 titles) was resolved live: every group pointed at the same
-  ref. The ambiguity guard exists for future data, not because of a known collision.
+- **No case-only collisions exist today.** Every title in all 1,097 case-variant groups
+  (2,207 titles) was resolved live on 2026-11-24: **0 groups map to two different
+  refs**. A miscasing absent from the title list fails today for **1,093 of 1,093**
+  groups. The ambiguity guard exists for future data, not because of a known collision.
+  (Script and results: `contribution/evidence/casefold_groups_check.py`,
+  `casefold_groups_results.json`.)
+- **It also rescues dead alt titles.** 18 stored alt titles begin with a lowercase
+  letter (`vaYikra`, `shulchan aruch orach chaim`, `or zarua, Volume II`, ...) and can
+  never match today, because `__clean_tref` capitalizes the first letter first. The
+  case-folded lookup reaches them.
+- **Separate bug, not fixed here:** 24 titles containing a hyphen (`I Divrei Ha-Yamim`,
+  `Metzudat David on I Divrei Ha-Yamim`, ...) can never match, because `__init_tref`
+  splits the whole tref on `-` (the range separator) before the title lookup. Worth
+  its own issue.
 - **Hebrew is untouched**: `lang == "he"` returns early, same as `__clean_tref`.
 - **Cost:** a single dict built once per lang (about 67k entries) and reset with the
   other derived caches. The retry happens only on parse failure, and each step of the
