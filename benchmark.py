@@ -40,15 +40,39 @@ def ref_tokens(s):
     return re.sub(r"[.:_,\s]+", " ", s).strip().split(" ")
 
 
+def _covers(got, want):
+    """Does ref `got` contain ref `want`? Prefix-ancestry, plus two Sefaria
+    addressing cases: a bare daf covers either amud ("Shabbat 88" covers
+    "Shabbat 88a"), and a final range covers a point inside it ("Leviticus
+    13:12-13" covers "Leviticus 13:12"; "Bava Batra 15" covers "15a:11-15b:11")."""
+    if want[:len(got)] == got:
+        return True
+    if len(got) > len(want) or not got:
+        return False
+    head, last, w = got[:-1], got[-1], want[len(got) - 1]
+    if want[:len(head)] != head:
+        return False
+    w0 = w.split("-")[0]
+    if re.fullmatch(r"\d+", last) and re.fullmatch(rf"{last}[ab]", w0):
+        return True                                   # daf covers amud
+    m = re.fullmatch(r"(\d+)([ab]?)-(\d+)([ab]?)", last)
+    n = re.fullmatch(r"(\d+)([ab]?)", w0)
+    if m and n:
+        lo = (int(m.group(1)), m.group(2) or "a")
+        hi = (int(m.group(3)), m.group(4) or "b")
+        return lo <= (int(n.group(1)), n.group(2) or "a") <= hi
+    return False
+
+
 def classify(url, label):
     if not url:
         return "unresolved"
     got, want = ref_tokens(url), ref_tokens(label)
     if got == want:
         return "correct"
-    if want[:len(got)] == got:
+    if _covers(got, want):
         return "coarser"
-    if got[:len(want)] == want:
+    if _covers(want, got):
         return "finer"
     return "WRONG"
 

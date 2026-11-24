@@ -103,7 +103,15 @@ def candidates(citation):
         if nxt == stripped:
             break
         stripped = nxt
-    stripped = re.sub(_STRIP_TAIL, "", stripped).strip()
+    # a trailing Hebrew year is a date, not a locator ("Mishpatim 5776")
+    stripped = re.sub(r"\s+5[78]\d\d\s*$", "", stripped)
+    tail_stripped = re.sub(_STRIP_TAIL, "", stripped).strip()
+    # Only accept the tail strip if a locator survives it: "Megillah 15b 4"
+    # (footnote 4) -> "Megillah 15b" is fine, but "Yalkut Shimoni 1046" ->
+    # "Yalkut Shimoni" throws away the only number and lets Sefaria pick a
+    # default section (it maps the bare title to Yalkut Shimoni on Torah).
+    if re.search(r"\d", tail_stripped) or not re.search(r"\d", stripped):
+        stripped = tail_stripped
     if stripped != base:
         add(_numbers_to_colon(stripped))
 

@@ -158,9 +158,22 @@ def _words_match(a, b):
     return SequenceMatcher(None, a, b).ratio() >= 0.8
 
 
+# What a canonical title may ADD that the citation lacks: connectors only.
+# (The citation may contain any _DROPPABLE word the title lacks, but a title
+# that adds "Introduction" or "Volume" has picked a section.)
+_CANON_MAY_ADD = {"of", "the", "on", "to", "and", "in", "a", "talmud", "bavli", "sefer", "seifer"}
+
+
 def _distinctive(words):
-    return [k for w in words if (k := _word_key(w)) and w.lower() not in _DROPPABLE
-            and k not in _DROPPABLE]
+    out = []
+    for w in words:
+        if w in ("I", "II", "III", "IV"):   # I Samuel vs II Samuel: meaningful
+            out.append(w.lower())
+            continue
+        k = _word_key(w)
+        if k and w.lower() not in _DROPPABLE and k not in _DROPPABLE:
+            out.append(k)
+    return out
 
 
 def _matches_any(k, keys):
@@ -175,10 +188,14 @@ def _keeps_all_words(source, canon):
        dropped: "Kaf Hachaim Palagi" -> "Kaf HaChayim on Shulchan Arukh" drops
        the author; "Tosfot Avodah Zarah" -> "Avodah Zarah" drops the
        commentary layer; "of Rambam" -> "of Rasag" swaps the author), and
-    2. canon's first distinctive word comes from `source` (nothing prefixed:
-       "Pirkei Avot, Commentary on" -> "German Commentary on Pirkei Avot" is
-       a different work about the cited one). Expansions after the cited
-       name are fine ("Kaf Hachaim" -> "Kaf HaChayim on Shulchan Arukh, ...").
+    2. every distinctive word of `canon` has a match in `source` (nothing
+       added). An added word means Sefaria's suggestion picked a section or
+       sub-work the writer never named: "Moreh Nevuchim" -> "Guide for the
+       Perplexed, Prefatory Remarks"; "Aruch Hashulchan 529:4" -> "Arukh
+       HaShulchan, Yoreh De'ah"; "Shmuel" -> "I Samuel"; "Pirkei Avot,
+       Commentary on" -> "German Commentary on Pirkei Avot". Choosing one is
+       guessing, so the citation is left unlinked instead.
+    So canonicalization may change spelling and casing, never meaning.
     """
     src = _distinctive(_split_words(source))
     can = _distinctive(_split_words(canon))
@@ -186,7 +203,24 @@ def _keeps_all_words(source, canon):
         return False
     if not all(_matches_any(k, can) for k in src):
         return False
-    return _matches_any(can[0], src)
+    src_all = [_word_key(w) for w in _split_words(source)]
+    added = [w for w in _split_words(canon)
+             if w.lower() not in _CANON_MAY_ADD
+             and not _matches_any(_word_key(w) if w not in ("I", "II", "III", "IV") else w.lower(),
+                                  src_all + src)]
+    return not added
+
+
+_ROMAN_PART = re.compile(r"(?:^|[\s_,])(I{1,3}|IV)(?=[\s_,.]|$)")
+
+
+def _adds_part_numeral(source, url):
+    """Sefaria alt titles sometimes pick an edition/part for you: "Noda
+    B'Yehudah, Yoreh Deah" resolves to "Noda BiYehudah I, ..." (Mahadura
+    Kamma). If the resolved title carries a part numeral the citation never
+    wrote, the part was guessed."""
+    title = urllib.parse.unquote(url.split("sefaria.org/", 1)[-1]).split(".")[0]
+    return bool(_ROMAN_PART.search(title)) and not _ROMAN_PART.search(" " + source + " ")
 
 
 def _resolve_via_canonicalization(cands, polite):
@@ -236,6 +270,8 @@ def _resolve_via_canonicalization(cands, polite):
                 return None
             if polite:
                 time.sleep(polite)
+            if url and _adds_part_numeral(head, url):
+                continue
             if url:
                 return url
     return None

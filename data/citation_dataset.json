@@ -670,8 +670,9 @@
  {
   "raw": "Sh'mot 19",
   "my_canonical": "Sh'mot",
-  "sefaria_ref": "Exodus 1:1-6:1",
-  "source": "rule-verified"
+  "sefaria_ref": "Exodus 19",
+  "source": "rule-verified",
+  "label_note": "2026-11-24: corrected from the Shemot parasha (Exodus 1:1-6:1); 'Sh'mot 19' is chapter 19. The old label came from the trailing-number-strip rule (circular)."
  },
  {
   "raw": "Shenei Luchot HaBerit, Torah Shebikhtav, Eikev,",

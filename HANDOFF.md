@@ -301,6 +301,48 @@ The Rambam-section and wrong-locator cases are separate rule bugs.
   the right answer.
 
 
+## Web-mined test set + second mislink pass (2026-11-24)
+
+**New labeled data, no hand labeling:** `pipeline/web_pairs.py` mines link-text -> href
+pairs wherever a writer hyperlinked a citation to Sefaria (link text = the citation as
+written, href = the right answer). Sources (all CC BY-SA, bulk/API, no crawling):
+- Mi Yodeya data dump (archive.org, 2024-04): 19,406 pairs from 10,938 posts
+- English Wikipedia (1,506 articles): 8,420 pairs; Hebrew Wikipedia (714): 495 (Hebrew, kept for later)
+- Halachipedia: 1 link only, so it stays unlabeled.
+A consistency filter keeps a pair only if every number in the link text appears in the
+href (drops `writes` -> a verse, `Shabbat 105b` -> Joshua 24:31) and it names more than a
+generic word. ~15.7k pairs pass; `verify 500` sampled 500 per source, checked each gold
+ref live -> `data/web_pairs.json` (1,000 pairs: 371 mangled, 629 clean, `where` URL per
+row for attribution). Raw dumps and caches are in `pipeline/web_pairs_raw/` (gitignored).
+
+**What it found:** the 2026-11-23 guard still let Sefaria's suggestions *add* words:
+`Moreh Nevuchim` -> *Guide, Prefatory Remarks*; `Aruch Hashulchan 529:4` -> the Yoreh De'ah
+volume; `Shmuel` -> *I* Samuel; `Samuel 1 13:1` -> *Rashbam on Exodus*. Fixed:
+- `_keeps_all_words` is now two-way: a suggestion may change spelling/casing but may
+  not add a meaningful word (only connectors and `Sefer`, per `_CANON_MAY_ADD`).
+- `_adds_part_numeral`: reject a result whose title gained an I/II/III the citation
+  didn't write (`Noda B'Yehuda, YD` -> Noda BiYehudah **I**).
+- rules: strip a trailing number only if another number survives (`Yalkut Shimoni 1046`
+  no longer becomes bare `Yalkut Shimoni` -> *on Torah*); strip trailing Hebrew years.
+- `benchmark.classify` now treats a daf as covering its amudim and a range as covering
+  points inside it (`Shabbat 88a-b` -> *Shabbat 88* vs a link to 88a is "coarser").
+- `web_pairs.py eval` adds `label_noise`: same place, differing only by a commentary
+  layer the writer never named (`Kidushin 81a` linked to *Ritva on Kiddushin*).
+
+**Results (2026-11-24):**
+- web mangled (n=371): **0 WRONG** (was 29 at first run), 122 correct, 71 coarser,
+  5 label noise, 173 unresolved.
+- web clean (n=629): 10 WRONG, all Sefaria's own reading of already-valid text where
+  the writer linked something else (`OC 426` linked to the Tur/Bach; `Bereshit 26:5`
+  linked to Chizkuni). These are label disagreements, not normalization errors.
+- benchmark: 93 correct, 5 coarser, **0 WRONG**, 41 unresolved (`--strict` passes).
+
+**Benchmark caveat:** 32 of the 139 rows are `source: rule-verified`, labeled by our own
+rules, so they are circular: the benchmark rewards a rule for agreeing with itself. One
+was wrong (`Sh'mot 19` was labeled the Shemot parasha; corrected to Exodus 19).
+**Treat `data/web_pairs.json` as the primary correctness test from now on.** The
+rule-verified rows should be re-labeled from an independent source or dropped.
+
 ## Remote branch review (2026-11-23), resolved
 
 - `claude/project-onboarding-status-lw5947`: superseded by PR #2 (its PR #1 was closed). **Remote branch deleted.**
