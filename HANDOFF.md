@@ -17,13 +17,139 @@ This is complementary to Sefaria's own ML linker (`find-refs`), not a replacemen
 targets the dialect shorthand the linker's training data doesn't cover, and runs
 deterministically with no model at link time.
 
+## Current status (2026-11-24) — start here
+
+Everything below this section is history, newest first further down. For *why* things
+are the way they are, also read [`LESSONS.md`](LESSONS.md).
+
+### Where it stands
+
+| Measure | Result |
+|---|---|
+| Benchmark (`python3 benchmark.py --strict`, 139 rows) | 95 correct, 5 coarser, **0 wrong**, 39 unresolved |
+| Web test set, mangled (`data/web_pairs.json`, n=616) | 225 correct, 148 coarser, 1 finer, 15 label noise, **5 wrong**, 222 unresolved |
+| Web test set, clean (n=972) | Sefaria already handles them as written; 16 links disagree with Sefaria's reading (writer context) |
+
+The 5 mangled "wrong": 2 are bare-section citations (decision 1 below), 3 are cases where
+the writer's text and link disagree (typo'd verse, "with Rashi", English vs Hebrew verse
+numbering). None is a resolver error. **Treat the web test set as the primary
+correctness test**; the benchmark has 32 circular rule-labeled rows (loose end 8).
+
+### What exists now (built 2026-11-23/24)
+
+- `benchmark.py`: scores correct / coarser / finer / WRONG / unresolved; `--strict` exits 1
+  on any WRONG. A daf covers its amudim; a range covers points in it.
+- `pipeline/web_pairs.py`: free labeled test data from link text -> Sefaria href.
+  Subcommands `miyodeya`, `miyodeya_api`, `stackexchange <sites>`, `wikipedia`, `verify N`,
+  `eval`. ~35k raw pairs, ~20k usable after the consistency filter; 1,588-pair sample
+  committed (`data/web_pairs.json`, scored copy `data/web_pairs_scored.json`). CC BY-SA,
+  `where` URL per row for attribution.
+- `normalizer/resolve.py`: `_keeps_all_words` guard on the canonicalization passes (no
+  dropped/added meaningful words, same order, no added numbers), `_adds_part_numeral`,
+  `_hilchot_is_ambiguous`, consonant-skeleton spelling match.
+- `normalizer/rules.py`: ~15 new dialect rules (book names, abbreviations, locators,
+  Hilchot -> Rambam, ...), each traced to failures in the web data. **Not yet in
+  `shared_dialect.py`**, so the blog repo doesn't have them (loose end 5).
+- Sefaria case-sensitivity research: full 1,097-group check (0 divergent; 1,093/1,093
+  miscasings fail; 18 lowercase + 24 hyphenated alt titles unreachable). Comment for issue
+  #1016: `contribution/issue-1016-comment.md`; draft PR: `SEFARIA-CASE-SENSITIVITY-PR.md`.
+  **Neither posted.**
+- Branches: `0ctxcz` merged, `pd-index-submissions` updated and merged, `lw5947` deleted.
+
+### Running in the background
+
+`pipeline/web_pairs_raw/full_run.sh` (log `full_run.log`): verify done for all 15,365 pairs
+from the original dump + Wikipedia; eval in progress (~1,075/15,365 at 2026-11-24 19:50),
+roughly a day to go. Writes `pipeline/web_pairs_raw/web_pairs_full_scored.json`. It does
+**not** include the Mi Yodeya 2024+ or other SE pairs, and may have started before the last
+fixes, so re-score its unresolved/WRONG rows afterwards. Resumable: rerun the script.
+
+### Git
+
+`next-work` is ahead of `main`; `main` is ahead of `origin/main`. **Nothing is pushed.**
+
+### Loose ends
+
+**Decisions (owner):**
+1. **Bare section citations** (`YD 289`, `O.C. 122:1`, no work named). Current rule: assume
+   the Shulchan Arukh. Measured over ~28k mined pairs (477 cases): 87% Shulchan Arukh, 13%
+   other works (Tur, Arukh HaShulchan, Mishnah Berurah, Beit Yosef, responsa). Keep the
+   convention (~13% mislinks on this pattern) or leave bare sections unlinked.
+2. **Reddit** as a source (r/Judaism via the Arctic Shift research archive): useful
+   links, but Reddit's data terms restrict ML use.
+3. **When to post** the #1016 comment (and offer the PR); also whether to file a
+   separate issue for hyphenated titles being unreachable.
+4. **Repo license.** There is none; the committed web pairs are CC BY-SA.
+
+**Blocked on the blog repo (on hold by request):**
+5. Port the guard + new rules to the blog's `resolver.py`; move the book-name map and
+   quoted abbreviations into `shared_dialect.py` (both copies, keep them byte-identical).
+6. Audit the blog's 35 step-6 gained links against correct answers; fix its
+   43-citation coverage regression.
+
+**Data / evaluation:**
+7. When the full run finishes, rerun verify+eval including the 2024+ and SE pairs.
+8. 32 of the 139 benchmark rows are `source: rule-verified` (circular). Re-label
+   independently or drop.
+9. Common Crawl via its columnar Parquet index filtered by domain (thetorah.com,
+   myjewishlearning.com, etzion.org.il, ou.org), since the CDX index server timed out.
+10. Sample runs and the background run share `name_cache.json`; concurrent writers can
+    overwrite each other's additions (wasted requests, not wrong results).
+
+**Resolver:**
+11. Remaining 222 unresolved mangled: parts of multi-part works (`Moreh Nevuchim
+    3:53:2` -> Part 3), parasha-based Midrash, more abbreviations, Sefaria's MT section
+    titles. ~20% name no work and should stay unlinked.
+12. Push `main` and `next-work`; delete the two merged remote branches.
+
+**13. Older items, not touched in the 2026-11-23/24 sessions:**
+- **Halachipedia review dashboard.** Scope agreed 2026-08-18: a local review tool for the
+  ~8,789 Halachipedia citations that still don't resolve (`pipeline/hp_unresolved.json`),
+  grouped by work name ("head") so a reviewer labels the most-cited works first. Look and
+  feel copied from `~/work/yad-malachi/yad-malachi-pipeline` (stdlib HTTP server,
+  append-only JSONL decisions, vanilla JS frontend). Not built. The head-extraction
+  prototype lived in a temp scratchpad and is gone, and it measured the top 200 heads
+  covering ~16% of citations (not the ~40% first estimated). Why it still matters:
+  Halachipedia is the target dialect but has **no** Sefaria links (1 in the whole site),
+  so it can't be labeled the free way the web pairs were. Hand-labeling the top heads
+  is the only route to Halachipedia-specific correctness numbers. **Do first:**
+  re-resolve `hp_unresolved.json` with today's resolver. Many heads (`Kaf Hachaim`,
+  `Sefer Hachinuch`, `Mishna brurah`, Hilchot X) now resolve, which shrinks the queue.
+- **`mine_wide.py` cache-key item: the code part is done.** Python's built-in
+  `hash()` is randomized per process, so cache files keyed by it can't be found on a later
+  run. `mine_wide.py` always used md5; `halachipedia_mine.py` was switched to md5 on
+  2026-08-18. What remains: 439 old `pipeline/hp_cache/fr_<int>.json` files written under
+  the old keys are unreachable. They don't store the text they were computed from, so they
+  can't be re-keyed; a re-mine would re-fetch those find-refs results (and should, gently).
+  Safe to delete them once a re-mine is planned.
+- **Aruch HaShulchan translation outreach.** The translation-availability pass
+  (`data/ANALYSIS.md`) found that Joshua Broyde, an independent ML engineer, published a
+  complete, free, LLM-generated English translation of all four sections of the Aruch
+  HaShulchan in May 2026, made from Sefaria's own Hebrew, with code and data on GitHub. The
+  Aruch HaShulchan is cited heavily and has no Sefaria English. That makes it a much
+  cheaper path than commissioning a translation, though it's an AI first draft, not a
+  licensed edition. The open item is a conversation, with him and/or Sefaria, about
+  license, quality review and hosting. Owner's call, held with the other "contribute
+  when polished" outreach.
+- **Tier 2 (an LLM layer for the knowledge-heavy misses).** The 2026-08-18 design plan
+  said: build the evaluation harness first, try "tier 1.5" (matching against Sefaria's
+  65k-title list) next, and decide on mislink tolerance before writing any model code.
+  **The harness now largely exists** (correctness scoring, label-noise handling, ~20k
+  labeled web pairs; the 222 unresolved mangled web pairs are a ready-made tier-2 eval
+  set). Still missing: an absent-works mislink trap (citations of works Sefaria doesn't
+  have, from `data/sefaria_most_wanted.json`, which must stay unlinked) and decision 1's
+  sibling: whether tier 2 may ever pick a section the text doesn't name. Recommended
+  shape is unchanged: the model *selects* from Sefaria's own title candidates, never
+  free-generates a title, and every pick goes through the same `_keeps_all_words` guard.
+
 ## Two things this repo produces
 
-1. **The normalizer** (`normalizer/`) — the tier-1 deterministic layer. As of 2026-11-23:
-   **95/139 correct, 8 coarser/finer, 0 wrong, 36 unresolved** (`python3 benchmark.py`, which
-   now scores correctness, not just "resolved"). Before the 2026-11-23 mislink fix it reported
-   116/139 "resolved", 7 of which were wrong links. Up from ~43% at
-   this file's last full rewrite — see "Progress so far" below for what moved it). The
+1. **The normalizer** (`normalizer/`) — the tier-1 deterministic layer. As of 2026-11-24:
+   benchmark **95/139 correct, 5 coarser, 0 wrong, 39 unresolved**; web test set (616
+   mangled real-world citations) **225 correct, 149 coarser/finer, 5 wrong (none a resolver
+   error), 222 unresolved**. See "Current status" just below. Before 2026-11-23 the
+   benchmark reported 116/139 "resolved", 7 of which were wrong links. Up from ~43% at
+   this file's last full rewrite. The
    remainder is irreducibly knowledge-based (English-translated titles, alternate names,
    Hebrew) and is the job of an LLM/SLM — that's tier 2, and the dataset feeds it.
 2. **A licensing-priority list for Sefaria** (`data/SEFARIA-MOST-WANTED.md`) — a byproduct
@@ -452,7 +578,8 @@ those would recover several.
      65k-title list) and re-measure the residue — currently un-scoped work, not yet started.
    - **(b)** Build the benchmark-harness upgrade (three-outcome scoring, absent-works
      mislink-trap, specificity check, Mi Yodeya held-out eval) as the go/no-go instrument —
-     currently un-scoped work, not yet started.
+     **largely done 2026-11-23/24** (correctness scoring + web pairs); the absent-works trap is
+     still missing. See "Current status", loose end 13.
    - **(c)** Decide whether "unlinked, never mislinked" stays inviolable for tier 2, or a
      bounded mislink rate is acceptable behind confidence gates — the owner's call, not made.
    - **(d)** Blog-repo coverage regression from step 6: 43 citations linked by the old
@@ -462,7 +589,8 @@ those would recover several.
      needing a real spelling correction rather than reformatting (`"Kesubos"`,
      `"Mesechtas Berochos"`, `"Mesechtas Menochos"`) — needs a mislink-risk decision, not a
      guess.
-   - Also queued from the design pass, not yet done: fix `pipeline/mine_wide.py`'s HP-corpus
+   - (2026-11-24: the code half of this is done; see "Current status", loose end 13.)
+     Also queued from the design pass, not yet done: fix `pipeline/mine_wide.py`'s HP-corpus
      re-mine to reuse the now-fixed cache-key scheme (see "Progress so far" above) before any
      re-mine of the ~8,748 unresolved strings for tier-2 use as a triage/eval set (they're
      unlabeled — not training signal; see design plan for the triage-by-head-frequency
