@@ -2527,7 +2527,7 @@
   "sefaria_ref": "Genesis 29:25",
   "clean": false,
   "ours": "https://www.sefaria.org/Rashi_on_Genesis.29.25",
-  "outcome": "WRONG"
+  "outcome": "label_noise"
  },
  {
   "raw": "Bereshit 3:19",

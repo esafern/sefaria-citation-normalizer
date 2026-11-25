@@ -222,7 +222,11 @@ def _words_match(a, b):
     if a == b:
         return True
     if min(len(a), len(b)) <= 3:
-        return False
+        # short words must match exactly, except for a silent h after a vowel
+        # ("Ohr" = "Or", both for the same Hebrew word)
+        def quiet(w):
+            return re.sub(r"(?<=[aeiou])h(?=[^aeiou]|$)", "", w)
+        return quiet(a) == quiet(b)
     ca, _ = _translit(a)
     cb, _ = _translit(b)
     if ca == cb and _vowel_groups(a) == _vowel_groups(b):

@@ -1,94 +1,149 @@
-# sefaria-citation-normalizer
+# citenorm: Torah citations to Sefaria links
 
-Normalize messy, transliterated **Anglo-Orthodox Torah citations** to canonical
-Sefaria references. Complementary to Sefaria's own ML linker (find-refs): it
-targets the shorthand and dialect variation that the linker's data doesn't
-resolve, and it runs deterministically with no model at link-time.
+[![tests](https://github.com/esafern/sefaria-citation-normalizer/actions/workflows/tests.yml/badge.svg)](https://github.com/esafern/sefaria-citation-normalizer/actions/workflows/tests.yml)
 
-## How it works: propose → verify → cache
+Turns citations of Jewish texts, as people actually write them in English, into links to
+[Sefaria](https://www.sefaria.org). When it can't be sure, it leaves the citation unlinked
+rather than guessing.
 
 ```
-raw citation → rules.candidates()  (generate plausible normalized forms)
-            → Sefaria /api/name     (which candidate is a real reference?)
-            → cache                 (deterministic, offline-replayable)
+Berachos 5a                          -> https://www.sefaria.org/Berakhot.5a
+Hilchos Eidus 4:1                    -> https://www.sefaria.org/Mishneh_Torah,_Testimony.4.1
+Ohr HaChaim to Shemot 23:2           -> https://www.sefaria.org/Or_HaChaim_on_Exodus.23.2
+Pirke De-Rabbi Eliezer, chapter 24   -> https://www.sefaria.org/Pirkei_DeRabbi_Eliezer.24
+Shmuel A 9:2                         -> https://www.sefaria.org/I_Samuel.9.2
+Shmuel 23:8                          -> (unlinked: I or II Samuel?)
+Kaf HaHayim 92:8                     -> (unlinked: Orach Chayim or Yoreh De'ah?)
 ```
 
-The rules never have to be exactly right. Over-generation is cheap and Sefaria
-is the authority — a wrong candidate simply doesn't resolve, so the system fails
-safe (unlinked, never mislinked). This also sidesteps the fact that Sefaria's
-canonical naming is unpredictable (sometimes transliteration `HaEmunot veHaDeot`,
-sometimes the English translation `Duties of the Heart`): you can't compute the
-target, so you propose and let Sefaria confirm.
+It's aimed at the shorthand of English Torah writing (Ashkenazi and academic
+transliterations, abbreviations like `S"A O"C`, `B"M`, `Hil.`, Hebrew book names,
+"chapter 2, ¶ 3") that Sefaria's own linker often detects but can't resolve. It complements
+that linker; it doesn't replace it.
+
+*Not developed by or affiliated with Sefaria. It uses Sefaria's public API.*
+
+## How it works: propose, then verify
+
+```
+citation -> rules propose many plausible normalized forms
+         -> Sefaria's /api/name says which one is a real reference
+         -> checks reject any answer that changed the meaning
+         -> cache (so reruns are offline and deterministic)
+```
+
+The rules don't need to know Sefaria's canonical titles (which are sometimes
+transliterations, sometimes English translations); they over-generate, and Sefaria
+confirms. A bad candidate simply doesn't resolve. The risky part is **choosing**, so
+every answer that came from Sefaria's suggestions or title list passes checks that reject:
+
+- dropped words (`Kaf Hachaim Palagi` is not *Kaf HaChayim on Shulchan Arukh*)
+- added words (`Moreh Nevuchim` is not *Guide for the Perplexed, Prefatory Remarks*)
+- reordered words (*Arukh HaShulchan* is not *Shulchan Arukh*)
+- an added number or part (`Noda B'Yehuda, YD 81`: which edition?)
+- a Talmud side (a or b) or a Shulchan Arukh section Sefaria filled in on its own
+- look-alike spellings that are different words (`Challah` is not `Kallah`, `Deot` is not
+  `Deut`, `Kilayim` is not `Kelim`)
+
+## Install and use
+
+Python 3.10+, standard library only.
+
+```bash
+pip install git+https://github.com/esafern/sefaria-citation-normalizer
+citenorm "Berachos 5a" "SA OC 271:1"
+citenorm < citations.txt              # one per line; prints citation<TAB>url (or -)
+citenorm --json --conventions strict "YD 289"
+```
 
 ```python
 from citenorm.resolve import resolve, Cache
-resolve("ArtScroll Berachos 57b, note 38", cache=Cache("cache.json"))
-# -> https://www.sefaria.org/Berakhot.57b
+
+cache = Cache("cache.json")
+resolve("ArtScroll Berachos 57b, note 38", cache=cache)   # 'https://www.sefaria.org/Berakhot.57b'
+resolve("Shmuel 23:8", cache=cache)                       # None (ambiguous)
+cache.save()
 ```
 
-## What the rules cover — and don't (measured, not guessed)
+### Conventions: `common` (default) or `strict`
 
-Built from a corpus mined off Sefaria source sheets: `find-refs` over 289 sheets
-surfaced ~1,100 distinct English citations it *detected but could not resolve*;
-after LLM labeling and Sefaria verification, **139 verified `raw → ref` pairs**
-(`data/citation_dataset.json`; `python3 benchmark.py` reports `/139`).
+Three citation patterns are ambiguous, and Sefaria resolves them by convention:
 
-The deterministic general rules resolve **107/139 (76%)** of that corpus (2026-08-18;
-up from ~43% at this repo's start — see `docs/notes/HANDOFF.md` for what moved it). The families:
+| Pattern | Sefaria's reading | Measured on ~19,000 real citations |
+|---|---|---|
+| A Shulchan Arukh section with no work named (`YD 289`) | the Shulchan Arukh | 87% of writers meant that; 13% meant the Tur, Arukh HaShulchan, Mishnah Berurah, Beit Yosef or a responsum |
+| A tractate with chapter:mishnah (`Kilayim 9:3`) | the Mishnah | some writers meant the Yerushalmi or a Mishneh Torah section |
+| A 2-3 letter abbreviation (`Ber 9`) | Sefaria's alias (Berakhot) | `Ber.` also means Bereshit in academic writing |
 
-| family | rule-able |
-|---|---|
-| Ashkenazi / academic endings (`-os/-oth → -ot`, `Shabbos → Shabbat`) | yes |
-| edition / structural prefix strip (`ArtScroll`, `Meseches`, `Gemara`) | yes |
-| Rambam section → Mishneh Torah English (bounded ~40-section map) | yes |
-| `Pirke → Pirkei`, `d'Rebbi → DeRabbi`, roman numerals, note-tail strip | yes |
-| wrapping-paren unwrap (`Talmud (Chagiga 13b:14)`), casing/spacing fixes | yes |
-| live tractate-name canonicalization via Sefaria's own `/api/name` | yes |
+`conventions="common"` follows Sefaria; `"strict"` leaves these unlinked.
 
-The remaining ~24% is mostly irreducibly knowledge-based: English-translated
-titles (`Book of Faith and Opinions → The Book of Beliefs and Opinions`), alternate
-names (`Book of Jasher → Sefer HaYashar`), Hebrew, and a long tail of one-off
-spellings — plus a smaller, real gap in bare tractate names with no locator
-(`Kesubos`, `Rosh Ha-Shanah` alone) that the live-canonicalization pass doesn't
-yet reach (open item, see `docs/notes/HANDOFF.md`). The knowledge-based share is the job of
-an LLM (at small scale) or a fine-tuned SLM / Sefaria's find-refs (at large
-scale) — see `docs/notes/HANDOFF.md`'s tier-2 design notes.
+### Being polite to Sefaria
 
-So this repo is deliberately **tier 1** — the deterministic ceiling — and the
-dataset is what feeds tier 2.
+Requests identify themselves (`User-Agent: citenorm/<version> (+this repo)`), wait 0.2 s
+between calls by default (0.3 s on the command line), and every answer is cached; Sefaria's
+title list is downloaded once to `~/.cache/citenorm/` (override with `CITENORM_CACHE`). For
+large batches, keep the default pacing and keep the cache.
 
-## A denser corpus: Halachipedia, and a gift for Sefaria
+## How accurate is it?
 
-Source sheets saturated (~85% noise). The pipeline was re-pointed at
-[Halachipedia](https://www.halachipedia.com), whose footnotes are dense, nearly
-pure halachic citations. Mining the **full site (640 substantial pages)** yielded
-**38,195 citation detections → 7,878 distinct works**. Two findings:
+Measured against citations whose correct answer was chosen by their writers: about 19,000
+links to Sefaria collected from Mi Yodeya, English Wikipedia and other Stack Exchange sites
+([the dataset](docs/DATASET.md); method and numbers in [docs/EVALUATION.md](docs/EVALUATION.md)).
+On a 1,588-pair sample, for the 616 citations Sefaria does **not** resolve as written:
 
-1. The deterministic rules generalize **poorly** across genre — ~2% hit on this
-   acharonim/responsa corpus vs ~43% on the sheet Talmud/Tanakh. Honest evidence
-   that citation normalization overfits not just to dialect but to *canon*.
-2. The reason most don't resolve is that **Sefaria doesn't have the work** — not
-   a normalization failure (only ~40% of detections link). Ranking the
-   genuinely-absent works by how often Halachipedia cites them produces a
-   **licensing-priority list for Sefaria**:
-   [`data/SEFARIA-MOST-WANTED.md`](data/SEFARIA-MOST-WANTED.md) — 71 works,
-   6,771 citations, tiered into public-domain (digitize) vs modern (license).
-   R. Ovadia Yosef's corpus (Yalkut Yosef, Chazon Ovadyah, Yabia Omer, Yechave
-   Daat, Halacha Brurah) is the single biggest gap (~⅓ of all demand). Built with
-   the same propose→verify discipline: each "absent" work is re-checked through
-   the normalizer's own candidate spellings so present-but-transliterated works
-   aren't falsely listed. See `docs/notes/CORPUS-COMPARISON.md` for the full-vs-250-page diff.
+| correct | coarser (e.g. the chapter, not the verse) | wrong | unlinked |
+|---|---|---|---|
+| 256 (42%) | 156 (25%) | 7 (1.1%) | 179 (29%) |
+
+(+18 where the writer's link disagrees with their own text.) Of the 7 wrong: 3 follow one of
+the conventions above, 4 are writer-side typos or link mismatches. The original 139-citation
+benchmark (`benchmark.py`): 97 correct, 3 coarser or finer, **0 wrong**.
+
+What stays unlinked is mostly genuinely ambiguous (no work named, `Shmuel` without I/II), or
+needs knowledge the rules don't have (English translations of titles, rare works).
+
+## Also in this repo
+
+- **[What Sefaria is missing](data/SEFARIA-MOST-WANTED.md):** 71 works Halachipedia cites
+  that Sefaria doesn't have, ranked by 6,771 citations from 640 Halachipedia pages and split
+  into public-domain (digitize) vs modern (license). R. Ovadia Yosef's works are the single
+  biggest gap.
+- **Upstream bug reports** found along the way ([docs/upstream/](docs/upstream/)): `Ref()`
+  title matching is case-sensitive (Sefaria-Project
+  [#1016](https://github.com/Sefaria/Sefaria-Project/issues/1016)); titles containing a hyphen
+  can never resolve ([#4150](https://github.com/Sefaria/Sefaria-Project/issues/4150)); and some
+  title-data errors.
+- **Research notes:** [docs/FINDINGS.md](docs/FINDINGS.md) (cross-corpus findings),
+  [docs/notes/LESSONS.md](docs/notes/LESSONS.md) (what building this taught), and the working
+  notes in `docs/notes/`.
 
 ## Layout
 
-- `citenorm/rules.py` — candidate generators (the general families).
-- `citenorm/resolve.py` — propose → `/api/name` → cache.
-- `data/citation_dataset.json` — verified `raw → Sefaria ref` pairs.
-- `pipeline/` — the corpus miner (`find-refs` failures) and verify/cluster tools.
-- `docs/notes/HANDOFF.md` ("Current status") and `docs/notes/LESSONS.md` — where things stand and why.
-- `benchmark.py` — scores the rules against the dataset: correct / coarser / finer / WRONG / unresolved (`--strict` fails on any WRONG).
+```
+citenorm/            the package: rules.py (candidates), resolve.py (verify + checks), cli.py
+benchmark.py         scores the original 139-citation set (--strict fails on any wrong link)
+test_rules_offline.py  100 offline regression cases, each from a real failure (run in CI)
+pipeline/            mining and evaluation: web_pairs.py (collect, verify, score), export_dataset.py,
+                     the Halachipedia and source-sheet miners
+data/                the datasets and analyses (see data/README.md for sources and licenses)
+docs/                evaluation, dataset card, licensing, upstream reports, notes
+```
 
-## Provenance & scope
+## Development
 
-Public data only (Sefaria source sheets). Deliberately not derived from any
-single author, to avoid the overfitting that a one-author rule set produces.
+```bash
+python3 test_rules_offline.py         # offline, fast; must pass
+python3 benchmark.py --strict         # networked; must show WRONG 0
+python3 pipeline/web_pairs.py eval    # networked; scores data/web_pairs.json
+```
+
+Every rule should be checked against the whole evaluation set, not just the case that
+prompted it: three of our own fixes caused new wrong links that only the broad data caught
+([LESSONS.md](docs/notes/LESSONS.md)).
+
+## License
+
+Code: to be decided, MIT or GPL-3.0 (see [docs/LICENSING.md](docs/LICENSING.md)). Data:
+CC BY-SA 4.0 where it comes from CC BY-SA sources (see [data/README.md](data/README.md)).
+
+Sefaria is a trademark of Sefaria. This project is not developed by Sefaria.

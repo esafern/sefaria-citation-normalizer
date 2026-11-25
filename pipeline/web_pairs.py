@@ -360,7 +360,7 @@ def _layer_noise(raw, url, gold):
     from citenorm.resolve import _distinctive, _split_words, _matches_any
     ours = " ".join(ref_tokens(url))
     g = " ".join(ref_tokens(gold))
-    raw_words = _distinctive(_split_words(raw))
+    raw_words = _distinctive(_split_words(raw.replace('"', "").replace("\u201d", "")))  # Rash"i = Rashi
     # Same location, different work: if every word of OUR title is in the text
     # and our title names more of the text than gold's does, the writer named a
     # work and linked its base text ('Midrash Sechel Tov to Genesis 26:34' linked

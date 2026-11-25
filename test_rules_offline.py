@@ -67,6 +67,8 @@ GUARD = [
     ("Yevamot", "Talmud Yevamot", True, "leading corpus word may be added"),
     ("Kaf Hachaim", "Kaf HaChayim", True, "Chaim = Chayim"),
     ("Rabbeinu Bachya", "Rabbeinu Bahya", True, "academic h for chet"),
+    ("Ohr HaChaim on Exodus", "Or HaChaim on Exodus", True, "silent h: Ohr = Or"),
+    ("Yad", "Yah", False, "short words still need to match"),
 ]
 
 # (raw, string that MUST be among candidates, or None) and (raw, string that must NOT be)
