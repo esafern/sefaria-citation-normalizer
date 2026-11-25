@@ -90,3 +90,14 @@ alongside `HANDOFF.md` ("Current status"). Each lesson names the incident that t
     (`Genesis 1:1 (SP)` labeled "Genesis 1") scored coarse answers as "correct". Relabeling
     to what the text actually says turned 7 apparent successes into visible "coarser"
     results, which were then fixed (precise-first candidate order, verse-part letters).
+
+17. **Check what users will actually see, in a real browser.** The demo looked right in its
+    tests but a rendered screenshot showed a link in the browser's default blue (unreadable in
+    dark mode), quoted examples that read badly, and, worse, a one-hour cache header on the page
+    itself, which made Chrome show a stale copy after an update. The visitor-facing page is now
+    served `no-cache`; only images are cached. Test screenshots must use a fresh browser profile.
+
+18. **Respect another project's process when contributing to it.** The Girsa demo has an operator
+    role, a stability-first rule and a go that only the reviewer can give. An outside session
+    prepares a self-contained archive, checks and a deploy guide, and hands off; it doesn't send
+    messages under a role it doesn't hold, or touch that repository.

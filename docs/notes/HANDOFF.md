@@ -17,7 +17,67 @@ This is complementary to Sefaria's own ML linker (`find-refs`), not a replacemen
 targets the dialect shorthand the linker's training data doesn't cover, and runs
 deterministically with no model at link time.
 
-## Current status (2026-11-24) — start here
+## Current status (2026-11-25): public-release polish, start here
+
+The repo was polished for public use and a Powered by Sefaria listing (plan:
+`docs/notes/POWERED-BY-SEFARIA.md`). All on `main`; `next-work` is **frozen** at 53d166a because
+Sefaria-Project issue #4150 links to evidence files on that branch. Don't move or delete it.
+
+**Done 2026-11-25:**
+- `main` fast-forwarded to all of next-work's work; work continues on `main`.
+- **Tree cleanup:** internal notes moved to `docs/notes/` (this file, LESSONS, INTEGRATION-PLAN,
+  CORPUS-COMPARISON, the Sefaria guidelines review, the Powered-by plan); upstream bug and PR
+  drafts plus evidence to `docs/upstream/`; unsent emails moved out of git to `private/`
+  (gitignored; they remain in git history from before). References to the private blog repo and
+  its author scrubbed. The shared-dialect twin check now compares code only (docstrings may
+  differ), and finds the twin via `DIALECT_TWIN` or `private/dialect_twin_path`.
+- **Package `citenorm`** (renamed from `normalizer`): `pyproject.toml`, the `citenorm` CLI,
+  version 0.1.0, standard library only, Python >= 3.10. Identifying User-Agent on every Sefaria
+  request, 0.2 s default pacing, caches in `~/.cache/citenorm/` (`CITENORM_CACHE`).
+- **Decisions 1, 5, 6 are now a setting:** `resolve(..., conventions="common"|"strict")`, CLI
+  `--conventions`. Default `common` (Sefaria's conventions); `strict` leaves bare sections,
+  tractate + chapter:mishnah and 2-3 letter aliases unlinked. The owner's decision is now
+  only which default to ship.
+- **CI:** GitHub Actions runs the 102 offline tests on Python 3.10/3.12/3.13 on every push.
+- **Docs:** README rewritten (examples verified live), `docs/EVALUATION.md`, `docs/DATASET.md`
+  (the Hugging Face card), `docs/LICENSING.md` (MIT vs GPL-3.0), `data/README.md` (source and
+  license per file), `CHANGELOG.md`.
+- **Dataset export:** `pipeline/export_dataset.py` writes `dist/hf-dataset/` (19,227 pairs,
+  CC BY-SA 4.0, card included). Not uploaded: needs a Hugging Face login.
+- **Demo for girsa.net:** `demo/` (stdlib WSGI app + page), `demo/build.py` ->
+  `dist/citenorm-demo-<commit>.tar.gz`, `demo/check_demo.py`, `demo/DEPLOY.md` (for
+  girsa-demo-operator, including the proposed footer-only home-page link). Checked from the
+  extracted archive with a fresh data folder: 7/7. Not deployed; it goes to girsa-demo-operator,
+  whose rules let only the reviewer give the go.
+- Small fixes found on the way: "Ohr" = "Or" in the short-word rule; the page is served
+  `no-cache` (a cached page hid an update during testing).
+
+**Waiting on the owner:**
+1. **Code license:** MIT or GPL-3.0 (`docs/LICENSING.md`; recommendation MIT). Then add
+   `LICENSE`, set `license` in `pyproject.toml`, update the README, and **tag v0.1.0** (held
+   until the license exists, so the first release is usable).
+2. **Default conventions:** keep `common`, or ship `strict`.
+3. **Hugging Face upload:** `hf auth login`, then
+   `hf upload <user>/<name> dist/hf-dataset . --repo-type dataset`; then put the link in the
+   README and `docs/DATASET.md`.
+4. **Demo deploy:** paste the handoff message to girsa-demo-operator (in this session's
+   transcript, and below); give the go there for the app and, separately, for the footer link.
+5. **Powered by Sefaria form:** once the demo is live, apply via Developer Settings, using the
+   draft answers in `docs/notes/POWERED-BY-SEFARIA.md` (live link: the demo URL).
+6. The open items from 2026-11-24 below still stand (emails to send, the #1016 comment's raw
+   HTML, the blog port).
+
+Handoff message for girsa-demo-operator (paste into its pane):
+
+> REQUEST from the citenorm project (not a Girsa role): please host the citation-linker demo
+> at girsa.net/cite/. Archive: ~/work/sefaria-citation-normalizer/dist/citenorm-demo-<commit>.tar.gz
+> (newest); instructions, checks and rollback: demo/DEPLOY.md inside it. It's a separate
+> standard-library Python app (no change to app.girsa.net); it calls www.sefaria.org. Section 6
+> proposes a footer-only link on the home page, after the copyright and in the footer's muted
+> color, so it doesn't draw attention from the video. That's a visible change: needs the
+> reviewer's go, and girsa-ui-steward may want to see the CSS line.
+
+## Status as of 2026-11-24 (superseded above)
 
 Everything below this section is history, newest first further down. For *why* things
 are the way they are, also read [`LESSONS.md`](LESSONS.md).

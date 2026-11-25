@@ -51,6 +51,14 @@ Gaps a reviewer or a first-time visitor would hit:
 - **Open policy decisions 1, 5 and 6** (bare sections, Mishnah convention, short aliases) are
   currently hard-wired.
 
+## Progress (2026-11-25)
+
+Done: 1 (merge), 2 (data licenses, data README; the code license awaits the owner's choice), 3
+(README), 4 (cleanup), 5 (User-Agent, pacing, caching documented), 6 (demo built and checked;
+deploy is with girsa-demo-operator), 7 (package, CLI, CI), 8 (`conventions` setting), 9 (dataset
+export and card; upload needs a Hugging Face login), 10 (CHANGELOG; tag v0.1.0 held until the
+license exists). See `docs/notes/HANDOFF.md`, "Current status".
+
 ## Polish plan, in priority order
 
 **Before listing (must):**
