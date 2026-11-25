@@ -70,9 +70,9 @@ Sefaria-Project issue #4150 links to evidence files on that branch. Don't move o
 **Waiting on the owner:**
 1. ~~Code license~~: **MIT**, decided 2026-11-25; LICENSE added, v0.1.0 tagged and released.
 2. ~~Default conventions~~: **ship `common`** (decided 2026-11-25). `strict` stays available.
-3. **Hugging Face upload:** `hf auth login`, then
-   `hf upload <user>/<name> dist/hf-dataset . --repo-type dataset`; then put the link in the
-   README and `docs/DATASET.md`.
+3. ~~Hugging Face upload~~: **published 2026-11-25**,
+   https://huggingface.co/datasets/esafern/torah-citations-to-sefaria (revision 12906d3e), tagged
+   `dataset-v1` at 9b9bde6d; linked from the README, `docs/DATASET.md` and `data/README.md`.
 4. **Demo deploy:** paste the handoff message to girsa-demo-operator (in this session's
    transcript, and below); give the go there for the app and, separately, for the footer link.
 5. **Powered by Sefaria form:** once the demo is live, apply via Developer Settings, using the

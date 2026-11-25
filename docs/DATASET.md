@@ -1,9 +1,11 @@
 # The citation-to-Sefaria dataset
 
 About 19,000 real citations of Jewish texts, as people wrote them, each paired with the
-Sefaria reference they linked it to. Built for evaluating citation normalizers and linkers;
-published on Hugging Face (see the README for the link once it's up) and rebuilt by
-`pipeline/export_dataset.py`. The section between the markers below is the dataset card.
+Sefaria reference they linked it to. Built for evaluating citation normalizers and linkers.
+
+**Published:** https://huggingface.co/datasets/esafern/torah-citations-to-sefaria (v1,
+2026-11-25, revision `12906d3e`; git tag `dataset-v1` marks the commit that built it).
+Rebuilt by `pipeline/export_dataset.py`. The section between the markers below is the dataset card.
 
 <!-- HF-CARD-START -->
 ---

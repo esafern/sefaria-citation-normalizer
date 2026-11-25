@@ -90,7 +90,8 @@ large batches, keep the default pacing and keep the cache.
 
 Measured against citations whose correct answer was chosen by their writers: about 19,000
 links to Sefaria collected from Mi Yodeya, English Wikipedia and other Stack Exchange sites
-([the dataset](docs/DATASET.md); method and numbers in [docs/EVALUATION.md](docs/EVALUATION.md)).
+([the dataset on Hugging Face](https://huggingface.co/datasets/esafern/torah-citations-to-sefaria),
+[its card](docs/DATASET.md); method and numbers in [docs/EVALUATION.md](docs/EVALUATION.md)).
 On a 1,588-pair sample, for the 616 citations Sefaria does **not** resolve as written:
 
 | correct | coarser (e.g. the chapter, not the verse) | wrong | unlinked |

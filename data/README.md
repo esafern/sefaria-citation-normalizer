@@ -13,8 +13,8 @@ Sefaria was used to *verify* references through its public API.
 | `citation_dataset.json` | 139 pairs: the original benchmark (`benchmark.py`). `raw`, `sefaria_ref`, sometimes `my_canonical`, `source`, `label_note`. | Citations that Sefaria's linker detected but could not resolve on public Sefaria source sheets; labeled with an LLM and verified against Sefaria. 32 rows were labeled by an early version of this tool's own rules; all were hand-reviewed in 2026-11 (`source` says so). | Short bibliographic strings and our labels: CC BY-SA 4.0. |
 | `miyodeya_pairs.json` | An earlier, smaller set of Mi Yodeya pairs, labeled with an LLM and verified against Sefaria. | Mi Yodeya (Judaism Stack Exchange) | CC BY-SA 4.0 |
 
-The full mined set (about 19,000 verified pairs) is published separately as a dataset;
-see `docs/DATASET.md`.
+The full mined set (19,227 verified pairs) is published on Hugging Face:
+https://huggingface.co/datasets/esafern/torah-citations-to-sefaria (card: `docs/DATASET.md`).
 
 **Known noise:** some links don't match their text, e.g. a writer cites "Rashi to Devarim
 21:27" but links Numbers 21:27, or links the commentary they were reading rather than the
