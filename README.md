@@ -21,6 +21,8 @@ transliterations, abbreviations like `S"A O"C`, `B"M`, `Hil.`, Hebrew book names
 "chapter 2, ¶ 3") that Sefaria's own linker often detects but can't resolve. It complements
 that linker; it doesn't replace it.
 
+<a href="https://developers.sefaria.org/docs/powered-by-sefaria"><picture><source media="(prefers-color-scheme: dark)" srcset="demo/static/powered-by-sefaria-blue.png"><img src="demo/static/powered-by-sefaria-white.png" alt="Powered by Sefaria" width="120"></picture></a>
+
 *Not developed by or affiliated with Sefaria. It uses Sefaria's public API.*
 
 ## How it works: propose, then verify
