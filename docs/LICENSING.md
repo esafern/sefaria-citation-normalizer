@@ -6,7 +6,11 @@ Fixed by the sources: the web-mined pairs come from CC BY-SA sources (Stack Exch
 Wikipedia), so the datasets are **CC BY-SA 4.0**, attributed per row. Details per file:
 `data/README.md`.
 
-## Code: MIT or GPL-3.0? (open decision)
+## Code: MIT (decided 2026-11-25)
+
+The owner chose MIT, as recommended below. The comparison is kept for the record.
+
+### The comparison
 
 | | MIT | GPL-3.0 |
 |---|---|---|
@@ -22,5 +26,5 @@ this to fix their citations, and MIT removes every obstacle to that. It's still 
 with Sefaria's GPL. Choose GPL-3.0 if keeping all improvements open matters more to you
 than reach.
 
-Once chosen: add `LICENSE` at the root, set `license` in `pyproject.toml`, and update the
-README's License section.
+Done: `LICENSE` at the root, `license = "MIT"` in `pyproject.toml`, the README's License
+section, and a copy of LICENSE in the demo archive.

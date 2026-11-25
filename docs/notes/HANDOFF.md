@@ -53,10 +53,8 @@ Sefaria-Project issue #4150 links to evidence files on that branch. Don't move o
   `no-cache` (a cached page hid an update during testing).
 
 **Waiting on the owner:**
-1. **Code license:** MIT or GPL-3.0 (`docs/LICENSING.md`; recommendation MIT). Then add
-   `LICENSE`, set `license` in `pyproject.toml`, update the README, and **tag v0.1.0** (held
-   until the license exists, so the first release is usable).
-2. **Default conventions:** keep `common`, or ship `strict`.
+1. ~~Code license~~: **MIT**, decided 2026-11-25; LICENSE added, v0.1.0 tagged and released.
+2. ~~Default conventions~~: **ship `common`** (decided 2026-11-25). `strict` stays available.
 3. **Hugging Face upload:** `hf auth login`, then
    `hf upload <user>/<name> dist/hf-dataset . --repo-type dataset`; then put the link in the
    README and `docs/DATASET.md`.

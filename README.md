@@ -143,7 +143,7 @@ prompted it: three of our own fixes caused new wrong links that only the broad d
 
 ## License
 
-Code: to be decided, MIT or GPL-3.0 (see [docs/LICENSING.md](docs/LICENSING.md)). Data:
-CC BY-SA 4.0 where it comes from CC BY-SA sources (see [data/README.md](data/README.md)).
+Code: [MIT](LICENSE). Data: CC BY-SA 4.0 where it comes from CC BY-SA sources (see
+[data/README.md](data/README.md)). Why MIT: [docs/LICENSING.md](docs/LICENSING.md).
 
 Sefaria is a trademark of Sefaria. This project is not developed by Sefaria.

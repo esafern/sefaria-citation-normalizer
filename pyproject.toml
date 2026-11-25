@@ -8,11 +8,14 @@ dynamic = ["version"]
 description = "Normalize messy Anglo-Orthodox Torah citations to Sefaria references: propose candidates, let Sefaria verify, never guess."
 readme = "README.md"
 requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{ name = "Eric Safern" }]
 keywords = ["sefaria", "torah", "talmud", "citations", "jewish-texts", "normalization"]
 classifiers = [
   "Programming Language :: Python :: 3",
   "Topic :: Text Processing :: Linguistic",
+  "Operating System :: OS Independent",
   "Intended Audience :: Developers",
   "Intended Audience :: Science/Research",
 ]

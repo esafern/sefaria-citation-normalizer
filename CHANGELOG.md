@@ -2,7 +2,8 @@
 
 ## 0.1.0 (2026-11-25)
 
-First public release as a package.
+First public release as a package. MIT license (code); CC BY-SA 4.0 (web-mined data).
+Default `conventions="common"`, matching Sefaria's own readings.
 
 - `citenorm` package and command-line tool (Python 3.10+, standard library only).
 - Propose-then-verify resolution against Sefaria's `/api/name`, with checks that reject any

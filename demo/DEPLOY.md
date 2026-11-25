@@ -23,7 +23,7 @@ https://github.com/esafern/sefaria-citation-normalizer (`demo/`, plus the `citen
 contains one folder, `citenorm-demo/`:
 
 ```
-passenger_wsgi.py   app.py   check_demo.py   DEPLOY.md   VERSION
+passenger_wsgi.py   app.py   check_demo.py   DEPLOY.md   VERSION   LICENSE (MIT)
 static/   index.html, powered-by-sefaria-white.png, powered-by-sefaria-blue.png
 citenorm/ __init__.py, resolve.py, rules.py, shared_dialect.py, cli.py
 ```
