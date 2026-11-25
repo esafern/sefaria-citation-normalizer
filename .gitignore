@@ -41,3 +41,8 @@ citenorm/.titles_cache.json
 
 # local-only drafts (unsent emails etc.), never published
 private/
+
+# build output
+*.egg-info/
+build/
+dist/
