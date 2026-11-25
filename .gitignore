@@ -37,7 +37,7 @@ pipeline/web_pairs_raw/
 docs/upstream/evidence/sefaria_titles_snapshot.json
 docs/upstream/evidence/casefold_groups_cache.json
 docs/upstream/evidence/casefold_run.log
-normalizer/.titles_cache.json
+citenorm/.titles_cache.json
 
 # local-only drafts (unsent emails etc.), never published
 private/

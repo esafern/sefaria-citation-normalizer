@@ -357,7 +357,7 @@ def _layer_noise(raw, url, gold):
     the commentary they were reading), not a mislink. If the raw DOES name the
     commentator ('Tosfot Avodah Zarah 11a') and we dropped it, it stays WRONG."""
     from benchmark import ref_tokens
-    from normalizer.resolve import _distinctive, _split_words, _matches_any
+    from citenorm.resolve import _distinctive, _split_words, _matches_any
     ours = " ".join(ref_tokens(url))
     g = " ".join(ref_tokens(gold))
     raw_words = _distinctive(_split_words(raw))
@@ -393,7 +393,7 @@ def _layer_noise(raw, url, gold):
 def evaluate():
     sys.path.insert(0, ROOT)
     from benchmark import classify
-    from normalizer.resolve import resolve, Cache
+    from citenorm.resolve import resolve, Cache
     # One resolver cache per output file: concurrent runs (a background full run and
     # a sample run) sharing one cache overwrite each other's entries on save, and a
     # cache filled by older code silently returns stale answers.

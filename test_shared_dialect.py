@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Drift check: the CODE of normalizer/shared_dialect.py must stay identical to
+"""Drift check: the CODE of citenorm/shared_dialect.py must stay identical to
 its vendored twin in a second, private consumer. The module docstrings may
 differ, so each copy can describe itself.
 
@@ -14,7 +14,7 @@ import os
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-MINE = os.path.join(HERE, "normalizer", "shared_dialect.py")
+MINE = os.path.join(HERE, "citenorm", "shared_dialect.py")
 
 
 def twin_path():

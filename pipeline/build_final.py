@@ -10,7 +10,7 @@ markdown brief for Sefaria, tiered into public-domain (digitize) vs modern
 import json, os, re, sys
 import presence
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from normalizer import rules
+from citenorm import rules
 
 _GEMARA = re.compile(r"^(?:Gemara|Talmud|Masechet|Masekhet|Mishnah|Mishna|Sefer)\s+", re.I)
 _SUBPART = re.compile(r'\s+(?:M"?Z|E"?A|A"?A|S"?K)\b.*$')  # Pri Megadim sub-commentaries etc.

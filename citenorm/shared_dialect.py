@@ -29,7 +29,7 @@ SECTIONS = [
 # Keyed letters-only (re.sub(r"[^a-z]", "", ...)) so punctuation/apostrophe
 # style ("Kr.Sh.", "KrSh", "M'lachim", "Y'sodei") never matters at lookup
 # time. Reconciled 2026-08-05 from two independently-grown lists (this
-# repo's normalizer/rules.py and the blog's pipeline/sefaria_linker/
+# repo's citenorm/rules.py and the blog's pipeline/sefaria_linker/
 # dialect.py) — keep the union, don't drop either side's spelling variants.
 RAMBAM_SECTIONS = {
     # Kings and Wars
@@ -81,7 +81,7 @@ TRACTATES = [
 
 # Tractate-name spelling/transliteration variants -> Sefaria's canonical
 # English tractate name. Reconciled 2026-08-05 from three independently-
-# grown sources: this repo's normalizer/rules.py _SPELLING list, and the
+# grown sources: this repo's citenorm/rules.py _SPELLING list, and the
 # blog's pipeline/sefaria_linker/offline.py TALMUD and TALMUD_TRACT dicts
 # (which had *each other* out of sync too — Brachos/Rosh HaShana/Baba Batra
 # were in one but not the other). A bare tractate name usually resolves via

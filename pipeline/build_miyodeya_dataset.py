@@ -13,7 +13,7 @@ Usage: python3 build_miyodeya_dataset.py [LIMIT]   (default: first 200 filtered)
 """
 import json, os, re, sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from normalizer.resolve import resolve, Cache
+from citenorm.resolve import resolve, Cache
 
 HERE = os.path.dirname(__file__)
 LIMIT = int(sys.argv[1]) if len(sys.argv) > 1 else 200

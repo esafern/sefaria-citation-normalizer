@@ -21,7 +21,7 @@ sometimes the English translation `Duties of the Heart`): you can't compute the
 target, so you propose and let Sefaria confirm.
 
 ```python
-from normalizer.resolve import resolve, Cache
+from citenorm.resolve import resolve, Cache
 resolve("ArtScroll Berachos 57b, note 38", cache=Cache("cache.json"))
 # -> https://www.sefaria.org/Berakhot.57b
 ```
@@ -81,8 +81,8 @@ pure halachic citations. Mining the **full site (640 substantial pages)** yielde
 
 ## Layout
 
-- `normalizer/rules.py` — candidate generators (the general families).
-- `normalizer/resolve.py` — propose → `/api/name` → cache.
+- `citenorm/rules.py` — candidate generators (the general families).
+- `citenorm/resolve.py` — propose → `/api/name` → cache.
 - `data/citation_dataset.json` — verified `raw → Sefaria ref` pairs.
 - `pipeline/` — the corpus miner (`find-refs` failures) and verify/cluster tools.
 - `docs/notes/HANDOFF.md` ("Current status") and `docs/notes/LESSONS.md` — where things stand and why.

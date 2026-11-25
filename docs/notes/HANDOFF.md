@@ -44,10 +44,10 @@ correctness test**; the benchmark has 32 circular rule-labeled rows (loose end 8
   `eval`. ~35k raw pairs, ~20k usable after the consistency filter; 1,588-pair sample
   committed (`data/web_pairs.json`, scored copy `data/web_pairs_scored.json`). CC BY-SA,
   `where` URL per row for attribution.
-- `normalizer/resolve.py`: `_keeps_all_words` guard on the canonicalization passes (no
+- `citenorm/resolve.py`: `_keeps_all_words` guard on the canonicalization passes (no
   dropped/added meaningful words, same order, no added numbers), `_adds_part_numeral`,
   `_hilchot_is_ambiguous`, consonant-skeleton spelling match.
-- `normalizer/rules.py`: ~15 new dialect rules (book names, abbreviations, locators,
+- `citenorm/rules.py`: ~15 new dialect rules (book names, abbreviations, locators,
   Hilchot -> Rambam, ...), each traced to failures in the web data. **Not yet in
   `shared_dialect.py`**, so the blog repo doesn't have them (loose end 5).
 - Sefaria case-sensitivity research: full 1,097-group check (0 divergent; 1,093/1,093
@@ -59,8 +59,8 @@ correctness test**; the benchmark has 32 circular rule-labeled rows (loose end 8
 ### Update, 2026-11-24 evening
 
 - **Vocabulary-anchored pass ("tier 1.5") landed** (`_resolve_via_vocabulary` in
-  `normalizer/resolve.py`). It matches the work name against Sefaria's full 67k title list
-  (`normalizer/.titles_cache.json`, fetched once, gitignored) with the same guard, then
+  `citenorm/resolve.py`). It matches the work name against Sefaria's full 67k title list
+  (`citenorm/.titles_cache.json`, fetched once, gitignored) with the same guard, then
   verifies live. Sefaria's autocomplete ranking often omits the right title
   (`Rambam, Hilchot Eidus` never surfaced `Rambam, Hilchot Edut`).
 - **Latent mislink fixed:** "hilchot"/"laws" were droppable, so `Hilchot Shabbat 2:3`
@@ -228,7 +228,7 @@ A fresh sample eval on current code (`sample_eval.log`) is running.
 
 - **2026-08-18**: rule coverage moved from 101/139 to **107/139 (72% -> 76%)**, fresh and
   live-verified (not a cache artifact — the prior number partly rested on stale local cache;
-  clearing it exposed one masked gap, see below). Four fixes in `normalizer/rules.py` /
+  clearing it exposed one masked gap, see below). Four fixes in `citenorm/rules.py` /
   `shared_dialect.py`: bare `"Talmud"` was missing from the prefix-strip list; wrapping
   parens around a whole citation (`"Talmud (Chagiga 13b:14)"`, `"Rambam (Hilkhot Brakhot
   1:16)"`) broke every downstream rule (now unwrapped-and-recursed through the full rule
@@ -339,14 +339,14 @@ blog repo but document Sefaria issues — candidates to move here.
 
 **They had drifted** (found 2026-08-05: an abbreviation fix had to be made twice by hand,
 in two different rule syntaxes, because nothing shared code between the repos). **Fixed
-2026-08-05**: `normalizer/shared_dialect.py` is now vendored byte-identically into both
+2026-08-05**: `citenorm/shared_dialect.py` is now vendored byte-identically into both
 repos (`SECTIONS`, `RAMBAM_SECTIONS`, `PREFIXES`, `TRACTATES`, `TRACTATE_ALIASES`), each
 repo's local candidate-generation/URL-construction logic delegates to it, and
 `test_shared_dialect.py` in each repo fails loudly the moment the two copies diverge
 (skips, doesn't fail, if the sibling repo isn't checked out).
 
 Tractate-name spelling (Brachot/Berakhot, Psachim/Pesachim, ...) is deliberately **not**
-handled by a hand-typed list in the propose-verify path (`normalizer/resolve.py` here, the
+handled by a hand-typed list in the propose-verify path (`citenorm/resolve.py` here, the
 blog's `resolver.py`) — such a list can never keep up with every transliteration. Both now
 canonicalize the bare tractate word live via Sefaria's own `/api/name` completions instead.
 `benchmark.py` went from 79/139 to **101/139** as a result. `TRACTATE_ALIASES` still exists
@@ -390,7 +390,7 @@ the blog repo's `HANDOFF.md`, "Correction (2026-08-16)" note.
   Yisrael*, *Guide for the Perplexed Introduction*, *Midrash Sh'muel*,
   *Midrash of Ben Sira*, *Mishnah Bikkurim Rabbi Arthur Green*, *Tzava'at
   Harivash*). Added
-  `_resolve_bare_via_canonicalization` to `normalizer/resolve.py` (third
+  `_resolve_bare_via_canonicalization` to `citenorm/resolve.py` (third
   fallback pass, after the locator-bearing canonicalization): for a candidate
   with no numeric locator, ask `/api/name` for ref completions and accept one
   only if every word of its canonical `key` is already a normalized whole-word

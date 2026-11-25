@@ -1,0 +1,19 @@
+name: tests
+# Offline only: no requests to Sefaria from CI. The networked benchmark
+# (benchmark.py, pipeline/web_pairs.py eval) is run by hand, gently.
+on: [push, pull_request]
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.9", "3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install .
+      - run: citenorm --version
+      - run: python test_rules_offline.py
+      - run: python test_shared_dialect.py   # skips without a configured twin

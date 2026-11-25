@@ -41,7 +41,7 @@ Gaps a reviewer or a first-time visitor would hit:
   CORPUS-COMPARISON, the bug and PR drafts. `contribution/` holds unsent email drafts, and they're
   public now.
 - **Private references:** INTEGRATION-PLAN.md and HANDOFF.md name the private blog repo and "Rav
-  Shvat's own writing". `normalizer/resolve.py`, `shared_dialect.py` and `test_shared_dialect.py`
+  Shvat's own writing". `citenorm/resolve.py`, `shared_dialect.py` and `test_shared_dialect.py`
   refer to that repo. `pipeline/mine_miyodeya.py` has a hard-coded scratch path from an old session.
 - **No live link.** The form wants one, and staff check whether it's live.
 - **API etiquette:** requests go out with Python's default user agent. Polite pacing and caching

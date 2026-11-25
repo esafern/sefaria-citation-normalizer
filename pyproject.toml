@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "citenorm"
+dynamic = ["version"]
+description = "Normalize messy Anglo-Orthodox Torah citations to Sefaria references: propose candidates, let Sefaria verify, never guess."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Eric Safern" }]
+keywords = ["sefaria", "torah", "talmud", "citations", "jewish-texts", "normalization"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Text Processing :: Linguistic",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+]
+dependencies = []   # standard library only at run time
+
+[project.optional-dependencies]
+mining = ["py7zr"]  # only for pipeline/web_pairs.py's Stack Exchange dump step
+
+[project.scripts]
+citenorm = "citenorm.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/esafern/sefaria-citation-normalizer"
+Issues = "https://github.com/esafern/sefaria-citation-normalizer/issues"
+
+[tool.setuptools]
+packages = ["citenorm"]
+
+[tool.setuptools.dynamic]
+version = { attr = "citenorm.__version__" }

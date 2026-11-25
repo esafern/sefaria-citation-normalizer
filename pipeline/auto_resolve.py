@@ -12,7 +12,7 @@ import threading
 
 HERE = os.path.dirname(__file__)
 sys.path.insert(0, os.path.join(HERE, ".."))
-from normalizer import rules
+from citenorm import rules
 
 BASE = "https://www.sefaria.org"
 cands = json.load(open(os.path.join(HERE, "v3_candidates.json")))

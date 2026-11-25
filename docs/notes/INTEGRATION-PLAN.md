@@ -1,7 +1,7 @@
 # Integration Plan: Shared Dialect Layer (B+E)
 
 **Status: done, 2026-08-05.** Steps 1–5 below are implemented and verified in both repos:
-`normalizer/shared_dialect.py` (this repo) and `pipeline/sefaria_linker/shared_dialect.py`
+`citenorm/shared_dialect.py` (this repo) and `pipeline/sefaria_linker/shared_dialect.py`
 (blog repo) are byte-identical, checked by `test_shared_dialect.py` in each repo. Both
 repos' local dialect logic delegates to it. **Step 6 done 2026-08-18, mixed result.** Literal
 before/after diff: baseline `9d98ada` vs. current HEAD, offline linker over all 138 real
@@ -35,7 +35,7 @@ Tosefta/Mishnah/Mishna candidates, because those prefixes' `PREFIXES` rewrite on
 normalizes a comma — same word in and out — so their "already renamed" and "still raw"
 forms were textually identical and always got excluded. Fixed with a `for`/`else`: only
 apply the raw-form skip-check when no recognized (already-renamed) prefix was found. Ported
-this fixed pass into `normalizer/resolve.py`, which didn't have any canonicalization
+this fixed pass into `citenorm/resolve.py`, which didn't have any canonicalization
 fallback before. Result: `benchmark.py` went from 79/139 to **101/139** (56% -> 72%),
 confirmed live, not a caching artifact. `TRACTATE_ALIASES` stays in `shared_dialect.py` for
 exactly one reason: `offline.py`'s no-network path has no oracle to call, so it's the one
@@ -49,7 +49,7 @@ right read before touching either repo's dialect layer._
 
 Two independently-maintained citation linkers exist:
 
-1. **This repo** (`sefaria-citation-normalizer/normalizer/rules.py` + `resolve.py`) —
+1. **This repo** (`sefaria-citation-normalizer/citenorm/rules.py` + `resolve.py`) —
    propose-candidates-then-verify-via-Sefaria's-`/api/name`. Never constructs a URL
    itself; needs network or cache to produce a link. General-purpose, no per-work
    whitelist, the intended eventual Sefaria contribution.
@@ -116,7 +116,7 @@ risk; revisit if this repo ever gets a stable release/tagging discipline worth p
    - abbreviation expansion including the `Av.Z.` fix and its regex-`\b` lesson
      (see "Bugs already fixed" below — don't reintroduce them)
 2. **Reconcile, don't just pick one.** Read both current files in full:
-   - `~/work/sefaria-citation-normalizer/normalizer/rules.py`
+   - `~/work/sefaria-citation-normalizer/citenorm/rules.py`
    - `the blog repo's pipeline/sefaria_linker/dialect.py`
    They've diverged in real, non-trivial ways (different RAMBAM_SECTIONS entries,
    different structural-prefix lists, different composition strategies for how
@@ -148,7 +148,7 @@ risk; revisit if this repo ever gets a stable release/tagging discipline worth p
 ## Bugs already fixed today — don't reintroduce them
 
 If reconciling by hand rather than starting from the current `rules.py`/`dialect.py`,
-preserve these (both already fixed and pushed in this repo's `normalizer/rules.py` as
+preserve these (both already fixed and pushed in this repo's `citenorm/rules.py` as
 of commit `413770c`, and in the blog's `offline.py`/`dialect.py` as of commit `9d98ada`):
 
 - **Regex `\b`-after-optional-char bug**: `r"\bAv\.?\s*Z\.?\b"` backtracks

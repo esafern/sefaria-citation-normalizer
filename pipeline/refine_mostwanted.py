@@ -9,7 +9,7 @@ present, not wanted. What survives is genuinely absent (modern responsa, etc.).
 """
 import json, os, sys, time, urllib.parse, urllib.request
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from normalizer import rules
+from citenorm import rules
 
 HERE = os.path.dirname(__file__)
 mw = json.load(open(os.path.join(HERE, "..", "data", "sefaria_most_wanted.json")))

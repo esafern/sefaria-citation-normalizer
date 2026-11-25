@@ -4,16 +4,16 @@
 Every case here came from a real failure found with the web-pairs test set or the
 benchmark (2026-11-23/24). Two kinds:
 
-  GUARD:      normalizer.resolve._keeps_all_words(source, canonical_title) must accept
+  GUARD:      citenorm.resolve._keeps_all_words(source, canonical_title) must accept
               same-name-different-spelling and reject anything that changes meaning.
-  CANDIDATES: normalizer.rules.candidates(raw) must (or must not) propose a string.
+  CANDIDATES: citenorm.rules.candidates(raw) must (or must not) propose a string.
 
 Run: python3 test_rules_offline.py   (exit 1 on any failure)
 """
 import sys
 
-from normalizer.resolve import _keeps_all_words, _book_group, _guessed_something
-from normalizer.rules import candidates
+from citenorm.resolve import _keeps_all_words, _book_group, _guessed_something, _convention_used
+from citenorm.rules import candidates
 from benchmark import classify
 
 # (source, canonical title, should accept?, why)
@@ -121,6 +121,16 @@ GUESSED = [
     ("Kaf Hachaim OC 103:5", "https://www.sefaria.org/Kaf_HaChayim_on_Shulchan_Arukh,_Orach_Chayim.103.5", False),
     ("Magen Avraham 189:1", "https://www.sefaria.org/Magen_Avraham.189.1", False),
 ]
+# which ambiguity convention a result relies on ("strict" mode declines these)
+CONVENTION = [
+    ("YD 289", "https://www.sefaria.org/Shulchan_Arukh,_Yoreh_De'ah.289", "bare_section"),
+    ("Shulchan Aruch YD 289", "https://www.sefaria.org/Shulchan_Arukh,_Yoreh_De'ah.289", None),
+    ("Kilayim 9:3", "https://www.sefaria.org/Mishnah_Kilayim.9.3", "mishnah"),
+    ("Mishnah Kilayim 9:3", "https://www.sefaria.org/Mishnah_Kilayim.9.3", None),
+    ("Ber 9", "https://www.sefaria.org/Berakhot.9", "short_alias"),
+    ('B"M 59b', "https://www.sefaria.org/Bava_Metzia.59b", None),
+    ("Berakhot 9a", "https://www.sefaria.org/Berakhot.9a", None),
+]
 # scoring
 SCORE = [
     ("https://www.sefaria.org/Shabbat.88", "Shabbat 88a", "coarser"),
@@ -150,12 +160,15 @@ def main():
     for raw, url, want in GUESSED:
         if _guessed_something(raw, url) != want:
             fails.append(f"GUESSED {raw!r} -> {url}: expected {want}")
+    for raw, url, want in CONVENTION:
+        if _convention_used(raw, url) != want:
+            fails.append(f"CONVENTION {raw!r} -> {url}: expected {want}")
     for url, label, want in SCORE:
         if classify(url, label) != want:
             fails.append(f"SCORE {url} vs {label!r}: expected {want}")
     if _book_group("bereishis") != "genesis" or _book_group("shoftim") is not None:
         fails.append("BOOKS: bereishis->genesis, shoftim excluded")
-    total = len(GUARD) + len(MUST) + len(MUST_NOT) + len(ORDER) + len(GUESSED) + len(SCORE) + 1
+    total = len(GUARD) + len(MUST) + len(MUST_NOT) + len(ORDER) + len(GUESSED) + len(CONVENTION) + len(SCORE) + 1
     for f in fails:
         print("FAIL", f)
     print(f"{total - len(fails)}/{total} passed")

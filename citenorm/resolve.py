@@ -27,6 +27,24 @@ from . import shared_dialect
 
 BASE = "https://www.sefaria.org"
 
+from . import __version__  # noqa: E402
+
+# Identify ourselves to Sefaria's API (their etiquette, and so they can reach us).
+USER_AGENT = f"citenorm/{__version__} (+https://github.com/esafern/sefaria-citation-normalizer)"
+
+
+def _cache_dir():
+    """Where downloaded data lives: $CITENORM_CACHE, else ~/.cache/citenorm."""
+    d = os.environ.get("CITENORM_CACHE") or os.path.join(os.path.expanduser("~"), ".cache", "citenorm")
+    os.makedirs(d, exist_ok=True)
+    return d
+
+
+def _get_json(path, timeout=15):
+    """GET a Sefaria API path (e.g. "/api/name/Berakhot 2a") as JSON, with our User-Agent."""
+    req = urllib.request.Request(BASE + path, headers={"User-Agent": USER_AGENT})
+    return json.loads(urllib.request.urlopen(req, timeout=timeout).read())
+
 # The renamed corpus-prefix forms rules.candidates() can produce (the
 # replacement side of shared_dialect.PREFIXES), longest first so a shorter
 # prefix can't shadow a longer one it's a substring of.
@@ -65,8 +83,7 @@ class Cache:
 
 
 def _name(q, timeout=15):
-    d = json.loads(urllib.request.urlopen(
-        BASE + "/api/name/" + urllib.parse.quote(q), timeout=timeout).read())
+    d = _get_json("/api/name/" + urllib.parse.quote(q), timeout=timeout)
     if d.get("is_ref") and d.get("url"):
         return BASE + "/" + d["url"].lstrip("/")
     return None
@@ -77,8 +94,7 @@ def _name_candidates(work, limit=5, timeout=15):
     ref match, then typed ref completions (skipping AuthorTopic/Topic
     entries, e.g. "Bereshit" the Topic vs "Bereshit Rabbah" the text), then
     bare completion strings as a last resort (older API shape)."""
-    d = json.loads(urllib.request.urlopen(
-        BASE + "/api/name/" + urllib.parse.quote(work), timeout=timeout).read())
+    d = _get_json("/api/name/" + urllib.parse.quote(work), timeout=timeout)
     out = []
 
     def add(x):
@@ -406,9 +422,7 @@ def _name_ref_completions(work, limit=10, timeout=15):
     """Like _name_candidates, but keeps each completion's canonical `key`
     (not just its display `title`) — needed to resolve a target whose
     canonical form isn't textually close to the query."""
-    d = json.loads(urllib.request.urlopen(
-        BASE + "/api/name/" + urllib.parse.quote(work) + f"?limit={limit}",
-        timeout=timeout).read())
+    d = _get_json("/api/name/" + urllib.parse.quote(work) + f"?limit={limit}", timeout=timeout)
     return [o for o in (d.get("completion_objects") or [])
             if o.get("type") == "ref" and o.get("key")]
 
@@ -516,7 +530,8 @@ def _hilchot_is_ambiguous(citation, url):
 # which often omits the right title ("Rambam, Hilchot Eidus" never surfaces
 # "Rambam, Hilchot Edut"). Same _keeps_all_words guard; every pick is still
 # verified live by _name().
-_TITLES_PATH = os.path.join(os.path.dirname(__file__), ".titles_cache.json")
+def _titles_path():
+    return os.path.join(_cache_dir(), "titles.json")
 _TITLE_INDEX = None
 
 
@@ -527,10 +542,10 @@ def _title_index():
     if _TITLE_INDEX is not None:
         return _TITLE_INDEX
     try:
-        if not os.path.exists(_TITLES_PATH):
-            data = urllib.request.urlopen(BASE + "/api/index/titles", timeout=60).read()
-            open(_TITLES_PATH, "wb").write(data)
-        titles = json.load(open(_TITLES_PATH))["books"]
+        path = _titles_path()
+        if not os.path.exists(path):
+            json.dump(_get_json("/api/index/titles", timeout=60), open(path, "w"), ensure_ascii=False)
+        titles = json.load(open(path))["books"]
     except Exception:
         _TITLE_INDEX = {}
         return _TITLE_INDEX
@@ -613,9 +628,52 @@ def _guessed_something(citation, url):
     return False
 
 
-def resolve(citation, cache=None, online=True, polite=0.0):
-    """Return a Sefaria URL for `citation`, or None. Cache holds citation->url
-    (or None for a known miss)."""
+CONVENTIONS = ("common", "strict")
+
+_BARE_SECTION = re.compile(
+    r"^\s*(?:O\.?\s?C[h.]?|O\"[CH]|OC|OH|Or(?:ach|ah)?\s*Ch?a[iy]+m|Y\.?\s?D\.?|Yo?\"D|YD|Yoreh\s+De'?ah|"
+    r"E\.?\s?H\.?|E\"H|EH|Even\s+Ha-?\s?Ezer|C\.?\s?M\.?|Ch?\"M|CM|Choshen\s+Mishpat)\b", re.I)
+
+
+def _convention_used(citation, url):
+    """Which ambiguity convention (if any) a result depends on. Sefaria's own
+    aliases and Ref() behavior answer these the "common" way; "strict" mode
+    declines them. Measured on ~19k web-mined citations (docs/notes/HANDOFF.md):
+      bare_section   "YD 289" -> Shulchan Arukh (87% of writers meant that; 13% a
+                     different work on that section)
+      mishnah        "Kilayim 9:3" -> Mishnah (some meant the Yerushalmi or the
+                     Mishneh Torah section of the same name)
+      short_alias    "Ber 9" -> Berakhot via a 2-3 letter alias (writers also use
+                     "Ber." for Bereshit)
+    """
+    path = urllib.parse.unquote(url.split("sefaria.org/", 1)[-1])
+    if _BARE_SECTION.match(citation) and path.startswith("Shulchan_Arukh"):
+        return "bare_section"
+    if path.startswith("Mishnah_") and not re.search(r"mishn|\bM\.\s", citation, re.I):
+        return "mishnah"
+    work = re.split(r"\s*\(?\d", citation.strip(), maxsplit=1)[0]
+    tokens = re.findall(r"[A-Za-z]+", work)
+    if len(tokens) == 1 and len(tokens[0]) <= 3 and '"' not in work:
+        return "short_alias"
+    return None
+
+
+def resolve(citation, cache=None, online=True, polite=0.2, conventions="common"):
+    """Return a Sefaria URL for `citation`, or None.
+
+    conventions: "common" (default) follows Sefaria's own conventions for three
+    ambiguous patterns; "strict" leaves them unlinked (see _convention_used).
+    The cache holds the common answer (citation -> url, None for a known
+    miss); strict mode is applied on top, so one cache serves both."""
+    if conventions not in CONVENTIONS:
+        raise ValueError(f"conventions must be one of {CONVENTIONS}")
+    url = _resolve_common(citation, cache=cache, online=online, polite=polite)
+    if url and conventions == "strict" and _convention_used(citation.strip(), url):
+        return None
+    return url
+
+
+def _resolve_common(citation, cache=None, online=True, polite=0.2):
     citation = citation.strip()
     if cache is not None and citation in cache:
         return cache.get(citation)

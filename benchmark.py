@@ -26,7 +26,7 @@ import sys
 import urllib.parse
 
 sys.path.insert(0, os.path.dirname(__file__))
-from normalizer.resolve import resolve, Cache
+from citenorm.resolve import resolve, Cache
 
 HERE = os.path.dirname(__file__)
 
