@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en" dir="ltr" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Citation linker for Sefaria</title>
+<meta name="description" content="Paste Torah citations as people write them in English and get links to Sefaria. When a citation is ambiguous, it stays unlinked rather than guessed.">
+<style>
+  :root { --bg: #f7f4ee; --ink: #1d1b18; --muted: #5d574e; --accent: #7a3e12; --line: #ddd5c7; --ok: #2f6b3a; --card: #fffdf8; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16140f; --ink: #efe9df; --muted: #b3aa9b; --accent: #e3a56b; --line: #3a352c; --ok: #8fd19e; --card: #1e1b15; }
+  }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); }
+  body { font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  main, header, footer { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+  header { padding-top: 18px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  header a { color: var(--muted); font-size: 14px; }
+  h1 { font-size: clamp(24px, 3.6vw, 34px); line-height: 1.2; margin: 10px 0 8px; }
+  p.lead { margin: 0 0 16px; }
+  textarea { width: 100%; box-sizing: border-box; min-height: 150px; padding: 10px 12px; font: 16px/1.5 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+             color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 8px; }
+  .row { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin: 10px 0 18px; }
+  button { font: inherit; font-size: 16px; padding: 8px 18px; border-radius: 8px; border: 1px solid var(--accent); cursor: pointer; }
+  button.primary { background: var(--accent); color: var(--bg); font-weight: 600; }
+  button.secondary { background: transparent; color: var(--accent); }
+  button:disabled { opacity: .55; cursor: default; }
+  label { font-size: 15px; color: var(--muted); }
+  ol#out { list-style: none; padding: 0; margin: 0 0 24px; }
+  ol#out li { padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; margin-bottom: 8px; background: var(--card); }
+  .cit { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 15px; }
+  .ans { margin-top: 2px; }
+  .ans a { color: var(--accent); font-weight: 600; }
+  .why { color: var(--muted); font-size: 14px; }
+  .linked .mark { color: var(--ok); }
+  .unlinked .mark, .error .mark { color: var(--muted); }
+  section.about { border-top: 1px solid var(--line); margin-top: 8px; padding-top: 6px; }
+  section.about h2 { font-size: 19px; margin: 18px 0 6px; }
+  section.about p, section.about li { color: var(--ink); }
+  a { color: var(--accent); }
+  q.c { quotes: none; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .92em;
+        background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 0 .3em;
+        -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  .cit, .ans, .why { overflow-wrap: anywhere; }
+  footer { color: var(--muted); font-size: 14px; padding-top: 18px; padding-bottom: 32px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; }
+  footer a { color: var(--muted); }
+  footer img { height: 48px; width: auto; display: block; }
+</style>
+</head>
+<body>
+<header>
+  <strong>Citation linker for Sefaria</strong>
+  <a href="https://girsa.net/">from Girsa</a>
+</header>
+<main>
+  <h1>Paste citations, get Sefaria links</h1>
+  <p class="lead">Write citations the way people write them in English (<q class="c">Berachos 5a</q>,
+    <q class="c">S"A O"C 271:1</q>, <q class="c">Hilchos Eidus 4:1</q>), one per line. Each becomes a link to Sefaria. If a citation could mean more than
+    one place, it stays unlinked, and the page says why.</p>
+
+  <textarea id="in" spellcheck="false" aria-label="Citations, one per line" placeholder="Berachos 5a
+SA OC 271:1
+Hilchos Eidus 4:1"></textarea>
+  <div class="row">
+    <button class="primary" id="go">Link them</button>
+    <button class="secondary" id="ex">Try the examples</button>
+    <label><input type="checkbox" id="strict"> Strict: also leave conventional readings unlinked</label>
+  </div>
+  <ol id="out" aria-live="polite"></ol>
+
+  <section class="about">
+    <h2>How it works</h2>
+    <p>For each citation the tool proposes many possible spellings (Ashkenazi and academic transliterations,
+      abbreviations, Hebrew book names, "chapter 2, &para; 3"), and Sefaria says which one is a real reference.
+      Then it checks the answer: an answer that dropped a word, added one, swapped two, or filled in something the
+      citation never said (which side of a Talmud page, which section of the Shulchan Arukh) is rejected.</p>
+    <h2>Why some stay unlinked</h2>
+    <ul>
+      <li>No book is named: <q class="c">Mitzvah 594</q>, <q class="c">chapter 3</q>.</li>
+      <li>It could be more than one place: <q class="c">Shmuel 23:8</q> (I or II Samuel?), <q class="c">Kaf HaChaim 92:8</q> (Orach Chayim or Yoreh De'ah?).</li>
+      <li>Sefaria doesn't have the work, or knows it only under a translated title.</li>
+    </ul>
+    <p><strong>Strict</strong> also declines three readings that Sefaria makes by convention: a bare Shulchan Arukh
+      section (<q class="c">YD 289</q>, which some writers mean for the Tur), a tractate with chapter:mishnah
+      (<q class="c">Kilayim 9:3</q>, read as the Mishnah), and two- or three-letter abbreviations (<q class="c">Ber 9</q>).</p>
+    <h2>How accurate is it?</h2>
+    <p>On about 600 real citations that Sefaria can't read as written, taken from links people made on Mi Yodeya and
+      Wikipedia: about two thirds are linked to the right place or to the chapter containing it, about 1% are linked
+      somewhere else (mostly where the writer's own link disagreed with their text), and the rest stay unlinked.</p>
+    <p>The code, the test data and the method are open:
+      <a href="https://github.com/esafern/sefaria-citation-normalizer">github.com/esafern/sefaria-citation-normalizer</a>.</p>
+  </section>
+</main>
+<footer>
+  <a href="https://developers.sefaria.org/docs/powered-by-sefaria" title="Powered by Sefaria">
+    <picture>
+      <source srcset="static/powered-by-sefaria-blue.png" media="(prefers-color-scheme: dark)">
+      <img src="static/powered-by-sefaria-white.png" alt="Powered by Sefaria" width="92" height="48">
+    </picture>
+  </a>
+  <span>Not developed by or affiliated with Sefaria. Answers come from Sefaria's public API and are cached.</span>
+  <a href="https://girsa.net/">Girsa</a>
+</footer>
+<script>
+(function () {
+  var EXAMPLES = ["Berachos 5a", "SA OC 271:1", "Hilchos Eidus 4:1", "Ohr HaChaim to Shemot 23:2",
+                  "Pirke De-Rabbi Eliezer, chapter 24", "B\"M 59b", "Shmuel A 9:2", "Shmuel 23:8",
+                  "Kaf HaHayim 92:8", "YD 289"];
+  var WHY = {
+    bare_section: "Read as the Shulchan Arukh by convention; some writers mean the Tur or another work on that section.",
+    mishnah: "Read as the Mishnah by convention; some writers mean the Yerushalmi or a Mishneh Torah section.",
+    short_alias: "A two- or three-letter abbreviation; it can stand for more than one book."
+  };
+  var base = location.pathname.endsWith("/") ? location.pathname : location.pathname + "/";
+  var inp = document.getElementById("in"), out = document.getElementById("out");
+  var go = document.getElementById("go"), ex = document.getElementById("ex"), strict = document.getElementById("strict");
+
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }
+
+  function show(li, r) {
+    li.className = r.status || "error";
+    var ans = el("div", "ans");
+    if (r.status === "linked") {
+      ans.appendChild(el("span", "mark", "\u2713 "));
+      var a = el("a", null, r.ref); a.href = r.url; a.target = "_blank"; a.rel = "noopener";
+      ans.appendChild(a);
+      if (r.convention) li.appendChild(ans), li.appendChild(el("div", "why", WHY[r.convention]));
+      else li.appendChild(ans);
+      return;
+    }
+    if (r.status === "unlinked") {
+      ans.appendChild(el("span", "mark", "\u2013 left unlinked"));
+      li.appendChild(ans);
+      li.appendChild(el("div", "why", r.convention ? WHY[r.convention] + " (strict)"
+        : "It could mean more than one place, names no book, or isn't on Sefaria under a name the tool can match."));
+      return;
+    }
+    ans.appendChild(el("span", "mark", "\u2013 " + (r.error || "something went wrong")));
+    li.appendChild(ans);
+  }
+
+  async function run() {
+    var lines = inp.value.split(/\n/).map(function (s) { return s.trim(); }).filter(Boolean).slice(0, 20);
+    out.textContent = "";
+    if (!lines.length) return;
+    go.disabled = ex.disabled = true;
+    for (var i = 0; i < lines.length; i++) {
+      var li = el("li"); li.appendChild(el("div", "cit", lines[i]));
+      var wait = el("div", "why", "working\u2026"); li.appendChild(wait); out.appendChild(li);
+      try {
+        var u = base + "api/resolve?q=" + encodeURIComponent(lines[i]) + "&conventions=" + (strict.checked ? "strict" : "common");
+        var resp = await fetch(u, { headers: { "Accept": "application/json" } });
+        var r = await resp.json();
+        li.removeChild(wait); show(li, r);
+        if (resp.status === 429) break;
+      } catch (e) {
+        li.removeChild(wait); show(li, { status: "error", error: "couldn't reach the server" });
+      }
+    }
+    go.disabled = ex.disabled = false;
+  }
+  go.addEventListener("click", run);
+  ex.addEventListener("click", function () { inp.value = EXAMPLES.join("\n"); run(); });
+  if (/[?&]examples\b/.test(location.search)) { inp.value = EXAMPLES.join("\n"); run(); }
+})();
+</script>
+</body>
+</html>
