@@ -1,0 +1,48 @@
+{
+ "about": "Mangled WRONG results on data/web_pairs.json that were reviewed and accepted: conventions (see conventions='strict') or writer-side label noise. release_check.py fails on any WRONG not listed here.",
+ "reviewed": "2026-11-25",
+ "mangled": [
+  {
+   "raw": "Ma'aser 3:7",
+   "ours": "https://www.sefaria.org/Mishnah_Maasrot.3.7",
+   "gold": "Mishneh Torah, Tithes 3:7",
+   "why": "convention (Mishnah by Sefaria's alias); the writer meant the Mishneh Torah"
+  },
+  {
+   "raw": "Tosefos to Taanis 9a",
+   "ours": "https://www.sefaria.org/Tosafot_on_Taanit.9a",
+   "gold": "Taanit 9a:1",
+   "why": "label noise: the writer named Tosafot, linked the Gemara"
+  },
+  {
+   "raw": "Y\"D 289",
+   "ours": "https://www.sefaria.org/Shulchan_Arukh,_Yoreh_De'ah.289",
+   "gold": "Tur, Yoreh De'ah 289:1",
+   "why": "convention (bare section -> Shulchan Arukh); the writer meant the Tur"
+  },
+  {
+   "raw": "Bavli Ketubot 17a (with Rashi",
+   "ours": "https://www.sefaria.org/Ketubot.17a",
+   "gold": "Rashi on Ketubot 17a:12:1",
+   "why": "label noise: the writer cited the Gemara 'with Rashi', linked Rashi"
+  },
+  {
+   "raw": "Rashi Shmot 22:5",
+   "ours": "https://www.sefaria.org/Rashi_on_Exodus.22.5",
+   "gold": "Rashi on Exodus 12:22:5",
+   "why": "label noise: the text says 22:5, the link is 12:22:5"
+  },
+  {
+   "raw": "E\"H § 4:1",
+   "ours": "https://www.sefaria.org/Shulchan_Arukh,_Even_HaEzer.4.1",
+   "gold": "Arukh HaShulchan, Even HaEzer 4:1",
+   "why": "convention (bare section -> Shulchan Arukh); the writer meant Arukh HaShulchan"
+  },
+  {
+   "raw": "Sefaria Radak on Genesis 32:32",
+   "ours": "https://www.sefaria.org/Radak_on_Genesis.32.32",
+   "gold": "Radak on Genesis 32:33:1",
+   "why": "label noise: Christian verse numbering (Sefaria's 32:33)"
+  }
+ ]
+}

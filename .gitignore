@@ -46,3 +46,7 @@ private/
 *.egg-info/
 build/
 dist/
+
+# per-code-version answer caches (benchmark.py)
+pipeline/verify_cache.*.json
+pipeline/verify_cache.json

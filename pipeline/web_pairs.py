@@ -397,8 +397,10 @@ def evaluate():
     # One resolver cache per output file: concurrent runs (a background full run and
     # a sample run) sharing one cache overwrite each other's entries on save, and a
     # cache filled by older code silently returns stale answers.
+    from citenorm import code_fingerprint
     tag = os.path.splitext(os.path.basename(OUT))[0]
-    cache = Cache(os.path.join(RAW, f"resolve_cache_{tag}.json"))
+    # one cache per output AND per version of the resolver code
+    cache = Cache(os.path.join(RAW, f"resolve_cache_{tag}.{code_fingerprint()}.json"))
     pairs = json.load(open(OUT))["pairs"]
     tally = collections.defaultdict(collections.Counter)
     wrong = []
@@ -419,7 +421,15 @@ def evaluate():
             cache.save()
             print(f"  {i}/{len(pairs)}", flush=True)
     cache.save()
-    json.dump(pairs, open(OUT.replace(".json", "_scored.json"), "w"), ensure_ascii=False, indent=1)
+    import subprocess
+    commit = subprocess.run(["git", "rev-parse", "--short=8", "HEAD"], cwd=ROOT,
+                            capture_output=True, text=True).stdout.strip()
+    stamp = {"commit": commit, "code_fingerprint": code_fingerprint(),
+             "errors": dict(tally.get("errors", {}))}
+    with open(OUT.replace(".json", "_scored.meta.json"), "w", encoding="utf-8") as f:
+        json.dump(stamp, f, indent=1)
+    json.dump(pairs, open(OUT.replace(".json", "_scored.json"), "w", encoding="utf-8"),
+              ensure_ascii=False, indent=1)
     for kind, c in tally.items():
         n = sum(c.values())
         print(f"{kind:8} n={n}: " + ", ".join(f"{k} {c[k]}" for k in

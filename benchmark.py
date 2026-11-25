@@ -88,7 +88,9 @@ def classify(url, label):
 
 def main():
     data = json.load(open(os.path.join(HERE, "data", "citation_dataset.json")))
-    cache = Cache(os.path.join(HERE, "pipeline", "verify_cache.json"))
+    from citenorm import code_fingerprint
+    # one cache per version of the resolver code: never reuse answers from older code
+    cache = Cache(os.path.join(HERE, "pipeline", f"verify_cache.{code_fingerprint()}.json"))
     rows = {k: [] for k in ("correct", "coarser", "finer", "WRONG", "unresolved")}
     for d in data:
         try:
