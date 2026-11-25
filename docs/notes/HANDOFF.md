@@ -72,7 +72,8 @@ Handoff message for girsa-demo-operator (paste into its pane):
 > standard-library Python app (no change to app.girsa.net); it calls www.sefaria.org. Section 6
 > proposes a footer-only link on the home page, after the copyright and in the footer's muted
 > color, so it doesn't draw attention from the video. That's a visible change: needs the
-> reviewer's go, and girsa-ui-steward may want to see the CSS line.
+> reviewer's go, and girsa-ui-steward may want to see the CSS line. No Powered-by badge on the
+> home page (the reviewer's ruling); the badge is only on the demo page.
 
 ## Status as of 2026-11-24 (superseded above)
 

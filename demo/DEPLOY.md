@@ -85,7 +85,8 @@ with its own commit.
 
 The reviewer wants a link that **doesn't distract from the video**. Proposal: one short item
 in the existing footer, after the copyright, in the footer's own muted color and size. No
-button, no image, nothing above the fold. In `handover/web/site/index.html`:
+button, no image, **no Powered-by badge** (the reviewer, 2026-11-25: no badge on the home page;
+the badge stays on the demo page itself), nothing above the fold. In `handover/web/site/index.html`:
 
 ```html
 <footer>
