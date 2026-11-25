@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- REST API v1 (`citenorm/api.py`, `citenorm-api`): `/v1/resolve` (GET, batch POST), `/v1/explain`,
+  `/v1/health`, `/v1/openapi.json`; limits, API keys, CORS, per-code-version cache. See `docs/API.md`.
+- `python3 -m citenorm` runs the CLI without installing.
+
 - `--explain` (CLI) and `citenorm.resolve.explain()`: the spellings tried, every Sefaria
   suggestion accepted or rejected with the reason, and the convention a reading relies on.
 - An unreachable Sefaria raises `ResolverUnavailable` and is never cached (it used to be cached

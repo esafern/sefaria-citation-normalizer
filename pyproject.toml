@@ -26,6 +26,7 @@ mining = ["py7zr"]  # only for pipeline/web_pairs.py's Stack Exchange dump step
 
 [project.scripts]
 citenorm = "citenorm.cli:main"
+citenorm-api = "citenorm.api:main"
 
 [project.urls]
 Homepage = "https://github.com/esafern/sefaria-citation-normalizer"

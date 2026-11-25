@@ -83,7 +83,13 @@ from citenorm.resolve import explain
 explain("Shmuel 23:8")["steps"]                           # [{"step": "rejected", "text": "... adds 'I'"}, ...]
 ```
 
-Planned: a REST API, batch CSV files, linking running text, an offline mode
+### REST API
+
+`citenorm-api` serves a versioned HTTP API (`/v1/resolve`, batch `POST`, `/v1/explain`,
+`/v1/openapi.json`) with rate limits, optional API keys and CORS: see [docs/API.md](docs/API.md).
+Not yet deployed publicly.
+
+Planned: batch CSV files, linking running text, an offline mode
 ([docs/ROADMAP.md](docs/ROADMAP.md)).
 
 ### Conventions: `common` (default) or `strict`

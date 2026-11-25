@@ -13,9 +13,14 @@
 
 ## Planned
 
-### A REST API
+### A REST API: v1 built (not deployed)
 
-A small HTTP service in front of the resolver, for sites and tools that can't run Python.
+`citenorm/api.py`, documented in `docs/API.md`: `/v1/resolve` (GET one, POST up to 50),
+`/v1/explain`, `/v1/health`, `/v1/openapi.json`; per-client and global limits, optional API keys,
+CORS, answers cached per code version, outages reported as `unavailable` and never cached.
+`citenorm-api` serves it locally. **Open:** where to deploy it, and `/v1/link-text`.
+
+The original plan, for reference: a small HTTP service in front of the resolver, for sites and tools that can't run Python.
 Versioned from the start; tags `api-v<n>` mark versions and `prod-YYYY-MM-DD` marks deploys
 (`docs/RELEASING.md`). A consumer pins an API version, so a version never changes once tagged.
 Sketch:
