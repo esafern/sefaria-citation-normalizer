@@ -196,3 +196,19 @@ False None
 - Source read: `Sefaria/Sefaria-Project` (public GitHub), `reader/views.py`,
   `sefaria/model/text.py`, `sefaria/model/autospell.py`, current `master` as of
   2026-08-18.
+
+
+---
+
+## Related data error (found 2026-11-25; separate from the case-sensitivity bug)
+
+The alternate title `Rambam, Hilchot Malveh veLoveh` ("Laws of Creditor and Debtor") is
+attached to the wrong Mishneh Torah section:
+
+```
+/api/name/Rambam, Hilchot Malveh veLoveh 5:1  ->  Mishneh Torah, Inheritances 5:1
+/api/name/Mishneh Torah, Creditor and Debtor 5:1  ->  Mishneh Torah, Creditor and Debtor 5:1
+```
+
+Any citation using that alias links to Inheritances instead of Creditor and Debtor.
+Found while auditing mislinks over ~19k web-mined citation pairs.

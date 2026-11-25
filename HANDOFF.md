@@ -86,13 +86,48 @@ correctness test**; the benchmark has 32 circular rule-labeled rows (loose end 8
   now also covers the Mi Yodeya 2024+ and SE pairs (loose end 7). Stop background jobs
   by PID only.
 
+### Full run results + third mislink pass (2026-11-25)
+
+The full run finished overnight: **19,227 verified pairs** (7,250 mangled, 11,977 clean)
+from all sources. Mangled: 2,752 correct, 1,736 coarser, 11 finer, 255 label noise,
+**156 WRONG**, 2,340 unresolved. Reading the 156 exposed real mislinks the 616-pair sample
+was too small to show:
+- **The spelling match was too loose.** Dropping all vowels and merging ch with k made
+  Challah = Kallah (x10), Deot = Deut(eronomy) (x6), Kilayim = Kelim, Edus = Eduyot,
+  Vaera = Vayera; a 0.8 ratio fallback matched Megillah/Me'ilah and Orlah/Torah.
+  Replaced by `_translit` + `_vowel_groups`: real transliteration variants only (tav s/t,
+  ch/kh, non-initial k, v/b, academic h for chet), vowels compared by class (kamatz a/o
+  merged, tzere/segol/sheva dropped), exact match for short words, ratio fallback only
+  when consonants are identical.
+- **Sefaria filled in what the text didn't say:** an amud (`Brakhot 11:13` -> Berakhot
+  11a:13) or a Shulchan Arukh section via an alias (`Kaf HaHayim 92:8` -> the OC volume;
+  Kaf HaChayim also covers YD). `_guessed_something` now rejects both.
+- Also fixed: "Yad." (tractate Yadayim) satisfying "Rambam"; `Melachim 1:5` read as I
+  Kings 5; a footnote marker spliced into a locator (`11:1][1` -> 11:11); `note 48` promoted
+  to siman 48; "Talmud" added mid-title (`Hilchos Torah` -> *Hilchos Talmud Torah*); the
+  Hilchot ambiguity check now works both ways.
+- Rescored with current code, the 156 become: 56 unresolved, 5 correct, 95 still WRONG,
+  none of them a resolver error we can fix without context: 18 bare section (decision 1),
+  15 tractate + chapter:mishnah -> Mishnah (decision 5 below), 2 `Ber` alias, 29
+  commentary-layer label noise, ~28 text-vs-link disagreement, 3 Sefaria-side (see below).
+- Accepted loss: `Kav HaYosher` no longer matches *Kav HaYashar* (different vowel pattern;
+  the looser rule that allowed it also made Deot = Deut).
+- **Sefaria data error found:** the alt title `Rambam, Hilchot Malveh veLoveh` (Creditor and
+  Debtor) is attached to *Mishneh Torah, Inheritances*. Worth reporting.
+- **New decision 5:** a bare tractate + chapter:mishnah (`Kilayim 9:3`, `B'rachot 2:4-5`)
+  resolves to the **Mishnah** by Sefaria's own convention (its Bavli refs check the Mishnah
+  pattern first). In the full run, 15 such links went to the Yerushalmi or Mishneh Torah
+  instead. Same shape as decision 1: keep the convention or abstain.
+- **New decision 6:** short Sefaria aliases (`Ber` = Berakhot) collide with common
+  abbreviations (`Ber.` = Bereshit in academic writing). Keep or abstain on 2-3 letter
+  work names.
+- `test_rules_offline.py` now has 93 cases.
+
 ### Running in the background
 
-`pipeline/web_pairs_raw/full_run.sh` (log `full_run.log`), restarted 2026-11-24 ~22:00 on
-current code: verifies every consistent pair from all sources (now including Mi Yodeya
-2024+ and the other SE sites), then scores. Writes
-`pipeline/web_pairs_raw/web_pairs_full_scored.json`. About a day. Resumable: rerun the script.
-A fresh sample eval (`sample_eval.log`) runs alongside it.
+Full run: **finished 2026-11-25** (results above; `pipeline/web_pairs_raw/web_pairs_full_scored.json`,
+scored with the code of 2026-11-24 evening). A rerun on current code is the next step.
+A fresh sample eval on current code (`sample_eval.log`) is running.
 
 ### Git
 
