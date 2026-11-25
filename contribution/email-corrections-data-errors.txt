@@ -1,0 +1,49 @@
+To: corrections@sefaria.org
+Subject: Title data: three Mishneh Torah aliases point to the wrong sections, plus a few other title-list issues
+
+Hi,
+
+While checking citation links against your title list, I found some title data problems. The first one sends readers to the wrong text; the rest are smaller.
+
+1. Three Mishneh Torah section aliases are rotated (6 alias titles)
+
+In Sefer Mishpatim, the Hebrew-name aliases for three sections each point to a neighboring section. This applies to both the "Rambam, Hilchot ..." and the "Mishneh Torah, Hilchot ..." forms:
+
+   Hilchot Malveh veLoveh (Creditor and Debtor)
+      currently resolves to: Inheritances
+
+   Hilchot To`en veNit`an (Plaintiff and Defendant)
+      currently resolves to: Creditor and Debtor
+
+   Hilchot Nehalot (Inheritances)
+      currently resolves to: Plaintiff and Defendant
+
+For example, this returns Mishneh Torah, Inheritances 5:1:
+https://www.sefaria.org/api/name/Rambam,%20Hilchot%20Malveh%20veLoveh%205:1
+
+The other ~160 "Rambam, Hilchot ..." and "Mishneh Torah, Hilchot ..." aliases I checked all resolve correctly.
+
+2. An internal title is attached to the Mishnah Berurah
+
+The Mishnah Berurah index has "Drafting - Summer - Product Announcements" among its English titles. It appears in the public title list and in autocomplete, along with "..., Introduction" and "..., Introduction to the Laws of Shabbat". It looks like it was pasted in by accident.
+
+3. Fifty titles contain HTML markup
+
+For example:
+   <i>Mishnah Berurah</i>
+   <i>Shulḥan Arukh, Oraḥ Ḥayyim</i>
+   Rambam, <i>Hilkhot Melakhim</i>
+   Rambam, <i>Hilkhot Evel</i     (this one has a broken tag)
+
+Nobody can type these, so they never match a citation, but they do appear in the title list and could show up in autocomplete. I can send the full list.
+
+4. Eighteen titles start with a lowercase letter and can never match
+
+For example: vaYikra, shulchan aruch orach chaim, sichos haran, tzidkat hatzadik, and "or zarua, Volume II" (plus 13 more "or zarua" titles). The ref parser capitalizes the first letter of a citation before looking it up, so a stored title that starts in lowercase is never found. This one is really a code issue, which I've described on GitHub issue #1016; I'm mentioning it here in case the data fix is easier.
+
+Separately, titles containing a hyphen can't be resolved at all. That's a code issue, and I filed it as GitHub issue #4150:
+https://github.com/Sefaria/Sefaria-Project/issues/4150
+
+Thanks for all the work on the library.
+
+Eric Safern

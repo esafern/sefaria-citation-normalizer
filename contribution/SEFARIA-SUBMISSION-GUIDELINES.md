@@ -43,9 +43,9 @@ templates, no code of conduct; license GPL-3.0.
    team" and a close.
 3. **Data errors** (rotated Mishneh Torah aliases, the stray Mishnah Berurah title, HTML in
    titles): email corrections@sefaria.org, not GitHub. Draft:
-   `contribution/email-corrections-data-errors.md`.
+   `contribution/email-corrections-data-errors.txt`.
 4. **Bigger asks** (the case-insensitive fallback, conventions questions, the dataset or the
    dialect map as linker test cases): best as a direct conversation with developers@sefaria.org,
-   since PRs aren't a channel. Draft: `contribution/email-developers-conventions.md`.
+   since PRs aren't a channel. Draft: `contribution/email-developers-conventions.txt`.
 5. **"Powered by Sefaria":** this repo (normalizer + most-wanted list + web-pairs dataset) fits
    their suggested path for outside builders. Listing it there is another route to visibility.
