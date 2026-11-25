@@ -68,8 +68,7 @@ Sefaria-Project issue #4150 links to evidence files on that branch. Don't move o
 Handoff message for girsa-demo-operator (paste into its pane):
 
 > REQUEST from the citenorm project (not a Girsa role): please host the citation-linker demo
-> at girsa.net/cite/. Archive: ~/work/sefaria-citation-normalizer/dist/citenorm-demo-<commit>.tar.gz
-> (newest); instructions, checks and rollback: demo/DEPLOY.md inside it. It's a separate
+> at girsa.net/cite/. Archive: ~/work/sefaria-citation-normalizer/dist/citenorm-demo-dce6ee7a.tar.gz; instructions, checks and rollback: demo/DEPLOY.md inside it. It's a separate
 > standard-library Python app (no change to app.girsa.net); it calls www.sefaria.org. Section 6
 > proposes a footer-only link on the home page, after the copyright and in the footer's muted
 > color, so it doesn't draw attention from the video. That's a visible change: needs the

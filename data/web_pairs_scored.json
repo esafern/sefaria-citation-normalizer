@@ -876,8 +876,8 @@
   "where": "https://judaism.stackexchange.com/a/108834",
   "sefaria_ref": "Or HaChaim on Exodus 23:2:3",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Or_HaChaim_on_Exodus.23.2",
+  "outcome": "coarser"
  },
  {
   "raw": "Nidda 61b",
@@ -15715,8 +15715,8 @@
   "where": "https://judaism.stackexchange.com/a/148838",
   "sefaria_ref": "Sefer HaMitzvot, Positive Commandments 235",
   "clean": false,
-  "ours": null,
-  "outcome": "unresolved"
+  "ours": "https://www.sefaria.org/Sefer_HaMitzvot,_Positive_Commandments.235",
+  "outcome": "correct"
  },
  {
   "raw": "Bereshis 3:9",
