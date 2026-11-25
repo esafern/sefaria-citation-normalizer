@@ -27,6 +27,7 @@ def main():
     out = os.path.join(ROOT, "dist", f"citenorm-demo-{sha}.tar.gz")
     files = [("LICENSE", "LICENSE"), ("demo/passenger_wsgi.py", "passenger_wsgi.py"), ("demo/app.py", "app.py"),
              ("demo/check_demo.py", "check_demo.py"), ("demo/test_demo_offline.py", "test_demo_offline.py"),
+             ("test_cache_offline.py", "test_cache_offline.py"),
              ("demo/DEPLOY.md", "DEPLOY.md")]
     files += [(f"demo/static/{f}", f"static/{f}") for f in sorted(os.listdir(os.path.join(ROOT, "demo", "static")))]
     files += [(f"citenorm/{f}", f"citenorm/{f}") for f in sorted(os.listdir(os.path.join(ROOT, "citenorm")))

@@ -78,7 +78,7 @@ assert not [f for f in os.listdir(os.environ["CITENORM_CACHE"]) if ".tmp." in f]
 ''',
     "the demo reports an outage and caches nothing": r'''
 os.environ["CITENORM_DEMO_DATA"] = os.environ["CITENORM_CACHE"]
-sys.path.insert(0, os.path.join(HERE, "demo"))
+sys.path[:0] = [os.path.join(HERE, "demo"), HERE]       # the repository, or the demo archive
 import app, sqlite3
 obj, status = app.resolve_one("Hilchos Eidus 4:1", "common", "198.51.100.9")
 assert obj.get("status") == "error", obj

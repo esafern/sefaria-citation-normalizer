@@ -5,9 +5,33 @@ Girsa demo at app.girsa.net or its wrapper. The one change to existing Girsa fil
 optional footer link on the home page (section 6), which is a visible change and needs the
 reviewer's go.
 
-## Changes since the last deployed archive
+## Changes since the last deployed archive (2f6a5cd6, taken down)
 
-- **2f6a5cd6 -> this archive:** the visitor's address for the per-visitor limits now comes from
+All four of girsa-demo-operator's findings on 2f6a5cd6 are fixed. Each fix has an offline test
+that fails on 2f6a5cd6 and passes on this archive (`test_cache_offline.py`,
+`test_demo_offline.py`, both included).
+
+1. **Encoding (the blocker).** Every file citenorm reads or writes now names UTF-8. The title
+   list is written as plain ASCII (escaped JSON), so it is the same file under any locale.
+   Checked with the operator's reproduction: under `LC_ALL=C` and `python3 -X utf8=0`, the old
+   code wrote a 100-byte `titles.json`; this one writes the full 3.3 MB, and `check_demo.py`
+   passes 7/7, including "Hilchos Eidus 4:1".
+2. **No stub can stay.** Both caches are written to a temporary file and renamed into place,
+   so a failed write leaves nothing. A `titles.json` that is unreadable or far too small
+   (under 10,000 titles; Sefaria has about 67,000) is deleted and fetched once more; if that
+   fails too, it's an error, never an empty index, and the next request tries again.
+3. **No wrong answers cached.** Every failed request to Sefaria, and a missing title list, now
+   raises an error (`ResolverUnavailable`) instead of producing "no answer". Nothing is cached
+   then. The page shows "Sefaria didn't answer; please try again shortly", not "left unlinked".
+4. **(LOW)** Per-visitor limits key on `REMOTE_ADDR` only.
+
+Before this archive goes up, clear `titles.json` (under the data folder's `citenorm/`) and
+`demo.sqlite3` on the host, as planned: the old ones hold the stub and answers cached while
+the index was broken.
+
+## Earlier changes
+
+- **2f6a5cd6 -> d18cb656:** the visitor's address for the per-visitor limits now comes from
   `REMOTE_ADDR` alone. Before, the first `X-Forwarded-For` value was used, which a visitor can
   set to anything, so the per-visitor limits could be dodged (girsa-demo-operator's LOW on
   2f6a5cd6; the 60-a-minute cap across all visitors held). `test_demo_offline.py` checks it,
@@ -69,6 +93,7 @@ On a copy first, then live:
 
 ```bash
 python3 test_demo_offline.py                                      # no network: limits, headers, traversal
+python3 test_cache_offline.py                                     # no network: locale, stub files, outages
 cd ~/citenorm_app
 CITENORM_DEMO_DATA=/tmp/citenorm_check python3 app.py 8765 &     # local copy
 python3 check_demo.py http://127.0.0.1:8765/
