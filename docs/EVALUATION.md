@@ -37,7 +37,7 @@ Sample (`data/web_pairs.json`, 1,588 pairs), current code:
 
 | | n | correct | coarser | finer | label noise | WRONG | unresolved |
 |---|---|---|---|---|---|---|---|
-| mangled | 616 | 256 | 155 | 1 | 18 | 7 | 179 |
+| mangled | 616 | 257 | 156 | 1 | 18 | 7 | 177 |
 | clean | 972 | 675 | 250 | 0 | 31 | 15 | 1 |
 
 The 7 mangled WRONG: 2 bare Shulchan Arukh sections and 1 Mishnah-by-default (the

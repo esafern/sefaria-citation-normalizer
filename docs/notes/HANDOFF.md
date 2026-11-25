@@ -62,7 +62,12 @@ Sefaria-Project issue #4150 links to evidence files on that branch. Don't move o
    transcript, and below); give the go there for the app and, separately, for the footer link.
 5. **Powered by Sefaria form:** once the demo is live, apply via Developer Settings, using the
    draft answers in `docs/notes/POWERED-BY-SEFARIA.md` (live link: the demo URL).
-6. The open items from 2026-11-24 below still stand (emails to send, the #1016 comment's raw
+6. **Emails sent 2026-11-25** (by the owner): the title-data report to corrections@sefaria.org
+   (rotated Mishneh Torah aliases, the stray "Drafting" title on the Mishnah Berurah, HTML in
+   titles, lowercase-initial titles) and the conventions letter to developers@sefaria.org. Drafts
+   kept locally in `private/`. Watch for replies; a reply from developers@ may settle the
+   conventions question for good (current default: `common`).
+7. The open items from 2026-11-24 below still stand (emails to send, the #1016 comment's raw
    HTML, the blog port).
 
 Handoff message for girsa-demo-operator (paste into its pane):

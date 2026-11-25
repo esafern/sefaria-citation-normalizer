@@ -95,7 +95,7 @@ On a 1,588-pair sample, for the 616 citations Sefaria does **not** resolve as wr
 
 | correct | coarser (e.g. the chapter, not the verse) | wrong | unlinked |
 |---|---|---|---|
-| 256 (42%) | 156 (25%) | 7 (1.1%) | 179 (29%) |
+| 257 (42%) | 157 (25%) | 7 (1.1%) | 177 (29%) |
 
 (+18 where the writer's link disagrees with their own text.) Of the 7 wrong: 3 follow one of
 the conventions above, 4 are writer-side typos or link mismatches. The original 139-citation
