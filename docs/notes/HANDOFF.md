@@ -52,6 +52,21 @@ Sefaria-Project issue #4150 links to evidence files on that branch. Don't move o
 - Small fixes found on the way: "Ohr" = "Or" in the short-word rule; the page is served
   `no-cache` (a cached page hid an update during testing).
 
+**2026-11-25, later:**
+- girsa-demo-operator deployed 2f6a5cd6 and took it down: `check_demo.py` failed live. Its four
+  findings (file encoding under a non-UTF-8 locale, a stub `titles.json` that stayed, answers
+  cached while the index was broken, the X-Forwarded-For LOW) are all fixed in **2ccd85ea**, each
+  with an offline test that fails on 2f6a5cd6 (`test_cache_offline.py`, `demo/test_demo_offline.py`,
+  in CI and in the archive). Checked under the operator's reproduction (LC_ALL=C, `-X utf8=0`):
+  `titles.json` 3.3 MB, `check_demo.py` 7/7 live. Wider than reported: every network failure now
+  raises `ResolverUnavailable` and caches nothing (seven places used to turn an outage into a
+  cached "unlinked").
+- **Tags:** the GitHub ruleset "Protected release and deploy tags" (`v[0-9]*`, `dataset-v*`,
+  `api-v*` (REST API planned), `prod-*`, `demo-*`, `known-good`); scheme and roles in
+  `docs/RELEASING.md`. The full check is `release_check.py`, with reviewed WRONGs in
+  `docs/known_wrong.json`. Answer caches are now named by `citenorm.code_fingerprint()`.
+  `known-good` is set once the sample eval at HEAD finishes.
+
 **Waiting on the owner:**
 1. ~~Code license~~: **MIT**, decided 2026-11-25; LICENSE added, v0.1.0 tagged and released.
 2. ~~Default conventions~~: **ship `common`** (decided 2026-11-25). `strict` stays available.
