@@ -7,7 +7,7 @@ name = "citenorm"
 dynamic = ["version"]
 description = "Normalize messy Anglo-Orthodox Torah citations to Sefaria references: propose candidates, let Sefaria verify, never guess."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 authors = [{ name = "Eric Safern" }]
 keywords = ["sefaria", "torah", "talmud", "citations", "jewish-texts", "normalization"]
 classifiers = [
