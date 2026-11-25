@@ -17,9 +17,7 @@ Two-phase, so it's polite and resumable:
 import html, json, os, random, re, sys
 
 HERE = os.path.dirname(__file__)
-SCRATCH = os.environ.get("MY_SCRATCH",
-    "/tmp/claude-0/-home-user-sefaria-citation-normalizer/"
-    "7f1ee42f-601d-54be-9f47-b5dde92f8158/scratchpad")
+SCRATCH = os.environ.get("MY_SCRATCH", os.path.join(HERE, "web_pairs_raw"))
 DUMP = os.path.join(SCRATCH, "judaism.7z")
 POSTS = os.path.join(SCRATCH, "Posts.xml")
 SAMPLE = int(sys.argv[1]) if len(sys.argv) > 1 else 800

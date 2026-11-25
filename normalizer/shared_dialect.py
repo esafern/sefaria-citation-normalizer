@@ -1,22 +1,17 @@
 """Anglo-Orthodox citation dialect: shared abbreviation/prefix data.
 
-Vendored byte-identically into two repos — this file, and
-`rav-shvat-blog/pipeline/sefaria_linker/shared_dialect.py`. Each repo's test
-suite has a diff-check test that fails loudly the moment the two copies
-diverge (see `test_shared_dialect.py` at this repo's root). This is a
-deliberate choice over a live cross-repo import: the two repos' Sefaria
-linkers evolve on independent, uncoordinated schedules, and a live dependency
-would mean an unrelated change here could silently break the blog's build.
-See `INTEGRATION-PLAN.md` for the full rationale.
+Vendored into a second, private consumer of this normalizer. Only the code
+below must stay identical between the two copies (this docstring may differ);
+`test_shared_dialect.py` checks that when the twin is available locally.
+Vendoring, not a live cross-repo import, is deliberate: the two consumers
+evolve on independent schedules, and a live dependency would let a change
+here silently break the other's build.
 
 Scope is deliberately narrow: abbreviation maps, Shulchan Aruch section
-names, the Rambam-section name map, and structural corpus prefixes — general
+names, the Rambam-section name map, and structural corpus prefixes: general
 Anglo-Orthodox dialect knowledge that holds regardless of how a consumer
-turns a citation into a link (propose-many-candidates-and-verify against
-Sefaria's /api/name, or a hardcoded per-work regex). Per-work URL
-construction, mislink-avoidance precision logic, and each repo's own
-candidate-generation/composition strategy are NOT here — they stay local to
-whichever repo needs them.
+turns a citation into a link. Per-work URL construction, mislink-avoidance
+logic, and candidate generation are NOT here; they stay local.
 """
 import re
 

@@ -34,7 +34,7 @@ after LLM labeling and Sefaria verification, **139 verified `raw → ref` pairs*
 (`data/citation_dataset.json`; `python3 benchmark.py` reports `/139`).
 
 The deterministic general rules resolve **107/139 (76%)** of that corpus (2026-08-18;
-up from ~43% at this repo's start — see `HANDOFF.md` for what moved it). The families:
+up from ~43% at this repo's start — see `docs/notes/HANDOFF.md` for what moved it). The families:
 
 | family | rule-able |
 |---|---|
@@ -50,9 +50,9 @@ titles (`Book of Faith and Opinions → The Book of Beliefs and Opinions`), alte
 names (`Book of Jasher → Sefer HaYashar`), Hebrew, and a long tail of one-off
 spellings — plus a smaller, real gap in bare tractate names with no locator
 (`Kesubos`, `Rosh Ha-Shanah` alone) that the live-canonicalization pass doesn't
-yet reach (open item, see `HANDOFF.md`). The knowledge-based share is the job of
+yet reach (open item, see `docs/notes/HANDOFF.md`). The knowledge-based share is the job of
 an LLM (at small scale) or a fine-tuned SLM / Sefaria's find-refs (at large
-scale) — see `HANDOFF.md`'s tier-2 design notes.
+scale) — see `docs/notes/HANDOFF.md`'s tier-2 design notes.
 
 So this repo is deliberately **tier 1** — the deterministic ceiling — and the
 dataset is what feeds tier 2.
@@ -77,7 +77,7 @@ pure halachic citations. Mining the **full site (640 substantial pages)** yielde
    Daat, Halacha Brurah) is the single biggest gap (~⅓ of all demand). Built with
    the same propose→verify discipline: each "absent" work is re-checked through
    the normalizer's own candidate spellings so present-but-transliterated works
-   aren't falsely listed. See `CORPUS-COMPARISON.md` for the full-vs-250-page diff.
+   aren't falsely listed. See `docs/notes/CORPUS-COMPARISON.md` for the full-vs-250-page diff.
 
 ## Layout
 
@@ -85,7 +85,7 @@ pure halachic citations. Mining the **full site (640 substantial pages)** yielde
 - `normalizer/resolve.py` — propose → `/api/name` → cache.
 - `data/citation_dataset.json` — verified `raw → Sefaria ref` pairs.
 - `pipeline/` — the corpus miner (`find-refs` failures) and verify/cluster tools.
-- `HANDOFF.md` ("Current status") and `LESSONS.md` — where things stand and why.
+- `docs/notes/HANDOFF.md` ("Current status") and `docs/notes/LESSONS.md` — where things stand and why.
 - `benchmark.py` — scores the rules against the dataset: correct / coarser / finer / WRONG / unresolved (`--strict` fails on any WRONG).
 
 ## Provenance & scope

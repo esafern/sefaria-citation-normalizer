@@ -34,7 +34,10 @@ pipeline/mine_wiki.log
 
 # raw web-pair sources (CC BY-SA dumps, regenerable)
 pipeline/web_pairs_raw/
-contribution/evidence/sefaria_titles_snapshot.json
-contribution/evidence/casefold_groups_cache.json
-contribution/evidence/casefold_run.log
+docs/upstream/evidence/sefaria_titles_snapshot.json
+docs/upstream/evidence/casefold_groups_cache.json
+docs/upstream/evidence/casefold_run.log
 normalizer/.titles_cache.json
+
+# local-only drafts (unsent emails etc.), never published
+private/

@@ -3,7 +3,7 @@
 _Three corpora, and only one gives an answer. This documents the most-cited
 **public-domain works absent from Sefaria**, measured separately in (a) Halachipedia,
 (b) Sefaria's own source sheets, and (c) Hebrew Wikisource — and why they diverge.
-Companion to `SEFARIA-MOST-WANTED.md`, `CORPUS-COMPARISON.md`, and `FINDINGS.md`._
+Companion to `SEFARIA-MOST-WANTED.md`, `docs/notes/CORPUS-COMPARISON.md`, and `docs/FINDINGS.md`._
 
 ## Halachipedia — a clear public-domain acquisition signal
 
@@ -78,7 +78,7 @@ allusive Hebrew references), not a coverage one.
 
 ## Why the corpora diverge (the two-mode split)
 
-This is the central finding of `FINDINGS.md`, seen from the acquisition angle. A
+This is the central finding of `docs/FINDINGS.md`, seen from the acquisition angle. A
 citation the linker can't resolve fails for one of two reasons, and genre decides which
 dominates:
 

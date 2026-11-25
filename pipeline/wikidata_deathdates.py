@@ -9,7 +9,7 @@ passing and the table doesn't re-check itself — an author correctly modern
 when the table was written can cross the 70-year threshold years later
 without anyone noticing (see the Chazon Ish finding this script surfaces).
 This is a one-off verification pass, not infrastructure: 71 authors, run
-once, review the output by hand. See HANDOFF.md item 2 and ANALYSIS.md's
+once, review the output by hand. See docs/notes/HANDOFF.md item 2 and ANALYSIS.md's
 caveat about a *different* unreliable Wikidata use (title-based translation-
 availability matching for works). Turns out this is NOT immune to the same
 underlying problem, contrary to what was first assumed here: Wikidata's

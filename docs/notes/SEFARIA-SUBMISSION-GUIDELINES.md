@@ -35,7 +35,7 @@ templates, no code of conduct; license GPL-3.0.
 
 1. **#1016 comment (posted 2026-11-24):** it was posted as raw HTML (pasted from a rendered
    preview), 23k characters, so formatting and links are probably lost. Edit it to the raw
-   Markdown in `contribution/issue-1016-comment.md`. Also consider softening the closing PR offer
+   Markdown in `docs/upstream/issue-1016-comment.md`. Also consider softening the closing PR offer
    ("Would you accept a PR…"): given their stated policy, the realistic ask is "here's the cause
    and a safe fix shape; happy to share the patch." Keep the draft PR as a reference to attach or
    link, not something to open.
@@ -43,9 +43,9 @@ templates, no code of conduct; license GPL-3.0.
    team" and a close.
 3. **Data errors** (rotated Mishneh Torah aliases, the stray Mishnah Berurah title, HTML in
    titles): email corrections@sefaria.org, not GitHub. Draft:
-   `contribution/email-corrections-data-errors.txt`.
+   `private/email-corrections-data-errors.txt (local, not in git)`.
 4. **Bigger asks** (the case-insensitive fallback, conventions questions, the dataset or the
    dialect map as linker test cases): best as a direct conversation with developers@sefaria.org,
-   since PRs aren't a channel. Draft: `contribution/email-developers-conventions.txt`.
+   since PRs aren't a channel. Draft: `private/email-developers-conventions.txt (local, not in git)`.
 5. **"Powered by Sefaria":** this repo (normalizer + most-wanted list + web-pairs dataset) fits
    their suggested path for outside builders. Listing it there is another route to visibility.

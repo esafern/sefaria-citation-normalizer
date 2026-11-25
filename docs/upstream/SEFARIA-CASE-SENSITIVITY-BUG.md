@@ -47,7 +47,7 @@
 > unresolved**, so every case variant Sefaria has added points to the same text.
 > **Full run 2026-11-24 (all 1,097 groups, 2,207 titles): 0 divergent; 1,093/1,093
 > synthetic miscasings fail today; 18 lowercase-initial alt titles and 24 hyphenated
-> titles are unreachable** (see `contribution/evidence/casefold_groups_results.json`). The 27
+> titles are unreachable** (see `docs/upstream/evidence/casefold_groups_results.json`). The 27
 > groups with all-caps words (`GRA`/`Gra`, `JT`, Roman numerals) were checked by eye and
 > also look like the same text. Proposed fix: on an exact-match miss, look up a
 > lowercased title map, and accept only if the lowercased key maps to exactly **one**

@@ -52,7 +52,7 @@ correctness test**; the benchmark has 32 circular rule-labeled rows (loose end 8
   `shared_dialect.py`**, so the blog repo doesn't have them (loose end 5).
 - Sefaria case-sensitivity research: full 1,097-group check (0 divergent; 1,093/1,093
   miscasings fail; 18 lowercase + 24 hyphenated alt titles unreachable). Comment for issue
-  #1016: `contribution/issue-1016-comment.md`; draft PR: `SEFARIA-CASE-SENSITIVITY-PR.md`.
+  #1016: `docs/upstream/issue-1016-comment.md`; draft PR: `docs/upstream/SEFARIA-CASE-SENSITIVITY-PR.md`.
   **Neither posted.**
 - Branches: `0ctxcz` merged, `pd-index-submissions` updated and merged, `lw5947` deleted.
 
@@ -258,7 +258,7 @@ A fresh sample eval on current code (`sample_eval.log`) is running.
     same query's `completions` list has `"Rosh Hashanah"` as its first suggestion. This means
     contributing our alias data to their fuzzy matcher would not fix anything we depend on —
     it's not in the decision path. A bug report against the exact-match path is drafted at
-    `SEFARIA-CASE-SENSITIVITY-BUG.md` (this repo), not yet posted (see "Contribute to
+    `docs/upstream/SEFARIA-CASE-SENSITIVITY-BUG.md` (this repo), not yet posted (see "Contribute to
     Sefaria" below).
   - **Tier-2 design plan** (dispatched to an Opus-backed planning pass): recommends *not*
     building tier 2 yet — land "tier 1.5" first (case/whitespace candidates, done above in
@@ -332,7 +332,7 @@ A fresh sample eval on current code (`sample_eval.log`) is running.
 
 ## Relationship to the blog repo
 
-This work spun out of `~/work/rav-shvat-blog`, which has its own embedded copy of the linker
+This work spun out of `~/work/the private blog repo`, which has its own embedded copy of the linker
 (`pipeline/sefaria_linker/`) that the blog build actually uses. R&D happens here; keep the
 two from drifting. `SEFARIA-API-BUG.md` / `SEFARIA-CONTRIB-DRAFTS.md` currently live in the
 blog repo but document Sefaria issues — candidates to move here.
@@ -631,7 +631,7 @@ those would recover several.
 - `claude/project-onboarding-status-lw5947`: superseded by PR #2 (its PR #1 was closed). **Remote branch deleted.**
 - `claude/project-onboarding-plan-0ctxcz`: 6 docs-only commits (Yad Malachi case trimmed,
   Hebrew forum findings in `FINDINGS.md`). **Merged to `main`.**
-- `claude/pd-index-submissions`: `contribution/pd_index_submissions.md` synced with `main`'s
+- `claude/pd-index-submissions`: `docs/pd_index_submissions.md` synced with `main`'s
   list (added Chazon Ish as F4, dropped Teshuvot HaRadbaz since it's present, corrected
   Rokeach d.1238 and Yad Malachi d.1772). **Merged to `main`.**
 - The two merged remote branches can be deleted once `main` is pushed.
@@ -708,7 +708,7 @@ those would recover several.
      covered by Sefaria's fuzzy `AutoCompleter`, confirmed by reading `sefaria/model/text.py`
      and `autospell.py` directly) is case-sensitive beyond the first letter of the query, with
      no fallback to the suggestion engine that already has the right answer. Draft bug report
-     at `SEFARIA-CASE-SENSITIVITY-BUG.md` (this repo) — not posted, pending the same
+     at `docs/upstream/SEFARIA-CASE-SENSITIVITY-BUG.md` (this repo) — not posted, pending the same
      "deliverable is polished" call as the dataset/dialect-map contribution. This also
      sharpens the already-drafted-but-unposted comment on their issue #577 in the blog repo's
      `archive/SEFARIA-CONTRIB-DRAFTS.md` (draft B, "the alias list is structurally

@@ -11,9 +11,9 @@ canonicalizes to -> "Berakhot" -> recompose as "Jerusalem Talmud Berakhot"),
 instead of a hand-maintained spelling list: such a list can never keep up with
 every Anglo transliteration a writer might use (Brachot/Brachos/B'rachot/...),
 but Sefaria's own alt-title data already covers what the rules layer misses.
-Ported from rav-shvat-blog's pipeline/sefaria_linker/resolver.py, which had
+Ported from the private blog repo's pipeline/sefaria_linker/resolver.py, which had
 the same idea but a bug that silently excluded every Tosefta/Mishnah
-candidate from ever reaching it (fixed here and there — see INTEGRATION-PLAN.md).
+candidate from ever reaching it (fixed here and there — see docs/notes/INTEGRATION-PLAN.md).
 """
 import json
 import os
@@ -431,7 +431,7 @@ def _resolve_bare_via_canonicalization(cands, orig_citation, polite):
     "Ketubot" needs an actual letter change: Ashkenazi soft-tav as "s" vs.
     Sephardi/modern "t" -- not just reformatting). That's a known, disclosed
     gap, not a bug here: closing it needs either a hand-typed alias (this
-    project deliberately rejects that shape, see HANDOFF.md) or a bounded
+    project deliberately rejects that shape, see docs/notes/HANDOFF.md) or a bounded
     phonetic-substitution generator (real mislink-risk surface of its own,
     not attempted). It does catch legitimate reformatting: connector words
     ("Tosefta to Tractate Chagigah" -> "Tosefta Chagigah"), hyphenation

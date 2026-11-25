@@ -1,6 +1,6 @@
 <!-- Draft NEW issue for https://github.com/Sefaria/Sefaria-Project/issues (not posted).
      Permalinks pinned to master @ c18cf5a (2026-11-23). Repro re-checked live 2026-11-25.
-     Evidence: contribution/evidence/hyphen_titles_results.json. Post everything below this comment. -->
+     Evidence: docs/upstream/evidence/hyphen_titles_results.json. Post everything below this comment. -->
 
 **Title:** Titles containing a hyphen can never be resolved: `Ref()` splits on `-` before looking up the title (110 of 110 hyphenated titles unreachable)
 

@@ -66,7 +66,7 @@ capital (`HaChaim`, `BeYehuda`) doubles the possible casings, so common forms li
   (2,207 titles) was resolved live on 2026-11-24: **0 groups map to two different
   refs**. A miscasing absent from the title list fails today for **1,093 of 1,093**
   groups. The ambiguity guard exists for future data, not because of a known collision.
-  (Script and results: `contribution/evidence/casefold_groups_check.py`,
+  (Script and results: `docs/upstream/evidence/casefold_groups_check.py`,
   `casefold_groups_results.json`.)
 - **It also rescues dead alt titles.** 18 stored alt titles begin with a lowercase
   letter (`vaYikra`, `shulchan aruch orach chaim`, `or zarua, Volume II`, ...) and can

@@ -53,7 +53,7 @@ Two independently-maintained citation linkers exist:
    propose-candidates-then-verify-via-Sefaria's-`/api/name`. Never constructs a URL
    itself; needs network or cache to produce a link. General-purpose, no per-work
    whitelist, the intended eventual Sefaria contribution.
-2. **The blog repo** (`~/work/rav-shvat-blog/pipeline/sefaria_linker/`) — a private repo
+2. **The blog repo** (`the blog repo's pipeline/sefaria_linker/`) — a private repo
    building Rav Ari Shvat's Torah blog. Contains **two different designs**:
    - `offline.py` — hardcoded per-work regex → URL construction (`TALMUD`, `TANACH`,
      `RAMBAM` dicts, qualified-tractate handling, dual commentary+base linking). No
@@ -63,7 +63,7 @@ Two independently-maintained citation linkers exist:
      `rules.py`/`resolve.py`, independently evolved. **Currently dead code** — only
      exercised by `pipeline/test_linker.py`, never wired into the live CLI.
 
-On 2026-08-05, a real citation (`"Tosefta, Av.Z. 5, 2"`, from Rav Shvat's own writing)
+On 2026-08-05, a real citation (`"Tosefta, Av.Z. 5, 2"`, from the blog author's own writing)
 exposed the cost of this duplication: the fix — expanding the `Av.Z.` abbreviation, and
 discovering Sefaria's trie rejects `"Tosefta, X"` but accepts `"Tosefta X"` (a general,
 not citation-specific, finding) — had to be made **twice**, by hand, in two different
@@ -117,7 +117,7 @@ risk; revisit if this repo ever gets a stable release/tagging discipline worth p
      (see "Bugs already fixed" below — don't reintroduce them)
 2. **Reconcile, don't just pick one.** Read both current files in full:
    - `~/work/sefaria-citation-normalizer/normalizer/rules.py`
-   - `~/work/rav-shvat-blog/pipeline/sefaria_linker/dialect.py`
+   - `the blog repo's pipeline/sefaria_linker/dialect.py`
    They've diverged in real, non-trivial ways (different RAMBAM_SECTIONS entries,
    different structural-prefix lists, different composition strategies for how
    abbreviation expansion combines with other rules). Merge into one correct superset;
@@ -166,7 +166,7 @@ of commit `413770c`, and in the blog's `offline.py`/`dialect.py` as of commit `9
 
 ## Current repo state (as of this writing, both pushed)
 
-- Blog: `rav-shvat-blog` @ `f0c358f` — clean, nothing pending.
+- Blog: the blog repo — clean, nothing pending.
 - Normalizer: `sefaria-citation-normalizer` @ `dc8eb1a` — clean. This repo also gets
   substantial contributions from other, uncoordinated sessions — not live/concurrent (the
   most recent one before today was 2026-08-01, four days prior), but real and unpredictable

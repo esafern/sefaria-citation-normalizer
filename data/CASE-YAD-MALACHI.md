@@ -238,7 +238,7 @@ the cost of every public-domain work after this one.
     *klalei ha-hora'ah* — the rules of pesak governing the Rif/Rambam/Rosh and the
     Mechaber (e.g. webyeshiva.org, "Rabbi Ovadia Yosef's Halakhic Methodology";
     Nishmat; R. Chaim Jachter, Kol Torah) — which is Yad Malachi's exact domain. The
-    demand figures are this project's Halachipedia analysis (`CORPUS-COMPARISON.md`);
+    demand figures are this project's Halachipedia analysis (`docs/notes/CORPUS-COMPARISON.md`);
     the same-footnote co-citations (Yad Malachi with Taharat HaBayit and Yabia Omer)
     are from the Halachipedia corpus (`pipeline/hp_cache`). **Caveat:** a direct
     citation count from *within* R. Ovadia's own works could not be machine-verified —

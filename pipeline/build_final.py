@@ -120,7 +120,7 @@ ERA = {
     "piskeiteshuvot": ("Simcha Rabinowitz, modern", "MOD"),
     # Was MOD; Wikidata-confirmed d.1953 = 73 years ago (>70y threshold as of
     # 2026) -> reclassified PD 2026-08-05. See pipeline/wikidata_deathdates.py
-    # and HANDOFF.md item 2 -- these eras age and need periodic re-checking,
+    # and docs/notes/HANDOFF.md item 2 -- these eras age and need periodic re-checking,
     # not just one-time classification.
     "chazonish": ("A.Y. Karelitz (d.1953)", "PD"),
     "orletzion": ("Ben Zion Abba Shaul (d.1998)", "MOD"),
