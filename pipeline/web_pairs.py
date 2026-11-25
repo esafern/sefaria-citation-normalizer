@@ -393,7 +393,7 @@ def _layer_noise(raw, url, gold):
 def evaluate():
     sys.path.insert(0, ROOT)
     from benchmark import classify
-    from citenorm.resolve import resolve, Cache
+    from citenorm.resolve import resolve, Cache, ResolverUnavailable
     # One resolver cache per output file: concurrent runs (a background full run and
     # a sample run) sharing one cache overwrite each other's entries on save, and a
     # cache filled by older code silently returns stale answers.
@@ -403,7 +403,11 @@ def evaluate():
     tally = collections.defaultdict(collections.Counter)
     wrong = []
     for i, r in enumerate(pairs, 1):
-        url = resolve(r["raw"], cache=cache, polite=0.3)
+        try:
+            url = resolve(r["raw"], cache=cache, polite=0.3)
+        except ResolverUnavailable:
+            tally["errors"]["unavailable"] += 1      # not cached: retried on the next run
+            continue
         k = classify(url, r["sefaria_ref"])
         if k == "WRONG" and _layer_noise(r["raw"], url, r["sefaria_ref"]):
             k = "label_noise"

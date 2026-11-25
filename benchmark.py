@@ -26,7 +26,7 @@ import sys
 import urllib.parse
 
 sys.path.insert(0, os.path.dirname(__file__))
-from citenorm.resolve import resolve, Cache
+from citenorm.resolve import resolve, Cache, ResolverUnavailable
 
 HERE = os.path.dirname(__file__)
 
@@ -91,7 +91,10 @@ def main():
     cache = Cache(os.path.join(HERE, "pipeline", "verify_cache.json"))
     rows = {k: [] for k in ("correct", "coarser", "finer", "WRONG", "unresolved")}
     for d in data:
-        url = resolve(d["raw"], cache=cache, polite=0.03)
+        try:
+            url = resolve(d["raw"], cache=cache, polite=0.03)
+        except ResolverUnavailable as e:
+            sys.exit(f"Sefaria unreachable at {d['raw']!r} ({e}); nothing cached for it, rerun later")
         rows[classify(url, d["sefaria_ref"])].append((d["raw"], url, d["sefaria_ref"]))
     cache.save()
 

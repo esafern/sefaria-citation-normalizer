@@ -18,3 +18,4 @@ jobs:
       - run: python test_rules_offline.py
       - run: python test_shared_dialect.py   # skips without a configured twin
       - run: python demo/test_demo_offline.py
+      - run: python test_cache_offline.py      # non-UTF-8 locale, stub files, outages

@@ -33,6 +33,27 @@ from . import __version__  # noqa: E402
 USER_AGENT = f"citenorm/{__version__} (+https://github.com/esafern/sefaria-citation-normalizer)"
 
 
+class ResolverUnavailable(Exception):
+    """Sefaria (or the title list) couldn't be reached, so the answer is unknown.
+    Raised instead of returning None, so an outage is never cached as "unlinked"."""
+
+
+def _write_json_atomic(path, obj, ascii_only=False):
+    """Write JSON as UTF-8 to a temporary file, then rename it over `path`, so a failed
+    write never leaves a partial file. (On a host whose locale isn't UTF-8, a plain
+    open(path, "w") stopped at the first non-ASCII character, leaving a stub every worker
+    then read.)"""
+    tmp = f"{path}.tmp.{os.getpid()}"
+    try:
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(obj, f, ensure_ascii=ascii_only, indent=None if ascii_only else 1,
+                      sort_keys=not ascii_only)
+        os.replace(tmp, path)
+    finally:
+        if os.path.exists(tmp):
+            os.remove(tmp)
+
+
 def _cache_dir():
     """Where downloaded data lives: $CITENORM_CACHE, else ~/.cache/citenorm."""
     d = os.environ.get("CITENORM_CACHE") or os.path.join(os.path.expanduser("~"), ".cache", "citenorm")
@@ -57,7 +78,13 @@ _UNSET = object()
 class Cache:
     def __init__(self, path=None):
         self.path = path
-        self.data = json.load(open(path)) if path and os.path.exists(path) else {}
+        self.data = {}
+        if path and os.path.exists(path):
+            try:
+                with open(path, encoding="utf-8") as f:
+                    self.data = json.load(f)
+            except ValueError:
+                os.replace(path, path + ".corrupt")   # keep it for inspection, start clean
         self._dirty = False
 
     def get(self, k):
@@ -78,7 +105,7 @@ class Cache:
 
     def save(self):
         if self.path and self._dirty:
-            json.dump(self.data, open(self.path, "w"), ensure_ascii=False, indent=1, sort_keys=True)
+            _write_json_atomic(self.path, self.data)
             self._dirty = False
 
 
@@ -391,8 +418,6 @@ def _resolve_via_canonicalization(cands, polite):
         attempts = [(prefix, head)] + ([("", full_head)] if prefix else [])
         for pre, hd in attempts:
             url = _canonicalize_and_resolve(pre, hd, nums, polite)
-            if url == "ERROR":
-                return None
             if url:
                 return url
     return None
@@ -401,8 +426,8 @@ def _resolve_via_canonicalization(cands, polite):
 def _canonicalize_and_resolve(prefix, head, nums, polite):
     try:
         canons = _name_candidates(head)
-    except Exception:
-        return "ERROR"
+    except Exception as e:
+        raise ResolverUnavailable(str(e)) from e
     if True:
         for canon in canons:
             if not canon or canon == head:
@@ -411,8 +436,8 @@ def _canonicalize_and_resolve(prefix, head, nums, polite):
                 continue  # completion drops part of the citation: a different work
             try:
                 url = _name(f"{prefix}{canon} {nums}")
-            except Exception:
-                return "ERROR"
+            except Exception as e:
+                raise ResolverUnavailable(str(e)) from e
             if polite:
                 time.sleep(polite)
             if url and _adds_part_numeral(head, url):
@@ -462,8 +487,8 @@ def _resolve_bare_via_canonicalization(cands, orig_citation, polite):
             continue  # has a locator; handled by _resolve_via_canonicalization
         try:
             refs = _name_ref_completions(cand)
-        except Exception:
-            return None
+        except Exception as e:
+            raise ResolverUnavailable(str(e)) from e
         for o in refs:
             key = o["key"]
             words = re.findall(r"[A-Za-z'’\-.]+", key)
@@ -473,8 +498,8 @@ def _resolve_bare_via_canonicalization(cands, orig_citation, polite):
                 continue  # same guard as pass 2, in the other direction
             try:
                 url = _name(key)
-            except Exception:
-                return None
+            except Exception as e:
+                raise ResolverUnavailable(str(e)) from e
             if polite:
                 time.sleep(polite)
             if url:
@@ -500,15 +525,15 @@ def _hilchot_is_ambiguous(citation, url):
         for t in _vocab_matches("Rambam, Hilchot " + sec)[:4]:
             try:
                 u = _name(t)
-            except Exception:
-                return True
+            except Exception as e:
+                raise ResolverUnavailable(str(e)) from e
             if u and "Mishneh_Torah" in u:
                 return True
         return False
     try:
         titles = [o.get("title", "") for o in _name_ref_completions(head, limit=15)]
-    except Exception:
-        return True   # can't check, so don't guess
+    except Exception as e:
+        raise ResolverUnavailable(str(e)) from e
     titles += _vocab_matches(head)
     seen = set()
     for t in titles:
@@ -519,8 +544,8 @@ def _hilchot_is_ambiguous(citation, url):
         # alt title of the Mishneh Torah itself doesn't count)
         try:
             other = _name(t[:1].upper() + t[1:])
-        except Exception:
-            return True
+        except Exception as e:
+            raise ResolverUnavailable(str(e)) from e
         if other and "Mishneh_Torah" not in other:
             return True
         if len(seen) >= 6:
@@ -539,20 +564,39 @@ def _titles_path():
 _TITLE_INDEX = None
 
 
+_MIN_TITLES = 10000   # Sefaria has ~67,000; anything far below is a broken download
+
+
+def _load_titles():
+    """Sefaria's title list, from the cache or (once) from the API. Raises
+    ResolverUnavailable rather than ever returning a partial or empty list."""
+    path = _titles_path()
+    for attempt in (1, 2):
+        if not os.path.exists(path):
+            try:
+                data = _get_json("/api/index/titles", timeout=60)
+            except Exception as e:
+                raise ResolverUnavailable(f"couldn't download Sefaria's title list: {e}") from e
+            _write_json_atomic(path, data, ascii_only=True)
+        try:
+            with open(path, encoding="utf-8") as f:
+                titles = json.load(f)["books"]
+            if len(titles) >= _MIN_TITLES:
+                return titles
+        except (ValueError, KeyError, TypeError):
+            pass
+        os.remove(path)          # broken or too small: fetch it again, once
+    raise ResolverUnavailable("Sefaria's title list is unusable after a fresh download")
+
+
 def _title_index():
-    """first-distinctive-word skeleton -> [titles]. Fetches /api/index/titles once
-    (cached next to this file, gitignored); returns {} if offline."""
+    """first-distinctive-word skeleton -> [titles], built once per process from
+    _load_titles(). A failure raises (and is retried on the next call); it is never
+    remembered as an empty index."""
     global _TITLE_INDEX
     if _TITLE_INDEX is not None:
         return _TITLE_INDEX
-    try:
-        path = _titles_path()
-        if not os.path.exists(path):
-            json.dump(_get_json("/api/index/titles", timeout=60), open(path, "w"), ensure_ascii=False)
-        titles = json.load(open(path))["books"]
-    except Exception:
-        _TITLE_INDEX = {}
-        return _TITLE_INDEX
+    titles = _load_titles()
     idx = {}
     for t in titles:
         if "<" in t or re.search(r"[-\u2010-\u2015]", t):
@@ -598,8 +642,8 @@ def _resolve_via_vocabulary(cands, polite):
         for t in titles:
             try:
                 url = _name(f"{t} {nums}")
-            except Exception:
-                return None
+            except Exception as e:
+                raise ResolverUnavailable(str(e)) from e
             if polite:
                 time.sleep(polite)
             if url and not _adds_part_numeral(head, url):
@@ -668,7 +712,10 @@ def resolve(citation, cache=None, online=True, polite=0.2, conventions="common")
     conventions: "common" (default) follows Sefaria's own conventions for three
     ambiguous patterns; "strict" leaves them unlinked (see _convention_used).
     The cache holds the common answer (citation -> url, None for a known
-    miss); strict mode is applied on top, so one cache serves both."""
+    miss); strict mode is applied on top, so one cache serves both.
+
+    Raises ResolverUnavailable if Sefaria or its title list couldn't be reached;
+    nothing is cached then, so the citation is tried again next time."""
     if conventions not in CONVENTIONS:
         raise ValueError(f"conventions must be one of {CONVENTIONS}")
     url = _resolve_common(citation, cache=cache, online=online, polite=polite)
@@ -687,9 +734,8 @@ def _resolve_common(citation, cache=None, online=True, polite=0.2):
         for cand in cands:
             try:
                 url = _name(cand)
-            except Exception:
-                url = None
-                break
+            except Exception as e:
+                raise ResolverUnavailable(str(e)) from e
             if polite:
                 time.sleep(polite)
             if url:

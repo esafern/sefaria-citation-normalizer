@@ -1,7 +1,8 @@
 """Command line: citenorm "Berachos 5a" "SA OC 271:1"   (or one citation per line on stdin)
 
 Prints one tab-separated line per citation: the citation, then the Sefaria URL,
-or "-" when it can't be linked without guessing.
+"-" when it can't be linked without guessing, or "?" when Sefaria couldn't be
+reached (not cached; exit status 1).
 """
 import argparse
 import json
@@ -9,7 +10,7 @@ import os
 import sys
 
 from . import __version__
-from .resolve import Cache, resolve, CONVENTIONS, _cache_dir
+from .resolve import Cache, resolve, CONVENTIONS, ResolverUnavailable, _cache_dir
 
 
 def main(argv=None):
@@ -31,17 +32,24 @@ def main(argv=None):
     cits = a.citations or [line.strip() for line in sys.stdin if line.strip()]
     cache = Cache(a.cache) if a.cache else None
     try:
+        failed = 0
         for c in cits:
-            url = resolve(c, cache=cache, polite=a.polite, conventions=a.conventions)
+            try:
+                url = resolve(c, cache=cache, polite=a.polite, conventions=a.conventions)
+                err = None
+            except ResolverUnavailable as e:
+                url, err, failed = None, str(e), failed + 1
+                print(f"citenorm: {c!r}: Sefaria unreachable ({e})", file=sys.stderr)
             if a.json:
-                print(json.dumps({"citation": c, "url": url}, ensure_ascii=False))
+                print(json.dumps({"citation": c, "url": url, **({"error": err} if err else {})},
+                                 ensure_ascii=False))
             else:
-                print(f"{c}\t{url or '-'}")
+                print(f"{c}\t{url or ('?' if err else '-')}")
             sys.stdout.flush()
     finally:
         if cache is not None:
             cache.save()
-    return 0
+    return 1 if failed else 0
 
 
 if __name__ == "__main__":
