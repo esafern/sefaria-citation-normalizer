@@ -120,6 +120,9 @@ _DROPPABLE = {
 # ..."). Deliberately NOT satisfied by an unrelated title: "Sefer Hamitzvot of
 # Rambam" -> "Sefer Hamitzvot of Rasag" still fails.
 _RAMBAM = {"rambam", "maimonides", "moses", "yad", "mishneh"}
+# On the title side only these count: "Yad." alone is Sefaria's abbreviation for
+# tractate Yadayim, so it must not satisfy "Rambam".
+_RAMBAM_TITLE = {"rambam", "maimonides", "mishneh"}
 
 
 def _split_words(s):
@@ -148,17 +151,71 @@ def _skeleton(k):
     return re.sub(r"(.)\1+", r"\1", k)
 
 
+def _translit(k):
+    """Consonant skeleton of a word key for comparing Hebrew transliterations.
+    Merges only genuine variants: tav as s or t (Kesubos/Ketubot), tz = ts, sh,
+    th = t, ph = f, v = b (bet/vet), q = k, ch = kh, and a NON-initial k = ch
+    (Berakoth/Berakhot; but Kallah != Challah: kaf vs chet). A y before a vowel is
+    a consonant (Kilayim != Kelim). Vowels are compared separately (_vowel_groups)."""
+    k = re.sub(r"(?<=[aeiou])h$", "", k)                 # final h after a vowel
+    k = k.replace("tz", "z").replace("ts", "z").replace("sh", "S").replace("kh", "C")
+    k = k.replace("ch", "C").replace("th", "t").replace("ph", "f").replace("q", "k")
+    k = k.replace("w", "v").replace("v", "b").replace("c", "k").replace("s", "t")
+    k = k.replace("h", "C")                              # academic h for chet (Bahya/Bachya)
+    k = k[:1] + k[1:].replace("k", "C")                  # non-initial k = chaf
+    out = []
+    for i, ch in enumerate(k):
+        nxt = k[i + 1] if i + 1 < len(k) else ""
+        # y is a consonant before a/e/o/u (Vayera, Kilayim's "ya"... ), a vowel otherwise
+        # (Chayim = Chaim)
+        vowel = ch in "aeiou" or (ch == "y" and not (nxt and nxt in "aeou"))
+        if not vowel and (not out or out[-1] != ch):
+            out.append(ch)
+    return "".join(out), None
+
+
+def _vowel_groups(k):
+    """Vowel classes per gap between consonants, e-class dropped."""
+    k = re.sub(r"(?<=[aeiou])h$", "", k)
+    groups, cur = [], ""
+    for i, ch in enumerate(k):
+        nxt = k[i + 1] if i + 1 < len(k) else ""
+        is_v = ch in "aeiou" or (ch == "y" and not (nxt and nxt in "aeou"))
+        if is_v:
+            cur += ch
+        elif cur:
+            groups.append(cur)
+            cur = ""
+    if cur:
+        groups.append(cur)
+    out = []
+    for g in groups:
+        g = g.replace("ei", "e").replace("ey", "e")            # tzere: same class as e (dropped)
+        g = g.replace("ee", "i").replace("oo", "u").replace("ou", "u").replace("y", "i")
+        cls = "".join(sorted({"a": "A", "o": "A", "u": "U", "i": "I"}.get(c, "") for c in g if c != "e"))
+        cls = "".join(dict.fromkeys(cls))
+        if cls:
+            out.append(cls)
+    return out
+
+
 def _words_match(a, b):
-    """Same word up to transliteration. Short words must match exactly: at
-    2-3 letters nothing can tell YD from OC."""
+    """Same word up to Hebrew transliteration (see _translit). Short words must
+    match exactly. The ratio fallback is strict (0.9, same first letter): a
+    looser one matched Megillah/Me'ilah and Orlah/Torah."""
     if a == b:
         return True
     if min(len(a), len(b)) <= 3:
         return False
-    if _skeleton(a) == _skeleton(b):
+    ca, _ = _translit(a)
+    cb, _ = _translit(b)
+    if ca == cb and _vowel_groups(a) == _vowel_groups(b):
         return True
+    # Fallback for vowel-only differences (Tosfot/Tosafot): the consonants must be
+    # identical. A ratio alone accepted Vaera/Vayera (different parashot).
     from difflib import SequenceMatcher
-    return SequenceMatcher(None, a, b).ratio() >= 0.8
+    return (ca == cb and a[0] == b[0] and min(len(a), len(b)) >= 5
+            and SequenceMatcher(None, a, b).ratio() >= 0.85)
 
 
 # What a canonical title may ADD that the citation lacks: connectors only.
@@ -190,8 +247,15 @@ def _book_group(k):
     return k if any(k == e.lower() for _, e in BOOKS) else None
 
 
-def _matches_any(k, keys):
-    if k in _RAMBAM and _RAMBAM & set(keys):
+def _matches_any(k, keys, keys_are_title=True):
+    """Does citation/title word k match any of keys? The Rambam name group is
+    asymmetric: a citation's "Yad"/"Moses" may stand for the Rambam, but a title's
+    "Yad." is tractate Yadayim, so only rambam/maimonides/mishneh count on the
+    title side."""
+    if keys_are_title:
+        if k in _RAMBAM and _RAMBAM_TITLE & set(keys):
+            return True
+    elif k in _RAMBAM_TITLE and _RAMBAM & set(keys):
         return True
     bg = _book_group(k)
     if bg and any(_book_group(c) == bg for c in keys if c):
@@ -224,8 +288,7 @@ def _keeps_all_words(source, canon):
     if not all(_matches_any(k, can) for k in src):
         return False
     # same order: "Aruch Hashulchan" -> "Shulchan Aruch" is a different book
-    pos = [next(i for i, c in enumerate(can) if _matches_any(k, [c]) or
-                (k in _RAMBAM and c in _RAMBAM)) for k in src]
+    pos = [next(i for i, c in enumerate(can) if _matches_any(k, [c])) for k in src]
     if pos != sorted(pos):
         return False
     # no added numbers: "..., part" -> "..., Part 1" picks a part
@@ -238,10 +301,12 @@ def _keeps_all_words(source, canon):
     if re.match(r"^Rambam, Hilchot ", canon) and re.search(r"\s(?:and|u|v')\s?\S", canon):
         canon = re.split(r"\s(?:and)\s", canon)[0]
     src_all = [_word_key(w) for w in _split_words(source)]
-    added = [w for w in _split_words(canon)
-             if w.lower() not in _CANON_MAY_ADD
+    canon_words = _split_words(canon)
+    added = [w for i, w in enumerate(canon_words)
+             if (w.lower() not in _CANON_MAY_ADD
+                 or (w.lower() in ("talmud", "bavli") and i > 0))
              and not _matches_any(_word_key(w) if w not in ("I", "II", "III", "IV") else w.lower(),
-                                  src_all + src)]
+                                  src_all + src, keys_are_title=False)]
     return not added
 
 
@@ -257,6 +322,15 @@ def _adds_part_numeral(source, url):
     return bool(_ROMAN_PART.search(title)) and not _ROMAN_PART.search(" " + source + " ")
 
 
+# A number right after one of these words is a sub-locator (a footnote, a se'if
+# katan), not the work's top-level section: "Mishna Berurah in note 48" is note 48
+# of some siman, not siman 48. Canonicalizing such a head would drop the word and
+# promote the number.
+_SUBLOCATOR_TAIL = re.compile(
+    r"\b(?:notes?|footnotes?|fn|n\.|s\.?\s?k\.?|s\"k|se'?if\s+katan|seif\s+katan|comment|"
+    r"para(?:graph)?|\u00b6)\s*$", re.I)
+
+
 def _resolve_via_canonicalization(cands, polite):
     """Second-pass fallback: split a candidate into (corpus prefix, work
     head, numbers), ask Sefaria to canonicalize just the head, recompose."""
@@ -265,6 +339,8 @@ def _resolve_via_canonicalization(cands, polite):
         if not m:
             continue
         head, nums = m.group("head"), m.group("nums").strip()
+        if _SUBLOCATOR_TAIL.search(head):
+            continue
         if re.search(r"\d", head):
             # A number inside the work name ("Foundations of Torah 5 Rambam 1")
             # means the locator is split; recomposing with only the trailing
@@ -394,12 +470,23 @@ def _hilchot_is_ambiguous(citation, url):
     X": "Hilchot Talmud Torah 3:7" is also the Baal HaTanya's Hilkhot Talmud
     Torah. If the bare head (spelling-matched) is a non-Rambam title in
     Sefaria's completions, the citation is ambiguous: leave it unlinked."""
-    if not url or "Mishneh_Torah" not in url:
+    if not url:
         return False
-    m = re.match(r"^\s*(Hil(?:chot|chos|khot|\.)\s+.+?)\s*\(?\d", citation, re.I)
+    m = re.match(r"^\s*(Hil(?:chot|chos|khot|khos|\.)\s+.+?)\s*\(?\d", citation, re.I)
     if not m or re.search(r"\b(Rambam|Mishneh Torah|Mishnah Torah|Maimonides|Yad)\b", citation, re.I):
         return False
     head = m.group(1)
+    if "Mishneh_Torah" not in url:
+        # We picked another work's "Hilchot X"; ambiguous if the Rambam has one too.
+        sec = re.sub(r"^\s*Hil(?:chot|chos|khot|khos|\.)\s+", "", head, flags=re.I)
+        for t in _vocab_matches("Rambam, Hilchot " + sec)[:4]:
+            try:
+                u = _name(t)
+            except Exception:
+                return True
+            if u and "Mishneh_Torah" in u:
+                return True
+        return False
     try:
         titles = [o.get("title", "") for o in _name_ref_completions(head, limit=15)]
     except Exception:
@@ -482,7 +569,7 @@ def _resolve_via_vocabulary(cands, polite):
     resolves lands on the same ref (two different works -> ambiguous -> skip)."""
     for cand in cands:
         m = re.match(r"^(?P<head>.*?[A-Za-z])\s+(?P<nums>\d[\d:,.\s\-ab]*)$", cand)
-        if not m or re.search(r"\d", m.group("head")):
+        if not m or re.search(r"\d", m.group("head")) or _SUBLOCATOR_TAIL.search(m.group("head")):
             continue
         head, nums = m.group("head"), m.group("nums").strip()
         titles = _vocab_matches(head)[:8]
@@ -502,6 +589,28 @@ def _resolve_via_vocabulary(cands, polite):
             return next(iter(hits))
         # >1 distinct refs: genuinely ambiguous name, leave it
     return None
+
+
+_SECTION_NAMES = re.compile(r"Orach_Ch|Yoreh_De|Even_HaEzer|Choshen_Mishpat", re.I)
+_SECTION_IN_TEXT = re.compile(
+    r"\b(O\.?\s?C[h.]?|O\"[CH]|OC|OH|Or(?:ach|ah)?\s*Ch?a[iy]+m|Y\.?\s?D|Yo?\"D|YD|Yoreh|"
+    r"E\.?\s?H|E\"H|EH|Even|Ev\.?\s?H|C\.?\s?M|Ch?\"M|CM|Choshen|Hoshen)\b", re.I)
+
+
+def _guessed_something(citation, url):
+    """Sefaria (or one of its alt titles) filled in something the citation never
+    said. Reject such results; choosing is guessing.
+      - a Talmud amud: "Brakhot 11:13" -> Berakhot 11a:13, "Megilla 9:22" -> 9a:22
+        (the citation has no a/b at all, the result has one)
+      - a Shulchan Arukh section: "Kaf HaHayim 92:8" -> the Orach Chayim volume,
+        though Kaf HaChayim also covers Yoreh De'ah (the citation names no section)"""
+    path = urllib.parse.unquote(url.split("sefaria.org/", 1)[-1])
+    if re.search(r"\.\d+[ab](?:[.\-]|$)", path) and not re.search(r"\d\s*[ab]\b|\bdaf\b|\bamud\b", citation, re.I):
+        return True
+    title = path.split(".")[0]
+    if _SECTION_NAMES.search(title) and not _SECTION_IN_TEXT.search(citation):
+        return True
+    return False
 
 
 def resolve(citation, cache=None, online=True, polite=0.0):
@@ -530,6 +639,8 @@ def resolve(citation, cache=None, online=True, polite=0.0):
         if not url:
             url = _resolve_via_vocabulary(cands, polite)
         if url and _hilchot_is_ambiguous(citation, url):
+            url = None
+        if url and _guessed_something(citation, url):
             url = None
     if cache is not None:
         cache.set(citation, url)

@@ -12,7 +12,7 @@ Run: python3 test_rules_offline.py   (exit 1 on any failure)
 """
 import sys
 
-from normalizer.resolve import _keeps_all_words, _book_group
+from normalizer.resolve import _keeps_all_words, _book_group, _guessed_something
 from normalizer.rules import candidates
 from benchmark import classify
 
@@ -26,7 +26,7 @@ GUARD = [
     ("Tosfot Avodah Zarah", "Tosafot on Avodah Zarah", True, "connector 'on' may be added"),
     ("Yad, Yesodey Hatorah", "Rambam, Yesodey haTorah", True, "Rambam name group"),
     ("Rosh Ha-Shanah", "Rosh Hashanah", True, "hyphenated article"),
-    ("Kav HaYosher , chapter", "Kav HaYashar", True, "vowel shift; 'chapter' droppable"),
+    ("Kav HaYosher , chapter", "Kav HaYashar", False, "accepted loss: yosher/yashar vowel patterns differ; the looser match that allowed it also made Deot = Deut"),
     ("Rambam, Hilchot Eidus", "Rambam, Hilchot Edut", True, "Ashkenazi vowels"),
     ("Rambam, Hilchot Tfila", "Rambam, Hilchot Tefilah and Birkat Kohanim", True, "MT compound title"),
     ("Abarbanel on Genesis", "Abarbanel on Torah, Genesis", True, "'on Torah,' structure"),
@@ -50,6 +50,23 @@ GUARD = [
     ("Guide for the Perplexed, part", "Guide for the Perplexed, Part 1", False, "adds a number"),
     ("Rambam, Hilchot Tfila", "Rambam, Hilchot Teshuva", False, "different section"),
     ("Bekhorot", "Berakhot", False, "similar spelling, different tractate"),
+    # transliteration collisions found in the full web run (2026-11-25)
+    ("Challah", "Tractate Kallah", False, "chet vs kaf"),
+    ("Deot", "Deut", False, "De'ot (Rambam) is not Deut(eronomy)"),
+    ("Kilayim", "Mishnah Kelim", False, "different tractates"),
+    ("Edus", "Mishnah Eduyot", False, "Edut vs Eduyot"),
+    ("Rambam, Hilchot Megillah", "Rambam, Hilchot Me'ilah", False, "Megillah vs Me'ilah"),
+    ("Bartenura Shabbat", "Bartenura on Sheviit", False, "Shabbat vs Sheviit"),
+    ("Ibn Ezra on Eikha", "Ibn Ezra on Mikha", False, "Eicha vs Micha"),
+    ("Mishna Orlah", "Mishneh Torah", False, "Mishnah vs Mishneh, Orlah vs Torah"),
+    ("Rambam", "Yad.", False, "Yad. is tractate Yadayim"),
+    ("Rambam, Hilchot Eidus", "Rambam, Hilchot Edut", True, "tzere ei = e"),
+    ("Meshech Chochma (Vaera", "Meshech Chochma, Vayera", False, "Va'era vs Vayera: different parashot"),
+    ("Hilchos Torah", "Hilchos Talmud Torah", False, "'Talmud' may only be added as a leading corpus word"),
+    ("Torah Babylonian Talmud, Yevamot", "Talmud Yevamot", False, "'Torah' dropped"),
+    ("Yevamot", "Talmud Yevamot", True, "leading corpus word may be added"),
+    ("Kaf Hachaim", "Kaf HaChayim", True, "Chaim = Chayim"),
+    ("Rabbeinu Bachya", "Rabbeinu Bahya", True, "academic h for chet"),
 ]
 
 # (raw, string that MUST be among candidates, or None) and (raw, string that must NOT be)
@@ -75,6 +92,8 @@ MUST = [
     ("Deuteronomy 5:6-21. Myth 3", "Deuteronomy 5:6-21"),
     ("I Chronicles 1:]43-54", "I Chronicles 1:43-54"),
     ("Mishpatim 5776", "Mishpatim"),
+    ("Masechet Ta'anit 4 3", "Ta'anit 4:3"),
+    ("Mishneh Torah Hilchos Melachim uMilchamot 11:1][1", "Mishneh Torah Hilchos Melachim uMilchamot 11:1"),
     ("Mishnah of Tractate Chagigah", "Mishnah Chagigah"),
 ]
 MUST_NOT = [
@@ -85,11 +104,22 @@ MUST_NOT = [
     ("Rabbeinu Yonah 3:5", "Rabbeinu Jonah 3:5", "book-name map applied to a person"),
     ("Shmuel 23:8", "I Samuel 23:8", "no I/II marker: must not guess"),
     ("Exodus 15:1b-18", "Exodut 15:1-18", "(cosmetic) only Ashkenazi endings, never English words"),
+    ("Melachim 1:5", "I Kings 5", "'1:5' is chapter:verse, not a book marker"),
+    ("Mishneh Torah Hilchos Melachim uMilchamot 11:1][1", "Mishneh Torah Hilchos Melachim uMilchamot 11:11", "footnote marker spliced into the locator"),
 ]
 # (raw, a candidate that must come BEFORE another)
 ORDER = [
     ("Esther 9:20f", "Esther 9:20", "Esther 9"),
     ("Pirkei Avot 4:5:7", "Pirkei Avot 4:5", "Pirkei Avot 4"),
+]
+# results that guess something the citation never said (resolve._guessed_something)
+GUESSED = [
+    ("Brakhot 11:13", "https://www.sefaria.org/Berakhot.11a.13", True),
+    ("Megilla (9:22", "https://www.sefaria.org/Megillah.9a.22", True),
+    ("Shabbat 31a", "https://www.sefaria.org/Shabbat.31a", False),
+    ("Kaf HaHayim 92:8", "https://www.sefaria.org/Kaf_HaChayim_on_Shulchan_Arukh,_Orach_Chayim.92.8", True),
+    ("Kaf Hachaim OC 103:5", "https://www.sefaria.org/Kaf_HaChayim_on_Shulchan_Arukh,_Orach_Chayim.103.5", False),
+    ("Magen Avraham 189:1", "https://www.sefaria.org/Magen_Avraham.189.1", False),
 ]
 # scoring
 SCORE = [
@@ -117,12 +147,15 @@ def main():
         c = candidates(raw)
         if first in c and second in c and c.index(first) > c.index(second):
             fails.append(f"ORDER {raw!r}: {first!r} should precede {second!r}")
+    for raw, url, want in GUESSED:
+        if _guessed_something(raw, url) != want:
+            fails.append(f"GUESSED {raw!r} -> {url}: expected {want}")
     for url, label, want in SCORE:
         if classify(url, label) != want:
             fails.append(f"SCORE {url} vs {label!r}: expected {want}")
     if _book_group("bereishis") != "genesis" or _book_group("shoftim") is not None:
         fails.append("BOOKS: bereishis->genesis, shoftim excluded")
-    total = len(GUARD) + len(MUST) + len(MUST_NOT) + len(ORDER) + len(SCORE) + 1
+    total = len(GUARD) + len(MUST) + len(MUST_NOT) + len(ORDER) + len(GUESSED) + len(SCORE) + 1
     for f in fails:
         print("FAIL", f)
     print(f"{total - len(fails)}/{total} passed")

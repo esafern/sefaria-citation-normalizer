@@ -130,7 +130,12 @@ def candidates(citation):
     # Stray brackets inside a locator ("I Chronicles 1:]43-54"): clean them up
     # front so the precise form is tried before any truncated one.
     if re.search(r"[\[\]{}]", citation):
-        citation = re.sub(r"\s*[\[\]{}]\s*", lambda m: " " if m.group(0).strip() != m.group(0) else "", citation)
+        # footnote markers go entirely ("11:1][1" -> "11:1", "Shabbat 31a [3]" -> "Shabbat 31a")
+        c2 = re.sub(r"\]?\[\d+\]?\s*$|\[\d+\]", "", citation)
+        # any other bracket: drop it, but never splice two numbers together
+        c2 = re.sub(r"(?<=\d)\s*[\[\]{}]+\s*(?=\d)", " ", c2)
+        c2 = re.sub(r"\s*[\[\]{}]+\s*", lambda m: " " if m.group(0).strip() != m.group(0) else "", c2)
+        citation = c2.strip()
         add(citation)
     add(_numbers_to_colon(citation))
 
@@ -281,6 +286,10 @@ def candidates(citation):
             for c in candidates(variant):
                 add(c)
 
+    # Two bare numbers separated by a space: "Masechet Ta'anit 4 3" -> "4:3"
+    if re.search(r"[A-Za-z']\s+\d+\s+\d+\s*$", citation):
+        _also(re.sub(r"(\d+)\s+(\d+)\s*$", r"\1:\2", citation))
+
     # Verse-part letters after a verse number: "Esther 9:20f", "Exodus 15:1b-18",
     # "Psalm 145:13a" -> 9:20, 15:1-18, 145:13. Only after a colon, so a Talmud
     # folio ("Shabbat 13a") is untouched.
@@ -354,8 +363,13 @@ def candidates(citation):
     two = {r"Sh'?e?muel|Samuel": "Samuel", r"M'?e?la[ck]h?im|Kings": "Kings",
            r"Divrei Ha-?[Yy]amim|Chronicles": "Chronicles"}
     for pat, eng in two.items():
-        mm = re.match(rf"^\s*(?:Sefer\s+)?(?:{pat})\s*(?:(A|Alef|Aleph|I|1)|(B|Bet|Beis|II|2))"
-                      rf"(?:\s+|:)(\d+[:.]\d+.*|\d+\s*$|\d+:\d+.*)$", citation, flags=re.I)
+        # The marker must be unambiguous: a letter/roman marker, or a digit followed
+        # by a full chapter:verse ("Samuel 1 13:1", "Shmuel 1:1:3-4"). "Melachim 1:5"
+        # is chapter 1 verse 5 of an unnamed book, not I Kings 5.
+        mm = re.match(rf"^\s*(?:Sefer\s+)?(?:{pat})\s*(?:(A|Alef|Aleph|I)|(B|Bet|Beis|II))"
+                      rf"(?:\s+|:)(\d+(?:[:.]\d+.*)?)$", citation, flags=re.I) or \
+             re.match(rf"^\s*(?:Sefer\s+)?(?:{pat})\s*(?:(1)|(2))(?:\s+|:)(\d+[:.]\d+.*)$",
+                      citation, flags=re.I)
         if mm:
             num = "I" if mm.group(1) else "II"
             _also(f"{num} {eng} {mm.group(3)}")
@@ -367,7 +381,7 @@ def candidates(citation):
 
     # Commentaries that exist only on Orach Chayim: the section name is noise
     # ("Magen Avraham OC 189:1" -> "Magen Avraham 189:1"). Bounded list.
-    if re.match(r"^\s*(Magen Avraham|Mishnah Berurah|Mishna Brura|Kaf Ha[Cc]hayi?m|Biur Halacha|"
+    if re.match(r"^\s*(Magen Avraham|Mishnah Berurah|Mishna Brura|Biur Halacha|"
                 r"Be'?ur Halakhah|Shaar HaTziyun|Eliyah? Rabbah?|Machatzit HaShekel)\b", citation, re.I):
         _also(re.sub(r"[\s,(]+(?:O\.?\s?C\.?|O\"C|OC|Orach Ch?a[iy]+m)\b", " ", citation, flags=re.I))
 
