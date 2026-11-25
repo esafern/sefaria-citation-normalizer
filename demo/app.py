@@ -177,7 +177,10 @@ def application(environ, start_response):
         q = (qs.get("q") or [""])[0]
         conv = (qs.get("conventions") or ["common"])[0]
         conv = conv if conv in ("common", "strict") else "common"
-        ip = (environ.get("HTTP_X_FORWARDED_FOR") or environ.get("REMOTE_ADDR") or "").split(",")[0].strip()
+        # REMOTE_ADDR only: X-Forwarded-For is set by the client and can be anything, so
+        # trusting it let a visitor dodge the per-visitor limits (girsa-demo-operator's LOW on
+        # 2f6a5cd6). On girsa.net's host REMOTE_ADDR is the visitor's real address.
+        ip = environ.get("REMOTE_ADDR") or ""
         obj, status = resolve_one(q, conv, ip)
         return _json(start_response, obj, status)
     start_response("404 Not Found", [("Content-Type", "text/plain")])

@@ -5,6 +5,14 @@ Girsa demo at app.girsa.net or its wrapper. The one change to existing Girsa fil
 optional footer link on the home page (section 6), which is a visible change and needs the
 reviewer's go.
 
+## Changes since the last deployed archive
+
+- **2f6a5cd6 -> this archive:** the visitor's address for the per-visitor limits now comes from
+  `REMOTE_ADDR` alone. Before, the first `X-Forwarded-For` value was used, which a visitor can
+  set to anything, so the per-visitor limits could be dodged (girsa-demo-operator's LOW on
+  2f6a5cd6; the 60-a-minute cap across all visitors held). `test_demo_offline.py` checks it,
+  fails on 2f6a5cd6 and passes on this build. No other change to what visitors see.
+
 ## 1. What it is
 
 A page where a visitor pastes Torah citations ("Berachos 5a", "SA OC 271:1") and gets
@@ -23,7 +31,7 @@ https://github.com/esafern/sefaria-citation-normalizer (`demo/`, plus the `citen
 contains one folder, `citenorm-demo/`:
 
 ```
-passenger_wsgi.py   app.py   check_demo.py   DEPLOY.md   VERSION   LICENSE (MIT)
+passenger_wsgi.py   app.py   check_demo.py   test_demo_offline.py   DEPLOY.md   VERSION   LICENSE (MIT)
 static/   index.html, powered-by-sefaria-white.png, powered-by-sefaria-blue.png
 citenorm/ __init__.py, resolve.py, rules.py, shared_dialect.py, cli.py
 ```
@@ -48,7 +56,7 @@ uploaded by the reviewer through cPanel's File Manager, to the home folder.
 
 ## 4. Load, limits and privacy
 
-- Per visitor: 20 new (uncached) citations a minute and 120 in all. Across all visitors: 60
+- Per visitor (by `REMOTE_ADDR`, never `X-Forwarded-For`): 20 new (uncached) citations a minute and 120 in all. Across all visitors: 60
   new citations a minute. Beyond that the page says "please wait a minute" (HTTP 429).
 - One citation per request; the page loops. A new citation takes about 1-20 s (it may need
   several requests to Sefaria); a cached one is instant.
@@ -60,6 +68,7 @@ uploaded by the reviewer through cPanel's File Manager, to the home folder.
 On a copy first, then live:
 
 ```bash
+python3 test_demo_offline.py                                      # no network: limits, headers, traversal
 cd ~/citenorm_app
 CITENORM_DEMO_DATA=/tmp/citenorm_check python3 app.py 8765 &     # local copy
 python3 check_demo.py http://127.0.0.1:8765/
