@@ -56,6 +56,19 @@ pip install git+https://github.com/esafern/sefaria-citation-normalizer
 citenorm "Berachos 5a" "SA OC 271:1"
 citenorm < citations.txt              # one per line; prints citation<TAB>url (or -)
 citenorm --json --conventions strict "YD 289"
+citenorm --explain "Kaf Hachaim Palagi 11:23"    # why it was linked or left unlinked
+```
+
+`--explain` shows the spellings tried and every suggestion accepted or rejected, with the
+reason:
+
+```
+Kaf Hachaim Palagi 11:23
+  left unlinked
+    - 3 spellings: Kaf Hachaim Palagi 11:23; Kaf HaChaim Palagi 11: 23; Kaf Hachaim Palagi 11
+    - tried 3 of them on Sefaria: none is a reference as written
+    - Sefaria suggested 'Kaf HaChaim' for 'Kaf Hachaim Palagi': rejected, it drops 'Palagi'
+    ...
 ```
 
 ```python
@@ -65,7 +78,13 @@ cache = Cache("cache.json")
 resolve("ArtScroll Berachos 57b, note 38", cache=cache)   # 'https://www.sefaria.org/Berakhot.57b'
 resolve("Shmuel 23:8", cache=cache)                       # None (ambiguous)
 cache.save()
+
+from citenorm.resolve import explain
+explain("Shmuel 23:8")["steps"]                           # [{"step": "rejected", "text": "... adds 'I'"}, ...]
 ```
+
+Planned: a REST API, batch CSV files, linking running text, an offline mode
+([docs/ROADMAP.md](docs/ROADMAP.md)).
 
 ### Conventions: `common` (default) or `strict`
 

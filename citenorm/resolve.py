@@ -33,6 +33,24 @@ from . import __version__  # noqa: E402
 USER_AGENT = f"citenorm/{__version__} (+https://github.com/esafern/sefaria-citation-normalizer)"
 
 
+import contextvars  # noqa: E402
+
+# explain(): a per-call record of what the resolver tried and why. A context
+# variable, so concurrent callers (threads, a future API server) don't mix traces;
+# None (the default) means not recording, at no cost.
+_TRACE = contextvars.ContextVar("citenorm_trace", default=None)
+
+
+def _note(step, text, **info):
+    t = _TRACE.get()
+    if t is not None:
+        t.append({"step": step, "text": text, **info})
+
+
+def _short(url):
+    return urllib.parse.unquote(url.split("sefaria.org/", 1)[-1]).replace("_", " ") if url else url
+
+
 class ResolverUnavailable(Exception):
     """Sefaria (or the title list) couldn't be reached, so the answer is unknown.
     Raised instead of returning None, so an outage is never cached as "unlinked"."""
@@ -310,7 +328,7 @@ def _matches_any(k, keys, keys_are_title=True):
     return any(_words_match(k, c) for c in keys if c)
 
 
-def _keeps_all_words(source, canon):
+def _guard_reason(source, canon):
     """True if `canon` is a safe canonicalization of `source`:
     1. every distinctive word of `source` has a match in `canon` (nothing
        dropped: "Kaf Hachaim Palagi" -> "Kaf HaChayim on Shulchan Arukh" drops
@@ -324,6 +342,7 @@ def _keeps_all_words(source, canon):
        Commentary on" -> "German Commentary on Pirkei Avot". Choosing one is
        guessing, so the citation is left unlinked instead.
     So canonicalization may change spelling and casing, never meaning.
+    Returns None if `canon` is safe, else the reason in plain words.
     """
     # Sefaria titles some Torah commentaries "X on Torah, Genesis"; that's the
     # same thing as "X on Genesis", not an added word.
@@ -331,16 +350,19 @@ def _keeps_all_words(source, canon):
     src = _distinctive(_split_words(source))
     can = _distinctive(_split_words(canon))
     if not src or not can:
-        return False
+        return "nothing to compare"
+    dropped = [w for w in _split_words(source)
+               if (k := _word_key(w)) and k in src and not _matches_any(k, can)]
     if not all(_matches_any(k, can) for k in src):
-        return False
+        return f"drops {', '.join(repr(w) for w in dropped) or 'a word'}"
     # same order: "Aruch Hashulchan" -> "Shulchan Aruch" is a different book
     pos = [next(i for i, c in enumerate(can) if _matches_any(k, [c])) for k in src]
     if pos != sorted(pos):
-        return False
+        return "changes the word order"
     # no added numbers: "..., part" -> "..., Part 1" picks a part
-    if set(re.findall(r"\d+", canon)) - set(re.findall(r"\d+", source)):
-        return False
+    extra = set(re.findall(r"\d+", canon)) - set(re.findall(r"\d+", source))
+    if extra:
+        return f"adds the number {', '.join(sorted(extra))}"
     # Sefaria titles some Mishneh Torah sections only by their full compound
     # name ("Rambam, Hilchot Tefilah and Birkat Kohanim"); a writer citing the
     # first half ("Hilchot Tfila") means the same section. Allow a trailing
@@ -354,7 +376,12 @@ def _keeps_all_words(source, canon):
                  or (w.lower() in ("talmud", "bavli") and i > 0))
              and not _matches_any(_word_key(w) if w not in ("I", "II", "III", "IV") else w.lower(),
                                   src_all + src, keys_are_title=False)]
-    return not added
+    return f"adds {', '.join(repr(w) for w in added)}" if added else None
+
+
+def _keeps_all_words(source, canon):
+    """True if `canon` is a safe canonicalization of `source` (see _guard_reason)."""
+    return _guard_reason(source, canon) is None
 
 
 _ROMAN_PART = re.compile(r"(?:^|[\s_,])(I{1,3}|IV)(?=[\s_,.]|$)")
@@ -432,7 +459,10 @@ def _canonicalize_and_resolve(prefix, head, nums, polite):
         for canon in canons:
             if not canon or canon == head:
                 continue
-            if not _keeps_all_words(head, canon):
+            why = _guard_reason(head, canon)
+            if why:
+                _note("rejected", f"Sefaria suggested {canon!r} for {head!r}: rejected, it {why}",
+                      suggestion=canon, reason=why)
                 continue  # completion drops part of the citation: a different work
             try:
                 url = _name(f"{prefix}{canon} {nums}")
@@ -441,9 +471,14 @@ def _canonicalize_and_resolve(prefix, head, nums, polite):
             if polite:
                 time.sleep(polite)
             if url and _adds_part_numeral(head, url):
+                _note("rejected", f"{_short(url)}: rejected, it picks a part (I/II) the citation doesn't name",
+                      reason="part numeral")
                 continue
             if url:
+                _note("matched", f"{head!r} -> {canon!r} (same name, different spelling) -> {_short(url)}",
+                      via="suggestion", suggestion=canon)
                 return url
+            _note("tried", f"{prefix}{canon} {nums}: not a reference")
     return None
 
 
@@ -494,7 +529,10 @@ def _resolve_bare_via_canonicalization(cands, orig_citation, polite):
             words = re.findall(r"[A-Za-z'’\-.]+", key)
             if not words or not all(_normalize_word(w) in orig_tokens for w in words):
                 continue
-            if not _keeps_all_words(cand, key):
+            why = _guard_reason(cand, key)
+            if why:
+                _note("rejected", f"Sefaria suggested {key!r} for {cand!r}: rejected, it {why}",
+                      suggestion=key, reason=why)
                 continue  # same guard as pass 2, in the other direction
             try:
                 url = _name(key)
@@ -503,6 +541,7 @@ def _resolve_bare_via_canonicalization(cands, orig_citation, polite):
             if polite:
                 time.sleep(polite)
             if url:
+                _note("matched", f"{cand!r} -> {key!r} -> {_short(url)}", via="suggestion", suggestion=key)
                 return url
     return None
 
@@ -638,6 +677,8 @@ def _resolve_via_vocabulary(cands, polite):
         titles = _vocab_matches(head)[:8]
         if not titles:
             continue
+        _note("titles", f"Sefaria's title list has the same name as {head!r}: {', '.join(titles[:4])}",
+              titles=titles)
         hits = {}
         for t in titles:
             try:
@@ -649,7 +690,13 @@ def _resolve_via_vocabulary(cands, polite):
             if url and not _adds_part_numeral(head, url):
                 hits[url] = t
         if len(hits) == 1:
-            return next(iter(hits))
+            url = next(iter(hits))
+            _note("matched", f"{head!r} = {hits[url]!r} in Sefaria's title list -> {_short(url)}",
+                  via="title list", title=hits[url])
+            return url
+        if len(hits) > 1:
+            _note("ambiguous", f"{head!r} names more than one work: "
+                  f"{', '.join(_short(u) for u in hits)}", refs=list(hits))
         # >1 distinct refs: genuinely ambiguous name, leave it
     return None
 
@@ -660,7 +707,7 @@ _SECTION_IN_TEXT = re.compile(
     r"E\.?\s?H|E\"H|EH|Even|Ev\.?\s?H|C\.?\s?M|Ch?\"M|CM|Choshen|Hoshen)\b", re.I)
 
 
-def _guessed_something(citation, url):
+def _guess_reason(citation, url):
     """Sefaria (or one of its alt titles) filled in something the citation never
     said. Reject such results; choosing is guessing.
       - a Talmud amud: "Brakhot 11:13" -> Berakhot 11a:13, "Megilla 9:22" -> 9a:22
@@ -669,11 +716,16 @@ def _guessed_something(citation, url):
         though Kaf HaChayim also covers Yoreh De'ah (the citation names no section)"""
     path = urllib.parse.unquote(url.split("sefaria.org/", 1)[-1])
     if re.search(r"\.\d+[ab](?:[.\-]|$)", path) and not re.search(r"\d\s*[ab]\b|\bdaf\b|\bamud\b", citation, re.I):
-        return True
+        return "it picks a side of the Talmud page (a or b) the citation doesn't give"
     title = path.split(".")[0]
     if _SECTION_NAMES.search(title) and not _SECTION_IN_TEXT.search(citation):
-        return True
-    return False
+        return "it picks a section of the Shulchan Arukh the citation doesn't name"
+    return None
+
+
+def _guessed_something(citation, url):
+    """True if the result fills in something the citation never said (see _guess_reason)."""
+    return _guess_reason(citation, url) is not None
 
 
 CONVENTIONS = ("common", "strict")
@@ -719,18 +771,51 @@ def resolve(citation, cache=None, online=True, polite=0.2, conventions="common")
     if conventions not in CONVENTIONS:
         raise ValueError(f"conventions must be one of {CONVENTIONS}")
     url = _resolve_common(citation, cache=cache, online=online, polite=polite)
-    if url and conventions == "strict" and _convention_used(citation.strip(), url):
+    conv = _convention_used(citation.strip(), url) if url else None
+    if conv and conventions == "strict":
+        _note("convention", f"{_short(url)} relies on a convention ({conv}); strict mode leaves it unlinked",
+              convention=conv)
         return None
+    if conv:
+        _note("convention", f"this reading follows Sefaria's convention ({conv}); "
+              f"--conventions strict would leave it unlinked", convention=conv)
     return url
+
+
+def explain(citation, conventions="common", polite=0.2):
+    """Resolve `citation` without the cache and return what happened:
+    {"citation", "url", "outcome", "steps": [{"step", "text", ...}, ...]}.
+    outcome: "linked", "unlinked" or "unavailable" (Sefaria couldn't be reached)."""
+    steps = []
+    token = _TRACE.set(steps)
+    try:
+        url = resolve(citation, cache=None, polite=polite, conventions=conventions)
+        outcome = "linked" if url else "unlinked"
+    except ResolverUnavailable as e:
+        url, outcome = None, "unavailable"
+        steps.append({"step": "error", "text": f"Sefaria couldn't be reached: {e}"})
+    finally:
+        _TRACE.reset(token)
+    seen, uniq = set(), []          # the same suggestion comes back for each spelling tried
+    for st in steps:
+        if st["text"] not in seen:
+            seen.add(st["text"])
+            uniq.append(st)
+    steps = uniq
+    if outcome == "unlinked" and not any(st["step"] in ("rejected", "ambiguous", "convention") for st in steps):
+        steps.append({"step": "none", "text": "no spelling or suggestion is a Sefaria reference with the same meaning"})
+    return {"citation": citation.strip(), "url": url, "outcome": outcome, "steps": steps}
 
 
 def _resolve_common(citation, cache=None, online=True, polite=0.2):
     citation = citation.strip()
     if cache is not None and citation in cache:
+        _note("cache", "answer from the cache")
         return cache.get(citation)
     url = None
     if online:
         cands = rules.candidates(citation)
+        _note("candidates", f"{len(cands)} spellings to try", candidates=cands)
         for cand in cands:
             try:
                 url = _name(cand)
@@ -739,7 +824,10 @@ def _resolve_common(citation, cache=None, online=True, polite=0.2):
             if polite:
                 time.sleep(polite)
             if url:
+                _note("matched", f"{cand!r} is a Sefaria reference -> {_short(url)}", via="spelling",
+                      candidate=cand)
                 break
+            _note("tried", f"{cand!r}: not a reference", candidate=cand)
         if not url:
             url = _resolve_via_canonicalization(cands, polite)
         if not url:
@@ -747,8 +835,12 @@ def _resolve_common(citation, cache=None, online=True, polite=0.2):
         if not url:
             url = _resolve_via_vocabulary(cands, polite)
         if url and _hilchot_is_ambiguous(citation, url):
+            _note("rejected", f"{_short(url)}: rejected, another work in Sefaria has the same 'Hilchot' name",
+                  reason="ambiguous Hilchot")
             url = None
-        if url and _guessed_something(citation, url):
+        why = _guess_reason(citation, url) if url else None
+        if why:
+            _note("rejected", f"{_short(url)}: rejected, {why}", reason=why)
             url = None
     if cache is not None:
         cache.set(citation, url)

@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+- `--explain` (CLI) and `citenorm.resolve.explain()`: the spellings tried, every Sefaria
+  suggestion accepted or rejected with the reason, and the convention a reading relies on.
+- An unreachable Sefaria raises `ResolverUnavailable` and is never cached (it used to be cached
+  as "unlinked"); the CLI prints `?` and exits 1.
+- Files are UTF-8 on any locale and written atomically; a broken title list is refetched.
+- Answer caches are named by a fingerprint of the resolver code.
+
 ## 0.1.0 (2026-11-25)
 
 First public release as a package. MIT license (code); CC BY-SA 4.0 (web-mined data).

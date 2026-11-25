@@ -12,7 +12,7 @@ Run: python3 test_rules_offline.py   (exit 1 on any failure)
 """
 import sys
 
-from citenorm.resolve import _keeps_all_words, _book_group, _guessed_something, _convention_used
+from citenorm.resolve import _keeps_all_words, _book_group, _guessed_something, _convention_used, _guard_reason, _guess_reason
 from citenorm.rules import candidates
 from benchmark import classify
 
@@ -133,6 +133,16 @@ CONVENTION = [
     ('B"M 59b', "https://www.sefaria.org/Bava_Metzia.59b", None),
     ("Berakhot 9a", "https://www.sefaria.org/Berakhot.9a", None),
 ]
+# --explain: the reasons given in plain words
+REASONS = [
+    (_guard_reason, ("Kaf Hachaim Palagi", "Kaf HaChaim"), "drops 'Palagi'"),
+    (_guard_reason, ("Shmuel", "Shmuel I"), "adds 'I'"),
+    (_guard_reason, ("Aruch Hashulchan YD", "Shulchan Aruch YD"), "changes the word order"),
+    (_guard_reason, ("Guide for the Perplexed, part", "Guide for the Perplexed, Part 1"), "adds the number 1"),
+    (_guard_reason, ("Berakoth", "Berakhot"), None),
+    (_guess_reason, ("Brakhot 11:13", "https://www.sefaria.org/Berakhot.11a.13"),
+     "it picks a side of the Talmud page (a or b) the citation doesn't give"),
+]
 # scoring
 SCORE = [
     ("https://www.sefaria.org/Shabbat.88", "Shabbat 88a", "coarser"),
@@ -162,6 +172,9 @@ def main():
     for raw, url, want in GUESSED:
         if _guessed_something(raw, url) != want:
             fails.append(f"GUESSED {raw!r} -> {url}: expected {want}")
+    for fn, args, want in REASONS:
+        if fn(*args) != want:
+            fails.append(f"REASON {fn.__name__}{args}: expected {want!r}, got {fn(*args)!r}")
     for raw, url, want in CONVENTION:
         if _convention_used(raw, url) != want:
             fails.append(f"CONVENTION {raw!r} -> {url}: expected {want}")
@@ -170,7 +183,7 @@ def main():
             fails.append(f"SCORE {url} vs {label!r}: expected {want}")
     if _book_group("bereishis") != "genesis" or _book_group("shoftim") is not None:
         fails.append("BOOKS: bereishis->genesis, shoftim excluded")
-    total = len(GUARD) + len(MUST) + len(MUST_NOT) + len(ORDER) + len(GUESSED) + len(CONVENTION) + len(SCORE) + 1
+    total = len(GUARD) + len(MUST) + len(MUST_NOT) + len(ORDER) + len(GUESSED) + len(CONVENTION) + len(REASONS) + len(SCORE) + 1
     for f in fails:
         print("FAIL", f)
     print(f"{total - len(fails)}/{total} passed")

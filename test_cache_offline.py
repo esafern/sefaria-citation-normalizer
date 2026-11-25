@@ -76,6 +76,24 @@ c = R.Cache(p); c.set("B\u2019rakhot 2a", None); c.set("Berakhot 2a", "https://w
 assert R.Cache(p).get("Berakhot 2a").endswith("Berakhot.2a") and "B\u2019rakhot 2a" in R.Cache(p)
 assert not [f for f in os.listdir(os.environ["CITENORM_CACHE"]) if ".tmp." in f]
 ''',
+    "explain() reports a match, and an outage as unavailable": r'''
+def api(path, timeout=15):
+    if path == "/api/index/titles":
+        return FAKE
+    if path.startswith("/api/name/"):
+        q = __import__("urllib.parse").parse.unquote(path[len("/api/name/"):]).split("?")[0]
+        if q == "Berachot 5a":
+            return {"is_ref": True, "url": "Berakhot.5a", "ref": "Berakhot 5a"}
+        return {"is_ref": False, "completions": [], "completion_objects": []}
+    raise OSError("unexpected " + path)
+R._get_json = api
+r = R.explain("Berachos 5a", polite=0)
+assert r["outcome"] == "linked" and r["url"].endswith("Berakhot.5a"), r
+assert any(st["step"] == "matched" for st in r["steps"]), r["steps"]
+R._get_json = lambda path, timeout=15: (_ for _ in ()).throw(OSError("down"))
+r = R.explain("Berachos 5a", polite=0)
+assert r["outcome"] == "unavailable" and r["steps"][-1]["step"] == "error", r
+''',
     "the demo reports an outage and caches nothing": r'''
 os.environ["CITENORM_DEMO_DATA"] = os.environ["CITENORM_CACHE"]
 sys.path[:0] = [os.path.join(HERE, "demo"), HERE]       # the repository, or the demo archive
