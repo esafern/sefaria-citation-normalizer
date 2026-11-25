@@ -70,6 +70,10 @@ python3 check_demo.py https://girsa.net/cite/                    # live
 known answers (including one that must stay unlinked and the strict setting). It exits 1 on
 any mismatch.
 
+**Run it once right after each deploy:** the first lookup after a fresh install also downloads
+Sefaria's title list (about 3 MB), so it takes about 25 s; the check absorbs that, so no
+visitor waits for it. After that, new citations take about 1-20 s and cached ones are instant.
+
 **What goes public:** the page contains no email addresses or home-folder paths (the build
 refuses them). It does name the GitHub repository, whose URL includes the account name
 `esafern`. If your public-content check refuses that, the reviewer decides.
