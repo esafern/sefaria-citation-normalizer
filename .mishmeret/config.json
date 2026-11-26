@@ -1,0 +1,28 @@
+{
+  "repository": "https://github.com/esafern/mishmeret.git",
+  "mishmeret_commit": "57b87b256893705ba8ace5b03084605fa0c4764a",
+  "project": "sefaria-citation-normalizer",
+  "roles": [
+    {
+      "name": "norm-operator"
+    },
+    {
+      "name": "norm-builder",
+      "worktrees": [
+        "~/work/sefaria-citation-normalizer-builder"
+      ]
+    }
+  ],
+  "operator": "norm-operator",
+  "guard": {
+    "main": "main",
+    "foreign": [
+      "~/work/rav-shvat-blog"
+    ],
+    "refs": {
+      "refs/tags/beta-rc*": "norm-operator",
+      "refs/tags/stage": "norm-operator",
+      "refs/tags/prod": "norm-operator"
+    }
+  }
+}
