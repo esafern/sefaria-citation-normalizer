@@ -24,7 +24,10 @@ The repo was polished for public use and a Powered by Sefaria listing (plan:
 Sefaria-Project issue #4150 links to evidence files on that branch. Don't move or delete it.
 
 **Done 2026-11-25:**
-- `main` fast-forwarded to all of next-work's work; work continues on `main`.
+- `main` fast-forwarded to all of next-work's work. Work now continues on branch
+  `norm-builder` (worktree `~/work/sefaria-citation-normalizer-builder`, role norm-builder),
+  which never pushes or moves `main`; norm-operator merges it into `main` and pushes. See
+  `BRIEF-norm-builder.md` and `STATE-norm-builder.md`.
 - **Tree cleanup:** internal notes moved to `docs/notes/` (this file, LESSONS, INTEGRATION-PLAN,
   CORPUS-COMPARISON, the Sefaria guidelines review, the Powered-by plan); upstream bug and PR
   drafts plus evidence to `docs/upstream/`; unsent emails moved out of git to `private/`
